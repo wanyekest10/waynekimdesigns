@@ -4,7 +4,7 @@ slug: raiseme-portal
 headline: "Research that made a quiet B2B problem impossible to ignore, and got the partner portal rebuilt weeks before COVID."
 context: "RaiseMe, 2019 to 2020"
 role: UX Researcher
-timeline: November 2019 to June 2020
+timeline: October 2019 to June 2020
 team:
   - name: Katie Zellner
     role: VP of Customer Success
@@ -35,10 +35,11 @@ RaiseMe is a B2B2C edtech platform. Students earn micro-scholarships, and 330+ c
 - A quiet, everyday cost had to become visible enough to change the roadmap.
 
 **My role**
-UX Researcher, coming from Customer Success. Interviewed and observed college data operators, surveyed partners, tied partner sentiment to revenue, mapped the operator journey with a designer, ran workshops with Sales and Partner Success, and brought the case to the CEO.
+UX Researcher, coming from Customer Success. Led a 4-day Hack Week research sprint, interviewed and observed college data operators, surveyed partners, tied partner sentiment to revenue, mapped the operator journey with a designer, ran workshops with Sales and Partner Success, and brought the case to the CEO.
 
 **Key decisions**
 - **Studied the operators, not the buyers.** The people doing the weekly data work were the ones feeling the cost.
+- **Held the sample at five.** Engineering wanted to build an API after two enthusiastic interviews. The next three changed the answer.
 - **Let interviews kill the API idea.** Partners already had middleware. We reframed the problem around predictable, CRM-ready exports.
 - **Spoke in revenue, not usability.** Mapped how partners described the portal against what they paid.
 - **Framed it as a choice.** Invest in partner trust, or accept the cost of doing nothing.
@@ -46,6 +47,7 @@ UX Researcher, coming from Customer Success. Interviewed and observed college da
 **Outcome**
 - Leadership committed to rebuilding the portal in early 2020, weeks before COVID hit higher ed budgets.
 - RaiseMe retained 90%+ of projected annual revenue through the pandemic.
+- Usability tickets and emails fell by more than half, from about 150 partners to about 65.
 - Portal reliability went from 95% to 99%, and a weekly export task from 15 minutes to 2.
 
 ---
@@ -72,9 +74,9 @@ Before research, I worked in Customer Success with these partners. I knew the op
 
 ## Hack Week: the assumption broke
 
-I used RaiseMe's first Hack Week to dig into a long-standing friction point: how colleges moved RaiseMe data into their CRMs. Working with Partnerships, Business Development, and Engineering, we focused on an overlooked user, the college data operator.
+I used RaiseMe's first Hack Week to dig into a long-standing friction point: how colleges moved RaiseMe data into their CRMs. My team was three engineers and three people from Sales and Partner Success. In four days we ran five interviews, five surveys, and three moderated usability tests with college data operators.
 
-We went in believing direct API integrations would solve it. Interviews and workflow observations said otherwise.
+We went in believing direct API integrations would solve it. The first two partners loved the idea, and the engineers wanted to start building. I asked them to wait a day. Two partners weren't a sample, and we hadn't heard from our tougher accounts yet. The next three changed the answer.
 
 <div class="compare">
   <div class="crow head"><span></span><span class="k">WHAT WE ASSUMED</span><span></span><span class="k">WHAT INTERVIEWS SHOWED</span></div>
@@ -83,7 +85,15 @@ We went in believing direct API integrations would solve it. Interviews and work
   <div class="crow focal"><span class="k">What to build</span><span class="was">More integrations</span><span class="to">→</span><span class="is">Predictable, CRM-ready exports<small>Which became Scheduled Templates.</small></span></div>
 </div>
 
-We prototyped Scheduled Templates: standardized, recurring exports that fit the workflows partners already had. One data operator estimated it would cut a weekly task from 15 minutes to 2. Across 330+ partners, that's thousands of hours a year.
+Trust was the deeper problem. Why would partners plug in an API from a vendor whose downloads kept failing? The engineers watched error messages appear in four of five sessions. And none of the five partners were downloading the fields their RaiseMe program needed. Their director had asked them to, but no one had explained why.
+
+The real job was getting RaiseMe data into a CRM-ready state. We prototyped Scheduled Templates: standardized, recurring exports that fit the workflows partners already had.
+
+> "This would save me 15 minutes per week to 2 minutes, and I would see no more error bars."
+>
+> Data operator, reacting to the prototype
+
+Across 330+ partners, that's 3,500+ hours a year: 13 minutes saved, 50 weeks, 330 partners. The project was runner-up for both Judges' Choice and People's Choice.
 
 The feature didn't make the roadmap right away. The insight stuck: the issue wasn't access to data. It was trust in its reliability.
 
@@ -91,7 +101,19 @@ The feature didn't make the roadmap right away. The insight stuck: the issue was
 
 After Hack Week, feasibility wasn't the barrier. Prioritization was. So I shifted the conversation from features to consequences.
 
-First, I surveyed partners about the portal. 12 of 14 said its reliability fell below their expectations, far more than any other part of the experience.
+In December I took a step back and asked what we actually measured about partner sentiment. The answer was NPS, answered by 3% of 300 partners. In competitive higher ed, "would you recommend us to a colleague" was the wrong question anyway. So I built a research plan: interviews with our designer, a partner survey, and a workshop with Business Development and Partner Success.
+
+The interviews put the pain in partners' own words.
+
+> "It's surprising how often the error message pops up or how often we can't filter or download. It causes staff to become frustrated and makes me not want to recommend using the portal to my staff outside of just downloading."
+>
+> Director of Admissions
+
+> "It's surprising it is not more reliable at the very least. We had issues even getting follower information at the deadline. This caused award letters to be held up for the entire class."
+>
+> Data operations lead
+
+Then I surveyed partners about the portal. 12 of 14 said its reliability fell below their expectations, far more than any other part of the experience.
 
 <div class="bars">
   <div class="brow focal"><span class="bl">College Portal reliability</span><div class="track"><div class="fill" style="width:85.71%"></div></div><span class="bv">12 of 14</span></div>
@@ -101,10 +123,6 @@ First, I surveyed partners about the portal. 12 of 14 said its reliability fell 
   <div class="brow"><span class="bl">Ease of use</span><div class="track"><div class="fill" style="width:21.43%"></div></div><span class="bv">3 of 14</span></div>
   <div class="note">Partners who said each area fell below expectations. Survey of college partners, 14 of 23 responded.</div>
 </div>
-
-> "It's surprising it is not more reliable at the very least. We had issues even getting follower information at the deadline. This caused award letters to be held up for the entire class."
->
-> College partner, survey response
 
 Then I asked partners to pick words for their experience, and lined those words up against what each partner paid. The partners calling the portal slow and stressful were some of our largest accounts.
 
@@ -166,14 +184,20 @@ We aligned on a phased roadmap: reliability first, then low-lift interface fixes
   <figcaption>Before: errors on the most basic task. After: weekly exports that generate themselves and wait in a downloads list.</figcaption>
 </figure>
 
+COVID forced trade-offs. The company shifted design time toward helping educators through the pandemic, and we cut one thing partners had asked for: choosing their own download fields. We kept the automated weekly downloads, with a notification and a CSV file, and we kept a commitment to show partners their return.
+
+![Partner Dashboard V1: quick stats on signups, last download date, students likely to apply, and senior application status](/work/raiseme-assets/partner-dashboard.webp)
+
+Partner Dashboard V1 showed colleges what their RaiseMe program was producing, with prompts to act throughout the enrollment cycle. Partners saw us respond to what they'd told us, and became more willing to join interviews, surveys, and focus groups.
+
 ## Results
 
 The commitment came weeks before COVID disrupted higher ed budgets. That timing mattered. While institutions froze budgets and cut vendors, RaiseMe:
 
 - Retained **90%+** of projected annual revenue
+- Cut usability emails and tickets by **more than half**, from about 150 partners to about 65, out of 300
 - Improved portal reliability from **95% to 99%**
 - Cut a weekly export task from **15 minutes to 2**
-- Gave partners a clearer view of their return through a new data dashboard
 
 The updated portal stayed in use after RaiseMe was acquired by CampusLogic in July 2020.
 
@@ -192,3 +216,5 @@ The updated portal stayed in use after RaiseMe was acquired by CampusLogic in Ju
 **Speak each stakeholder's language.** The same evidence became a revenue risk for leadership, a demo risk for Sales, and a weekly time cost for operators.
 
 **Research can be infrastructure.** The most damaging failures here were quiet. Small reliability gaps added up to strategic risk long before the metrics showed it. Making that cost visible is what changed the roadmap.
+
+**What I'd do sooner.** Find a senior sponsor in the first weeks, not the third month. Start cross-functional coffee chats earlier, and use storyboards to bring partner stories to the team. With more time, I'd have run a card sort on the portal's navigation, unchanged since 2012, and A/B tested the dashboards.
