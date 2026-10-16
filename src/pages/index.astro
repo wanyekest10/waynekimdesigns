@@ -18,7 +18,7 @@ const years = [
 <Base title="Wayne Kim, researcher who builds">
   <header class="intro">
     <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
-    <h1>Wayne Kim</h1>
+    <h1 class="hero-name">Wayne Kim</h1>
     <p class="lead">Interaction designer and researcher.</p>
   </header>
 
@@ -52,11 +52,49 @@ const years = [
   </section>
 </Base>
 
+<script>
+  // Scroll-linked name: the big name shrinks as you scroll and lands exactly on the nav name.
+  // Vertical motion is the page's own scroll; we only add scale (and a tiny x nudge).
+  const name = document.querySelector('.hero-name');
+  const home = document.querySelector('.nav .home');
+  const nav = document.querySelector('.nav');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (name && home && nav && !reduce.matches) {
+    const root = document.documentElement;
+    root.classList.add('morph');
+    let D = 1, r = 1, dx = 0, queued = false;
+    const measure = () => {
+      name.style.transform = '';
+      const nr = name.getBoundingClientRect();
+      const hr = home.getBoundingClientRect();
+      const navTop = nav.getBoundingClientRect().top;
+      const targetTop = hr.top - navTop;            // where the nav name sits once the nav is stuck at top: 0
+      D = Math.max(1, nr.top + window.scrollY - targetTop);
+      r = hr.height / nr.height;                     // both use line-height 1, so this is the font-size ratio
+      dx = hr.left - nr.left;
+      update();
+    };
+    const update = () => {
+      queued = false;
+      const p = Math.min(Math.max(window.scrollY / D, 0), 1);
+      const scale = Math.pow(r, p);                  // even, perceptual shrink
+      name.style.transform = `translateX(${dx * p}px) scale(${scale})`;
+      root.classList.toggle('docked', p >= 1);
+    };
+    window.addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
+    window.addEventListener('resize', measure);
+    document.fonts && document.fonts.ready.then(measure);
+    measure();
+  }
+</script>
+
 <style>
-  .intro { margin-bottom: 120px; }
+  /* First screen: the name sits low, and the top of the first card peeks in below. */
+  .intro { min-height: calc(70svh - 66px); display: flex; flex-direction: column; justify-content: flex-end; margin-bottom: 72px; }
   .status { display: inline-flex; align-items: center; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 20px; }
   .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
-  .intro h1 { font-size: 32px; letter-spacing: -0.03em; margin-bottom: 12px; }
+  .hero-name { font: 500 clamp(56px, 12vw, 136px)/1 var(--sans); letter-spacing: -0.03em; margin: 0 0 16px; align-self: flex-start; transform-origin: 0 0; position: relative; z-index: 20; will-change: transform; }
+  :global(html.morph.docked) .hero-name { visibility: hidden; }
   .intro .lead { color: var(--gray); }
   .sub { color: var(--gray); max-width: 36em; }
   .block { margin-bottom: 120px; scroll-margin-top: 24px; }
@@ -72,6 +110,7 @@ const years = [
   .years strong { font: var(--label); display: block; }
   .note { display: block; color: var(--gray); font-size: 15px; }
   @media (max-width: 720px) {
-    .intro, .block { margin-bottom: 80px; }
+    .block { margin-bottom: 80px; }
+    .intro { margin-bottom: 48px; }
   }
 </style>

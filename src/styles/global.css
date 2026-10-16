@@ -14,7 +14,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
-body { background: var(--paper); color: var(--ink); font: var(--body); padding: 32px 24px 0; }
+body { background: var(--paper); color: var(--ink); font: var(--body); padding: 0 24px; }
 img, video { display: block; max-width: 100%; height: auto; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -22,8 +22,12 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 strong { font-weight: 500; color: var(--ink); }
 
 .wrap { max-width: var(--wide); margin: 0 auto; }
-.nav { display: flex; justify-content: space-between; align-items: baseline; font: var(--meta); letter-spacing: -0.02em; margin-bottom: 96px; }
-.nav a, .nav .home { color: var(--ink); }
+.nav { position: sticky; top: 0; z-index: 10; background: var(--paper); display: flex; justify-content: space-between; align-items: center; padding: 24px 0; font: var(--meta); letter-spacing: -0.02em; margin-bottom: 72px; }
+.nav a { color: var(--ink); }
+/* The nav name is the small end state of the homepage's big name. Same font, weight and tracking so the hand-off is seamless. */
+.nav .home { font: 500 18px/1 var(--sans); letter-spacing: -0.03em; }
+html.morph .nav .home { opacity: 0; }
+html.morph.docked .nav .home { opacity: 1; }
 .nav ul { list-style: none; display: flex; gap: 20px; }
 .meta { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 16px; }
 h1 { font: var(--display); letter-spacing: -0.04em; margin-bottom: 16px; }
@@ -64,7 +68,7 @@ figure.inline img { margin: 0 0 8px; }
 
 @media (max-width: 720px) {
   body { padding: 20px 16px 0; }
-  .nav { margin-bottom: 56px; }
+  .nav { margin-bottom: 40px; padding: 18px 0; }
   h1 { font-size: 34px; }
   .field { grid-template-columns: 1fr; gap: 6px; }
   .trio, .pair { grid-template-columns: 1fr; }
