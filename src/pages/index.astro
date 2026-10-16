@@ -17,9 +17,10 @@ const years = [
 ---
 <Base title="Wayne Kim, researcher who builds">
   <header class="intro">
+    <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
     <h1>Wayne Kim</h1>
     <p class="lead">I'm a researcher who builds. I make prototypes, put them in front of real people, and use what I learn to change what gets built.</p>
-    <p class="sub">Ten years of research at startups backed by a16z, YC, and SoftBank, then interaction design at CIID. Based in Los Angeles. Open to full-time and contract work.</p>
+    <p class="sub">Ten years of research at startups backed by a16z, YC, and SoftBank, then interaction design at CIID. Based in Los Angeles.</p>
   </header>
 
   <section id="work" class="block">
@@ -53,6 +54,8 @@ const years = [
 
 <style>
   .intro { margin-bottom: 120px; }
+  .status { display: inline-flex; align-items: center; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--ink); padding: 6px 12px 6px 10px; border: 1px solid var(--rule); border-radius: 999px; margin-bottom: 24px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
   .intro .lead { margin-bottom: 16px; }
   .sub { color: var(--gray); max-width: 36em; }
   .block { margin-bottom: 120px; scroll-margin-top: 24px; }
