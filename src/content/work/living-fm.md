@@ -12,7 +12,7 @@ instructors: [Bjorn Karmann, Matteo Loglio]
 tools: [Teachable Machine, Cursor, ElevenLabs, ESP32 camera]
 tags: [Designing with AI, Computer vision, Physical computing]
 reading_time: About 1 minute
-order: 2
+order: 3
 label: "AI and prototyping"
 summary: "A radio host that notices you scrolling."
 hero: "/work/living-assets/hero-couch.webp"

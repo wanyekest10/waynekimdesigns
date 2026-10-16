@@ -10,5 +10,4 @@ export const archive = [
   { name: 'Designit: Futures', tags: 'Foresight, Speculative Design', year: '2022', href: 'https://www.designit.com/stories/point-of-view/future-of-agriculture' },
   { name: 'Larvae Lagoon', tags: 'UX Research, Biomimicry', year: '' },
   { name: 'Workshops', tags: 'Workshop Facilitation, HMW Ideation', year: '' },
-  { name: 'RaiseMe: Portal', tags: 'UX Research, Service Design', year: '2019' },
 ];
