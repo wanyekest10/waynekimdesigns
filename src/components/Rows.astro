@@ -1,0 +1,27 @@
+---
+// Compact text rows: name, one line, year. Used for Play and the work archive.
+interface Row { name: string; line?: string; tags?: string; year?: string; href?: string }
+const { rows } = Astro.props as { rows: Row[] };
+---
+<ul class="rows">
+  {rows.map((r) => (
+    <li>
+      {r.href ? <a class="row-name" href={r.href}>{r.name}</a> : <span class="row-name">{r.name}</span>}
+      <span class="row-line">{r.line ?? r.tags}</span>
+      <span class="row-year">{r.year}</span>
+    </li>
+  ))}
+</ul>
+<style>
+  .rows { list-style: none; border-bottom: 1px solid var(--rule); }
+  .rows li { display: grid; grid-template-columns: 240px 1fr 48px; gap: 24px; padding: 12px 0; border-top: 1px solid var(--rule); align-items: baseline; }
+  .row-name { font: var(--label); color: var(--ink); }
+  a.row-name { color: var(--accent); }
+  .row-line { color: var(--gray); font-size: 15px; }
+  .row-year { font: var(--meta); color: var(--gray); text-align: right; }
+  @media (max-width: 720px) {
+    .rows li { grid-template-columns: 1fr auto; gap: 2px 16px; }
+    .row-line { grid-column: 1; grid-row: 2; }
+    .row-year { grid-column: 2; grid-row: 1; }
+  }
+</style>

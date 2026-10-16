@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import Cards from '../../components/Cards.astro';
+import Rows from '../../components/Rows.astro';
+import { archive } from '../../data/archive';
+const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+---
+<Base title="Work, Wayne Kim" description="Case studies and projects by Wayne Kim, researcher and interaction designer.">
+  <h1>Work</h1>
+  <p class="lead">Case studies in research, prototyping, and building with AI.</p>
+  <section class="block"><Cards items={work} /></section>
+  <section class="block">
+    <div class="block-head">
+      <h2 class="section-title">More projects</h2>
+      <span class="block-sub">Write-ups coming.</span>
+    </div>
+    <Rows rows={archive} />
+  </section>
+</Base>
+<style>
+  .lead { margin-bottom: 64px; }
+  .block { margin-bottom: 96px; }
+  .block-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 20px; }
+  .block-head .section-title { margin-bottom: 0; }
+  .block-sub { color: var(--gray); font-size: 15px; }
+</style>

@@ -1,0 +1,30 @@
+---
+// Case study cards. The one-liner under each card is held to a single line at every width.
+const { items } = Astro.props;
+---
+<div class="cards">
+  {items.map((w) => (
+    <a class="card" href={`/work/${w.id}/`}>
+      <img src={w.data.hero} alt={w.data.heroAlt} loading="lazy" class={w.data.cardFit === 'contain' ? 'contain' : undefined} />
+      <div class="card-text">
+        <span class="card-title">{w.data.title}</span>
+        <span class="card-label">{w.data.label}</span>
+      </div>
+      <p class="card-line">{w.data.summary}</p>
+    </a>
+  ))}
+</div>
+<style>
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 24px; }
+  .card { color: var(--ink); text-decoration: none; display: block; min-width: 0; }
+  .card:hover { text-decoration: none; }
+  .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; background: var(--panel); margin-bottom: 14px; transition: opacity .2s; }
+  .card img.contain { object-fit: contain; }
+  .card:hover img { opacity: .9; }
+  .card:hover .card-title { color: var(--accent); }
+  .card-text { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .card-title { font: var(--label); font-size: 16px; }
+  .card-label { font: var(--meta); color: var(--gray); white-space: nowrap; }
+  .card-line { font: var(--small); font-size: 14px; color: var(--gray); margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+</style>

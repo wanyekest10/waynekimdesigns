@@ -12,6 +12,7 @@ const work = defineCollection({
     order: z.number(),
     hero: z.string(),
     heroAlt: z.string(),
+    featured: z.boolean().default(true),
   }).passthrough(),
 });
 

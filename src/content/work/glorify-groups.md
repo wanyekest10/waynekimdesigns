@@ -21,7 +21,7 @@ stats:
 order: 1
 cardFit: contain
 label: "Research and strategy"
-summary: "Research that decided whether a 2.5M-user app should bet on community."
+summary: "The research behind a bet on community."
 hero: "/work/glorify-assets/shipped-screens.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
 ---

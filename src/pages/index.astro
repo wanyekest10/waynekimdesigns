@@ -1,15 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
-
-const lab = [
-  { name: 'room_tone', line: 'Permission to pause, built into the room.' },
-  { name: 'Linee', line: 'A timekeeper for shared spaces.' },
-  { name: 'Mirrored Canvas', line: 'Turning facial expressions into a live painting.' },
-  { name: 'Lume', line: 'Blindspot detection, built into a helmet.' },
-  { name: 'Bureau of Sanctioned Sketching', line: 'A card game that gives adults permission to draw again.' },
-];
+import Cards from '../components/Cards.astro';
+import Rows from '../components/Rows.astro';
+import { play } from '../data/play';
+const work = (await getCollection('work')).filter((w) => w.data.featured).sort((a, b) => a.data.order - b.data.order);
 
 const years = [
   { when: "'24–'25", what: 'Interaction Design, CIID', note: 'M.S. One year of research, build, test, repeat.' },
@@ -29,28 +24,17 @@ const years = [
 
   <section id="work" class="block">
     <h2 class="section-title">Selected work</h2>
-    <div class="cards">
-      {work.map((w) => (
-        <a class="card" href={`/work/${w.id}/`}>
-          <img src={w.data.hero} alt={w.data.heroAlt} loading="lazy" class={w.data.cardFit === "contain" ? "contain" : undefined} />
-          <div class="card-text">
-            <span class="card-title">{w.data.title}</span>
-            <span class="card-label">{w.data.label}</span>
-          </div>
-          <p class="card-line">{w.data.summary}</p>
-        </a>
-      ))}
-    </div>
+    <Cards items={work} />
+    <p class="more"><a href="/work/">All work →</a></p>
   </section>
 
-  <section id="lab" class="block">
-    <h2 class="section-title">Lab</h2>
-    <p class="block-sub">Smaller builds and experiments. Write-ups coming.</p>
-    <ul class="rows">
-      {lab.map((l) => (
-        <li><span class="row-name">{l.name}</span><span class="row-line">{l.line}</span></li>
-      ))}
-    </ul>
+  <section id="play" class="block">
+    <div class="block-head">
+      <h2 class="section-title">Play</h2>
+      <span class="block-sub">Small builds, gifts, and explorations.</span>
+    </div>
+    <Rows rows={play.slice(0, 3)} />
+    <p class="more"><a href="/play/">See all play →</a></p>
   </section>
 
   <section id="about" class="block">
@@ -72,21 +56,11 @@ const years = [
   .intro .lead { margin-bottom: 16px; }
   .sub { color: var(--gray); max-width: 36em; }
   .block { margin-bottom: 120px; scroll-margin-top: 24px; }
-  .block-sub { color: var(--gray); margin: -12px 0 20px; }
-  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 24px; }
-  .card { color: var(--ink); text-decoration: none; display: block; }
-  .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; background: var(--panel); margin-bottom: 14px; transition: opacity .2s; }
-  .card img.contain { object-fit: contain; }
-  .card:hover img { opacity: .9; }
-  .card:hover .card-title { color: var(--accent); }
-  .card-text { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
-  .card-title { font: var(--label); font-size: 16px; }
-  .card-label { font: var(--meta); color: var(--gray); white-space: nowrap; }
-  .card-line { font: var(--small); font-size: 14px; color: var(--gray); margin-top: 4px; }
-  .rows, .years { list-style: none; max-width: 760px; }
-  .rows li { display: grid; grid-template-columns: 240px 1fr; gap: 24px; padding: 12px 0; border-top: 1px solid var(--rule); }
-  .row-name { font: var(--label); }
-  .row-line { color: var(--gray); font-size: 15px; }
+  .years { list-style: none; max-width: 760px; }
+  .more { margin-top: 24px; text-align: right; font-size: 15px; }
+  .block-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 20px; }
+  .block-head .section-title { margin-bottom: 0; }
+  .block-sub { color: var(--gray); font-size: 15px; }
   .about { max-width: var(--measure); margin-bottom: 40px; }
   .about p { color: var(--gray); margin-bottom: 16px; }
   .years li { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 12px 0; border-top: 1px solid var(--rule); }
@@ -94,8 +68,6 @@ const years = [
   .years strong { font: var(--label); display: block; }
   .note { display: block; color: var(--gray); font-size: 15px; }
   @media (max-width: 720px) {
-    .cards { grid-template-columns: 1fr; }
-    .rows li { grid-template-columns: 1fr; gap: 2px; }
     .intro, .block { margin-bottom: 80px; }
   }
 </style>
