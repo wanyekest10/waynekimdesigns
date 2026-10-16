@@ -6,15 +6,71 @@ export async function getStaticPaths() {
   return work.map((w) => ({ params: { slug: w.id }, props: { w } }));
 }
 const { w } = Astro.props;
-const { Content } = await render(w);
+const { Content, headings } = await render(w);
+const d = w.data as any;
+const hasBrief = Array.isArray(d.intro);
+// Sidebar: numbered h2 sections, h3 as indented sub-items. "Hack Week: the assumption broke" shows as "Hack Week".
+let n = 0;
+const toc = headings
+  .filter((h) => (h.depth === 2 && h.text !== 'TL;DR') || h.depth === 3)
+  .map((h) => ({ ...h, num: h.depth === 2 ? String(++n).padStart(2, '0') : null, label: h.text.split(':')[0] }));
 ---
-<Base title={`${w.data.title}, Wayne Kim`} description={w.data.summary}>
-  <div class="meta">{w.data.context}</div>
-  <h1>{w.data.title}</h1>
-  <p class="lead">{w.data.headline}</p>
-  <img class="hero" src={w.data.hero} alt={w.data.heroAlt} />
-  <p class="jump"><a href="#full">Read the full case study ↓</a></p>
-  <article><Content /></article>
-  <p class="back"><a href="/#work">← All work</a></p>
+<Base wide title={`${d.title}, Wayne Kim`} description={d.summary}>
+  <div class="cs">
+    <aside class="toc" aria-label="On this page">
+      <a class="toc-back" href="/work/">← Work</a>
+      <ol>
+        {hasBrief && <li><a href="#overview" data-id="overview"><span class="n">00</span>Overview</a></li>}
+        {toc.map((h) => (
+          <li class={h.depth === 3 ? 'sub' : undefined}><a href={`#${h.slug}`} data-id={h.slug}>{h.num && <span class="n">{h.num}</span>}{h.label}</a></li>
+        ))}
+      </ol>
+    </aside>
+    <div class="cs-main">
+      <div class="meta">{d.context}</div>
+      <h1>{d.title}</h1>
+      <p class="lead">{d.headline}</p>
+      <img class="hero" src={d.hero} alt={d.heroAlt} />
+      {hasBrief ? (
+        <section id="overview" class="overview">
+          <div class="intro">{d.intro.map((p: string) => <p>{p}</p>)}</div>
+          <div class="brief" aria-label="TL;DR">
+            <span class="brief-tag">TL;DR</span>
+            <dl class="facts">
+              {d.facts.map((f: any) => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
+            </dl>
+            <ul class="stats">
+              {d.stats.map((s: any) => <li><strong>{s.value}</strong><span>{s.label}</span></li>)}
+            </ul>
+          </div>
+          <nav class="jumps" aria-label="Jump to">
+            {d.jumps.map((j: any) => <a href={`#${j.to}`}>{j.label} ↓</a>)}
+          </nav>
+        </section>
+      ) : (
+        <p class="jump"><a href="#full">Read the full case study ↓</a></p>
+      )}
+      <article class:list={[{ numbered: true }]}><Content /></article>
+      <p class="back"><a href="/work/">← All work</a></p>
+    </div>
+  </div>
 </Base>
-<style>.back { margin-top: 64px; } .hero { margin-bottom: 20px; } .jump { margin: 0 0 56px; }</style>
+<script>
+  // Highlight the section you're reading in the sidebar.
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a[data-id]')];
+  const targets = links.map((a) => document.getElementById(a.dataset.id!)).filter(Boolean) as HTMLElement[];
+  let queued = false;
+  const update = () => {
+    queued = false;
+    let current = targets[0];
+    for (const t of targets) if (t.getBoundingClientRect().top < window.innerHeight * 0.3) current = t;
+    links.forEach((a) => a.classList.toggle('active', a.dataset.id === current?.id));
+  };
+  window.addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
+  update();
+</script>
+<style>
+  .back { margin-top: 64px; }
+  .hero { margin-bottom: 20px; }
+  .jump { margin: 0 0 56px; }
+</style>

@@ -130,3 +130,50 @@ article .tldr { max-width: var(--wide); background: var(--panel); border-radius:
 article .tldr > h2 { margin-top: 0; }
 article .tldr .field { max-width: none; border-top-color: rgba(20, 20, 20, 0.08); }
 @media (max-width: 720px) { article .tldr { padding: 24px 20px 12px; margin: 0 -8px 56px; border-radius: 6px; } }
+
+/* Case study layout: sticky numbered sidebar on wide screens, jump links below that */
+.wrap.wide { max-width: 1240px; }
+.cs-main { min-width: 0; max-width: var(--wide); }
+.toc { display: none; }
+.toc-back { display: inline-block; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 28px; }
+.toc ol { list-style: none; }
+.toc li { margin-bottom: 14px; }
+.toc li.sub { margin: -6px 0 12px 28px; }
+.toc a { display: flex; gap: 12px; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); text-decoration: none; line-height: 1.35; }
+.toc li.sub a { color: #A3A3A0; }
+.toc a .n { flex: none; width: 16px; }
+.toc a:hover, .toc a.active { color: var(--ink); text-decoration: none; }
+@media (min-width: 1000px) {
+  .cs { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px; }
+  .toc { display: block; position: sticky; top: 32px; align-self: start; max-height: calc(100vh - 64px); overflow-y: auto; padding-top: 4px; }
+  .jumps { display: none !important; }
+}
+article h2, article h3, .overview { scroll-margin-top: 32px; }
+article.numbered { counter-reset: sec; }
+article.numbered > h2 { counter-increment: sec; }
+article.numbered > h2::before { content: counter(sec, decimal-leading-zero); font: var(--meta); color: var(--gray); margin-right: 14px; vertical-align: 2px; }
+article h3 { font: var(--label); font-size: 16px; color: var(--ink); margin: 40px 0 12px; }
+
+/* Condensed overview: short intro, then a compact TL;DR strip */
+.overview { margin: 36px 0 72px; }
+.overview .intro { max-width: var(--measure); }
+.overview .intro p { color: var(--gray); margin-bottom: 14px; }
+.overview .intro p:first-child { color: var(--ink); }
+.brief { position: relative; background: var(--panel); border-radius: 8px; padding: 22px 28px 24px; margin-top: 28px; }
+.brief-tag { display: block; font: var(--meta); color: var(--gray); letter-spacing: -0.02em; margin-bottom: 14px; }
+.facts { display: grid; grid-template-columns: 0.8fr 1fr 1.3fr 1.5fr; gap: 20px; padding-bottom: 18px; border-bottom: 1px solid rgba(20,20,20,.08); }
+.facts dt { font: var(--meta); color: var(--gray); letter-spacing: -0.02em; margin-bottom: 4px; }
+.facts dd { font-size: 14px; line-height: 1.45; color: var(--ink); }
+.stats { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 18px; }
+.stats strong { display: block; font: 500 24px/1.15 var(--sans); letter-spacing: -0.02em; color: var(--ink); }
+.stats span { display: block; font-size: 14px; line-height: 1.4; color: var(--gray); margin-top: 4px; }
+.jumps { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 24px; }
+.jumps a { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--ink); }
+@media (max-width: 720px) {
+  .brief { padding: 18px 18px 20px; }
+  .facts { grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+  .stats { grid-template-columns: 1fr; gap: 14px; }
+  .stats li { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: baseline; }
+  .stats strong { font-size: 20px; }
+  .stats span { margin-top: 0; }
+}

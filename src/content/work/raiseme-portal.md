@@ -21,38 +21,24 @@ label: "Research and service design"
 summary: "Research that saved B2B revenue."
 hero: "/work/raiseme-assets/hero-download-settings.webp"
 heroAlt: "The redesigned Download settings screen: a weekly follower report that generates itself every Monday"
+intro:
+  - "On RaiseMe, students earned micro-scholarships and 330+ colleges paid for their enrollment data. Student growth scaled. The college portal didn't, and it kept failing the people who used it every week."
+  - "I took that frustration from support tickets to the CEO. I held a Hack Week sample at five when engineering wanted to build after two, surveyed partners, and tied portal reliability to revenue."
+  - "Leadership committed to rebuilding the portal weeks before COVID hit higher ed. RaiseMe kept 90%+ of projected revenue through the pandemic."
+facts:
+  - { label: "Role", value: "UX Researcher" }
+  - { label: "Timeline", value: "Oct 2019 to Jun 2020" }
+  - { label: "Team", value: "Customer Success, Product, Sales, Engineering" }
+  - { label: "Methods", value: "Interviews, usability tests, survey, journey mapping" }
+stats:
+  - { value: "90%+", label: "of projected revenue kept through COVID" }
+  - { value: "150 → 65", label: "partners filing usability tickets" }
+  - { value: "15 → 2 min", label: "for a weekly export task" }
+jumps:
+  - { label: "Skip to the research", to: "hack-week-the-assumption-broke" }
+  - { label: "Skip to the findings", to: "building-the-case" }
+  - { label: "Skip to the impact", to: "the-decision" }
 ---
-
-## TL;DR
-
-**Context**
-RaiseMe is a B2B2C edtech platform. Students earn micro-scholarships, and 330+ colleges pay for their enrollment data. Student growth scaled. The College Partner Portal didn't. The leaders who signed contracts weren't the people fighting the portal every week, and renewals were coming.
-
-**Challenges**
-- Partner frustration was known but treated as operational noise. Product focus stayed on students.
-- Leadership turnover left no Head of Product to own the problem.
-- The team's assumed fix, API integrations, was the wrong one.
-- A quiet, everyday cost had to become visible enough to change the roadmap.
-
-**My role**
-UX Researcher, coming from Customer Success. Led a 4-day Hack Week research sprint, interviewed and observed college data operators, surveyed partners, tied partner sentiment to revenue, mapped the operator journey with a designer, ran workshops with Sales and Partner Success, and brought the case to the CEO.
-
-**Key decisions**
-- **Studied the operators, not the buyers.** The people doing the weekly data work were the ones feeling the cost.
-- **Held the sample at five.** Engineering wanted to build an API after two enthusiastic interviews. The next three changed the answer.
-- **Let interviews kill the API idea.** Partners already had middleware. We reframed the problem around predictable, CRM-ready exports.
-- **Spoke in revenue, not usability.** Mapped how partners described the portal against what they paid.
-- **Framed it as a choice.** Invest in partner trust, or accept the cost of doing nothing.
-
-**Outcome**
-- Leadership committed to rebuilding the portal in early 2020, weeks before COVID hit higher ed budgets.
-- RaiseMe retained 90%+ of projected annual revenue through the pandemic.
-- Usability tickets and emails fell by more than half, from about 150 partners to about 65.
-- Portal reliability went from 95% to 99%, and a weekly export task from 15 minutes to 2.
-
----
-
-<a id="full"></a>
 
 ## Growth without reliability
 
@@ -113,7 +99,9 @@ The interviews put the pain in partners' own words.
 >
 > Data operations lead
 
-Then I surveyed partners about the portal. 12 of 14 said its reliability fell below their expectations, far more than any other part of the experience.
+### Asking partners
+
+I surveyed partners about the portal. 12 of 14 said its reliability fell below their expectations, far more than any other part of the experience.
 
 <div class="bars">
   <div class="brow focal"><span class="bl">College Portal reliability</span><div class="track"><div class="fill" style="width:85.71%"></div></div><span class="bv">12 of 14</span></div>
@@ -124,7 +112,9 @@ Then I surveyed partners about the portal. 12 of 14 said its reliability fell be
   <div class="note">Partners who said each area fell below expectations. Survey of college partners, 14 of 23 responded.</div>
 </div>
 
-Then I asked partners to pick words for their experience, and lined those words up against what each partner paid. The partners calling the portal slow and stressful were some of our largest accounts.
+### Revenue at risk
+
+I asked partners to pick words for their experience, and lined those words up against what each partner paid. The partners calling the portal slow and stressful were some of our largest accounts.
 
 <table>
   <thead><tr><th>Partner</th><th>Described the portal as</th><th>Annual contract</th></tr></thead>
@@ -137,6 +127,8 @@ Then I asked partners to pick words for their experience, and lined those words 
   </tbody>
 </table>
 
+### Inside the company
+
 I ran workshops with Sales and Partner Success to hear how the portal showed up in their work. It was slowing deals and making renewals harder to defend.
 
 > "Most of my team won't demo any product live. I do, but I'm always holding my breath during the Portal part."
@@ -146,6 +138,8 @@ I ran workshops with Sales and Partner Success to hear how the portal showed up 
 > "New features are meaningless if we can't deliver basic functionality like sorting and downloading student records."
 >
 > Partner Success manager
+
+### The full journey
 
 With a designer, I mapped the data operator's full journey, from first hearing about RaiseMe to deciding whether it was worth keeping. It showed where the ideal workflow and the real one split apart, and where Scheduled Templates fit.
 
