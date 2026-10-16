@@ -14,7 +14,7 @@ const lab = [
 const years = [
   { when: "'24–'25", what: 'Interaction Design, CIID', note: 'M.S. One year of research, build, test, repeat.' },
   { when: "'23–'24", what: 'Senior UX Researcher, Glorify', note: 'Research behind Glorify Groups, now 1.8M+ users.' },
-  { when: "'21–'23", what: 'Design Researcher, Designit', note: 'Research for clients including Roche and Translated.' },
+  { when: "'21–'23", what: 'Design Researcher, Designit', note: 'Research for Fortune 500 clients in healthcare and finance, plus <a href="https://www.designit.com/stories/point-of-view/future-of-agriculture">speculative futures work</a>.' },
   { when: "'17–'20", what: 'UX Strategist, RaiseMe', note: 'Research and strategy for a college partner portal.' },
   { when: 'Before', what: 'Assistant Dean of Admission, Reed College', note: 'Designed the Junior Scholars program.' },
   { when: "'10–'14", what: 'B.A. Sociology, Colby College', note: '' },
@@ -61,7 +61,7 @@ const years = [
     </div>
     <ul class="years">
       {years.map((y) => (
-        <li><span class="when">{y.when}</span><span><strong>{y.what}</strong>{y.note && <span class="note">{y.note}</span>}</span></li>
+        <li><span class="when">{y.when}</span><span><strong>{y.what}</strong>{y.note && <span class="note" set:html={y.note} />}</span></li>
       ))}
     </ul>
   </section>
