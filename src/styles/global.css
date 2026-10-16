@@ -177,3 +177,4 @@ article h3 { font: var(--label); font-size: 16px; color: var(--ink); margin: 40p
   .stats strong { font-size: 20px; }
   .stats span { margin-top: 0; }
 }
+.facts:last-child { padding-bottom: 0; border-bottom: 0; }

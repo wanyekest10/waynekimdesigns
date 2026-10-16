@@ -26,10 +26,6 @@ facts:
   - { label: "Timeline", value: "4 days, 2025, CIID" }
   - { label: "Team", value: "Juan Ignacio Garro, Alec Davis" }
   - { label: "Tools", value: "Teachable Machine, Cursor, ElevenLabs, ESP32 camera" }
-stats:
-  - { value: "4 days", label: "from idea to working prototype" }
-  - { value: "4", label: "activities Liv can recognize" }
-  - { value: "80%", label: "confidence before Liv speaks" }
 jumps:
   - { label: "Skip to the process", to: "bodystorming-timing-beats-content" }
   - { label: "Skip to the build", to: "building-liv" }

@@ -39,9 +39,11 @@ const toc = headings
             <dl class="facts">
               {d.facts.map((f: any) => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
             </dl>
-            <ul class="stats">
-              {d.stats.map((s: any) => <li><strong>{s.value}</strong><span>{s.label}</span></li>)}
-            </ul>
+            {d.stats?.length > 0 && (
+              <ul class="stats">
+                {d.stats.map((s: any) => <li><strong>{s.value}</strong><span>{s.label}</span></li>)}
+              </ul>
+            )}
           </div>
           <nav class="jumps" aria-label="Jump to">
             {d.jumps.map((j: any) => <a href={`#${j.to}`}>{j.label} ↓</a>)}
