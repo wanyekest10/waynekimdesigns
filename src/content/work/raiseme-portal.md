@@ -21,23 +21,20 @@ label: "Research and service design"
 summary: "Research that saved B2B revenue."
 hero: "/work/raiseme-assets/hero-download-settings.webp"
 heroAlt: "The redesigned Download settings screen: a weekly follower report that generates itself every Monday"
-intro:
-  - "On RaiseMe, students earned micro-scholarships and 330+ colleges paid for their enrollment data. Student growth scaled. The college portal didn't, and it kept failing the people who used it every week."
-  - "I took that frustration from support tickets to the CEO. I held a Hack Week sample at five when engineering wanted to build after two, surveyed partners, and tied portal reliability to revenue."
-  - "Leadership committed to rebuilding the portal weeks before COVID hit higher ed. RaiseMe kept 90%+ of projected revenue through the pandemic."
+jumps:
+  - { label: "Skip to the research", to: "hack-week-the-assumption-broke" }
+  - { label: "Skip to the findings", to: "building-the-case" }
+  - { label: "Skip to the impact", to: "the-decision" }
+short:
+  - { lead: "The problem.", text: "RaiseMe's college portal kept failing the people who used it every week, and contract renewals were coming." }
+  - { lead: "What I did.", text: "Took partner frustration from support tickets to the CEO: Hack Week research, a partner survey, and a case tying reliability to revenue." }
+  - { lead: "What happened.", text: "Leadership committed to rebuilding the portal weeks before COVID. RaiseMe kept 90%+ of projected revenue through the pandemic." }
 facts:
   - { label: "Role", value: "UX Researcher" }
   - { label: "Timeline", value: "Oct 2019 to Jun 2020" }
   - { label: "Team", value: "Customer Success, Product, Sales, Engineering" }
   - { label: "Methods", value: "Interviews, usability tests, survey, journey mapping" }
-stats:
-  - { value: "90%+", label: "of projected revenue kept through COVID" }
-  - { value: "150 → 65", label: "partners filing usability tickets" }
-  - { value: "15 → 2 min", label: "for a weekly export task" }
-jumps:
-  - { label: "Skip to the research", to: "hack-week-the-assumption-broke" }
-  - { label: "Skip to the findings", to: "building-the-case" }
-  - { label: "Skip to the impact", to: "the-decision" }
+  - { label: "Outcome", value: "90%+ revenue kept · usability tickets 150 → 65 partners · export 15 → 2 min" }
 ---
 
 ## Growth without reliability
@@ -143,7 +140,7 @@ I ran workshops with Sales and Partner Success to hear how the portal showed up 
 
 With a designer, I mapped the data operator's full journey, from first hearing about RaiseMe to deciding whether it was worth keeping. It showed where the ideal workflow and the real one split apart, and where Scheduled Templates fit.
 
-<figure><a class="zoom" href="/work/raiseme-assets/journey-map.webp" target="_blank" rel="noopener"><img src="/work/raiseme-assets/journey-map.webp" alt="Partner journey map for data operators across awareness, understanding, engagement, and loyalty, with channels, actions, thoughts, wants, and opportunities"/></a><figcaption>The data operator journey. Click to open full size.</figcaption></figure>
+<figure class="wide"><a class="zoom" href="/work/raiseme-assets/journey-map.webp" target="_blank" rel="noopener"><img src="/work/raiseme-assets/journey-map.webp" alt="Partner journey map for data operators across awareness, understanding, engagement, and loyalty, with channels, actions, thoughts, wants, and opportunities"/></a><figcaption>The data operator journey. Click to open full size.</figcaption></figure>
 
 ## The decision
 

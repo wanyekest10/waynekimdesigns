@@ -45,8 +45,13 @@ article hr { border: 0; border-top: 1px solid var(--rule); margin: 48px 0; max-w
 article blockquote { border: 1px solid var(--rule); border-radius: 6px; padding: 20px 24px; margin: 20px 0 32px; }
 article blockquote p { color: var(--ink); margin: 0; }
 article blockquote p + p { font: var(--small); color: var(--gray); margin-top: 12px; }
-article img, article video { width: 100%; max-width: var(--wide); margin: 32px 0; border-radius: 6px; }
-article p:has(img), article figure { max-width: var(--wide); }
+article img, article video { width: 100%; max-width: var(--measure); margin: 32px 0; border-radius: 6px; }
+article p:has(img), article figure { max-width: var(--measure); }
+/* Opt-in wide moments: pairs, trios, and figure.wide */
+article .pair, article .trio, article figure.wide { max-width: var(--wide); }
+article .pair img, article .pair video, article .trio img, article figure.wide img { max-width: none; }
+article figure.medium { max-width: 560px; }
+article figure > img, article figure > a > img { margin: 0 0 10px; }
 article figcaption { font: var(--small); color: var(--gray); }
 .field { display: grid; grid-template-columns: 160px 1fr; gap: 24px; max-width: 760px; padding: 16px 0; border-top: 1px solid var(--rule); }
 .field .flabel { font: var(--label); color: var(--ink); }
@@ -131,11 +136,26 @@ article .tldr > h2 { margin-top: 0; }
 article .tldr .field { max-width: none; border-top-color: rgba(20, 20, 20, 0.08); }
 @media (max-width: 720px) { article .tldr { padding: 24px 20px 12px; margin: 0 -8px 56px; border-radius: 6px; } }
 
-/* Case study layout: sticky numbered sidebar on wide screens, jump links below that */
+
+
+/* ---------- Case study layout ----------
+   Desktop: a left column that starts as quiet facts and, once you reach the story,
+   becomes the sticky section list. Phones: facts as a short list, then jump links. */
 .wrap.wide { max-width: 1240px; }
-.cs-main { min-width: 0; max-width: var(--wide); }
-.toc { display: none; }
-.toc-back { display: inline-block; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 28px; }
+.cs-top, .hero, .cs-body { min-width: 0; }
+.cs-top .lead { margin-bottom: 0; }
+.hero { width: 100%; border-radius: 6px; margin: 48px 0 80px; max-width: var(--wide); }
+.short { max-width: var(--measure); margin-top: 32px; }
+.short-tag { display: block; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 12px; }
+.short p { color: var(--gray); margin-bottom: 10px; }
+.short strong { color: var(--ink); }
+.cs-facts { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; }
+.cs-facts dt { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 3px; }
+.cs-facts dd { font-size: 14px; line-height: 1.45; color: var(--ink); }
+.jumps { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 28px; }
+.jumps a { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--ink); }
+.toc-col { display: none; }
+.toc-back { display: inline-block; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 28px; text-transform: uppercase; }
 .toc ol { list-style: none; }
 .toc li { margin-bottom: 14px; }
 .toc li.sub { margin: -6px 0 12px 28px; }
@@ -144,45 +164,24 @@ article .tldr .field { max-width: none; border-top-color: rgba(20, 20, 20, 0.08)
 .toc a .n { flex: none; width: 16px; }
 .toc a:hover, .toc a.active { color: var(--ink); text-decoration: none; }
 @media (min-width: 1000px) {
-  .cs { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px; }
-  .toc { display: block; position: sticky; top: 32px; align-self: start; max-height: calc(100vh - 64px); overflow-y: auto; padding-top: 4px; }
-  .jumps { display: none !important; }
+  .cs { display: grid; grid-template-columns: 200px minmax(0, 1fr); column-gap: 56px;
+        grid-template-areas: "facts top" "facts hero" "toc body"; }
+  .cs-top { grid-area: top; }
+  .cs-facts { grid-area: facts; display: block; margin-top: 108px; align-self: start; }
+  .cs-facts > div { margin-bottom: 22px; }
+  .hero { grid-area: hero; }
+  .toc-col { grid-area: toc; display: block; }
+  .toc { position: sticky; top: 32px; max-height: calc(100vh - 64px); overflow-y: auto; }
+  .cs-body { grid-area: body; }
+  .jumps { display: none; }
 }
-article h2, article h3, .overview { scroll-margin-top: 32px; }
+@media (max-width: 720px) { .hero { margin: 32px 0 56px; } }
+article h2, article h3, .cs-top { scroll-margin-top: 32px; }
 article.numbered { counter-reset: sec; }
 article.numbered > h2 { counter-increment: sec; }
 article.numbered > h2::before { content: counter(sec, decimal-leading-zero); font: var(--meta); color: var(--gray); margin-right: 14px; vertical-align: 2px; }
 article h3 { font: var(--label); font-size: 16px; color: var(--ink); margin: 40px 0 12px; }
-
-/* Condensed overview: short intro, then a compact TL;DR strip */
-.overview { margin: 36px 0 72px; }
-.overview .intro { max-width: var(--measure); }
-.overview .intro p { color: var(--gray); margin-bottom: 14px; }
-.overview .intro p:first-child { color: var(--ink); }
-.brief { position: relative; background: var(--panel); border-radius: 8px; padding: 22px 28px 24px; margin-top: 28px; }
-.brief-tag { display: block; font: var(--meta); color: var(--gray); letter-spacing: -0.02em; margin-bottom: 14px; }
-.facts { display: grid; grid-template-columns: 0.8fr 1fr 1.3fr 1.5fr; gap: 20px; padding-bottom: 18px; border-bottom: 1px solid rgba(20,20,20,.08); }
-.facts dt { font: var(--meta); color: var(--gray); letter-spacing: -0.02em; margin-bottom: 4px; }
-.facts dd { font-size: 14px; line-height: 1.45; color: var(--ink); }
-.stats { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 18px; }
-.stats strong { display: block; font: 500 24px/1.15 var(--sans); letter-spacing: -0.02em; color: var(--ink); }
-.stats span { display: block; font-size: 14px; line-height: 1.4; color: var(--gray); margin-top: 4px; }
-.jumps { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 24px; }
-.jumps a { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--ink); }
-@media (max-width: 720px) {
-  .brief { padding: 18px 18px 20px; }
-  .facts { grid-template-columns: 1fr 1fr; gap: 14px 16px; }
-  .stats { grid-template-columns: 1fr; gap: 14px; }
-  .stats li { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: baseline; }
-  .stats strong { font-size: 20px; }
-  .stats span { margin-top: 0; }
-}
-.facts:last-child { padding-bottom: 0; border-bottom: 0; }
-
-/* GIF-style looping clips with an optional sound toggle */
-article .vid { position: relative; max-width: var(--wide); margin: 32px 0; }
-article .vid video { margin: 0; }
-article .vid .snd { position: absolute; right: 12px; bottom: 12px; font: var(--meta); letter-spacing: -0.02em; color: #fff; background: rgba(20,20,20,.55); border: 0; border-radius: 999px; padding: 6px 12px; cursor: pointer; backdrop-filter: blur(4px); }
-article .vid .snd:hover { background: rgba(20,20,20,.75); }
-article figure.medium { max-width: 600px; margin: 32px 0; }
-article figure.medium img { margin: 0; }
+.cs-facts dd span { display: block; }
+/* Research components sit in the text column too, so the page reads at one width */
+.compare, .bars, article table, .cols { max-width: var(--measure); }
+.compare .crow { grid-template-columns: 110px 1fr 24px 1fr; gap: 12px; }

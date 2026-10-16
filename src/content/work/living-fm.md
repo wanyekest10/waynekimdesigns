@@ -17,19 +17,20 @@ label: "AI and prototyping"
 summary: "A radio host that notices you scrolling."
 hero: "/work/living-assets/hero-couch.webp"
 heroAlt: "Someone scrolling on the couch while Liv, a small wooden speaker with a camera, sits on the side table"
-intro:
-  - "Habits like doomscrolling are reinforced by technology built to hold attention. In a 4-day CIID sprint on designing with AI, we asked whether a little self-awareness, at the right moment, could work as gentle friction."
-  - "I trained the vision model, wrote Liv's personality and gave her a voice, and built a live interface to see what the system saw."
-  - "Liv became a wooden speaker that recognizes four activities and speaks only when she's sure. Living.fm is a provocation, not a product."
-facts:
-  - { label: "Role", value: "Interaction designer" }
-  - { label: "Timeline", value: "4 days, 2025, CIID" }
-  - { label: "Team", value: "Juan Ignacio Garro, Alec Davis" }
-  - { label: "Tools", value: "Teachable Machine, Cursor, ElevenLabs, ESP32 camera" }
 jumps:
   - { label: "Skip to the process", to: "bodystorming-timing-beats-content" }
   - { label: "Skip to the build", to: "building-liv" }
   - { label: "Watch Liv", to: "giving-liv-a-voice" }
+short:
+  - { lead: "The question.", text: "Technology built to hold attention reinforces habits like doomscrolling. Could a little self-awareness, at the right moment, work as gentle friction?" }
+  - { lead: "What I built.", text: "Liv, a wooden speaker with a camera that recognizes four activities and comments like a late-night radio host. I trained the vision model, wrote her personality, and built a live testing interface." }
+  - { lead: "What I learned.", text: "In an ambient system, the interpretation is the product. Liv only works when she knows when to stay quiet." }
+facts:
+  - { label: "Role", value: "Interaction designer" }
+  - { label: "Duration", value: "4 days, 2025" }
+  - { label: "Team", value: "Juan Ignacio Garro, Alec Davis" }
+  - { label: "Faculty", value: "Bjorn Karmann, Matteo Loglio" }
+  - { label: "Tools", value: "Teachable Machine, Cursor, ElevenLabs, ESP32 camera" }
 ---
 
 
@@ -77,7 +78,7 @@ A few of her lines:
 
 <blockquote><p>"You're moving slow enough for the room to catch up; that's a rare kind of quiet."</p><p>Yoga, 87% confidence</p></blockquote>
 
-<div class="vid"><video src="/work/living-assets/liv-in-action-1.mp4" poster="/work/living-assets/liv-in-action-1-poster.jpg" autoplay muted loop playsinline></video><button class="snd" type="button" aria-pressed="false">Sound on</button></div>
+<video src="/work/living-assets/liv-in-action-1.mp4" poster="/work/living-assets/liv-in-action-1-poster.jpg" autoplay muted loop playsinline></video>
 
 ## Seeing what the system sees
 
@@ -95,7 +96,7 @@ Our early prototypes focused on interrupting doomscrolling. User testing showed 
 
 In Korean, 잔소리 (jansori) describes exactly this: nagging that overwhelms care through repetition. So we expanded Liv's role beyond interruption to positive reinforcement and ambient music. She encourages you when you cook or stretch, plays something fitting, and only sometimes teases you for scrolling. In a future version, people would get more control over when and how she speaks.
 
-<div class="vid"><video src="/work/living-assets/liv-in-action-2.mp4" poster="/work/living-assets/liv-in-action-2-poster.jpg" autoplay muted loop playsinline></video><button class="snd" type="button" aria-pressed="false">Sound on</button></div>
+<video src="/work/living-assets/liv-in-action-2.mp4" poster="/work/living-assets/liv-in-action-2-poster.jpg" autoplay muted loop playsinline></video>
 
 ## A speculative exploration
 

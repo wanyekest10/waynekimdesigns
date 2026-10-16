@@ -19,23 +19,20 @@ label: "Research and strategy"
 summary: "The research behind a bet on community."
 hero: "/work/glorify-assets/shipped-screens.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
-intro:
-  - "Glorify had 2.5M+ users praying and meditating on their own. With a post-Series B board meeting ahead, leadership was weighing community as the next bet, and doubted it would work."
-  - "I turned their doubts into one testable hypothesis, then put a TestFlight prototype into 82 people's real small groups for a 2-week diary study."
-  - "Leadership launched Glorify Groups and dedicated three of the four product, design, and engineering pods to it. Today 1.8M+ people use it."
-facts:
-  - { label: "Role", value: "Senior Design Researcher" }
-  - { label: "Timeline", value: "6 weeks, Mar to May 2023" }
-  - { label: "Team", value: "VP of Product, Lead Designer" }
-  - { label: "Methods", value: "Prototype diary study, interviews, survey" }
-stats:
-  - { value: "1.8M+", label: "users in Glorify Groups" }
-  - { value: "20%", label: "of daily active users use Groups" }
-  - { value: "3 of 4", label: "product pods committed to Groups" }
 jumps:
   - { label: "Skip to the research", to: "studying-real-behavior-not-stated-interest" }
   - { label: "Skip to the findings", to: "what-we-found" }
   - { label: "Skip to the impact", to: "the-decision" }
+short:
+  - { lead: "The problem.", text: "After its Series B, Glorify's leadership was weighing community as the next bet for its 2.5M+ users, and doubted it would work." }
+  - { lead: "What I did.", text: "Turned their doubts into one testable hypothesis, then ran a 2-week prototype diary study with 82 people in their real small groups." }
+  - { lead: "What happened.", text: "Leadership launched Glorify Groups and committed three of four product, design, and engineering pods. 1.8M+ people use it today." }
+facts:
+  - { label: "Role", value: "Senior Design Researcher" }
+  - { label: "Timeline", value: "6 weeks, Mar to May 2023" }
+  - { label: "Team", value: "Paul Pow, VP of Product · Matt Regan, Lead Designer" }
+  - { label: "Methods", value: "Prototype diary study, interviews, survey" }
+  - { label: "Outcome", value: "1.8M+ users · 20% of daily actives · 3 of 4 pods committed" }
 ---
 
 
