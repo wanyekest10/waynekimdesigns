@@ -13,7 +13,7 @@ tools: [Teachable Machine, Cursor, ElevenLabs, ESP32 camera]
 tags: [Designing with AI, Computer vision, Physical computing]
 reading_time: About 1 minute
 order: 2
-label: "AI and hardware"
+label: "AI and prototyping"
 summary: "An AI radio host for your home that learned when to stay quiet."
 hero: "/work/living-assets/hero-couch.webp"
 heroAlt: "Someone scrolling on the couch while Liv, a small wooden speaker with a camera, sits on the side table"
