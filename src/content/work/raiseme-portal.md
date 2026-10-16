@@ -30,6 +30,7 @@ short:
   - { lead: "What I did.", text: "Took partner frustration from support tickets to the CEO: Hack Week research, a partner survey, and a case tying reliability to revenue." }
   - { lead: "What happened.", text: "Leadership committed to rebuilding the portal weeks before COVID. RaiseMe kept 90%+ of projected revenue through the pandemic." }
 facts:
+  - { label: "Company", value: "RaiseMe" }
   - { label: "Role", value: "UX Researcher" }
   - { label: "Timeline", value: "Oct 2019 to Jun 2020" }
   - { label: "Team", value: "Customer Success, Product, Sales, Engineering" }

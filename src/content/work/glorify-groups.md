@@ -28,6 +28,7 @@ short:
   - { lead: "What I did.", text: "Turned their doubts into one testable hypothesis, then ran a 2-week prototype diary study with 82 people in their real small groups." }
   - { lead: "What happened.", text: "Leadership launched Glorify Groups and committed three of four product, design, and engineering pods. 1.8M+ people use it today." }
 facts:
+  - { label: "Company", value: "Glorify" }
   - { label: "Role", value: "Senior Design Researcher" }
   - { label: "Timeline", value: "6 weeks, Mar to May 2023" }
   - { label: "Team", value: "Paul Pow, VP of Product · Matt Regan, Lead Designer" }

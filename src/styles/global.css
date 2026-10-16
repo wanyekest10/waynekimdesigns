@@ -167,7 +167,7 @@ article .tldr .field { max-width: none; border-top-color: rgba(20, 20, 20, 0.08)
   .cs { display: grid; grid-template-columns: 200px minmax(0, 1fr); column-gap: 56px;
         grid-template-areas: "facts top" "facts hero" "toc body"; }
   .cs-top { grid-area: top; }
-  .cs-facts { grid-area: facts; display: block; margin-top: 108px; align-self: start; }
+  .cs-facts { grid-area: facts; display: block; margin-top: 68px; align-self: start; }
   .cs-facts > div { margin-bottom: 22px; }
   .hero { grid-area: hero; }
   .toc-col { grid-area: toc; display: block; }

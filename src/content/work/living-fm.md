@@ -26,6 +26,7 @@ short:
   - { lead: "What I built.", text: "Liv, a wooden speaker with a camera that recognizes four activities and comments like a late-night radio host. I trained the vision model, wrote her personality, and built a live testing interface." }
   - { lead: "What I learned.", text: "In an ambient system, the interpretation is the product. Liv only works when she knows when to stay quiet." }
 facts:
+  - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Role", value: "Interaction designer" }
   - { label: "Duration", value: "4 days, 2025" }
   - { label: "Team", value: "Juan Ignacio Garro, Alec Davis" }
