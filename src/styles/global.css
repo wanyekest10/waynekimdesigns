@@ -124,3 +124,9 @@ a.zoom:hover img { opacity: .92; }
   article table { font-size: 14px; }
   article th:nth-child(1), article td:nth-child(1) { width: 38%; }
 }
+
+/* TL;DR briefing panel: shaded, text only. The full story below stays white. */
+article .tldr { max-width: var(--wide); background: var(--panel); border-radius: 8px; padding: 32px 36px 20px; margin: 0 0 72px; }
+article .tldr > h2 { margin-top: 0; }
+article .tldr .field { max-width: none; border-top-color: rgba(20, 20, 20, 0.08); }
+@media (max-width: 720px) { article .tldr { padding: 24px 20px 12px; margin: 0 -8px 56px; border-radius: 6px; } }

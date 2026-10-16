@@ -2,7 +2,19 @@
 // into two-column field rows: <div class="field"><span class="flabel">Label</span><div>…</div></div>
 const isWs = (n) => n.type === 'text' && /^\s*$/.test(n.value);
 export function rehypeFields() {
-  return (tree) => walk(tree);
+  return (tree) => { walk(tree); wrapTldr(tree); };
+}
+// Wraps everything from the "TL;DR" heading up to the first <hr> in
+// <section class="tldr">, so the briefing reads as one shaded panel.
+function wrapTldr(tree) {
+  const kids = tree.children;
+  const text = (n) => (n.children || []).map((c) => c.value ?? text(c)).join('');
+  const start = kids.findIndex((n) => n.tagName === 'h2' && text(n).trim() === 'TL;DR');
+  if (start < 0) return;
+  let end = kids.findIndex((n, i) => i > start && n.tagName === 'hr');
+  if (end < 0) end = kids.length;
+  const section = { type: 'element', tagName: 'section', properties: { className: ['tldr'], ariaLabel: 'TL;DR summary' }, children: kids.slice(start, end) };
+  kids.splice(start, end - start + (end < kids.length ? 1 : 0), section);
 }
 function walk(node) {
   if (!node.children) return;
