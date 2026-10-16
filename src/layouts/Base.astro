@@ -1,0 +1,34 @@
+---
+import '../styles/global.css';
+interface Props { title: string; description?: string }
+const { title, description = 'Wayne Kim builds prototypes and tests them with real people. Researcher and interaction designer in Los Angeles.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="preload" href="/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body>
+    <div class="wrap">
+      <nav class="nav" aria-label="Main">
+        <a class="home" href="/">Wayne Kim</a>
+        <ul>
+          <li><a href="/#work">Work</a></li>
+          <li><a href="/#lab">Lab</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </nav>
+      <slot />
+      <footer class="footer">
+        <span>Say hello: <a href="mailto:waynekimdesigns@gmail.com">waynekimdesigns@gmail.com</a></span>
+        <span class="links"><a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a></span>
+      </footer>
+    </div>
+  </body>
+</html>

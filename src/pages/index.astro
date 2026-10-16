@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+
+const lab = [
+  { name: 'room_tone', line: 'Permission to pause, built into the room.' },
+  { name: 'Linee', line: 'A timekeeper for shared spaces.' },
+  { name: 'Mirrored Canvas', line: 'Turning facial expressions into a live painting.' },
+  { name: 'Lume', line: 'Blindspot detection, built into a helmet.' },
+  { name: 'Bureau of Sanctioned Sketching', line: 'A card game that gives adults permission to draw again.' },
+];
+
+const years = [
+  { when: "'24–'25", what: 'Interaction Design, CIID', note: 'M.S. One year of research, build, test, repeat.' },
+  { when: "'23–'24", what: 'Senior UX Researcher, Glorify', note: 'Research behind Glorify Groups, now 1.8M+ users.' },
+  { when: "'21–'23", what: 'Design Researcher, Designit', note: 'Research for clients including Roche and Translated.' },
+  { when: "'17–'20", what: 'UX Strategist, RaiseMe', note: 'Research and strategy for a college partner portal.' },
+  { when: 'Before', what: 'Assistant Dean of Admission, Reed College', note: 'Designed the Junior Scholars program.' },
+  { when: "'10–'14", what: 'B.A. Sociology, Colby College', note: '' },
+];
+---
+<Base title="Wayne Kim, researcher who builds">
+  <header class="intro">
+    <h1>Wayne Kim</h1>
+    <p class="lead">I'm a researcher who builds. I make prototypes, put them in front of real people, and use what I learn to change what gets built.</p>
+    <p class="sub">Ten years of research at startups backed by a16z, YC, and SoftBank, then interaction design at CIID. Based in Los Angeles. Open to full-time and contract work.</p>
+  </header>
+
+  <section id="work" class="block">
+    <h2 class="section-title">Selected work</h2>
+    <div class="cards">
+      {work.map((w) => (
+        <a class="card" href={`/work/${w.id}/`}>
+          <img src={w.data.hero} alt={w.data.heroAlt} loading="lazy" class={w.data.cardFit === "contain" ? "contain" : undefined} />
+          <div class="card-text">
+            <span class="card-title">{w.data.title}</span>
+            <span class="card-label">{w.data.label}</span>
+          </div>
+          <p class="card-line">{w.data.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section id="lab" class="block">
+    <h2 class="section-title">Lab</h2>
+    <p class="block-sub">Smaller builds and experiments. Write-ups coming.</p>
+    <ul class="rows">
+      {lab.map((l) => (
+        <li><span class="row-name">{l.name}</span><span class="row-line">{l.line}</span></li>
+      ))}
+    </ul>
+  </section>
+
+  <section id="about" class="block">
+    <h2 class="section-title">About</h2>
+    <div class="about">
+      <p>I studied sociology, and it still shapes how I see technology: as something people live with, not just something they use. I believe research belongs at the table before the decision, not after it. My shorthand for that is Ask. Surface. Reframe.</p>
+      <p>Lately I'm drawn to calm technology, ambient interaction, and making invisible systems visible: things that notice instead of nag.</p>
+    </div>
+    <ul class="years">
+      {years.map((y) => (
+        <li><span class="when">{y.when}</span><span><strong>{y.what}</strong>{y.note && <span class="note">{y.note}</span>}</span></li>
+      ))}
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .intro { margin-bottom: 120px; }
+  .intro .lead { margin-bottom: 16px; }
+  .sub { color: var(--gray); max-width: 36em; }
+  .block { margin-bottom: 120px; scroll-margin-top: 24px; }
+  .block-sub { color: var(--gray); margin: -12px 0 20px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 24px; }
+  .card { color: var(--ink); text-decoration: none; display: block; }
+  .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; background: var(--panel); margin-bottom: 14px; transition: opacity .2s; }
+  .card img.contain { object-fit: contain; }
+  .card:hover img { opacity: .9; }
+  .card:hover .card-title { color: var(--accent); }
+  .card-text { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .card-title { font: var(--label); font-size: 16px; }
+  .card-label { font: var(--meta); color: var(--gray); white-space: nowrap; }
+  .card-line { font: var(--small); font-size: 14px; color: var(--gray); margin-top: 4px; }
+  .rows, .years { list-style: none; max-width: 760px; }
+  .rows li { display: grid; grid-template-columns: 240px 1fr; gap: 24px; padding: 12px 0; border-top: 1px solid var(--rule); }
+  .row-name { font: var(--label); }
+  .row-line { color: var(--gray); font-size: 15px; }
+  .about { max-width: var(--measure); margin-bottom: 40px; }
+  .about p { color: var(--gray); margin-bottom: 16px; }
+  .years li { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 12px 0; border-top: 1px solid var(--rule); }
+  .when { font: var(--meta); color: var(--gray); padding-top: 3px; }
+  .years strong { font: var(--label); display: block; }
+  .note { display: block; color: var(--gray); font-size: 15px; }
+  @media (max-width: 720px) {
+    .cards { grid-template-columns: 1fr; }
+    .rows li { grid-template-columns: 1fr; gap: 2px; }
+    .intro, .block { margin-bottom: 80px; }
+  }
+</style>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="design-principles-title design-principles-desc" id="design-principles-root">
+      <title id="design-principles-title">Design principles</title>
+      <desc id="design-principles-desc">Four design principles from the research: a safe space to share, connection from online to in person, leaders set the tone, and room for members to share.</desc>
+  <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #design-principles-root { --paper: #FFFFFF; --ink: #141414; --muted: #6E6E6B; --soft: #6E6E6B; --accent: #002BBA; --accent-tint: rgba(0,43,186,0.14); --sans: 'Instrument Sans', system-ui, sans-serif; --mono: 'Geist Mono', ui-monospace, monospace; }
+      #design-principles-root { color: var(--ink); font-family: var(--sans); }
+      #design-principles-root .diagram-container { width: 100%; overflow-x: auto; }
+      #design-principles-root .name { fill: var(--ink); font: 500 14px var(--sans); }
+      #design-principles-root .sub { fill: var(--soft); font: 400 12px var(--sans); }
+      #design-principles-root .val { fill: var(--muted); font: 500 13px var(--sans); }
+      #design-principles-root .val.focal { fill: var(--accent); font-weight: 500; }
+      #design-principles-root .tick { fill: var(--soft); font: 400 11px var(--mono); }</style>
+  </defs>
+      <rect width="960" height="300" fill="#FFFFFF"/>
+      <line x1="48" y1="150" x2="912" y2="150" stroke="#141414" stroke-opacity="0.15"/>
+      <line x1="480" y1="40" x2="480" y2="260" stroke="#141414" stroke-opacity="0.15"/>
+      <text x="48" y="72" class="name">A safe space to share</text>
+      <text x="48" y="98" class="sub">An approachable space where people feel</text><text x="48" y="116" class="sub">encouraged to share their faith.</text>
+      <text x="512" y="72" class="name">From online to in person</text>
+      <text x="512" y="98" class="sub">Connection in the app that carries into</text><text x="512" y="116" class="sub">the next gathering.</text>
+      <text x="48" y="192" class="name">Leaders set the tone</text>
+      <text x="48" y="218" class="sub">Ways for group leads to prompt engagement,</text><text x="48" y="236" class="sub">vulnerability, and learning.</text>
+      <text x="512" y="192" class="name">Room to share</text>
+      <text x="512" y="218" class="sub">Moments for members to share their lives</text><text x="512" y="236" class="sub">and how they read the Bible.</text>
+    </svg>

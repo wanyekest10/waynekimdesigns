@@ -1,0 +1,71 @@
+/* Type system: one family (Instrument Sans), two weights, gray body, mono only for meta.
+   Cobalt is the only accent: links and one focal mark per figure. */
+@font-face { font-family: 'Instrument Sans'; src: url('/fonts/instrument-sans-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Instrument Sans'; src: url('/fonts/instrument-sans-latin-500-normal.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Geist Mono'; src: url('/fonts/geist-mono-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+
+:root {
+  --paper: #FFFFFF; --ink: #141414; --gray: #6E6E6B; --rule: #E6E6E3; --panel: #F4F4F2; --accent: #002BBA;
+  --sans: 'Instrument Sans', system-ui, sans-serif; --mono: 'Geist Mono', ui-monospace, monospace;
+  --display: 500 44px/1.05 var(--sans); --lead: 400 20px/1.4 var(--sans); --h2: 500 20px/1.4 var(--sans);
+  --body: 400 16px/1.6 var(--sans); --label: 500 14px/1.5 var(--sans); --small: 400 13px/1.5 var(--sans);
+  --meta: 400 12px/1.4 var(--mono);
+  --measure: 64ch; --wide: 960px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--paper); color: var(--ink); font: var(--body); padding: 32px 24px 0; }
+img, video { display: block; max-width: 100%; height: auto; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+strong { font-weight: 500; color: var(--ink); }
+
+.wrap { max-width: var(--wide); margin: 0 auto; }
+.nav { display: flex; justify-content: space-between; align-items: baseline; font: var(--meta); letter-spacing: -0.02em; margin-bottom: 96px; }
+.nav a, .nav .home { color: var(--ink); }
+.nav ul { list-style: none; display: flex; gap: 20px; }
+.meta { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 16px; }
+h1 { font: var(--display); letter-spacing: -0.04em; margin-bottom: 16px; }
+.lead { font: var(--lead); letter-spacing: -0.01em; max-width: 30em; }
+.section-title { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 20px; }
+.footer { border-top: 1px solid var(--rule); margin-top: 120px; padding: 32px 0 48px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font: var(--small); color: var(--gray); }
+.footer .links { display: flex; gap: 20px; }
+
+/* Case study article */
+.hero { margin: 56px 0 64px; border-radius: 6px; width: 100%; }
+article > * { max-width: var(--measure); }
+article p, article li { color: var(--gray); }
+article p { margin-bottom: 16px; }
+article h2 { font: var(--h2); letter-spacing: -0.01em; color: var(--ink); margin: 64px 0 16px; }
+article h3 { font: var(--label); margin: 32px 0 8px; }
+article ul, article ol { padding-left: 1.1em; margin-bottom: 16px; }
+article li { margin-bottom: 6px; }
+article hr { border: 0; border-top: 1px solid var(--rule); margin: 48px 0; max-width: none; }
+article blockquote { border: 1px solid var(--rule); border-radius: 6px; padding: 20px 24px; margin: 20px 0 32px; }
+article blockquote p { color: var(--ink); margin: 0; }
+article blockquote p + p { font: var(--small); color: var(--gray); margin-top: 12px; }
+article img, article video { width: 100%; max-width: var(--wide); margin: 32px 0; border-radius: 6px; }
+article p:has(img), article figure { max-width: var(--wide); }
+article figcaption { font: var(--small); color: var(--gray); }
+.field { display: grid; grid-template-columns: 160px 1fr; gap: 24px; max-width: 760px; padding: 16px 0; border-top: 1px solid var(--rule); }
+.field .flabel { font: var(--label); color: var(--ink); }
+.field p, .field ul { margin-bottom: 8px; }
+.field li { margin-bottom: 4px; }
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 32px 0; }
+.trio img { margin: 0 0 12px; aspect-ratio: 7/8; object-fit: contain; background: var(--panel); padding: 16px; }
+.trio.principles img { aspect-ratio: 874/773; object-fit: cover; padding: 0; }
+.trio p { font: var(--small); color: var(--gray); }
+.trio figcaption, .pair figcaption { grid-column: 1 / -1; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+.pair img, .pair video { margin: 0; }
+figure.inline { max-width: 420px; margin: 24px 0; }
+figure.inline img { margin: 0 0 8px; }
+
+@media (max-width: 720px) {
+  body { padding: 20px 16px 0; }
+  .nav { margin-bottom: 56px; }
+  h1 { font-size: 34px; }
+  .field { grid-template-columns: 1fr; gap: 6px; }
+  .trio, .pair { grid-template-columns: 1fr; }
+}
