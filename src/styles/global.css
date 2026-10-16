@@ -69,3 +69,15 @@ figure.inline img { margin: 0 0 8px; }
   .field { grid-template-columns: 1fr; gap: 6px; }
   .trio, .pair { grid-template-columns: 1fr; }
 }
+
+/* Footer email: hover shows copy icon, click copies and shows a check */
+.copy-email { white-space: nowrap; }
+.copy-email .ic { display: inline-block; vertical-align: -2px; width: 0; height: 15px; opacity: 0; margin-right: 0; transition: width .15s ease, margin .15s ease, opacity .15s ease; flex: none; }
+.copy-email .ic-done { display: none; }
+.copy-email:hover .ic-copy, .copy-email:focus-visible .ic-copy { width: 15px; margin-right: 6px; opacity: 1; }
+.copy-email.is-copied .ic-copy { display: none; }
+.copy-email.is-copied .ic-done { display: inline-block; width: 15px; margin-right: 6px; opacity: 1; }
+.copy-email:hover { text-decoration: none; }
+.copy-email:hover .addr, .copy-email.is-copied .addr { text-decoration: underline; text-underline-offset: 3px; }
+.copied { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+@media (hover: none) { .copy-email .ic-copy { width: 15px; margin-right: 6px; opacity: 1; } }
