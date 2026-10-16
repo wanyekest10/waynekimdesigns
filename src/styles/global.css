@@ -185,3 +185,16 @@ article h3 { font: var(--label); font-size: 16px; color: var(--ink); margin: 40p
 /* Research components sit in the text column too, so the page reads at one width */
 .compare, .bars, article table, .cols { max-width: var(--measure); }
 .compare .crow { grid-template-columns: 110px 1fr 24px 1fr; gap: 12px; }
+
+/* Grid of small looping clips, and three short columns */
+article .grid3 { max-width: var(--wide); display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 16px; margin: 32px 0; }
+article .grid3 video { margin: 0 0 8px; aspect-ratio: 1; object-fit: cover; max-width: none; }
+article .grid3 p { font: var(--small); font-size: 14px; color: var(--gray); margin: 0; }
+article figure.medium video { margin: 0 0 10px; }
+.cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: var(--measure); margin: 24px 0 32px; }
+.cols3 > div { border-top: 1px solid var(--ink); padding-top: 12px; }
+.cols3 h4 { font: var(--label); color: var(--ink); margin-bottom: 4px; }
+.cols3 p { font-size: 15px; margin: 0; }
+@media (max-width: 720px) { article .grid3 { grid-template-columns: 1fr 1fr; } .cols3 { grid-template-columns: 1fr; gap: 12px; } }
+article .pair > img { aspect-ratio: 3/2; object-fit: cover; }
+article figure.narrow { max-width: 380px; }

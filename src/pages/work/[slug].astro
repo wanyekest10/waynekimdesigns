@@ -41,7 +41,9 @@ const toc = headings
       </nav>
     )}
 
-    <img class="hero" src={d.hero} alt={d.heroAlt} />
+    {d.heroVideo
+      ? <video class="hero" src={d.heroVideo} poster={d.heroPoster} autoplay muted loop playsinline aria-label={d.heroAlt}></video>
+      : <img class="hero" src={d.hero} alt={d.heroAlt} />}
 
     <nav class="toc-col" aria-label="On this page">
       <div class="toc">
