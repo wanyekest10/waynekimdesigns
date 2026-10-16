@@ -198,3 +198,9 @@ article figure.medium video { margin: 0 0 10px; }
 @media (max-width: 720px) { article .grid3 { grid-template-columns: 1fr 1fr; } .cols3 { grid-template-columns: 1fr; gap: 12px; } }
 article .pair > img { aspect-ratio: 3/2; object-fit: cover; }
 article figure.narrow { max-width: 380px; }
+.principles4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: var(--measure); margin: 16px 0 28px; }
+.principles4 > div { border-top: 1px solid var(--ink); padding-top: 12px; }
+.principles4 h4 { font: var(--label); color: var(--ink); margin-bottom: 4px; }
+.principles4 p { font-size: 14px; line-height: 1.45; margin: 0; }
+article p.hmw { font: var(--lead); color: var(--ink); letter-spacing: -0.01em; max-width: 34em; padding: 4px 0 4px 20px; border-left: 2px solid var(--accent); margin: 24px 0 8px; }
+@media (max-width: 720px) { .principles4 { grid-template-columns: 1fr 1fr; } }

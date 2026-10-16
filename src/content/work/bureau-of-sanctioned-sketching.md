@@ -30,17 +30,48 @@ facts:
 
 Adults still want to play. They just stop believing they're allowed to, and drawing is often the first kind of play to go.
 
-I talked to 14 people: adults aged 23 to 40, play designers, and therapists. I also ran a drawing survey with 47 people. The block was rarely about skill. It was about not knowing where to begin.
+I started with desk research. Erving Goffman's idea of performed selves explains why adults guard how they look in front of others. Johan Huizinga's magic circle describes the agreed-upon space where play is allowed. Together they pointed me at the space that comes before play: permission.
+
+Then I talked to 14 people, adults aged 23 to 40, play designers, and therapists, and ran a drawing survey with 47 people. The block was rarely about skill.
 
 > "I wouldn't really know where to start."
 >
 > Interview participant
 
-Three things shaped everything after:
+### The block has a start date
 
-- **The block has a start date.** Most people stopped drawing for fun between 9 and 13, the age when kids start judging their work against realism.
-- **Freedom is just another blank page.** Left alone, people invented their own small rules, like drawing without lifting the pen.
-- **Shared exposure lowers the stakes.** More than half of survey respondents named embarrassment or fear of judgment. Being bad together is easier than being bad alone.
+People could point to exactly when drawing stopped being play, usually between 9 and 13. That lines up with what Viktor Lowenfeld called the "period of decision," when children who aren't encouraged stop drawing and carry "I can't draw" into adulthood.
+
+> "From high school onward we were told to draw more of serious stuffs... it was not fun anymore."
+>
+> Interview participant
+
+### Freedom is just another blank page
+
+Without boundaries, total freedom created anxiety. Participants invented their own small rules to get out of it, and those rules became the core of the final card stacks.
+
+> "Not lifting the pen while drawing, eyes closed, left hand instead of my stronger right hand, going with the flow."
+>
+> Interview participant
+
+### Shared exposure lowers the stakes
+
+More than half of survey respondents named embarrassment or fear of judgment as the block. Being bad together is easier than being bad alone.
+
+> "Group drawing would help, if everyone was doing the same thing. No need to be great, just produce something."
+>
+> Interview participant
+
+### Principles
+
+<div class="principles4">
+  <div><h4>Permission to begin</h4><p>Lower the barrier to starting.</p></div>
+  <div><h4>Playful constraints</h4><p>Swap endless choice for strict, silly rules.</p></div>
+  <div><h4>Flow, don't overthink</h4><p>Momentum over perfection.</p></div>
+  <div><h4>Contagiously fun</h4><p>Joy that spreads on its own.</p></div>
+</div>
+
+<p class="hmw">How might we help adults rediscover the joy of drawing in everyday life, without pressure, and without needing to call it art?</p>
 
 ## Prototyping my way there
 
@@ -51,11 +82,19 @@ I didn't know what the answer would look like, so I built to find out. Each prot
   <div><video src="/work/bss-assets/proto-spinning-canvas.mp4" poster="/work/bss-assets/proto-spinning-canvas-poster.jpg" autoplay muted loop playsinline></video><p><strong>Spinning canvas.</strong> A surface that won't sit still.</p></div>
   <div><video src="/work/bss-assets/proto-standing-game.mp4" poster="/work/bss-assets/proto-standing-game-poster.jpg" autoplay muted loop playsinline></video><p><strong>Standing game.</strong> Drawing together, on your feet.</p></div>
   <div><video src="/work/bss-assets/proto-rainstick.mp4" poster="/work/bss-assets/proto-rainstick-poster.jpg" autoplay muted loop playsinline></video><p><strong>Arduino rainstick.</strong> Tilt it to paint with someone else.</p></div>
-  <div><video src="/work/bss-assets/proto-kaleidoscope.mp4" poster="/work/bss-assets/proto-kaleidoscope-poster.jpg" autoplay muted loop playsinline></video><p><strong>Kaleidoscope.</strong> Every stroke mirrored into something pretty.</p></div>
-  <div><video src="/work/bss-assets/proto-motion-tracking.mp4" poster="/work/bss-assets/proto-motion-tracking-poster.jpg" autoplay muted loop playsinline></video><p><strong>Motion tracking.</strong> Drawing in the air.</p></div>
+  <div><video src="/work/bss-assets/proto-kaleidoscope.mp4" poster="/work/bss-assets/proto-kaleidoscope-poster.jpg" autoplay muted loop playsinline></video><p><strong>Hand-tracked kaleidoscope.</strong> Draw in the air, mirrored into a pattern.</p></div>
+  <div><video src="/work/bss-assets/proto-motion-tracking.mp4" poster="/work/bss-assets/proto-motion-tracking-poster.jpg" autoplay muted loop playsinline></video><p><strong>Ripples.</strong> A small surprise wherever you draw.</p></div>
 </figure>
 
-I combined the best parts into one piece of software, Happy Accidents Studio. In playtests, it didn't work. The technology became the thing people paid attention to, and some people couldn't get past setting it up. So I went back through each prototype and asked what it had actually taught me.
+I folded the best parts into one piece of software, Happy Accidents Studio: hand-tracked drawing, solo and co-op, with little surprises like kaleidoscope mirroring and ripples.
+
+<figure class="pair">
+  <img src="/work/bss-assets/hands-kaleidoscope.webp" alt="Happy Accidents Studio: a hand-tracked kaleidoscope drawing on screen, with a player waving at the camera"/>
+  <img src="/work/bss-assets/hands-sketch.webp" alt="A hand-tracking sketch in the p5.js editor, drawing lines from a webcam view of a hand"/>
+  <figcaption>Happy Accidents Studio: hand-tracked drawing, alone or together.</figcaption>
+</figure>
+
+In playtests, it didn't work. The technology became the thing people paid attention to, and some people couldn't get past setting it up. So I went back through each prototype and asked what it had actually taught me.
 
 ## What each prototype taught
 
