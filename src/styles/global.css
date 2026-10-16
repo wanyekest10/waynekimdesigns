@@ -178,3 +178,11 @@ article h3 { font: var(--label); font-size: 16px; color: var(--ink); margin: 40p
   .stats span { margin-top: 0; }
 }
 .facts:last-child { padding-bottom: 0; border-bottom: 0; }
+
+/* GIF-style looping clips with an optional sound toggle */
+article .vid { position: relative; max-width: var(--wide); margin: 32px 0; }
+article .vid video { margin: 0; }
+article .vid .snd { position: absolute; right: 12px; bottom: 12px; font: var(--meta); letter-spacing: -0.02em; color: #fff; background: rgba(20,20,20,.55); border: 0; border-radius: 999px; padding: 6px 12px; cursor: pointer; backdrop-filter: blur(4px); }
+article .vid .snd:hover { background: rgba(20,20,20,.75); }
+article figure.medium { max-width: 600px; margin: 32px 0; }
+article figure.medium img { margin: 0; }

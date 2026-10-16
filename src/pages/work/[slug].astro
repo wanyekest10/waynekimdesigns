@@ -70,6 +70,16 @@ const toc = headings
   };
   window.addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
   update();
+  // Looping clips play silently like GIFs; a small button turns sound on.
+  document.querySelectorAll<HTMLButtonElement>('.vid .snd').forEach((btn) => {
+    const v = btn.previousElementSibling as HTMLVideoElement;
+    btn.addEventListener('click', () => {
+      v.muted = !v.muted;
+      if (!v.muted) { v.currentTime = 0; v.play(); }
+      btn.textContent = v.muted ? 'Sound on' : 'Sound off';
+      btn.setAttribute('aria-pressed', String(!v.muted));
+    });
+  });
 </script>
 <style>
   .back { margin-top: 64px; }

@@ -77,13 +77,13 @@ A few of her lines:
 
 <blockquote><p>"You're moving slow enough for the room to catch up; that's a rare kind of quiet."</p><p>Yoga, 87% confidence</p></blockquote>
 
-<video src="/work/living-assets/liv-in-action-1.mp4" poster="/work/living-assets/liv-in-action-1-poster.jpg" controls playsinline></video>
+<div class="vid"><video src="/work/living-assets/liv-in-action-1.mp4" poster="/work/living-assets/liv-in-action-1-poster.jpg" autoplay muted loop playsinline></video><button class="snd" type="button" aria-pressed="false">Sound on</button></div>
 
 ## Seeing what the system sees
 
 Before we could trust Liv's responses, we needed to see her reasoning. I built a live testing interface that showed the system's real-time classification for each scenario next to what Liv would say. Without it, a wrong comment just felt like a bad line. With it, we could see the misread that caused it, fix it, and decide how much to trust the system before putting it in front of people.
 
-![The testing interface: live classification percentages for each activity, with Liv's response below](/work/living-assets/testing-interface.webp)
+<figure class="medium"><img src="/work/living-assets/testing-interface.webp" alt="The testing interface: live classification percentages for each activity, with Liv's response below"/></figure>
 
 ## When care becomes nagging
 
@@ -95,7 +95,7 @@ Our early prototypes focused on interrupting doomscrolling. User testing showed 
 
 In Korean, 잔소리 (jansori) describes exactly this: nagging that overwhelms care through repetition. So we expanded Liv's role beyond interruption to positive reinforcement and ambient music. She encourages you when you cook or stretch, plays something fitting, and only sometimes teases you for scrolling. In a future version, people would get more control over when and how she speaks.
 
-<video src="/work/living-assets/liv-in-action-2.mp4" poster="/work/living-assets/liv-in-action-2-poster.jpg" controls playsinline></video>
+<div class="vid"><video src="/work/living-assets/liv-in-action-2.mp4" poster="/work/living-assets/liv-in-action-2-poster.jpg" autoplay muted loop playsinline></video><button class="snd" type="button" aria-pressed="false">Sound on</button></div>
 
 ## A speculative exploration
 
