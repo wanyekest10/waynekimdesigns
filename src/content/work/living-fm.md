@@ -42,7 +42,6 @@ Trained the computer vision model, wrote Liv's personality prompts and gave her 
 **Outcome**
 A working prototype: a wooden speaker with a camera that recognizes four activities and responds in character. The lesson: in an ambient system, the interpretation is the product.
 
-[Read more ↓](#full)
 
 ---
 

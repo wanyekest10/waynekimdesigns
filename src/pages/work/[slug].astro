@@ -13,7 +13,8 @@ const { Content } = await render(w);
   <h1>{w.data.title}</h1>
   <p class="lead">{w.data.headline}</p>
   <img class="hero" src={w.data.hero} alt={w.data.heroAlt} />
+  <p class="jump"><a href="#full">Read the full case study ↓</a></p>
   <article><Content /></article>
   <p class="back"><a href="/#work">← All work</a></p>
 </Base>
-<style>.back { margin-top: 64px; }</style>
+<style>.back { margin-top: 64px; } .hero { margin-bottom: 20px; } .jump { margin: 0 0 56px; }</style>

@@ -52,7 +52,6 @@ Led the research end to end. Turned leadership's questions into a hypothesis and
 - 1.8M+ users in Glorify Groups.
 - 20% of daily active users use Groups.
 
-[Read the full case study ↓](#full)
 
 ---
 
