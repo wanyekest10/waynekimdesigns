@@ -13,49 +13,31 @@ team:
 methods: [Prototype diary study, Interviews]
 tags: [UX research, Strategy, Community]
 reading_time: About 2 minutes
-stats:
-  - value: 1.8M+
-    label: users in Glorify Groups
-  - value: 20%
-    label: of daily active users use Groups
 order: 1
 cardFit: contain
 label: "Research and strategy"
 summary: "The research behind a bet on community."
 hero: "/work/glorify-assets/shipped-screens.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
+intro:
+  - "Glorify had 2.5M+ users praying and meditating on their own. With a post-Series B board meeting ahead, leadership was weighing community as the next bet, and doubted it would work."
+  - "I turned their doubts into one testable hypothesis, then put a TestFlight prototype into 82 people's real small groups for a 2-week diary study."
+  - "Leadership launched Glorify Groups and dedicated three of the four product, design, and engineering pods to it. Today 1.8M+ people use it."
+facts:
+  - { label: "Role", value: "Senior Design Researcher" }
+  - { label: "Timeline", value: "6 weeks, Mar to May 2023" }
+  - { label: "Team", value: "VP of Product, Lead Designer" }
+  - { label: "Methods", value: "Prototype diary study, interviews, survey" }
+stats:
+  - { value: "1.8M+", label: "users in Glorify Groups" }
+  - { value: "20%", label: "of daily active users use Groups" }
+  - { value: "3 of 4", label: "product pods committed to Groups" }
+jumps:
+  - { label: "Skip to the research", to: "studying-real-behavior-not-stated-interest" }
+  - { label: "Skip to the findings", to: "what-we-found" }
+  - { label: "Skip to the impact", to: "the-decision" }
 ---
 
-## TL;DR
-
-**Context**
-Glorify is a Christian wellness app backed by a16z and SoftBank, serving 2.5M+ users through individual practices like prayer and meditation. I was the Senior Design Researcher on a newly forming product, design, and research team, and the post-Series B board meeting set the deadline. Leadership was weighing community as a new product direction but wasn't sure whether to commit. My own time in Christian small groups, and interviews with leaders and members, told me faith and meaning already lived there.
-
-**Challenges**
-- Leadership doubted community would work, and their doubts were spread across several open questions.
-- A short window to answer before the board meeting.
-- Community can't be tested one person at a time. It needed real groups using it together.
-- Groups already had chat apps that worked fine. Glorify Groups had to be worth switching to.
-
-**My role**
-Led the research end to end. Turned leadership's questions into a hypothesis and framework, designed and ran a 2-week prototype diary study with 82 participants, ran follow-up interviews, and created design principles with Matt Regan. Presented the findings at the product, design, and engineering leadership offsite.
-
-**Key decisions**
-- **Turned doubts into a framework.** Leadership's questions about engagement, authenticity, and long-term value became one Flywheel Framework, which gave the study a clear hypothesis to prove or disprove.
-- **Tested behavior, not opinion.** Put a TestFlight prototype into real small groups instead of asking whether people wanted the feature.
-- **Recruited two kinds of groups.** One wave of groups not tied to a church, one wave from specific churches, so the findings held across both.
-- **Studied leaders and members.** The flywheel depends on both, so the study had to capture value for each.
-- **Delivered principles, not a report.** Findings became design principles that guided the team long after the research ended.
-
-**Outcome**
-- Leadership launched Glorify Groups, dedicating three of the four product, design, and engineering pods.
-- 1.8M+ users in Glorify Groups.
-- 20% of daily active users use Groups.
-
-
----
-
-<a id="full"></a>
 
 ## Should Groups exist at all?
 

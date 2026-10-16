@@ -17,35 +17,25 @@ label: "AI and prototyping"
 summary: "A radio host that notices you scrolling."
 hero: "/work/living-assets/hero-couch.webp"
 heroAlt: "Someone scrolling on the couch while Liv, a small wooden speaker with a camera, sits on the side table"
+intro:
+  - "Habits like doomscrolling are reinforced by technology built to hold attention. In a 4-day CIID sprint on designing with AI, we asked whether a little self-awareness, at the right moment, could work as gentle friction."
+  - "I trained the vision model, wrote Liv's personality and gave her a voice, and built a live interface to see what the system saw."
+  - "Liv became a wooden speaker that recognizes four activities and speaks only when she's sure. Living.fm is a provocation, not a product."
+facts:
+  - { label: "Role", value: "Interaction designer" }
+  - { label: "Timeline", value: "4 days, 2025, CIID" }
+  - { label: "Team", value: "Juan Ignacio Garro, Alec Davis" }
+  - { label: "Tools", value: "Teachable Machine, Cursor, ElevenLabs, ESP32 camera" }
+stats:
+  - { value: "4 days", label: "from idea to working prototype" }
+  - { value: "4", label: "activities Liv can recognize" }
+  - { value: "80%", label: "confidence before Liv speaks" }
+jumps:
+  - { label: "Skip to the process", to: "bodystorming-timing-beats-content" }
+  - { label: "Skip to the build", to: "building-liv" }
+  - { label: "Watch Liv", to: "giving-liv-a-voice" }
 ---
 
-## TL;DR
-
-**Context**
-A 4-day CIID project on designing with AI, with Juan Ignacio Garro and Alec Davis. Habits like doomscrolling are reinforced by technology built to capture attention. We asked whether a little self-awareness, delivered at the right moment, could work as gentle friction. The answer was Liv: a portable narrator that plays ambient music and comments on what you're doing, like a late-night radio host for your home. Living.fm is a provocation, not a product.
-
-**Challenges**
-- Activity recognition was inconsistent from one activity to the next.
-- Liv had to be a bit sassy without tipping into nagging.
-- Comments that came too early felt intrusive. Too late felt pointless.
-- People had to trust an ambient system's read of them.
-
-**My role**
-Trained the computer vision model, wrote Liv's personality prompts and gave her a voice, and built the live testing interface.
-
-**Key decisions**
-- **Silence by default.** Liv only speaks when the model is at least 80% confident. Below that, she stays quiet, because a wrong comment costs more trust than a missed one.
-- **Four scenarios, not everything.** Idle, doomscrolling, yoga, and dancing. Recognition wasn't reliable enough to comment on anything at home.
-- **A view of what the system sees.** The testing interface showed live classifications next to what Liv would say, so we caught misreads before anyone heard them.
-- **From alarm to companion.** Testers found the first version felt like nagging, so we expanded Liv beyond interrupting doomscrolling to encouragement and ambient music.
-
-**Outcome**
-A working prototype: a wooden speaker with a camera that recognizes four activities and responds in character. The lesson: in an ambient system, the interpretation is the product.
-
-
----
-
-<a id="full"></a>
 
 ## Why a narrator
 
