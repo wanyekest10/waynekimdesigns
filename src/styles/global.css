@@ -388,23 +388,14 @@ article figure.vimeo-live { margin: 0 0 40px; }
 @media (max-width: 560px) { .hub { grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr); } .hub-link span { font-size: 10px; padding: 0 3px; } }
 
 /* Exploded view */
-figure.explode { max-width: var(--wide); display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 8px 32px; align-items: center; background: var(--panel); border-radius: 6px; padding: 24px 28px; }
-figure.explode svg { width: 100%; height: auto; max-height: 520px; max-width: none; }
+figure.explode { max-width: var(--wide); display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 8px 32px; align-items: center; border: 1px solid var(--rule); border-radius: 6px; padding: 24px 28px; }
+figure.explode .ex-img { position: relative; }
+figure.explode .ex-img img { display: block; width: 100%; height: auto; max-width: none; margin: 0; border-radius: 4px; }
+.ex-nums { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ex-nums circle { fill: var(--ink); }
+.ex-nums text { fill: var(--paper); font: 500 28px var(--mono); text-anchor: middle; }
 figure.explode figcaption { grid-column: 1 / -1; }
 .explode-key { list-style: none; counter-reset: k; display: flex; flex-direction: column; gap: 10px; }
 .explode-key li { counter-increment: k; display: flex; gap: 12px; align-items: baseline; font-size: 15px; color: var(--ink); }
 .explode-key li::before { content: counter(k); flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--ink); color: var(--paper); font: 500 12px/22px var(--mono); text-align: center; }
-.exploded polygon { stroke: rgba(20,20,20,.35); stroke-width: .8; stroke-linejoin: round; }
-.exploded .x-shell.t { fill: #B3B6B6; } .exploded .x-shell.l { fill: #9A9E9E; } .exploded .x-shell.r { fill: #898D8D; }
-.exploded .x-win { fill: #6F7373; }
-.exploded .x-race.t { fill: #B3B6B6; } .exploded .x-race.l { fill: #9A9E9E; } .exploded .x-race.r { fill: #898D8D; }
-.exploded .x-pcb.t { fill: #2E3A4E; } .exploded .x-pcb.l, .exploded .x-pcb.r { fill: #1F2836; }
-.exploded .x-disp { fill: #F3F2EE; }
-.exploded .x-plate.t { fill: #C9CBCB; } .exploded .x-plate.l { fill: #ADB0B0; } .exploded .x-plate.r { fill: #9DA0A0; }
-.exploded .x-bb.t { fill: #FAFAF8; } .exploded .x-bb.l, .exploded .x-bb.r { fill: #DADAD6; }
-.exploded .x-mkr.t { fill: var(--accent); } .exploded .x-mkr.l, .exploded .x-mkr.r { fill: #001F86; }
-.exploded .x-batt.t { fill: #E9D99A; } .exploded .x-batt.l { fill: #D3C27E; } .exploded .x-batt.r { fill: #C2B16D; }
-.exploded .x-stand { stroke: #B08D3C; stroke-width: 3; stroke-dasharray: 2 0; }
-.exploded .x-num circle { fill: var(--ink); }
-.exploded .x-num text { fill: var(--paper); font: 500 13px var(--mono); text-anchor: middle; }
 @media (max-width: 720px) { figure.explode { grid-template-columns: 1fr; padding: 16px; } }

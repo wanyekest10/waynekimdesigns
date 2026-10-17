@@ -120,16 +120,26 @@ The hard part wasn't the electronics. It was getting a wire from the holder to t
 I designed the pod in Fusion, along with a raceway that carries the sensor wire down the wall and along the holder's arm to the end of the sleeve. Everything prints in gray. The LiPo sits trapped in a closed shell, and the display's own screws and brass standoffs hold it together.
 
 <figure class="explode">
-  <svg class="exploded" viewBox="-217 -308 416 444" role="img" aria-label="Exploded view of the pod: shell, e-paper screen, brass standoffs, Arduino on a printed plate, LiPo battery, and the raceway"><polygon class="x-batt l" points="-26.0,85.0 34.6,120.0 34.6,110.0 -26.0,75.0"/><polygon class="x-batt r" points="73.6,97.5 34.6,120.0 34.6,110.0 73.6,87.5"/><polygon class="x-batt t" points="13.0,52.5 73.6,87.5 34.6,110.0 -26.0,75.0"/><polygon class="x-plate l" points="-112.6,-5.0 43.3,85.0 43.3,80.0 -112.6,-10.0"/><polygon class="x-plate r" points="155.9,20.0 43.3,85.0 43.3,80.0 155.9,15.0"/><polygon class="x-plate t" points="0.0,-75.0 155.9,15.0 43.3,80.0 -112.6,-10.0"/><polygon class="x-bb l" points="-47.6,-27.5 30.3,17.5 30.3,9.5 -47.6,-35.5"/><polygon class="x-bb r" points="77.9,-10.0 30.3,17.5 30.3,9.5 77.9,-18.0"/><polygon class="x-bb t" points="0.0,-63.0 77.9,-18.0 30.3,9.5 -47.6,-35.5"/><polygon class="x-mkr l" points="16.5,25.5 66.7,54.5 66.7,51.5 16.5,22.5"/><polygon class="x-mkr r" points="89.2,41.5 66.7,54.5 66.7,51.5 89.2,38.5"/><polygon class="x-mkr t" points="39.0,9.5 89.2,38.5 66.7,51.5 16.5,22.5"/><line class="x-stand" x1="0.0" y1="-71.0" x2="0.0" y2="-151.0"/><line class="x-stand" x1="149.0" y1="15.0" x2="149.0" y2="-65.0"/><line class="x-stand" x1="-105.7" y1="-10.0" x2="-105.7" y2="-90.0"/><line class="x-stand" x1="43.3" y1="76.0" x2="43.3" y2="-4.0"/><polygon class="x-pcb l" points="-129.9,-90.0 43.3,10.0 43.3,6.0 -129.9,-94.0"/><polygon class="x-pcb r" points="173.2,-65.0 43.3,10.0 43.3,6.0 173.2,-69.0"/><polygon class="x-pcb t" points="0.0,-169.0 173.2,-69.0 43.3,6.0 -129.9,-94.0"/><polygon class="x-disp" points="3.5,-153.5 145.5,-71.5 43.3,-12.5 -98.7,-94.5"/><polygon class="x-race l" points="-200.9,-30.0 -190.5,-24.0 -190.5,-32.0 -200.9,-38.0"/><polygon class="x-race r" points="-43.3,-109.0 -190.5,-24.0 -190.5,-32.0 -43.3,-117.0"/><polygon class="x-race t" points="-53.7,-123.0 -43.3,-117.0 -190.5,-32.0 -200.9,-38.0"/><polygon class="x-shell l" points="-140.3,-165.0 43.3,-59.0 43.3,-105.0 -140.3,-211.0"/><polygon class="x-shell r" points="183.6,-140.0 43.3,-59.0 43.3,-105.0 183.6,-186.0"/><polygon class="x-shell t" points="0.0,-292.0 183.6,-186.0 43.3,-105.0 -140.3,-211.0"/><polygon class="x-win" points="1.7,-273.2 150.7,-187.2 43.3,-125.2 -105.7,-211.2"/><g class="x-num"><circle cx="70.6" cy="103.5" r="11"/><text x="70.6" y="107.5">5</text></g><g class="x-num"><circle cx="115.6" cy="50.5" r="11"/><text x="115.6" y="54.5">4</text></g><g class="x-num"><circle cx="165.0" cy="-25.0" r="11"/><text x="165.0" y="-21.0">3</text></g><g class="x-num"><circle cx="124.3" cy="-29.5" r="11"/><text x="124.3" y="-25.5">2</text></g><g class="x-num"><circle cx="129.4" cy="-122.5" r="11"/><text x="129.4" y="-118.5">1</text></g><g class="x-num"><circle cx="-152.0" cy="-41.0" r="11"/><text x="-152.0" y="-37.0">6</text></g></svg>
+  <div class="ex-img"><img src="/work/tpe-assets/exploded-pod.webp" alt="Exploded view of the pod: the gray shell, the e-paper screen with brass standoffs, the Arduino on a breadboard and printed plate, and the LiPo battery"/><svg class="ex-nums" viewBox="0 0 1800 970" aria-hidden="true"><g><circle cx="1700" cy="175" r="26"/><text x="1700" y="185">1</text></g><g><circle cx="1290" cy="110" r="26"/><text x="1290" y="120">2</text></g><g><circle cx="860" cy="745" r="26"/><text x="860" y="755">3</text></g><g><circle cx="800" cy="40" r="26"/><text x="800" y="50">4</text></g><g><circle cx="330" cy="95" r="26"/><text x="330" y="105">5</text></g></svg></div>
   <ol class="explode-key">
     <li>Shell, with the screen window</li>
     <li>4.2" e-paper screen</li>
     <li>Brass standoffs</li>
-    <li>Arduino on a printed plate</li>
+    <li>Arduino MKR WiFi 1010 on a printed plate</li>
     <li>3.7V LiPo</li>
-    <li>Raceway, down to the holder</li>
   </ol>
   <figcaption>The pod, pulled apart.</figcaption>
+</figure>
+
+<figure class="explode">
+  <div class="ex-img"><img src="/work/tpe-assets/exploded-route.webp" alt="Exploded view of the sensor route: the end of the raceway, the finger that runs along the holder's arm, its side panel, and the A3144 Hall sensor"/><svg class="ex-nums" viewBox="0 0 1400 1365" aria-hidden="true"><g><circle cx="1290" cy="90" r="26"/><text x="1290" y="100">1</text></g><g><circle cx="1230" cy="800" r="26"/><text x="1230" y="810">2</text></g><g><circle cx="250" cy="760" r="26"/><text x="250" y="770">3</text></g><g><circle cx="1030" cy="1280" r="26"/><text x="1030" y="1290">4</text></g></svg></div>
+  <ol class="explode-key">
+    <li>Raceway, down the wall</li>
+    <li>Finger, along the holder's arm</li>
+    <li>Side panel, closes the wire channel</li>
+    <li>A3144 Hall sensor, at the tip</li>
+  </ol>
+  <figcaption>The sensor route, rendered from the Fusion files.</figcaption>
 </figure>
 
 <figure class="grid3">
