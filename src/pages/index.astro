@@ -7,6 +7,16 @@ import CopyEmail from '../components/CopyEmail.astro';
 import { experiments } from '../data/experiments';
 const work = (await getCollection('work')).filter((w) => w.data.featured).sort((a, b) => a.data.order - b.data.order);
 
+const travel = [
+  { src: '/about/travel-camino-perdon.webp', alt: 'Five hikers in front of rusted metal pilgrim silhouettes on a hilltop', caption: 'Alto del Perdón, Camino de Santiago' },
+  { src: '/about/travel-camino-bocadillo.webp', alt: 'Wayne in a bucket hat grinning and holding up a huge sandwich in a town square', caption: 'Lunch on the Camino' },
+  { src: '/about/travel-camino-blister.webp', alt: 'Wayne laughing while another pilgrim patches his blistered foot', caption: 'Blister care from a fellow pilgrim' },
+  { src: '/about/travel-camino-overlook.webp', alt: 'A lone hiker looking out over a wide valley under a big sky', caption: 'Looking out from the trail' },
+  { src: '/about/travel-camino-meseta.webp', alt: 'Patchwork fields and a small village under a big white cloud', caption: 'The meseta' },
+  { src: '/about/travel-porto.webp', alt: 'Dinner by the river at dusk under an iron arch bridge', caption: 'Dinner by the Douro, Porto' },
+  { src: '/about/travel-chefchaouen.webp', alt: 'Wayne and his best friend above a hillside city of blue and white houses', caption: 'Chefchaouen, Morocco' },
+];
+
 const years = [
   { when: "'25–now", what: 'Interaction designer, independent', note: 'Building physical and AI prototypes, like <a href="/work/room-tone/">room_tone</a> and <a href="/work/toilet-paper-elevator/">Toilet Paper Elevator</a>.' },
   { when: "'24–'25", what: 'Interaction Design, CIID', peek: [
@@ -19,6 +29,7 @@ const years = [
   { when: "'20–'21", what: 'Independent designer and researcher', note: 'Projects for Y Combinator companies like Govly, Rally.Video, and Measured.' },
   { when: "'17–'20", what: 'UX Strategist, RaiseMe', note: 'Research and strategy for a B2B2C edtech company.' },
   { when: "'15–'17", what: 'Assistant Dean of Admission, Reed College', note: 'Designed the <a href="https://www.reed.edu/admission-aid/visit/multicultural-programs/junior-scholars.html">Junior Scholars program</a> from 0 to 1 and ran the Senior Scholars program.' },
+  { egg: true },
   { when: "'10–'14", what: 'B.A. Sociology, Colby College', note: '' },
 ];
 ---
@@ -53,7 +64,17 @@ const years = [
     </div>
     <p class="about-links"><CopyEmail /><a href="/resume.pdf">Resume</a><a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a></p>
     <ul class="years">
-      {years.map((y) => (
+      {years.map((y: any) => y.egg ? (
+        <li class="egg">
+          <button class="egg-line" type="button" aria-expanded="false" aria-label="Something between Colby and Reed"></button>
+          <div class="egg-body"><div class="egg-in">
+            <span class="when">'14</span>
+            <span><strong>Three months on the road</strong><span class="note">Walked the Camino de Santiago with my best friend, caught the Fête de la Musique in Nantes, and played soccer on the beaches of Essaouira. Glad I took the time.</span>
+              <span class="film">{travel.map((t) => <figure><img src={t.src} alt={t.alt} loading="lazy" /><figcaption>{t.caption}</figcaption></figure>)}</span>
+            </span>
+          </div></div>
+        </li>
+      ) : (
         <li><span class="when">{y.when}</span><span>{y.peek ? (
           <span class="peek" tabindex="0"><strong>{y.what}</strong><span class="peek-card" role="tooltip"><span class="peek-stack">{y.peek.map((p: any, i: number) => <img class:list={{ on: i === 0 }} src={p.src} alt={p.alt} loading="lazy" />)}</span>{y.peek.map((p: any, i: number) => <span class:list={['peek-cap', { on: i === 0 }]}>{p.caption}</span>)}<span class="peek-dots" aria-hidden="true">{y.peek.map((_: any, i: number) => <i class:list={{ on: i === 0 }}></i>)}</span></span></span>
         ) : <strong>{y.what}</strong>}{y.note && <span class="note" set:html={y.note} />}</span></li>
@@ -61,6 +82,13 @@ const years = [
     </ul>
   </section>
   <script>
+    document.querySelectorAll('.egg').forEach((egg) => {
+      const btn = egg.querySelector('.egg-line') as HTMLButtonElement;
+      const set = (on: boolean) => { egg.classList.toggle('open', on); btn.setAttribute('aria-expanded', String(on)); };
+      btn.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') set(true); });
+      egg.addEventListener('pointerleave', (e) => { if ((e as PointerEvent).pointerType === 'mouse') set(false); });
+      btn.addEventListener('click', (e) => { if ((e as PointerEvent).pointerType === 'mouse') return set(true); set(!egg.classList.contains('open')); });
+    });
     document.querySelectorAll('.peek').forEach((peek) => {
       const groups = ['.peek-stack img', '.peek-cap', '.peek-dots i'].map((q) => Array.from(peek.querySelectorAll(q)));
       const n = groups[0].length; if (n < 2) return;
@@ -93,6 +121,22 @@ const years = [
   .about p { color: var(--gray); margin-bottom: 16px; }
   .years li { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 12px 0; border-top: 1px solid var(--rule); }
   .when { font: var(--meta); color: var(--gray); padding-top: 3px; }
+  .years li.egg { display: block; padding: 0; border-top: 0; position: relative; }
+  .egg-line { position: absolute; left: 0; right: 0; top: -8px; height: 17px; z-index: 1; border: 0; padding: 0; background: none; cursor: pointer; }
+  .egg-line:focus-visible { outline: 2px solid var(--ink); outline-offset: -6px; }
+  .egg-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s ease; }
+  .egg.open .egg-body { grid-template-rows: 1fr; }
+  .egg-in { overflow: hidden; display: grid; grid-template-columns: 80px 1fr; gap: 24px; min-height: 0; }
+  .egg-in > * { padding: 0; }
+  .egg.open .egg-in { border-top: 1px solid var(--rule); padding: 12px 0 16px; }
+  .egg.open .egg-line { top: 0; height: 12px; }
+  .film { display: flex; gap: 8px; margin-top: 12px; overflow-x: auto; scrollbar-width: none; }
+  .film::-webkit-scrollbar { display: none; }
+  .egg-in > span:last-child { min-width: 0; }
+  .film figure { flex: 0 0 180px; margin: 0; }
+  .film img { width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; border-radius: 4px; display: block; }
+  .film figcaption { font: var(--small); color: var(--gray); margin-top: 4px; }
+  @media (max-width: 720px) { .film figure { flex-basis: 150px; } }
   .years strong { font: var(--label); display: block; }
   .peek { position: relative; display: inline-block; cursor: default; outline: none; }
   .peek strong { text-decoration: underline dotted var(--gray); text-underline-offset: 4px; }
