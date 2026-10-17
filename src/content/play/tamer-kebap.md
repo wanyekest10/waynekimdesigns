@@ -14,7 +14,7 @@ Tamer Kebap was cheap, fast, and right on the way home. For a cohort of grad stu
 
 <figure class="pair">
   <img src="/play/tamer-kebap-assets/storefront.webp" alt="Tamer Kebap at night: red signs reading grill, pizza, pide, kebap over a patio lined with potted plants"/>
-  <img src="/play/tamer-kebap-assets/map.webp" alt="Tamer Kebap on a map of Bergamo, on Via Broseta"/>
+  <img style="object-position: left" src="/play/tamer-kebap-assets/map.webp" alt="Tamer Kebap on a map of Bergamo, on Via Broseta"/>
 </figure>
 
 When I left in fall 2025, I missed it more than I expected. I wanted to leave the group something we could hold onto.
