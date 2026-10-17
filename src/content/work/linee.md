@@ -1,11 +1,11 @@
 ---
 title: Linee
 slug: linee
-headline: "A wooden day planner for shared homes that keeps housemates in sync with a soft knock instead of an alarm."
+headline: "A wooden timekeeper for shared homes that keeps housemates in sync with a soft knock instead of an alarm."
 context: "CIID, 2025"
 order: 6
 label: "Physical computing and fabrication"
-summary: "A planner that knocks instead of buzzing."
+summary: "A timekeeper for shared homes, with no alarms."
 hero: "/work/linee-assets/hero.webp"
 heroAlt: "Linee on a wall: a long row of wooden hour blocks numbered 1 to 24"
 card: "/work/linee-assets/card.webp"
@@ -81,7 +81,7 @@ I led the block prototyping. We went through dozens of versions, starting in car
   <figcaption>Testing cardboard blocks with classmates, then pressing the wooden ones on the track.</figcaption>
 </figure>
 
-<figure class="frame"><video style="object-position: center 70%" src="/work/linee-assets/notch.mp4" poster="/work/linee-assets/notch-poster.jpg" autoplay muted loop playsinline></video><figcaption>The notch, up close.</figcaption></figure>
+<figure class="frame"><video src="/work/linee-assets/notch.mp4" poster="/work/linee-assets/notch-poster.jpg" autoplay muted loop playsinline></video><figcaption>The notch works!</figcaption></figure>
 
 ## Just put it in the box
 
