@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import Cards from '../components/Cards.astro';
 import Rows from '../components/Rows.astro';
 import Collaborate from '../components/Collaborate.astro';
+import CopyEmail from '../components/CopyEmail.astro';
 import { experiments } from '../data/experiments';
 const work = (await getCollection('work')).filter((w) => w.data.featured).sort((a, b) => a.data.order - b.data.order);
 
@@ -51,6 +52,7 @@ const years = [
       <p>I spent ten years in design research, at startups backed by a16z, YC, and SoftBank and at the design firm Designit, where I led research for Fortune 500 clients. Then I spent a year studying interaction design at CIID, where I started building with computer vision, AI, spatial computing, code, and electronics. That closed the loop: I could understand a context, build something, test it, and do it again.</p>
       <p>Lately I'm drawn to calm technology, ambient interaction, and making invisible systems visible: things that notice instead of nag.</p>
     </div>
+    <p class="about-links"><CopyEmail /><a href="/resume.pdf">Resume</a><a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a></p>
     <ul class="years">
       {years.map((y) => (
         <li><span class="when">{y.when}</span><span>{y.peek ? (
@@ -88,7 +90,8 @@ const years = [
   .block-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 20px; }
   .block-head .section-title { margin-bottom: 0; }
   .block-sub { color: var(--gray); font-size: 15px; }
-  .about { max-width: var(--measure); margin-bottom: 40px; }
+  .about { max-width: var(--measure); margin-bottom: 20px; }
+  .about-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 24px; font-size: 15px; margin-bottom: 40px; }
   .about p { color: var(--gray); margin-bottom: 16px; }
   .years li { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 12px 0; border-top: 1px solid var(--rule); }
   .when { font: var(--meta); color: var(--gray); padding-top: 3px; }
