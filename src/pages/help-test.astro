@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+const ways = [
+  {
+    title: 'Should we build this?',
+    when: "You're about to commit to a bet, and you're not sure it's the right one.",
+    what: "I turn the doubt into one question we can test, then pick the method that fits. Interviews, surveys, and a service blueprint to understand how things work today. A quick prototype in front of the people who would use it to see what they actually do.",
+    get: 'A decision, with evidence behind it, from someone who has spent ten years in design research.',
+    proof: [ { name: 'Glorify Groups', href: '/work/glorify-groups/' }, { name: 'RaiseMe Portal', href: '/work/raiseme-portal/' } ],
+  },
+  {
+    title: 'Will it actually work?',
+    when: "The idea involves sensors, a camera, hardware, a digital experience, or AI, and slides won't settle it.",
+    what: 'I build a working prototype, from the code and electronics to the thing you hold, and test it where it would actually live.',
+    get: 'Something people can use, and what we learned from watching them use it.',
+    proof: [ { name: 'Living.fm', href: '/work/living-fm/' }, { name: 'room_tone', href: '/work/room-tone/' }, { name: 'Toilet Paper Elevator', href: '/work/toilet-paper-elevator/' }, { name: 'Linee', href: '/work/linee/' } ],
+  },
+  {
+    title: 'How do we get everyone on the same page?',
+    when: "Your team has strong opinions about what's next, and they haven't been tested against each other. Or the ideas on the table all feel safe.",
+    what: 'I design and run workshops that do two things. Open up: creative exercises and playful constraints that get a room past its first, safe ideas. Then narrow down: everyone writes their position before anyone talks, so the loudest voice doesn\'t win by default. I synthesize the wall into themes.',
+    get: 'Fresh ideas worth testing, and a plan someone can act on.',
+    proof: [ { name: 'Facilitation', href: '/work/facilitation/' } ],
+  },
+];
+
+---
+<Base title="Help layouts" noindex>
+  <h1 class="h">How I can help</h1>
+  <p class="lead">I'm most useful when a team needs to understand a problem and build something to test it. Most researchers don't build, and most prototypers don't research. I do both.</p>
+
+  <section id="a"><p class="tag">A. Three cards</p>
+    <div class="a-grid">{ways.map((w) => (
+      <div class="a-card"><h2>{w.title}</h2><p class="a-when">{w.when}</p><p class="a-what">{w.what}</p><p class="a-get"><b>You get</b> {w.get}</p><p class="links">{w.proof.map((p) => <a href={p.href}>{p.name}</a>)}</p></div>
+    ))}</div>
+  </section>
+
+  <section id="b"><p class="tag">B. One column, case study style</p>
+    <div class="b-list">{ways.map((w) => (
+      <div class="b-item"><h2>{w.title}</h2><p><strong>When.</strong> {w.when}</p><p><strong>What I do.</strong> {w.what}</p><p><strong>You get.</strong> {w.get}</p><p class="links">{w.proof.map((p) => <a href={p.href}>{p.name} →</a>)}</p></div>
+    ))}</div>
+  </section>
+
+  <section id="c"><p class="tag">C. Questions as an open list</p>
+    <div class="c-list">{ways.map((w, i) => (
+      <details open={i === 0}><summary><h2>{w.title}</h2><span class="plus">+</span></summary>
+        <div class="c-body"><p class="c-when">{w.when}</p><p>{w.what}</p><p><strong>You get.</strong> {w.get}</p><p class="links">{w.proof.map((p) => <a href={p.href}>{p.name} →</a>)}</p></div>
+      </details>
+    ))}</div>
+  </section>
+</Base>
+<style>
+  .h { font-size: 40px; letter-spacing: -0.03em; }
+  .lead { color: var(--gray); max-width: var(--measure); margin-bottom: 40px; }
+  section { padding: 48px 0 72px; border-top: 4px solid var(--ink); }
+  .tag { font: var(--meta); text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+  h2 { font: var(--h2); letter-spacing: -0.01em; }
+  .links { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; }
+  .a-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .a-card { background: var(--panel); border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+  .a-card h2 { font-size: 20px; line-height: 1.3; min-height: 2.6em; }
+  .a-when { color: var(--gray); font-size: 15px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+  .a-what { font-size: 15px; }
+  .a-get { font-size: 15px; color: var(--gray); }
+  .a-get b { color: var(--ink); font-weight: 500; }
+  .a-card .links { margin-top: auto; padding-top: 8px; }
+  .b-list { max-width: var(--measure); }
+  .b-item { padding: 32px 0; border-top: 1px solid var(--rule); }
+  .b-item h2 { margin-bottom: 16px; }
+  .b-item p { color: var(--gray); margin-bottom: 10px; }
+  .b-item strong { color: var(--ink); font-weight: 500; }
+  .c-list { max-width: 760px; border-bottom: 1px solid var(--rule); }
+  details { border-top: 1px solid var(--rule); }
+  summary { list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 24px 0; cursor: pointer; }
+  summary::-webkit-details-marker { display: none; }
+  .plus { font-size: 24px; color: var(--gray); }
+  details[open] .plus { transform: rotate(45deg); }
+  .c-body { padding: 0 0 28px; max-width: var(--measure); }
+  .c-body p { color: var(--gray); margin-bottom: 10px; }
+  .c-body strong { color: var(--ink); font-weight: 500; }
+  .c-when { color: var(--ink) !important; }
+</style>
