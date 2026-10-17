@@ -1,5 +1,6 @@
 ---
 // An Experiments write-up: one column, title, one line, a few facts, then the story.
+import MoreProjects from '../../components/MoreProjects.astro';
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
@@ -19,6 +20,7 @@ const d = p.data;
   </header>
   <img class="hero" src={d.hero} alt={d.heroAlt} />
   <article class="play-body"><Content /></article>
+  <MoreProjects current={`/experiments/${p.id}/`} />
 </Base>
 <style>
   .play-top { margin-top: 64px; max-width: var(--measure); }

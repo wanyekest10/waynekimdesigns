@@ -1,6 +1,6 @@
 ---
-import Base from '../layouts/Base.astro';
-import CopyEmail from '../components/CopyEmail.astro';
+// Collaborate: the three services, how it starts, and the message form. Lives at the end of the homepage.
+import CopyEmail from './CopyEmail.astro';
 
 const ways = [
   {
@@ -38,17 +38,13 @@ const steps = [
   'If it\'s a fit, I send a short proposal with scope and timeline.',
 ];
 ---
-<Base prompt={false} title="How I can help, Wayne Kim" description="How Wayne Kim can help: testing a bet before you build it, prototyping hardware and AI ideas, and running workshops that end in a plan.">
-  <header class="top">
-    <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
-    <h1>How I can help</h1>
-    <p class="lead">I help teams understand a problem, then build something to test it.</p>
-  </header>
-
+<section id="collaborate" class="collaborate">
+  <h2 class="section-title">Collaborate</h2>
+  <p class="collab-lead">I help teams understand a problem, then build something to test it.</p>
   <div class="ways">
     {ways.map((w, i) => (
       <section class="way" id={`way-${i + 1}`}>
-        <div class="w-head"><h2>{w.title}</h2><p class="w-time">{w.time}</p></div>
+        <div class="w-head"><h3>{w.title}</h3><p class="w-time">{w.time}</p></div>
         <p class="w-when">{w.when}</p>
         <p class="w-what">{w.what}</p>
         <p class="w-get"><b>You get</b> {w.get}</p>
@@ -58,14 +54,14 @@ const steps = [
   </div>
 
   <section class="start">
-    <h2 class="section-title">How it starts</h2>
+    <h3 class="sub-title">How it starts</h3>
     <ol class="steps">
       {steps.map((s) => <li>{s}</li>)}
     </ol>
   </section>
 
   <section class="contact" id="message">
-    <h2 class="section-title">Send a message</h2>
+    <h3 class="sub-title">Send a message</h3>
     <div class="contact-grid">
       <form class="msg" data-key={FORM_KEY}>
         <fieldset class="topic">
@@ -120,17 +116,15 @@ const steps = [
       });
     }
   </script>
-</Base>
+</section>
 
 <style>
-  .top { max-width: var(--measure); margin-bottom: 48px; }
-  .status { display: inline-flex; align-items: center; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 20px; }
-  .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
-  .lead { color: var(--gray); }
+  .collab-lead { color: var(--gray); max-width: var(--measure); margin-bottom: 32px; }
+  .sub-title { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 20px; }
 
   .ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 96px; }
   .way { scroll-margin-top: 72px; background: var(--panel); border-radius: 10px; padding: 24px; display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 12px; }
-  .way h2 { font: var(--h2); font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 6px; }
+  .way h3 { font: var(--h2); font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 6px; }
   .w-time { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--accent); }
   .w-when { color: var(--gray); font-size: 15px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
   .w-what { font-size: 15px; }

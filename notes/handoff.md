@@ -53,7 +53,9 @@ jumps:                   # phone-only jump links; `to` = heading slug
 - Experiments (/experiments, renamed from Play Oct 17; /play/* redirects), in order: Mirrored Canvas, Lume, Tamer Kebap Eating Club, Larvae Lagoon, A Serious Fan. Monet Clock and Above are hidden in `src/data/experiments.ts` until Wayne adds them.
 - Mirrored Canvas, Lume, Larvae Lagoon, A Serious Fan use the case study template but set `listIn: experiments` (listed in Experiments, back links go there).
 - Experiments write-ups (Tamer only now) live in `src/content/experiments/` and use `src/pages/experiments/[slug].astro`. Assets in `public/experiments/`.
-- How I can help page (`src/pages/how-i-can-help.astro`), linked from the homepage status line. Three offers: Should we build this?, Make it real enough to test, Get the room to agree. Audience not decided yet.
+- Collaborate (`src/components/Collaborate.astro`) is the last section of the homepage (#collaborate): three service cards with time ranges, How it starts, and a message form (Web3Forms, key in the component) plus direct email. Nav item Collaborate. /how-i-can-help redirects there.
+- Closing prompt above the footer on every page except the homepage (`prompt` prop on Base). Links to /#message.
+- More projects (`src/components/MoreProjects.astro`) at the end of every case study and experiment: next two in line, Show 2 more. The line runs Work (homepage order) then Experiments, and loops.
 - Every old Framer URL redirects (astro.config.mjs).
 - CIID pages list "Responsibility" instead of Role. BSS and Larvae Lagoon have none.
 - Each CIID project ends with its full Vimeo/YouTube video embedded (`figure.embed`).

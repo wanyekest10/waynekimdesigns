@@ -1,4 +1,5 @@
 ---
+import MoreProjects from '../../components/MoreProjects.astro';
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
@@ -59,6 +60,7 @@ const toc = headings
     <div class="cs-body">
       <article class="numbered"><Content /></article>
       <p class="back">{d.listIn === 'experiments' ? <a href="/experiments/">← All experiments</a> : <a href="/work/">← All work</a>}</p>
+      <MoreProjects current={`/work/${w.id}/`} />
     </div>
   </div>
 </Base>
