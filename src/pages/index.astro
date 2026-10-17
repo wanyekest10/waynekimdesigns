@@ -15,10 +15,14 @@ const travel = [
 
 const years = [
   { when: "'25–now", what: 'Interaction designer, independent', note: 'Building physical and AI prototypes, like <a href="/work/room-tone/">room_tone</a> and <a href="/work/toilet-paper-elevator/">Toilet Paper Elevator</a>.' },
-  { when: "'24–'25", what: 'Interaction Design, CIID', peek: [
-    { src: '/about/ciid-class.webp', alt: 'The CIID class with staff and faculty on the grass, in orange scarves, looking up at the camera', caption: "CIID '24 with staff + faculty at Impact Minds" },
+  { when: "'24–'25", what: 'Interaction Design, CIID', film: [
+    { src: '/about/ciid-eco-di-bergamo.webp', alt: 'Front page of L\'Eco di Bergamo with a photo of the CIID class in Astino', caption: 'Front page news' },
+    { src: '/about/ciid-studio-night.webp', alt: 'Classmates around a long studio table covered in laptops, breadboards and wood prototypes', caption: 'Studio nights' },
+    { src: '/about/ciid-synthesis.webp', alt: 'Wayne looking through two cardboard tubes like binoculars over a table of sticky notes', caption: 'Synthesis, with binoculars' },
+    { src: '/about/ciid-light-painting.webp', alt: 'A camera screen showing classmates posing behind white light-painted scribbles', caption: 'Light painting' },
+    { src: '/about/ciid-bss-dial.webp', alt: 'A wooden dial prototype labeled Inner child, Slow, Playful and Permission around a scribble drawing', caption: 'Sketching dial' },
+    { src: '/about/ciid-linee-show.webp', alt: 'Wayne laughing and reaching up to Linee on the wall, with two teammates beside him', caption: 'Linee, final show' },
     { src: '/about/ciid-graduation.webp', alt: 'The class in flower crowns, holding up their certificates', caption: 'Graduation day' },
-    { src: '/about/ciid-impact-minds.webp', alt: 'A large group photo on a grassy hillside, everyone looking up and waving at the camera', caption: 'Everyone at Impact Minds' },
   ], note: 'M.S. A year of research, build, test, repeat, prototyping across mediums.' },
   { when: "'23–'24", what: 'Senior UX Researcher, Glorify', note: 'Built the research practice and led 3 researchers. Shaped Glorify Groups (1.8M+ users).' },
   { when: "'21–'23", what: 'Design Researcher, Designit', note: 'Led research for Fortune 500 clients like Mastercard and Trane, plus <a href="/work/designit-futures/">speculative futures work</a>.' },
@@ -71,9 +75,11 @@ const years = [
           </div></div>
         </li>
       ) : (
-        <li><span class="when">{y.when}</span><span>{y.peek ? (
-          <span class="peek" tabindex="0"><strong>{y.what}</strong><span class="peek-card" role="tooltip"><span class="peek-stack">{y.peek.map((p: any, i: number) => <img class:list={{ on: i === 0 }} src={p.src} alt={p.alt} loading="lazy" />)}</span>{y.peek.map((p: any, i: number) => <span class:list={['peek-cap', { on: i === 0 }]}>{p.caption}</span>)}<span class="peek-dots" aria-hidden="true">{y.peek.map((_: any, i: number) => <i class:list={{ on: i === 0 }}></i>)}</span></span></span>
-        ) : <strong>{y.what}</strong>}{y.note && <span class="note" set:html={y.note} />}</span></li>
+        <li class:list={{ reveal: y.film }}><span class="when">{y.when}</span><span>{y.film ? (
+          <button class="reveal-title" type="button" aria-expanded="false"><strong>{y.what}</strong></button>
+        ) : <strong>{y.what}</strong>}{y.note && <span class="note" set:html={y.note} />}{y.film && (
+          <span class="reveal-body"><span class="reveal-in"><span class="film">{y.film.map((t: any) => <figure><img src={t.src} alt={t.alt} loading="lazy" /><figcaption>{t.caption}</figcaption></figure>)}</span></span></span>
+        )}</span></li>
       ))}
     </ul>
   </section>
@@ -85,15 +91,12 @@ const years = [
       egg.addEventListener('pointerleave', (e) => { if ((e as PointerEvent).pointerType === 'mouse') set(false); });
       btn.addEventListener('click', (e) => { if ((e as PointerEvent).pointerType === 'mouse') return set(true); set(!egg.classList.contains('open')); });
     });
-    document.querySelectorAll('.peek').forEach((peek) => {
-      const groups = ['.peek-stack img', '.peek-cap', '.peek-dots i'].map((q) => Array.from(peek.querySelectorAll(q)));
-      const n = groups[0].length; if (n < 2) return;
-      let i = 0, t: ReturnType<typeof setInterval> | undefined;
-      const show = (k: number) => { i = k; groups.forEach((g) => g.forEach((el, j) => el.classList.toggle('on', j === k))); };
-      const start = () => { if (t) return; t = setInterval(() => show((i + 1) % n), 1800); };
-      const stop = () => { clearInterval(t); t = undefined; show(0); };
-      peek.addEventListener('mouseenter', start); peek.addEventListener('mouseleave', stop);
-      peek.addEventListener('focus', start); peek.addEventListener('blur', stop);
+    document.querySelectorAll('.reveal').forEach((row) => {
+      const btn = row.querySelector('.reveal-title') as HTMLButtonElement;
+      const set = (on: boolean) => { row.classList.toggle('open', on); btn.setAttribute('aria-expanded', String(on)); };
+      row.addEventListener('pointerenter', (e) => { if ((e as PointerEvent).pointerType === 'mouse') set(true); });
+      row.addEventListener('pointerleave', (e) => { if ((e as PointerEvent).pointerType === 'mouse') set(false); });
+      btn.addEventListener('click', (e) => { if ((e as PointerEvent).pointerType === 'mouse') return set(true); set(!row.classList.contains('open')); });
     });
   </script>
 </Base>
@@ -128,25 +131,18 @@ const years = [
   .egg.open .egg-line { top: 0; height: 12px; }
   .film { display: flex; gap: 8px; margin-top: 12px; overflow-x: auto; scrollbar-width: none; }
   .film::-webkit-scrollbar { display: none; }
-  .egg-in > span:last-child { min-width: 0; }
-  .film figure { flex: 0 0 180px; margin: 0; }
-  .film img { width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; border-radius: 4px; display: block; }
-  .film figcaption { font: var(--small); color: var(--gray); margin-top: 4px; }
-  @media (max-width: 720px) { .film figure { flex-basis: 150px; } }
+  .egg-in > span:last-child, .reveal > span:last-child { min-width: 0; }
+  .film figure { flex: 0 0 auto; margin: 0; }
+  .film img { height: 130px; width: auto; border-radius: 4px; display: block; }
+  .film figcaption { font: var(--small); color: var(--gray); margin-top: 4px; width: 0; min-width: 100%; }
+  .reveal-title { all: unset; cursor: pointer; display: block; }
+  .reveal-title strong { text-decoration: underline dotted var(--gray); text-underline-offset: 4px; }
+  .reveal-title:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .reveal-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s ease; }
+  .reveal.open .reveal-body { grid-template-rows: 1fr; }
+  .reveal-in { overflow: hidden; min-height: 0; display: block; }
+  @media (max-width: 720px) { .film img { height: 110px; } }
   .years strong { font: var(--label); display: block; }
-  .peek { position: relative; display: inline-block; cursor: default; outline: none; }
-  .peek strong { text-decoration: underline dotted var(--gray); text-underline-offset: 4px; }
-  .peek-card { position: absolute; left: calc(100% + 20px); top: 50%; width: 460px; padding: 8px; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.08); opacity: 0; transform: translate(-4px, -50%); pointer-events: none; transition: opacity .15s, transform .15s; z-index: 10; }
-  .peek-stack { position: relative; display: block; aspect-ratio: 3/2; }
-  .peek-stack img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 4px; opacity: 0; transition: opacity .4s; }
-  .peek-stack img.on { opacity: 1; }
-  .peek-cap { display: none; font: var(--small); color: var(--gray); margin-top: 6px; }
-  .peek-cap.on { display: block; }
-  .peek-dots { display: flex; gap: 4px; margin-top: 6px; }
-  .peek-dots i { width: 5px; height: 5px; border-radius: 50%; background: var(--rule); }
-  .peek-dots i.on { background: var(--ink); }
-  .peek:hover .peek-card, .peek:focus .peek-card, .peek:focus-within .peek-card { opacity: 1; transform: translate(0, -50%); }
-  @media (max-width: 720px) { .peek-card { display: none; width: calc(100vw - 32px); max-width: 420px; left: -104px; top: auto; bottom: calc(100% + 10px); transform: none; } .peek:hover .peek-card, .peek:focus .peek-card, .peek:focus-within .peek-card { display: block; transform: none; } }
   .note { display: block; color: var(--gray); font-size: 15px; }
   @media (max-width: 720px) {
     .intro, .block { margin-bottom: 80px; }
