@@ -16,7 +16,8 @@ team:
     role: Engineering Manager
 methods: [Interviews, Workflow observation, Survey, Journey mapping, Workshops]
 tags: [UX research, Service design, B2B]
-order: 3
+order: 7
+featured: false
 label: "Research and service design"
 summary: "Research that saved B2B revenue."
 hero: "/work/raiseme-assets/hero-download-settings.webp"

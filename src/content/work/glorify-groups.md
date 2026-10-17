@@ -13,7 +13,8 @@ team:
 methods: [Prototype diary study, Interviews]
 tags: [UX research, Strategy, Community]
 reading_time: About 2 minutes
-order: 1
+order: 3
+featured: true
 cardFit: contain
 label: "Research and strategy"
 summary: "The research behind a bet on community."
