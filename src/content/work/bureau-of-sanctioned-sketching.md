@@ -88,7 +88,7 @@ I didn't know what the answer would look like, so I built to find out. Each prot
 
 I folded the best parts into one piece of software, Happy Accidents Studio: hand-tracked drawing, solo and co-op, with little surprises like kaleidoscope mirroring and ripples.
 
-<figure class="pair">
+<figure class="pair keep">
   <img src="/work/bss-assets/hands-kaleidoscope.webp" alt="Happy Accidents Studio: a hand-tracked kaleidoscope drawing on screen, with a player waving at the camera"/>
   <img src="/work/bss-assets/hands-sketch.webp" alt="A hand-tracking sketch in the p5.js editor, drawing lines from a webcam view of a hand"/>
   <figcaption>Happy Accidents Studio: hand-tracked drawing, alone or together.</figcaption>
@@ -155,6 +155,32 @@ Players often forgot they were using cards at all. They were drawing and talking
 > Playtester
 
 <figure class="frame"><video src="/work/bss-assets/playtest.mp4" poster="/work/bss-assets/playtest-poster.jpg" autoplay muted loop playsinline></video></figure>
+
+<figure class="frame"><img src="/work/bss-assets/playtest-cards.webp" alt="Players reaching across the table, pulling cards from the Draw, Using, and While stacks beside an hourglass while others draw"/></figure>
+
+### Yes, and
+
+The While cards turned drawing into something closer to improv. In improv, "yes, and" means you accept what your partner offers and add to it. At the table, one player's mark became an offer, and the next player built on it.
+
+<div class="flow" role="list" aria-label="How players build on each other">
+  <div class="step"><span class="n">01</span><b>Player 1 makes a mark</b><small>An offer, not a finished drawing.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">02</span><b>Player 2: yes, and</b><small>Accepts it and adds something.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">03</span><b>Player 1: yes, and</b><small>Builds on what's there now.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step focal"><span class="n">04</span><b>Nobody owns it</b><small>So nobody gets judged for it.</small></div>
+</div>
+<p class="flow-note">↻ Every mark gives the next person permission to make one.</p>
+
+<div class="compare">
+  <div class="crow head"><span></span><span class="k">DRAWING ALONE</span><span></span><span class="k">YES, AND</span></div>
+  <div class="crow"><span class="k">The page</span><span class="was">Blank, and waiting for you</span><span class="to">→</span><span class="is">Already started<small>Someone else went first.</small></span></div>
+  <div class="crow"><span class="k">A bad line</span><span class="was">A mistake</span><span class="to">→</span><span class="is">Something to build on<small>Every mark is an offer.</small></span></div>
+  <div class="crow focal"><span class="k">Permission</span><span class="was">Something you give yourself</span><span class="to">→</span><span class="is">Something you pass on<small>It grows with each turn.</small></span></div>
+</div>
+
+<figure class="frame"><img src="/work/bss-assets/yes-and-drawing.webp" alt="A shared drawing on purple paper, built up from two players' lines that meet and stack on each other"/><figcaption>Two players, one drawing.</figcaption></figure>
 
 A momentum effect took over, and some players started writing their own prompts on scrap paper.
 

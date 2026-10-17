@@ -295,3 +295,4 @@ article .pair.natural > img { aspect-ratio: auto; object-fit: contain; align-sel
 article a.watch { display: inline-block; margin-top: 24px; font: var(--label); }
 article figure.embed { max-width: var(--wide); margin: 48px 0 0; }
 article figure.embed iframe { display: block; width: 100%; aspect-ratio: 16/9; border: 0; border-radius: 6px; background: var(--panel); margin-bottom: 10px; }
+@media (max-width: 720px) { article .pair.keep { grid-template-columns: 1fr 1fr; gap: 10px; } }
