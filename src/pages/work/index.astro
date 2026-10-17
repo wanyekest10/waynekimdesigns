@@ -1,7 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-import Cards from '../../components/Cards.astro';
 import Rows from '../../components/Rows.astro';
 import { archive } from '../../data/archive';
 const work = (await getCollection('work')).filter((w) => (w.data as any).listIn !== 'experiments').sort((a, b) => a.data.order - b.data.order);
@@ -9,7 +8,7 @@ const work = (await getCollection('work')).filter((w) => (w.data as any).listIn 
 <Base title="Work, Wayne Kim" description="Case studies and projects by Wayne Kim, researcher and interaction designer.">
   <h1>Work</h1>
   <p class="lead">Case studies in research, prototyping, and building with AI.</p>
-  <section class="block"><Cards items={work} /></section>
+  <section class="block"><Rows rows={work.map((w) => ({ name: w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/work/${w.id}/`, image: w.data.card ?? w.data.hero }))} /></section>
   {archive.length > 0 && (
   <section class="block">
     <div class="block-head">
