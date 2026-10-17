@@ -163,23 +163,13 @@ Players often forgot they were using cards at all. They were drawing and talking
 
 The While cards turned drawing into something closer to improv. In improv, "yes, and" means you accept what your partner offers and add to it. At the table, one player's mark became an offer, and the next player built on it.
 
-<div class="flow" role="list" aria-label="How players build on each other">
-  <div class="step"><span class="n">01</span><b>Player 1 makes a mark</b><small>An offer, not a finished drawing.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step"><span class="n">02</span><b>Player 2: yes, and</b><small>Accepts it and adds something.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step"><span class="n">03</span><b>Player 1: yes, and</b><small>Builds on what's there now.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step focal"><span class="n">04</span><b>Nobody owns it</b><small>So nobody gets judged for it.</small></div>
-</div>
-<p class="flow-note">↻ Every mark gives the next person permission to make one.</p>
-
-<div class="compare">
-  <div class="crow head"><span></span><span class="k">DRAWING ALONE</span><span></span><span class="k">YES, AND</span></div>
-  <div class="crow"><span class="k">The page</span><span class="was">Blank, and waiting for you</span><span class="to">→</span><span class="is">Already started<small>Someone else went first.</small></span></div>
-  <div class="crow"><span class="k">A bad line</span><span class="was">A mistake</span><span class="to">→</span><span class="is">Something to build on<small>Every mark is an offer.</small></span></div>
-  <div class="crow focal"><span class="k">Permission</span><span class="was">Something you give yourself</span><span class="to">→</span><span class="is">Something you pass on<small>It grows with each turn.</small></span></div>
-</div>
+<figure class="yesand" role="img" aria-label="Four panels: player one draws a circle, player two adds ears, player one adds a face, player two adds whiskers and a tail, ending in one shared drawing of a cat">
+  <div class="yes-panel"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="p1" d="M50 28 C66 27 74 40 72 52 C70 66 58 72 47 71 C34 70 27 59 29 47 C31 36 39 29 50 28"/></svg><span class="k"><i class="dot p1"></i>P1</span><b>Makes a mark</b></div>
+  <div class="yes-panel"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="p1 old" d="M50 28 C66 27 74 40 72 52 C70 66 58 72 47 71 C34 70 27 59 29 47 C31 36 39 29 50 28"/><path class="p2" d="M35 37 L32 18 L46 29"/><path class="p2" d="M57 29 L70 18 L69 38"/></svg><span class="k"><i class="dot p2"></i>P2</span><b>Yes, and</b></div>
+  <div class="yes-panel"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="p1 old" d="M50 28 C66 27 74 40 72 52 C70 66 58 72 47 71 C34 70 27 59 29 47 C31 36 39 29 50 28"/><path class="p2 old" d="M35 37 L32 18 L46 29"/><path class="p2 old" d="M57 29 L70 18 L69 38"/><path class="p1" d="M42 46 L42 50"/><path class="p1" d="M58 46 L58 50"/><path class="p1" d="M46 57 Q50 61 54 57"/></svg><span class="k"><i class="dot p1"></i>P1</span><b>Yes, and</b></div>
+  <div class="yes-panel last"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="p1 old" d="M50 28 C66 27 74 40 72 52 C70 66 58 72 47 71 C34 70 27 59 29 47 C31 36 39 29 50 28"/><path class="p1 old" d="M42 46 L42 50"/><path class="p1 old" d="M58 46 L58 50"/><path class="p1 old" d="M46 57 Q50 61 54 57"/><path class="p2 old" d="M35 37 L32 18 L46 29"/><path class="p2 old" d="M57 29 L70 18 L69 38"/><path class="p2" d="M31 54 L16 51"/><path class="p2" d="M31 59 L16 62"/><path class="p2" d="M70 54 L85 51"/><path class="p2" d="M70 59 L85 62"/><path class="p2" d="M64 70 C72 80 84 82 88 72"/></svg><span class="k"><i class="dot both"></i>Both</span><b>One drawing</b></div>
+  <figcaption><span><i class="dot p1"></i>Player 1</span><span><i class="dot p2"></i>Player 2</span>Each mark is an offer. Nobody owns the drawing, so nobody gets judged for it.</figcaption>
+</figure>
 
 <figure class="frame"><img src="/work/bss-assets/yes-and-drawing.webp" alt="A shared drawing on purple paper, built up from two players' lines that meet and stack on each other"/><figcaption>Two players, one drawing.</figcaption></figure>
 

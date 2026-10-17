@@ -296,3 +296,20 @@ article a.watch { display: inline-block; margin-top: 24px; font: var(--label); }
 article figure.embed { max-width: var(--wide); margin: 48px 0 0; }
 article figure.embed iframe { display: block; width: 100%; aspect-ratio: 16/9; border: 0; border-radius: 6px; background: var(--panel); margin-bottom: 10px; }
 @media (max-width: 720px) { article .pair.keep { grid-template-columns: 1fr 1fr; gap: 10px; } }
+/* Yes, and: two players building one drawing, panel by panel */
+article figure.yesand { max-width: var(--measure); display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0 32px; }
+.yesand .yes-panel { border: 1px solid var(--rule); border-radius: 6px; padding: 10px 10px 12px; }
+.yesand .yes-panel.last { border-color: var(--ink); }
+.yesand svg { display: block; width: 100%; aspect-ratio: 1; margin-bottom: 8px; }
+.yesand path { fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.yesand path.p1 { stroke: var(--ink); } .yesand path.p2 { stroke: var(--accent); }
+.yesand path.old { opacity: .3; }
+.yesand .last path.old { opacity: 1; }
+.yesand .k { display: flex; align-items: center; gap: 6px; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); }
+.yesand b { display: block; font: var(--label); color: var(--ink); margin-top: 2px; }
+.yesand .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ink); }
+.yesand .dot.p2 { background: var(--accent); }
+.yesand .dot.both { background: linear-gradient(90deg, var(--ink) 50%, var(--accent) 50%); }
+.yesand figcaption { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; }
+.yesand figcaption span { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); }
+@media (max-width: 720px) { article figure.yesand { grid-template-columns: 1fr 1fr; } }
