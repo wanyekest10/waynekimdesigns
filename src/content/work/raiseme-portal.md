@@ -35,7 +35,7 @@ facts:
   - { label: "Timeline", value: "Oct 2019 to Jun 2020" }
   - { label: "Team", value: "Customer Success, Product, Sales, Engineering" }
   - { label: "Methods", value: "Interviews, usability tests, survey, journey mapping" }
-  - { label: "Outcome", value: "90%+ revenue kept · usability tickets 150 → 65 partners · export 15 → 2 min" }
+  - { label: "Outcome", value: "For partners: exports from 15 min to 2 min · For the business: 90%+ of revenue kept" }
 ---
 
 ## Growth without reliability
