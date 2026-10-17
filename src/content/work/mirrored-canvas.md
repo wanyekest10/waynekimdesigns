@@ -73,4 +73,4 @@ We bodystormed before we built. The pattern showed up fast: when a prototype fel
 
 <figure class="frame"><img src="/work/mirrored-canvas-assets/with-yase.webp" alt="Black and white photo of Wayne and Yase smiling at a table with the laptop and webcam setup"/><figcaption>Making faces with Yase.</figcaption></figure>
 
-<a class="watch" href="https://vimeo.com/1041048796" target="_blank" rel="noopener">Watch the full video on Vimeo →</a>
+<figure class="embed"><iframe src="https://player.vimeo.com/video/1041048796?dnt=1&title=0&byline=0&portrait=0" title="Mirrored Canvas, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>

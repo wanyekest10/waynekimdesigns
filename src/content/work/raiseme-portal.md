@@ -22,9 +22,9 @@ summary: "Research that saved B2B revenue."
 hero: "/work/raiseme-assets/hero-download-settings.webp"
 heroAlt: "The redesigned Download settings screen: a weekly follower report that generates itself every Monday"
 jumps:
-  - { label: "Skip to the research", to: "hack-week-the-assumption-broke" }
+  - { label: "Skip to breaking assumptions", to: "hack-week-the-assumption-broke" }
   - { label: "Skip to making the case", to: "building-the-case" }
-  - { label: "Skip to the impact", to: "the-decision" }
+  - { label: "Skip to the impact", to: "results" }
 short:
   - { lead: "The problem.", text: "RaiseMe's college portal kept failing the people who used it every week, and contract renewals were coming." }
   - { lead: "What I did.", text: "Took partner frustration from support tickets to the CEO: Hack Week research, a partner survey, and a case tying reliability to revenue." }

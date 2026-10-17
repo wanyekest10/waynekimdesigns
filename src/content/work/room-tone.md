@@ -125,4 +125,4 @@ The whole thing is a small state machine: noticing, activating, asking, playing,
 
 **What's next.** I started on a tabletop version, a single object with a dial to set the threshold, so it could live on any desk without smart plugs and a ceiling hook. It's on hold for now, but the state machine is ready for it.
 
-<a class="watch" href="https://www.youtube.com/watch?v=VhLl8r5Z-h4" target="_blank" rel="noopener">Watch the full video on YouTube →</a>
+<figure class="embed"><iframe src="https://www.youtube-nocookie.com/embed/VhLl8r5Z-h4?rel=0&modestbranding=1&playsinline=1" title="room_tone, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>

@@ -124,4 +124,4 @@ Living.fm is a provocation, not a product. Through it, we explored how AI, sound
 
 The biggest lesson: in an ambient system, the interpretation is the product. Liv's voice, music, and lines only work if her read of the room is right, and if people can trust it. Most of the design work with AI happened outside the model, in deciding what she recognized, when she spoke, and when she stayed quiet.
 
-<a class="watch" href="https://vimeo.com/1041133010" target="_blank" rel="noopener">Watch the full video on Vimeo →</a>
+<figure class="embed"><iframe src="https://player.vimeo.com/video/1041133010?dnt=1&title=0&byline=0&portrait=0" title="Living.fm, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>

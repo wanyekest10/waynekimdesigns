@@ -114,7 +114,7 @@ Those critiques became the next questions: how to design for groups of strangers
 
 ## Turning findings into principles
 
-With Matt Regan, our lead designer, I turned the findings into three design principles, so they could guide future iterations across teams instead of living in a readout deck.
+With our lead designer, I turned the findings into three design principles, so they could guide future iterations across teams instead of living in a readout deck.
 
 <figure class="trio principles">
   <div><img src="/work/glorify-assets/principle-intentional-space.webp" alt="Illustration of a woman resting her arms on a ledge"/><p><strong>Intentional Space</strong><br/>Create a dedicated environment that signals purpose and psychological safety for reflection and sharing.</p></div>

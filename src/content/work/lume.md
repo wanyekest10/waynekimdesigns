@@ -27,9 +27,11 @@ facts:
 
 ## Subtle over prominent
 
-Our first idea was to turn the helmet's visor into a display: speed, navigation, alerts, all in front of your eyes. Then we interviewed three motorcyclists. None of them wanted more to look at. Their attention belongs on the road, and anything that competes with it is a hazard of its own.
+Our first idea was to turn the helmet's visor into a display: speed, navigation, alerts, all in front of your eyes. We also read research on subtle cueing in augmented reality, which tests softer cues as an alternative to explicit ones. Then we interviewed three motorcyclists. None of them wanted more to look at. Their attention belongs on the road, and anything that competes with it is a hazard of its own.
 
 So we went the other way: subtle cues that sit at the edge of vision and only ask for attention when it matters.
+
+<figure class="wide"><img src="/work/lume-assets/subtle-cueing.webp" alt="A research paper titled Subtle Cueing: An alternative to using explicit cues to facilitate visual search, with a head-mounted display study and results charts"/><figcaption>Research on subtle cueing in augmented reality.</figcaption></figure>
 
 <figure class="frame"><img src="/work/lume-assets/bike-rig.webp" alt="An early rig: a rider in a helmet on a stationary bicycle in front of a projected road"/><figcaption>Testing the ride on a bike rig.</figcaption></figure>
 
@@ -79,4 +81,4 @@ We built the ride in Unity and ran it on a Meta Quest 3. To make it feel like ri
 
 <figure class="frame"><img src="/work/lume-assets/demo-room.webp" alt="The demo in a large hall, with the rider's view projected on a big screen"/></figure>
 
-<a class="watch" href="https://vimeo.com/1068857422" target="_blank" rel="noopener">Watch the full video on Vimeo →</a>
+<figure class="embed"><iframe src="https://player.vimeo.com/video/1068857422?dnt=1&title=0&byline=0&portrait=0" title="Lume, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>

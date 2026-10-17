@@ -182,4 +182,4 @@ Playful drawing fades in the places that run on forms: school, then work. Real b
 
 <figure class="frame"><img src="/work/bss-assets/drawing-wall-3x2.webp" alt="A wall of playtest drawings pinned up in a grid"/><figcaption>Everything players drew during playtests.</figcaption></figure>
 
-<a class="watch" href="https://vimeo.com/1101261294" target="_blank" rel="noopener">Watch the full video on Vimeo →</a>
+<figure class="embed"><iframe src="https://player.vimeo.com/video/1101261294?dnt=1&title=0&byline=0&portrait=0" title="Bureau of Sanctioned Sketching, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>

@@ -293,3 +293,5 @@ article .grid3 img { width: 100%; max-width: none; aspect-ratio: 3/2; object-fit
 @media (max-width: 720px) { .stats.three { grid-template-columns: 1fr; gap: 18px; } }
 article .pair.natural > img { aspect-ratio: auto; object-fit: contain; align-self: start; }
 article a.watch { display: inline-block; margin-top: 24px; font: var(--label); }
+article figure.embed { max-width: var(--wide); margin: 48px 0 0; }
+article figure.embed iframe { display: block; width: 100%; aspect-ratio: 16/9; border: 0; border-radius: 6px; background: var(--panel); margin-bottom: 10px; }

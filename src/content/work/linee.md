@@ -107,4 +107,4 @@ At some point Massimo told us to stop sanding small pieces of wood and put it in
 
 <figure class="frame"><img src="/work/linee-assets/final.webp" alt="Two teammates smiling beside the wall: the first cardboard prototype mounted above the finished Linee"/><figcaption>From the first prototype, above, to the final form.</figcaption></figure>
 
-<a class="watch" href="https://vimeo.com/1068790351" target="_blank" rel="noopener">Watch the full video on Vimeo →</a>
+<figure class="embed"><iframe src="https://player.vimeo.com/video/1068790351?dnt=1&title=0&byline=0&portrait=0" title="Linee, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
