@@ -65,6 +65,11 @@ const toc = headings
   </div>
 </Base>
 <script>
+  const v3d = document.querySelector<HTMLElement>('.v3d');
+  if (v3d) {
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { io.disconnect(); import('../../scripts/tpe-viewer.ts').then((m) => m.mount(v3d)); } }, { rootMargin: '400px' });
+    io.observe(v3d);
+  }
   // Highlight the section you're reading.
   const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a[data-id]')];
   const targets = links.map((a) => document.getElementById(a.dataset.id!)).filter(Boolean) as HTMLElement[];

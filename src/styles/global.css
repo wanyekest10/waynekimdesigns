@@ -401,3 +401,19 @@ figure.explode figcaption { grid-column: 1 / -1; }
 .explode-key li { counter-increment: k; display: flex; gap: 12px; align-items: baseline; font-size: 15px; color: var(--ink); }
 .explode-key li::before { content: counter(k); flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--ink); color: var(--paper); font: 500 12px/22px var(--mono); text-align: center; }
 @media (max-width: 720px) { figure.explode { grid-template-columns: 1fr; padding: 16px; } }
+
+/* 3D viewer */
+figure.v3d-fig { margin: 32px 0 40px; }
+.v3d { position: relative; aspect-ratio: 3 / 2; background: var(--panel); border-radius: 6px; overflow: hidden; touch-action: none; }
+.v3d canvas { display: block; width: 100%; height: 100%; cursor: grab; }
+.v3d canvas:active { cursor: grabbing; }
+.v3d-load { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin: 0; }
+.v3d-part { position: absolute; left: 14px; bottom: 14px; font: var(--small); font-size: 14px; color: var(--ink); background: rgba(255,255,255,.9); border: 1px solid var(--rule); border-radius: 999px; padding: 5px 12px; pointer-events: none; }
+.v3d-ui { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin: 12px 0 10px; }
+.v3d-views { display: flex; gap: 6px; }
+.v3d-views button { font: var(--small); font-size: 14px; color: var(--ink); background: none; border: 1px solid var(--rule); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.v3d-views button:hover { border-color: var(--gray); }
+.v3d-views button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.v3d-slide { display: flex; align-items: center; gap: 10px; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); }
+.v3d-slide input { width: 200px; accent-color: var(--accent); }
+@media (max-width: 720px) { .v3d { aspect-ratio: 1 / 1; } .v3d-slide input { width: 140px; } }
