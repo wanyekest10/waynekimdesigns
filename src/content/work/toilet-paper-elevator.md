@@ -23,7 +23,6 @@ facts:
   - { label: "Stack", value: "Arduino MKR WiFi 1010 · Hall effect sensor · Waveshare 4.2\" e-paper · 3.7V LiPo" }
   - { label: "Tools", value: "Arduino IDE · Fusion 360 · Prusa MK3S" }
 ---
-
 ## An invisible habit
 
 Everyone in a home uses toilet paper every day, and nobody ever sees how much. I wanted to make that constant, invisible habit visible, in the one room where people least want to feel observed.
@@ -42,7 +41,7 @@ Stacking it up instead worked better. Height gives you milestones within days, a
   <figcaption>Testing the climb and an arrival screen on the e-paper module.</figcaption>
 </figure>
 
-## Climbing and arriving
+## What you see
 
 The screen has two states. Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Eighteen landmarks in all, from the Hollywood Sign to the Burj Khalifa, and then the Moon.
 
@@ -50,6 +49,12 @@ The screen has two states. Most of the time it's climbing: one big number, feet 
   <img src="/work/tpe-assets/screen-30ft.png" alt="Climbing screen: 30 ft up, 91 squares since Oct 11, previous stop Ground floor, next stop Hollywood Sign, 45 ft tall"/>
   <img src="/work/tpe-assets/screen-arrive-hollywood.png" alt="Arrival screen: Now arriving, Hollywood Sign, Los Angeles, USA, 45 ft tall. So far 45 ft up, next stop Christ the Redeemer"/>
   <figcaption>Climbing, and arriving. See every <a href="/work/tpe-assets/screens-climb-all.webp" target="_blank" rel="noopener">climbing screen</a> and <a href="/work/tpe-assets/screens-arrival-all.webp" target="_blank" rel="noopener">arrival screen</a>.</figcaption>
+</figure>
+
+<figure class="pair">
+  <img src="/work/tpe-assets/close-4ft.webp" alt="Close-up of the screen at 4 ft up above the roll"/>
+  <img src="/work/tpe-assets/close-10ft.webp" alt="Close-up of the screen at 10 ft up above the roll"/>
+  <figcaption>4 ft up, then 10.</figcaption>
 </figure>
 
 ## How it works
@@ -68,6 +73,15 @@ The screen has two states. Most of the time it's climbing: one big number, feet 
 </figure>
 <script src="/work/tpe-assets/mechanism.js" defer></script>
 
+<figure class="v3d-fig wide">
+  <div class="v3d" data-src="/work/tpe-assets/tpe.glb"><canvas aria-label="3D model of Toilet Paper Elevator. Drag to turn it, and use the slider to pull the parts apart."></canvas><p class="v3d-load">Loading the 3D model…</p><span class="v3d-part" hidden></span></div>
+  <div class="v3d-ui">
+    <div class="v3d-views" role="group" aria-label="View"><button type="button" data-view="whole" aria-pressed="true">Whole</button><button type="button" data-view="pod">Pod</button><button type="button" data-view="sensor">Sensor</button></div>
+    <label class="v3d-slide"><span>Assembled</span><input class="v3d-explode" type="range" min="0" max="100" value="0" aria-label="Pull the parts apart" /><span>Apart</span></label>
+  </div>
+  <figcaption>Drag to turn it, pinch or scroll to zoom, and tap a part to see what it is. The shell, carrier, panel, raceway, finger, and sleeve come from the Fusion files; the screen, Arduino, and battery are stand-ins.</figcaption>
+</figure>
+
 ### Wiring
 
 Three parts, one board.
@@ -84,7 +98,11 @@ Three parts, one board.
 
 The slow e-paper refresh is on purpose. The number doesn't flash or animate when you're in the room. It's simply different the next time you look.
 
-## Measuring the roll
+## Building it
+
+Three problems, in the order I hit them.
+
+### 1. Counting the roll
 
 Before modeling anything, I measured my own roll and holder: a 128 mm roll on a 39 mm tube, around a 16 mm spring pin. The sleeve had to spin freely inside the tube while the holder stayed still, which is why the sensing ended up as magnets and a Hall sensor instead of an encoder.
 
@@ -99,67 +117,39 @@ Before modeling anything, I measured my own roll and holder: a 128 mm roll on a 
   <figcaption>The first working pulse: a green LED blinks each time a magnet passes the sensor.</figcaption>
 </figure>
 
-## Prototyping the install
+### 2. Getting the wire there
 
-The hard part wasn't the electronics. It was getting a wire from the holder to the screen without anything exposed in a bathroom. I worked it out on the wall in cheap materials first: a paper screen and a string, then printed collars and raceways in bright filament so I could see every joint.
+How do you get a wire from the holder to the screen without anything exposed in a bathroom? It took five tries. I placed the screen with paper and string first. Exposed jumpers worked but looked unfinished. A braided cord hid the wires, with a gray collar around the holder's arm to hold the sensor, but the cord drooped and the collar stuck out. A purple collar and raceway pinned everything flat to the wall. In the end the raceway's own arm could carry the sensor right up to the sleeve, so the collar wasn't needed at all. Easier to install, and calmer to look at.
 
-<figure class="grid3 tall">
-  <div><img src="/work/tpe-assets/mock-paper.webp" alt="A paper rectangle taped to the wall with a string running down to the holder"/><p>Paper and string, to place the screen.</p></div>
-  <div><img src="/work/tpe-assets/collar-pink.webp" alt="A pink printed collar and raceway wrapped around the holder's elbow"/><p>A first collar for the sensor.</p></div>
-  <div><img src="/work/tpe-assets/mock-purple.webp" alt="A purple raceway running from the paper screen to the holder, with the gray sleeve on the bar"/><p>The raceway, end to end.</p></div>
-</figure>
-
-<figure class="frame"><img src="/work/tpe-assets/collar-wires.webp" alt="Close-up of the purple collar with the sensor wires routed inside, next to the sleeve's four magnets"/><figcaption>A wider sensor pocket, so the soldered pins don't touch.</figcaption></figure>
-
-## Building the pod
-
-I designed the pod in Fusion, along with a raceway that carries the sensor wire down the wall and along the holder's arm to the end of the sleeve. Everything prints in gray. The LiPo sits trapped in a closed shell, and the display's own screws and brass standoffs hold it together.
-
-<figure class="v3d-fig wide">
-  <div class="v3d" data-src="/work/tpe-assets/tpe.glb"><canvas aria-label="3D model of Toilet Paper Elevator. Drag to turn it, and use the slider to pull the parts apart."></canvas><p class="v3d-load">Loading the 3D model…</p><span class="v3d-part" hidden></span></div>
-  <div class="v3d-ui">
-    <div class="v3d-views" role="group" aria-label="View"><button type="button" data-view="whole" aria-pressed="true">Whole</button><button type="button" data-view="pod">Pod</button><button type="button" data-view="sensor">Sensor</button></div>
-    <label class="v3d-slide"><span>Assembled</span><input class="v3d-explode" type="range" min="0" max="100" value="0" aria-label="Pull the parts apart" /><span>Apart</span></label>
-  </div>
-  <figcaption>Drag to turn it, pinch or scroll to zoom, and tap a part to see what it is. The shell, carrier, panel, raceway, finger, and sleeve come from the Fusion files; the screen, Arduino, and battery are stand-ins.</figcaption>
-</figure>
-
-<figure class="grid3">
-  <div><img src="/work/tpe-assets/fusion-shell.webp" alt="The pod shell in Fusion 360, shown see-through with the screen opening, screw bosses, and cable openings"/><p>The shell, see-through.</p></div>
-  <div><img src="/work/tpe-assets/fusion-wire.webp" alt="Wireframe view of the pod shell showing the internal standoffs and the board outline"/><p>Standoffs and cutouts.</p></div>
-  <div><img src="/work/tpe-assets/fusion-standoff.webp" alt="Close-up of a printed boss with a hex pocket that traps a nut"/><p>A hex pocket traps each nut.</p></div>
-</figure>
-
-<figure class="pair natural">
-  <img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/>
-  <img src="/work/tpe-assets/arm-closeup.webp" alt="Close-up of the raceway's arm along the holder, the sensor wires inside, ending at the sleeve's face where the magnets sit"/>
-  <figcaption>Every part on the counter, and the arm bringing the sensor to the magnets.</figcaption>
-</figure>
-
-### Getting the wire to the roll
-
-The wire took four tries. Exposed jumpers worked but looked like a bomb. A braided cord hid the wires, with a gray collar around the holder's arm to hold the sensor, but the cord drooped and the collar stuck out. A purple collar and raceway pinned it flat to the wall. In the end the raceway's own arm could carry the sensor right up to the sleeve, so the collar wasn't needed at all. Easier to install, and calmer to look at.
-
-<figure class="grid4">
-  <div><img src="/work/tpe-assets/iter-1-exposed.webp" alt="The first version: the pod on the wall with loose orange and yellow jumper wires running to the holder"/><p>1. Exposed wiring.</p></div>
-  <div><img src="/work/tpe-assets/iter-2-braided.webp" alt="The pod with a black braided cord looping down to a gray collar on the holder"/><p>2. A braided cord and a collar.</p></div>
-  <div><img src="/work/tpe-assets/iter-3-purple-collar.webp" alt="A purple raceway down the wall into a purple collar around the holder's arm"/><p>3. A raceway and a purple collar.</p></div>
-  <div><img src="/work/tpe-assets/iter-4-final.webp" alt="The final version: the gray pod and slim gray raceway, whose arm runs along the holder to the sleeve"/><p>4. The raceway alone.</p></div>
+<figure class="grid5">
+  <div><img src="/work/tpe-assets/mock-paper.webp" alt="A paper rectangle taped to the wall with a string running down to the holder"/><p>1. Paper and string, to place the screen.</p></div>
+  <div><img src="/work/tpe-assets/iter-1-exposed.webp" alt="The first version: the pod on the wall with loose orange and yellow jumper wires running to the holder"/><p>2. Exposed wiring.</p></div>
+  <div><img src="/work/tpe-assets/iter-2-braided.webp" alt="The pod with a black braided cord looping down to a gray collar on the holder"/><p>3. A braided cord and a collar.</p></div>
+  <div><img src="/work/tpe-assets/iter-3-purple-collar.webp" alt="A purple raceway down the wall into a purple collar around the holder's arm"/><p>4. A raceway and a purple collar.</p></div>
+  <div><img src="/work/tpe-assets/iter-4-final.webp" alt="The final version: the gray pod and slim gray raceway, whose arm runs along the holder to the sleeve"/><p>5. The raceway alone.</p></div>
 </figure>
 
 <figure class="pair">
-  <img src="/work/tpe-assets/battery-plate.webp" alt="The battery mounted on a printed plate next to the breadboard and Arduino, with a brass standoff marked"/>
-  <img src="/work/tpe-assets/pod-side.webp" alt="The assembled pod from the side, showing the battery and board stacked behind the screen"/>
+  <img src="/work/tpe-assets/arm-tip.webp" alt="Close-up of the raceway's arm along the holder, the sensor wires inside, ending at the sleeve's face where the magnets sit"/>
+  <img src="/work/tpe-assets/fusion-tip.webp" alt="The tip of the raceway's arm in Fusion, pulled apart: the finger with three wire slots, its side panel, and the A3144 Hall sensor"/>
+  <figcaption>The arm at the magnets, and its tip in Fusion: three slots for the wires, a side panel to close them in, and the sensor at the end.</figcaption>
 </figure>
 
+### 3. The pod
+
+I designed the pod in Fusion. Everything prints in gray. The LiPo sits trapped in a closed shell, and the display's own screws and brass standoffs hold it together.
+
 <figure class="pair">
-  <img src="/work/tpe-assets/exploded-b.webp" alt="All the parts laid out: the gray shell, the screen and board, the sleeve, the collar, and braided wire"/>
-  <img src="/work/tpe-assets/pod-and-sleeve.webp" alt="The finished pod and raceway on a counter, screen reading 15 ft up, beside the printed sleeve"/>
+  <img src="/work/tpe-assets/fusion-shell.webp" alt="The pod shell in Fusion 360, shown see-through with the screen opening, screw bosses, and cable openings"/>
+  <img src="/work/tpe-assets/fusion-standoff.webp" alt="Close-up of a printed boss with a hex pocket that traps a nut"/>
+  <figcaption>The shell, see-through, and a hex pocket that traps each nut.</figcaption>
 </figure>
+
+<figure class="solo"><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><figcaption>Every part on the counter before it went on the wall.</figcaption></figure>
 
 ## On the wall
 
-I left it running in my bathroom for a few days before filming, to see what real household numbers feel like. The screen shows feet up, the square count since it started, and the next stop.
+I left it running in my bathroom for a few days before filming, to see what real household numbers feel like.
 
 <figure class="pair natural">
   <img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/>
@@ -170,12 +160,6 @@ I left it running in my bathroom for a few days before filming, to see what real
   <div><img src="/work/tpe-assets/install-sleeve.webp" alt="Hands sliding the gray magnet sleeve into a new roll"/><p>The sleeve goes in the roll.</p></div>
   <div><img src="/work/tpe-assets/install-roll.webp" alt="Putting the roll back on the holder's bar"/><p>The roll goes on the bar.</p></div>
   <div><img src="/work/tpe-assets/install-seated.webp" alt="The roll seated on the holder under the screen"/><p>Nothing else changes.</p></div>
-</figure>
-
-<figure class="pair">
-  <img src="/work/tpe-assets/close-4ft.webp" alt="Close-up of the screen at 4 ft up above the roll"/>
-  <img src="/work/tpe-assets/close-10ft.webp" alt="Close-up of the screen at 10 ft up above the roll"/>
-  <figcaption>4 ft up, then 10.</figcaption>
 </figure>
 
 ## Reflection

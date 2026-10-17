@@ -418,8 +418,16 @@ figure.v3d-fig { margin: 32px 0 40px; }
 .v3d-slide input { width: 200px; accent-color: var(--accent); }
 @media (max-width: 720px) { .v3d { aspect-ratio: 1 / 1; } .v3d-slide input { width: 140px; } }
 
-/* Four tall steps in a row (iterations). Two by two on phones. */
+/* Four or five tall steps in a row (iterations). Two by two on phones. */
+article .grid5 { max-width: var(--wide); display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 32px 0; }
+article .grid5 img { width: 100%; max-width: none; aspect-ratio: 3/4; object-fit: cover; border-radius: 6px; margin: 0 0 8px; }
+article .grid5 p { font: var(--small); font-size: 13px; color: var(--gray); margin: 0; }
+@media (max-width: 720px) { article .grid5 { grid-template-columns: 1fr 1fr; } }
 article .grid4 { max-width: var(--wide); display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 32px 0; }
 article .grid4 img { width: 100%; max-width: none; aspect-ratio: 3/4; object-fit: cover; border-radius: 6px; margin: 0 0 8px; }
 article .grid4 p { font: var(--small); font-size: 14px; color: var(--gray); margin: 0; }
 @media (max-width: 720px) { article .grid4 { grid-template-columns: 1fr 1fr; } }
+
+/* A single tall photo, shown whole at reading width. */
+article figure.solo { max-width: 520px; margin: 32px 0; }
+article figure.solo img { width: 100%; height: auto; border-radius: 6px; margin: 0 0 10px; }
