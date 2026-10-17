@@ -77,20 +77,13 @@ The slow e-paper refresh is on purpose. The number doesn't flash or animate when
 
 The first version was a highway. A roll spins like a wheel, and paper comes off it in a long strip like a road, so movement felt like the natural metaphor: every pull was distance driven, and an odometer tracked the trip from LA City Hall to the Santa Monica Pier. But a single household moves slowly, and a trip measured in miles barely changes from week to week.
 
-Stacking it up instead worked better. Height gives you milestones within days, and the world is full of tall things people already know. So the climb starts at the ground floor and works up a ladder of landmarks: the Hollywood Sign at 45 feet first, then taller and taller, with the Moon waiting after the summit.
+Stacking it up instead worked better. Height gives you milestones within days, and the world is full of tall things people already know. So the climb starts at the ground floor and works up a ladder of landmarks: the Hollywood Sign at 45 feet first, then taller and taller real buildings around the world.
 
-<div class="compare">
-  <div class="crow head"><span></span><span class="k">HIGHWAY</span><span></span><span class="k">ELEVATOR</span></div>
-  <div class="crow"><span class="k">Measured in</span><span class="was">Miles</span><span class="to">→</span><span class="is">Feet<small>A small unit, so the number moves every day.</small></span></div>
-  <div class="crow"><span class="k">Milestones</span><span class="was">Freeway exits, weeks apart</span><span class="to">→</span><span class="is">Landmarks, days apart<small>Things people already know the height of.</small></span></div>
-  <div class="crow"><span class="k">The end</span><span class="was">Santa Monica Pier</span><span class="to">→</span><span class="is">The Moon<small>It never really runs out.</small></span></div>
-</div>
-
-Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Eighteen landmarks, from the Hollywood Sign to the Burj Khalifa, and even the Moon.
+Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Eighteen landmarks, from the Hollywood Sign to the Eiffel Tower to the Burj Khalifa.
 
 ### Three screens, one state machine
 
-The screen is a small state machine. It starts on G, climbs while nobody's looking, and flips to an arrival screen for one visit when the count passes a landmark. Past the Burj Khalifa, the next stop is always the Moon.
+The screen is a small state machine. It starts on G, climbs while nobody's looking, and flips to an arrival screen for one visit when the count passes a landmark.
 
 <div class="flow" role="list" aria-label="Screen states">
   <div class="step"><span class="n">01</span><b>Start</b><small>G, ground floor. First stop, the Hollywood Sign.</small></div>
