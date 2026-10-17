@@ -15,7 +15,7 @@ jumps:
 short:
   - { lead: "The question.", text: "Shared homes run on group chats, alarms, and reminders. Could a household stay in sync by asking for less attention, not more?" }
   - { lead: "What we built.", text: "Linee, a 24-hour timeline of wooden blocks. Press a block to mark an event. A motorized needle crosses the day and gives each marked hour a soft knock as it passes." }
-  - { lead: "What I learned.", text: "Calm technology works when timing is felt, not announced." }
+  - { lead: "What I learned.", text: "Calm technology isn't silent: it moves information to the edge of attention, where you can glance at it instead of being interrupted." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Role", value: "Stepper motor and LED code · Block prototyping · Magnetic tiles concept" }
