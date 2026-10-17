@@ -255,7 +255,7 @@ article figure.frame > img, article figure.frame > video { width: 100%; max-widt
 article .pair > img, article .pair > video { aspect-ratio: 3/2; object-fit: cover; }
 article .grid3 video, article .seq video { aspect-ratio: 3/2; object-fit: cover; }
 /* Vertical clips: a pair or grid of tall phone footage is the one exception, at 4:5 */
-article .grid3.tall video, article .pair.tall > video { aspect-ratio: 4/5; }
+article .grid3.tall video, article .pair.tall > video, article .pair.tall > img { aspect-ratio: 4/5; }
 @media (max-width: 999px) { article .grid3 { grid-template-columns: 1fr 1fr; } }
 
 /* Diagram kit. Flow: numbered steps with arrows, an optional fork, a loop note.
