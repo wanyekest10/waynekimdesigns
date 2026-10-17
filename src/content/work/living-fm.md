@@ -12,7 +12,7 @@ instructors: [Bjorn Karmann, Matteo Loglio]
 tools: [Teachable Machine, Cursor, ElevenLabs, ESP32 camera]
 tags: [Designing with AI, Computer vision, Physical computing]
 reading_time: About 1 minute
-order: 1
+order: 2
 year: "2025"
 featured: true
 label: "AI and prototyping"
