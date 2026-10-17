@@ -45,10 +45,11 @@ jumps:                   # phone-only jump links; `to` = heading slug
   - **Research and strategy** (Glorify, RaiseMe): question, research, findings, decision, results, reflection. Charts, diagrams, quote boxes.
   - **Design and build** (Living.fm, BSS): why, explore, build, test and what broke, reflection. Silent looping clips (`autoplay muted loop playsinline`, no controls or sound), clip grids, one full-width moment.
 
-## Done (as of Oct 16, 2026)
-- Homepage: status line, name, Selected work (6 cards), Play (first 3 rows, hover previews), About with one-line years.
-- Work (/work): Glorify Groups, RaiseMe Portal, Living.fm, BSS, room_tone, Linee, Designit: Futures, Facilitation.
-- Play (/play): Tamer Kebap Eating Club, Mirrored Canvas, Lume, Larvae Lagoon, A Serious Fan. Monet Clock and Above are hidden in `src/data/play.ts` until Wayne adds them.
+## Done (as of Oct 17, 2026)
+- Homepage: status line, name, Selected work (6 cards), Play (all rows, hover previews, "See all play"), About with one-line years. Nav is sticky (border appears on scroll).
+- Work (/work): Glorify Groups, RaiseMe Portal, Living.fm, BSS, room_tone, Linee, Toilet Paper Elevator, Designit: Futures, Facilitation.
+- Toilet Paper Elevator (`src/content/work/toilet-paper-elevator.md`): 14-day solo sprint, used to learn Fusion. Don't mention rebuilding or AI help. YouTube video embedded at the end. `featured: false` for now. Fusion files still to come (go in "Building the pod").
+- Play (/play), in order: Mirrored Canvas, Lume, Tamer Kebap Eating Club, Larvae Lagoon, A Serious Fan. Monet Clock and Above are hidden in `src/data/play.ts` until Wayne adds them.
 - Mirrored Canvas, Lume, Larvae Lagoon use the case study template but set `listIn: play` (listed in Play, back links go to Play).
 - Play write-ups (Tamer, Fan) live in `src/content/play/` and use `src/pages/play/[slug].astro`.
 - Every old Framer URL redirects (astro.config.mjs).
@@ -68,9 +69,16 @@ jumps:                   # phone-only jump links; `to` = heading slug
 ## Getting assets from Framer
 - The cloud workspace can't download from framerusercontent.com. Write a script in `notes/` with the URLs, push it, and have Wayne run it in Terminal: `curl -sL https://raw.githubusercontent.com/wanyekest10/waynekimdesigns/main/notes/<script>.sh | bash`. Files land in ~/Downloads/portfolio-rebuild/, then stage them over.
 
+## Decided, not built yet (start here)
+Agreed Oct 17, build first in the next session:
+1. Homepage Selected Work = these 6, in this order: Glorify Groups, room_tone, RaiseMe Portal, Toilet Paper Elevator, Living.fm, BSS. Alternates research and building. Set `featured` and `order` in frontmatter. Add "See all work →".
+2. Linee drops off the homepage but stays in Work. /work lists all 9: the six, then Linee, Designit: Futures, Facilitation.
+3. Rename Play to **Experiments**: nav, homepage heading, /play page, back links ("← Experiments"), "See all experiments →". Move the route to /experiments/ and redirect /play/* to it. Suggested line: "Shorter projects, sprints, and things I was curious about." Wayne hasn't confirmed the final line or the route move: confirm both quickly before building.
+4. Rule of thumb: Work = full case studies with process and outcome. Experiments = short sprints and side projects.
+
 ## Next
 1. Status line: hover or short lines on how Wayne can contribute (see backlog). Discuss first.
-2. Toilet Paper Elevator, once the video is edited.
+2. TPE Fusion files when Wayne sends them.
 3. About section rewrite around "building to think".
 4. Monet Clock and Above in Play.
 5. Open questions: BSS Lowenfeld age wording; fan goal mechanism; Lume subtle-cueing paper link; higher-res fan hero.
