@@ -10,14 +10,15 @@ Start a new session with: "Read notes/handoff.md and notes/backlog.md in wanyeke
 ## Where things live
 - Repo: github.com/wanyekest10/waynekimdesigns, branch `main`. Pushing to main auto-deploys.
 - Test site: https://waynekimdesigns.waynewkim.workers.dev (Cloudflare Workers, free).
-- The domain waynekimdesigns.com still points to Framer (paid through Sep 2027). The switch steps are in "Domain switch" below. Do it when Wayne says the portfolio is ready.
+- Live at https://waynekimdesigns.com (moved off Framer on Oct 17, 2026). DNS is on Cloudflare (nameservers gracie/morgan.ns.cloudflare.com); the domain is still registered at Hover (renews Sep 4, 2027). Worker custom domains: waynekimdesigns.com and www. The workers.dev address still works too.
+- Link preview image: `public/og.jpg` (Linee photo). Favicons: `public/favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` (WK). Set in `src/layouts/Base.astro`.
 - Original images and videos downloaded from Framer: on Wayne's Mac, in ~/Downloads/portfolio-rebuild/ (raiseme-originals, bss-originals, room-tone-originals, living-fm-originals, glorify-originals).
 
 ## Stack
 - Astro 5 static site. `npm run build` builds to `dist/`. `wrangler.jsonc` serves `dist/` on Cloudflare.
 - Case studies: `src/content/work/*.md`. Assets: `public/work/<slug>-assets/`.
 - Template: `src/pages/work/[slug].astro`. Styles: `src/styles/global.css`. Footer and nav: `src/layouts/Base.astro`.
-- Homepage: `src/pages/index.astro`. Work page: `src/pages/work/index.astro` (cards plus a "More projects" list from `src/data/archive.ts`). Experiments page: `src/pages/experiments/index.astro` (from `src/data/experiments.ts`).
+- Homepage: `src/pages/index.astro`. Work page: `src/pages/work/index.astro` (compact rows via `Rows.astro`: name, skill label, summary, year, hover image; plus an optional archive list from `src/data/archive.ts`). Experiments page: `src/pages/experiments/index.astro` (from `src/data/experiments.ts`).
 - `src/rehype-fields.mjs` handles old-style field formatting. Mostly unused now.
 
 ## Design system
@@ -87,11 +88,9 @@ jumps:                   # phone-only jump links; `to` = heading slug
 5. Open questions: BSS Lowenfeld age wording; fan goal mechanism; Lume subtle-cueing paper link; higher-res fan hero.
 6. Domain switch.
 
-## Domain switch (when ready)
-1. Cloudflare: Add a domain, enter waynekimdesigns.com, choose the Free plan, and copy the two nameservers.
-2. Hover: open waynekimdesigns.com, edit Nameservers to Cloudflare's two, and turn DNSSEC off if it's on.
-3. Once Cloudflare says the domain is active: delete the old Framer records named waynekimdesigns.com and www, then in Workers & Pages, open waynekimdesigns and go to Settings, Domains & Routes, Add, Custom domain. Add waynekimdesigns.com and www.waynekimdesigns.com.
-4. Then remove the domain in Framer and cancel the plan.
+## Domain switch (done Oct 17, 2026)
+Done: Cloudflare zone active, Framer DNS records deleted, Worker custom domain added.
+Still for Wayne to do: confirm www.waynekimdesigns.com loads the new site, remove the domain in Framer, and turn off Framer auto-renew. Optional later: transfer the registration from Hover to Cloudflare Registrar (at cost).
 
 ## Working agreements
 - Discuss before building when Wayne asks to. Show previews for layout changes, not for small text edits.
