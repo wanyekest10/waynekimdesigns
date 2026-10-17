@@ -57,15 +57,34 @@ The surprise was that the words mattered less than the timing. Commentary that a
 
 Liv is a small wooden enclosure holding an ESP32 camera, a Bluetooth speaker, and a 5V battery. The camera watches the room, a model classifies what you're doing, and Liv answers through the speaker.
 
-<figure class="frame"><img src="/work/living-assets/hardware.webp" alt="Liv's hardware: ESP32 camera, Bluetooth speaker, 5V battery, and a step-up converter inside a wooden frame"/></figure>
+<div class="sys" aria-label="Living.fm system">
+  <div class="col"><span class="k">Inputs</span><span class="part">ESP32 camera<small>Watches the room.</small></span></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="col"><span class="k">Brain</span><span class="part">Teachable Machine<small>Classifies the activity.</small></span><span class="part focal">Liv's prompt<small>Decides whether to speak, and what to say.</small></span></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="col"><span class="k">Outputs</span><span class="part">ElevenLabs<small>Gives Liv her voice.</small></span><span class="part">Bluetooth speaker<small>In the wooden frame.</small></span></div>
+</div>
 
 I trained the model in Teachable Machine on our own sample movements. Recognition was inconsistent across activities, and an unreliable narrator is worse than none, so we narrowed to four scenarios we could recognize well: idle, doomscrolling, yoga, and dancing.
 
-![Training the activity model in Teachable Machine](/work/living-assets/teachable-machine.webp)
+<figure class="pair">
+  <img src="/work/living-assets/hardware.webp" alt="Liv's hardware: ESP32 camera, Bluetooth speaker, 5V battery, and a step-up converter inside a wooden frame"/>
+  <img src="/work/living-assets/teachable-machine.webp" alt="Training the activity model in Teachable Machine"/>
+  <figcaption>Liv's hardware, and training the model in Teachable Machine.</figcaption>
+</figure>
 
 ## Giving Liv a voice
 
 I wrote Liv's personality in Cursor and gave her a voice with ElevenLabs. The prompt sets the rules: she's a late-night radio narrator, her default state is silence, and she speaks only when a trigger is confirmed. When she does speak, it's one or two sentences: narrate what she notices, invite reflection, never lecture or diagnose.
+
+<div class="flow" role="list" aria-label="How Liv decides to speak">
+  <div class="step"><span class="n">01</span><b>The camera watches</b><small>An ESP32 camera on the side table.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">02</span><b>The model classifies</b><small>Idle, doomscrolling, yoga, or dancing.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">03</span><b>Confident enough?</b><div class="opt"><small><b>Yes:</b> Liv says one or two lines, or plays music.</small></div><div class="opt focal"><small><b>No:</b> Liv stays silent.</small></div></div>
+</div>
+<p class="flow-note">↻ Silence is the default. Liv only speaks when a trigger is confirmed.</p>
 
 <figure class="pair">
   <img src="/work/living-assets/prompt.webp" alt="Liv's prompt: default state is silence, speak only when a trigger is confirmed"/>
@@ -78,8 +97,6 @@ A few of her lines:
 <blockquote><p>"Your thumb's been doing laps tonight; time gets slippery like that."</p><p>Doomscrolling, 92% confidence</p></blockquote>
 
 <blockquote><p>"You're moving slow enough for the room to catch up; that's a rare kind of quiet."</p><p>Yoga, 87% confidence</p></blockquote>
-
-<figure class="frame"><video src="/work/living-assets/liv-in-action-1.mp4" poster="/work/living-assets/liv-in-action-1-poster.jpg" autoplay muted loop playsinline></video></figure>
 
 ## Seeing what the system sees
 
@@ -97,7 +114,11 @@ Our early prototypes focused on interrupting doomscrolling. User testing showed 
 
 In Korean, 잔소리 (jansori) describes exactly this: nagging that overwhelms care through repetition. So we expanded Liv's role beyond interruption to positive reinforcement and ambient music. She encourages you when you cook or stretch, plays something fitting, and only sometimes teases you for scrolling. In a future version, people would get more control over when and how she speaks.
 
-<figure class="frame"><video src="/work/living-assets/liv-in-action-2.mp4" poster="/work/living-assets/liv-in-action-2-poster.jpg" autoplay muted loop playsinline></video></figure>
+<figure class="pair">
+  <video src="/work/living-assets/liv-in-action-1.mp4" poster="/work/living-assets/liv-in-action-1-poster.jpg" autoplay muted loop playsinline></video>
+  <video src="/work/living-assets/liv-in-action-2.mp4" poster="/work/living-assets/liv-in-action-2-poster.jpg" autoplay muted loop playsinline></video>
+  <figcaption>Liv in action.</figcaption>
+</figure>
 
 ## A speculative exploration
 

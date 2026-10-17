@@ -41,11 +41,16 @@ Linee became something else: ambient timekeeping, a system that communicates whe
 
 ## How it works
 
-<div class="cols3">
-  <div><h4>Press</h4><p>Push an hour block to mark an event. Push it back to clear it.</p></div>
-  <div><h4>Pass</h4><p>A needle crosses all 24 hours once a day.</p></div>
-  <div><h4>Knock</h4><p>When it reaches a marked block, it gives a soft knock. No screen, no notification.</p></div>
+<div class="flow" role="list" aria-label="How Linee works">
+  <div class="step"><span class="n">01</span><b>Press a block</b><small>Push in an hour to mark it.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">02</span><b>The needle travels</b><small>2,200 steps across 24 hours.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step focal"><span class="n">03</span><b>It reaches a marked hour</b><small>A soft knock. No screen, no notification.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">04</span><b>Clear it</b><small>Push the block back out.</small></div>
 </div>
+<p class="flow-note">↻ Every day, the needle crosses again.</p>
 
 Semi-transparent numerals keep the hours readable without making the wall shout.
 
@@ -54,6 +59,16 @@ Semi-transparent numerals keep the hours readable without making the wall shout.
 ## Making it move
 
 I wrote the code for the stepper motor and LEDs. A WiFi-connected Arduino moves the needle 2,200 steps across 24 hours: too slow to watch, but always somewhere new when you look up.
+
+<div class="sys" aria-label="Linee system">
+  <div class="col"><span class="k">Inputs</span><span class="part">Time over WiFi<small>The Arduino keeps the clock.</small></span></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="col"><span class="k">Brain</span><span class="part focal">Arduino<small>Converts the hour into steps.</small></span></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="col"><span class="k">Outputs</span><span class="part">Stepper motor and belt<small>Carry the needle.</small></span><span class="part">LED strip<small>Glows above the blocks.</small></span></div>
+</div>
+
+There are no sensors on the blocks. A pressed block sticks out, so the needle physically knocks it as it passes.
 
 <figure class="pair even">
   <img src="/work/linee-assets/parts.webp" alt="Laser-cut blocks, electronics, and wiring laid out on a cutting mat"/>

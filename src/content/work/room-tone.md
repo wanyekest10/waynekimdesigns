@@ -106,6 +106,14 @@ Each layer arrives on its own, then leaves in reverse. At any point, I can keep 
 
 A Python script on my laptop uses pynput to track keyboard and mouse activity and decide when I've been working without a break. Two Shelly smart plugs switch the lamp and the disco ball motor, and the Spotify Web API handles the music. Activity tracking stays on the laptop.
 
+<div class="sys" aria-label="room_tone system">
+  <div class="col"><span class="k">Inputs</span><span class="part">Keyboard and mouse<small>pynput counts steady work, on the laptop.</small></span></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="col"><span class="k">Brain</span><span class="part focal">Python state machine<small>Noticing, activating, asking, playing, returning.</small></span></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="col"><span class="k">Outputs</span><span class="part">Shelly plug: lamp<small>The first layer.</small></span><span class="part">Shelly plug: disco ball motor<small>The second.</small></span><span class="part">Spotify Web API<small>The music.</small></span></div>
+</div>
+
 The whole thing is a small state machine: noticing, activating, asking, playing, returning, settled. I gave each state a symbol in the terminal, so I could glance over and see exactly what the system thought was happening. Most of my tuning happened there: how long to wait before the ball, how many seconds of stillness count as a pause, how slowly each layer should fade.
 
 ## Reflection

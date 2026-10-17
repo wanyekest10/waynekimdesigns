@@ -253,3 +253,30 @@ article .grid3 video, article .seq video { aspect-ratio: 3/2; object-fit: cover;
 /* Vertical clips: a pair or grid of tall phone footage is the one exception, at 4:5 */
 article .grid3.tall video, article .pair.tall > video { aspect-ratio: 4/5; }
 @media (max-width: 999px) { article .grid3 { grid-template-columns: 1fr 1fr; } }
+
+/* Diagram kit. Flow: numbered steps with arrows, an optional fork, a loop note.
+   System: inputs, brain, outputs. Both sit at text width and stack on phones. One cobalt focal per diagram. */
+.flow { max-width: var(--measure); display: flex; align-items: stretch; margin: 28px 0 10px; }
+.flow .step { flex: 1 1 0; min-width: 0; border: 1px solid var(--rule); border-radius: 6px; padding: 12px 12px 14px; }
+.flow .step .n, .sys .k { display: block; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.flow .step b { display: block; font: var(--label); color: var(--ink); }
+.flow .step small, .sys .part small { display: block; font: var(--small); font-size: 13px; color: var(--gray); margin-top: 2px; }
+.flow .step .opt { border-top: 1px solid var(--rule); padding-top: 8px; margin-top: 8px; }
+.flow .step .opt:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+.flow .to, .sys .to { flex: 0 0 28px; display: flex; align-items: center; justify-content: center; color: #B9B9B5; }
+.flow .focal, .sys .focal { border-color: var(--accent); }
+.flow .focal b, .flow .opt.focal b, .sys .part.focal { color: var(--accent); }
+.flow .opt.focal { border-color: var(--rule); }
+.flow-note { max-width: var(--measure); font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin: 0 0 32px; }
+.sys { max-width: var(--measure); display: grid; grid-template-columns: 1fr 28px 1fr 28px 1fr; margin: 28px 0 32px; }
+.sys .col { border-top: 1px solid var(--ink); padding-top: 10px; }
+.sys .part { display: block; border: 1px solid var(--rule); border-radius: 4px; padding: 8px 10px; font-size: 14px; line-height: 1.4; color: var(--ink); margin-bottom: 8px; }
+.sys .to { padding-top: 34px; align-items: flex-start; }
+@media (max-width: 720px) {
+  .flow { flex-direction: column; }
+  .flow .to, .sys .to { flex-basis: 24px; padding-top: 0; transform: rotate(90deg); }
+  .sys { grid-template-columns: 1fr; }
+  .sys .to { height: 24px; align-items: center; }
+}
+.flow .opt small b { display: inline; font: inherit; font-weight: 500; color: var(--ink); }
+.flow .opt.focal small b { color: var(--accent); }

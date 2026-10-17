@@ -113,6 +113,17 @@ In playtests, it didn't work. The technology became the thing people paid attent
 
 Three card stacks, one minute, one shared sheet of paper.
 
+<div class="flow" role="list" aria-label="How a round of BSS plays">
+  <div class="step"><span class="n">01</span><b>Pull one card from each stack</b><small>Draw, Using, While.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">02</span><b>Read them together</b><small>"The place you're in, eyes closed, having a conversation."</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step focal"><span class="n">03</span><b>Draw for one minute</b><small>Everyone at once, on one shared sheet.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">04</span><b>Look, laugh, pass</b><small>Then pull new cards.</small></div>
+</div>
+<p class="flow-note">↻ Repeat until someone writes their own card.</p>
+
 <figure class="frame"><video src="/work/bss-assets/how-it-plays-3x2.mp4" poster="/work/bss-assets/how-it-plays-3x2-poster.jpg" autoplay muted loop playsinline></video></figure>
 
 - **Draw** sets the subject: "the place you're in."

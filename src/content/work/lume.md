@@ -36,15 +36,28 @@ So we went the other way: subtle cues that sit at the edge of vision and only as
 
 ## How it works
 
-<div class="cols3">
-  <div><h4>Blind spot</h4><p>A red light appears on the side where a vehicle is hiding. Noticeable, not alarming.</p></div>
-  <div><h4>Speed</h4><p>Sits low at the edge of view.</p></div>
-  <div><h4>Fuel</h4><p>Also at the edge, out of the way until you look for it.</p></div>
+<div class="flow" role="list" aria-label="How Lume alerts a rider">
+  <div class="step"><span class="n">01</span><b>A car enters your blind spot</b><small>Behind you, out of sight.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step focal"><span class="n">02</span><b>A red light appears</b><small>At the edge of view, on that side.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">03</span><b>You check, or wait</b><small>Your eyes stay on the road.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">04</span><b>The car passes</b><small>The light fades on its own.</small></div>
 </div>
+<p class="flow-note">↻ Speed and fuel sit low at the edge of view the whole time, out of the way until you look.</p>
 
 ## Making it rideable
 
 We built the ride in Unity and ran it on a Meta Quest 3. To make it feel like riding instead of watching, we added a physical handlebar: an Arduino reads a potentiometer, so turning and twisting the bar steers and sets the speed.
+
+<div class="sys" aria-label="Lume system">
+  <div class="col"><span class="k">Inputs</span><span class="part">Handlebar<small>A potentiometer reads steering and speed.</small></span></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="col"><span class="k">Brain</span><span class="part">Arduino<small>Sends the handlebar to Unity.</small></span><span class="part focal">Unity<small>Runs the ride and the alerts.</small></span></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="col"><span class="k">Outputs</span><span class="part">Meta Quest 3<small>The rider's helmet view.</small></span></div>
+</div>
 
 <figure class="grid3 tall">
   <div><video src="/work/lume-assets/unity-helmet.mp4" poster="/work/lume-assets/unity-helmet-poster.jpg" autoplay muted loop playsinline></video><p>Building the helmet view in Unity.</p></div>

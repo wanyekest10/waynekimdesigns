@@ -37,6 +37,14 @@ Mirrored Canvas projects onto a sheet of translucent acrylic. You see yourself i
 
 FaceOSC tracks points on your face through a webcam, and a microphone listens for sound. Processing turns both into visuals projected onto the acrylic.
 
+<div class="sys" aria-label="Mirrored Canvas system">
+  <div class="col"><span class="k">Inputs</span><span class="part">Webcam<small>Watches your face.</small></span><span class="part">Microphone<small>Listens for sound.</small></span></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="col"><span class="k">Brain</span><span class="part">FaceOSC<small>Tracks points on your face.</small></span><span class="part">Processing<small>Turns face and sound into visuals.</small></span></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="col"><span class="k">Outputs</span><span class="part">Projector<small>From behind the canvas.</small></span><span class="part focal">Acrylic canvas<small>Mirror and stage at once.</small></span></div>
+</div>
+
 <div class="cols3">
   <div><h4>Smile</h4><p>Brings up a joyful photo, like pulling out a good memory.</p></div>
   <div><h4>Look shocked</h4><p>Sets off abstract visuals that bloom and react.</p></div>
