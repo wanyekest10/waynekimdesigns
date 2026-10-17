@@ -8,6 +8,8 @@ label: "Prototyping and play design"
 summary: "A card game that gives adults permission to draw."
 hero: "/work/bss-assets/deck.webp"
 heroAlt: "The Bureau of Sanctioned Sketching deck: a navy box with an octopus seal and three card stacks labeled Draw, Using, and While"
+card: "/work/bss-assets/card.webp"
+cardAlt: "Two players at the table: one points to a prompt card reading only two fingers, no thumbs, the other draws with a purple marker"
 heroVideo: "/work/bss-assets/playtest.mp4"
 heroPoster: "/work/bss-assets/playtest-poster.jpg"
 jumps:

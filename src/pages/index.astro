@@ -7,11 +7,12 @@ import { experiments } from '../data/experiments';
 const work = (await getCollection('work')).filter((w) => w.data.featured).sort((a, b) => a.data.order - b.data.order);
 
 const years = [
+  { when: "'25–now", what: 'Interaction designer, independent', note: 'Building physical and AI prototypes, like <a href="/work/room-tone/">room_tone</a> and <a href="/work/toilet-paper-elevator/">Toilet Paper Elevator</a>.' },
   { when: "'24–'25", what: 'Interaction Design, CIID', note: 'M.S. A year of research, build, test, repeat, prototyping across mediums.' },
-  { when: "'23–'24", what: 'Senior UX Researcher, Glorify', note: 'Built research from 0 to 1, led 3 researchers. Shaped Glorify Groups (1.8M+ users).' },
+  { when: "'23–'24", what: 'Senior UX Researcher, Glorify', note: 'Built the research practice from 0 to 1 and led 3 researchers. Shaped Glorify Groups (1.8M+ users).' },
   { when: "'21–'23", what: 'Design Researcher, Designit', note: 'Led research for Fortune 500 clients like Mastercard and Trane, plus <a href="/work/designit-futures/">speculative futures work</a>.' },
   { when: "'20–'21", what: 'Independent designer and researcher', note: 'Projects for Y Combinator companies like Govly, Rally.Video, and Measured.' },
-  { when: "'17–'20", what: 'UX Strategist, RaiseMe', note: 'Research and strategy for a college partner portal.' },
+  { when: "'17–'20", what: 'UX Strategist, RaiseMe', note: 'Research and strategy for a B2B2C edtech company.' },
   { when: "'15–'17", what: 'Assistant Dean of Admission, Reed College', note: 'Designed the <a href="https://www.reed.edu/admission-aid/visit/multicultural-programs/junior-scholars.html">Junior Scholars program</a> from 0 to 1 and ran the Senior Scholars program.' },
   { when: "'10–'14", what: 'B.A. Sociology, Colby College', note: '' },
 ];
@@ -41,8 +42,9 @@ const years = [
   <section id="about" class="block">
     <h2 class="section-title">About</h2>
     <div class="about">
-      <p>I build prototypes and test them with real people. Ten years of research at startups backed by a16z, YC, and SoftBank, then interaction design at CIID, where I started working with computer vision, AI, spatial computing, and electronics. Based in Los Angeles.</p>
-      <p>I studied sociology, and it still shapes how I see technology: as something people live with, not just something they use. I believe research belongs at the table before the decision, not after it. My shorthand for that is Ask. Surface. Reframe.</p>
+      <p>I'm an interaction designer and researcher. I build prototypes and test them with real people, because I understand a problem best once I've made something and watched someone use it.</p>
+      <p>I spent ten years in research, at startups backed by a16z, YC, and SoftBank and at the design firm Designit, where I led research for Fortune 500 clients. Then I studied interaction design at CIID, where I started working with computer vision, AI, spatial computing, and electronics. Based in Los Angeles.</p>
+      <p>I studied sociology, and it still shapes how I see and design technology: as something people live with, not just something they use. I believe research belongs at the table before any design decision, not after it.</p>
       <p>Lately I'm drawn to calm technology, ambient interaction, and making invisible systems visible: things that notice instead of nag.</p>
     </div>
     <ul class="years">
