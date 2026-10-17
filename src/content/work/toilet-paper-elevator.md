@@ -204,11 +204,7 @@ How do you get a wire from the holder to the screen without anything exposed in 
 
 ## Installed
 
-<figure class="grid3">
-  <div><img src="/work/tpe-assets/install-sleeve.webp" alt="Hands sliding the gray magnet sleeve into a new roll"/><p>The sleeve goes in the roll.</p></div>
-  <div><img src="/work/tpe-assets/install-roll.webp" alt="Putting the roll back on the holder's bar"/><p>The roll goes on the bar.</p></div>
-  <div><img src="/work/tpe-assets/install-seated.webp" alt="The roll seated on the holder under the screen"/><p>Nothing else changes.</p></div>
-</figure>
+<figure class="frame"><video src="/work/tpe-assets/install-loop.mp4" poster="/work/tpe-assets/install-loop-poster.jpg" autoplay muted loop playsinline aria-label="Installing a new roll: the sleeve slides into the roll, the bar comes off, the roll goes on, and it seats under the screen"></video></figure>
 
 <figure class="grid3 tallnat">
   <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Every part, before it went up.</p></div>
