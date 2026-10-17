@@ -21,7 +21,7 @@ When I left in fall 2025, I missed it more than I expected. I wanted to leave th
 
 ## The stitch
 
-The idea showed up a year later, in New York, while I was mending a pair of shorts. I'd sewn over a CIID logo, and the stitches running through the two I's made them look like kebab spits. That was it.
+The idea showed up the next summer, in New York, while I was mending a pair of shorts. I started wondering what the alphabet would look like if I made it with a sewing machine, and began sketching letters out of stitches. When I got to CIID, the stitches running through the two I's made them look like kebab spits. That was it.
 
 <figure class="wide"><img src="/play/tamer-kebap-assets/stitches-to-spits.webp" alt="Three sketches: the hand-drawn CIID mark with the I's as kebab spits; CIID in a sketchbook with stitches running through every letter; and a page reading CIID, Fueled by Tamer, then CIID again with döner spits for the I's"/><figcaption>From stitches to spits.</figcaption></figure>
 
