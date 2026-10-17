@@ -8,6 +8,7 @@ Not published. Running list of ideas and parked work.
 - Building to think
 
 ## Parked
+- Status line ("Open to full-time and contract roles"): hover reveals what I'm open to, or a few lines under the header on how I can contribute. Wayne is still working out the wording; discuss before building.
 - Scroll animation: big name shrinks into the nav (branch `draft/status-pill`)
 - Right-margin method and build notes on case studies
 - Glorify: intro and section 01 both open with the 2.5M+ users line
