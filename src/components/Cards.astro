@@ -1,5 +1,5 @@
 ---
-// Case study cards: title and year on top, one-liner and skill label below.
+// Case study cards: title and year on top, then the one-liner, then the skill label.
 const { items } = Astro.props;
 ---
 <div class="cards">
@@ -10,10 +10,8 @@ const { items } = Astro.props;
         <span class="card-title">{w.data.title}</span>
         <span class="card-year">{w.data.year}</span>
       </div>
-      <div class="card-text card-sub">
-        <p class="card-line">{w.data.summary}</p>
-        <span class="card-label">{w.data.label}</span>
-      </div>
+      <p class="card-line">{w.data.summary}</p>
+      <p class="card-label">{w.data.label}</p>
     </a>
   ))}
 </div>
@@ -28,8 +26,7 @@ const { items } = Astro.props;
   .card-text { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
   .card-title { font: var(--label); font-size: 16px; }
   .card-year { font: var(--meta); color: var(--gray); white-space: nowrap; }
-  .card-label { font: var(--meta); color: var(--gray); white-space: nowrap; }
-  .card-sub { margin-top: 4px; }
-  .card-line { font: var(--small); font-size: 14px; color: var(--gray); min-width: 0; }
-  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } .card-sub { flex-direction: column; gap: 2px; } }
+  .card-label { font: var(--meta); color: var(--gray); margin-top: 6px; }
+  .card-line { font: var(--small); font-size: 14px; color: var(--gray); margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
 </style>
