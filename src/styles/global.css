@@ -244,3 +244,8 @@ article .seq .n { font: var(--meta); color: var(--gray); margin-right: 10px; }
 }
 .layers .lrow.head > span { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); }
 .days .times { margin-bottom: 8px; }
+
+/* Even media: every media row runs the same width. A single is 16:9, a pair is two 3:2 frames. */
+article figure.frame { max-width: var(--wide); }
+article figure.frame > img, article figure.frame > video { width: 100%; max-width: none; aspect-ratio: 16/9; object-fit: cover; margin: 0 0 10px; }
+article .pair.even > img, article .pair.even > video { aspect-ratio: 3/2; object-fit: cover; }

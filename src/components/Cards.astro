@@ -5,7 +5,7 @@ const { items } = Astro.props;
 <div class="cards">
   {items.map((w) => (
     <a class="card" href={`/work/${w.id}/`}>
-      <img src={w.data.hero} alt={w.data.heroAlt} loading="lazy" class={w.data.cardFit === 'contain' ? 'contain' : undefined} />
+      <img src={w.data.card ?? w.data.hero} alt={w.data.heroAlt} loading="lazy" class={w.data.cardFit === 'contain' ? 'contain' : undefined} />
       <div class="card-text">
         <span class="card-title">{w.data.title}</span>
         <span class="card-label">{w.data.label}</span>
