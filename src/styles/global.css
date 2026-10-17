@@ -390,6 +390,8 @@ article figure.vimeo-live { margin: 0 0 40px; }
 /* Exploded view */
 figure.explode { max-width: var(--wide); display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 8px 32px; align-items: center; border: 1px solid var(--rule); border-radius: 6px; padding: 24px 28px; }
 figure.explode .ex-img { position: relative; }
+figure.explode.stack { grid-template-columns: 1fr; }
+figure.explode.stack .explode-key { flex-direction: row; flex-wrap: wrap; gap: 10px 24px; }
 figure.explode .ex-img img { display: block; width: 100%; height: auto; max-width: none; margin: 0; border-radius: 4px; }
 .ex-nums { position: absolute; inset: 0; width: 100%; height: 100%; }
 .ex-nums circle { fill: var(--ink); }

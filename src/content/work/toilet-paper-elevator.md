@@ -119,27 +119,28 @@ The hard part wasn't the electronics. It was getting a wire from the holder to t
 
 I designed the pod in Fusion, along with a raceway that carries the sensor wire down the wall and along the holder's arm to the end of the sleeve. Everything prints in gray. The LiPo sits trapped in a closed shell, and the display's own screws and brass standoffs hold it together.
 
-<figure class="explode">
-  <div class="ex-img"><img src="/work/tpe-assets/exploded-pod.webp" alt="Exploded view of the pod: the gray shell, the e-paper screen with brass standoffs, the Arduino on a breadboard and printed plate, and the LiPo battery"/><svg class="ex-nums" viewBox="0 0 1800 970" aria-hidden="true"><g><circle cx="1700" cy="175" r="26"/><text x="1700" y="185">1</text></g><g><circle cx="1290" cy="110" r="26"/><text x="1290" y="120">2</text></g><g><circle cx="860" cy="745" r="26"/><text x="860" y="755">3</text></g><g><circle cx="800" cy="40" r="26"/><text x="800" y="50">4</text></g><g><circle cx="330" cy="95" r="26"/><text x="330" y="105">5</text></g></svg></div>
+<figure class="explode stack">
+  <div class="ex-img"><img src="/work/tpe-assets/exploded-pod.webp" alt="Exploded view of the pod: the gray cover with its screen window, the e-paper screen on brass standoffs, the Arduino on a breadboard and carrier plate, the LiPo, and the back panel"/><svg class="ex-nums" viewBox="0 0 1800 1038" aria-hidden="true"><g><circle cx="100" cy="320" r="26"/><text x="100" y="330">1</text></g><g><circle cx="890" cy="250" r="26"/><text x="890" y="260">2</text></g><g><circle cx="940" cy="820" r="26"/><text x="940" y="830">3</text></g><g><circle cx="1110" cy="190" r="26"/><text x="1110" y="200">4</text></g><g><circle cx="1520" cy="300" r="26"/><text x="1520" y="310">5</text></g><g><circle cx="1760" cy="110" r="26"/><text x="1760" y="120">6</text></g></svg></div>
   <ol class="explode-key">
-    <li>Shell, with the screen window</li>
+    <li>Cover, with the screen window</li>
     <li>4.2" e-paper screen</li>
     <li>Brass standoffs</li>
-    <li>Arduino MKR WiFi 1010 on a printed plate</li>
+    <li>Arduino MKR WiFi 1010 on the carrier</li>
     <li>3.7V LiPo</li>
+    <li>Back panel, against the wall</li>
   </ol>
-  <figcaption>The pod, pulled apart.</figcaption>
+  <figcaption>The pod, pulled apart. Cover, carrier, and back panel from the Fusion files; the electronics are simplified.</figcaption>
 </figure>
 
 <figure class="explode">
-  <div class="ex-img"><img src="/work/tpe-assets/exploded-route.webp" alt="Exploded view of the sensor route: the end of the raceway, the finger that runs along the holder's arm, its side panel, and the A3144 Hall sensor"/><svg class="ex-nums" viewBox="0 0 1400 1365" aria-hidden="true"><g><circle cx="1290" cy="90" r="26"/><text x="1290" y="100">1</text></g><g><circle cx="1230" cy="800" r="26"/><text x="1230" y="810">2</text></g><g><circle cx="250" cy="760" r="26"/><text x="250" y="770">3</text></g><g><circle cx="1030" cy="1280" r="26"/><text x="1030" y="1290">4</text></g></svg></div>
+  <div class="ex-img"><img src="/work/tpe-assets/exploded-route.webp" alt="Exploded view of the sensor route: the end of the raceway, the finger that runs along the holder's arm, its side panel, and the A3144 Hall sensor"/><svg class="ex-nums" viewBox="0 0 1400 1365" aria-hidden="true"><g><circle cx="1060" cy="240" r="26"/><text x="1060" y="250">1</text></g><g><circle cx="1230" cy="800" r="26"/><text x="1230" y="810">2</text></g><g><circle cx="70" cy="870" r="26"/><text x="70" y="880">3</text></g><g><circle cx="930" cy="1180" r="26"/><text x="930" y="1190">4</text></g></svg></div>
   <ol class="explode-key">
     <li>Raceway, down the wall</li>
     <li>Finger, along the holder's arm</li>
     <li>Side panel, closes the wire channel</li>
     <li>A3144 Hall sensor, at the tip</li>
   </ol>
-  <figcaption>The sensor route, rendered from the Fusion files.</figcaption>
+  <figcaption>The sensor route, from the Fusion files.</figcaption>
 </figure>
 
 <figure class="grid3">
