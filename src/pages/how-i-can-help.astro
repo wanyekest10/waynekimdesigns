@@ -26,8 +26,11 @@ const ways = [
   },
 ];
 
+// Web3Forms access key (free, from web3forms.com). Until it's set, the form opens an email draft instead.
+const FORM_KEY = '';
+
 const steps = [
-  'Email me a few lines about what you are working on. It doesn\'t need to be polished.',
+  'Send me a few lines about what you are working on. It doesn\'t need to be polished.',
   'We talk for 30 minutes about where you are and what is in the way.',
   'If it\'s a fit, I send a short proposal with scope and timeline.',
 ];
@@ -56,11 +59,64 @@ const steps = [
     <ol class="steps">
       {steps.map((s) => <li>{s}</li>)}
     </ol>
-    <p class="cta">
-      <span class="big"><CopyEmail /></span>
-      <span>Hiring full-time? Here's my <a href="/resume.pdf">resume</a>.</span>
-    </p>
   </section>
+
+  <section class="contact" id="message">
+    <h2 class="section-title">Send a message</h2>
+    <div class="contact-grid">
+      <form class="msg" data-key={FORM_KEY}>
+        <fieldset class="topic">
+          <legend>What's this about?</legend>
+          <label><input type="radio" name="topic" value="A project" checked /><span>A project</span></label>
+          <label><input type="radio" name="topic" value="A full-time role" /><span>A full-time role</span></label>
+          <label><input type="radio" name="topic" value="Just saying hi" /><span>Just saying hi</span></label>
+        </fieldset>
+        <div class="row2">
+          <label class="fld"><span>Name</span><input name="name" autocomplete="name" required /></label>
+          <label class="fld"><span>Email</span><input name="email" type="email" autocomplete="email" required /></label>
+        </div>
+        <label class="fld"><span>What are you working on?</span><textarea name="message" rows="5" required placeholder="A few lines is plenty. Rough is fine."></textarea></label>
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="send-row"><button type="submit">Send</button><span class="msg-status" role="status" aria-live="polite"></span></div>
+      </form>
+      <aside class="direct">
+        <p class="direct-label">Or email me directly</p>
+        <p class="big"><CopyEmail /></p>
+        <p class="direct-note">Hiring full-time? Here's my <a href="/resume.pdf">resume</a> and <a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a>.</p>
+      </aside>
+    </div>
+  </section>
+
+  <script>
+    const form = document.querySelector<HTMLFormElement>('form.msg');
+    if (form) {
+      const status = form.querySelector('.msg-status') as HTMLElement;
+      const btn = form.querySelector('button') as HTMLButtonElement;
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const d = new FormData(form);
+        if (d.get('botcheck')) return;
+        const topic = String(d.get('topic') || 'Hello');
+        const name = String(d.get('name') || '');
+        const key = form.dataset.key;
+        if (!key) {
+          const body = `${d.get('message')}\n\n${name}\n${d.get('email')}`;
+          window.location.href = `mailto:waynekimdesigns@gmail.com?subject=${encodeURIComponent(topic + ' from ' + name)}&body=${encodeURIComponent(body)}`;
+          return;
+        }
+        btn.disabled = true; status.textContent = 'Sending…';
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({ access_key: key, subject: `${topic} from ${name} (portfolio)`, from_name: 'waynekimdesigns', topic, name, email: d.get('email'), message: d.get('message') }),
+          });
+          if (!res.ok) throw new Error();
+          form.reset(); status.textContent = "Thanks. I'll get back to you soon.";
+        } catch { status.innerHTML = 'That didn\'t go through. Email me at <a href="mailto:waynekimdesigns@gmail.com">waynekimdesigns@gmail.com</a>.'; }
+        btn.disabled = false;
+      });
+    }
+  </script>
 </Base>
 
 <style>
@@ -83,8 +139,33 @@ const steps = [
   .steps { counter-reset: s; list-style: none; margin-bottom: 40px; }
   .steps li { counter-increment: s; display: grid; grid-template-columns: 32px 1fr; padding: 10px 0; color: var(--gray); }
   .steps li::before { content: counter(s); font: var(--meta); color: var(--gray); padding-top: 4px; }
-  .cta { display: flex; flex-direction: column; gap: 8px; }
-  .cta .big { font: var(--h2); letter-spacing: -0.01em; }
-  .cta span { color: var(--gray); font-size: 15px; }
+  .start { margin-bottom: 96px; }
+  .contact-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 48px; align-items: start; }
+  .msg { display: flex; flex-direction: column; gap: 16px; }
+  .topic { border: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .topic legend { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 10px; }
+  .topic input { position: absolute; opacity: 0; pointer-events: none; }
+  .topic span { display: inline-block; padding: 7px 14px; border: 1px solid var(--rule); border-radius: 999px; font-size: 15px; cursor: pointer; transition: border-color .15s, background .15s; }
+  .topic label:hover span { border-color: var(--gray); }
+  .topic input:checked + span { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .topic input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .fld { display: flex; flex-direction: column; gap: 6px; }
+  .fld > span { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); }
+  .fld input, .fld textarea { font: var(--body); color: var(--ink); background: var(--panel); border: 1px solid transparent; border-radius: 8px; padding: 12px 14px; resize: vertical; }
+  .fld input:focus, .fld textarea:focus { outline: none; border-color: var(--accent); background: var(--paper); }
+  .fld textarea::placeholder { color: #9A9A96; }
+  .hp { display: none; }
+  .send-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .send-row button { font: var(--label); font-size: 15px; color: var(--paper); background: var(--accent); border: 0; border-radius: 999px; padding: 11px 24px; cursor: pointer; }
+  .send-row button:hover { background: #00229A; }
+  .send-row button:disabled { opacity: .5; cursor: default; }
+  .msg-status { color: var(--gray); font-size: 15px; }
+  .direct { padding: 24px; background: var(--panel); border-radius: 10px; }
+  .direct-label { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 10px; }
+  .direct .big { font: var(--label); font-size: 18px; margin-bottom: 12px; }
+  .direct-note { color: var(--gray); font-size: 15px; }
+  @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
+  @media (max-width: 520px) { .row2 { grid-template-columns: 1fr; } }
 
 </style>
