@@ -162,15 +162,10 @@ float mmForNextPulse() {
 }
 ```
 
-<figure class="pair">
-  <img src="/work/tpe-assets/measure-tube.webp" alt="Calipers measuring the inside of a cardboard tube at 39 mm"/>
-  <img src="/work/tpe-assets/measure-roll.webp" alt="Calipers measuring a full roll at 128 mm"/>
-</figure>
-
-<figure class="pair">
-  <video src="/work/tpe-assets/sensor-test.mp4" poster="/work/tpe-assets/sensor-test-poster.jpg" autoplay muted loop playsinline></video>
-  <img src="/work/tpe-assets/parts-early.webp" alt="The e-paper module, breadboard, Arduino, and a tube with an orange printed insert holding magnets"/>
-  <figcaption>The first working pulse: a green LED blinks each time a magnet passes the sensor.</figcaption>
+<figure class="grid3">
+  <div><img src="/work/tpe-assets/measure-tube.webp" alt="Calipers measuring the inside of a cardboard tube at 39 mm"/><p>Measuring the tube.</p></div>
+  <div><video src="/work/tpe-assets/sensor-test.mp4" poster="/work/tpe-assets/sensor-test-poster.jpg" autoplay muted loop playsinline aria-label="A green LED blinking each time a magnet in the sleeve passes the sensor"></video><p>The first pulse: an LED blinks for each magnet.</p></div>
+  <div><img src="/work/tpe-assets/parts-early.webp" alt="The e-paper module, breadboard, Arduino, and a tube with an orange printed insert holding magnets"/><p>The first parts on the bench.</p></div>
 </figure>
 
 ### 2. The pod
