@@ -4,21 +4,24 @@ import CopyEmail from '../components/CopyEmail.astro';
 
 const ways = [
   {
-    q: 'Should we build this?',
-    a: "I turn the doubt into one question we can test, put a quick prototype in front of real people, and watch what they do, not what they say. You get a decision with evidence behind it.",
-    ex: 'At Glorify, leadership doubted community would work. A two-week prototype study with 82 people in their real groups gave them the confidence to launch Glorify Groups, now used by 1.8M+ people.',
+    title: 'Should we build this?',
+    when: "You're about to commit to a bet, and you're not sure it's the right one.",
+    what: "I turn the doubt into one question we can test, put a quick prototype in front of the people who would use it, and watch what they actually do.",
+    get: 'A decision, with evidence behind it, from someone who has spent ten years in design research.',
     proof: [ { name: 'Glorify Groups', href: '/work/glorify-groups/' }, { name: 'RaiseMe Portal', href: '/work/raiseme-portal/' } ],
   },
   {
-    q: 'Will it actually work?',
-    a: "When the idea involves hardware, a camera, or AI, slides won't settle it. I build a working version, the code, the electronics, and the thing you hold, and test it where it would actually live. You find out what breaks while it's still cheap to change.",
-    ex: 'For Living.fm, I trained a camera to recognize what people were doing at home and tested an AI radio host live. The most important lesson, knowing when to stay quiet, only showed up once people lived with it.',
+    title: 'Will it actually work?',
+    when: "The idea involves sensors, a camera, hardware, or AI, and slides won't settle it.",
+    what: 'I build a working prototype, from the code and electronics to the thing you hold, and test it where it would actually live.',
+    get: 'Something people can use, and what we learned from watching them use it.',
     proof: [ { name: 'Living.fm', href: '/work/living-fm/' }, { name: 'room_tone', href: '/work/room-tone/' }, { name: 'Toilet Paper Elevator', href: '/work/toilet-paper-elevator/' }, { name: 'Linee', href: '/work/linee/' } ],
   },
   {
-    q: 'How do we get everyone on the same page?',
-    a: "I run a workshop where everyone writes down their position before anyone talks, so the loudest voice doesn't win by default. Then I turn the wall into a plan someone can act on.",
-    ex: 'At Glorify, leaders from four teams did exactly this, and the wall became the research agenda for the year.',
+    title: 'How do we get everyone on the same page?',
+    when: "Your leaders have strong opinions about what's next, and they haven't been tested against each other.",
+    what: 'I design and run a workshop that starts from written positions instead of whoever speaks first, then synthesize the wall into themes.',
+    get: 'A plan someone can act on.',
     proof: [ { name: 'Facilitation', href: '/work/facilitation/' } ],
   },
 ];
@@ -29,7 +32,7 @@ const steps = [
   'If it\'s a fit, I send a short proposal with scope and timeline.',
 ];
 ---
-<Base title="How I can help, Wayne Kim" description="Should we build this? Will it actually work? How do we get everyone on the same page? How Wayne Kim helps teams answer all three.">
+<Base title="How I can help, Wayne Kim" description="How Wayne Kim can help: testing a bet before you build it, prototyping hardware and AI ideas, and running workshops that end in a plan.">
   <header class="top">
     <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
     <h1>How I can help</h1>
@@ -39,11 +42,15 @@ const steps = [
   <ol class="ways">
     {ways.map((w, i) => (
       <li id={`way-${i + 1}`}>
-        <h2>{w.q}</h2>
-        <div class="body">
-          <p class="ans">{w.a}</p>
-          <p class="ex"><span class="ex-tag">For example</span>{w.ex}</p>
-          <p class="proof">{w.proof.map((p) => <a href={p.href}>{p.name} →</a>)}</p>
+        <span class="num">{String(i + 1).padStart(2, '0')}</span>
+        <div>
+          <h2>{w.title}</h2>
+          <dl>
+            <dt>When</dt><dd>{w.when}</dd>
+            <dt>What I do</dt><dd>{w.what}</dd>
+            <dt>You get</dt><dd>{w.get}</dd>
+            <dt>See</dt><dd class="proof">{w.proof.map((p) => <a href={p.href}>{p.name}</a>)}</dd>
+          </dl>
         </div>
       </li>
     ))}
@@ -68,13 +75,14 @@ const steps = [
   .lead { color: var(--gray); }
 
   .ways { list-style: none; margin-bottom: 96px; }
-  .ways > li { scroll-margin-top: 72px; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px 48px; padding: 40px 0; border-top: 1px solid var(--rule); }
+  .ways > li { scroll-margin-top: 72px; display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 32px 0; border-top: 1px solid var(--rule); }
   .ways > li:last-child { border-bottom: 1px solid var(--rule); }
-  .ways h2 { font: var(--h2); font-size: 26px; line-height: 1.25; letter-spacing: -0.02em; }
-  .ans { color: var(--ink); margin-bottom: 16px; }
-  .ex { color: var(--gray); font-size: 15px; padding-left: 16px; border-left: 2px solid var(--rule); margin-bottom: 16px; }
-  .ex-tag { display: block; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 4px; }
-  .proof { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; }
+  .num { font: var(--meta); color: var(--gray); padding-top: 6px; }
+  .ways h2 { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 16px; }
+  .ways dl { display: grid; grid-template-columns: 96px 1fr; gap: 10px 24px; max-width: 720px; }
+  .ways dt { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); padding-top: 4px; }
+  .ways dd { color: var(--gray); }
+  .proof { display: flex; flex-wrap: wrap; gap: 4px 16px; }
 
   .start { max-width: var(--measure); }
   .steps { counter-reset: s; list-style: none; margin-bottom: 40px; }
@@ -85,7 +93,8 @@ const steps = [
   .cta span { color: var(--gray); font-size: 15px; }
 
   @media (max-width: 720px) {
-    .ways > li { grid-template-columns: 1fr; padding: 32px 0; }
-    .ways h2 { font-size: 22px; }
+    .ways > li { grid-template-columns: 1fr; gap: 8px; }
+    .ways dl { grid-template-columns: 1fr; gap: 2px; }
+    .ways dd { margin-bottom: 12px; }
   }
 </style>
