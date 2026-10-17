@@ -1,12 +1,12 @@
 ---
 title: Facilitation
 slug: facilitation
-headline: "How I run a room: get opinions on the table, separate what we know from what we assume, and turn the wall into a plan."
+headline: "Workshops I've designed and run, from a three-day client sprint to a classroom brainstorm: getting a room to put ideas on the wall and build on each other's."
 context: "Designit, Busan Design Council, Glorify"
 order: 11
 featured: false
 label: "Facilitation and synthesis"
-summary: "Turning a room's opinions into a research plan."
+summary: "Getting a room to think together."
 hero: "/work/facilitation-assets/busan-wall.webp"
 heroAlt: "Wayne talking Busan Design Council participants through a wall of sticky notes at CIID"
 hideHero: true

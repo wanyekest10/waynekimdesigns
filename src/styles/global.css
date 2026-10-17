@@ -22,7 +22,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 strong { font-weight: 500; color: var(--ink); }
 
 .wrap { max-width: var(--wide); margin: 0 auto; }
-.nav { display: flex; justify-content: space-between; align-items: baseline; font: var(--meta); letter-spacing: -0.02em; margin-bottom: 96px; }
+.nav { display: flex; justify-content: space-between; align-items: baseline; font: var(--meta); letter-spacing: -0.02em; margin: -16px 0 80px; padding: 16px 0; position: sticky; top: 0; z-index: 20; background: var(--paper); box-shadow: 0 0 0 100vmax var(--paper); clip-path: inset(0 -100vmax); transition: border-color .2s; border-bottom: 1px solid transparent; }
+.nav.scrolled { border-bottom-color: var(--rule); }
 .nav a, .nav .home { color: var(--ink); }
 .nav ul { list-style: none; display: flex; gap: 20px; }
 .meta { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 16px; }
@@ -69,7 +70,7 @@ figure.inline img { margin: 0 0 8px; }
 
 @media (max-width: 720px) {
   body { padding: 20px 16px 0; }
-  .nav { margin-bottom: 56px; }
+  .nav { margin-bottom: 40px; }
   h1 { font-size: 34px; }
   .field { grid-template-columns: 1fr; gap: 6px; }
   .trio, .pair { grid-template-columns: 1fr; }
@@ -171,12 +172,12 @@ article .tldr .field { max-width: none; border-top-color: rgba(20, 20, 20, 0.08)
   .cs-facts > div { margin-bottom: 22px; }
   .hero { grid-area: hero; }
   .toc-col { grid-area: toc; display: block; }
-  .toc { position: sticky; top: 32px; max-height: calc(100vh - 64px); overflow-y: auto; }
+  .toc { position: sticky; top: 88px; max-height: calc(100vh - 120px); overflow-y: auto; }
   .cs-body { grid-area: body; }
   .jumps { display: none; }
 }
 @media (max-width: 720px) { .hero { margin: 32px 0 56px; } }
-article h2, article h3, article h4, .cs-top { scroll-margin-top: 32px; }
+article h2, article h3, article h4, .cs-top, section[id] { scroll-margin-top: 88px; }
 article.numbered { counter-reset: sec; }
 article.numbered > h2 { counter-increment: sec; }
 article.numbered > h2::before { content: counter(sec, decimal-leading-zero); font: var(--meta); color: var(--gray); margin-right: 14px; vertical-align: 2px; }
@@ -318,3 +319,5 @@ article .pair.natural > a > img { max-width: none; margin: 0; }
 article h3 + p.ws-meta { margin-top: -6px; }
 article p.ws-meta span { white-space: nowrap; }
 article h2 + p.ws-meta { margin-top: -6px; }
+
+article .grid3.tall img { width: 100%; max-width: none; aspect-ratio: 4/5; object-fit: cover; margin: 0 0 8px; border-radius: 6px; }

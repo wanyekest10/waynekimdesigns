@@ -46,5 +46,10 @@ const { title, wide = false, noindex = false, description = 'Wayne Kim builds pr
         });
       });
     </script>
+    <script>
+      const nav = document.querySelector('.nav');
+      const onScroll = () => nav && nav.classList.toggle('scrolled', window.scrollY > 8);
+      onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    </script>
   </body>
 </html>
