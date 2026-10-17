@@ -257,6 +257,7 @@ article .seq .n { font: var(--meta); color: var(--gray); margin-right: 10px; }
 
 /* Even media: every media row runs the same width. A single is 16:9, a pair is two 3:2 frames. */
 article figure.frame { max-width: var(--wide); }
+article figure + p { margin-top: 32px; }
 article figure.frame > img, article figure.frame > video { width: 100%; max-width: none; aspect-ratio: 3/2; object-fit: cover; margin: 0 0 10px; }
 article .pair > img, article .pair > video { aspect-ratio: 3/2; object-fit: cover; }
 article .grid3 video, article .seq video { aspect-ratio: 3/2; object-fit: cover; }
@@ -371,17 +372,39 @@ article figure.vimeo-live { margin: 0 0 40px; }
 @keyframes tpe-flash { 0% { opacity: 1; background: #141414; } 30% { opacity: 1; background: #F3F2EE; } 60% { opacity: 1; background: #141414; } 100% { opacity: 0; } }
 @media (max-width: 720px) { .tpe-mech .m-stage { grid-template-columns: 1fr; } }
 
-/* Wiring table: part pins, a line, board pins */
-.wiring { max-width: var(--measure); margin: 24px 0 32px; }
-.wiring .w-h, .wiring .w-r { display: grid; grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr); align-items: center; }
-.wiring .w-h { font: var(--meta); text-transform: uppercase; letter-spacing: -0.02em; color: var(--gray); padding: 20px 0 8px; }
-.wiring .w-h:first-child { padding-top: 0; }
-.wiring .w-h span:last-child, .wiring .w-r .w-pin:last-child { text-align: right; }
-.wiring .w-r { padding: 3px 0; }
-.wiring .w-pin { font: var(--small); font-size: 14px; color: var(--ink); background: var(--panel); border-radius: 4px; padding: 6px 10px; }
-.wiring .w-l { height: 1px; background: #B9B9B5; position: relative; }
-.wiring .w-l::before, .wiring .w-l::after { content: ''; position: absolute; top: -2.5px; width: 6px; height: 6px; border-radius: 50%; background: #B9B9B5; }
-.wiring .w-l::before { left: 0; } .wiring .w-l::after { right: 0; }
-.wiring .focal .w-l, .wiring .focal .w-l::before, .wiring .focal .w-l::after { background: var(--accent); }
-.wiring .focal .w-l { height: 2px; }
-.wiring .focal .w-pin { color: var(--accent); }
+/* Wiring hub: three parts into one board */
+.hub { max-width: var(--measure); margin: 20px 0 32px; display: grid; grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr); row-gap: 12px; }
+.hub-part, .hub-board { border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px; }
+.hub-part { grid-column: 1; }
+.hub-part b, .hub-board b { display: block; font: var(--label); color: var(--ink); }
+.hub-part small, .hub-board small { display: block; font: var(--small); font-size: 13px; color: var(--gray); margin-top: 2px; }
+.hub-link { grid-column: 2; position: relative; display: flex; align-items: center; justify-content: center; }
+.hub-link::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: #B9B9B5; }
+.hub-link span { position: relative; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); background: var(--paper); padding: 0 6px; }
+.hub-board { grid-column: 3; grid-row: 1 / span 3; display: flex; flex-direction: column; justify-content: center; border-color: var(--ink); }
+.hub .focal { border-color: var(--accent); }
+.hub .focal b, .hub-link.focal span { color: var(--accent); }
+.hub-link.focal::before { background: var(--accent); height: 2px; }
+@media (max-width: 560px) { .hub { grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr); } .hub-link span { font-size: 10px; padding: 0 3px; } }
+
+/* Exploded view */
+figure.explode { max-width: var(--wide); display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 8px 32px; align-items: center; background: var(--panel); border-radius: 6px; padding: 24px 28px; }
+figure.explode svg { width: 100%; height: auto; max-height: 520px; max-width: none; }
+figure.explode figcaption { grid-column: 1 / -1; }
+.explode-key { list-style: none; counter-reset: k; display: flex; flex-direction: column; gap: 10px; }
+.explode-key li { counter-increment: k; display: flex; gap: 12px; align-items: baseline; font-size: 15px; color: var(--ink); }
+.explode-key li::before { content: counter(k); flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--ink); color: var(--paper); font: 500 12px/22px var(--mono); text-align: center; }
+.exploded polygon { stroke: rgba(20,20,20,.35); stroke-width: .8; stroke-linejoin: round; }
+.exploded .x-shell.t { fill: #B3B6B6; } .exploded .x-shell.l { fill: #9A9E9E; } .exploded .x-shell.r { fill: #898D8D; }
+.exploded .x-win { fill: #6F7373; }
+.exploded .x-race.t { fill: #B3B6B6; } .exploded .x-race.l { fill: #9A9E9E; } .exploded .x-race.r { fill: #898D8D; }
+.exploded .x-pcb.t { fill: #2E3A4E; } .exploded .x-pcb.l, .exploded .x-pcb.r { fill: #1F2836; }
+.exploded .x-disp { fill: #F3F2EE; }
+.exploded .x-plate.t { fill: #C9CBCB; } .exploded .x-plate.l { fill: #ADB0B0; } .exploded .x-plate.r { fill: #9DA0A0; }
+.exploded .x-bb.t { fill: #FAFAF8; } .exploded .x-bb.l, .exploded .x-bb.r { fill: #DADAD6; }
+.exploded .x-mkr.t { fill: var(--accent); } .exploded .x-mkr.l, .exploded .x-mkr.r { fill: #001F86; }
+.exploded .x-batt.t { fill: #E9D99A; } .exploded .x-batt.l { fill: #D3C27E; } .exploded .x-batt.r { fill: #C2B16D; }
+.exploded .x-stand { stroke: #B08D3C; stroke-width: 3; stroke-dasharray: 2 0; }
+.exploded .x-num circle { fill: var(--ink); }
+.exploded .x-num text { fill: var(--paper); font: 500 13px var(--mono); text-anchor: middle; }
+@media (max-width: 720px) { figure.explode { grid-template-columns: 1fr; padding: 16px; } }
