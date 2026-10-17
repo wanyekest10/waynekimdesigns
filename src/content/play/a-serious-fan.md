@@ -2,8 +2,8 @@
 title: A Serious Fan
 headline: "How might you build a fan that's light and serious?"
 facts: ["Object", "4 days, 2025", "With Hun Han"]
-hero: "/play/fan-assets/final.webp"
-heroAlt: "The cardboard fan prototype: a pink circular face with a red LED, blue paper blades, and a cardboard base"
+hero: "/play/fan-assets/hero.webp"
+heroAlt: "The finished fan, a tall black column with a red LED glowing at its center, beside someone working at a desk"
 ---
 
 A smart fan that rewards discipline with airflow. Built with Hun Han in Prototyping as a Process at CIID, taught by Jose Chavarria and Andrea Desiato.
