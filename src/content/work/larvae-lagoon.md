@@ -7,8 +7,8 @@ order: 10
 featured: false
 label: "Research and biomimicry"
 summary: "Designing for a non-human user."
-hero: "/work/larvae-assets/concept.webp"
-heroAlt: "3D render of the habitat concept: a floating ring with petal-like edges, a sheltered pool in the middle, and an anchor line below"
+hero: "/work/larvae-assets/hero.webp"
+heroAlt: "The Astino Valley from above, next to a render of the floating habitat concept"
 jumps:
   - { label: "Skip to the research", to: "research-and-insights" }
   - { label: "Skip to the design", to: "translating-ecology-into-design" }
@@ -82,9 +82,11 @@ We studied how ecosystems handle water under stress, and chose four jobs for the
   <div class="col"><span class="k">The habitat</span><span class="part focal">Stores water<small>During drought.</small></span><span class="part">Regulates flow<small>During floods.</small></span><span class="part">Stays stable<small>As levels change.</small></span></div>
 </div>
 
-<figure class="wide"><img src="/work/larvae-assets/bromeliad.webp" alt="Diagram: the habitat holding a mini pond through drought, drying up, and fair weather, inspired by bromeliad leaves that redirect rainwater to the center"/><figcaption>Through drought: like a bromeliad, the habitat funnels rainwater to its center and keeps a small pond.</figcaption></figure>
-
-<figure class="wide"><img src="/work/larvae-assets/mangrove-lotus.webp" alt="Diagram: mangrove roots slowing water and lotus roots anchoring the habitat as it rises with rain and floods"/><figcaption>Through flooding: mangrove-like roots slow the water, and a lotus-like anchor lets it rise without drifting.</figcaption></figure>
+<figure class="pair natural">
+  <img src="/work/larvae-assets/bromeliad.webp" alt="Diagram: the habitat holding a mini pond through drought, drying up, and fair weather, inspired by bromeliad leaves that redirect rainwater to the center"/>
+  <img src="/work/larvae-assets/mangrove-lotus.webp" alt="Diagram: mangrove roots slowing water and lotus roots anchoring the habitat as it rises with rain and floods"/>
+  <figcaption>Through drought, like a bromeliad, it funnels rainwater to its center and keeps a small pond. Through flooding, mangrove-like roots slow the water and a lotus-like anchor lets it rise without drifting.</figcaption>
+</figure>
 
 ## Expert input
 
@@ -101,7 +103,10 @@ With a first concept and prototype, we went back to local ecologists who special
 
 ## Concept
 
-A modular habitat that responds to both drought and flooding. It holds water and keeps it oxygen-rich in dry spells, stays put in floods, and adapts to different sites and species. Being modular means it can be reconfigured instead of optimized for one scenario.
+A modular habitat that responds to both drought and flooding.
+
+<figure class="frame"><img src="/work/larvae-assets/concept.webp" alt="3D render of the habitat concept: a floating ring with petal-like edges, a sheltered pool in the middle, and an anchor line below"/></figure>
+ It holds water and keeps it oxygen-rich in dry spells, stays put in floods, and adapts to different sites and species. Being modular means it can be reconfigured instead of optimized for one scenario.
 
 ## Reflection
 
