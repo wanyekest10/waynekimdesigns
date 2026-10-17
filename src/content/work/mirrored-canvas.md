@@ -17,7 +17,7 @@ jumps:
 short:
   - { lead: "The question.", text: "How do you design an experience that gets people to make silly faces, in public, in front of other people?" }
   - { lead: "What we built.", text: "A translucent canvas that works as both mirror and stage. Face tracking and a microphone turn expressions and voice into live projected visuals." }
-  - { lead: "What I learned.", text: "Absurdity is contagious. Serious prototypes made people freeze; ridiculous ones gave the whole room permission to play." }
+  - { lead: "What I learned.", text: "Creative coding let us prototype play fast, and absurdity turned out to be contagious: ridiculous prototypes gave the whole room permission to play." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Role", value: "Interaction designer and researcher" }
@@ -31,6 +31,8 @@ facts:
 
 Mirrored Canvas projects onto a sheet of translucent acrylic. You see yourself in it, and everyone behind you sees what your face is doing to it. Your expression and your voice become the picture.
 
+<figure class="frame"><img src="/work/mirrored-canvas-assets/hero.webp" alt="A crowd laughing as someone stands beside the glowing canvas while a classmate takes a photo"/></figure>
+
 ## How it works
 
 FaceOSC tracks points on your face through a webcam, and a microphone listens for sound. Processing turns both into visuals projected onto the acrylic.
@@ -41,7 +43,7 @@ FaceOSC tracks points on your face through a webcam, and a microphone listens fo
   <div><h4>Use your voice</h4><p>Sound feeds the visuals alongside your face.</p></div>
 </div>
 
-<figure class="pair">
+<figure class="pair even">
   <video src="/work/mirrored-canvas-assets/smile-trigger.mp4" poster="/work/mirrored-canvas-assets/smile-trigger-poster.jpg" autoplay muted loop playsinline></video>
   <video src="/work/mirrored-canvas-assets/collage.mp4" poster="/work/mirrored-canvas-assets/collage-poster.jpg" autoplay muted loop playsinline></video>
   <figcaption>Face tracking asks for your best smile, and the photos pile up.</figcaption>
@@ -51,7 +53,7 @@ FaceOSC tracks points on your face through a webcam, and a microphone listens fo
 
 We bodystormed before we built. The pattern showed up fast: when a prototype felt serious, people froze and watched. When it was absurd, they laughed, leaned in, and took a turn. Once one person made a ridiculous face, everyone else had permission to.
 
-<figure class="pair">
+<figure class="pair even">
   <video src="/work/mirrored-canvas-assets/bodystorm.mp4" poster="/work/mirrored-canvas-assets/bodystorm-poster.jpg" autoplay muted loop playsinline></video>
   <img src="/work/mirrored-canvas-assets/shocked.webp" alt="Two people making shocked faces beside the glowing canvas while a crowd laughs behind them"/>
 </figure>
@@ -62,4 +64,4 @@ We bodystormed before we built. The pattern showed up fast: when a prototype fel
 
 **Performed, not captured.** Most emotion tech tries to read and classify your face. Here the emotion was performed and shared with the room, not captured or classified.
 
-<figure class="medium"><img src="/work/mirrored-canvas-assets/with-yase.webp" alt="Black and white photo of Wayne and Yase smiling at a table with the laptop and webcam setup"/><figcaption>Making faces with Yase.</figcaption></figure>
+<figure class="frame"><img src="/work/mirrored-canvas-assets/with-yase.webp" alt="Black and white photo of Wayne and Yase smiling at a table with the laptop and webcam setup"/><figcaption>Making faces with Yase.</figcaption></figure>

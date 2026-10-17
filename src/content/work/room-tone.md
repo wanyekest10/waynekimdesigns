@@ -7,6 +7,7 @@ order: 5
 label: "Physical computing and prototyping"
 summary: "A room that offers a break, not an alarm."
 hero: "/work/room-tone-assets/hero.webp"
+card: "/work/room-tone-assets/card.webp"
 heroAlt: "Working at a desk at dusk while a lamp glows on the wall and a disco ball scatters light across the room"
 heroVideo: "/work/room-tone-assets/showcase.mp4"
 heroPoster: "/work/room-tone-assets/showcase-poster.jpg"
