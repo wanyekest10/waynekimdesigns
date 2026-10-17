@@ -80,16 +80,10 @@ Stacking it up instead worked better. Height gives you milestones within days, a
   <div class="crow head"><span></span><span class="k">HIGHWAY</span><span></span><span class="k">ELEVATOR</span></div>
   <div class="crow"><span class="k">Measured in</span><span class="was">Miles</span><span class="to">→</span><span class="is">Feet<small>A small unit, so the number moves every day.</small></span></div>
   <div class="crow"><span class="k">Milestones</span><span class="was">Freeway exits, weeks apart</span><span class="to">→</span><span class="is">Landmarks, days apart<small>Things people already know the height of.</small></span></div>
-  <div class="crow focal"><span class="k">The end</span><span class="was">Santa Monica Pier</span><span class="to">→</span><span class="is">The Moon<small>It never really runs out.</small></span></div>
+  <div class="crow"><span class="k">The end</span><span class="was">Santa Monica Pier</span><span class="to">→</span><span class="is">The Moon<small>It never really runs out.</small></span></div>
 </div>
 
-The screen has two states. Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Eighteen landmarks, from the Hollywood Sign to the Burj Khalifa, and even the Moon.
-
-<figure class="pair natural">
-  <img src="/work/tpe-assets/screen-30ft.png" alt="Climbing screen: 30 ft up, 91 squares since Oct 11, previous stop Ground floor, next stop Hollywood Sign, 45 ft tall"/>
-  <img src="/work/tpe-assets/screen-arrive-hollywood.png" alt="Arrival screen: Now arriving, Hollywood Sign, Los Angeles, USA, 45 ft tall. So far 45 ft up, next stop Christ the Redeemer"/>
-  <figcaption>Climbing, and arriving. See every <a href="/work/tpe-assets/screens-climb-all.webp" target="_blank" rel="noopener">climbing screen</a> and <a href="/work/tpe-assets/screens-arrival-all.webp" target="_blank" rel="noopener">arrival screen</a>.</figcaption>
-</figure>
+Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Eighteen landmarks, from the Hollywood Sign to the Burj Khalifa, and even the Moon.
 
 <figure class="pair">
   <img src="/work/tpe-assets/close-4ft.webp" alt="Close-up of the screen at 4 ft up above the roll"/>
@@ -97,10 +91,33 @@ The screen has two states. Most of the time it's climbing: one big number, feet 
   <figcaption>4 ft up, then 10.</figcaption>
 </figure>
 
-<figure class="pair">
-  <img style="object-position: center top" src="/work/tpe-assets/screen-test.webp" alt="An early screen on the breadboard reading 12,028 ft up, next stop Mount Fuji"/>
-  <img src="/work/tpe-assets/screen-arrival.webp" alt="An arrival screen: now arriving, Motherland Monument, with the Great Pyramid up next"/>
-  <figcaption>Early screens on the bare e-paper module, before the layout settled.</figcaption>
+### Three screens, one state machine
+
+The screen is a small state machine. It starts on G, climbs while nobody's looking, and flips to an arrival screen for one visit when the count passes a landmark. Past the Burj Khalifa, the next stop is always the Moon.
+
+<div class="flow" role="list" aria-label="Screen states">
+  <div class="step"><span class="n">01</span><b>Start</b><small>G, ground floor. First stop, the Hollywood Sign.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">02</span><b>Climbing</b><small>Feet up, with the stops behind and ahead.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step focal"><span class="n">03</span><b>Arriving</b><small>Passed a landmark. Shown for one visit.</small></div>
+</div>
+<p class="flow-note">↻ After an arrival, it goes back to climbing toward the next stop.</p>
+
+### How the screens changed
+
+I tested the first screens with people and kept iterating. The early version showed only the next stop and how far to go. The final one puts the climb in context: the stop you just passed next to the one ahead, the squares and start date under the big number, and a city and height for every landmark. I also swapped a ladder of the world's tallest buildings for landmarks people already know, and gave them "ft tall" while your climb reads "ft up," so the two never get confused.
+
+<figure class="pair natural">
+  <img src="/work/tpe-assets/screen-early-climb.webp" alt="An early climbing screen on the bare e-paper module: 12,028 ft up, next stop Mount Fuji, 360 ft to go"/>
+  <img src="/work/tpe-assets/screen-early-arrive.webp" alt="An early arrival screen: Now arriving, Motherland Monument, 335 ft up, up next Great Pyramid, stands at 455 ft"/>
+  <figcaption>Before: early climbing and arrival screens on the bare module.</figcaption>
+</figure>
+
+<figure class="pair natural">
+  <img src="/work/tpe-assets/screen-30ft.png" alt="The final climbing screen: 30 ft up, 91 squares since Oct 11, previous stop Ground floor, next stop Hollywood Sign, 45 ft tall"/>
+  <img src="/work/tpe-assets/screen-arrive-hollywood.png" alt="The final arrival screen: Now arriving, Hollywood Sign, Los Angeles, USA, 45 ft tall. So far 45 ft up, next stop Christ the Redeemer"/>
+  <figcaption>After: the final climbing and arrival screens. See every <a href="/work/tpe-assets/screens-climb-all.webp" target="_blank" rel="noopener">climbing screen</a> and <a href="/work/tpe-assets/screens-arrival-all.webp" target="_blank" rel="noopener">arrival screen</a>.</figcaption>
 </figure>
 
 ## Building it
@@ -109,7 +126,21 @@ Three problems, in the order I hit them.
 
 ### 1. Counting the roll
 
-Before modeling anything, I measured my own roll and holder: a 128 mm roll on a 39 mm tube, around a 16 mm spring pin. The sleeve had to spin freely inside the tube while the holder stayed still, which is why the sensing ended up as magnets and a Hall sensor instead of an encoder.
+I measured my own roll (300 squares of 100 mm, wound from a 64 mm radius down to a 21 mm core), and since each magnet is a quarter turn, the code shrinks the paper per pulse as the roll gets thinner. Tearing jerks the roll and adds phantom pulses, so each pulse is scaled down to match real pulls, and once a roll has turned past its full length the code assumes a new one went on.
+
+```cpp
+const float R_FULL_MM = 64.0;   // full roll, measured
+const float R_CORE_MM = 21.0;   // empty tube, measured
+const float COUNT_SCALE = 0.67; // tearing adds pulses
+
+float mmForNextPulse() {
+  float turns = stats.rollPulses / (float)MAGNETS;
+  // the roll gets thinner as it turns
+  float r = R_FULL_MM - turns * PAPER_THICKNESS_MM;
+  if (r < R_CORE_MM) r = R_CORE_MM;
+  return 2.0 * PI * r / MAGNETS;  // one quarter turn
+}
+```
 
 <figure class="pair">
   <img src="/work/tpe-assets/measure-tube.webp" alt="Calipers measuring the inside of a cardboard tube at 39 mm"/>
@@ -136,8 +167,8 @@ How do you get a wire from the holder to the screen without anything exposed in 
 
 <figure class="pair">
   <img src="/work/tpe-assets/arm-tip.webp" alt="Close-up of the raceway's arm along the holder, the sensor wires inside, ending at the sleeve's face where the magnets sit"/>
-  <img src="/work/tpe-assets/fusion-tip.webp" alt="The tip of the raceway's arm in Fusion, pulled apart: the finger with three wire slots, its side panel, and the A3144 Hall sensor"/>
-  <figcaption>The arm at the magnets, and its tip in Fusion: three slots for the wires, a side panel to close them in, and the sensor at the end.</figcaption>
+  <img src="/work/tpe-assets/fusion-tip.webp" alt="The tip of the raceway's arm in Fusion, see-through: the wire slots and the pocket for the A3144 Hall sensor"/>
+  <figcaption>The arm at the magnets, and its tip in Fusion: slots for the three wires and a pocket for the sensor.</figcaption>
 </figure>
 
 ### 3. The pod
@@ -160,8 +191,8 @@ I designed the pod in Fusion. Everything prints in gray. The LiPo sits trapped i
 
 <figure class="grid3 tallnat">
   <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Every part, before it went up.</p></div>
-  <div><img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/><p>On the wall, with a roll.</p></div>
   <div><img src="/work/tpe-assets/final-wall.webp" alt="The finished version in daylight: the gray pod showing 4 ft up above the holder and sleeve"/><p>The sleeve on the bar.</p></div>
+  <div><img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/><p>On the wall, with a roll.</p></div>
 </figure>
 
 ## Reflection

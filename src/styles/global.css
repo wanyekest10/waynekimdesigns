@@ -435,3 +435,7 @@ article figure.solo img { width: 100%; height: auto; border-radius: 6px; margin:
 /* Three tall photos in a row, same 3:4 shape. */
 article .grid3.tallnat img { aspect-ratio: 3/4; object-fit: cover; }
 article .grid3.tallnat img { width: 100%; max-width: none; border-radius: 6px; margin: 0 0 8px; }
+
+/* Code snippets */
+article pre { max-width: var(--measure); margin: 24px 0 32px; padding: 18px 20px; background: var(--panel) !important; border-radius: 6px; overflow-x: auto; font: 13px/1.6 var(--mono); }
+article pre code { font: inherit; }
