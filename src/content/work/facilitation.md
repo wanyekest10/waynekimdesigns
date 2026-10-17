@@ -8,10 +8,9 @@ featured: false
 label: "Facilitation and synthesis"
 summary: "Turning a room's opinions into a research plan."
 hero: "/work/facilitation-assets/busan-wall.webp"
-heroAlt: "Wayne talking through a wall of sticky notes with workshop participants"
+heroAlt: "Wayne talking Busan Design Council participants through a wall of sticky notes at CIID"
 jumps:
-  - { label: "Skip to client work", to: "same-approach-under-nda" }
-  - { label: "Skip to Glorify", to: "glorify-in-depth" }
+  - { label: "Skip to the rooms", to: "four-rooms" }
 short:
   - { lead: "The problem.", text: "Senior teams have strong opinions about where a product should go, but those opinions are rarely tested against each other. A meeting rarely changes that." }
   - { lead: "What I do.", text: "Design workshops that separate certainty from assumption, start from written positions instead of whoever speaks first, and end with a synthesis someone can act on." }
@@ -36,74 +35,51 @@ A workshop only pays off if someone turns the wall into a plan. Every session I 
 </div>
 <p class="flow-note">↻ The plan becomes the starting point for the next round of research.</p>
 
-## Same approach, under NDA
+## Four rooms
 
-Most of my workshops happened in client settings where the material can't be shown in full. Here's the shape of three.
+The same approach, in four very different rooms. Client details are under NDA.
 
-<div class="cols3">
-  <div><h4>Wipro, at Designit</h4><p>Co-designed and co-facilitated a three-day design thinking workshop with 60+ participants that turned C-suite priorities into product direction.</p></div>
-  <div><h4>Trane, at Designit</h4><p>Ran a remote employee experience session that produced personas and a prioritized opportunity map for the next phase of work.</p></div>
-  <div><h4>Busan Design Council, at CIID</h4><p>Facilitated the 2025 CIID Global Design Workshop for Busan Good Designer participants.</p></div>
-</div>
+### Wipro, at Designit
+
+<p class="ws-meta">In person · 3 days · 60+ participants · Co-designed and co-facilitated</p>
+
+A design thinking workshop that turned C-suite priorities into product direction.
 
 <figure class="pair">
   <img src="/work/facilitation-assets/wipro-room.webp" alt="A large room of workshop participants standing between tables and walls of sticky notes"/>
   <img src="/work/facilitation-assets/wipro-wall.webp" alt="A participant presenting in front of walls covered in sticky notes"/>
-  <figcaption>The three-day workshop for Wipro.</figcaption>
 </figure>
+
+### Trane, at Designit
+
+<p class="ws-meta">Remote · Employee experience · Facilitated</p>
+
+A session that moved from pain points to personas to a prioritized opportunity map for the next phase of work.
 
 <figure class="pair">
   <img src="/work/facilitation-assets/trane-board-a.webp" alt="A remote workshop board with an icebreaker, agenda, pain points, and three personas"/>
   <img src="/work/facilitation-assets/trane-board-b.webp" alt="A remote workshop board with How Might We prompts, pain points, opportunity areas, and concept generation"/>
-  <figcaption>The remote session for Trane, from pain points to personas to opportunity areas.</figcaption>
 </figure>
 
-<figure class="pair">
-  <img src="/work/facilitation-assets/busan-wall.webp" alt="Wayne talking participants through a wall of sticky notes"/>
-  <img src="/work/facilitation-assets/busan-group.webp" alt="Group photo of participants holding a banner reading 2025 CIID Global Design Workshop"/>
-  <figcaption>The 2025 CIID Global Design Workshop with the Busan Design Council.</figcaption>
+### Busan Design Council, at CIID
+
+<p class="ws-meta">In person · September 2025 · Co-facilitated with Michael Brenner and Hun Han</p>
+
+The 2025 CIID Global Design Workshop for Busan Design Council participants.
+
+<figure class="frame"><img style="object-position: center 60%" src="/work/facilitation-assets/busan-group.webp" alt="Group photo of participants holding a banner reading 2025 CIID Global Design Workshop"/></figure>
+
+### Glorify
+
+<p class="ws-meta">In person · Senior leadership across Content, Design, Product, and Research · Designed and facilitated</p>
+
+Leadership had strong opinions about where the core experience should go next, but they hadn't been tested against each other. Everyone wrote their position on three prompts before the group talked: what to double down on, what's missing, and how to personalize. In the weeks after, I synthesized the wall into four themes and the research agenda for the year.
+
+<figure class="pair natural">
+  <a class="zoom" href="/work/facilitation-assets/board.webp" target="_blank" rel="noopener"><img src="/work/facilitation-assets/board.webp" alt="The workshop board: intro, participants, agenda, framing, and a column of sticky notes for each prompt"/></a>
+  <a class="zoom" href="/work/facilitation-assets/roadmap.webp" target="_blank" rel="noopener"><img src="/work/facilitation-assets/roadmap.webp" alt="The Q1 2024 research roadmap, with studies laid out by week across workstreams"/></a>
+  <figcaption>The workshop board, and the research roadmap it became. Click either to open full size.</figcaption>
 </figure>
-
-## Glorify, in depth
-
-One workshop I can show end to end. By late 2023, Glorify's leadership had strong opinions about where the core experience should go next, but those opinions hadn't been tested against each other. I designed and facilitated a workshop with senior leadership across Content, Design, Product, and Research, then spent the following weeks turning what came out of the room into prioritized research questions for the year ahead.
-
-### The design
-
-The workshop had one job before it had any activities: separate certainty from assumption. I framed the session around three objectives.
-
-<div class="cols3">
-  <div><h4>Shared language</h4><p>For the group's opinions, and the reasoning behind them.</p></div>
-  <div><h4>Certainty vs. assumption</h4><p>Separate what the team knew from what it was assuming.</p></div>
-  <div><h4>Inform the work</h4><p>Use both to shape strategy, research, and tactics.</p></div>
-</div>
-
-Three time-boxed activities anchored the session: what to double down on, what's missing, and how to personalize the experience.
-
-<figure class="wide"><a class="zoom" href="/work/facilitation-assets/objectives.webp" target="_blank" rel="noopener"><img src="/work/facilitation-assets/objectives.webp" alt="Workshop objectives slide: shared languages, separate certainties from assumptions, inform strategy, research, and tactics, leading from clarity and alignment to solutions"/></a><figcaption>The objectives: clarity and alignment first, then solutions. Click to open full size.</figcaption></figure>
-
-### In the room
-
-Senior stakeholders sharing a point of view is different from sharing one that can be acted on. Participants worked through each prompt on their own before discussing as a group, so the conversation started from written positions instead of whoever spoke first. The room produced a wall of perspectives on strengths, gaps, and personalization, plus a transcript of where people agreed, where they didn't, and why.
-
-<figure class="wide"><a class="zoom" href="/work/facilitation-assets/board.webp" target="_blank" rel="noopener"><img src="/work/facilitation-assets/board.webp" alt="The workshop board: intro, participants, agenda, framing, and a column of sticky notes for each prompt"/></a><figcaption>The workshop board. Click to open full size.</figcaption></figure>
-
-### What came out of it
-
-I synthesized the discussion into four themes for the year ahead. One traced a personalization assumption through four hypotheses to two research questions. Another narrowed three competing explanations for why the Listen Tab was underused into a single testable question.
-
-<div class="stats">
-  <div class="focal"><span class="k">Themes</span><b>4</b><p>for the year: need states, generational differences, Listen Tab, and missional goals</p></div>
-  <div><span class="k">One assumption</span><b>4 → 2</b><p>hypotheses traced to two research questions</p></div>
-</div>
-
-<figure class="pair">
-  <a class="zoom" href="/work/facilitation-assets/questions.webp" target="_blank" rel="noopener"><img src="/work/facilitation-assets/questions.webp" alt="List of questions to unpack in 2024, grouped by need states, Gen Z and age, Listen Tab, and mission and key results"/></a>
-  <a class="zoom" href="/work/facilitation-assets/listen-tab.webp" target="_blank" rel="noopener"><img src="/work/facilitation-assets/listen-tab.webp" alt="Recommendations slide mapping goals, problems, and solutions for moving users beyond daily worship"/></a>
-  <figcaption>The questions for 2024, and one theme worked through. Click either to open full size.</figcaption>
-</figure>
-
-<figure class="wide"><a class="zoom" href="/work/facilitation-assets/roadmap.webp" target="_blank" rel="noopener"><img src="/work/facilitation-assets/roadmap.webp" alt="The Q1 2024 research roadmap, with studies laid out by week across workstreams"/></a><figcaption>Where it went: the research roadmap for Q1 2024. Click to open full size.</figcaption></figure>
 
 ## Reflection
 

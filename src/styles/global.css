@@ -313,3 +313,6 @@ article figure.yesand { max-width: var(--measure); display: grid; grid-template-
 .yesand figcaption { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; }
 .yesand figcaption span { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); }
 @media (max-width: 720px) { article figure.yesand { grid-template-columns: 1fr 1fr; } }
+article p.ws-meta { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin: -4px 0 10px; }
+article .pair.natural > a > img { max-width: none; margin: 0; }
+article h3 + p.ws-meta { margin-top: -6px; }
