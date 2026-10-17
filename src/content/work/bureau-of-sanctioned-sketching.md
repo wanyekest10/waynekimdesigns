@@ -145,9 +145,11 @@ That became the blank wildcards. They weren't in the plan. They came from watchi
 
 Playful drawing fades in the places that run on forms: school, then work. Real bureaucracy gets compliance through fear. The Bureau keeps the structure, official cards and stamps and procedure, and drops the fear. People already follow official instructions without thinking. Here, those instructions say to draw.
 
-<figure class="wide"><img src="/work/bss-assets/box-dieline.webp" alt="The flattened BSS box: 'Official permission to draw freely', a quick start of pull files, create directive, draw, play, repeat, and a warning that it may result in joy and creative wonder"/><figcaption>The box, flattened. Quick start: pull files, create directive, draw, play, repeat.</figcaption></figure>
-
-<figure class="medium"><img src="/work/bss-assets/bureau-card.webp" alt="A hand holding a card titled Official BSS position"/></figure>
+<figure class="pair">
+  <img src="/work/bss-assets/box-dieline.webp" alt="The flattened BSS box: 'Official permission to draw freely', a quick start of pull files, create directive, draw, play, repeat, and a warning that it may result in joy and creative wonder"/>
+  <img src="/work/bss-assets/bureau-card.webp" alt="A hand holding a card titled Official BSS position"/>
+  <figcaption>The box, flattened. Quick start: pull files, create directive, draw, play, repeat.</figcaption>
+</figure>
 
 ## Reflection
 
