@@ -11,7 +11,6 @@ const years = [
   { when: "'24–'25", what: 'Interaction Design, CIID', peek: [
     { src: '/about/ciid-class.webp', alt: 'The CIID class with staff and faculty on the grass, in orange scarves, looking up at the camera', caption: "CIID '24 with staff + faculty at Impact Minds" },
     { src: '/about/ciid-graduation.webp', alt: 'The class in flower crowns, holding up their certificates', caption: 'Graduation day' },
-    { src: '/about/ciid-don-norman.webp', alt: 'Wayne seated on stage beside Don Norman, under a screen reading Now on stage: Don Norman', caption: 'On stage with Don Norman at Impact Minds' },
     { src: '/about/ciid-impact-minds.webp', alt: 'A large group photo on a grassy hillside, everyone looking up and waving at the camera', caption: 'Everyone at Impact Minds' },
   ], note: 'M.S. A year of research, build, test, repeat, prototyping across mediums.' },
   { when: "'23–'24", what: 'Senior UX Researcher, Glorify', note: 'Built the research practice and led 3 researchers. Shaped Glorify Groups (1.8M+ users).' },
@@ -95,7 +94,7 @@ const years = [
   .years strong { font: var(--label); display: block; }
   .peek { position: relative; display: inline-block; cursor: default; outline: none; }
   .peek strong { text-decoration: underline dotted var(--gray); text-underline-offset: 4px; }
-  .peek-card { position: absolute; left: calc(100% + 20px); top: 50%; width: 320px; padding: 8px; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.08); opacity: 0; transform: translate(-4px, -50%); pointer-events: none; transition: opacity .15s, transform .15s; z-index: 10; }
+  .peek-card { position: absolute; left: calc(100% + 20px); top: 50%; width: 460px; padding: 8px; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.08); opacity: 0; transform: translate(-4px, -50%); pointer-events: none; transition: opacity .15s, transform .15s; z-index: 10; }
   .peek-stack { position: relative; display: block; aspect-ratio: 3/2; }
   .peek-stack img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 4px; opacity: 0; transition: opacity .4s; }
   .peek-stack img.on { opacity: 1; }
@@ -105,7 +104,7 @@ const years = [
   .peek-dots i { width: 5px; height: 5px; border-radius: 50%; background: var(--rule); }
   .peek-dots i.on { background: var(--ink); }
   .peek:hover .peek-card, .peek:focus .peek-card, .peek:focus-within .peek-card { opacity: 1; transform: translate(0, -50%); }
-  @media (max-width: 720px) { .peek-card { width: 260px; left: 0; top: auto; bottom: calc(100% + 10px); transform: translateY(4px); } .peek:hover .peek-card, .peek:focus .peek-card { transform: none; } }
+  @media (max-width: 720px) { .peek-card { width: min(340px, 86vw); left: 0; top: auto; bottom: calc(100% + 10px); transform: translateY(4px); } .peek:hover .peek-card, .peek:focus .peek-card { transform: none; } }
   .note { display: block; color: var(--gray); font-size: 15px; }
   @media (max-width: 720px) {
     .intro, .block { margin-bottom: 80px; }
