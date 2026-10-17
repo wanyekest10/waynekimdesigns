@@ -9,80 +9,71 @@ label: "Facilitation and synthesis"
 summary: "Turning a room's opinions into a research plan."
 hero: "/work/facilitation-assets/busan-wall.webp"
 heroAlt: "Wayne talking Busan Design Council participants through a wall of sticky notes at CIID"
+hideHero: true
 jumps:
-  - { label: "Skip to the rooms", to: "four-rooms" }
+  - { label: "Skip to Glorify", to: "glorify" }
 short:
   - { lead: "The problem.", text: "Senior teams have strong opinions about where a product should go, but those opinions are rarely tested against each other. A meeting rarely changes that." }
   - { lead: "What I do.", text: "Design workshops that separate certainty from assumption, start from written positions instead of whoever speaks first, and end with a synthesis someone can act on." }
-  - { lead: "What happened.", text: "The same approach shaped work for Wipro, Trane, and the Busan Design Council. At Glorify, one workshop became the research agenda for the year." }
+  - { lead: "What happened.", text: "Workshops for Wipro, Trane, the Busan Design Council, and my own final project at CIID. At Glorify, one workshop became the research agenda for the year." }
 facts:
-  - { label: "Where", value: "Designit · Busan Design Council · Glorify" }
+  - { label: "Where", value: "Designit · CIID · Glorify" }
   - { label: "Role", value: "Designer and facilitator" }
   - { label: "Methods", value: "Workshop design, How Might We, synthesis" }
   - { label: "Outcome", value: "A research agenda for the year at Glorify · Product direction for Wipro" }
 ---
 
-## The approach
+## Wipro at Designit
 
-A workshop only pays off if someone turns the wall into a plan. Every session I run follows the same arc.
+<p class="ws-meta"><span>3 days</span> · <span>60+ people</span> · <span>Co-designed and co-facilitated</span></p>
 
-<div class="flow" role="list" aria-label="How I run a workshop">
-  <div class="step"><span class="n">01</span><b>Separate certainty from assumption</b><small>Before any activity, agree on what we know.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step"><span class="n">02</span><b>Write first, talk second</b><small>Everyone puts a position down before the group discusses.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step focal"><span class="n">03</span><b>Turn the wall into a plan</b><small>Synthesize the room into questions and next steps.</small></div>
-</div>
-<p class="flow-note">↻ The plan becomes the starting point for the next round of research.</p>
-
-## Four rooms
-
-The same approach, in four very different rooms. Client details are under NDA.
-
-### Wipro, at Designit
-
-<p class="ws-meta">In person · 3 days · 60+ participants · Co-designed and co-facilitated</p>
-
-A design thinking workshop that turned C-suite priorities into product direction.
+A design thinking workshop that turned C-suite priorities into product direction. Details are under NDA.
 
 <figure class="pair">
   <img src="/work/facilitation-assets/wipro-room.webp" alt="A large room of workshop participants standing between tables and walls of sticky notes"/>
   <img src="/work/facilitation-assets/wipro-wall.webp" alt="A participant presenting in front of walls covered in sticky notes"/>
 </figure>
 
-### Trane, at Designit
+## Trane at Designit
 
-<p class="ws-meta">Remote · Employee experience · Facilitated</p>
+<p class="ws-meta"><span>Remote</span> · <span>Employee experience</span> · <span>Facilitated</span></p>
 
-A session that moved from pain points to personas to a prioritized opportunity map for the next phase of work.
+A session that moved from pain points to personas to a prioritized opportunity map for the next phase of work. Details are under NDA.
 
 <figure class="pair">
   <img src="/work/facilitation-assets/trane-board-a.webp" alt="A remote workshop board with an icebreaker, agenda, pain points, and three personas"/>
   <img src="/work/facilitation-assets/trane-board-b.webp" alt="A remote workshop board with How Might We prompts, pain points, opportunity areas, and concept generation"/>
 </figure>
 
-### Busan Design Council, at CIID
+## Busan at CIID
 
-<p class="ws-meta">In person · September 2025 · Co-facilitated with Michael Brenner and Hun Han</p>
+<p class="ws-meta"><span>Sept 2025</span> · <span>Co-facilitated with Michael Brenner and Hun Han</span></p>
 
 The 2025 CIID Global Design Workshop for Busan Design Council participants.
 
-<figure class="frame"><img style="object-position: center 60%" src="/work/facilitation-assets/busan-group.webp" alt="Group photo of participants holding a banner reading 2025 CIID Global Design Workshop"/></figure>
+<figure class="pair">
+  <img src="/work/facilitation-assets/busan-wall.webp" alt="Wayne talking participants through a wall of sticky notes"/>
+  <img src="/work/facilitation-assets/busan-group.webp" alt="Group photo of participants holding a banner reading 2025 CIID Global Design Workshop"/>
+</figure>
 
-### Glorify
+## Ideation at CIID
 
-<p class="ws-meta">In person · Senior leadership across Content, Design, Product, and Research · Designed and facilitated</p>
+<p class="ws-meta"><span>Final project brainstorm</span> · <span>Designed and facilitated</span></p>
 
-Leadership had strong opinions about where the core experience should go next, but they hadn't been tested against each other. Everyone wrote their position on three prompts before the group talked: what to double down on, what's missing, and how to personalize. In the weeks after, I synthesized the wall into four themes and the research agenda for the year.
+A brainstorm for the Bureau of Sanctioned Sketching with classmates. Before any ideas, I grounded the room in permission: it was okay to get weird and bold, and the goal was 100+ ideas, not good ones. Then the constraints arrived one per minute, so nobody had time to judge their first instinct.
+
+<figure class="frame"><video src="/work/facilitation-assets/ideation-welcome.mp4" poster="/work/facilitation-assets/ideation-welcome-poster.jpg" autoplay muted loop playsinline></video><figcaption>Opening the session: permission first.</figcaption></figure>
+
+<figure class="frame"><video src="/work/facilitation-assets/ideation-constraints.mp4" poster="/work/facilitation-assets/ideation-constraints-poster.jpg" autoplay muted loop playsinline></video><figcaption>Then one new constraint every minute.</figcaption></figure>
+
+## Glorify
+
+<p class="ws-meta"><span>Senior leadership, four teams</span> · <span>Designed and facilitated</span></p>
+
+Senior leaders across Content, Design, Product, and Research had strong opinions about where the core experience should go next, but they hadn't been tested against each other. Everyone wrote their position on three prompts before the group talked: what to double down on, what's missing, and how to personalize. In the weeks after, I synthesized the wall into four themes and the research agenda for the year.
 
 <figure class="pair natural">
   <a class="zoom" href="/work/facilitation-assets/board.webp" target="_blank" rel="noopener"><img src="/work/facilitation-assets/board.webp" alt="The workshop board: intro, participants, agenda, framing, and a column of sticky notes for each prompt"/></a>
   <a class="zoom" href="/work/facilitation-assets/roadmap.webp" target="_blank" rel="noopener"><img src="/work/facilitation-assets/roadmap.webp" alt="The Q1 2024 research roadmap, with studies laid out by week across workstreams"/></a>
   <figcaption>The workshop board, and the research roadmap it became. Click either to open full size.</figcaption>
 </figure>
-
-## Reflection
-
-**The synthesis is the deliverable.** The room is where opinions come out. The weeks after are where they turn into something a team can act on.
-
-**Structure is what makes it safe.** Writing before talking means the quietest person in the room is on the wall too.

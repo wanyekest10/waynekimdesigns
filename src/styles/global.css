@@ -316,3 +316,5 @@ article figure.yesand { max-width: var(--measure); display: grid; grid-template-
 article p.ws-meta { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin: -4px 0 10px; }
 article .pair.natural > a > img { max-width: none; margin: 0; }
 article h3 + p.ws-meta { margin-top: -6px; }
+article p.ws-meta span { white-space: nowrap; }
+article h2 + p.ws-meta { margin-top: -6px; }
