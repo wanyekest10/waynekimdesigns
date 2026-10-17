@@ -58,6 +58,10 @@ jumps:                   # phone-only jump links; `to` = heading slug
 - CIID pages list "Responsibility" instead of Role. BSS and Larvae Lagoon have none.
 - Each CIID project ends with its full Vimeo/YouTube video embedded (`figure.embed`).
 
+- Disco Never Died (`src/content/work/disco-never-died.md`, listed in Experiments): autoplaying Vimeo with a sound toggle (`figure.vimeo-live`, script in Base.astro), early-version clips.
+- About timeline: CIID row has a hover photo (`peek` in index.astro). Spare CIID photos in `public/about/` (Don Norman panel, class photo).
+- VJ / projection mapping experiment: not built yet. Processed assets parked in `public/work/vj-assets/` (mounting, grid calibration, live set photos and clips, TouchDesigner). Needs Wayne's context before writing.
+
 ## Media system (agreed Oct 16)
 - One shape: 3:2 for every photo and clip (`figure.frame`, `.pair`, `.grid3`, `.seq`, cards). Vertical phone clips: 4:5 grid (`.grid3.tall`) or blurred fill baked into the file.
 - Two widths: wide for media, text width for anything you read (diagrams, tables, quotes, screenshots of slides use `figure.wide` with zoom links).

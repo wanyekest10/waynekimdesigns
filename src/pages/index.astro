@@ -8,7 +8,7 @@ const work = (await getCollection('work')).filter((w) => w.data.featured).sort((
 
 const years = [
   { when: "'25–now", what: 'Interaction designer, independent', note: 'Building physical and AI prototypes, like <a href="/work/room-tone/">room_tone</a> and <a href="/work/toilet-paper-elevator/">Toilet Paper Elevator</a>.' },
-  { when: "'24–'25", what: 'Interaction Design, CIID', note: 'M.S. A year of research, build, test, repeat, prototyping across mediums.' },
+  { when: "'24–'25", what: 'Interaction Design, CIID', peek: { src: '/about/ciid-impact-minds.webp', alt: 'A large group photo on a grassy hillside, everyone looking up and waving at the camera', caption: "CIID '24 with staff + faculty at Impact Minds" }, note: 'M.S. A year of research, build, test, repeat, prototyping across mediums.' },
   { when: "'23–'24", what: 'Senior UX Researcher, Glorify', note: 'Built the research practice and led 3 researchers. Shaped Glorify Groups (1.8M+ users).' },
   { when: "'21–'23", what: 'Design Researcher, Designit', note: 'Led research for Fortune 500 clients like Mastercard and Trane, plus <a href="/work/designit-futures/">speculative futures work</a>.' },
   { when: "'20–'21", what: 'Independent designer and researcher', note: 'Projects for Y Combinator companies like Govly, Rally.Video, and Measured.' },
@@ -48,7 +48,9 @@ const years = [
     </div>
     <ul class="years">
       {years.map((y) => (
-        <li><span class="when">{y.when}</span><span><strong>{y.what}</strong>{y.note && <span class="note" set:html={y.note} />}</span></li>
+        <li><span class="when">{y.when}</span><span>{y.peek ? (
+          <span class="peek" tabindex="0"><strong>{y.what}</strong><span class="peek-card" role="tooltip"><img src={y.peek.src} alt={y.peek.alt} loading="lazy" /><span class="peek-cap">{y.peek.caption}</span></span></span>
+        ) : <strong>{y.what}</strong>}{y.note && <span class="note" set:html={y.note} />}</span></li>
       ))}
     </ul>
   </section>
@@ -74,6 +76,13 @@ const years = [
   .years li { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 12px 0; border-top: 1px solid var(--rule); }
   .when { font: var(--meta); color: var(--gray); padding-top: 3px; }
   .years strong { font: var(--label); display: block; }
+  .peek { position: relative; display: inline-block; cursor: default; outline: none; }
+  .peek strong { text-decoration: underline dotted var(--gray); text-underline-offset: 4px; }
+  .peek-card { position: absolute; left: calc(100% + 20px); top: 50%; width: 320px; padding: 8px; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.08); opacity: 0; transform: translate(-4px, -50%); pointer-events: none; transition: opacity .15s, transform .15s; z-index: 10; }
+  .peek-card img { display: block; width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 4px; }
+  .peek-cap { display: block; font: var(--small); color: var(--gray); margin-top: 6px; }
+  .peek:hover .peek-card, .peek:focus .peek-card, .peek:focus-within .peek-card { opacity: 1; transform: translate(0, -50%); }
+  @media (max-width: 720px) { .peek-card { width: 260px; left: 0; top: auto; bottom: calc(100% + 10px); transform: translateY(4px); } .peek:hover .peek-card, .peek:focus .peek-card { transform: none; } }
   .note { display: block; color: var(--gray); font-size: 15px; }
   @media (max-width: 720px) {
     .intro, .block { margin-bottom: 80px; }
