@@ -14,9 +14,9 @@ jumps:
   - { label: "Skip to the design", to: "translating-ecology-into-design" }
   - { label: "Skip to the concept", to: "concept" }
 short:
-  - { lead: "The question.", text: "What if you had to design for a non-human species? Dragonfly habitats in the Astino Valley are being squeezed by summer droughts and heavy floods." }
+  - { lead: "The question.", text: "How might we make dragonfly habitats in the Astino Valley resilient to extreme weather, from flooding to drought?" }
   - { lead: "What we did.", text: "Field research, expert conversations, and biomimicry, borrowing from how bromeliads store water and how mangroves and lotus plants handle floods." }
-  - { lead: "What I learned.", text: "Designing for non-human users needs longer time horizons and different measures of success." }
+  - { lead: "What I learned.", text: "Designing for a non-human user means bringing your strengths as a designer, knowing how much you don't know, and leaning on the experts who do." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Course", value: "Designing across Biological Scales" }
@@ -35,8 +35,6 @@ Dragonflies are bioindicators. Where they live, the water is clean and oxygen-ri
   <div><span class="k">Disappearing</span><b>3×</b><p>Wetlands are vanishing three times faster than forests</p></div>
 </div>
 
-<figure class="frame"><img src="/work/larvae-assets/challenge.webp" alt="A dragonfly clinging to a reed beside the shell it just emerged from"/></figure>
-
 ## The Astino Valley
 
 Near Bergamo and the CIID campus, the Astino Valley has a network of streams, ponds, and wetlands that support several dragonfly species, including Cordulegaster boltonii. They depend on steady water flow, dense plants along the banks, and consistent oxygen.
@@ -52,10 +50,12 @@ Seasonal extremes are breaking that balance. Summer droughts cut the flow and th
 
 Desk research, field observation, and conversations with local ecologists grounded our understanding of the habitats and water systems.
 
+<figure class="frame"><video src="/work/larvae-assets/synthesis.mp4" poster="/work/larvae-assets/synthesis-poster.jpg" autoplay muted loop playsinline></video><figcaption>Synthesizing research and early hypotheses as a team.</figcaption></figure>
+
 <figure class="pair">
-  <img src="/work/larvae-assets/seasonal-risks.webp" alt="A shallow stream bed in the valley, with low water running over rock and moss"/>
+  <img src="/work/larvae-assets/seasonal-risks.webp" alt="Fast-moving water rushing downhill over rock and moss in a valley stream"/>
   <img src="/work/larvae-assets/experts.webp" alt="Wayne holding an umbrella over a local ecological expert during a conversation in the botanical garden"/>
-  <figcaption>Low water in a valley stream, and talking species behavior with a local expert.</figcaption>
+  <figcaption>Fast-moving water rushing downhill, and talking species behavior with a local expert.</figcaption>
 </figure>
 
 <div class="cols3">
@@ -103,8 +103,6 @@ With a first concept and prototype, we went back to local ecologists who special
 
 A modular habitat that responds to both drought and flooding. It holds water and keeps it oxygen-rich in dry spells, stays put in floods, and adapts to different sites and species. Being modular means it can be reconfigured instead of optimized for one scenario.
 
-<figure class="frame"><video src="/work/larvae-assets/synthesis.mp4" poster="/work/larvae-assets/synthesis-poster.jpg" autoplay muted loop playsinline></video><figcaption>Synthesizing research and early hypotheses as a team.</figcaption></figure>
-
 ## Reflection
 
 **Longer horizons.** Designing for non-human users means longer timelines and different measures of success.
@@ -112,5 +110,3 @@ A modular habitat that responds to both drought and flooding. It holds water and
 **Systems reveal dependencies.** Ecological systems thinking showed connections that made the solution more resilient.
 
 **Work with the experts.** Biologists and ecologists made our design decisions stronger.
-
-Designing for dragonflies changed how we define users, impact, and responsibility.
