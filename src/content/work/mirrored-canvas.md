@@ -4,6 +4,7 @@ slug: mirrored-canvas
 headline: "An installation that turns silly faces into projected visuals, so people can perform an emotion together instead of having it read."
 context: "CIID, 2024"
 order: 7
+year: "2024"
 featured: false
 listIn: experiments
 label: "Computer vision and play design"

@@ -4,6 +4,7 @@ slug: a-serious-fan
 headline: "A fan that cools you down only when you keep your word, built in four days to answer a brief: make a fan that's light and serious."
 context: "CIID, 2025"
 order: 11
+year: "2025"
 featured: false
 listIn: experiments
 label: "Physical computing and prototyping"

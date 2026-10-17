@@ -17,6 +17,7 @@ team:
 methods: [Interviews, Workflow observation, Survey, Journey mapping, Workshops]
 tags: [UX research, Service design, B2B]
 order: 7
+year: "2019–20"
 featured: false
 label: "Research and service design"
 summary: "Research that saved B2B revenue."

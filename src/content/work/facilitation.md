@@ -4,6 +4,7 @@ slug: facilitation
 headline: "Workshops I've designed and run, from a three-day client sprint to a classroom brainstorm: getting a room to put ideas on the wall and build on each other's."
 context: "Designit, Busan Design Council, Glorify"
 order: 9
+year: "2022–25"
 featured: false
 label: "Facilitation and synthesis"
 summary: "Getting a room to think together."

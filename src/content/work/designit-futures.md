@@ -4,6 +4,7 @@ slug: designit-futures
 headline: "Designit North America's first futures point of view: a three-week sprint from the history of farming to speculative concepts set in 2122."
 context: "Designit, 2022"
 order: 8
+year: "2022"
 featured: false
 label: "Foresight and strategy"
 summary: "Speculative futures as a strategy tool."

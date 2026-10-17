@@ -4,6 +4,7 @@ slug: bureau-of-sanctioned-sketching
 headline: "A card game that gives adults official permission to draw again, found by prototyping my way through six things that didn't work."
 context: "CIID, 2025"
 order: 4
+year: "2025"
 featured: true
 label: "Prototyping and play design"
 summary: "A card game that gives adults permission to draw."

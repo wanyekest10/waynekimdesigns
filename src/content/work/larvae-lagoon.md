@@ -4,6 +4,7 @@ slug: larvae-lagoon
 headline: "A modular dragonfly habitat for a valley caught between droughts and floods, designed with biomimicry principles."
 context: "CIID, 2024"
 order: 10
+year: "2024"
 featured: false
 listIn: experiments
 label: "Research and biomimicry"

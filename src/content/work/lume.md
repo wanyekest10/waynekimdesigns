@@ -4,6 +4,7 @@ slug: lume
 headline: "A blind-spot alert for motorcycle helmets that puts a quiet cue in the rider's line of sight, prototyped as a VR ride."
 context: "CIID, 2025"
 order: 8
+year: "2025"
 featured: false
 listIn: experiments
 label: "Spatial computing and prototyping"
