@@ -1,0 +1,111 @@
+---
+// Unlisted test page for the proposed media system. Not linked from anywhere.
+// Rule: every photo and clip is 3:2. Two widths: wide (media) and text (things you read).
+// Only the width changes across devices, never the shape.
+import Base from '../layouts/Base.astro';
+---
+<Base wide noindex title="Media system test, Wayne Kim" description="Test page for the portfolio media system.">
+  <div class="cs">
+    <header class="cs-top">
+      <h1>Media system test</h1>
+      <p class="lead">One shape (3:2), two widths (wide for media, text width for reading). Resize the window, or open this on a phone and a tablet.</p>
+    </header>
+    <nav class="toc-col" aria-label="On this page">
+      <div class="toc">
+        <ol>
+          <li><a href="#single"><span class="n">01</span>Single</a></li>
+          <li><a href="#pair"><span class="n">02</span>Pair</a></li>
+          <li><a href="#grid"><span class="n">03</span>Grid</a></li>
+          <li><a href="#vertical"><span class="n">04</span>Vertical clips</a></li>
+          <li><a href="#focus"><span class="n">05</span>Focus point</a></li>
+          <li><a href="#text-width"><span class="n">06</span>Text width</a></li>
+          <li><a href="#cards"><span class="n">07</span>Cards</a></li>
+        </ol>
+      </div>
+    </nav>
+    <article class="numbered cs-body">
+
+      <h2 id="single">Single</h2>
+      <p>A single photo or clip, wide, 3:2. Same as Linee's singles today, but 3:2 instead of 16:9.</p>
+      <figure class="m-one"><img src="/work/linee-assets/put-it-in-the-box.webp" alt="" /><figcaption>Photo, 3:2.</figcaption></figure>
+      <figure class="m-one"><video src="/work/linee-assets/open-house.mp4" poster="/work/linee-assets/open-house-poster.jpg" autoplay muted loop playsinline></video><figcaption>16:9 clip in a 3:2 frame: a little trimmed at the sides.</figcaption></figure>
+
+      <h2 id="pair">Pair</h2>
+      <p>Two 3:2 frames side by side. On a phone they stack into two singles, still 3:2.</p>
+      <figure class="m-two">
+        <img src="/work/linee-assets/parts.webp" alt="" />
+        <img src="/work/linee-assets/mechanism.webp" alt="" />
+        <figcaption>Two photos.</figcaption>
+      </figure>
+      <figure class="m-two">
+        <video src="/work/mirrored-canvas-assets/bodystorm.mp4" poster="/work/mirrored-canvas-assets/bodystorm-poster.jpg" autoplay muted loop playsinline></video>
+        <img src="/work/mirrored-canvas-assets/shocked.webp" alt="" />
+        <figcaption>A clip and a photo.</figcaption>
+      </figure>
+
+      <h2 id="grid">Grid</h2>
+      <p>Three across on desktop, two across on tablet and phone. Each tile is 3:2 with a short note.</p>
+      <figure class="m-three">
+        <div><video src="/work/bss-assets/proto-timed-prompts.mp4" poster="/work/bss-assets/proto-timed-prompts-poster.jpg" autoplay muted loop playsinline></video><p><strong>Off hand.</strong> Non-dominant hand, against a clock.</p></div>
+        <div><video src="/work/bss-assets/proto-see-through-canvas.mp4" poster="/work/bss-assets/proto-see-through-canvas-poster.jpg" autoplay muted loop playsinline></video><p><strong>See-through canvas.</strong> Draw on both sides.</p></div>
+        <div><video src="/work/bss-assets/proto-standing-game.mp4" poster="/work/bss-assets/proto-standing-game-poster.jpg" autoplay muted loop playsinline></video><p><strong>Rotating prompts.</strong> Call out a prompt, rotate.</p></div>
+        <div><video src="/work/bss-assets/proto-kaleidoscope.mp4" poster="/work/bss-assets/proto-kaleidoscope-poster.jpg" autoplay muted loop playsinline></video><p><strong>Rotating canvas.</strong> It keeps turning.</p></div>
+        <div><video src="/work/bss-assets/proto-rainstick.mp4" poster="/work/bss-assets/proto-rainstick-poster.jpg" autoplay muted loop playsinline></video><p><strong>Rain and oil, 1.</strong> Tilt the rainstick.</p></div>
+        <div><video src="/work/bss-assets/proto-motion-tracking.mp4" poster="/work/bss-assets/proto-motion-tracking-poster.jpg" autoplay muted loop playsinline></video><p><strong>Rain and oil, 2.</strong> Paint in oil.</p></div>
+      </figure>
+
+      <h2 id="vertical">Vertical clips</h2>
+      <p>Option A: one vertical clip inside a 3:2 frame with a blurred fill. Nothing cropped, same shape as everything else.</p>
+      <figure class="m-one"><video src="/work/linee-assets/notch.mp4" poster="/work/linee-assets/notch-poster.jpg" autoplay muted loop playsinline></video><figcaption>Option A: blurred fill.</figcaption></figure>
+      <p>Option B: two vertical clips as a pair at 4:5. The one exception to 3:2.</p>
+      <figure class="m-two m-tall">
+        <video src="/work/lume-assets/unity-helmet.mp4" poster="/work/lume-assets/unity-helmet-poster.jpg" autoplay muted loop playsinline></video>
+        <video src="/work/lume-assets/handlebar-build.mp4" poster="/work/lume-assets/handlebar-build-poster.jpg" autoplay muted loop playsinline></video>
+        <figcaption>Option B: vertical pair, 4:5.</figcaption>
+      </figure>
+
+      <h2 id="focus">Focus point</h2>
+      <p>Each photo can say where its crop centers, so the important part stays in frame. Same photo, two focus points:</p>
+      <figure class="m-two">
+        <img src="/play/tamer-kebap-assets/map.webp" alt="" />
+        <img src="/play/tamer-kebap-assets/map.webp" alt="" style="object-position: left" />
+        <figcaption>Centered (left) versus focus on the left edge (right), which keeps the Tamer Kebap panel.</figcaption>
+      </figure>
+
+      <h2 id="text-width">Text width</h2>
+      <p>Anything you read stays at text width on every device: diagrams, tables, quotes, comparisons.</p>
+      <div class="compare">
+        <div class="crow head"><span></span><span class="k">BEFORE</span><span></span><span class="k">AFTER</span></div>
+        <div class="crow"><span class="k">Shapes</span><span class="was">16:9, 3:2, 1:1, natural</span><span class="to">→</span><span class="is">3:2<small>One exception: vertical pairs at 4:5.</small></span></div>
+        <div class="crow"><span class="k">Widths</span><span class="was">Text, medium, narrow, wide</span><span class="to">→</span><span class="is">Wide and text<small>Media wide, reading at text width.</small></span></div>
+        <div class="crow focal"><span class="k">Devices</span><span class="was">Shapes shift by page</span><span class="to">→</span><span class="is">Only width changes<small>Same shape on desktop, tablet, phone.</small></span></div>
+      </div>
+      <blockquote><p>"Group drawing would help, if everyone was doing the same thing."</p><p>A quote, at text width</p></blockquote>
+
+      <h2 id="cards">Cards</h2>
+      <p>Homepage and Work cards at 3:2, slightly shorter than today.</p>
+      <div class="m-cards">
+        <a href="/work/linee/"><img src="/work/linee-assets/card.webp" alt="" /><span>Linee</span></a>
+        <a href="/work/room-tone/"><img src="/work/room-tone-assets/card.webp" alt="" /><span>room_tone</span></a>
+      </div>
+    </article>
+  </div>
+</Base>
+<style is:global>
+  .m-one, .m-two, .m-three { max-width: var(--wide) !important; margin: 32px 0; }
+  .m-one > img, .m-one > video, .m-two > img, .m-two > video, .m-three video, .m-cards img {
+    width: 100%; max-width: none !important; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 6px; margin: 0 0 10px; display: block; }
+  .m-two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .m-two > img, .m-two > video { margin: 0; }
+  .m-two figcaption { grid-column: 1 / -1; }
+  .m-tall > video { aspect-ratio: 4 / 5; }
+  .m-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 16px; }
+  .m-three p { font: var(--small); font-size: 14px; color: var(--gray); margin: 0; }
+  .m-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: var(--wide); margin: 24px 0; }
+  .m-cards span { font: var(--label); color: var(--ink); }
+  @media (max-width: 999px) { .m-three { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 720px) {
+    .m-two, .m-cards { grid-template-columns: 1fr; }
+    .m-tall { grid-template-columns: 1fr 1fr; }
+  }
+</style>

@@ -20,7 +20,6 @@ short:
   - { lead: "What I learned.", text: "Constraints, not freedom, get adults drawing. And permission spreads once someone goes first." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design" }
-  - { label: "Role", value: "Designer and researcher, solo" }
   - { label: "Duration", value: "8 weeks, 2025, final project" }
   - { label: "Advisors", value: "Rina Shumylo · Chris Downs · Jose Chavarria" }
   - { label: "Tools", value: "Card stock, Arduino, p5.js, motion tracking" }

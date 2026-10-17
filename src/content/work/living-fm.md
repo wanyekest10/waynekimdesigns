@@ -27,7 +27,7 @@ short:
   - { lead: "What I learned.", text: "In an ambient system, the interpretation is the product. Liv only works when she knows when to stay quiet." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
-  - { label: "Role", value: "Interaction designer" }
+  - { label: "Responsibility", value: "Training the vision model · Writing Liv's personality · Building the testing interface" }
   - { label: "Duration", value: "4 days, 2025" }
   - { label: "Team", value: "Juan Ignacio Garro, Alec Davis" }
   - { label: "Faculty", value: "Bjorn Karmann, Matteo Loglio" }

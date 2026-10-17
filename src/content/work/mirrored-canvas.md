@@ -20,7 +20,7 @@ short:
   - { lead: "What I learned.", text: "Creative coding let us prototype play fast, and absurdity turned out to be contagious: ridiculous prototypes gave the whole room permission to play." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
-  - { label: "Role", value: "Interaction designer and researcher" }
+  - { label: "Responsibility", value: "Creative coding" }
   - { label: "Duration", value: "4 days, 2024" }
   - { label: "Team", value: "Yase Dusu" }
   - { label: "Faculty", value: "Jacob Remin · Dennis Paul" }
