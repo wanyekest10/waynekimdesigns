@@ -1,7 +1,6 @@
 // Projects without a write-up yet. They show on /work only, never on the homepage.
 // When one gets a case study, add it to src/content/work and delete it here.
 export const archive = [
-  { name: 'Linee', tags: 'Physical Computing, Stepper Motors', year: '2025' },
   { name: 'Mirrored Canvas', tags: 'Computer Vision, Processing', year: '2025' },
   { name: 'Lume', tags: 'Spatial Computing, Unity', year: '2025' },
   { name: 'A Serious Fan', tags: 'Physical Computing, Prototyping', year: '2025' },
