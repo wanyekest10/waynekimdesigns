@@ -41,18 +41,6 @@ We wanted to be more intentional about our free time at home. The habits we want
 
 <figure class="frame"><video src="/work/living-assets/device-loop.mp4" poster="/work/living-assets/device-loop-poster.jpg" autoplay muted loop playsinline></video></figure>
 
-## Bodystorming: timing beats content
-
-Before building anything, we acted it out. We collapsed on the couch, stretched between tasks, scrolled, and shared space, while one of us narrated the other in real time.
-
-The surprise was that the words mattered less than the timing. Commentary that arrived too early felt like being watched. Too late, and it was pointless. That became the core design problem: deciding when Liv should speak, and when she should hold back.
-
-<figure class="pair">
-  <video src="/work/living-assets/bodystorm-1.mp4" poster="/work/living-assets/bodystorm-1-poster.jpg" autoplay muted loop playsinline></video>
-  <video src="/work/living-assets/bodystorm-2.mp4" poster="/work/living-assets/bodystorm-2-poster.jpg" autoplay muted loop playsinline></video>
-  <figcaption>Bodystorming: narrating each other's everyday moments to feel out timing and tone.</figcaption>
-</figure>
-
 ## Building Liv
 
 Liv is a small wooden enclosure holding an ESP32 camera, a Bluetooth speaker, and a 5V battery. The camera watches the room, a model classifies what you're doing, and Liv answers through the speaker.
@@ -103,6 +91,18 @@ A few of her lines:
 Before we could trust Liv's responses, we needed to see her reasoning. I built a live testing interface that showed the system's real-time classification for each scenario next to what Liv would say. Without it, a wrong comment just felt like a bad line. With it, we could see the misread that caused it, fix it, and decide how much to trust the system before putting it in front of people.
 
 <figure class="medium"><img src="/work/living-assets/testing-interface.webp" alt="The testing interface: live classification percentages for each activity, with Liv's response below"/></figure>
+
+## Bodystorming: timing beats content
+
+Before building anything, we acted it out. We collapsed on the couch, stretched between tasks, scrolled, and shared space, while one of us narrated the other in real time.
+
+The surprise was that the words mattered less than the timing. Commentary that arrived too early felt like being watched. Too late, and it was pointless. That became the core design problem: deciding when Liv should speak, and when she should hold back.
+
+<figure class="pair">
+  <video src="/work/living-assets/bodystorm-1.mp4" poster="/work/living-assets/bodystorm-1-poster.jpg" autoplay muted loop playsinline></video>
+  <video src="/work/living-assets/bodystorm-2.mp4" poster="/work/living-assets/bodystorm-2-poster.jpg" autoplay muted loop playsinline></video>
+  <figcaption>Bodystorming: narrating each other's everyday moments to feel out timing and tone.</figcaption>
+</figure>
 
 ## When care becomes nagging
 
