@@ -7,8 +7,8 @@ order: 9
 featured: false
 label: "Foresight and strategy"
 summary: "Speculative futures as a strategy tool."
-hero: "/work/futures-assets/tech-land.webp"
-heroAlt: "Illustration from 2122: a farmer checks a water well system that reads 92, surrounded by tall crops and neighbors on video calls"
+hero: "/work/futures-assets/water-score.webp"
+heroAlt: "Illustration from 2122: a phone showing a Virtual Water Score of 87 out of 100 for a pair of shoes, with the water used to make them"
 jumps:
   - { label: "Skip to the process", to: "the-process-as-a-prototype" }
   - { label: "Skip to the concepts", to: "three-futures-set-in-2122" }
