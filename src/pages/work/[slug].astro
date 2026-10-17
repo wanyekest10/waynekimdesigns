@@ -16,7 +16,7 @@ const toc = headings
   .filter((h) => (h.depth === 2 && h.text !== 'TL;DR') || h.depth === 3)
   .map((h) => ({ ...h, num: h.depth === 2 ? String(++n).padStart(2, '0') : null, label: h.text.split(':')[0] }));
 ---
-<Base wide title={`${d.title}, Wayne Kim`} description={d.summary}>
+<Base wide title={`${d.title}, Wayne Kim`} description={d.summary} prompt="Working on something like this?">
   <div class="cs">
     <header class="cs-top" id="overview">
       <h1>{d.title}</h1>

@@ -10,7 +10,7 @@ const { p } = Astro.props;
 const { Content } = await render(p);
 const d = p.data;
 ---
-<Base title={`${d.title}, Wayne Kim`} description={d.headline}>
+<Base title={`${d.title}, Wayne Kim`} description={d.headline} prompt="Working on something like this?">
   <header class="play-top">
     <a class="toc-back" href="/experiments/">← Experiments</a>
     <h1>{d.title}</h1>

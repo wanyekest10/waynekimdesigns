@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
 import CopyEmail from '../components/CopyEmail.astro';
-interface Props { title: string; description?: string; wide?: boolean; noindex?: boolean }
-const { title, wide = false, noindex = false, description = 'Wayne Kim builds prototypes and tests them with real people. Researcher and interaction designer in Los Angeles.' } = Astro.props;
+interface Props { title: string; description?: string; wide?: boolean; noindex?: boolean; prompt?: string | false }
+const { title, wide = false, noindex = false, prompt = 'Have something you\'re working on?', description = 'Wayne Kim builds prototypes and tests them with real people. Researcher and interaction designer in Los Angeles.' } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -24,9 +24,13 @@ const { title, wide = false, noindex = false, description = 'Wayne Kim builds pr
           <li><a href="/work/">Work</a></li>
           <li><a href="/experiments/">Experiments</a></li>
           <li><a href="/#about">About</a></li>
+          <li><a href="/how-i-can-help/">Collaborate</a></li>
         </ul>
       </nav>
       <slot />
+      {prompt && (
+        <aside class="closing"><p>{prompt}</p><a href="/how-i-can-help/#message">Send me a message →</a></aside>
+      )}
       <footer class="footer">
         <span>Say hello: <CopyEmail /></span>
         <span class="links"><span>Based in Los Angeles</span> <a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a> <a href="/resume.pdf">Resume</a></span>

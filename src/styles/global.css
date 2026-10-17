@@ -25,7 +25,9 @@ strong { font-weight: 500; color: var(--ink); }
 .nav { display: flex; justify-content: space-between; align-items: baseline; font: 400 15px/1.4 var(--sans); letter-spacing: -0.01em; margin: -16px 0 80px; padding: 16px 0; position: sticky; top: 0; z-index: 20; background: var(--paper); box-shadow: 0 0 0 100vmax var(--paper); clip-path: inset(0 -100vmax); transition: border-color .2s; border-bottom: 1px solid transparent; }
 .nav.scrolled { border-bottom-color: var(--rule); }
 .nav a, .nav .home { color: var(--ink); }
-.nav .home { font-weight: 500; }
+.nav .home { font-weight: 500; white-space: nowrap; }
+@media (max-width: 480px) { .nav { font-size: 14px; gap: 12px; } .nav ul { gap: 12px; } }
+@media (max-width: 380px) { .nav { font-size: 12.5px; gap: 8px; letter-spacing: -0.02em; } .nav ul { gap: 9px; } }
 .nav ul a { color: var(--gray); }
 .nav ul a:hover { color: var(--ink); }
 .nav ul { list-style: none; display: flex; gap: 20px; }
@@ -33,6 +35,10 @@ strong { font-weight: 500; color: var(--ink); }
 h1 { font: var(--display); letter-spacing: -0.04em; margin-bottom: 16px; }
 .lead { font: var(--lead); letter-spacing: -0.01em; max-width: 30em; }
 .section-title { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 20px; }
+.closing { margin-top: 120px; padding: 40px 0; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
+.closing p { font: var(--h2); letter-spacing: -0.01em; }
+.closing a { font: var(--label); font-size: 16px; }
+.closing + .footer { margin-top: 0; }
 .footer { border-top: 1px solid var(--rule); margin-top: 120px; padding: 32px 0 48px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font: var(--small); color: var(--gray); }
 .footer .links { display: flex; gap: 20px; }
 
