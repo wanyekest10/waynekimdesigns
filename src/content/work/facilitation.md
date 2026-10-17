@@ -2,7 +2,7 @@
 title: Facilitation
 slug: facilitation
 headline: "How I run a room: get opinions on the table, separate what we know from what we assume, and turn the wall into a plan."
-context: "Glorify, Designit, CIID"
+context: "Designit, Busan Design Council, Glorify"
 order: 11
 featured: false
 label: "Facilitation and synthesis"
@@ -10,14 +10,14 @@ summary: "Turning a room's opinions into a research plan."
 hero: "/work/facilitation-assets/busan-wall.webp"
 heroAlt: "Wayne talking through a wall of sticky notes with workshop participants"
 jumps:
-  - { label: "Skip to Glorify", to: "glorify-in-full" }
-  - { label: "Skip to client work", to: "same-approach-under-constraint" }
+  - { label: "Skip to client work", to: "same-approach-under-nda" }
+  - { label: "Skip to Glorify", to: "glorify-in-depth" }
 short:
   - { lead: "The problem.", text: "Senior teams have strong opinions about where a product should go, but those opinions are rarely tested against each other. A meeting rarely changes that." }
   - { lead: "What I do.", text: "Design workshops that separate certainty from assumption, start from written positions instead of whoever speaks first, and end with a synthesis someone can act on." }
-  - { lead: "What happened.", text: "At Glorify, one workshop became the research agenda for the year. At Designit, the same approach shaped work for Wipro and Trane." }
+  - { lead: "What happened.", text: "The same approach shaped work for Wipro, Trane, and the Busan Design Council. At Glorify, one workshop became the research agenda for the year." }
 facts:
-  - { label: "Where", value: "Glorify · Designit · CIID" }
+  - { label: "Where", value: "Designit · Busan Design Council · Glorify" }
   - { label: "Role", value: "Designer and facilitator" }
   - { label: "Methods", value: "Workshop design, How Might We, synthesis" }
   - { label: "Outcome", value: "A research agenda for the year at Glorify · Product direction for Wipro" }
@@ -36,9 +36,37 @@ A workshop only pays off if someone turns the wall into a plan. Every session I 
 </div>
 <p class="flow-note">↻ The plan becomes the starting point for the next round of research.</p>
 
-## Glorify, in full
+## Same approach, under NDA
 
-By late 2023, Glorify's leadership had strong opinions about where the core experience should go next, but those opinions hadn't been tested against each other. I designed and facilitated a workshop with senior leadership across Content, Design, Product, and Research, then spent the following weeks turning what came out of the room into prioritized research questions for the year ahead.
+Most of my workshops happened in client settings where the material can't be shown in full. Here's the shape of three.
+
+<div class="cols3">
+  <div><h4>Wipro, at Designit</h4><p>Co-designed and co-facilitated a three-day design thinking workshop with 60+ participants that turned C-suite priorities into product direction.</p></div>
+  <div><h4>Trane, at Designit</h4><p>Ran a remote employee experience session that produced personas and a prioritized opportunity map for the next phase of work.</p></div>
+  <div><h4>Busan Design Council, at CIID</h4><p>Facilitated the 2025 CIID Global Design Workshop for Busan Good Designer participants.</p></div>
+</div>
+
+<figure class="pair">
+  <img src="/work/facilitation-assets/wipro-room.webp" alt="A large room of workshop participants standing between tables and walls of sticky notes"/>
+  <img src="/work/facilitation-assets/wipro-wall.webp" alt="A participant presenting in front of walls covered in sticky notes"/>
+  <figcaption>The three-day workshop for Wipro.</figcaption>
+</figure>
+
+<figure class="pair">
+  <img src="/work/facilitation-assets/trane-board-a.webp" alt="A remote workshop board with an icebreaker, agenda, pain points, and three personas"/>
+  <img src="/work/facilitation-assets/trane-board-b.webp" alt="A remote workshop board with How Might We prompts, pain points, opportunity areas, and concept generation"/>
+  <figcaption>The remote session for Trane, from pain points to personas to opportunity areas.</figcaption>
+</figure>
+
+<figure class="pair">
+  <img src="/work/facilitation-assets/busan-wall.webp" alt="Wayne talking participants through a wall of sticky notes"/>
+  <img src="/work/facilitation-assets/busan-group.webp" alt="Group photo of participants holding a banner reading 2025 CIID Global Design Workshop"/>
+  <figcaption>The 2025 CIID Global Design Workshop with the Busan Design Council.</figcaption>
+</figure>
+
+## Glorify, in depth
+
+One workshop I can show end to end. By late 2023, Glorify's leadership had strong opinions about where the core experience should go next, but those opinions hadn't been tested against each other. I designed and facilitated a workshop with senior leadership across Content, Design, Product, and Research, then spent the following weeks turning what came out of the room into prioritized research questions for the year ahead.
 
 ### The design
 
@@ -76,34 +104,6 @@ I synthesized the discussion into four themes for the year ahead. One traced a p
 </figure>
 
 <figure class="wide"><a class="zoom" href="/work/facilitation-assets/roadmap.webp" target="_blank" rel="noopener"><img src="/work/facilitation-assets/roadmap.webp" alt="The Q1 2024 research roadmap, with studies laid out by week across workstreams"/></a><figcaption>Where it went: the research roadmap for Q1 2024. Click to open full size.</figcaption></figure>
-
-## Same approach, under constraint
-
-I've also designed and facilitated workshops in client settings where the material can't be shown in full. Details are under NDA.
-
-<div class="cols3">
-  <div><h4>Wipro, at Designit</h4><p>Co-designed and co-facilitated a three-day design thinking workshop with 60+ participants that turned C-suite priorities into product direction.</p></div>
-  <div><h4>Trane, at Designit</h4><p>Ran a remote employee experience session that produced personas and a prioritized opportunity map for the next phase of work.</p></div>
-  <div><h4>CIID Global Design Workshop</h4><p>Busan Good Designer 2025, at CIID, September 2025.</p></div>
-</div>
-
-<figure class="pair">
-  <img src="/work/facilitation-assets/wipro-room.webp" alt="A large room of workshop participants standing between tables and walls of sticky notes"/>
-  <img src="/work/facilitation-assets/wipro-wall.webp" alt="A participant presenting in front of walls covered in sticky notes"/>
-  <figcaption>The three-day workshop for Wipro.</figcaption>
-</figure>
-
-<figure class="pair">
-  <img src="/work/facilitation-assets/trane-board-a.webp" alt="A remote workshop board with an icebreaker, agenda, pain points, and three personas"/>
-  <img src="/work/facilitation-assets/trane-board-b.webp" alt="A remote workshop board with How Might We prompts, pain points, opportunity areas, and concept generation"/>
-  <figcaption>The remote session for Trane, from pain points to personas to opportunity areas.</figcaption>
-</figure>
-
-<figure class="pair">
-  <img src="/work/facilitation-assets/busan-wall.webp" alt="Wayne talking participants through a wall of sticky notes"/>
-  <img src="/work/facilitation-assets/busan-group.webp" alt="Group photo of participants holding a banner reading 2025 CIID Global Design Workshop"/>
-  <figcaption>The 2025 CIID Global Design Workshop with Busan Good Designer.</figcaption>
-</figure>
 
 ## Reflection
 
