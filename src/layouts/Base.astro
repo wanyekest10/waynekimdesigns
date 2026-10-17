@@ -52,5 +52,24 @@ const { title, wide = false, noindex = false, description = 'Wayne Kim builds pr
       const onScroll = () => nav && nav.classList.toggle('scrolled', window.scrollY > 8);
       onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
     </script>
+    <script>
+      const live = document.querySelectorAll('.vimeo-live');
+      if (live.length) {
+        const s = document.createElement('script');
+        s.src = 'https://player.vimeo.com/api/player.js';
+        s.onload = () => live.forEach((f) => {
+          const player = new (window as any).Vimeo.Player(f.querySelector('iframe'));
+          const btn = f.querySelector('.vl-sound') as HTMLButtonElement;
+          btn.addEventListener('click', async () => {
+            const on = btn.getAttribute('aria-pressed') !== 'true';
+            await player.setMuted(!on);
+            if (on) await player.setVolume(1);
+            btn.setAttribute('aria-pressed', String(on));
+            btn.textContent = on ? 'Sound on' : 'Sound off';
+          });
+        });
+        document.head.appendChild(s);
+      }
+    </script>
   </body>
 </html>

@@ -324,3 +324,10 @@ article p.ws-meta span { white-space: nowrap; }
 article h2 + p.ws-meta { margin-top: -6px; }
 
 article .grid3.tall img { width: 100%; max-width: none; aspect-ratio: 4/5; object-fit: cover; margin: 0 0 8px; border-radius: 6px; }
+
+/* Vimeo that autoplays muted, with a sound toggle (script in Base.astro) */
+article figure.vimeo-live { margin: 0 0 40px; }
+.vl-wrap { position: relative; }
+.vl-sound { position: absolute; right: 12px; bottom: 22px; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: #fff; background: rgba(20,20,20,.6); border: 0; border-radius: 999px; padding: 7px 12px; cursor: pointer; backdrop-filter: blur(6px); }
+.vl-sound:hover { background: rgba(20,20,20,.8); }
+.vl-sound[aria-pressed="true"] { background: var(--accent); }

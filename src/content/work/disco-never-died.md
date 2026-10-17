@@ -8,8 +8,8 @@ featured: false
 listIn: experiments
 label: "Creative coding and sound"
 summary: "A code-made disco ball that pulses with sound."
-hero: "/work/disco-assets/early-color.webp"
-heroAlt: "An early version on a laptop: rows of red, green, and blue squares, with a hand reaching toward the screen"
+hero: "/work/disco-assets/card.webp"
+heroAlt: "A silver disco ball floating over layered red, yellow, and blue grids of tiny squares"
 hideHero: true
 short:
   - { lead: "The question.", text: "Can you watch sound? I wanted to turn the noise in a room into something you could see and move around in, with the look of Soul Train-era disco." }
@@ -25,6 +25,8 @@ facts:
 
 ## The idea
 
+<figure class="embed vimeo-live"><div class="vl-wrap"><iframe src="https://player.vimeo.com/video/1041186030?background=1&autoplay=1&loop=1&muted=1&dnt=1" title="Disco Never Died, video" allow="autoplay; fullscreen; picture-in-picture"></iframe><button class="vl-sound" type="button" aria-pressed="false">Sound off</button></div><figcaption>Turn the sound on: it's what drives the visuals.</figcaption></figure>
+
 Two references: the look of Soul Train, and the way a disco ball turns one beam of light into a whole room of it. I wanted something similar for sound. Sound, light, and movement in one piece, where the room's noise is what makes it go.
 
 ## How it works
@@ -38,7 +40,11 @@ Two references: the look of Soul Train, and the way a disco ball turns one beam 
 </div>
 <p class="flow-note">↻ Drag to orbit around it in 3D.</p>
 
-There are two layers. A sphere of shimmering squares, the disco ball, swells and brightens as it gets louder. Behind it, a grid of rectangles and circles in Soul Train colors reacts to the same sound.
+There are two layers. A sphere of shimmering squares, the disco ball, swells and brightens as it gets louder. Below it, layered grids in Soul Train colors react to the same sound.
+
+<figure class="wide"><img src="/work/disco-assets/renders.webp" alt="Three views of the piece: a silver disco ball over layered red, yellow, and blue grids of tiny squares, seen from different angles"/><figcaption>The disco ball over layered grids, from three angles.</figcaption></figure>
+
+<figure class="wide"><img src="/work/disco-assets/projected.webp" alt="The visuals projected large on a courtyard wall at night while people gather around a table of equipment"/><figcaption>Projected large, with people gathered around it.</figcaption></figure>
 
 ## Early versions
 
@@ -50,7 +56,6 @@ It started as a grid of plain white squares, then got color: red, green, and blu
   <figcaption>First white squares, then color.</figcaption>
 </figure>
 
-<figure class="embed"><iframe src="https://player.vimeo.com/video/1041186030?dnt=1&title=0&byline=0&portrait=0" title="Disco Never Died, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
 
 ## What came next
 
