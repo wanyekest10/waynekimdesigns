@@ -1,11 +1,13 @@
 ---
 // Compact text rows: name, one line, year. Used for Play and the work archive.
-interface Row { name: string; line?: string; tags?: string; year?: string; href?: string }
+// image: optional preview shown beside the row on hover (pointer devices only).
+interface Row { name: string; line?: string; tags?: string; year?: string; href?: string; image?: string }
 const { rows } = Astro.props as { rows: Row[] };
 ---
 <ul class="rows">
   {rows.map((r) => (
-    <li>
+    <li class:list={{ 'has-preview': r.image }}>
+      {r.image && <img class="row-preview" src={r.image} alt="" loading="lazy" aria-hidden="true" />}
       {r.href ? <a class="row-name" href={r.href}>{r.name}</a> : <span class="row-name">{r.name}</span>}
       <span class="row-line">{r.line ?? r.tags}</span>
       <span class="row-year">{r.year}</span>
@@ -19,6 +21,15 @@ const { rows } = Astro.props as { rows: Row[] };
   a.row-name { color: var(--accent); }
   .row-line { color: var(--gray); font-size: 15px; }
   .row-year { font: var(--meta); color: var(--gray); text-align: right; }
+  .rows li { position: relative; }
+  .row-preview { display: none; }
+  @media (hover: hover) and (min-width: 721px) {
+    .row-preview { display: block; position: absolute; right: 72px; top: 50%; width: 220px; border-radius: 4px;
+      box-shadow: 0 8px 24px rgba(20, 20, 20, 0.12); pointer-events: none; z-index: 2;
+      opacity: 0; transform: translateY(-46%); transition: opacity 0.18s ease, transform 0.18s ease; }
+    .rows li.has-preview:hover .row-preview { opacity: 1; transform: translateY(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) { .row-preview { transition: none; } }
   @media (max-width: 720px) {
     .rows li { grid-template-columns: 1fr auto; gap: 2px 16px; }
     .row-line { grid-column: 1; grid-row: 2; }
