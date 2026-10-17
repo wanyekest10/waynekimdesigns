@@ -78,9 +78,9 @@ More than half of survey respondents named embarrassment or fear of judgment as 
 I didn't know what the answer would look like, so I built to find out. Each prototype tested a different way to get someone to start.
 
 <figure class="grid3">
-  <div><video src="/work/bss-assets/proto-timed-prompts.mp4" poster="/work/bss-assets/proto-timed-prompts-poster.jpg" autoplay muted loop playsinline></video><p><strong>Timed prompts.</strong> A subject and a clock.</p></div>
+  <div><video src="/work/bss-assets/proto-timed-prompts.mp4" poster="/work/bss-assets/proto-timed-prompts-poster.jpg" autoplay muted loop playsinline></video><p><strong>Off hand.</strong> Draw with your non-dominant hand, against a clock.</p></div>
   <div><video src="/work/bss-assets/proto-see-through-canvas.mp4" poster="/work/bss-assets/proto-see-through-canvas-poster.jpg" autoplay muted loop playsinline></video><p><strong>See-through canvas.</strong> Draw standing up, see the other side, and build on each other's lines.</p></div>
-  <div><video src="/work/bss-assets/proto-standing-game.mp4" poster="/work/bss-assets/proto-standing-game-poster.jpg" autoplay muted loop playsinline></video><p><strong>Standing game.</strong> Drawing together, on your feet.</p></div>
+  <div><video src="/work/bss-assets/proto-standing-game.mp4" poster="/work/bss-assets/proto-standing-game-poster.jpg" autoplay muted loop playsinline></video><p><strong>Rotating prompts.</strong> Each player calls out a prompt mid-drawing, then everyone rotates to the next sheet.</p></div>
   <div><video src="/work/bss-assets/proto-kaleidoscope.mp4" poster="/work/bss-assets/proto-kaleidoscope-poster.jpg" autoplay muted loop playsinline></video><p><strong>Hand-tracked kaleidoscope.</strong> Draw in the air, mirrored into a pattern.</p></div>
   <div><video src="/work/bss-assets/proto-rainstick.mp4" poster="/work/bss-assets/proto-rainstick-poster.jpg" autoplay muted loop playsinline></video><p><strong>Rainstick controller.</strong> An Arduino rainstick that sends ripples to a shared screen.</p></div>
   <div><video src="/work/bss-assets/proto-motion-tracking.mp4" poster="/work/bss-assets/proto-motion-tracking-poster.jpg" autoplay muted loop playsinline></video><p><strong>Ripples.</strong> What the rainstick draws, a small surprise each time.</p></div>
@@ -101,9 +101,9 @@ In playtests, it didn't work. The technology became the thing people paid attent
 <table>
   <thead><tr><th>What I saw</th><th>The lesson</th><th>Became</th></tr></thead>
   <tbody>
-    <tr><td>Timed prompts</td><td class="feel">A prompt with outside authority gets people started</td><td>Draw</td></tr>
-    <tr><td>Rainstick, non-dominant hands</td><td class="feel">When perfect is impossible, people relax</td><td>Using</td></tr>
-    <tr><td>Standing game</td><td class="feel">Shared, improvised rules make it social</td><td>While</td></tr>
+    <tr><td>Rotating prompts</td><td class="feel">A prompt from someone else gets people started</td><td>Draw</td></tr>
+    <tr><td>Off hand, rainstick</td><td class="feel">When perfect is impossible, people relax</td><td>Using</td></tr>
+    <tr><td>See-through canvas</td><td class="feel">Seeing and building on each other makes it social</td><td>While</td></tr>
     <tr><td>Happy Accidents Studio</td><td class="feel">Technology gets in the way of starting</td><td>Cards</td></tr>
   </tbody>
 </table>
