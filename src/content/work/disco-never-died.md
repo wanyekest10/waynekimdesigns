@@ -59,10 +59,4 @@ It started as a grid of plain white squares, then got color: red, green, and blu
 
 ## What came next
 
-I love music, and this project is what opened up VJing for me: making visuals live, in the room, with the sound. From Processing I moved to TouchDesigner. VJing will get its own experiment.
-
-<figure class="pair tall">
-  <img src="/work/disco-assets/vj-live.webp" alt="Wayne at a laptop on a stand, playing visuals at a live event while people sit on the floor in front"/>
-  <img src="/work/disco-assets/touchdesigner.webp" alt="A TouchDesigner project on a laptop: a node network and an audio waveform beside blue, glitchy square patterns"/>
-  <figcaption>Playing visuals live, and building them in TouchDesigner.</figcaption>
-</figure>
+I love music, and creative coding, starting with this project, is what opened up VJing for me: making visuals live, in the room, with the sound.
