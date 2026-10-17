@@ -439,3 +439,5 @@ article .grid3.tallnat img { width: 100%; max-width: none; border-radius: 6px; m
 /* Code snippets */
 article pre { max-width: var(--measure); margin: 24px 0 32px; padding: 18px 20px; background: var(--panel) !important; border-radius: 6px; overflow-x: auto; font: 13px/1.6 var(--mono); }
 article pre code { font: inherit; }
+
+article .pair.square > img { aspect-ratio: 1/1; }

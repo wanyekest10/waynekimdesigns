@@ -106,7 +106,7 @@ The screen is a small state machine. It starts on G, climbs while nobody's looki
 
 ### How the screens changed
 
-I tested the first screens with people and kept iterating. The early version showed only the next stop and how far to go. The final one puts the climb in context: the stop you just passed next to the one ahead, the squares and start date under the big number, and a city and height for every landmark. I also swapped a ladder of the world's tallest buildings for landmarks people already know, and gave them "ft tall" while your climb reads "ft up," so the two never get confused.
+I tested the first screens with people and iterated. The final version adds the stop you just passed, the squares and start date, and a city and height for each landmark. Landmarks people already know replaced the world's tallest buildings, and they read "ft tall" while your climb reads "ft up."
 
 <figure class="pair natural">
   <img src="/work/tpe-assets/screen-early-climb.webp" alt="An early climbing screen on the bare e-paper module: 12,028 ft up, next stop Mount Fuji, 360 ft to go"/>
@@ -153,7 +153,23 @@ float mmForNextPulse() {
   <figcaption>The first working pulse: a green LED blinks each time a magnet passes the sensor.</figcaption>
 </figure>
 
-### 2. Iterating the wire
+### 2. The pod
+
+I designed the pod in Fusion. Everything prints in gray. The LiPo sits trapped in a closed shell, and the display's own screws and brass standoffs hold it together.
+
+<figure class="pair">
+  <img src="/work/tpe-assets/fusion-shell.webp" alt="The pod shell in Fusion 360, shown see-through with the screen opening, screw bosses, and cable openings"/>
+  <img src="/work/tpe-assets/fusion-standoff.webp" alt="Close-up of a printed boss with a hex pocket that traps a nut"/>
+  <figcaption>The shell, see-through, and a hex pocket that traps each nut.</figcaption>
+</figure>
+
+<figure class="pair square">
+  <img src="/work/tpe-assets/pod-side-view.webp" alt="The pod from the side, held in a hand: the back plate, the LiPo battery, the printed carrier, and the Arduino stacked between the shell layers"/>
+  <img src="/work/tpe-assets/pod-open.webp" alt="The pod opened up: the e-paper screen tilted back, the Arduino on a breadboard on its printed carrier, the shell behind, and the magnet sleeve beside it"/>
+  <figcaption>The stack from the side, battery behind the carrier, and the pod opened up.</figcaption>
+</figure>
+
+### 3. Iterating the wire
 
 How do you get a wire from the holder to the screen without anything exposed in a bathroom? It took five tries. I placed the screen with paper and string first. Exposed jumpers worked but looked unfinished. A braided cord hid the wires, with a gray collar around the holder's arm to hold the sensor, but the cord drooped and the collar stuck out. A purple collar and raceway pinned everything flat to the wall. In the end the raceway's own arm could carry the sensor right up to the sleeve, so the collar wasn't needed at all. Easier to install, and calmer to look at.
 
@@ -169,16 +185,6 @@ How do you get a wire from the holder to the screen without anything exposed in 
   <img src="/work/tpe-assets/arm-tip.webp" alt="Close-up of the raceway's arm along the holder, the sensor wires inside, ending at the sleeve's face where the magnets sit"/>
   <img src="/work/tpe-assets/fusion-tip.webp" alt="The tip of the raceway's arm in Fusion, see-through: the wire slots and the pocket for the A3144 Hall sensor"/>
   <figcaption>The arm at the magnets, and its tip in Fusion: slots for the three wires and a pocket for the sensor.</figcaption>
-</figure>
-
-### 3. The pod
-
-I designed the pod in Fusion. Everything prints in gray. The LiPo sits trapped in a closed shell, and the display's own screws and brass standoffs hold it together.
-
-<figure class="pair">
-  <img src="/work/tpe-assets/fusion-shell.webp" alt="The pod shell in Fusion 360, shown see-through with the screen opening, screw bosses, and cable openings"/>
-  <img src="/work/tpe-assets/fusion-standoff.webp" alt="Close-up of a printed boss with a hex pocket that traps a nut"/>
-  <figcaption>The shell, see-through, and a hex pocket that traps each nut.</figcaption>
 </figure>
 
 ## Installed
