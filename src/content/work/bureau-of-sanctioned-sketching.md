@@ -30,7 +30,7 @@ facts:
 
 Adults still want to play. They just stop believing they're allowed to, and drawing is often the first kind of play to go.
 
-I started with desk research. Erving Goffman's idea of performed selves explains why adults guard how they look in front of others. Johan Huizinga's magic circle describes the agreed-upon space where play is allowed. Together they pointed me at the space that comes before play: permission.
+I started with desk research. <a href="https://en.wikipedia.org/wiki/Erving_Goffman" target="_blank" rel="noopener">Erving Goffman</a>'s idea of performed selves explains why adults guard how they look in front of others. <a href="https://en.wikipedia.org/wiki/Johan_Huizinga" target="_blank" rel="noopener">Johan Huizinga</a>'s magic circle describes the agreed-upon space where play is allowed. Together they pointed me at the space that comes before play: permission.
 
 Then I talked to 14 people, adults aged 23 to 40, play designers, and therapists, and ran a drawing survey with 47 people. The block was rarely about skill.
 
@@ -38,15 +38,17 @@ Then I talked to 14 people, adults aged 23 to 40, play designers, and therapists
 >
 > Interview participant
 
-### The block has a start date
+### Learnings
 
-People could point to exactly when drawing stopped being play, usually between 9 and 13. That lines up with what Viktor Lowenfeld called the "period of decision," when children who aren't encouraged stop drawing and carry "I can't draw" into adulthood.
+#### The block has a start date
+
+People could point to exactly when drawing stopped being play, usually between 9 and 13. That lines up with what <a href="https://en.wikipedia.org/wiki/Viktor_Lowenfeld" target="_blank" rel="noopener">Viktor Lowenfeld</a> called the "period of decision," when children who aren't encouraged stop drawing and carry "I can't draw" into adulthood.
 
 > "From high school onward we were told to draw more of serious stuffs... it was not fun anymore."
 >
 > Interview participant
 
-### Freedom is just another blank page
+#### Freedom is just another blank page
 
 Without boundaries, total freedom created anxiety. Participants invented their own small rules to get out of it, and those rules became the core of the final card stacks.
 
@@ -54,7 +56,7 @@ Without boundaries, total freedom created anxiety. Participants invented their o
 >
 > Interview participant
 
-### Shared exposure lowers the stakes
+#### Shared exposure lowers the stakes
 
 More than half of survey respondents named embarrassment or fear of judgment as the block. Being bad together is easier than being bad alone.
 

@@ -176,11 +176,13 @@ article .tldr .field { max-width: none; border-top-color: rgba(20, 20, 20, 0.08)
   .jumps { display: none; }
 }
 @media (max-width: 720px) { .hero { margin: 32px 0 56px; } }
-article h2, article h3, .cs-top { scroll-margin-top: 32px; }
+article h2, article h3, article h4, .cs-top { scroll-margin-top: 32px; }
 article.numbered { counter-reset: sec; }
 article.numbered > h2 { counter-increment: sec; }
 article.numbered > h2::before { content: counter(sec, decimal-leading-zero); font: var(--meta); color: var(--gray); margin-right: 14px; vertical-align: 2px; }
 article h3 { font: var(--label); font-size: 16px; color: var(--ink); margin: 40px 0 12px; }
+article > h4 { font: var(--label); font-size: 16px; color: var(--ink); margin: 32px 0 12px; }
+article > h3 + h4 { margin-top: 16px; }
 .cs-facts dd span { display: block; }
 /* Research components sit in the text column too, so the page reads at one width */
 .compare, .bars, article table, .cols { max-width: var(--measure); }
