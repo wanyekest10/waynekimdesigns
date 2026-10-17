@@ -24,14 +24,9 @@ const years = [
 ---
 <Base title="Wayne Kim, researcher who builds">
   <header class="intro">
-    <div class="intro-who">
-      <h1>Wayne Kim</h1>
-      <p class="lead">Interaction designer and researcher</p>
-    </div>
-    <div class="intro-how">
-      <p class="method">Understanding context, building functional prototypes, learning, repeating.</p>
-      <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
-    </div>
+    <h1>Interaction designer and researcher</h1>
+    <p class="method">Building prototypes and testing them with real people.</p>
+    <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
   </header>
 
   <section id="work" class="block">
@@ -80,11 +75,10 @@ const years = [
 </Base>
 
 <style>
-  .intro { margin-bottom: 120px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; align-items: end; }
-  .intro h1 { font-size: 40px; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 8px; }
-  .intro .lead { color: var(--gray); }
+  .intro { margin-bottom: 120px; }
+  .intro h1 { font-size: 40px; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; text-wrap: balance; }
   .method { color: var(--ink); max-width: 30em; }
-  @media (max-width: 720px) { .intro { grid-template-columns: 1fr; } .intro h1 { font-size: 34px; } }
+  @media (max-width: 720px) { .intro h1 { font-size: 34px; } }
   .status { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-top: 12px; }
   .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
   .sub { color: var(--gray); max-width: 36em; }
