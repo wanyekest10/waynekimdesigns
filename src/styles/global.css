@@ -280,3 +280,4 @@ article .grid3.tall video, article .pair.tall > video { aspect-ratio: 4/5; }
 }
 .flow .opt small b { display: inline; font: inherit; font-weight: 500; color: var(--ink); }
 .flow .opt.focal small b { color: var(--accent); }
+article .grid3 img { width: 100%; max-width: none; aspect-ratio: 3/2; object-fit: cover; margin: 0 0 8px; border-radius: 6px; }
