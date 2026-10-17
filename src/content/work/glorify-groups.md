@@ -20,9 +20,7 @@ summary: "The research behind a bet on community."
 hero: "/work/glorify-assets/shipped-screens.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
 jumps:
-  - { label: "Skip to the research", to: "studying-real-behavior-not-stated-interest" }
   - { label: "Skip to the findings", to: "what-we-found" }
-  - { label: "Skip to the impact", to: "the-decision" }
 short:
   - { lead: "The problem.", text: "After its Series B, Glorify's leadership was weighing community as the next bet for its 2.5M+ users, and doubted it would work." }
   - { lead: "What I did.", text: "Turned their doubts into one testable hypothesis, then ran a 2-week prototype diary study with 82 people in their real small groups." }
@@ -116,7 +114,7 @@ Those critiques became the next questions: how to design for groups of strangers
 
 ## Turning findings into principles
 
-With Matt Regan, I turned the findings into three design principles, so they could guide future iterations across teams instead of living in a readout deck.
+With Matt Regan, our lead designer, I turned the findings into three design principles, so they could guide future iterations across teams instead of living in a readout deck.
 
 <figure class="trio principles">
   <div><img src="/work/glorify-assets/principle-intentional-space.webp" alt="Illustration of a woman resting her arms on a ledge"/><p><strong>Intentional Space</strong><br/>Create a dedicated environment that signals purpose and psychological safety for reflection and sharing.</p></div>

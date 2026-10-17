@@ -12,8 +12,7 @@ heroAlt: "Working at a desk at dusk while a lamp glows on the wall and a disco b
 heroVideo: "/work/room-tone-assets/showcase.mp4"
 heroPoster: "/work/room-tone-assets/showcase-poster.jpg"
 jumps:
-  - { label: "Skip to what didn't work", to: "the-first-version-rewarded-me" }
-  - { label: "Watch it run", to: "how-it-runs" }
+  - { label: "Skip to how it runs", to: "how-it-runs" }
 short:
   - { lead: "The question.", text: "Working alone, hours disappeared and the day felt flat. Every break tool I tried was an alarm underneath. Could the room ask, the way a person would, with no guilt either way?" }
   - { lead: "What I built.", text: "A Python state machine that notices 90 minutes of steady work, then brings in a light, a spinning disco ball, and music, one layer at a time." }
@@ -125,3 +124,5 @@ The whole thing is a small state machine: noticing, activating, asking, playing,
 **The same channel in and out.** Typing is what starts it and typing is what ends it, so there's nothing to dismiss and nothing to feel guilty about ignoring.
 
 **What's next.** I started on a tabletop version, a single object with a dial to set the threshold, so it could live on any desk without smart plugs and a ceiling hook. It's on hold for now, but the state machine is ready for it.
+
+<a class="watch" href="https://www.youtube.com/watch?v=VhLl8r5Z-h4" target="_blank" rel="noopener">Watch the full video on YouTube →</a>

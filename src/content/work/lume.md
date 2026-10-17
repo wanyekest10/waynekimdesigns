@@ -12,8 +12,7 @@ heroAlt: "A tester in a VR headset gripping a wooden handlebar wired to an Ardui
 heroVideo: "/work/lume-assets/rider-view.mp4"
 heroPoster: "/work/lume-assets/rider-view-poster.jpg"
 jumps:
-  - { label: "Skip to the interaction", to: "how-it-works" }
-  - { label: "Skip to the build", to: "making-it-rideable" }
+  - { label: "Skip to how it works", to: "how-it-works" }
 short:
   - { lead: "The question.", text: "Riders can't see their blind spots, and turning your head at speed is its own risk. What if the helmet could tell you, without pulling your eyes off the road?" }
   - { lead: "What we built.", text: "Lume, a VR simulation of an AR helmet. A red light flags a vehicle in your blind spot, and speed and fuel sit at the edge of view. A physical handlebar steers the ride." }
@@ -47,6 +46,12 @@ So we went the other way: subtle cues that sit at the edge of vision and only as
 </div>
 <p class="flow-note">↻ Speed and fuel sit low at the edge of view the whole time, out of the way until you look.</p>
 
+<figure class="pair">
+  <video src="/work/lume-assets/alert-blindspot.mp4" poster="/work/lume-assets/alert-blindspot-poster.jpg" autoplay muted loop playsinline></video>
+  <video src="/work/lume-assets/alert-fuel.mp4" poster="/work/lume-assets/alert-fuel-poster.jpg" autoplay muted loop playsinline></video>
+  <figcaption>A car slips into the blind spot and the red cue appears on that side. A glance down shows the fuel range.</figcaption>
+</figure>
+
 ## Making it rideable
 
 We built the ride in Unity and ran it on a Meta Quest 3. To make it feel like riding instead of watching, we added a physical handlebar: an Arduino reads a potentiometer, so turning and twisting the bar steers and sets the speed.
@@ -73,3 +78,5 @@ We built the ride in Unity and ran it on a Meta Quest 3. To make it feel like ri
 </figure>
 
 <figure class="frame"><img src="/work/lume-assets/demo-room.webp" alt="The demo in a large hall, with the rider's view projected on a big screen"/></figure>
+
+<a class="watch" href="https://vimeo.com/1068857422" target="_blank" rel="noopener">Watch the full video on Vimeo →</a>

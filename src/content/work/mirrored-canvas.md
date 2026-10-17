@@ -13,7 +13,6 @@ heroVideo: "/work/mirrored-canvas-assets/reactive-visuals.mp4"
 heroPoster: "/work/mirrored-canvas-assets/reactive-visuals-poster.jpg"
 jumps:
   - { label: "Skip to how it works", to: "how-it-works" }
-  - { label: "Skip to what we learned", to: "absurdity-is-contagious" }
 short:
   - { lead: "The question.", text: "How do you design an experience that gets people to make silly faces, in public, in front of other people?" }
   - { lead: "What we built.", text: "A translucent canvas that works as both mirror and stage. Face tracking and a microphone turn expressions and voice into live projected visuals." }
@@ -73,3 +72,5 @@ We bodystormed before we built. The pattern showed up fast: when a prototype fel
 **Performed, not captured.** Most emotion tech tries to read and classify your face. Here the emotion was performed and shared with the room, not captured or classified.
 
 <figure class="frame"><img src="/work/mirrored-canvas-assets/with-yase.webp" alt="Black and white photo of Wayne and Yase smiling at a table with the laptop and webcam setup"/><figcaption>Making faces with Yase.</figcaption></figure>
+
+<a class="watch" href="https://vimeo.com/1041048796" target="_blank" rel="noopener">Watch the full video on Vimeo →</a>

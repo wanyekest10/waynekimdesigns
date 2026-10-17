@@ -23,7 +23,7 @@ hero: "/work/raiseme-assets/hero-download-settings.webp"
 heroAlt: "The redesigned Download settings screen: a weekly follower report that generates itself every Monday"
 jumps:
   - { label: "Skip to the research", to: "hack-week-the-assumption-broke" }
-  - { label: "Skip to the findings", to: "building-the-case" }
+  - { label: "Skip to making the case", to: "building-the-case" }
   - { label: "Skip to the impact", to: "the-decision" }
 short:
   - { lead: "The problem.", text: "RaiseMe's college portal kept failing the people who used it every week, and contract renewals were coming." }

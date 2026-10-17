@@ -13,7 +13,6 @@ heroPoster: "/work/bss-assets/playtest-poster.jpg"
 jumps:
   - { label: "Skip to the prototypes", to: "prototyping-my-way-there" }
   - { label: "Skip to the game", to: "how-it-plays" }
-  - { label: "Skip to playtesting", to: "playtesting" }
 short:
   - { lead: "The question.", text: "Most adults stop drawing not for lack of skill, but because somewhere around 9 to 13 they decided they weren't allowed to be bad at it. Can permission be designed?" }
   - { lead: "What I built.", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software. The one that worked was a deck of cards." }
@@ -145,7 +144,19 @@ The same deck works at three levels of closeness:
 
 ## Playtesting
 
-Players often forgot they were using cards at all. They were drawing and talking. And some started writing their own prompts on scrap paper.
+Players often forgot they were using cards at all. They were drawing and talking.
+
+> "I forgot about cards and only drawing until someone changed them."
+>
+> Playtester
+
+> "Fun engaging with someone else, shared space, little fights like bumper cars."
+>
+> Playtester
+
+<figure class="frame"><video src="/work/bss-assets/playtest.mp4" poster="/work/bss-assets/playtest-poster.jpg" autoplay muted loop playsinline></video></figure>
+
+A momentum effect took over, and some players started writing their own prompts on scrap paper.
 
 That became the blank wildcards. They weren't in the plan. They came from watching players take ownership of the game.
 
@@ -170,3 +181,5 @@ Playful drawing fades in the places that run on forms: school, then work. Real b
 **The result is real but narrow.** BSS gets people to start. Whether they come back is the next question, and I haven't tested it yet.
 
 <figure class="frame"><img src="/work/bss-assets/drawing-wall-3x2.webp" alt="A wall of playtest drawings pinned up in a grid"/><figcaption>Everything players drew during playtests.</figcaption></figure>
+
+<a class="watch" href="https://vimeo.com/1101261294" target="_blank" rel="noopener">Watch the full video on Vimeo →</a>

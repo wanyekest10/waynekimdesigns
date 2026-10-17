@@ -292,3 +292,4 @@ article .grid3 img { width: 100%; max-width: none; aspect-ratio: 3/2; object-fit
 .stats.three { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 720px) { .stats.three { grid-template-columns: 1fr; gap: 18px; } }
 article .pair.natural > img { aspect-ratio: auto; object-fit: contain; align-self: start; }
+article a.watch { display: inline-block; margin-top: 24px; font: var(--label); }

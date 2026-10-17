@@ -18,9 +18,7 @@ summary: "A radio host that notices you scrolling."
 hero: "/work/living-assets/hero-couch.webp"
 heroAlt: "Someone scrolling on the couch while Liv, a small wooden speaker with a camera, sits on the side table"
 jumps:
-  - { label: "Skip to the process", to: "bodystorming-timing-beats-content" }
   - { label: "Skip to the build", to: "building-liv" }
-  - { label: "Watch Liv", to: "giving-liv-a-voice" }
 short:
   - { lead: "The question.", text: "Technology built to hold attention reinforces habits like doomscrolling. Could a little self-awareness, at the right moment, work as gentle friction?" }
   - { lead: "What I built.", text: "Liv, a wooden speaker with a camera that recognizes four activities and comments like a late-night radio host. I trained the vision model, wrote her personality, and built a live testing interface." }
@@ -125,3 +123,5 @@ In Korean, 잔소리 (jansori) describes exactly this: nagging that overwhelms c
 Living.fm is a provocation, not a product. Through it, we explored how AI, sound, and physical design might come together to make home life more mindful, one small interaction at a time.
 
 The biggest lesson: in an ambient system, the interpretation is the product. Liv's voice, music, and lines only work if her read of the room is right, and if people can trust it. Most of the design work with AI happened outside the model, in deciding what she recognized, when she spoke, and when she stayed quiet.
+
+<a class="watch" href="https://vimeo.com/1041133010" target="_blank" rel="noopener">Watch the full video on Vimeo →</a>

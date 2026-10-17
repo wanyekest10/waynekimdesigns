@@ -12,7 +12,6 @@ heroAlt: "The Astino Valley from above, next to a render of the floating habitat
 jumps:
   - { label: "Skip to the research", to: "research-and-insights" }
   - { label: "Skip to the design", to: "translating-ecology-into-design" }
-  - { label: "Skip to the concept", to: "concept" }
 short:
   - { lead: "The question.", text: "How might we make dragonfly habitats in the Astino Valley resilient to extreme weather, from flooding to drought?" }
   - { lead: "What we did.", text: "Field research, expert conversations, and biomimicry, borrowing from how bromeliads store water and how mangroves and lotus plants handle floods." }
