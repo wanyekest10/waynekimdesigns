@@ -46,6 +46,8 @@ That set the rules early. The display had to be household-level and anonymous. I
 </figure>
 <script src="/work/tpe-assets/mechanism.js" defer></script>
 
+### 3D model
+
 <figure class="v3d-fig wide">
   <div class="v3d" data-src="/work/tpe-assets/tpe.glb"><canvas aria-label="3D model of Toilet Paper Elevator. Drag to turn it, and use the slider to pull the parts apart."></canvas><p class="v3d-load">Loading the 3D model…</p><span class="v3d-part" hidden></span></div>
   <div class="v3d-ui">
