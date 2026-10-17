@@ -45,7 +45,7 @@ const years = [
       <h2 class="section-title">Experiments</h2>
       <span class="block-sub">Shorter projects and things I was curious about.</span>
     </div>
-    <Rows rows={experiments} />
+    <Rows rows={experiments.filter((e: any) => e.home)} />
     <p class="more"><a href="/experiments/">See all experiments →</a></p>
   </section>
 
