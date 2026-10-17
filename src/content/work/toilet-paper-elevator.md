@@ -6,7 +6,7 @@ context: "Personal project, 2026"
 order: 6
 featured: true
 label: "Physical computing and fabrication"
-summary: "Toilet paper, measured in landmarks."
+summary: "Toilet paper use, measured in landmark heights."
 hero: "/work/tpe-assets/demo-3x2-poster.jpg"
 heroAlt: "The finished device on a bathroom wall: a gray e-ink screen reading 4 ft up, connected by a slim raceway to the toilet paper holder"
 heroVideo: "/work/tpe-assets/demo-3x2.mp4"
