@@ -26,12 +26,12 @@ const years = [
   { when: "'17–'20", what: 'UX Strategist, RaiseMe', note: 'Research and strategy for a B2B2C edtech company.' },
   { when: "'14–'17", what: 'Assistant Dean of Admission, Reed College', note: 'Designed the <a href="https://www.reed.edu/admission-aid/visit/multicultural-programs/junior-scholars.html">Junior Scholars program</a> from 0 to 1 and ran the Senior Scholars program.' },
   { egg: true },
-  { when: "'10–'14", what: 'B.A. Sociology, Colby College', note: 'Coursework in Philosophy and STS (Science, Technology, and Society). Class President twice and Student Body Co-President.' },
+  { when: "'10–'14", what: 'B.A. Sociology, Colby College', note: 'Coursework in Philosophy and STS (Science, Technology, and Society).' },
 ];
 ---
 <Base title="Wayne Kim, Interaction designer and researcher">
   <header class="intro">
-    <h1>Interaction designer and researcher</h1>
+    <h1 class="brush" aria-label="Interaction designer and researcher">Interaction designer and researcher</h1>
     <p class="method">Building prototypes and testing them with real people.</p>
     <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
   </header>
@@ -80,6 +80,78 @@ const years = [
     </ul>
   </section>
   <script>
+    // Brush and settle: letters you brush past tip and slide a little, then spring back.
+    (() => {
+      const h1 = document.querySelector<HTMLElement>('h1.brush');
+      if (!h1) return;
+      const text = h1.textContent || '';
+      h1.textContent = '';
+      text.split(' ').forEach((word, wi, arr) => {
+        const w = document.createElement('span'); w.className = 'bw'; w.setAttribute('aria-hidden', 'true');
+        for (const c of word) { const s = document.createElement('span'); s.className = 'bc'; s.textContent = c; w.appendChild(s); }
+        h1.appendChild(w);
+        if (wi < arr.length - 1) h1.appendChild(document.createTextNode(' '));
+      });
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+      const cfg = { radius: 70, push: 0.22, spin: 1.6, spring: 0.035, damp: 0.86, max: 22, maxR: 45 };
+      const P = [...h1.querySelectorAll<HTMLElement>('.bc')].map((el) => ({ el, x: 0, y: 0, r: 0, vx: 0, vy: 0, vr: 0, cx: 0, cy: 0 }));
+      const measure = () => P.forEach((p) => {
+        const t = p.el.style.transform; p.el.style.transform = '';
+        const b = p.el.getBoundingClientRect();
+        p.cx = b.left + b.width / 2 + scrollX; p.cy = b.top + b.height / 2 + scrollY;
+        p.el.style.transform = t;
+      });
+      measure();
+      addEventListener('resize', measure);
+      document.fonts?.ready.then(measure);
+      let running = false;
+      const clamp = (v: number, m: number) => Math.max(-m, Math.min(m, v));
+      const tick = () => {
+        let moving = false;
+        for (const p of P) {
+          p.vx = (p.vx - p.x * cfg.spring) * cfg.damp; p.vy = (p.vy - p.y * cfg.spring) * cfg.damp; p.vr = (p.vr - p.r * cfg.spring) * cfg.damp;
+          p.x = clamp(p.x + p.vx, cfg.max); p.y = clamp(p.y + p.vy, cfg.max); p.r = clamp(p.r + p.vr, cfg.maxR);
+          if (Math.abs(p.x) + Math.abs(p.y) + Math.abs(p.r) + Math.abs(p.vx) + Math.abs(p.vy) + Math.abs(p.vr) > 0.05) moving = true;
+          else p.x = p.y = p.r = p.vx = p.vy = p.vr = 0;
+          p.el.style.transform = p.x || p.y || p.r ? `translate(${p.x.toFixed(2)}px, ${p.y.toFixed(2)}px) rotate(${p.r.toFixed(2)}deg)` : '';
+        }
+        if (moving) requestAnimationFrame(tick); else running = false;
+      };
+      const brush = (x: number, y: number, dx: number, dy: number) => {
+        if (reduce.matches) return;
+        for (const p of P) {
+          const ex = x - p.cx, ey = y - p.cy, d = Math.hypot(ex, ey);
+          if (d > cfg.radius) continue;
+          const f = (1 - d / cfg.radius) ** 2;
+          p.vx += dx * cfg.push * f; p.vy += dy * cfg.push * f;
+          p.vr += (dx * Math.sign(-ey || 1) - dy * Math.sign(ex || 1)) * cfg.spin * f * 0.5;
+        }
+        if (!running) { running = true; requestAnimationFrame(tick); }
+      };
+      let last: { x: number; y: number } | null = null;
+      addEventListener('pointermove', (e) => {
+        if (last) brush(e.pageX, e.pageY, clamp(e.pageX - last.x, 40), clamp(e.pageY - last.y, 40));
+        last = { x: e.pageX, y: e.pageY };
+      }, { passive: true });
+      addEventListener('pointerup', (e) => { if (e.pointerType !== 'mouse') last = null; });
+      document.addEventListener('pointerleave', () => { last = null; });
+      // One sweep on load, so phones (no hover) see it too.
+      setTimeout(() => {
+        if (reduce.matches) return;
+        measure();
+        const xs = P.map((p) => p.cx), ys = P.map((p) => p.cy);
+        const x0 = Math.min(...xs) - 40, x1 = Math.max(...xs) + 40, y0 = Math.min(...ys), y1 = Math.max(...ys);
+        const steps = 46; let i = 0, px = x0, py = y0;
+        const step = () => {
+          const t = i / steps, x = x0 + (x1 - x0) * t;
+          const y = y1 - y0 > 20 ? y0 + (y1 - y0) * t : y0 + Math.sin(t * Math.PI * 2) * 12;
+          brush(x, y, (x - px) * 0.6, (y - py) * 0.6); px = x; py = y;
+          if (++i <= steps) requestAnimationFrame(step);
+        };
+        step();
+      }, 500);
+    })();
+
     document.querySelectorAll('.egg').forEach((egg) => {
       const btn = egg.querySelector('.egg-line') as HTMLButtonElement;
       const set = (on: boolean) => { egg.classList.toggle('open', on); btn.setAttribute('aria-expanded', String(on)); };
@@ -99,6 +171,9 @@ const years = [
 
 <style>
   .intro { margin-bottom: 120px; }
+  .bw { display: inline-block; white-space: nowrap; }
+  .bc { display: inline-block; will-change: transform; }
+  h1.brush { cursor: default; user-select: none; -webkit-user-select: none; touch-action: pan-y; }
   .intro h1 { font-size: 40px; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; text-wrap: balance; }
   .method { color: var(--ink); max-width: 30em; }
   @media (max-width: 720px) { .intro h1 { font-size: 34px; } }
