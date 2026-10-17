@@ -15,7 +15,7 @@ jumps:
 short:
   - { lead: "The problem.", text: "Senior teams have strong opinions about where a product should go, but those opinions are rarely tested against each other. A meeting rarely changes that." }
   - { lead: "What I do.", text: "Design workshops that separate certainty from assumption, start from written positions instead of whoever speaks first, and end with a synthesis someone can act on." }
-  - { lead: "What happened.", text: "Workshops for Wipro, Trane, the Busan Design Council, and my own final project at CIID. At Glorify, one workshop became the research agenda for the year." }
+  - { lead: "What happened.", text: "Workshops for Wipro, the Busan Design Council, and my own final project at CIID, plus supporting one for Trane. At Glorify, one workshop became the research agenda for the year." }
 facts:
   - { label: "Where", value: "Designit · CIID · Glorify" }
   - { label: "Role", value: "Designer and facilitator" }
@@ -36,9 +36,9 @@ A design thinking workshop that turned C-suite priorities into product direction
 
 ## Trane at Designit
 
-<p class="ws-meta"><span>Remote</span> · <span>Employee experience</span> · <span>Facilitated</span></p>
+<p class="ws-meta"><span>Remote</span> · <span>Employee experience</span> · <span>Supported</span></p>
 
-A session that moved from pain points to personas to a prioritized opportunity map for the next phase of work. Details are under NDA.
+I supported a session that moved from pain points to personas to a prioritized opportunity map for the next phase of work. Details are under NDA, so the boards are blurred.
 
 <figure class="pair">
   <img src="/work/facilitation-assets/trane-board-a.webp" alt="A remote workshop board with an icebreaker, agenda, pain points, and three personas"/>
@@ -58,7 +58,7 @@ The 2025 CIID Global Design Workshop for Busan Design Council participants.
 
 ## Ideation at CIID
 
-<p class="ws-meta"><span>Final project brainstorm</span> · <span>Designed and facilitated</span></p>
+<p class="ws-meta"><span>June 2025</span> · <span>Final project brainstorm</span> · <span>Designed and facilitated</span></p>
 
 A brainstorm for the Bureau of Sanctioned Sketching with classmates. Before any ideas, I grounded the room in permission: it was okay to get weird and bold, and the goal was 100+ ideas, not good ones. Then the constraints arrived one per minute, so nobody had time to judge their first instinct.
 

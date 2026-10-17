@@ -45,17 +45,36 @@ jumps:                   # phone-only jump links; `to` = heading slug
   - **Research and strategy** (Glorify, RaiseMe): question, research, findings, decision, results, reflection. Charts, diagrams, quote boxes.
   - **Design and build** (Living.fm, BSS): why, explore, build, test and what broke, reflection. Silent looping clips (`autoplay muted loop playsinline`, no controls or sound), clip grids, one full-width moment.
 
-## Done
-- Homepage: availability status line, name, "Interaction designer and researcher." Selected work cards, Play (3 rows plus "See all"), About with a years list.
-- Live case studies: Glorify Groups (1), RaiseMe Portal (2), Living.fm (3), Bureau of Sanctioned Sketching (4).
-- Footer: click-to-copy email, LinkedIn, Resume (`public/resume.pdf`). Old Framer URLs redirect (astro.config.mjs).
+## Done (as of Oct 16, 2026)
+- Homepage: status line, name, Selected work (6 cards), Play (first 3 rows, hover previews), About with one-line years.
+- Work (/work): Glorify Groups, RaiseMe Portal, Living.fm, BSS, room_tone, Linee, Designit: Futures, Facilitation.
+- Play (/play): Tamer Kebap Eating Club, Mirrored Canvas, Lume, Larvae Lagoon, A Serious Fan. Monet Clock and Above are hidden in `src/data/play.ts` until Wayne adds them.
+- Mirrored Canvas, Lume, Larvae Lagoon use the case study template but set `listIn: play` (listed in Play, back links go to Play).
+- Play write-ups (Tamer, Fan) live in `src/content/play/` and use `src/pages/play/[slug].astro`.
+- Every old Framer URL redirects (astro.config.mjs).
+- CIID pages list "Responsibility" instead of Role. BSS and Larvae Lagoon have none.
+- Each CIID project ends with its full Vimeo/YouTube video embedded (`figure.embed`).
+
+## Media system (agreed Oct 16)
+- One shape: 3:2 for every photo and clip (`figure.frame`, `.pair`, `.grid3`, `.seq`, cards). Vertical phone clips: 4:5 grid (`.grid3.tall`) or blurred fill baked into the file.
+- Two widths: wide for media, text width for anything you read (diagrams, tables, quotes, screenshots of slides use `figure.wide` with zoom links).
+- `.pair.keep` stays side by side on phones. `.pair.natural` shows images uncropped.
+- `hideHero: true` hides the page hero but keeps it for the card. `card:` sets a different card image.
+- Test page: /media-test/ (unlisted, noindex). Delete when no longer useful.
+
+## Diagram kit
+- `.flow` (numbered steps, one `.focal` in cobalt, `.flow-note` loop line), `.sys` (Inputs, Brain, Outputs), `.stats` (big numbers, `.three` for three across), `.compare`, `.cols3`, room_tone's `.layers` and `.days`, BSS's `.yesand` panels.
+
+## Getting assets from Framer
+- The cloud workspace can't download from framerusercontent.com. Write a script in `notes/` with the URLs, push it, and have Wayne run it in Terminal: `curl -sL https://raw.githubusercontent.com/wanyekest10/waynekimdesigns/main/notes/<script>.sh | bash`. Files land in ~/Downloads/portfolio-rebuild/, then stage them over.
 
 ## Next
-1. **room_tone** (design and build, solo, 4 weeks, 2026). Assets are in ~/Downloads/portfolio-rebuild/room-tone-originals: hero.jpg, workday and layers diagrams, a showcase video, and four step clips (launch, activation, ask, exit). Plan: redraw the state machine (light, then motion, then music, then exit) and the "flat day vs day with shape" comparison; show the four clips as a sequence; include the dropped checklist version as "what didn't work." Then remove room_tone from `src/data/archive.ts`.
-2. Toilet Paper Elevator, once Wayne's video is edited.
-3. About section: rewrite around "building to think" (see backlog).
-4. Play: confirm the items, write up Tamer Kebap.
-5. Domain switch.
+1. Status line: hover or short lines on how Wayne can contribute (see backlog). Discuss first.
+2. Toilet Paper Elevator, once the video is edited.
+3. About section rewrite around "building to think".
+4. Monet Clock and Above in Play.
+5. Open questions: BSS Lowenfeld age wording; fan goal mechanism; Lume subtle-cueing paper link; higher-res fan hero.
+6. Domain switch.
 
 ## Domain switch (when ready)
 1. Cloudflare: Add a domain, enter waynekimdesigns.com, choose the Free plan, and copy the two nameservers.

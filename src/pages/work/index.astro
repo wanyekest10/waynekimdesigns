@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import Cards from '../../components/Cards.astro';
 import Rows from '../../components/Rows.astro';
 import { archive } from '../../data/archive';
-const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+const work = (await getCollection('work')).filter((w) => (w.data as any).listIn !== 'play').sort((a, b) => a.data.order - b.data.order);
 ---
 <Base title="Work, Wayne Kim" description="Case studies and projects by Wayne Kim, researcher and interaction designer.">
   <h1>Work</h1>

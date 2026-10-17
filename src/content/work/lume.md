@@ -5,6 +5,7 @@ headline: "A blind-spot alert for motorcycle helmets that puts a quiet cue in th
 context: "CIID, 2025"
 order: 8
 featured: false
+listIn: play
 label: "Spatial computing and prototyping"
 summary: "Blind-spot alerts inside a motorcycle helmet."
 hero: "/work/lume-assets/hero.webp"

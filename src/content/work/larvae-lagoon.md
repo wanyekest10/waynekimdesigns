@@ -5,6 +5,7 @@ headline: "A modular dragonfly habitat for a valley caught between droughts and 
 context: "CIID, 2024"
 order: 10
 featured: false
+listIn: play
 label: "Research and biomimicry"
 summary: "Designing for a non-human user."
 hero: "/work/larvae-assets/hero.webp"
