@@ -131,8 +131,11 @@ I presented the findings at the product, design, and engineering leadership offs
 
 <figure class="frame"><img src="/work/glorify-assets/offsite.webp" alt="Presenting findings to the product, design, and engineering team around a conference table"/><figcaption>Presenting at the product, design, and engineering offsite.</figcaption></figure>
 
-- **1.8M+** users in Glorify Groups
-- **20%** of daily active users use Groups
+<div class="stats three">
+  <div class="focal"><span class="k">Reach</span><b>1.8M+</b><p>users in Glorify Groups</p></div>
+  <div><span class="k">Engagement</span><b>20%</b><p>of daily active users use Groups</p></div>
+  <div><span class="k">Commitment</span><b>3 of 4</b><p>product, design, and engineering pods</p></div>
+</div>
 
 ## Reflection
 
