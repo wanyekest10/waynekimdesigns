@@ -25,7 +25,7 @@ facts:
   - { label: "Tools", value: "Arduino · Stepper motor · Laser cutter" }
 ---
 
-## A quiet clock for shared homes
+## In sync, without alarms or notifications
 
 Linee (Italian for "lines") is a tactile clock and a deliberately low-fidelity day planner for shared homes. It shows when something is happening without alarms, screens, or notifications. Instead of precise scheduling, it builds awareness of the day's rhythm, so housemates stay in sync and the home stays calm.
 
