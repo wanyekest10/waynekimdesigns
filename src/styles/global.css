@@ -186,7 +186,7 @@ article > h3 + h4 { margin-top: 16px; }
 .cs-facts dd span { display: block; }
 /* Research components sit in the text column too, so the page reads at one width */
 .compare, .bars, article table, .cols { max-width: var(--measure); }
-.compare .crow { grid-template-columns: 110px 1fr 24px 1fr; gap: 12px; }
+@media (min-width: 721px) { .compare .crow { grid-template-columns: 110px 1fr 24px 1fr; gap: 12px; } }
 
 /* Grid of small looping clips, and three short columns */
 article .grid3 { max-width: var(--wide); display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 16px; margin: 32px 0; }
@@ -206,3 +206,41 @@ article figure.narrow { max-width: 380px; }
 .principles4 p { font-size: 14px; line-height: 1.45; margin: 0; }
 article p.hmw { font: var(--lead); color: var(--ink); letter-spacing: -0.01em; max-width: 34em; padding: 4px 0 4px 20px; border-left: 2px solid var(--accent); margin: 24px 0 8px; }
 @media (max-width: 720px) { .principles4 { grid-template-columns: 1fr 1fr; } }
+
+/* room_tone: a flat day vs a day with shape */
+article figure.days { max-width: var(--measure); margin: 32px 0; display: grid; grid-template-columns: 130px 1fr; gap: 0 16px; }
+.days .day { display: contents; }
+.days .day .k { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); align-self: center; padding: 14px 0; border-top: 1px solid var(--rule); }
+.days .day svg { width: 100%; height: 56px; border-top: 1px solid var(--rule); overflow: visible; }
+.days .day path { fill: none; stroke: var(--gray); stroke-width: 2; stroke-linecap: round; }
+.days .day.focal path { stroke: var(--accent); }
+.days .day.focal .k { color: var(--accent); }
+.days .times { grid-column: 2; display: flex; justify-content: space-between; font: var(--meta); color: var(--gray); padding-top: 8px; border-top: 1px solid var(--rule); }
+.days figcaption { grid-column: 1 / -1; }
+/* room_tone: which layers are on at each stage */
+.layers { max-width: var(--measure); margin: 32px 0; }
+.layers .lrow { display: grid; grid-template-columns: 1fr repeat(3, 56px); gap: 10px; align-items: center; padding: 10px 0; border-top: 1px solid var(--rule); }
+.layers .lrow.head { border-top: 0; padding: 0 0 8px; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); }
+.layers .lrow.head span:not(:first-child) { text-align: center; }
+.layers .lrow > span { font-size: 15px; color: var(--ink); }
+.layers .lrow small { display: block; font: var(--small); font-size: 14px; color: var(--gray); }
+.layers i { height: 10px; border-radius: 2px; background: var(--rule); }
+.layers i.on { background: var(--gray); }
+.layers .focal i.on:last-child { background: var(--accent); }
+.layers .focal > span { color: var(--accent); }
+/* room_tone: four clips in order */
+article figure.seq { max-width: var(--wide); display: grid; grid-template-columns: 1fr 1fr; gap: 24px 16px; margin: 32px 0; }
+article .seq video { margin: 0 0 10px; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; }
+article .seq p { font: var(--small); font-size: 14px; color: var(--gray); margin: 0; }
+article .seq .n { font: var(--meta); color: var(--gray); margin-right: 10px; }
+@media (max-width: 720px) {
+  article figure.days { grid-template-columns: 96px 1fr; gap: 0 12px; }
+  .layers .lrow { grid-template-columns: 1fr repeat(3, 40px); gap: 8px; }
+  article figure.seq { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .layers .lrow { grid-template-columns: 1fr repeat(3, 44px); }
+  .layers .lrow.head span { font-size: 10px; letter-spacing: 0; }
+}
+.layers .lrow.head > span { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); }
+.days .times { margin-bottom: 8px; }
