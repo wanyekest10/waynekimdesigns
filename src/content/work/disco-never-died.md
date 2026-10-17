@@ -44,7 +44,7 @@ There are two layers. A sphere of shimmering squares, the disco ball, swells and
 
 <figure class="wide"><img src="/work/disco-assets/renders.webp" alt="Three views of the piece: a silver disco ball over layered red, yellow, and blue grids of tiny squares, seen from different angles"/><figcaption>The disco ball over layered grids, from three angles.</figcaption></figure>
 
-<figure class="wide"><img src="/work/disco-assets/projected.webp" alt="The visuals projected large on a courtyard wall at night while people gather around a table of equipment"/><figcaption>Projected large, with people gathered around it.</figcaption></figure>
+<figure class="wide"><img src="/work/disco-assets/projected.webp" alt="The visuals projected large on a courtyard wall at night while people gather around a table of equipment"/></figure>
 
 ## Early versions
 
