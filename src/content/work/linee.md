@@ -39,12 +39,6 @@ Linee became something else: ambient timekeeping, a system that communicates whe
 
 <figure class="frame"><video src="/work/linee-assets/storyboard.mp4" poster="/work/linee-assets/storyboard-poster.jpg" autoplay muted loop playsinline></video><figcaption>Storyboarding how a household would set it up and use it.</figcaption></figure>
 
-## A shared language
-
-Later in the project, I proposed magnetic tiles: housemates write a note or stick a symbol on the timeline, like taking out the trash, being on a call, or having friends over. The day stops being a schedule handed down and becomes something the house can negotiate.
-
-<figure class="frame"><img src="/work/linee-assets/tile-writing.webp" alt="Writing CIID Open House on a white tile stuck to the 17:00 block, next to a red tile marked Demo"/></figure>
-
 ## How it works
 
 <div class="cols3">
@@ -79,6 +73,12 @@ I led the block prototyping. We went through dozens of versions, starting in car
 </figure>
 
 <figure class="frame"><video src="/work/linee-assets/notch.mp4" poster="/work/linee-assets/notch-poster.jpg" autoplay muted loop playsinline></video><figcaption>The notch works!</figcaption></figure>
+
+## A shared language
+
+Later in the project, I proposed magnetic tiles: housemates write a note or stick a symbol on the timeline, like taking out the trash, being on a call, or having friends over. The day stops being a schedule handed down and becomes something the house can negotiate.
+
+<figure class="frame"><img src="/work/linee-assets/tile-writing.webp" alt="Writing CIID Open House on a white tile stuck to the 17:00 block, next to a red tile marked Demo"/></figure>
 
 ## Just put it in the box
 
