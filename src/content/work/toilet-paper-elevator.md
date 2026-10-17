@@ -44,7 +44,7 @@ Stacking it up instead worked better. Height gives you milestones within days, a
 
 ## Climbing and arriving
 
-The screen has two states. Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Seventeen landmarks in all, from the Hollywood Sign to the Burj Khalifa, and then the Moon.
+The screen has two states. Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Eighteen landmarks in all, from the Hollywood Sign to the Burj Khalifa, and then the Moon.
 
 <figure class="pair natural">
   <img src="/work/tpe-assets/screen-30ft.png" alt="Climbing screen: 30 ft up, 91 squares since Oct 11, previous stop Ground floor, next stop Hollywood Sign, 45 ft tall"/>
