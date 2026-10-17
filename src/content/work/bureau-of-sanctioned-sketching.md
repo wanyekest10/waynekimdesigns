@@ -16,7 +16,7 @@ jumps:
   - { label: "Skip to playtesting", to: "playtesting" }
 short:
   - { lead: "The question.", text: "Most adults stop drawing not for lack of skill, but because somewhere around 9 to 13 they decided they weren't allowed to be bad at it. Can permission be designed?" }
-  - { lead: "What I built.", text: "Six prototypes in eight weeks, from an Arduino rainstick to motion-tracking software. The one that worked was a deck of cards." }
+  - { lead: "What I built.", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software. The one that worked was a deck of cards." }
   - { lead: "What I learned.", text: "Constraints, not freedom, get adults drawing. And permission spreads once someone goes first." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design" }
@@ -102,7 +102,7 @@ In playtests, it didn't work. The technology became the thing people paid attent
   <thead><tr><th>What I saw</th><th>The lesson</th><th>Became</th></tr></thead>
   <tbody>
     <tr><td>Off hand, with a clock</td><td class="feel">A set prompt and a timer give outside permission to start</td><td>Draw</td></tr>
-    <tr><td>Off hand, rainstick</td><td class="feel">When perfect is impossible, people relax</td><td>Using</td></tr>
+    <tr><td>Off hand, rotating canvas</td><td class="feel">When perfect is impossible, people relax</td><td>Using</td></tr>
     <tr><td>See-through canvas, rotating prompts</td><td class="feel">Seeing, prompting, and building on each other makes it social</td><td>While</td></tr>
     <tr><td>Happy Accidents Studio</td><td class="feel">Technology gets in the way of starting</td><td>Cards</td></tr>
   </tbody>
