@@ -14,7 +14,7 @@ hideHero: true
 short:
   - { lead: "The question.", text: "Can you watch sound? I wanted to turn the noise in a room into something you could see and move around in, with the look of Soul Train-era disco." }
   - { lead: "What I built.", text: "A microphone listens to how loud the room is. A disco ball made of small squares, and a grid of colorful shapes, grow and brighten with it. Drag, and you can orbit around the whole thing in 3D." }
-  - { lead: "What I learned.", text: "One simple input, loudness, was enough to make it feel alive. The work was in how it mapped to size, brightness, and color." }
+  - { lead: "What I learned.", text: "Disco balls are fun. And three simple squares, red, green, and blue, can go a long way." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Course", value: "Introduction to Programming" }
