@@ -29,7 +29,7 @@ facts:
 
 Linee (Italian for "lines") is a tactile clock and a deliberately low-fidelity day planner for shared homes. It shows when something is happening without alarms, screens, or notifications. Instead of precise scheduling, it builds awareness of the day's rhythm, so housemates stay in sync and the home stays calm.
 
-<figure class="frame"><video src="/work/linee-assets/press-block.mp4" poster="/work/linee-assets/press-block-poster.jpg" autoplay muted loop playsinline></video><figcaption>Press an hour to mark it.</figcaption></figure>
+<figure class="frame"><video src="/work/linee-assets/adding-tiles.mp4" poster="/work/linee-assets/adding-tiles-poster.jpg" autoplay muted loop playsinline></video><figcaption>Marking the day on Linee.</figcaption></figure>
 
 ## From signals to ambient time
 
@@ -43,10 +43,7 @@ Linee became something else: ambient timekeeping, a system that communicates whe
 
 Later in the project, I proposed magnetic tiles: housemates write a note or stick a symbol on the timeline, like taking out the trash, being on a call, or having friends over. The day stops being a schedule handed down and becomes something the house can negotiate.
 
-<figure class="pair even">
-  <img src="/work/linee-assets/tile-writing.webp" alt="Writing CIID Open House on a white tile stuck to the 17:00 block, next to a red tile marked Demo"/>
-  <video src="/work/linee-assets/adding-tiles.mp4" poster="/work/linee-assets/adding-tiles-poster.jpg" autoplay muted loop playsinline></video>
-</figure>
+<figure class="frame"><img src="/work/linee-assets/tile-writing.webp" alt="Writing CIID Open House on a white tile stuck to the 17:00 block, next to a red tile marked Demo"/></figure>
 
 ## How it works
 
@@ -85,7 +82,7 @@ I led the block prototyping. We went through dozens of versions, starting in car
 
 ## Just put it in the box
 
-At some point Massimo Banzi told us to stop sanding small pieces of wood and put it in the box. He was right. Fit, strength, and tolerance problems only showed up once the whole system was assembled close to final. No single part revealed them.
+At some point Massimo told us to stop sanding small pieces of wood and put it in the box. He was right. Fit, strength, and tolerance problems only showed up once the whole system was assembled close to final. No single part revealed them.
 
 <figure class="frame"><img src="/work/linee-assets/put-it-in-the-box.webp" alt="Massimo Banzi pointing and laughing as the team works at a crowded workshop table"/></figure>
 
