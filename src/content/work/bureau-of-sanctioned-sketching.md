@@ -79,11 +79,11 @@ I didn't know what the answer would look like, so I built to find out. Each prot
 
 <figure class="grid3">
   <div><video src="/work/bss-assets/proto-timed-prompts.mp4" poster="/work/bss-assets/proto-timed-prompts-poster.jpg" autoplay muted loop playsinline></video><p><strong>Timed prompts.</strong> A subject and a clock.</p></div>
-  <div><video src="/work/bss-assets/proto-spinning-canvas.mp4" poster="/work/bss-assets/proto-spinning-canvas-poster.jpg" autoplay muted loop playsinline></video><p><strong>Spinning canvas.</strong> A surface that won't sit still.</p></div>
+  <div><video src="/work/bss-assets/proto-see-through-canvas.mp4" poster="/work/bss-assets/proto-see-through-canvas-poster.jpg" autoplay muted loop playsinline></video><p><strong>See-through canvas.</strong> Draw standing up, see the other side, and build on each other's lines.</p></div>
   <div><video src="/work/bss-assets/proto-standing-game.mp4" poster="/work/bss-assets/proto-standing-game-poster.jpg" autoplay muted loop playsinline></video><p><strong>Standing game.</strong> Drawing together, on your feet.</p></div>
-  <div><video src="/work/bss-assets/proto-rainstick.mp4" poster="/work/bss-assets/proto-rainstick-poster.jpg" autoplay muted loop playsinline></video><p><strong>Arduino rainstick.</strong> Tilt it to paint with someone else.</p></div>
   <div><video src="/work/bss-assets/proto-kaleidoscope.mp4" poster="/work/bss-assets/proto-kaleidoscope-poster.jpg" autoplay muted loop playsinline></video><p><strong>Hand-tracked kaleidoscope.</strong> Draw in the air, mirrored into a pattern.</p></div>
-  <div><video src="/work/bss-assets/proto-motion-tracking.mp4" poster="/work/bss-assets/proto-motion-tracking-poster.jpg" autoplay muted loop playsinline></video><p><strong>Ripples.</strong> A small surprise wherever you draw.</p></div>
+  <div><video src="/work/bss-assets/proto-rainstick.mp4" poster="/work/bss-assets/proto-rainstick-poster.jpg" autoplay muted loop playsinline></video><p><strong>Rainstick controller.</strong> An Arduino rainstick that sends ripples to a shared screen.</p></div>
+  <div><video src="/work/bss-assets/proto-motion-tracking.mp4" poster="/work/bss-assets/proto-motion-tracking-poster.jpg" autoplay muted loop playsinline></video><p><strong>Ripples.</strong> What the rainstick draws, a small surprise each time.</p></div>
 </figure>
 
 I folded the best parts into one piece of software, Happy Accidents Studio: hand-tracked drawing, solo and co-op, with little surprises like kaleidoscope mirroring and ripples.
