@@ -3,7 +3,7 @@ title: Linee
 slug: linee
 headline: "A wooden timekeeper for shared homes that keeps housemates in sync with a soft knock instead of an alarm."
 context: "CIID, 2025"
-order: 5
+order: 6
 year: "2025"
 featured: true
 label: "Physical computing and fabrication"

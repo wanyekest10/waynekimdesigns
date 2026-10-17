@@ -46,7 +46,7 @@ jumps:                   # phone-only jump links; `to` = heading slug
   - **Design and build** (Living.fm, BSS): why, explore, build, test and what broke, reflection. Silent looping clips (`autoplay muted loop playsinline`, no controls or sound), clip grids, one full-width moment.
 
 ## Done (as of Oct 17, 2026)
-- Homepage: status line, name, Selected work (6 cards: Glorify Groups, room_tone, RaiseMe Portal, Toilet Paper Elevator, Living.fm, BSS, alternating research and building, "See all work"), Experiments (all rows, hover previews, "See all experiments"), About with one-line years. Nav is sticky (border appears on scroll).
+- Homepage: two-column header, Selected work (6 cards: Living.fm, BSS, Glorify Groups, Toilet Paper Elevator, room_tone, Linee), Experiments (all rows, hover previews, "See all experiments"), About with one-line years. Nav is sticky (border appears on scroll).
 - Work (/work): all 9, the homepage six, then Linee, Designit: Futures, Facilitation. Order and `featured` set in frontmatter.
 - Rule of thumb: Work = full case studies with process and outcome. Experiments = short sprints and side projects.
 - Toilet Paper Elevator (`src/content/work/toilet-paper-elevator.md`): 14-day solo sprint, used to learn Fusion. Don't mention rebuilding or AI help. YouTube video embedded at the end. Featured on the homepage. Fusion files still to come (go in "Building the pod").
