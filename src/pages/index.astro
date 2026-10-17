@@ -8,7 +8,12 @@ const work = (await getCollection('work')).filter((w) => w.data.featured).sort((
 
 const years = [
   { when: "'25–now", what: 'Interaction designer, independent', note: 'Building physical and AI prototypes, like <a href="/work/room-tone/">room_tone</a> and <a href="/work/toilet-paper-elevator/">Toilet Paper Elevator</a>.' },
-  { when: "'24–'25", what: 'Interaction Design, CIID', peek: { src: '/about/ciid-impact-minds.webp', alt: 'A large group photo on a grassy hillside, everyone looking up and waving at the camera', caption: "CIID '24 with staff + faculty at Impact Minds" }, note: 'M.S. A year of research, build, test, repeat, prototyping across mediums.' },
+  { when: "'24–'25", what: 'Interaction Design, CIID', peek: [
+    { src: '/about/ciid-class.webp', alt: 'The CIID class with staff and faculty on the grass, in orange scarves, looking up at the camera', caption: "CIID '24 with staff + faculty at Impact Minds" },
+    { src: '/about/ciid-graduation.webp', alt: 'The class in flower crowns, holding up their certificates', caption: 'Graduation day' },
+    { src: '/about/ciid-don-norman.webp', alt: 'Wayne seated on stage beside Don Norman, under a screen reading Now on stage: Don Norman', caption: 'On stage with Don Norman at Impact Minds' },
+    { src: '/about/ciid-impact-minds.webp', alt: 'A large group photo on a grassy hillside, everyone looking up and waving at the camera', caption: 'Everyone at Impact Minds' },
+  ], note: 'M.S. A year of research, build, test, repeat, prototyping across mediums.' },
   { when: "'23–'24", what: 'Senior UX Researcher, Glorify', note: 'Built the research practice and led 3 researchers. Shaped Glorify Groups (1.8M+ users).' },
   { when: "'21–'23", what: 'Design Researcher, Designit', note: 'Led research for Fortune 500 clients like Mastercard and Trane, plus <a href="/work/designit-futures/">speculative futures work</a>.' },
   { when: "'20–'21", what: 'Independent designer and researcher', note: 'Projects for Y Combinator companies like Govly, Rally.Video, and Measured.' },
@@ -49,11 +54,23 @@ const years = [
     <ul class="years">
       {years.map((y) => (
         <li><span class="when">{y.when}</span><span>{y.peek ? (
-          <span class="peek" tabindex="0"><strong>{y.what}</strong><span class="peek-card" role="tooltip"><img src={y.peek.src} alt={y.peek.alt} loading="lazy" /><span class="peek-cap">{y.peek.caption}</span></span></span>
+          <span class="peek" tabindex="0"><strong>{y.what}</strong><span class="peek-card" role="tooltip"><span class="peek-stack">{y.peek.map((p: any, i: number) => <img class:list={{ on: i === 0 }} src={p.src} alt={p.alt} loading="lazy" />)}</span>{y.peek.map((p: any, i: number) => <span class:list={['peek-cap', { on: i === 0 }]}>{p.caption}</span>)}<span class="peek-dots" aria-hidden="true">{y.peek.map((_: any, i: number) => <i class:list={{ on: i === 0 }}></i>)}</span></span></span>
         ) : <strong>{y.what}</strong>}{y.note && <span class="note" set:html={y.note} />}</span></li>
       ))}
     </ul>
   </section>
+  <script>
+    document.querySelectorAll('.peek').forEach((peek) => {
+      const groups = ['.peek-stack img', '.peek-cap', '.peek-dots i'].map((q) => Array.from(peek.querySelectorAll(q)));
+      const n = groups[0].length; if (n < 2) return;
+      let i = 0, t: ReturnType<typeof setInterval> | undefined;
+      const show = (k: number) => { i = k; groups.forEach((g) => g.forEach((el, j) => el.classList.toggle('on', j === k))); };
+      const start = () => { if (t) return; t = setInterval(() => show((i + 1) % n), 1800); };
+      const stop = () => { clearInterval(t); t = undefined; show(0); };
+      peek.addEventListener('mouseenter', start); peek.addEventListener('mouseleave', stop);
+      peek.addEventListener('focus', start); peek.addEventListener('blur', stop);
+    });
+  </script>
 </Base>
 
 <style>
@@ -79,8 +96,14 @@ const years = [
   .peek { position: relative; display: inline-block; cursor: default; outline: none; }
   .peek strong { text-decoration: underline dotted var(--gray); text-underline-offset: 4px; }
   .peek-card { position: absolute; left: calc(100% + 20px); top: 50%; width: 320px; padding: 8px; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.08); opacity: 0; transform: translate(-4px, -50%); pointer-events: none; transition: opacity .15s, transform .15s; z-index: 10; }
-  .peek-card img { display: block; width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 4px; }
-  .peek-cap { display: block; font: var(--small); color: var(--gray); margin-top: 6px; }
+  .peek-stack { position: relative; display: block; aspect-ratio: 3/2; }
+  .peek-stack img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 4px; opacity: 0; transition: opacity .4s; }
+  .peek-stack img.on { opacity: 1; }
+  .peek-cap { display: none; font: var(--small); color: var(--gray); margin-top: 6px; }
+  .peek-cap.on { display: block; }
+  .peek-dots { display: flex; gap: 4px; margin-top: 6px; }
+  .peek-dots i { width: 5px; height: 5px; border-radius: 50%; background: var(--rule); }
+  .peek-dots i.on { background: var(--ink); }
   .peek:hover .peek-card, .peek:focus .peek-card, .peek:focus-within .peek-card { opacity: 1; transform: translate(0, -50%); }
   @media (max-width: 720px) { .peek-card { width: 260px; left: 0; top: auto; bottom: calc(100% + 10px); transform: translateY(4px); } .peek:hover .peek-card, .peek:focus .peek-card { transform: none; } }
   .note { display: block; color: var(--gray); font-size: 15px; }
