@@ -39,22 +39,17 @@ const steps = [
     <p class="lead">I'm most useful when a team needs to understand a problem and build something to test it. Most researchers don't build, and most prototypers don't research. I do both.</p>
   </header>
 
-  <ol class="ways">
+  <div class="ways">
     {ways.map((w, i) => (
-      <li id={`way-${i + 1}`}>
-        <span class="num">{String(i + 1).padStart(2, '0')}</span>
-        <div>
-          <h2>{w.title}</h2>
-          <dl>
-            <dt>When</dt><dd>{w.when}</dd>
-            <dt>What I do</dt><dd>{w.what}</dd>
-            <dt>You get</dt><dd>{w.get}</dd>
-            <dt>See</dt><dd class="proof">{w.proof.map((p) => <a href={p.href}>{p.name}</a>)}</dd>
-          </dl>
-        </div>
-      </li>
+      <section class="way" id={`way-${i + 1}`}>
+        <h2>{w.title}</h2>
+        <p><strong>When.</strong> {w.when}</p>
+        <p><strong>What I do.</strong> {w.what}</p>
+        <p><strong>You get.</strong> {w.get}</p>
+        <p class="proof">{w.proof.map((p) => <a href={p.href}>{p.name} →</a>)}</p>
+      </section>
     ))}
-  </ol>
+  </div>
 
   <section class="start">
     <h2 class="section-title">How it starts</h2>
@@ -74,15 +69,12 @@ const steps = [
   .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
   .lead { color: var(--gray); }
 
-  .ways { list-style: none; margin-bottom: 96px; }
-  .ways > li { scroll-margin-top: 72px; display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 32px 0; border-top: 1px solid var(--rule); }
-  .ways > li:last-child { border-bottom: 1px solid var(--rule); }
-  .num { font: var(--meta); color: var(--gray); padding-top: 6px; }
-  .ways h2 { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 16px; }
-  .ways dl { display: grid; grid-template-columns: 96px 1fr; gap: 10px 24px; max-width: 720px; }
-  .ways dt { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); padding-top: 4px; }
-  .ways dd { color: var(--gray); }
-  .proof { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  .ways { max-width: var(--measure); margin-bottom: 96px; border-bottom: 1px solid var(--rule); }
+  .way { scroll-margin-top: 72px; padding: 32px 0; border-top: 1px solid var(--rule); }
+  .way h2 { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 16px; }
+  .way p { color: var(--gray); margin-bottom: 10px; }
+  .way strong { color: var(--ink); font-weight: 500; }
+  .proof { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; margin: 16px 0 0 !important; }
 
   .start { max-width: var(--measure); }
   .steps { counter-reset: s; list-style: none; margin-bottom: 40px; }
@@ -92,9 +84,4 @@ const steps = [
   .cta .big { font: var(--h2); letter-spacing: -0.01em; }
   .cta span { color: var(--gray); font-size: 15px; }
 
-  @media (max-width: 720px) {
-    .ways > li { grid-template-columns: 1fr; gap: 8px; }
-    .ways dl { grid-template-columns: 1fr; gap: 2px; }
-    .ways dd { margin-bottom: 12px; }
-  }
 </style>

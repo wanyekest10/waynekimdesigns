@@ -25,7 +25,7 @@ const years = [
   <header class="intro">
     <h1>Wayne Kim</h1>
     <p class="lead">Interaction designer and researcher.</p>
-    <a class="status" href="/how-i-can-help/"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles →</a>
+    <p class="status"><span class="dot" aria-hidden="true"></span><span>Open to full-time and contract roles</span><a href="/how-i-can-help/">See how I can help →</a></p>
   </header>
 
   <section id="work" class="block">
@@ -74,9 +74,8 @@ const years = [
 
 <style>
   .intro { margin-bottom: 120px; }
-  .status { display: inline-flex; align-items: center; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-top: 20px; }
-  a.status { text-decoration: none; }
-  a.status:hover { color: var(--accent); }
+  .status { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-top: 20px; }
+  .status a { margin-left: 8px; }
   .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
   .intro h1 { font-size: 32px; letter-spacing: -0.03em; margin-bottom: 12px; }
   .intro .lead { color: var(--gray); }
