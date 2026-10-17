@@ -337,3 +337,51 @@ article figure.vimeo-live { margin: 0 0 40px; }
 .vl-sound { position: absolute; right: 12px; bottom: 22px; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: #fff; background: rgba(20,20,20,.6); border: 0; border-radius: 999px; padding: 7px 12px; cursor: pointer; backdrop-filter: blur(6px); }
 .vl-sound:hover { background: rgba(20,20,20,.8); }
 .vl-sound[aria-pressed="true"] { background: var(--accent); }
+
+/* Toilet Paper Elevator: animated mechanism */
+.tpe-mech { margin: 32px 0 40px; }
+.tpe-mech .m-stage { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.tpe-mech .m-roll-wrap, .tpe-mech .m-screen { position: relative; background: var(--panel); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
+.tpe-mech svg { width: 100%; height: auto; display: block; max-width: none; }
+.tpe-mech .m-paper { fill: #fff; stroke: #E0E0DC; }
+.tpe-mech .m-perf { stroke: #CFCFCA; stroke-dasharray: 3 3; }
+.tpe-mech .m-roll { fill: #fff; stroke: #E0E0DC; }
+.tpe-mech .m-ring { fill: none; stroke: #EFEFEC; }
+.tpe-mech .m-tube { fill: #E7DFD2; stroke: #D6CCBC; }
+.tpe-mech .m-sleeve { fill: #A9ABAA; }
+.tpe-mech .m-mag { fill: #141414; }
+.tpe-mech .m-pin { fill: #D9D9D6; stroke: #BDBDB9; }
+.tpe-mech .m-sensor { fill: #fff; stroke: #141414; stroke-width: 1.5; transition: fill .08s; }
+.tpe-mech .m-sensor.on { fill: var(--accent); stroke: var(--accent); }
+.tpe-mech .m-ripple { fill: none; stroke: var(--accent); stroke-width: 1.5; opacity: 0; }
+.tpe-mech .m-ripple.go { animation: tpe-ripple .5s ease-out; }
+@keyframes tpe-ripple { from { r: 8; opacity: .8; } to { r: 26; opacity: 0; } }
+.tpe-mech .m-legend { display: flex; flex-wrap: wrap; gap: 4px 20px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin: 12px 0 0; }
+.tpe-mech .m-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.tpe-mech .lg-sensor { width: 14px; height: 9px; border: 1.5px solid #141414; border-radius: 2px; background: #fff; }
+.tpe-mech .lg-mag { width: 9px; height: 9px; border-radius: 50%; background: #141414; }
+.tpe-mech .m-later { position: absolute; top: 16px; left: 20px; font: var(--meta); text-transform: uppercase; letter-spacing: -0.02em; color: var(--accent); margin: 0; }
+.tpe-mech .m-read { display: flex; gap: 32px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--rule); }
+.tpe-mech .m-read dt { font: var(--meta); text-transform: uppercase; letter-spacing: -0.02em; color: var(--gray); }
+.tpe-mech .m-read dd { font: var(--label); font-size: 22px; font-variant-numeric: tabular-nums; color: var(--ink); }
+.tpe-mech .m-bezel { position: relative; background: #8E9293; border-radius: 14px; padding: 18px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+.tpe-mech .m-bezel img { display: block; width: 100%; max-width: none; aspect-ratio: 4/3; border-radius: 2px; margin: 0; }
+.tpe-mech .m-flash { position: absolute; inset: 18px; border-radius: 2px; background: #141414; opacity: 0; pointer-events: none; }
+.tpe-mech .m-flash.go { animation: tpe-flash .42s steps(1) ; }
+@keyframes tpe-flash { 0% { opacity: 1; background: #141414; } 30% { opacity: 1; background: #F3F2EE; } 60% { opacity: 1; background: #141414; } 100% { opacity: 0; } }
+@media (max-width: 720px) { .tpe-mech .m-stage { grid-template-columns: 1fr; } }
+
+/* Wiring table: part pins, a line, board pins */
+.wiring { max-width: var(--measure); margin: 24px 0 32px; }
+.wiring .w-h, .wiring .w-r { display: grid; grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr); align-items: center; }
+.wiring .w-h { font: var(--meta); text-transform: uppercase; letter-spacing: -0.02em; color: var(--gray); padding: 20px 0 8px; }
+.wiring .w-h:first-child { padding-top: 0; }
+.wiring .w-h span:last-child, .wiring .w-r .w-pin:last-child { text-align: right; }
+.wiring .w-r { padding: 3px 0; }
+.wiring .w-pin { font: var(--small); font-size: 14px; color: var(--ink); background: var(--panel); border-radius: 4px; padding: 6px 10px; }
+.wiring .w-l { height: 1px; background: #B9B9B5; position: relative; }
+.wiring .w-l::before, .wiring .w-l::after { content: ''; position: absolute; top: -2.5px; width: 6px; height: 6px; border-radius: 50%; background: #B9B9B5; }
+.wiring .w-l::before { left: 0; } .wiring .w-l::after { right: 0; }
+.wiring .focal .w-l, .wiring .focal .w-l::before, .wiring .focal .w-l::after { background: var(--accent); }
+.wiring .focal .w-l { height: 2px; }
+.wiring .focal .w-pin { color: var(--accent); }

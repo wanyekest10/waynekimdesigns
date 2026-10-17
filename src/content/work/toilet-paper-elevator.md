@@ -10,6 +10,8 @@ label: "Physical computing and fabrication"
 summary: "Toilet paper use, measured in landmark heights."
 hero: "/work/tpe-assets/demo-3x2-poster.jpg"
 heroAlt: "The finished device on a bathroom wall: a gray e-ink screen reading 4 ft up, connected by a slim raceway to the toilet paper holder"
+card: "/work/tpe-assets/card-wall.webp"
+cardAlt: "The gray e-ink pod on a bathroom wall, a slim raceway running down to the toilet paper holder"
 heroVideo: "/work/tpe-assets/demo-3x2.mp4"
 heroPoster: "/work/tpe-assets/demo-3x2-poster.jpg"
 jumps:
@@ -22,7 +24,8 @@ facts:
   - { label: "Project", value: "Personal project" }
   - { label: "Role", value: "Designer and builder, solo" }
   - { label: "Duration", value: "14-day sprint, 2026" }
-  - { label: "Tools", value: "Arduino MKR WiFi 1010 · Hall effect sensor · 4.2\" e-paper · Fusion 360 · Prusa MK3S" }
+  - { label: "Stack", value: "Arduino MKR WiFi 1010 · Hall effect sensor · Waveshare 4.2\" e-paper · 3.7V LiPo" }
+  - { label: "Tools", value: "Arduino IDE · Fusion 360 · Prusa MK3S" }
 ---
 
 ## An invisible habit
@@ -43,25 +46,49 @@ Stacking it up instead worked better. Height gives you milestones within days, a
   <figcaption>Testing the climb and an arrival screen on the e-paper module.</figcaption>
 </figure>
 
+## Climbing and arriving
+
+The screen has two states. Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Seventeen landmarks in all, from the Hollywood Sign to the Burj Khalifa, and then the Moon.
+
+<figure class="pair natural">
+  <img src="/work/tpe-assets/screen-30ft.png" alt="Climbing screen: 30 ft up, 91 squares since Oct 11, previous stop Ground floor, next stop Hollywood Sign, 45 ft tall"/>
+  <img src="/work/tpe-assets/screen-arrive-hollywood.png" alt="Arrival screen: Now arriving, Hollywood Sign, Los Angeles, USA, 45 ft tall. So far 45 ft up, next stop Christ the Redeemer"/>
+  <figcaption>Climbing, and arriving. See every <a href="/work/tpe-assets/screens-climb-all.webp" target="_blank" rel="noopener">climbing screen</a> and <a href="/work/tpe-assets/screens-arrival-all.webp" target="_blank" rel="noopener">arrival screen</a>.</figcaption>
+</figure>
+
 ## How it works
 
-<div class="flow" role="list" aria-label="How Toilet Paper Elevator counts">
-  <div class="step"><span class="n">01</span><b>Pull the paper</b><small>The roll spins on a printed sleeve.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step"><span class="n">02</span><b>Magnets pass a sensor</b><small>Four magnets in the sleeve, one Hall sensor on the holder.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step"><span class="n">03</span><b>Squares become feet</b><small>Each 100 mm square adds to one running climb.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step focal"><span class="n">04</span><b>The screen catches up</b><small>Slowly, the way e-ink does.</small></div>
-</div>
-<p class="flow-note">↻ The climb never resets. Every roll in the house adds to the same ride.</p>
+<figure class="wide tpe-mech" aria-label="Animation: the roll turns, its four magnets pass the Hall sensor, the square count climbs, and the e-paper screen updates from ground floor to the Hollywood Sign">
+  <div class="m-stage">
+    <div class="m-roll-wrap">
+      <svg viewBox="0 0 340 290" role="img" aria-hidden="true"></svg>
+      <p class="m-legend"><span><i class="lg-sensor"></i>Hall sensor</span><span><i class="lg-mag"></i>4 magnets in the sleeve</span></p>
+      <p class="m-later" hidden>Months later</p>
+      <dl class="m-read"><div><dt>Squares</dt><dd data-k="squares">0</dd></div><div><dt>Feet up</dt><dd data-k="feet">0</dd></div></dl>
+    </div>
+    <div class="m-screen"><div class="m-bezel"><img src="/work/tpe-assets/screen-g.png" alt="" /><span class="m-flash"></span></div></div>
+  </div>
+  <figcaption>Each time a magnet passes the sensor, a square is counted. Squares become feet, and the screen catches up.</figcaption>
+</figure>
+<script src="/work/tpe-assets/mechanism.js" defer></script>
 
-<div class="sys" aria-label="Toilet Paper Elevator system">
-  <div class="col"><span class="k">Inputs</span><span class="part">Printed sleeve<small>Four magnets sealed inside the print.</small></span><span class="part">Hall effect sensor<small>On a collar at the holder's elbow.</small></span></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="col"><span class="k">Brain</span><span class="part focal">Arduino MKR WiFi 1010<small>Counts rotations and converts them to feet.</small></span><span class="part">3.7V LiPo<small>Charged through the board.</small></span></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="col"><span class="k">Outputs</span><span class="part">4.2" e-paper screen<small>Height, square count, next stop.</small></span></div>
+### Wiring
+
+Four parts, one board. The e-paper screen talks to the Arduino over SPI, the Hall sensor sends a pulse each time a magnet passes, and a LiPo plugs into the board's battery port so it runs without a cable.
+
+<div class="wiring" role="table" aria-label="Wiring">
+  <div class="w-h" role="row"><span role="columnheader">Waveshare 4.2" e-paper</span><span></span><span role="columnheader">MKR WiFi 1010</span></div>
+  <div class="w-r" role="row"><span class="w-pin">VCC</span><span class="w-l"></span><span class="w-pin">VCC 3.3V</span></div>
+  <div class="w-r" role="row"><span class="w-pin">GND</span><span class="w-l"></span><span class="w-pin">GND</span></div>
+  <div class="w-r" role="row"><span class="w-pin">DIN</span><span class="w-l"></span><span class="w-pin">MOSI · 8</span></div>
+  <div class="w-r" role="row"><span class="w-pin">CLK</span><span class="w-l"></span><span class="w-pin">SCK · 9</span></div>
+  <div class="w-r" role="row"><span class="w-pin">CS · DC · RST · BUSY</span><span class="w-l"></span><span class="w-pin">Digital pins</span></div>
+  <div class="w-h" role="row"><span role="columnheader">Hall effect sensor</span><span></span><span role="columnheader">MKR WiFi 1010</span></div>
+  <div class="w-r" role="row"><span class="w-pin">VCC</span><span class="w-l"></span><span class="w-pin">VCC 3.3V</span></div>
+  <div class="w-r" role="row"><span class="w-pin">GND</span><span class="w-l"></span><span class="w-pin">GND</span></div>
+  <div class="w-r focal" role="row"><span class="w-pin">OUT</span><span class="w-l"></span><span class="w-pin">Interrupt pin</span></div>
+  <div class="w-h" role="row"><span role="columnheader">3.7V LiPo</span><span></span><span role="columnheader">MKR WiFi 1010</span></div>
+  <div class="w-r" role="row"><span class="w-pin">+ / −</span><span class="w-l"></span><span class="w-pin">JST battery port</span></div>
 </div>
 
 The slow e-paper refresh is on purpose. The number doesn't flash or animate when you're in the room. It's simply different the next time you look.
@@ -97,6 +124,14 @@ The hard part wasn't the electronics. It was getting a wire from the holder to t
 
 I designed the pod in Fusion, along with the three wire-route pieces: a raceway down from the shell, a quarter-turn around the holder's wall plate, and the collar. Everything prints in gray. The LiPo sits trapped in a closed shell, and the display's own screws and brass standoffs hold it together.
 
+<figure class="grid3">
+  <div><img src="/work/tpe-assets/fusion-shell.webp" alt="The pod shell in Fusion 360, shown see-through with the screen opening, screw bosses, and cable openings"/><p>The shell, see-through.</p></div>
+  <div><img src="/work/tpe-assets/fusion-wire.webp" alt="Wireframe view of the pod shell showing the internal standoffs and the board outline"/><p>Standoffs and cutouts.</p></div>
+  <div><img src="/work/tpe-assets/fusion-standoff.webp" alt="Close-up of a printed boss with a hex pocket that traps a nut"/><p>A hex pocket traps each nut.</p></div>
+</figure>
+
+<figure class="frame"><img src="/work/tpe-assets/electronics.webp" alt="The parts before assembly: the gray shell, the e-paper screen showing the ground floor, the Arduino on a breadboard on its printed plate, the magnet sleeve, the collar, and the braided cable"/><figcaption>Everything before it goes in the shell.</figcaption></figure>
+
 <figure class="pair">
   <img src="/work/tpe-assets/battery-plate.webp" alt="The battery mounted on a printed plate next to the breadboard and Arduino, with a brass standoff marked"/>
   <img src="/work/tpe-assets/pod-side.webp" alt="The assembled pod from the side, showing the battery and board stacked behind the screen"/>
@@ -111,7 +146,17 @@ I designed the pod in Fusion, along with the three wire-route pieces: a raceway 
 
 I left it running in my bathroom for a few days before filming, to see what real household numbers feel like. The screen shows feet up, the square count since it started, and the next stop.
 
-<figure class="frame"><img style="object-position: center 35%" src="/work/tpe-assets/installed.webp" alt="The finished device on the wall: 4 ft up, 12 squares since Sept 30, previous stop Ground floor, next stop Hollywood Sign"/></figure>
+<figure class="grid3">
+  <div><img src="/work/tpe-assets/install-sleeve.webp" alt="Hands sliding the gray magnet sleeve into a new roll"/><p>The sleeve goes in the roll.</p></div>
+  <div><img src="/work/tpe-assets/install-roll.webp" alt="Putting the roll back on the holder's bar"/><p>The roll goes on the bar.</p></div>
+  <div><img src="/work/tpe-assets/install-seated.webp" alt="The roll seated on the holder under the screen"/><p>Nothing else changes.</p></div>
+</figure>
+
+<figure class="pair">
+  <img src="/work/tpe-assets/close-4ft.webp" alt="Close-up of the screen at 4 ft up above the roll"/>
+  <img src="/work/tpe-assets/close-10ft.webp" alt="Close-up of the screen at 10 ft up above the roll"/>
+  <figcaption>4 ft up, then 10.</figcaption>
+</figure>
 
 ## Reflection
 
