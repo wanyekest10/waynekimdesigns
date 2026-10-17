@@ -15,7 +15,7 @@ jumps:
 short:
   - { lead: "The question.", text: "Shared homes run on group chats, alarms, and reminders. Could a household stay in sync by asking for less attention, not more?" }
   - { lead: "What we built.", text: "Linee, a 24-hour timeline of wooden blocks. Press a block to mark an event. A motorized needle crosses the day and gives each marked hour a soft knock as it passes." }
-  - { lead: "What I learned.", text: "Timing can be felt instead of announced. And a build isn't real until it's in the box." }
+  - { lead: "What I learned.", text: "Calm technology works when timing is felt, not announced." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Role", value: "Stepper motor and LED code · Block prototyping · Magnetic tiles concept" }
@@ -25,15 +25,17 @@ facts:
   - { label: "Tools", value: "Arduino · Stepper motor · Laser cutter" }
 ---
 
-## Less attention, not more
+## A quiet clock for shared homes
 
-Living with other people takes coordination: who's cooking, when the guests arrive, when the place needs to be quiet. Most tools for that compete for attention with pings, badges, and alarms. We asked what togetherness would look like if the tool asked for less.
+Linee (Italian for "lines") is a tactile clock and a deliberately low-fidelity day planner for shared homes. It shows when something is happening without alarms, screens, or notifications. Instead of precise scheduling, it builds awareness of the day's rhythm, so housemates stay in sync and the home stays calm.
 
 <figure class="frame"><video src="/work/linee-assets/press-block.mp4" poster="/work/linee-assets/press-block-poster.jpg" autoplay muted loop playsinline></video><figcaption>Press an hour to mark it.</figcaption></figure>
 
 ## From signals to ambient time
 
-We started with signals between housemates: a way to say "I'm home" or "dinner at 8." The more we explored, the more the project moved toward ambient timekeeping. Instead of a message you have to read, the day itself moves across the wall, and you feel where it is from across the room.
+Our brief was to design a product that fosters togetherness in shared spaces. Home is a sanctuary for people with busy schedules, but sharing it still takes quiet coordination. We first imagined Linee as a way for housemates to signal everyday rhythms: who's in the kitchen, who's using the shower, who's on their way home.
+
+Linee became something else: ambient timekeeping, a system that communicates when without asking for attention. Coordination is felt over the course of the day instead of enforced through alerts.
 
 <figure class="frame"><video src="/work/linee-assets/storyboard.mp4" poster="/work/linee-assets/storyboard-poster.jpg" autoplay muted loop playsinline></video><figcaption>Storyboarding how a household would set it up and use it.</figcaption></figure>
 
