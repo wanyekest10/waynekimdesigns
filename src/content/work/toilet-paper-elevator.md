@@ -29,34 +29,6 @@ Everyone in a home uses toilet paper every day, and nobody ever sees how much. I
 
 That set the rules early. The display had to be household-level and anonymous. It couldn't show sessions, single anyone out, or ask for attention. And it couldn't preach about sustainability, which would turn a curious object into a lecture.
 
-## From highway to elevator
-
-The first version was a highway: an odometer driving the roll's length from LA City Hall to the Santa Monica Pier. But a single household moves slowly, and a trip measured in miles barely changes from week to week.
-
-Stacking it up instead worked better. Height gives you milestones within days, and the world is full of tall things people already know. So the climb starts at the ground floor and works up a ladder of landmarks: the Hollywood Sign at 45 feet first, then taller and taller, with the Moon waiting after the summit.
-
-<figure class="pair">
-  <img style="object-position: center top" src="/work/tpe-assets/screen-test.webp" alt="An early screen on the breadboard reading 12,028 ft up, next stop Mount Fuji"/>
-  <img src="/work/tpe-assets/screen-arrival.webp" alt="An arrival screen: now arriving, Motherland Monument, with the Great Pyramid up next"/>
-  <figcaption>Testing the climb and an arrival screen on the e-paper module.</figcaption>
-</figure>
-
-## What you see
-
-The screen has two states. Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Eighteen landmarks in all, from the Hollywood Sign to the Burj Khalifa, and then the Moon.
-
-<figure class="pair natural">
-  <img src="/work/tpe-assets/screen-30ft.png" alt="Climbing screen: 30 ft up, 91 squares since Oct 11, previous stop Ground floor, next stop Hollywood Sign, 45 ft tall"/>
-  <img src="/work/tpe-assets/screen-arrive-hollywood.png" alt="Arrival screen: Now arriving, Hollywood Sign, Los Angeles, USA, 45 ft tall. So far 45 ft up, next stop Christ the Redeemer"/>
-  <figcaption>Climbing, and arriving. See every <a href="/work/tpe-assets/screens-climb-all.webp" target="_blank" rel="noopener">climbing screen</a> and <a href="/work/tpe-assets/screens-arrival-all.webp" target="_blank" rel="noopener">arrival screen</a>.</figcaption>
-</figure>
-
-<figure class="pair">
-  <img src="/work/tpe-assets/close-4ft.webp" alt="Close-up of the screen at 4 ft up above the roll"/>
-  <img src="/work/tpe-assets/close-10ft.webp" alt="Close-up of the screen at 10 ft up above the roll"/>
-  <figcaption>4 ft up, then 10.</figcaption>
-</figure>
-
 ## How it works
 
 <figure class="wide tpe-mech" aria-label="Animation: the roll turns, its four magnets pass the Hall sensor, the square count climbs, and the e-paper screen updates from ground floor to the Hollywood Sign">
@@ -98,6 +70,39 @@ Three parts, one board.
 
 The slow e-paper refresh is on purpose. The number doesn't flash or animate when you're in the room. It's simply different the next time you look.
 
+## Why an elevator
+
+The first version was a highway: an odometer driving the roll's length from LA City Hall to the Santa Monica Pier. But a single household moves slowly, and a trip measured in miles barely changes from week to week.
+
+Stacking it up instead worked better. Height gives you milestones within days, and the world is full of tall things people already know. So the climb starts at the ground floor and works up a ladder of landmarks: the Hollywood Sign at 45 feet first, then taller and taller, with the Moon waiting after the summit.
+
+<div class="compare">
+  <div class="crow head"><span></span><span class="k">HIGHWAY</span><span></span><span class="k">ELEVATOR</span></div>
+  <div class="crow"><span class="k">Measured in</span><span class="was">Miles</span><span class="to">→</span><span class="is">Feet<small>A small unit, so the number moves every day.</small></span></div>
+  <div class="crow"><span class="k">Milestones</span><span class="was">Freeway exits, weeks apart</span><span class="to">→</span><span class="is">Landmarks, days apart<small>Things people already know the height of.</small></span></div>
+  <div class="crow focal"><span class="k">The end</span><span class="was">Santa Monica Pier</span><span class="to">→</span><span class="is">The Moon<small>It never really runs out.</small></span></div>
+</div>
+
+The screen has two states. Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Eighteen landmarks, from the Hollywood Sign to the Burj Khalifa, and even the Moon.
+
+<figure class="pair natural">
+  <img src="/work/tpe-assets/screen-30ft.png" alt="Climbing screen: 30 ft up, 91 squares since Oct 11, previous stop Ground floor, next stop Hollywood Sign, 45 ft tall"/>
+  <img src="/work/tpe-assets/screen-arrive-hollywood.png" alt="Arrival screen: Now arriving, Hollywood Sign, Los Angeles, USA, 45 ft tall. So far 45 ft up, next stop Christ the Redeemer"/>
+  <figcaption>Climbing, and arriving. See every <a href="/work/tpe-assets/screens-climb-all.webp" target="_blank" rel="noopener">climbing screen</a> and <a href="/work/tpe-assets/screens-arrival-all.webp" target="_blank" rel="noopener">arrival screen</a>.</figcaption>
+</figure>
+
+<figure class="pair">
+  <img src="/work/tpe-assets/close-4ft.webp" alt="Close-up of the screen at 4 ft up above the roll"/>
+  <img src="/work/tpe-assets/close-10ft.webp" alt="Close-up of the screen at 10 ft up above the roll"/>
+  <figcaption>4 ft up, then 10.</figcaption>
+</figure>
+
+<figure class="pair">
+  <img style="object-position: center top" src="/work/tpe-assets/screen-test.webp" alt="An early screen on the breadboard reading 12,028 ft up, next stop Mount Fuji"/>
+  <img src="/work/tpe-assets/screen-arrival.webp" alt="An arrival screen: now arriving, Motherland Monument, with the Great Pyramid up next"/>
+  <figcaption>Early screens on the bare e-paper module, before the layout settled.</figcaption>
+</figure>
+
 ## Building it
 
 Three problems, in the order I hit them.
@@ -117,7 +122,7 @@ Before modeling anything, I measured my own roll and holder: a 128 mm roll on a 
   <figcaption>The first working pulse: a green LED blinks each time a magnet passes the sensor.</figcaption>
 </figure>
 
-### 2. Getting the wire there
+### 2. Iterating the wire
 
 How do you get a wire from the holder to the screen without anything exposed in a bathroom? It took five tries. I placed the screen with paper and string first. Exposed jumpers worked but looked unfinished. A braided cord hid the wires, with a gray collar around the holder's arm to hold the sensor, but the cord drooped and the collar stuck out. A purple collar and raceway pinned everything flat to the wall. In the end the raceway's own arm could carry the sensor right up to the sleeve, so the collar wasn't needed at all. Easier to install, and calmer to look at.
 
@@ -145,21 +150,18 @@ I designed the pod in Fusion. Everything prints in gray. The LiPo sits trapped i
   <figcaption>The shell, see-through, and a hex pocket that traps each nut.</figcaption>
 </figure>
 
-<figure class="solo"><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><figcaption>Every part on the counter before it went on the wall.</figcaption></figure>
-
-## On the wall
-
-I left it running in my bathroom for a few days before filming, to see what real household numbers feel like.
-
-<figure class="pair natural">
-  <img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/>
-  <img src="/work/tpe-assets/final-wall.webp" alt="The finished version in daylight: the gray pod showing 4 ft up above the holder and sleeve"/>
-</figure>
+## Installed
 
 <figure class="grid3">
   <div><img src="/work/tpe-assets/install-sleeve.webp" alt="Hands sliding the gray magnet sleeve into a new roll"/><p>The sleeve goes in the roll.</p></div>
   <div><img src="/work/tpe-assets/install-roll.webp" alt="Putting the roll back on the holder's bar"/><p>The roll goes on the bar.</p></div>
   <div><img src="/work/tpe-assets/install-seated.webp" alt="The roll seated on the holder under the screen"/><p>Nothing else changes.</p></div>
+</figure>
+
+<figure class="grid3 tallnat">
+  <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Every part, before it went up.</p></div>
+  <div><img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/><p>On the wall, with a roll.</p></div>
+  <div><img src="/work/tpe-assets/final-wall.webp" alt="The finished version in daylight: the gray pod showing 4 ft up above the holder and sleeve"/><p>The sleeve on the bar.</p></div>
 </figure>
 
 ## Reflection

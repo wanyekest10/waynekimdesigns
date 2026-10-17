@@ -431,3 +431,7 @@ article .grid4 p { font: var(--small); font-size: 14px; color: var(--gray); marg
 /* A single tall photo, shown whole at reading width. */
 article figure.solo { max-width: 520px; margin: 32px 0; }
 article figure.solo img { width: 100%; height: auto; border-radius: 6px; margin: 0 0 10px; }
+
+/* Three tall photos in a row, same 3:4 shape. */
+article .grid3.tallnat img { aspect-ratio: 3/4; object-fit: cover; }
+article .grid3.tallnat img { width: 100%; max-width: none; border-radius: 6px; margin: 0 0 8px; }
