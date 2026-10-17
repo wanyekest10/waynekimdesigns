@@ -20,7 +20,7 @@ short:
 facts:
   - { label: "Project", value: "Personal project" }
   - { label: "Role", value: "Designer and builder, solo" }
-  - { label: "Duration", value: "7-day sprint, 2026" }
+  - { label: "Duration", value: "14-day sprint, 2026" }
   - { label: "Tools", value: "Arduino MKR WiFi 1010 · Hall effect sensor · 4.2\" e-paper · Fusion 360 · Prusa MK3S" }
 ---
 
@@ -94,7 +94,7 @@ The hard part wasn't the electronics. It was getting a wire from the holder to t
 
 ## Building the pod
 
-The pod started as an AI-assisted model. I rebuilt it from scratch in Fusion, along with the three wire-route pieces: a raceway down from the shell, a quarter-turn around the holder's wall plate, and the collar. Everything prints in gray. The LiPo sits trapped in a closed shell, and the display's own screws and brass standoffs hold it together.
+I designed the pod in Fusion, along with the three wire-route pieces: a raceway down from the shell, a quarter-turn around the holder's wall plate, and the collar. Everything prints in gray. The LiPo sits trapped in a closed shell, and the display's own screws and brass standoffs hold it together.
 
 <figure class="pair">
   <img src="/work/tpe-assets/battery-plate.webp" alt="The battery mounted on a printed plate next to the breadboard and Arduino, with a brass standoff marked"/>
@@ -118,4 +118,6 @@ I left it running in my bathroom for a few days before filming, to see what real
 
 **Calm by default.** E-ink only changes when it needs to, and never lights up. In a bathroom, that matters more than any feature.
 
-**Building to learn CAD.** This was my first full enclosure designed by hand in Fusion, and most of what I know about tolerances came from this pod.
+**Building to learn CAD.** I used this sprint to learn Fusion. Most of what I know about tolerances came from this pod.
+
+<figure class="embed"><iframe src="https://www.youtube-nocookie.com/embed/vQzPGvjoA7A?rel=0&modestbranding=1&playsinline=1" title="Toilet Paper Elevator, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
