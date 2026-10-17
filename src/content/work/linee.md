@@ -25,7 +25,7 @@ facts:
   - { label: "Tools", value: "Arduino · Stepper motor · Laser cutter" }
 ---
 
-## In sync, without alarms or notifications
+## Timekeeping without alarms or notifications
 
 Linee (Italian for "lines") is a tactile clock and a deliberately low-fidelity day planner for shared homes. It shows when something is happening without alarms, screens, or notifications. Instead of precise scheduling, it builds awareness of the day's rhythm, so housemates stay in sync and the home stays calm.
 
@@ -59,7 +59,7 @@ Semi-transparent numerals keep the hours readable without making the wall shout.
 
 ## Making it move
 
-A WiFi-connected Arduino drives a stepper motor and belt that carry the needle along the track. One crossing takes 2,200 steps, spread across 24 hours, so the needle moves too slowly to watch but is always somewhere new when you look up. I wrote the stepper motor and LED code.
+I wrote the code for the stepper motor and LEDs. A WiFi-connected Arduino moves the needle 2,200 steps across 24 hours: too slow to watch, but always somewhere new when you look up.
 
 <figure class="pair even">
   <img src="/work/linee-assets/parts.webp" alt="Laser-cut blocks, electronics, and wiring laid out on a cutting mat"/>
