@@ -10,6 +10,7 @@ const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.
   <h1>Work</h1>
   <p class="lead">Case studies in research, prototyping, and building with AI.</p>
   <section class="block"><Cards items={work} /></section>
+  {archive.length > 0 && (
   <section class="block">
     <div class="block-head">
       <h2 class="section-title">More projects</h2>
@@ -17,6 +18,7 @@ const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.
     </div>
     <Rows rows={archive} />
   </section>
+  )}
 </Base>
 <style>
   .lead { margin-bottom: 64px; }
