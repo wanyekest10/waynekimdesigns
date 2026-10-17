@@ -281,3 +281,11 @@ article .grid3.tall video, article .pair.tall > video { aspect-ratio: 4/5; }
 .flow .opt small b { display: inline; font: inherit; font-weight: 500; color: var(--ink); }
 .flow .opt.focal small b { color: var(--accent); }
 article .grid3 img { width: 100%; max-width: none; aspect-ratio: 3/2; object-fit: cover; margin: 0 0 8px; border-radius: 6px; }
+/* Results: big numbers in a 2x2 grid, one cobalt focal */
+.stats { max-width: var(--measure); display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0 32px; }
+.stats > div { border-top: 1px solid var(--ink); padding-top: 12px; }
+.stats .k { display: block; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.stats b { display: block; font: 500 28px/1.15 var(--sans); letter-spacing: -0.02em; color: var(--ink); }
+.stats p { font-size: 15px; color: var(--gray); margin: 4px 0 0; }
+.stats .focal { border-top-color: var(--accent); }
+.stats .focal b { color: var(--accent); }

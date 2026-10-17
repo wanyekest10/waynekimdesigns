@@ -35,7 +35,7 @@ facts:
   - { label: "Timeline", value: "Oct 2019 to Jun 2020" }
   - { label: "Team", value: "Customer Success, Product, Sales, Engineering" }
   - { label: "Methods", value: "Interviews, usability tests, survey, journey mapping" }
-  - { label: "Outcome", value: "For partners: exports from 15 min to 2 min · For the business: 90%+ of revenue kept" }
+  - { label: "Outcome", value: "Partners: exports 15 → 2 min · Business: 90%+ revenue kept" }
 ---
 
 ## Growth without reliability
@@ -186,10 +186,12 @@ Partner Dashboard V1 showed colleges what their RaiseMe program was producing, w
 
 The commitment came weeks before COVID disrupted higher ed budgets. That timing mattered. While institutions froze budgets and cut vendors, RaiseMe:
 
-- Retained **90%+** of projected annual revenue
-- Cut usability emails and tickets by **more than half**, from about 150 partners to about 65, out of 300
-- Improved portal reliability from **95% to 99%**
-- Cut a weekly export task from **15 minutes to 2**
+<div class="stats">
+  <div class="focal"><span class="k">For the business</span><b>90%+</b><p>of projected annual revenue kept</p></div>
+  <div><span class="k">For the business</span><b>150 → 65</b><p>partners filing usability tickets, out of 300</p></div>
+  <div><span class="k">For partners</span><b>95% → 99%</b><p>portal reliability</p></div>
+  <div><span class="k">For partners</span><b>15 → 2 min</b><p>for a weekly export task</p></div>
+</div>
 
 The updated portal stayed in use after RaiseMe was acquired by CampusLogic in July 2020.
 
