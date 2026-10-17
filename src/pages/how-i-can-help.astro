@@ -1,12 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import CopyEmail from '../components/CopyEmail.astro';
 
 const ways = [
   {
     title: 'Should we build this?',
     when: "You're about to commit to a bet, and you're not sure it's the right one.",
     what: "I turn the doubt into one question we can test, put a quick prototype in front of the people who would use it, and watch what they actually do.",
-    get: 'A decision, with evidence behind it.',
+    get: 'A decision, with evidence behind it, from someone who has spent ten years in design research.',
     proof: [ { name: 'Glorify Groups', href: '/work/glorify-groups/' }, { name: 'RaiseMe Portal', href: '/work/raiseme-portal/' } ],
   },
   {
@@ -14,7 +15,7 @@ const ways = [
     when: "The idea involves sensors, a camera, hardware, or AI, and slides won't settle it.",
     what: 'I build a working prototype, from the code and electronics to the thing you hold, and test it where it would actually live.',
     get: 'Something people can use, and what we learned from watching them use it.',
-    proof: [ { name: 'Living.fm', href: '/work/living-fm/' }, { name: 'room_tone', href: '/work/room-tone/' }, { name: 'Linee', href: '/work/linee/' } ],
+    proof: [ { name: 'Living.fm', href: '/work/living-fm/' }, { name: 'room_tone', href: '/work/room-tone/' }, { name: 'Toilet Paper Elevator', href: '/work/toilet-paper-elevator/' }, { name: 'Linee', href: '/work/linee/' } ],
   },
   {
     title: 'Get the room to agree',
@@ -40,7 +41,7 @@ const steps = [
 
   <ol class="ways">
     {ways.map((w, i) => (
-      <li>
+      <li id={`way-${i + 1}`}>
         <span class="num">{String(i + 1).padStart(2, '0')}</span>
         <div>
           <h2>{w.title}</h2>
@@ -61,7 +62,7 @@ const steps = [
       {steps.map((s) => <li>{s}</li>)}
     </ol>
     <p class="cta">
-      <a href="mailto:waynekimdesigns@gmail.com">waynekimdesigns@gmail.com</a>
+      <span class="big"><CopyEmail /></span>
       <span>Hiring full-time? Here's my <a href="/resume.pdf">resume</a>.</span>
     </p>
   </section>
@@ -74,7 +75,7 @@ const steps = [
   .lead { color: var(--gray); }
 
   .ways { list-style: none; margin-bottom: 96px; }
-  .ways > li { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 32px 0; border-top: 1px solid var(--rule); }
+  .ways > li { scroll-margin-top: 72px; display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 32px 0; border-top: 1px solid var(--rule); }
   .ways > li:last-child { border-bottom: 1px solid var(--rule); }
   .num { font: var(--meta); color: var(--gray); padding-top: 6px; }
   .ways h2 { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 16px; }
@@ -88,7 +89,7 @@ const steps = [
   .steps li { counter-increment: s; display: grid; grid-template-columns: 32px 1fr; padding: 10px 0; color: var(--gray); }
   .steps li::before { content: counter(s); font: var(--meta); color: var(--gray); padding-top: 4px; }
   .cta { display: flex; flex-direction: column; gap: 8px; }
-  .cta > a { font: var(--h2); letter-spacing: -0.01em; }
+  .cta .big { font: var(--h2); letter-spacing: -0.01em; }
   .cta span { color: var(--gray); font-size: 15px; }
 
   @media (max-width: 720px) {
