@@ -51,7 +51,7 @@ const steps = [
         <p class="w-when">{w.when}</p>
         <p class="w-what">{w.what}</p>
         <p class="w-get"><b>You get</b> {w.get}</p>
-        <p class="proof">{w.proof.map((p) => <a href={p.href}>{p.name}</a>)}</p>
+        <div class="proof"><span class="proof-label">Related projects</span><p class="proof-links">{w.proof.map((p) => <a href={p.href}>{p.name}</a>)}</p></div>
       </section>
     ))}
   </div>
@@ -136,7 +136,9 @@ const steps = [
   .w-what { font-size: 15px; }
   .w-get { font-size: 15px; color: var(--gray); align-self: start; }
   .w-get b { color: var(--ink); font-weight: 500; }
-  .proof { display: flex; flex-wrap: wrap; align-content: end; gap: 4px 16px; font-size: 15px; padding-top: 8px; }
+  .proof { align-self: start; padding-top: 16px; border-top: 1px solid var(--rule); }
+  .proof-label { display: block; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+  .proof-links { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; }
   @media (max-width: 860px) { .ways { grid-template-columns: 1fr; } }
 
   .start { max-width: var(--measure); }
