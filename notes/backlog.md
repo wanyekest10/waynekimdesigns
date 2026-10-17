@@ -23,11 +23,11 @@ Goal: show the build, not just photos. Per project, add any of: circuit diagram,
 - Mirrored Canvas: FaceOSC to Processing mapping (which expressions drive which visuals), snippet.
 - Disco Never Died: the amplitude-to-size/brightness mapping as a snippet, GitHub link to the Processing sketch.
 - BSS: the p5.js and motion-tracking prototypes, links to sketches.
-- A Serious Fan: tools are a guess (Cardboard, Paper, Motor, LED). Confirm the controller and how the goal was detected.
+- A Serious Fan: skip (not an important project).
 - Site-wide: decide on one GitHub (or a "Code" link) to add to the footer and the facts column.
 
 ## Next screen-based project (interaction design craft)
-Options Wayne could build and document as a full process case study: surf go/no-go app, YouTube intent gate extension, the parents' sending app for the grandma display.
+Leaning toward the surf go/no-go app (real users, data into a clear verdict). Other options: YouTube intent gate extension, the parents' sending app for the grandma display.
 
 ## Next case studies
 - Bureau of Sanctioned Sketching (design + build; advisors Rina Shumylo, Chris Downs, Jose Chavarria)

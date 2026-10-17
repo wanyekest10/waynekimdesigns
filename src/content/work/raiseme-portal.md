@@ -20,7 +20,7 @@ order: 7
 year: "2019–20"
 featured: false
 label: "Research and service design"
-summary: "Research that saved B2B revenue."
+summary: "Why colleges stopped trusting their portal."
 hero: "/work/raiseme-assets/hero-download-settings.webp"
 heroAlt: "The redesigned Download settings screen: a weekly follower report that generates itself every Monday"
 jumps:

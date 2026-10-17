@@ -18,7 +18,7 @@ year: "2023"
 featured: true
 cardFit: contain
 label: "Research and strategy"
-summary: "The research behind a bet on community."
+summary: "Digital spaces for real-life small groups."
 hero: "/work/glorify-assets/shipped-screens.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
 jumps:

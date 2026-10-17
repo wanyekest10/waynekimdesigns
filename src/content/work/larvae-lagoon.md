@@ -8,7 +8,7 @@ year: "2024"
 featured: false
 listIn: experiments
 label: "Research and biomimicry"
-summary: "Designing for a non-human user."
+summary: "A dragonfly habitat for a valley between droughts and floods."
 hero: "/work/larvae-assets/hero.webp"
 heroAlt: "The Astino Valley from above, next to a render of the floating habitat concept"
 jumps:

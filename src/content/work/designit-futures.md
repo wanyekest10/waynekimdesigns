@@ -7,7 +7,7 @@ order: 8
 year: "2022"
 featured: false
 label: "Foresight and strategy"
-summary: "Speculative futures as a strategy tool."
+summary: "Imagining 2122 to plan for water scarcity today."
 hero: "/work/futures-assets/water-score.webp"
 heroAlt: "Illustration from 2122: a phone showing a Virtual Water Score of 87 out of 100 for a pair of shoes, with the water used to make them"
 jumps:
