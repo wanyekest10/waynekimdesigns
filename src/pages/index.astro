@@ -3,7 +3,6 @@ import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import Cards from '../components/Cards.astro';
 import Rows from '../components/Rows.astro';
-import Collaborate from '../components/Collaborate.astro';
 import CopyEmail from '../components/CopyEmail.astro';
 import { experiments } from '../data/experiments';
 const work = (await getCollection('work')).filter((w) => w.data.featured).sort((a, b) => a.data.order - b.data.order);
@@ -23,7 +22,7 @@ const years = [
   { when: "'10–'14", what: 'B.A. Sociology, Colby College', note: '' },
 ];
 ---
-<Base title="Wayne Kim, researcher who builds" prompt={false}>
+<Base title="Wayne Kim, researcher who builds">
   <header class="intro">
     <h1>Wayne Kim</h1>
     <p class="lead">Interaction designer and researcher</p>
@@ -61,8 +60,6 @@ const years = [
       ))}
     </ul>
   </section>
-
-  <Collaborate />
   <script>
     document.querySelectorAll('.peek').forEach((peek) => {
       const groups = ['.peek-stack img', '.peek-cap', '.peek-dots i'].map((q) => Array.from(peek.querySelectorAll(q)));

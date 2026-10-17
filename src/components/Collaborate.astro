@@ -1,5 +1,5 @@
 ---
-// Collaborate: the three services, how it starts, and the message form. Lives at the end of the homepage.
+// Collaborate: the three services, how it starts, and the message form. Used by /collaborate/.
 import CopyEmail from './CopyEmail.astro';
 
 const ways = [
@@ -39,8 +39,11 @@ const steps = [
 ];
 ---
 <section id="collaborate" class="collaborate">
-  <h2 class="section-title">Collaborate</h2>
-  <p class="collab-lead">I help teams understand a problem, then build something to test it.</p>
+  <header class="collab-top">
+    <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
+    <h1>Collaborate</h1>
+    <p class="collab-lead">I help teams understand a problem, then build something to test it.</p>
+  </header>
   <div class="ways">
     {ways.map((w, i) => (
       <section class="way" id={`way-${i + 1}`}>
@@ -119,7 +122,10 @@ const steps = [
 </section>
 
 <style>
-  .collab-lead { color: var(--gray); max-width: var(--measure); margin-bottom: 32px; }
+  .collab-top { max-width: var(--measure); margin-bottom: 48px; }
+  .status { display: inline-flex; align-items: center; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 20px; }
+  .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
+  .collab-lead { color: var(--gray); }
   .sub-title { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 20px; }
 
   .ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 96px; }

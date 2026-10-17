@@ -24,12 +24,12 @@ const { title, wide = false, noindex = false, prompt = 'Have something you\'re w
           <li><a href="/work/">Work</a></li>
           <li><a href="/experiments/">Experiments</a></li>
           <li><a href="/#about">About</a></li>
-          <li><a href="/#collaborate">Collaborate</a></li>
+          <li><a href="/collaborate/">Collaborate</a></li>
         </ul>
       </nav>
       <slot />
       {prompt && (
-        <aside class="closing"><p>{prompt}</p><a href="/#message">Send me a message →</a></aside>
+        <aside class="closing"><p>{prompt}</p><a href="/collaborate/#message">Send me a message →</a></aside>
       )}
       <footer class="footer">
         <span>Say hello: <CopyEmail /></span>
