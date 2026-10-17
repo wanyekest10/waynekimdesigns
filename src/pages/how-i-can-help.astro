@@ -43,10 +43,10 @@ const steps = [
     {ways.map((w, i) => (
       <section class="way" id={`way-${i + 1}`}>
         <h2>{w.title}</h2>
-        <p><strong>When.</strong> {w.when}</p>
-        <p><strong>What I do.</strong> {w.what}</p>
-        <p><strong>You get.</strong> {w.get}</p>
-        <p class="proof">{w.proof.map((p) => <a href={p.href}>{p.name} →</a>)}</p>
+        <p class="w-when">{w.when}</p>
+        <p class="w-what">{w.what}</p>
+        <p class="w-get"><b>You get</b> {w.get}</p>
+        <p class="proof">{w.proof.map((p) => <a href={p.href}>{p.name}</a>)}</p>
       </section>
     ))}
   </div>
@@ -69,12 +69,15 @@ const steps = [
   .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
   .lead { color: var(--gray); }
 
-  .ways { max-width: var(--measure); margin-bottom: 96px; border-bottom: 1px solid var(--rule); }
-  .way { scroll-margin-top: 72px; padding: 32px 0; border-top: 1px solid var(--rule); }
-  .way h2 { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 16px; }
-  .way p { color: var(--gray); margin-bottom: 10px; }
-  .way strong { color: var(--ink); font-weight: 500; }
-  .proof { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; margin: 16px 0 0 !important; }
+  .ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 96px; }
+  .way { scroll-margin-top: 72px; background: var(--panel); border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+  .way h2 { font: var(--h2); font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; min-height: 2.6em; }
+  .w-when { color: var(--gray); font-size: 15px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+  .w-what { font-size: 15px; }
+  .w-get { font-size: 15px; color: var(--gray); }
+  .w-get b { color: var(--ink); font-weight: 500; }
+  .proof { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; margin-top: auto; padding-top: 8px; }
+  @media (max-width: 860px) { .ways { grid-template-columns: 1fr; } .way h2 { min-height: 0; } }
 
   .start { max-width: var(--measure); }
   .steps { counter-reset: s; list-style: none; margin-bottom: 40px; }
