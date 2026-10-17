@@ -28,7 +28,7 @@ const PARTS: Record<string, { label: string; explode: [number, number, number] }
 const VIEWS: Record<string, { target: [number, number, number]; dir: [number, number, number]; dist: number }> = {
   whole: { target: [25, -115, 45], dir: [0.55, 0.2, 1], dist: 900 },
   pod: { target: [0, 0, 80], dir: [0.75, 0.25, 1], dist: 560 },
-  sensor: { target: [-10, -243, 58], dir: [-0.7, 0.35, 0.85], dist: 260 },
+  sensor: { target: [-15, -240, 68], dir: [-0.7, 0.35, 0.85], dist: 260 },
 };
 
 export function mount(root: HTMLElement) {
