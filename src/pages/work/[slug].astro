@@ -47,7 +47,7 @@ const toc = headings
 
     <nav class="toc-col" aria-label="On this page">
       <div class="toc">
-        {d.listIn === 'play' ? <a class="toc-back" href="/play/">← Play</a> : <a class="toc-back" href="/work/">← Work</a>}
+        {d.listIn === 'experiments' ? <a class="toc-back" href="/experiments/">← Experiments</a> : <a class="toc-back" href="/work/">← Work</a>}
         <ol>
           {toc.map((h) => (
             <li class={h.depth === 3 ? 'sub' : undefined}><a href={`#${h.slug}`} data-id={h.slug}>{h.num && <span class="n">{h.num}</span>}{h.label}</a></li>
@@ -58,7 +58,7 @@ const toc = headings
 
     <div class="cs-body">
       <article class="numbered"><Content /></article>
-      <p class="back">{d.listIn === 'play' ? <a href="/play/">← All play</a> : <a href="/work/">← All work</a>}</p>
+      <p class="back">{d.listIn === 'experiments' ? <a href="/experiments/">← All experiments</a> : <a href="/work/">← All work</a>}</p>
     </div>
   </div>
 </Base>

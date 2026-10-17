@@ -3,7 +3,7 @@ title: room_tone
 slug: room-tone
 headline: "A room that notices when I've been working too long and offers a way out, with light, motion, and music instead of an alarm."
 context: "Personal project, 2026"
-order: 5
+order: 2
 label: "Physical computing and prototyping"
 summary: "A room that offers a break, not an alarm."
 hero: "/work/room-tone-assets/hero.webp"

@@ -1,10 +1,10 @@
 ---
-// A Play write-up: one column, title, one line, a few facts, then the story.
+// An Experiments write-up: one column, title, one line, a few facts, then the story.
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
-  const play = await getCollection('play');
-  return play.map((p) => ({ params: { slug: p.id }, props: { p } }));
+  const items = await getCollection('experiments');
+  return items.map((p) => ({ params: { slug: p.id }, props: { p } }));
 }
 const { p } = Astro.props;
 const { Content } = await render(p);
@@ -12,7 +12,7 @@ const d = p.data;
 ---
 <Base title={`${d.title}, Wayne Kim`} description={d.headline}>
   <header class="play-top">
-    <a class="toc-back" href="/play/">← Play</a>
+    <a class="toc-back" href="/experiments/">← Experiments</a>
     <h1>{d.title}</h1>
     <p class="lead">{d.headline}</p>
     {d.facts.length > 0 && <p class="play-facts">{d.facts.map((f) => <span>{f}</span>)}</p>}

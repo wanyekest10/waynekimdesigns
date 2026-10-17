@@ -5,7 +5,7 @@ headline: "An installation that turns silly faces into projected visuals, so peo
 context: "CIID, 2024"
 order: 7
 featured: false
-listIn: play
+listIn: experiments
 label: "Computer vision and play design"
 summary: "A mirror that rewards silly faces."
 hero: "/work/mirrored-canvas-assets/hero.webp"

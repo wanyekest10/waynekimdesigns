@@ -2,7 +2,7 @@
 title: A Serious Fan
 headline: "How might you build a fan that's light and serious?"
 facts: ["Object", "4 days, 2025", "With Hun Han"]
-hero: "/play/fan-assets/hero.webp"
+hero: "/experiments/fan-assets/hero.webp"
 heroAlt: "The finished fan, a tall black column with a red LED glowing at its center, beside someone working at a desk"
 ---
 
@@ -30,13 +30,13 @@ The fan watches whether you meet a goal you set. Meet it, and you get a cool bre
 We prototyped in cardboard and paper first, then wired in a motor and LED.
 
 <figure class="pair">
-  <img src="/play/fan-assets/cutting.webp" alt="Cutting green paper strips for the fan blades on a cutting mat"/>
-  <img src="/play/fan-assets/prototype.webp" alt="An early cardboard fan with a pink face on the worktable"/>
+  <img src="/experiments/fan-assets/cutting.webp" alt="Cutting green paper strips for the fan blades on a cutting mat"/>
+  <img src="/experiments/fan-assets/prototype.webp" alt="An early cardboard fan with a pink face on the worktable"/>
 </figure>
 
 <figure class="pair">
-  <img src="/play/fan-assets/electronics.webp" alt="The breadboard, motor, and sketches laid out on the table"/>
-  <img src="/play/fan-assets/testing.webp" alt="Showing the prototype to classmates at a table"/>
+  <img src="/experiments/fan-assets/electronics.webp" alt="The breadboard, motor, and sketches laid out on the table"/>
+  <img src="/experiments/fan-assets/testing.webp" alt="Showing the prototype to classmates at a table"/>
 </figure>
 
 <figure class="embed"><iframe src="https://player.vimeo.com/video/1068768741?dnt=1&title=0&byline=0&portrait=0" title="A Serious Fan, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>

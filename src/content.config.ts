@@ -16,9 +16,9 @@ const work = defineCollection({
   }).passthrough(),
 });
 
-// Play: short write-ups for small builds and gifts. Listed from src/data/play.ts.
-const play = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/play' }),
+// Experiments: short write-ups for small builds and gifts. Listed from src/data/experiments.ts.
+const experiments = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/experiments' }),
   schema: z.object({
     title: z.string(),
     headline: z.string(),
@@ -28,4 +28,4 @@ const play = defineCollection({
   }),
 });
 
-export const collections = { work, play };
+export const collections = { work, experiments };

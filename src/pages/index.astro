@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import Cards from '../components/Cards.astro';
 import Rows from '../components/Rows.astro';
-import { play } from '../data/play';
+import { experiments } from '../data/experiments';
 const work = (await getCollection('work')).filter((w) => w.data.featured).sort((a, b) => a.data.order - b.data.order);
 
 const years = [
@@ -26,16 +26,16 @@ const years = [
   <section id="work" class="block">
     <h2 class="section-title">Selected work</h2>
     <Cards items={work} />
-    <p class="more"><a href="/work/">All work →</a></p>
+    <p class="more"><a href="/work/">See all work →</a></p>
   </section>
 
-  <section id="play" class="block">
+  <section id="experiments" class="block">
     <div class="block-head">
-      <h2 class="section-title">Play</h2>
-      <span class="block-sub">Shorter projects and experiments.</span>
+      <h2 class="section-title">Experiments</h2>
+      <span class="block-sub">Shorter projects, sprints, and things I was curious about.</span>
     </div>
-    <Rows rows={play} />
-    <p class="more"><a href="/play/">See all play →</a></p>
+    <Rows rows={experiments} />
+    <p class="more"><a href="/experiments/">See all experiments →</a></p>
   </section>
 
   <section id="about" class="block">
