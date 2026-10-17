@@ -6,12 +6,6 @@ import Rows from '../components/Rows.astro';
 import { experiments } from '../data/experiments';
 const work = (await getCollection('work')).filter((w) => w.data.featured).sort((a, b) => a.data.order - b.data.order);
 
-const offers = [
-  { title: 'Should we build this?', line: 'Test a bet with real people before you commit to it.' },
-  { title: 'Make it real enough to test', line: 'Working prototypes with sensors, cameras, and AI.' },
-  { title: 'Get the room to agree', line: 'Workshops that end in a plan someone can act on.' },
-];
-
 const years = [
   { when: "'25–now", what: 'Interaction designer, independent', note: 'Building physical and AI prototypes, like <a href="/work/room-tone/">room_tone</a> and <a href="/work/toilet-paper-elevator/">Toilet Paper Elevator</a>.' },
   { when: "'24–'25", what: 'Interaction Design, CIID', note: 'M.S. A year of research, build, test, repeat, prototyping across mediums.' },
@@ -25,14 +19,9 @@ const years = [
 ---
 <Base title="Wayne Kim, researcher who builds">
   <header class="intro">
-    <a class="status" href="/how-i-can-help/"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles →</a>
     <h1>Wayne Kim</h1>
     <p class="lead">Interaction designer and researcher.</p>
-    <ol class="offers" aria-label="How I can help">
-      {offers.map((o, i) => (
-        <li><a href={`/how-i-can-help/#way-${i + 1}`}><span class="o-n">{String(i + 1).padStart(2, '0')}</span><strong>{o.title}</strong><span class="o-line">{o.line}</span></a></li>
-      ))}
-    </ol>
+    <a class="status" href="/how-i-can-help/"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles →</a>
   </header>
 
   <section id="work" class="block">
@@ -67,20 +56,12 @@ const years = [
 
 <style>
   .intro { margin-bottom: 120px; }
-  .status { display: inline-flex; align-items: center; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 20px; }
+  .status { display: inline-flex; align-items: center; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-top: 20px; }
   a.status { text-decoration: none; }
   a.status:hover { color: var(--accent); }
   .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
   .intro h1 { font-size: 32px; letter-spacing: -0.03em; margin-bottom: 12px; }
   .intro .lead { color: var(--gray); }
-  .offers { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-  .offers a { display: flex; flex-direction: column; gap: 4px; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--ink); text-decoration: none; transition: border-color .15s; }
-  .offers a:hover { border-top-color: var(--accent); }
-  .offers a:hover strong { color: var(--accent); }
-  .o-n { font: var(--meta); color: var(--gray); margin-bottom: 4px; }
-  .offers strong { font: var(--label); font-size: 16px; }
-  .o-line { color: var(--gray); font-size: 15px; line-height: 1.45; }
-  @media (max-width: 720px) { .offers { grid-template-columns: 1fr; gap: 16px; margin-top: 36px; } }
   .sub { color: var(--gray); max-width: 36em; }
   .block { margin-bottom: 120px; scroll-margin-top: 24px; }
   .years { list-style: none; max-width: 760px; }
