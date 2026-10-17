@@ -101,9 +101,9 @@ In playtests, it didn't work. The technology became the thing people paid attent
 <table>
   <thead><tr><th>What I saw</th><th>The lesson</th><th>Became</th></tr></thead>
   <tbody>
-    <tr><td>Rotating prompts</td><td class="feel">A prompt from someone else gets people started</td><td>Draw</td></tr>
+    <tr><td>Off hand, with a clock</td><td class="feel">A set prompt and a timer give outside permission to start</td><td>Draw</td></tr>
     <tr><td>Off hand, rainstick</td><td class="feel">When perfect is impossible, people relax</td><td>Using</td></tr>
-    <tr><td>See-through canvas</td><td class="feel">Seeing and building on each other makes it social</td><td>While</td></tr>
+    <tr><td>See-through canvas, rotating prompts</td><td class="feel">Seeing, prompting, and building on each other makes it social</td><td>While</td></tr>
     <tr><td>Happy Accidents Studio</td><td class="feel">Technology gets in the way of starting</td><td>Cards</td></tr>
   </tbody>
 </table>
