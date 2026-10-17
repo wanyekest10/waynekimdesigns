@@ -1,0 +1,29 @@
+---
+// A Play write-up: one column, title, one line, a few facts, then the story.
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths() {
+  const play = await getCollection('play');
+  return play.map((p) => ({ params: { slug: p.id }, props: { p } }));
+}
+const { p } = Astro.props;
+const { Content } = await render(p);
+const d = p.data;
+---
+<Base title={`${d.title}, Wayne Kim`} description={d.headline}>
+  <header class="play-top">
+    <a class="toc-back" href="/play/">← Play</a>
+    <h1>{d.title}</h1>
+    <p class="lead">{d.headline}</p>
+    {d.facts.length > 0 && <p class="play-facts">{d.facts.map((f) => <span>{f}</span>)}</p>}
+  </header>
+  <img class="hero" src={d.hero} alt={d.heroAlt} />
+  <article class="play-body"><Content /></article>
+</Base>
+<style>
+  .play-top { margin-top: 64px; max-width: var(--measure); }
+  .play-top .toc-back { margin-bottom: 24px; }
+  .play-facts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 20px; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); }
+  .hero { margin: 40px 0 48px; }
+  .play-body :global(figure) { margin: 32px 0; }
+</style>
