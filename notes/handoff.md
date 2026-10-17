@@ -55,7 +55,7 @@ jumps:                   # phone-only jump links; `to` = heading slug
 - Experiments write-ups (Tamer only now) live in `src/content/experiments/` and use `src/pages/experiments/[slug].astro`. Assets in `public/experiments/`.
 - Collaborate page at /collaborate/ (`src/pages/collaborate.astro` + `src/components/Collaborate.astro`): three service cards with time ranges, How it starts, and a message form (Web3Forms, key in the component) plus direct email. Nav item Collaborate. /how-i-can-help redirects there.
 - Closing prompt above the footer on every page except /collaborate/ (`prompt` prop on Base). Links to /collaborate/#message.
-- More projects (`src/components/MoreProjects.astro`) at the end of every case study and experiment: next two in line, Show 2 more. The line runs Work (homepage order) then Experiments, and loops.
+- More projects (`src/components/MoreProjects.astro`) at the end of every case study and experiment: the next two in line. The line runs Work (homepage order) then Experiments, and loops.
 - Every old Framer URL redirects (astro.config.mjs).
 - CIID pages list "Responsibility" instead of Role. BSS and Larvae Lagoon have none.
 - Each CIID project ends with its full Vimeo/YouTube video embedded (`figure.embed`).

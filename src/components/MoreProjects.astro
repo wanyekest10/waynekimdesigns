@@ -1,5 +1,5 @@
 ---
-// "More projects": the next two in line after this one, then two more per click.
+// "More projects": the next two in line after this one.
 // The line runs through Work in homepage order, then Experiments in their order, and loops.
 import { getCollection } from 'astro:content';
 import { experiments } from '../data/experiments';
@@ -20,32 +20,20 @@ const ordered = at < 0 ? line : [...line.slice(at + 1), ...line.slice(0, at)];
 <section class="more-projects" aria-label="More projects">
   <h2 class="section-title">More projects</h2>
   <div class="mp-grid">
-    {ordered.map((p, i) => (
-      <a class="mp-card" href={p.href} hidden={i >= 2}>
+    {ordered.slice(0, 2).map((p) => (
+      <a class="mp-card" href={p.href}>
         <img src={p.image} alt={p.alt} loading="lazy" />
         <span class="mp-text"><span class="mp-title">{p.title}</span><span class="mp-kind">{p.kind}</span></span>
         <span class="mp-line">{p.line}</span>
       </a>
     ))}
   </div>
-  {ordered.length > 2 && <button class="mp-more" type="button">Show 2 more</button>}
 </section>
 )}
-<script>
-  document.querySelectorAll('.more-projects').forEach((sec) => {
-    const btn = sec.querySelector<HTMLButtonElement>('.mp-more');
-    btn?.addEventListener('click', () => {
-      const hidden = [...sec.querySelectorAll<HTMLElement>('.mp-card[hidden]')];
-      hidden.slice(0, 2).forEach((c) => c.removeAttribute('hidden'));
-      if (hidden.length <= 2) btn.remove();
-    });
-  });
-</script>
 <style>
   .more-projects { margin-top: 96px; padding-top: 40px; border-top: 1px solid var(--rule); }
   .mp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 24px; }
   .mp-card { color: var(--ink); text-decoration: none; display: block; min-width: 0; }
-  .mp-card[hidden] { display: none; }
   .mp-card:hover { text-decoration: none; }
   .mp-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 6px; background: var(--panel); margin-bottom: 14px; display: block; transition: opacity .2s; }
   .mp-card:hover img { opacity: .9; }
@@ -54,7 +42,5 @@ const ordered = at < 0 ? line : [...line.slice(at + 1), ...line.slice(0, at)];
   .mp-title { font: var(--label); font-size: 16px; }
   .mp-kind { font: var(--meta); color: var(--gray); }
   .mp-line { display: block; font: var(--small); font-size: 14px; color: var(--gray); margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .mp-more { margin-top: 32px; font: var(--label); font-size: 15px; color: var(--ink); background: none; border: 1px solid var(--rule); border-radius: 999px; padding: 10px 20px; cursor: pointer; }
-  .mp-more:hover { border-color: var(--ink); }
   @media (max-width: 720px) { .mp-grid { grid-template-columns: 1fr; } }
 </style>
