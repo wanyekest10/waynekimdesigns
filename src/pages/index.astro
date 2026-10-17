@@ -171,8 +171,9 @@ const years = [
 
 <style>
   .intro { margin-bottom: 120px; }
-  .bw { display: inline-block; white-space: nowrap; }
-  .bc { display: inline-block; will-change: transform; }
+  /* The letter spans are made by script, so they need global rules. */
+  :global(h1.brush .bw) { display: inline-block; white-space: nowrap; }
+  :global(h1.brush .bc) { display: inline-block; will-change: transform; }
   h1.brush { cursor: default; user-select: none; -webkit-user-select: none; touch-action: pan-y; }
   .intro h1 { font-size: 40px; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; text-wrap: balance; }
   .method { color: var(--ink); max-width: 30em; }
