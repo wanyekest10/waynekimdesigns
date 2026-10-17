@@ -88,12 +88,6 @@ Stacking it up instead worked better. Height gives you milestones within days, a
 
 Most of the time it's climbing: one big number, feet up, and the landmarks behind and ahead. When the count passes a landmark, it switches to an arrival screen, with the name set large, where it is, and how tall it is. Eighteen landmarks, from the Hollywood Sign to the Burj Khalifa, and even the Moon.
 
-<figure class="pair">
-  <img src="/work/tpe-assets/close-4ft.webp" alt="Close-up of the screen at 4 ft up above the roll"/>
-  <img src="/work/tpe-assets/close-10ft.webp" alt="Close-up of the screen at 10 ft up above the roll"/>
-  <figcaption>4 ft up, then 10.</figcaption>
-</figure>
-
 ### Three screens, one state machine
 
 The screen is a small state machine. It starts on G, climbs while nobody's looking, and flips to an arrival screen for one visit when the count passes a landmark. Past the Burj Khalifa, the next stop is always the Moon.
