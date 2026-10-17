@@ -1,6 +1,6 @@
 ---
 // "More projects": the next two in line after this one.
-// The line runs through Work in homepage order, then Experiments in their order, and loops.
+// The line runs through Work in homepage order, then Play in its order, and loops.
 import { getCollection } from 'astro:content';
 import { experiments } from '../data/experiments';
 
@@ -11,7 +11,7 @@ const work = (await getCollection('work'))
   .map((w) => ({ href: `/work/${w.id}/`, title: w.data.title, line: w.data.summary, image: (w.data as any).card ?? w.data.hero, alt: (w.data as any).cardAlt ?? w.data.heroAlt, kind: 'Work' }));
 const exp = experiments
   .filter((e: any) => e.href && e.image)
-  .map((e: any) => ({ href: e.href, title: e.name, line: e.line, image: e.image, alt: '', kind: 'Experiment' }));
+  .map((e: any) => ({ href: e.href, title: e.name, line: e.line, image: e.image, alt: '', kind: 'Play' }));
 const line = [...work, ...exp];
 const at = line.findIndex((p) => p.href === current);
 const ordered = at < 0 ? line : [...line.slice(at + 1), ...line.slice(0, at)];

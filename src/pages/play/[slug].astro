@@ -13,14 +13,14 @@ const d = p.data;
 ---
 <Base title={`${d.title}, Wayne Kim`} description={d.headline} prompt="Working on something like this?">
   <header class="play-top">
-    <a class="toc-back" href="/experiments/">← Experiments</a>
+    <a class="toc-back" href="/play/">← Play</a>
     <h1>{d.title}</h1>
     <p class="lead">{d.headline}</p>
     {d.facts.length > 0 && <p class="play-facts">{d.facts.map((f) => <span>{f}</span>)}</p>}
   </header>
   <img class="hero" src={d.hero} alt={d.heroAlt} />
   <article class="play-body"><Content /></article>
-  <MoreProjects current={`/experiments/${p.id}/`} />
+  <MoreProjects current={`/play/${p.id}/`} />
 </Base>
 <style>
   .play-top { margin-top: 64px; max-width: var(--measure); }

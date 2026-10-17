@@ -18,7 +18,7 @@ Start a new session with: "Read notes/handoff.md and notes/backlog.md in wanyeke
 - Astro 5 static site. `npm run build` builds to `dist/`. `wrangler.jsonc` serves `dist/` on Cloudflare.
 - Case studies: `src/content/work/*.md`. Assets: `public/work/<slug>-assets/`.
 - Template: `src/pages/work/[slug].astro`. Styles: `src/styles/global.css`. Footer and nav: `src/layouts/Base.astro`.
-- Homepage: `src/pages/index.astro`. Work page: `src/pages/work/index.astro` (compact rows via `Rows.astro`: name, skill label, summary, year, hover image; plus an optional archive list from `src/data/archive.ts`). Experiments page: `src/pages/experiments/index.astro` (from `src/data/experiments.ts`).
+- Homepage: `src/pages/index.astro`. Work page: `src/pages/work/index.astro` (compact rows via `Rows.astro`: name, skill label, summary, year, hover image; plus an optional archive list from `src/data/archive.ts`). Play page (renamed from Experiments; /experiments redirects): `src/pages/play/index.astro` (from `src/data/experiments.ts`).
 - `src/rehype-fields.mjs` handles old-style field formatting. Mostly unused now.
 
 ## Design system
