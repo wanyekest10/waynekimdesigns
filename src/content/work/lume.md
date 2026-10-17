@@ -32,7 +32,7 @@ Our first idea was to turn the helmet's visor into a display: speed, navigation,
 
 So we went the other way: subtle cues that sit at the edge of vision and only ask for attention when it matters.
 
-<figure class="medium"><img src="/work/lume-assets/bike-rig.webp" alt="An early rig: a rider in a helmet on a stationary bicycle in front of a projected road"/><figcaption>Testing the ride on a bike rig.</figcaption></figure>
+<figure class="frame"><img src="/work/lume-assets/bike-rig.webp" alt="An early rig: a rider in a helmet on a stationary bicycle in front of a projected road"/><figcaption>Testing the ride on a bike rig.</figcaption></figure>
 
 ## How it works
 
@@ -46,7 +46,7 @@ So we went the other way: subtle cues that sit at the edge of vision and only as
 
 We built the ride in Unity and ran it on a Meta Quest 3. To make it feel like riding instead of watching, we added a physical handlebar: an Arduino reads a potentiometer, so turning and twisting the bar steers and sets the speed.
 
-<figure class="grid3">
+<figure class="grid3 tall">
   <div><video src="/work/lume-assets/unity-helmet.mp4" poster="/work/lume-assets/unity-helmet-poster.jpg" autoplay muted loop playsinline></video><p>Building the helmet view in Unity.</p></div>
   <div><video src="/work/lume-assets/potentiometer.mp4" poster="/work/lume-assets/potentiometer-poster.jpg" autoplay muted loop playsinline></video><p>Wiring the potentiometer to the ride.</p></div>
   <div><video src="/work/lume-assets/handlebar-build.mp4" poster="/work/lume-assets/handlebar-build-poster.jpg" autoplay muted loop playsinline></video><p>Testing the handlebar with the headset.</p></div>
@@ -59,4 +59,4 @@ We built the ride in Unity and ran it on a Meta Quest 3. To make it feel like ri
   <img src="/work/lume-assets/demo-pair.webp" alt="Two people at the demo, one riding in the headset"/>
 </figure>
 
-<figure class="wide"><img src="/work/lume-assets/demo-room.webp" alt="The demo in a large hall, with the rider's view projected on a big screen"/></figure>
+<figure class="frame"><img src="/work/lume-assets/demo-room.webp" alt="The demo in a large hall, with the rider's view projected on a big screen"/></figure>

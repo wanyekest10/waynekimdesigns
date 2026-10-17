@@ -18,7 +18,7 @@ const { items } = Astro.props;
   .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 24px; }
   .card { color: var(--ink); text-decoration: none; display: block; min-width: 0; }
   .card:hover { text-decoration: none; }
-  .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; background: var(--panel); margin-bottom: 14px; transition: opacity .2s; }
+  .card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 6px; background: var(--panel); margin-bottom: 14px; transition: opacity .2s; }
   .card img.contain { object-fit: contain; }
   .card:hover img { opacity: .9; }
   .card:hover .card-title { color: var(--accent); }

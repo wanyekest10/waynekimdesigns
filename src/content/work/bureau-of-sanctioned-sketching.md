@@ -113,7 +113,7 @@ In playtests, it didn't work. The technology became the thing people paid attent
 
 Three card stacks, one minute, one shared sheet of paper.
 
-<figure class="medium"><video src="/work/bss-assets/how-it-plays.mp4" poster="/work/bss-assets/how-it-plays-poster.jpg" autoplay muted loop playsinline></video></figure>
+<figure class="frame"><video src="/work/bss-assets/how-it-plays-3x2.mp4" poster="/work/bss-assets/how-it-plays-3x2-poster.jpg" autoplay muted loop playsinline></video></figure>
 
 - **Draw** sets the subject: "the place you're in."
 - **Using** sets a physical limit: "your non-dominant hand," "eyes closed."
@@ -138,7 +138,7 @@ Players often forgot they were using cards at all. They were drawing and talking
 
 That became the blank wildcards. They weren't in the plan. They came from watching players take ownership of the game.
 
-<figure class="medium"><img src="/work/bss-assets/group-play.webp" alt="Several people drawing at once around a table covered in BSS cards"/></figure>
+<figure class="frame"><img src="/work/bss-assets/group-play.webp" alt="Several people drawing at once around a table covered in BSS cards"/></figure>
 
 ## Why a bureau
 
@@ -158,4 +158,4 @@ Playful drawing fades in the places that run on forms: school, then work. Real b
 
 **The result is real but narrow.** BSS gets people to start. Whether they come back is the next question, and I haven't tested it yet.
 
-<figure class="narrow"><img src="/work/bss-assets/drawing-wall.webp" alt="A wall of playtest drawings pinned up in a grid"/><figcaption>Everything players drew during playtests.</figcaption></figure>
+<figure class="frame"><img src="/work/bss-assets/drawing-wall-3x2.webp" alt="A wall of playtest drawings pinned up in a grid"/><figcaption>Everything players drew during playtests.</figcaption></figure>

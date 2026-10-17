@@ -129,7 +129,7 @@ With Matt Regan, I turned the findings into three design principles, so they cou
 
 I presented the findings at the product, design, and engineering leadership offsite. The research gave leadership the confidence to launch Glorify Groups, and they dedicated three of the four product, design, and engineering pods to it. Leadership, PMs, designers, and engineers built on this research as the foundation.
 
-<figure class="inline"><img src="/work/glorify-assets/offsite.webp" alt="Presenting findings to the product, design, and engineering team around a conference table"/><figcaption>Presenting at the product, design, and engineering offsite.</figcaption></figure>
+<figure class="frame"><img src="/work/glorify-assets/offsite.webp" alt="Presenting findings to the product, design, and engineering team around a conference table"/><figcaption>Presenting at the product, design, and engineering offsite.</figcaption></figure>
 
 - **1.8M+** users in Glorify Groups
 - **20%** of daily active users use Groups

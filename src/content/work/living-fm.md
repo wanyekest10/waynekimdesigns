@@ -39,7 +39,7 @@ facts:
 
 We wanted to be more intentional about our free time at home. The habits we wanted to change, like reaching for the phone the moment we sat down, aren't failures of willpower. They're reinforced by products designed to hold attention. We wondered whether AI could do the opposite: a presence in the room that simply noticed, out loud.
 
-<video src="/work/living-assets/device-loop.mp4" poster="/work/living-assets/device-loop-poster.jpg" autoplay muted loop playsinline></video>
+<figure class="frame"><video src="/work/living-assets/device-loop.mp4" poster="/work/living-assets/device-loop-poster.jpg" autoplay muted loop playsinline></video></figure>
 
 ## Bodystorming: timing beats content
 
@@ -57,7 +57,7 @@ The surprise was that the words mattered less than the timing. Commentary that a
 
 Liv is a small wooden enclosure holding an ESP32 camera, a Bluetooth speaker, and a 5V battery. The camera watches the room, a model classifies what you're doing, and Liv answers through the speaker.
 
-![Liv's hardware: ESP32 camera, Bluetooth speaker, 5V battery, and a step-up converter inside a wooden frame](/work/living-assets/hardware.webp)
+<figure class="frame"><img src="/work/living-assets/hardware.webp" alt="Liv's hardware: ESP32 camera, Bluetooth speaker, 5V battery, and a step-up converter inside a wooden frame"/></figure>
 
 I trained the model in Teachable Machine on our own sample movements. Recognition was inconsistent across activities, and an unreliable narrator is worse than none, so we narrowed to four scenarios we could recognize well: idle, doomscrolling, yoga, and dancing.
 
@@ -79,7 +79,7 @@ A few of her lines:
 
 <blockquote><p>"You're moving slow enough for the room to catch up; that's a rare kind of quiet."</p><p>Yoga, 87% confidence</p></blockquote>
 
-<video src="/work/living-assets/liv-in-action-1.mp4" poster="/work/living-assets/liv-in-action-1-poster.jpg" autoplay muted loop playsinline></video>
+<figure class="frame"><video src="/work/living-assets/liv-in-action-1.mp4" poster="/work/living-assets/liv-in-action-1-poster.jpg" autoplay muted loop playsinline></video></figure>
 
 ## Seeing what the system sees
 
@@ -97,7 +97,7 @@ Our early prototypes focused on interrupting doomscrolling. User testing showed 
 
 In Korean, 잔소리 (jansori) describes exactly this: nagging that overwhelms care through repetition. So we expanded Liv's role beyond interruption to positive reinforcement and ambient music. She encourages you when you cook or stretch, plays something fitting, and only sometimes teases you for scrolling. In a future version, people would get more control over when and how she speaks.
 
-<video src="/work/living-assets/liv-in-action-2.mp4" poster="/work/living-assets/liv-in-action-2-poster.jpg" autoplay muted loop playsinline></video>
+<figure class="frame"><video src="/work/living-assets/liv-in-action-2.mp4" poster="/work/living-assets/liv-in-action-2-poster.jpg" autoplay muted loop playsinline></video></figure>
 
 ## A speculative exploration
 

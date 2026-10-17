@@ -31,7 +31,7 @@ I tried six layouts, mixing "Tamer Kebab Eating Club," "Fueled by Kebab," and bu
 
 <figure class="medium"><img src="/play/tamer-kebap-assets/concepts-final.webp" alt="Six shirt concepts, front and back. Concepts 1 to 5 are faded; concept 6, Tamer Kebab Eating Club with the CIID mark and build.test.repeat, is outlined in blue."/><figcaption>Six concepts, front and back. Concept 6 became the shirt.</figcaption></figure>
 
-<figure><img src="/play/tamer-kebap-assets/shirts.webp" alt="The final shirt, front and back: Tamer Kebap Eating Club on the front, the CIID kebab mark and build.test.repeat on the back"/><figcaption>Concept 6, the final shirt.</figcaption></figure>
+<figure class="frame"><img src="/play/tamer-kebap-assets/shirts-3x2.webp" alt="The final shirt, front and back: Tamer Kebap Eating Club on the front, the CIID kebab mark and build.test.repeat on the back"/><figcaption>Concept 6, the final shirt.</figcaption></figure>
 
 My classmates liked it enough to ask for their own. I'm planning to give one to the crew at Tamer, and maybe bring a stack to our reunion in 2027.
 
