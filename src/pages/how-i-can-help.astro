@@ -1,0 +1,99 @@
+---
+import Base from '../layouts/Base.astro';
+
+const ways = [
+  {
+    title: 'Should we build this?',
+    when: "You're about to commit to a bet, and you're not sure it's the right one.",
+    what: "I turn the doubt into one question we can test, put a quick prototype in front of the people who would use it, and watch what they actually do.",
+    get: 'A decision, with evidence behind it.',
+    proof: [ { name: 'Glorify Groups', href: '/work/glorify-groups/' }, { name: 'RaiseMe Portal', href: '/work/raiseme-portal/' } ],
+  },
+  {
+    title: 'Make it real enough to test',
+    when: "The idea involves sensors, a camera, hardware, or AI, and slides won't settle it.",
+    what: 'I build a working prototype, from the code and electronics to the thing you hold, and test it where it would actually live.',
+    get: 'Something people can use, and what we learned from watching them use it.',
+    proof: [ { name: 'Living.fm', href: '/work/living-fm/' }, { name: 'room_tone', href: '/work/room-tone/' }, { name: 'Linee', href: '/work/linee/' } ],
+  },
+  {
+    title: 'Get the room to agree',
+    when: "Your leaders have strong opinions about what's next, and they haven't been tested against each other.",
+    what: 'I design and run a workshop that starts from written positions instead of whoever speaks first, then synthesize the wall into themes.',
+    get: 'A plan someone can act on.',
+    proof: [ { name: 'Facilitation', href: '/work/facilitation/' } ],
+  },
+];
+
+const steps = [
+  'Email me a few lines about what you are working on. It doesn\'t need to be polished.',
+  'We talk for 30 minutes about where you are and what is in the way.',
+  'If it\'s a fit, I send a short proposal with scope and timeline.',
+];
+---
+<Base title="How I can help, Wayne Kim" description="How Wayne Kim can help: testing a bet before you build it, prototyping hardware and AI ideas, and running workshops that end in a plan.">
+  <header class="top">
+    <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
+    <h1>How I can help</h1>
+    <p class="lead">I'm most useful when a team needs to understand a problem and build something to test it. Most researchers don't build, and most prototypers don't research. I do both.</p>
+  </header>
+
+  <ol class="ways">
+    {ways.map((w, i) => (
+      <li>
+        <span class="num">{String(i + 1).padStart(2, '0')}</span>
+        <div>
+          <h2>{w.title}</h2>
+          <dl>
+            <dt>When</dt><dd>{w.when}</dd>
+            <dt>What I do</dt><dd>{w.what}</dd>
+            <dt>You get</dt><dd>{w.get}</dd>
+            <dt>See</dt><dd class="proof">{w.proof.map((p) => <a href={p.href}>{p.name}</a>)}</dd>
+          </dl>
+        </div>
+      </li>
+    ))}
+  </ol>
+
+  <section class="start">
+    <h2 class="section-title">How it starts</h2>
+    <ol class="steps">
+      {steps.map((s) => <li>{s}</li>)}
+    </ol>
+    <p class="cta">
+      <a href="mailto:waynekimdesigns@gmail.com">waynekimdesigns@gmail.com</a>
+      <span>Hiring full-time? Here's my <a href="/resume.pdf">resume</a>.</span>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .top { max-width: var(--measure); margin-bottom: 72px; }
+  .status { display: inline-flex; align-items: center; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 20px; }
+  .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
+  .lead { color: var(--gray); }
+
+  .ways { list-style: none; margin-bottom: 96px; }
+  .ways > li { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 32px 0; border-top: 1px solid var(--rule); }
+  .ways > li:last-child { border-bottom: 1px solid var(--rule); }
+  .num { font: var(--meta); color: var(--gray); padding-top: 6px; }
+  .ways h2 { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 16px; }
+  .ways dl { display: grid; grid-template-columns: 96px 1fr; gap: 10px 24px; max-width: 720px; }
+  .ways dt { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); padding-top: 4px; }
+  .ways dd { color: var(--gray); }
+  .proof { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+
+  .start { max-width: var(--measure); }
+  .steps { counter-reset: s; list-style: none; margin-bottom: 40px; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 32px 1fr; padding: 10px 0; color: var(--gray); }
+  .steps li::before { content: counter(s); font: var(--meta); color: var(--gray); padding-top: 4px; }
+  .cta { display: flex; flex-direction: column; gap: 8px; }
+  .cta > a { font: var(--h2); letter-spacing: -0.01em; }
+  .cta span { color: var(--gray); font-size: 15px; }
+
+  @media (max-width: 720px) {
+    .ways > li { grid-template-columns: 1fr; gap: 8px; }
+    .ways dl { grid-template-columns: 1fr; gap: 2px; }
+    .ways dd { margin-bottom: 12px; }
+  }
+</style>
