@@ -41,7 +41,7 @@ Linee became something else: ambient timekeeping, a system that communicates whe
 
 ## A shared language
 
-Later in the project, I proposed magnetic tiles: housemates write a note or stick a symbol on the timeline, like a demo, an open house, or a dinner. The day stops being a schedule handed down and becomes something the house can negotiate.
+Later in the project, I proposed magnetic tiles: housemates write a note or stick a symbol on the timeline, like taking out the trash, being on a call, or having friends over. The day stops being a schedule handed down and becomes something the house can negotiate.
 
 <figure class="pair even">
   <img src="/work/linee-assets/tile-writing.webp" alt="Writing CIID Open House on a white tile stuck to the 17:00 block, next to a red tile marked Demo"/>
