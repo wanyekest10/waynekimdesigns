@@ -28,7 +28,7 @@ facts:
 
 Adults still want to play. They just stop believing they're allowed to, and drawing is often the first kind of play to go.
 
-I started with desk research. <a href="https://en.wikipedia.org/wiki/Erving_Goffman" target="_blank" rel="noopener">Erving Goffman</a>'s idea of performed selves explains why adults guard how they look in front of others. <a href="https://en.wikipedia.org/wiki/Johan_Huizinga" target="_blank" rel="noopener">Johan Huizinga</a>'s magic circle describes the agreed-upon space where play is allowed. Together they pointed me at the space that comes before play: permission.
+I started with desk research. Erving Goffman's idea of <a href="https://en.wikipedia.org/wiki/The_Presentation_of_Self_in_Everyday_Life" target="_blank" rel="noopener">performed selves</a> explains why adults guard how they look in front of others. Johan Huizinga's <a href="https://en.wikipedia.org/wiki/Magic_circle_(games)" target="_blank" rel="noopener">magic circle</a> describes the agreed-upon space where play is allowed. Together they pointed me at the space that comes before play: permission.
 
 Then I talked to 14 people, adults aged 23 to 40, play designers, and therapists, and ran a drawing survey with 47 people. The block was rarely about skill.
 
@@ -40,7 +40,7 @@ Then I talked to 14 people, adults aged 23 to 40, play designers, and therapists
 
 #### The block has a start date
 
-People could point to exactly when drawing stopped being play, usually between 9 and 13. That lines up with what <a href="https://en.wikipedia.org/wiki/Viktor_Lowenfeld" target="_blank" rel="noopener">Viktor Lowenfeld</a> called the "period of decision," when children who aren't encouraged stop drawing and carry "I can't draw" into adulthood.
+People could point to exactly when drawing stopped being play, usually between 9 and 13. That lines up with what Viktor Lowenfeld called the <a href="https://education.stateuniversity.com/pages/2195/Lowenfeld-Viktor-1903-1960.html" target="_blank" rel="noopener">"period of decision,"</a> when children who aren't encouraged stop drawing and carry "I can't draw" into adulthood.
 
 > "From high school onward we were told to draw more of serious stuffs... it was not fun anymore."
 >
@@ -171,7 +171,6 @@ The While cards turned drawing into something closer to improv. In improv, "yes,
   <figcaption><span><i class="dot p1"></i>Player 1</span><span><i class="dot p2"></i>Player 2</span>Each mark is an offer. Nobody owns the drawing, so nobody gets judged for it.</figcaption>
 </figure>
 
-<figure class="frame"><img src="/work/bss-assets/yes-and-drawing.webp" alt="A shared drawing on purple paper, built up from two players' lines that meet and stack on each other"/><figcaption>Two players, one drawing.</figcaption></figure>
 
 A momentum effect took over, and some players started writing their own prompts on scrap paper.
 
