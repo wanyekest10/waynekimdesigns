@@ -1,5 +1,5 @@
 ---
-title: Tamer Kebap shirt
+title: Tamer Kebap Eating Club
 headline: "How do you say thank you to a kebab shop, and have fun doing it?"
 facts: ["Object", "July 2026", "A celebration"]
 hero: "/play/tamer-kebap-assets/shirts.webp"
