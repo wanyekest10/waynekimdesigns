@@ -22,9 +22,12 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 strong { font-weight: 500; color: var(--ink); }
 
 .wrap { max-width: var(--wide); margin: 0 auto; }
-.nav { display: flex; justify-content: space-between; align-items: baseline; font: var(--meta); letter-spacing: -0.02em; margin: -16px 0 80px; padding: 16px 0; position: sticky; top: 0; z-index: 20; background: var(--paper); box-shadow: 0 0 0 100vmax var(--paper); clip-path: inset(0 -100vmax); transition: border-color .2s; border-bottom: 1px solid transparent; }
+.nav { display: flex; justify-content: space-between; align-items: baseline; font: 400 15px/1.4 var(--sans); letter-spacing: -0.01em; margin: -16px 0 80px; padding: 16px 0; position: sticky; top: 0; z-index: 20; background: var(--paper); box-shadow: 0 0 0 100vmax var(--paper); clip-path: inset(0 -100vmax); transition: border-color .2s; border-bottom: 1px solid transparent; }
 .nav.scrolled { border-bottom-color: var(--rule); }
 .nav a, .nav .home { color: var(--ink); }
+.nav .home { font-weight: 500; }
+.nav ul a { color: var(--gray); }
+.nav ul a:hover { color: var(--ink); }
 .nav ul { list-style: none; display: flex; gap: 20px; }
 .meta { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 16px; }
 h1 { font: var(--display); letter-spacing: -0.04em; margin-bottom: 16px; }
