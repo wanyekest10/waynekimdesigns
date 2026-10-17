@@ -51,8 +51,9 @@ jumps:                   # phone-only jump links; `to` = heading slug
 - Rule of thumb: Work = full case studies with process and outcome. Experiments = short sprints and side projects.
 - Toilet Paper Elevator (`src/content/work/toilet-paper-elevator.md`): 14-day solo sprint, used to learn Fusion. Don't mention rebuilding or AI help. YouTube video embedded at the end. Featured on the homepage. Fusion files still to come (go in "Building the pod").
 - Experiments (/experiments, renamed from Play Oct 17; /play/* redirects), in order: Mirrored Canvas, Lume, Tamer Kebap Eating Club, Larvae Lagoon, A Serious Fan. Monet Clock and Above are hidden in `src/data/experiments.ts` until Wayne adds them.
-- Mirrored Canvas, Lume, Larvae Lagoon use the case study template but set `listIn: experiments` (listed in Experiments, back links go there).
-- Experiments write-ups (Tamer, Fan) live in `src/content/experiments/` and use `src/pages/experiments/[slug].astro`. Assets in `public/experiments/`.
+- Mirrored Canvas, Lume, Larvae Lagoon, A Serious Fan use the case study template but set `listIn: experiments` (listed in Experiments, back links go there).
+- Experiments write-ups (Tamer only now) live in `src/content/experiments/` and use `src/pages/experiments/[slug].astro`. Assets in `public/experiments/`.
+- How I can help page (`src/pages/how-i-can-help.astro`), linked from the homepage status line. Three offers: Should we build this?, Make it real enough to test, Get the room to agree. Audience not decided yet.
 - Every old Framer URL redirects (astro.config.mjs).
 - CIID pages list "Responsibility" instead of Role. BSS and Larvae Lagoon have none.
 - Each CIID project ends with its full Vimeo/YouTube video embedded (`figure.embed`).
