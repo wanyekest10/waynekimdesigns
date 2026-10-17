@@ -4,8 +4,58 @@ import Rows from '../../components/Rows.astro';
 import { experiments } from '../../data/experiments';
 ---
 <Base title="Play, Wayne Kim" description="Side quests and things Wayne Kim was curious about.">
-  <h1>Play</h1>
+  <h1 class="dial" aria-label="Play">Play</h1>
   <p class="lead">Side quests and things I was curious about.</p>
   <Rows rows={experiments} />
 </Base>
-<style>.lead { margin-bottom: 64px; }</style>
+<style>
+  .lead { margin-bottom: 64px; }
+  /* Spin the dial: letter spans are made by script, so they need global rules. */
+  :global(h1.dial) { display: inline-block; cursor: default; user-select: none; -webkit-user-select: none; touch-action: pan-y; }
+  :global(h1.dial .dc) { display: inline-block; transform-origin: 50% 55%; }
+</style>
+<script>
+  // Each letter spins one full turn when the cursor (or a finger) passes over it,
+  // in the direction you're moving, like flicking a dial.
+  (() => {
+    const h1 = document.querySelector<HTMLElement>('h1.dial');
+    if (!h1) return;
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+    const text = h1.textContent || '';
+    h1.textContent = '';
+    const letters = [...text].map((c) => {
+      const s = document.createElement('span');
+      s.className = 'dc'; s.textContent = c; s.setAttribute('aria-hidden', 'true');
+      h1.appendChild(s);
+      return s;
+    });
+    const busy = new WeakSet<HTMLElement>();
+    const spin = (el: HTMLElement, dir: number, delay = 0) => {
+      if (reduce.matches || busy.has(el)) return;
+      busy.add(el);
+      const a = el.animate(
+        [{ transform: 'rotate(0deg)' }, { transform: `rotate(${dir * 360}deg)` }],
+        { duration: 750, delay, easing: 'cubic-bezier(.2,.75,.25,1.05)' },
+      );
+      a.onfinish = a.oncancel = () => busy.delete(el);
+    };
+    let lastX: number | null = null;
+    const at = (x: number, y: number) => {
+      const el = document.elementFromPoint(x, y);
+      return el instanceof HTMLElement && el.classList.contains('dc') && h1.contains(el) ? el : null;
+    };
+    addEventListener('pointermove', (e) => {
+      const dir = lastX === null || e.clientX >= lastX ? 1 : -1;
+      lastX = e.clientX;
+      const el = at(e.clientX, e.clientY);
+      if (el) spin(el, dir);
+    }, { passive: true });
+    h1.addEventListener('pointerdown', (e) => {
+      const el = at(e.clientX, e.clientY);
+      if (el) spin(el, 1);
+    });
+    addEventListener('pointerup', (e) => { if (e.pointerType !== 'mouse') lastX = null; });
+    // One turn of each letter on load, left to right.
+    setTimeout(() => letters.forEach((el, i) => spin(el, 1, i * 90)), 400);
+  })();
+</script>
