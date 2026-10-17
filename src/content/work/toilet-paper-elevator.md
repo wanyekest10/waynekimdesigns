@@ -75,7 +75,7 @@ The slow e-paper refresh is on purpose. The number doesn't flash or animate when
 
 ## Why an elevator
 
-The first version was a highway: an odometer driving the roll's length from LA City Hall to the Santa Monica Pier. But a single household moves slowly, and a trip measured in miles barely changes from week to week.
+The first version was a highway. A roll spins like a wheel, and paper comes off it in a long strip like a road, so movement felt like the natural metaphor: every pull was distance driven, and an odometer tracked the trip from LA City Hall to the Santa Monica Pier. But a single household moves slowly, and a trip measured in miles barely changes from week to week.
 
 Stacking it up instead worked better. Height gives you milestones within days, and the world is full of tall things people already know. So the climb starts at the ground floor and works up a ladder of landmarks: the Hollywood Sign at 45 feet first, then taller and taller, with the Moon waiting after the summit.
 
