@@ -7,7 +7,7 @@ const work = (await getCollection('work')).filter((w) => (w.data as any).listIn 
 ---
 <Base title="Work, Wayne Kim" description="Case studies and projects by Wayne Kim, researcher and interaction designer.">
   <h1>Work</h1>
-  <p class="lead">Case studies in research, prototyping, and building with AI.</p>
+  <p class="lead">Case studies in research and prototyping.</p>
   <section class="block"><Rows rows={work.map((w) => ({ name: w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/work/${w.id}/`, image: w.data.card ?? w.data.hero }))} /></section>
   {archive.length > 0 && (
   <section class="block">
