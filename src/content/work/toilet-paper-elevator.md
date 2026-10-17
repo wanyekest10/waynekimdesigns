@@ -12,6 +12,7 @@ hero: "/work/tpe-assets/hero-wall.webp"
 heroAlt: "Toilet Paper Elevator on a bathroom wall: a gray e-ink pod reading Ground floor, a slim raceway down to the holder, and a full roll on the bar"
 jumps:
   - { label: "Skip to how it works", to: "how-it-works" }
+  - { label: "Why an elevator", to: "why-an-elevator" }
 short:
   - { lead: "The question.", text: "How do you make an invisible, private, slightly taboo habit visible, without making anyone in the house feel watched?" }
   - { lead: "What I built.", text: "A sleeve inside the roll counts every square. A quiet e-ink screen above the holder turns the total into a climb: 4 ft up, next stop, the Hollywood Sign." }
@@ -103,6 +104,23 @@ The screen is a small state machine. It starts on G, climbs while nobody's looki
   <div class="step focal"><span class="n">03</span><b>Arriving</b><small>Passed a landmark. Shown for one visit.</small></div>
 </div>
 <p class="flow-note">↻ After an arrival, it goes back to climbing toward the next stop.</p>
+
+When a visit ends, the code checks whether the climb passed a new landmark. If it did, that landmark gets the arrival screen for one visit, then it's back to climbing.
+
+```cpp
+void endSession() {
+  stats.lifetimeMm += sessionMm;
+  int passed = passedIndex(heightFt());
+  if (passed > stats.lastShown) {   // a new landmark
+    stats.arrivalIdx = passed;      // show the arrival
+    stats.lastShown = passed;       // only once
+  } else {
+    stats.arrivalIdx = -1;          // back to climbing
+  }
+  saveStats();
+  render();
+}
+```
 
 ### How the screens changed
 
