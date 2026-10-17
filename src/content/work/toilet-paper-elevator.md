@@ -8,12 +8,8 @@ year: "2026"
 featured: true
 label: "Physical computing and fabrication"
 summary: "Toilet paper use, measured in landmark heights."
-hero: "/work/tpe-assets/demo-3x2-poster.jpg"
-heroAlt: "The finished device on a bathroom wall: a gray e-ink screen reading 4 ft up, connected by a slim raceway to the toilet paper holder"
-card: "/work/tpe-assets/card-wall.webp"
-cardAlt: "The gray e-ink pod on a bathroom wall, a slim raceway running down to the toilet paper holder"
-heroVideo: "/work/tpe-assets/demo-3x2.mp4"
-heroPoster: "/work/tpe-assets/demo-3x2-poster.jpg"
+hero: "/work/tpe-assets/hero-wall.webp"
+heroAlt: "Toilet Paper Elevator on a bathroom wall: a gray e-ink pod reading Ground floor, a slim raceway down to the holder, and a full roll on the bar"
 jumps:
   - { label: "Skip to how it works", to: "how-it-works" }
 short:
@@ -134,17 +130,22 @@ I designed the pod in Fusion, along with a raceway that carries the sensor wire 
   <div><img src="/work/tpe-assets/fusion-standoff.webp" alt="Close-up of a printed boss with a hex pocket that traps a nut"/><p>A hex pocket traps each nut.</p></div>
 </figure>
 
-<figure class="frame"><img src="/work/tpe-assets/electronics.webp" alt="An earlier build before assembly: the gray shell, the e-paper screen showing the ground floor, the Arduino on a breadboard on its printed plate, the magnet sleeve, a collar, and a braided cable"/><figcaption>An earlier build, with a collar and a braided cord.</figcaption></figure>
-
-The collar and the cord didn't last. Iterating on the wall showed me the raceway's arm could carry the sensor right up to the sleeve, so the collar wasn't needed. A printed raceway is also easier to hold in place, and calmer to look at than a black cord sticking out.
-
 <figure class="pair natural">
-  <img src="/work/tpe-assets/raceway-purple.webp" alt="The purple prototype raceway taped to the wall, running from a paper stand-in screen down to the holder, with the gray sleeve on the bar"/>
-  <img src="/work/tpe-assets/final-wall.webp" alt="The finished version: the gray pod showing 4 ft up, a slim gray raceway down to the holder, and the sleeve with its magnets on the bar"/>
-  <figcaption>The purple prototype, and the final raceway in gray.</figcaption>
+  <img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/>
+  <img src="/work/tpe-assets/arm-closeup.webp" alt="Close-up of the raceway's arm along the holder, the sensor wires inside, ending at the sleeve's face where the magnets sit"/>
+  <figcaption>Every part on the counter, and the arm bringing the sensor to the magnets.</figcaption>
 </figure>
 
-<figure class="frame"><img src="/work/tpe-assets/raceway-arm.webp" alt="Close-up of the raceway's arm along the holder, sensor wires inside, ending at the sleeve's face where four magnets sit"/><figcaption>The arm brings the sensor to the sleeve's four magnets.</figcaption></figure>
+### Getting the wire to the roll
+
+The wire took four tries. Exposed jumpers worked but looked like a bomb. A braided cord hid the wires, with a gray collar around the holder's arm to hold the sensor, but the cord drooped and the collar stuck out. A purple collar and raceway pinned it flat to the wall. In the end the raceway's own arm could carry the sensor right up to the sleeve, so the collar wasn't needed at all. Easier to install, and calmer to look at.
+
+<figure class="grid4">
+  <div><img src="/work/tpe-assets/iter-1-exposed.webp" alt="The first version: the pod on the wall with loose orange and yellow jumper wires running to the holder"/><p>1. Exposed wiring.</p></div>
+  <div><img src="/work/tpe-assets/iter-2-braided.webp" alt="The pod with a black braided cord looping down to a gray collar on the holder"/><p>2. A braided cord and a collar.</p></div>
+  <div><img src="/work/tpe-assets/iter-3-purple-collar.webp" alt="A purple raceway down the wall into a purple collar around the holder's arm"/><p>3. A raceway and a purple collar.</p></div>
+  <div><img src="/work/tpe-assets/iter-4-final.webp" alt="The final version: the gray pod and slim gray raceway, whose arm runs along the holder to the sleeve"/><p>4. The raceway alone.</p></div>
+</figure>
 
 <figure class="pair">
   <img src="/work/tpe-assets/battery-plate.webp" alt="The battery mounted on a printed plate next to the breadboard and Arduino, with a brass standoff marked"/>
@@ -159,6 +160,11 @@ The collar and the cord didn't last. Iterating on the wall showed me the raceway
 ## On the wall
 
 I left it running in my bathroom for a few days before filming, to see what real household numbers feel like. The screen shows feet up, the square count since it started, and the next stop.
+
+<figure class="pair natural">
+  <img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/>
+  <img src="/work/tpe-assets/final-wall.webp" alt="The finished version in daylight: the gray pod showing 4 ft up above the holder and sleeve"/>
+</figure>
 
 <figure class="grid3">
   <div><img src="/work/tpe-assets/install-sleeve.webp" alt="Hands sliding the gray magnet sleeve into a new roll"/><p>The sleeve goes in the roll.</p></div>
