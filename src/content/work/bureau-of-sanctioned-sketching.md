@@ -154,9 +154,10 @@ Players often forgot they were using cards at all. They were drawing and talking
 >
 > Playtester
 
-<figure class="frame"><video src="/work/bss-assets/playtest.mp4" poster="/work/bss-assets/playtest-poster.jpg" autoplay muted loop playsinline></video></figure>
-
-<figure class="frame"><img src="/work/bss-assets/playtest-cards.webp" alt="Players reaching across the table, pulling cards from the Draw, Using, and While stacks beside an hourglass while others draw"/></figure>
+<figure class="pair keep">
+  <video src="/work/bss-assets/playtest.mp4" poster="/work/bss-assets/playtest-poster.jpg" autoplay muted loop playsinline></video>
+  <img src="/work/bss-assets/playtest-cards.webp" alt="Players reaching across the table, pulling cards from the Draw, Using, and While stacks beside an hourglass while others draw"/>
+</figure>
 
 ### Yes, and
 
