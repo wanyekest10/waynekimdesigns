@@ -17,8 +17,8 @@ order: 4
 year: "2023"
 featured: true
 cardFit: contain
-label: "Research and strategy"
-summary: "Digital spaces for real-life small groups."
+label: "Research through prototyping"
+summary: "Prototyping a small-group feature with 82 people before it shipped to 1.8M+."
 hero: "/work/glorify-assets/shipped-screens.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
 jumps:

@@ -479,25 +479,15 @@ article .concepts figcaption { grid-column: 1 / -1; }
 
 /* Nav name: Wayne 김, which gives way to "Kim" on hover.
    The mark is exactly cap height (0.72em) and sits on the text baseline, so it lines up with "Wayne". */
-.nav .home { display: inline-flex; align-items: baseline; gap: .28em; }
-.kimswap { display: inline-grid; align-items: baseline; justify-items: start; width: .56em; transition: width .45s cubic-bezier(.2,.8,.25,1); }
-.kimswap > * { grid-area: 1 / 1; }
-.kmark { display: block; height: .72em; width: auto; overflow: visible; }
-.kmark .kp { fill: none; stroke: var(--ink); stroke-width: 14; stroke-linecap: square; transform-box: fill-box; transition: transform .45s cubic-bezier(.2,.9,.25,1.2), opacity .3s ease; }
-.kmark .giyeok { transition-delay: 0s; } .kmark .i { transition-delay: .08s; } .kmark .mieum { transition-delay: .16s; }
-.kimswap.apart .kp { opacity: 0; transition-delay: 0s; }
-.kimswap.apart .giyeok { transform: translate(-90%, 0); }
-.kimswap.apart .i { transform: translate(0, -90%); }
-.kimswap.apart .mieum { transform: translate(0, 90%); }
-.kword { display: inline-flex; white-space: pre; }
-.kword span { display: inline-block; opacity: 0; transform: translateY(.25em); transition: opacity .3s ease, transform .4s cubic-bezier(.2,.8,.25,1.15); }
-.kimswap.on .kword span { opacity: 1; transform: none; }
-.kimswap.on .kword span:nth-child(2) { transition-delay: .06s; } .kimswap.on .kword span:nth-child(3) { transition-delay: .12s; }
-.kimswap.on .kp { opacity: 0; transition-delay: 0s; }
-.kimswap.on .giyeok { transform: translate(-10%, 25%) scale(.7); }
-.kimswap.on .i { transform: translate(-30%, 20%) scaleY(.6); }
-.kimswap.on .mieum { transform: translate(55%, -30%) scale(.8); }
-@media (prefers-reduced-motion: reduce) { .kimswap, .kimswap * { transition: none !important; } }
+/* Nav name: "Wayne Kim", and on a mouse hover it says where it goes. */
+.nav .home { display: inline-grid; }
+.nav .home > span { grid-area: 1 / 1; transition: opacity .22s ease, transform .22s ease; }
+.nav .home .hh { opacity: 0; transform: translateY(4px); }
+@media (hover: hover) {
+  .nav .home:hover .hn { opacity: 0; transform: translateY(-4px); }
+  .nav .home:hover .hh { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .nav .home > span { transition: none; } }
 .nav .home:hover, .nav .home:focus-visible { text-decoration: none; }
 
 /* TPE: before (early screens) beside after (flipbook of every final screen) */
