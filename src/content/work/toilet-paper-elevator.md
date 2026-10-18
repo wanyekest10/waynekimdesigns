@@ -119,7 +119,7 @@ I tested the first screens with people and iterated. The final version adds the 
   <div class="ba-col">
     <span class="ba-tag">Before</span>
     <div class="ba-before" aria-label="Early screens on the bare e-paper module">
-      <img class="on" src="/work/tpe-assets/screen-early-climb.webp" alt="An early climbing screen on the bare e-paper module: 12,028 ft up, next stop Mount Fuji"/>
+      <img class="on" src="/work/tpe-assets/screen-early-climb-orange.webp" alt="An early climbing screen in an orange printed frame: 26 ft up, next stop Hollywood Sign, 19 ft to go, 80 squares so far"/>
       <img src="/work/tpe-assets/screen-early-arrive.webp" alt="An early arrival screen: Now arriving, Motherland Monument, 335 ft up, up next Great Pyramid"/>
     </div>
     <p class="ba-note">Early screens on the bare module.</p>
