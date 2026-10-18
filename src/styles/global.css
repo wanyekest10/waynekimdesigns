@@ -175,14 +175,17 @@ article .tldr .field { max-width: none; border-top-color: rgba(20, 20, 20, 0.08)
 .toc a .n { flex: none; width: 16px; }
 .toc a:hover, .toc a.active { color: var(--ink); text-decoration: none; }
 @media (min-width: 1000px) {
+  /* Facts and the table of contents share one sidebar that runs the full height,
+     so a long facts list never pushes the article down. */
   .cs { display: grid; grid-template-columns: 200px minmax(0, 1fr); column-gap: 56px;
-        grid-template-areas: "facts top" "facts hero" "toc body"; }
+        grid-template-areas: "side top" "side hero" "side body"; }
   .cs-top { grid-area: top; }
-  .cs-facts { grid-area: facts; display: block; margin-top: 68px; align-self: start; }
+  .cs-side { grid-area: side; }
+  .cs-facts { display: block; margin-top: 68px; }
   .cs-facts > div { margin-bottom: 22px; }
   .hero { grid-area: hero; }
-  .toc-col { grid-area: toc; display: block; }
-  .toc { position: sticky; top: 88px; max-height: calc(100vh - 120px); overflow-y: auto; }
+  .toc-col { display: block; margin-top: 40px; position: sticky; top: 88px; }
+  .toc { max-height: calc(100vh - 120px); overflow-y: auto; }
   .cs-body { grid-area: body; }
   .jumps { display: none; }
 }
@@ -527,3 +530,7 @@ article figure.vl-crop .vl-sound { bottom: 12px; }
 /* One portrait video, kept to a comfortable width. */
 article figure.portrait { max-width: 360px; margin: 32px 0; }
 article figure.portrait video { width: 100%; max-width: none; border-radius: 6px; margin: 0 0 10px; display: block; }
+
+/* Case studies without a hero image: same breathing room before the first section as one with a hero. */
+.cs.no-hero .cs-body { margin-top: 48px; }
+.cs.no-hero article > :first-child { margin-top: 0; }

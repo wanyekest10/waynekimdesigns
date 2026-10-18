@@ -19,7 +19,7 @@ const toc = headings
   .map((h) => ({ ...h, num: h.depth === 2 ? String(++n).padStart(2, '0') : null, label: (d0.tocLabels ?? {})[h.text] ?? h.text.split(':')[0] }));
 ---
 <Base wide title={`${d.title}, Wayne Kim`} description={d.summary} prompt="Working on something like this?">
-  <div class="cs">
+  <div class:list={["cs", { "no-hero": d.hideHero }]}>
     <header class="cs-top" id="overview">
       <h1>{d.title}</h1>
       <p class="lead">{d.headline}</p>
@@ -31,11 +31,24 @@ const toc = headings
       )}
     </header>
 
-    {facts.length > 0 && (
-      <dl class="cs-facts">
-        {facts.map((f: any) => <div><dt>{f.label}</dt><dd>{String(f.value).split(' · ').map((v: string) => <span>{v}</span>)}</dd></div>)}
-      </dl>
-    )}
+    <aside class="cs-side">
+      {facts.length > 0 && (
+        <dl class="cs-facts">
+          {facts.map((f: any) => <div><dt>{f.label}</dt><dd>{String(f.value).split(' · ').map((v: string) => <span>{v}</span>)}</dd></div>)}
+        </dl>
+      )}
+
+      <nav class="toc-col" aria-label="On this page">
+        <div class="toc">
+          {d.listIn === 'experiments' ? <a class="toc-back" href="/play/">← Play</a> : <a class="toc-back" href="/work/">← Work</a>}
+          <ol>
+            {toc.map((h) => (
+              <li class={h.depth === 3 ? 'sub' : undefined}><a href={`#${h.slug}`} data-id={h.slug}>{h.num && <span class="n">{h.num}</span>}{h.label}</a></li>
+            ))}
+          </ol>
+        </div>
+      </nav>
+    </aside>
 
     {d.jumps && (
       <nav class="jumps" aria-label="Jump to">
@@ -47,16 +60,6 @@ const toc = headings
       ? <video class="hero" src={d.heroVideo} poster={d.heroPoster} autoplay muted loop playsinline aria-label={d.heroAlt}></video>
       : <img class="hero" src={d.hero} alt={d.heroAlt} />)}
 
-    <nav class="toc-col" aria-label="On this page">
-      <div class="toc">
-        {d.listIn === 'experiments' ? <a class="toc-back" href="/play/">← Play</a> : <a class="toc-back" href="/work/">← Work</a>}
-        <ol>
-          {toc.map((h) => (
-            <li class={h.depth === 3 ? 'sub' : undefined}><a href={`#${h.slug}`} data-id={h.slug}>{h.num && <span class="n">{h.num}</span>}{h.label}</a></li>
-          ))}
-        </ol>
-      </div>
-    </nav>
 
     <div class="cs-body">
       <article class="numbered"><Content /></article>
