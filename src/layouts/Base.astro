@@ -66,6 +66,16 @@ const { title, wide = false, noindex = false, prompt = 'Have something you\'re w
       onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
     </script>
     <script>
+      // Local videos with a sound toggle: start muted (so they can autoplay), unmute on tap.
+      document.querySelectorAll('figure.has-sound').forEach((f) => {
+        const v = f.querySelector('video') as HTMLVideoElement, btn = f.querySelector('.vl-sound') as HTMLButtonElement;
+        btn.addEventListener('click', () => {
+          const on = btn.getAttribute('aria-pressed') !== 'true';
+          v.muted = !on; if (on) { v.volume = 1; v.play(); }
+          btn.setAttribute('aria-pressed', String(on));
+          btn.textContent = on ? 'Sound on' : 'Sound off';
+        });
+      });
       const live = document.querySelectorAll('.vimeo-live');
       if (live.length) {
         const s = document.createElement('script');

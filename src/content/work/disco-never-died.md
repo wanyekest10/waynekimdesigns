@@ -27,7 +27,7 @@ facts:
 
 ## The idea
 
-<figure class="embed vimeo-live vl-portrait"><div class="vl-wrap"><iframe src="https://player.vimeo.com/video/1041186030?background=1&autoplay=1&loop=1&muted=1&dnt=1" title="Disco Never Died, video" allow="autoplay; fullscreen; picture-in-picture"></iframe><button class="vl-sound" type="button" aria-pressed="false">Sound off</button></div><figcaption>Turn the sound on: it's what drives the visuals.</figcaption></figure>
+<figure class="embed vimeo-live vl-wide"><div class="vl-wrap"><iframe src="https://player.vimeo.com/video/1041186030?background=1&autoplay=1&loop=1&muted=1&dnt=1" title="Disco Never Died, video" allow="autoplay; fullscreen; picture-in-picture"></iframe><button class="vl-sound" type="button" aria-pressed="false">Sound off</button></div><figcaption>Turn the sound on: it's what drives the visuals.</figcaption></figure>
 
 Two references: the look of Soul Train, and the way a disco ball turns one beam of light into a whole room of it. I wanted something similar for sound. Sound, light, and movement in one piece, where the room's noise is what makes it go.
 
@@ -56,7 +56,7 @@ There are two layers. A sphere of shimmering squares, the disco ball, swells and
 
 It started as a grid of plain white squares. Then each square split into red, green, and blue, pulling apart and coming back together with the sound.
 
-<figure class="portrait"><video src="/work/disco-assets/early-laptop.mp4" poster="/work/disco-assets/early-laptop-poster.jpg" autoplay muted loop playsinline aria-label="The early version on a laptop: a grid of white dots splits into red, green, and blue as the volume goes up and fingers snap near the mic"></video><figcaption>White squares that split into red, green, and blue with the sound.</figcaption></figure>
+<figure class="portrait has-sound"><div class="vs-wrap"><video src="/work/disco-assets/early-laptop.mp4" poster="/work/disco-assets/early-laptop-poster.jpg" autoplay muted loop playsinline aria-label="The early version on a laptop: a grid of white dots splits into red, green, and blue as the volume goes up and fingers snap near the mic"></video><button class="vl-sound" type="button" aria-pressed="false">Sound off</button></div><figcaption>White squares that split into red, green, and blue with the sound.</figcaption></figure>
 
 
 ## What came next
