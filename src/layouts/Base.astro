@@ -28,7 +28,7 @@ const { title, wide = false, noindex = false, prompt = 'Have something you\'re w
   <body>
     <div class:list={["wrap", { wide }]}>
       <nav class="nav" aria-label="Main">
-        <a class="home" href="/">Wayne Kim</a>
+        <a class="home" href="/" aria-label="Wayne Kim, home">Wayne <span class="kimswap" aria-hidden="true"><svg class="kmark" viewBox="0 0 100 100"><path class="kp giyeok" d="M14 14 H50 V46"/><path class="kp i" d="M72 8 V52"/><rect class="kp mieum" x="18" y="64" width="58" height="28"/></svg><span class="kword"><span>K</span><span>i</span><span>m</span></span></span></a>
         <ul>
           <li><a href="/work/">Work</a></li>
           <li><a href="/play/">Play</a></li>
@@ -46,6 +46,22 @@ const { title, wide = false, noindex = false, prompt = 'Have something you\'re w
       </footer>
     </div>
     <script>
+      // Wayne 김: the three pieces click together on the first page of a visit; on a mouse hover they give way to "Kim".
+      (() => {
+        const home = document.querySelector('.nav .home'); const box = home?.querySelector('.kimswap');
+        if (!home || !box) return;
+        const mark = box.querySelector('.kmark'), word = box.querySelector('.kword');
+        const fit = () => { box.style.width = (box.classList.contains('on') ? word.scrollWidth : mark.getBoundingClientRect().width) + 'px'; };
+        fit(); document.fonts?.ready.then(fit);
+        let seen = false; try { seen = sessionStorage.getItem('kim-seen') === '1'; sessionStorage.setItem('kim-seen', '1'); } catch (e) {}
+        if (!seen && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          box.classList.add('apart'); requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(() => box.classList.remove('apart'), 200)));
+        }
+        const set = (on) => { box.classList.toggle('on', on); fit(); };
+        home.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') set(true); });
+        home.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') set(false); });
+        home.addEventListener('focus', () => set(true)); home.addEventListener('blur', () => set(false));
+      })();
       document.querySelectorAll('.copy-email').forEach((a) => {
         let t;
         a.addEventListener('click', async (e) => {

@@ -29,7 +29,11 @@ The idea showed up the next summer, in New York, while I was mending a pair of s
 
 I tried six layouts, mixing "Tamer Kebab Eating Club," "Fueled by Kebab," and build.test.repeat, the loop we lived by at CIID. The one that stuck turned "repeat" into "rep-eat," with the eat in blue.
 
-<figure class="medium"><img src="/experiments/tamer-kebap-assets/concepts-final.webp" alt="Six shirt concepts, front and back. Concepts 1 to 5 are faded; concept 6, Tamer Kebab Eating Club with the CIID mark and build.test.repeat, is outlined in blue."/><figcaption>Six concepts, front and back. Concept 6 became the shirt.</figcaption></figure>
+<figure class="concepts">
+  <div class="c-grid"><div><img src="/experiments/tamer-kebap-assets/concept-1.webp" alt="Concept 1: Tamer Kebab Eating Club on the front; the CIID mark and build.test.eat on the back" loading="lazy"/><span>1</span></div><div><img src="/experiments/tamer-kebap-assets/concept-2.webp" alt="Concept 2: Tamer Kebab Eating Club on the front; the CIID mark and build.test.eat on the back, set closer together" loading="lazy"/><span>2</span></div><div><img src="/experiments/tamer-kebap-assets/concept-3.webp" alt="Concept 3: Fueled by Kebab on the front; the CIID mark and build.test.eat on the back" loading="lazy"/><span>3</span></div><div><img src="/experiments/tamer-kebap-assets/concept-4.webp" alt="Concept 4: The CIID mark and Fueled by Kebab on the front; build.test.eat on the back" loading="lazy"/><span>4</span></div><div><img src="/experiments/tamer-kebap-assets/concept-5.webp" alt="Concept 5: The CIID mark and Fueled by Kebab in blue on the front; build.test.repeat on the back" loading="lazy"/><span>5</span></div></div>
+  <div class="c-pick"><img src="/experiments/tamer-kebap-assets/concept-6.webp" alt="Concept 6, the pick: Tamer Kebab Eating Club in blue on the front; the CIID kebab mark and build.test.repeat, with eat in blue, on the back"/><span>6, the one</span></div>
+  <figcaption>Six concepts, front and back. Concept 6 made the shirt.</figcaption>
+</figure>
 
 <figure class="frame"><img src="/experiments/tamer-kebap-assets/shirts-3x2.webp" alt="The final shirt, front and back: Tamer Kebap Eating Club on the front, the CIID kebab mark and build.test.repeat on the back"/><figcaption>Concept 6, the final shirt.</figcaption></figure>
 

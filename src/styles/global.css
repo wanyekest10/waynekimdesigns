@@ -459,3 +459,42 @@ article p { text-wrap: pretty; }
 /* TPE: short how-it-works loop at text width */
 article figure.hiw { max-width: min(var(--measure), 560px); }
 article figure.hiw video { max-width: 100%; }
+
+/* Tamer Kebap: five small concepts beside the chosen one */
+article figure.concepts { max-width: var(--wide); display: grid; grid-template-columns: 2fr 3fr; gap: 12px 16px; align-items: center; margin: 32px 0; }
+article .concepts .c-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+article .concepts .c-grid div, article .concepts .c-pick { position: relative; }
+article .concepts img { width: 100%; max-width: none; margin: 0; display: block; border-radius: 4px; }
+article .concepts .c-grid img { opacity: .8; }
+@media (min-width: 721px) { article .concepts .c-pick { margin-left: -56px; z-index: 1; } }
+article .concepts .c-pick img { outline: 2px solid var(--accent); outline-offset: 0; box-shadow: 0 10px 28px rgba(20,20,20,.12); }
+article .concepts span { position: absolute; left: 6px; top: 5px; font: var(--meta); font-size: 11px; color: var(--gray); }
+article .concepts .c-pick span { color: var(--accent); left: 10px; top: 8px; }
+article .concepts figcaption { grid-column: 1 / -1; }
+@media (max-width: 720px) {
+  article figure.concepts { grid-template-columns: 1fr; }
+  article .concepts .c-pick { order: -1; }
+  article .concepts .c-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Nav name: Wayne 김, which gives way to "Kim" on hover */
+.nav .home { display: inline-flex; align-items: center; gap: .3em; }
+.kimswap { position: relative; display: inline-flex; align-items: center; height: 1.2em; width: 1.2em; transition: width .45s cubic-bezier(.2,.8,.25,1); }
+.kmark { position: absolute; left: 0; top: 50%; width: 1.2em; height: 1.2em; transform: translateY(-50%); overflow: visible; }
+.kmark .kp { fill: none; stroke: var(--ink); stroke-width: 10; stroke-linecap: square; transform-box: fill-box; transition: transform .45s cubic-bezier(.2,.9,.25,1.2), opacity .3s ease; }
+.kmark .mieum { stroke: var(--accent); }
+.kmark .giyeok { transition-delay: 0s; } .kmark .i { transition-delay: .08s; } .kmark .mieum { transition-delay: .16s; }
+.kimswap.apart .kp { opacity: 0; transition-delay: 0s; }
+.kimswap.apart .giyeok { transform: translate(-90%, 0); }
+.kimswap.apart .i { transform: translate(0, -90%); }
+.kimswap.apart .mieum { transform: translate(0, 90%); }
+.kword { display: inline-flex; white-space: pre; }
+.kword span { display: inline-block; opacity: 0; transform: translateY(.25em); transition: opacity .3s ease, transform .4s cubic-bezier(.2,.8,.25,1.15); }
+.kimswap.on .kword span { opacity: 1; transform: none; }
+.kimswap.on .kword span:nth-child(2) { transition-delay: .06s; } .kimswap.on .kword span:nth-child(3) { transition-delay: .12s; }
+.kimswap.on .kp { opacity: 0; transition-delay: 0s; }
+.kimswap.on .giyeok { transform: translate(-10%, 25%) scale(.7); }
+.kimswap.on .i { transform: translate(-30%, 20%) scaleY(.6); }
+.kimswap.on .mieum { transform: translate(55%, -30%) scale(.8); }
+@media (prefers-reduced-motion: reduce) { .kimswap, .kimswap * { transition: none !important; } }
+.nav .home:hover, .nav .home:focus-visible { text-decoration: none; }

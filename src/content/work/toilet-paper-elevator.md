@@ -32,12 +32,6 @@ That set the rules early. The display had to be household-level and anonymous. I
 
 <figure class="frame hiw"><video src="/work/tpe-assets/how-it-works.mp4" poster="/work/tpe-assets/how-it-works-poster.jpg" autoplay muted loop playsinline aria-label="A new roll goes on, the screen climbs from 4 ft to 44 ft, then arrives at the Hollywood Sign and moves on past the Statue of Liberty and the Eiffel Tower"></video><figcaption>Install, climb, arrive. A new roll goes on, the count climbs, and the screen announces each landmark it passes.</figcaption></figure>
 
-<figure class="grid3 tallnat compact">
-  <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Every part, before it went up.</p></div>
-  <div><img src="/work/tpe-assets/final-wall.webp" alt="The finished version in daylight: the gray pod showing 4 ft up above the holder and sleeve"/><p>The sleeve on the bar.</p></div>
-  <div><img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/><p>On the wall, with a roll.</p></div>
-</figure>
-
 ## How it works
 
 <figure class="wide tpe-mech" aria-label="Animation: the roll turns, its four magnets pass the Hall sensor, the square count climbs, and the e-paper screen updates from ground floor to the Hollywood Sign">
@@ -195,7 +189,11 @@ How do you get a wire from the holder to the screen without anything exposed in 
 
 ## Installed
 
-<figure class="frame"><video src="/work/tpe-assets/install-loop.mp4" poster="/work/tpe-assets/install-loop-poster.jpg" autoplay muted loop playsinline aria-label="Installing a new roll: the sleeve slides into the roll, the bar comes off, the roll goes on, and it seats under the screen"></video></figure>
+<figure class="grid3 tallnat">
+  <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Every part, before it went up.</p></div>
+  <div><img src="/work/tpe-assets/final-wall.webp" alt="The finished version in daylight: the gray pod showing 4 ft up above the holder and sleeve"/><p>The sleeve on the bar.</p></div>
+  <div><img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/><p>On the wall, with a roll.</p></div>
+</figure>
 
 ## Reflection
 
