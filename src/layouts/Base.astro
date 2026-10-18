@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import CopyEmail from '../components/CopyEmail.astro';
 interface Props { title: string; description?: string; wide?: boolean; noindex?: boolean; prompt?: string | false; cta?: string }
-const { title, wide = false, noindex = false, prompt = 'Have something you\'re working on?', cta = 'Send me a message →', description = 'Wayne Kim, interaction designer in Los Angeles. Researches by building prototypes.' } = Astro.props;
+const { title, wide = false, noindex = false, prompt = 'Have something you\'re working on?', cta = 'Send me a message →', description = 'Wayne Kim, interaction designer in Los Angeles. I build prototypes to find out what people actually need.' } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -18,7 +18,7 @@ const { title, wide = false, noindex = false, prompt = 'Have something you\'re w
     <meta property="og:image" content={new URL('/og.jpg', Astro.site)} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Wayne Kim. Interaction designer based in LA. Researching by building prototypes." />
+    <meta property="og:image:alt" content="Wayne Kim. Interaction designer based in LA. Building prototypes to find out what people need." />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon-32.png" type="image/png" />
