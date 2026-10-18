@@ -46,7 +46,7 @@ The 2025 CIID Global Design Workshop for Busan Design Council participants.
 
 <p class="ws-meta"><span>3 days</span> · <span>60+ people</span> · <span>Co-designed and co-facilitated</span></p>
 
-A design thinking workshop that turned C-suite priorities into product direction. Details are under NDA.
+A design thinking workshop that turned C-suite priorities into product direction. Details are under NDA, so the workshop photos are blurred.
 
 <figure class="pair">
   <img src="/work/facilitation-assets/wipro-room.webp" alt="A large room of workshop participants standing between tables and walls of sticky notes"/>
@@ -70,6 +70,6 @@ A brainstorm for the Bureau of Sanctioned Sketching with classmates. Before any 
 I supported a session that moved from pain points to personas to a prioritized opportunity map for the next phase of work. Details are under NDA, so the boards are blurred.
 
 <figure class="pair">
-  <img src="/work/facilitation-assets/trane-board-a.webp" alt="A remote workshop board with an icebreaker, agenda, pain points, and three personas"/>
-  <img src="/work/facilitation-assets/trane-board-b.webp" alt="A remote workshop board with How Might We prompts, pain points, opportunity areas, and concept generation"/>
+  <img src="/work/facilitation-assets/hvac-designit-board-a.webp" alt="A remote workshop board with an icebreaker, agenda, pain points, and three personas"/>
+  <img src="/work/facilitation-assets/hvac-designit-board-b.webp" alt="A remote workshop board with How Might We prompts, pain points, opportunity areas, and concept generation"/>
 </figure>
