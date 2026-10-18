@@ -517,3 +517,4 @@ article figure.grid3.vj figcaption, article figure.grid3.three figcaption { grid
 article figure.cardsize { max-width: var(--measure); margin: 16px 0 28px; }
 article figure.cardsize img { width: 100%; max-width: none; aspect-ratio: 16/9; object-fit: cover; object-position: 50% 35%; border-radius: 6px; margin: 0; }
 @media (max-width: 560px) { .wide-br { display: none; } }
+article h2 .eat { color: var(--accent); }

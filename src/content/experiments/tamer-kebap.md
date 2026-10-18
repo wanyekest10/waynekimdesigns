@@ -25,13 +25,13 @@ The idea showed up the next summer, in New York, while I was mending a pair of s
 
 <figure class="wide"><img src="/experiments/tamer-kebap-assets/stitches-to-spits.webp" alt="Three sketches: the hand-drawn CIID mark with the I's as kebab spits; CIID in a sketchbook with stitches running through every letter; and a page reading CIID, Fueled by Tamer, then CIID again with döner spits for the I's"/><figcaption>From stitches to spits.</figcaption></figure>
 
-## Build, test, repeat
+## Build, test, rep<span class="eat">eat</span>
 
 I tried six layouts, mixing "Tamer Kebab Eating Club," "Fueled by Kebab," and build.test.repeat, the loop we lived by at CIID. The one that stuck turned "repeat" into "rep-eat," with the eat in blue.
 
 <figure class="concepts">
   <div class="c-grid"><div><img src="/experiments/tamer-kebap-assets/concept-1.webp" alt="Concept 1: Tamer Kebab Eating Club on the front; the CIID mark and build.test.eat on the back" loading="lazy"/><span>1</span></div><div><img src="/experiments/tamer-kebap-assets/concept-2.webp" alt="Concept 2: Tamer Kebab Eating Club on the front; the CIID mark and build.test.eat on the back, set closer together" loading="lazy"/><span>2</span></div><div><img src="/experiments/tamer-kebap-assets/concept-3.webp" alt="Concept 3: Fueled by Kebab on the front; the CIID mark and build.test.eat on the back" loading="lazy"/><span>3</span></div><div><img src="/experiments/tamer-kebap-assets/concept-4.webp" alt="Concept 4: The CIID mark and Fueled by Kebab on the front; build.test.eat on the back" loading="lazy"/><span>4</span></div><div><img src="/experiments/tamer-kebap-assets/concept-5.webp" alt="Concept 5: The CIID mark and Fueled by Kebab in blue on the front; build.test.repeat on the back" loading="lazy"/><span>5</span></div></div>
-  <div class="c-pick"><img src="/experiments/tamer-kebap-assets/concept-6.webp" alt="Concept 6, the pick: Tamer Kebab Eating Club in blue on the front; the CIID kebab mark and build.test.repeat, with eat in blue, on the back"/><span>6, the one</span></div>
+  <div class="c-pick"><img src="/experiments/tamer-kebap-assets/shirts-3x2.webp" alt="Concept 6, the pick: Tamer Kebab Eating Club in blue on the front; the CIID kebab mark and build.test.repeat, with eat in blue, on the back"/><span>6. the one</span></div>
   <figcaption>Six concepts, front and back. Concept 6 made the shirt.</figcaption>
 </figure>
 
