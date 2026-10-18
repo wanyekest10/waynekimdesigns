@@ -1,7 +1,7 @@
 ---
 // Compact text rows: name, one line, year. Used for Experiments and the work archive.
 // image: optional preview shown beside the row on hover (pointer devices only).
-interface Row { name: string; line?: string; tags?: string; year?: string; href?: string; image?: string; sub?: string }
+interface Row { name: string; line?: string; tags?: string; year?: string; href?: string; image?: string; sub?: string; try?: string }
 const { rows } = Astro.props as { rows: Row[] };
 ---
 <ul class="rows">
@@ -9,7 +9,7 @@ const { rows } = Astro.props as { rows: Row[] };
     <li class:list={{ 'has-preview': r.image }}>
       {r.image && <img class="row-preview" src={r.image} alt="" loading="lazy" aria-hidden="true" />}
       <span class="row-head">{r.href ? <a class="row-name" href={r.href}>{r.name}</a> : <span class="row-name">{r.name}</span>}{r.sub && <span class="row-sub">{r.sub}</span>}</span>
-      <span class="row-line">{r.line ?? r.tags}</span>
+      <span class="row-line">{r.line ?? r.tags}{r.try && <> <a class="row-try" href={r.try}>Try it →</a></>}</span>
       <span class="row-year">{r.year}</span>
     </li>
   ))}
@@ -22,6 +22,7 @@ const { rows } = Astro.props as { rows: Row[] };
   .row-sub { font: var(--meta); color: var(--gray); }
   a.row-name { color: var(--accent); }
   .row-line { color: var(--gray); font-size: 15px; }
+  .row-try { color: var(--accent); white-space: nowrap; }
   .row-year { font: var(--meta); color: var(--gray); text-align: right; white-space: nowrap; }
   .rows li { position: relative; }
   .row-preview { display: none; }
