@@ -23,7 +23,7 @@ When I left in fall 2025, I missed it more than I expected. I wanted to leave th
 
 The idea showed up the next summer, in New York, while I was mending a pair of shorts. I started wondering what the alphabet would look like if I made it with a sewing machine, and began sketching letters out of stitches. When I got to CIID, the stitches running through the two I's made them look like kebab spits. That was it.
 
-<figure class="wide"><img src="/experiments/tamer-kebap-assets/stitches-to-spits.webp" alt="Three sketches: the hand-drawn CIID mark with the I's as kebab spits; CIID in a sketchbook with stitches running through every letter; and a page reading CIID, Fueled by Tamer, then CIID again with döner spits for the I's"/><figcaption>From stitches to spits.</figcaption></figure>
+<figure class="wide"><img src="/experiments/tamer-kebap-assets/stitches-to-spits.webp" alt="Three sketches: CIID in a sketchbook with stitches running through every letter; the hand-drawn CIID mark with the I's as kebab spits; and a page reading CIID, Fueled by Tamer, then CIID again with döner spits for the I's"/><figcaption>From stitches to spits.</figcaption></figure>
 
 ## Build, test, rep<span class="eat">eat</span>
 
@@ -34,8 +34,6 @@ I tried six layouts, mixing "Tamer Kebab Eating Club," "Fueled by Kebab," and bu
   <div class="c-pick"><img src="/experiments/tamer-kebap-assets/shirts-3x2.webp" alt="Concept 6, the pick: Tamer Kebab Eating Club in blue on the front; the CIID kebab mark and build.test.repeat, with eat in blue, on the back"/><span>6. the one</span></div>
   <figcaption>Six concepts, front and back. Concept 6 made the shirt.</figcaption>
 </figure>
-
-<figure class="frame"><img src="/experiments/tamer-kebap-assets/shirts-3x2.webp" alt="The final shirt, front and back: Tamer Kebap Eating Club on the front, the CIID kebab mark and build.test.repeat on the back"/><figcaption>Concept 6, the final shirt.</figcaption></figure>
 
 My classmates liked it enough to ask for their own. I'm planning to give one to the crew at Tamer, and maybe bring a stack to our reunion in 2027.
 
