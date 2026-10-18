@@ -31,6 +31,12 @@ facts:
 
 At CIID, the day had a rhythm. Crits, shared lunches, someone leaning over to ask if you wanted coffee. When I came back to working alone in Los Angeles, that rhythm was gone. Hours disappeared. Time felt flat. Nothing in my room changed between 9am and 5pm except how stiff I was.
 
+<figure class="pair">
+  <video src="/work/room-tone-assets/lab-wide.mp4" poster="/work/room-tone-assets/lab-wide-poster.jpg" autoplay muted loop playsinline></video>
+  <video src="/work/room-tone-assets/lab-table.mp4" poster="/work/room-tone-assets/lab-table-poster.jpg" autoplay muted loop playsinline></video>
+  <figcaption>The CIID lab on a normal afternoon: people building, testing, and checking in on each other.</figcaption>
+</figure>
+
 <figure class="days" role="img" aria-label="Two lines from 9am to 5pm. The first is flat. The second rises and falls like a wave.">
   <div class="day">
     <span class="k">A flat day</span>
@@ -50,27 +56,9 @@ I wanted something in between. The room notices, then asks.
 
 <p class="hmw">What if the room could ask "coffee?" the way a person would, with no guilt either way?</p>
 
-## The first version rewarded me
-
-My first idea was a reward. I'd write a checklist for the day, and when I finished it, the disco ball would turn on. A small party for getting things done.
-
-It backfired. The checklist added pressure instead of taking it away, and on days the list didn't get finished, the dark disco ball felt like a verdict. I had built a nicer-looking alarm.
-
-> I thought I wanted a reward. I didn't. I wanted permission.
-
-So I took out the tasks, the score, and the judgment. The second version doesn't care what I got done. It only notices how long I've been at it.
-
-<div class="compare">
-  <div class="crow head"><span></span><span class="k">CHECKLIST VERSION</span><span></span><span class="k">ROOM_TONE</span></div>
-  <div class="crow"><span class="k">Trigger</span><span class="was">Finishing my tasks</span><span class="to">→</span><span class="is">90 minutes of steady work<small>Time at the desk, not output.</small></span></div>
-  <div class="crow"><span class="k">Signal</span><span class="was">A reward</span><span class="to">→</span><span class="is">An offer<small>Light first, then motion, then a question.</small></span></div>
-  <div class="crow"><span class="k">A bad day</span><span class="was">An unfinished list</span><span class="to">→</span><span class="is">Nothing to fail<small>There's no score to miss.</small></span></div>
-  <div class="crow focal"><span class="k">My response</span><span class="was">Check the box</span><span class="to">→</span><span class="is">Pause, or don't<small>Keep typing and the room lets it go.</small></span></div>
-</div>
-
 ## A friend, not an alarm
 
-Before rebuilding, I wrote down how it should feel, using Bill Verplank's questions for interaction design.
+Before building it, I wrote down how it should feel, using Bill Verplank's questions for interaction design.
 
 <div class="principles4">
   <div><h4>Error</h4><p>Losing two hours without noticing until my back hurts.</p></div>
@@ -117,6 +105,24 @@ The whole thing is a small state machine: noticing, activating, asking, playing,
 ### Why a disco ball
 
 It's personal. Disco balls were at the creative coding nights and CIID parties where work felt most like play. It also has three layers built in: light hits it, it turns, and music belongs with it. Those three layers became the stages of the system.
+
+## The first version rewarded me
+
+It didn't start this way. My first idea was a reward. I'd write a checklist for the day, and when I finished it, the disco ball would turn on. A small party for getting things done.
+
+It backfired. The checklist added pressure instead of taking it away, and on days the list didn't get finished, the dark disco ball felt like a verdict. I had built a nicer-looking alarm.
+
+> I thought I wanted a reward. I didn't. I wanted permission.
+
+So I took out the tasks, the score, and the judgment. The second version doesn't care what I got done. It only notices how long I've been at it.
+
+<div class="compare">
+  <div class="crow head"><span></span><span class="k">CHECKLIST VERSION</span><span></span><span class="k">ROOM_TONE</span></div>
+  <div class="crow"><span class="k">Trigger</span><span class="was">Finishing my tasks</span><span class="to">→</span><span class="is">90 minutes of steady work<small>Time at the desk, not output.</small></span></div>
+  <div class="crow"><span class="k">Signal</span><span class="was">A reward</span><span class="to">→</span><span class="is">An offer<small>Light first, then motion, then a question.</small></span></div>
+  <div class="crow"><span class="k">A bad day</span><span class="was">An unfinished list</span><span class="to">→</span><span class="is">Nothing to fail<small>There's no score to miss.</small></span></div>
+  <div class="crow focal"><span class="k">My response</span><span class="was">Check the box</span><span class="to">→</span><span class="is">Pause, or don't<small>Keep typing and the room lets it go.</small></span></div>
+</div>
 
 ## Reflection
 
