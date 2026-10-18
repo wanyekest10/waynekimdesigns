@@ -73,6 +73,8 @@ We bodystormed before we built. The pattern showed up fast: when a prototype fel
 
 **Performed, not captured.** Most emotion tech tries to read and classify your face. Here the emotion was performed and shared with the room, not captured or classified.
 
+**Where it started.** Calvin on picture day in [Calvin and Hobbes](https://www.gocomics.com/calvinandhobbes), pulling face after face instead of smiling for the camera. That kind of play was what we wanted in the room.
+
 <figure class="frame"><img src="/work/mirrored-canvas-assets/with-yase.webp" alt="Black and white photo of Wayne and Yase smiling at a table with the laptop and webcam setup"/><figcaption>Making faces with Yase.</figcaption></figure>
 
 <figure class="embed"><iframe src="https://player.vimeo.com/video/1041048796?dnt=1&title=0&byline=0&portrait=0" title="Mirrored Canvas, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
