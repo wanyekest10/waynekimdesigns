@@ -36,7 +36,7 @@ Mine was the coffee cup. After a small bike accident, the owners of a bike shop 
 
 ## Building it
 
-We went from sketches to a working table in a day: who meets whom, what the objects could be, and how a plate could tell the figures to turn.
+We went from sketches to a working table in a day: who meets whom, what the objects could be, and how a plate could tell the figures to touch.
 
 <figure class="grid3 three">
   <img style="object-position: 50% 20%" src="/experiments/mosaic-assets/sketches.webp" alt="Sketches: small objects like a coffee cup, a key, and a bowl; a map of a stranger's arc from beginning to community; two figures connecting; and a hanging frame over a plate"/>
