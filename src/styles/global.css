@@ -477,12 +477,13 @@ article .concepts figcaption { grid-column: 1 / -1; }
   article .concepts .c-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* Nav name: Wayne 김, which gives way to "Kim" on hover */
-.nav .home { display: inline-flex; align-items: center; gap: .3em; }
-.kimswap { position: relative; display: inline-flex; align-items: center; height: 1.2em; width: 1.2em; transition: width .45s cubic-bezier(.2,.8,.25,1); }
-.kmark { position: absolute; left: 0; top: 50%; width: 1.2em; height: 1.2em; transform: translateY(-50%); overflow: visible; }
-.kmark .kp { fill: none; stroke: var(--ink); stroke-width: 10; stroke-linecap: square; transform-box: fill-box; transition: transform .45s cubic-bezier(.2,.9,.25,1.2), opacity .3s ease; }
-.kmark .mieum { stroke: var(--accent); }
+/* Nav name: Wayne 김, which gives way to "Kim" on hover.
+   The mark is exactly cap height (0.72em) and sits on the text baseline, so it lines up with "Wayne". */
+.nav .home { display: inline-flex; align-items: baseline; gap: .28em; }
+.kimswap { display: inline-grid; align-items: baseline; justify-items: start; width: .56em; transition: width .45s cubic-bezier(.2,.8,.25,1); }
+.kimswap > * { grid-area: 1 / 1; }
+.kmark { display: block; height: .72em; width: auto; overflow: visible; }
+.kmark .kp { fill: none; stroke: var(--ink); stroke-width: 14; stroke-linecap: square; transform-box: fill-box; transition: transform .45s cubic-bezier(.2,.9,.25,1.2), opacity .3s ease; }
 .kmark .giyeok { transition-delay: 0s; } .kmark .i { transition-delay: .08s; } .kmark .mieum { transition-delay: .16s; }
 .kimswap.apart .kp { opacity: 0; transition-delay: 0s; }
 .kimswap.apart .giyeok { transform: translate(-90%, 0); }
