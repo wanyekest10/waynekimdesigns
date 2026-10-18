@@ -12,14 +12,6 @@ One of our first builds at CIID, made in 24 hours by four of us who had just arr
 
 Design an interactive experience about how it felt to arrive in Italy. We were all new to Bergamo, and each of us already had a story about a stranger who had helped. So we built a table for those moments, and left room for other people's.
 
-## Small kindnesses
-
-Each of us turned one moment into a small 3D-printed object: a key, a bed, a coffee cup, and a microphone. Each object sat on its story, printed in English and Italian.
-
-Mine was the coffee cup. After a small bike accident, the owners of a bike shop on Via Broseta sat me down, fixed my bike, made me a coffee, and wouldn't take any money.
-
-<figure class="wide"><img src="/experiments/mosaic-assets/coffee-story.webp" alt="Wayne's story in English and Italian about a bike shop on Via Broseta that fixed his bike and made him a coffee, next to a dashed circle labeled Coffee Cafe where the cup sits"/><figcaption>My story, with a place for the cup.</figcaption></figure>
-
 ## How it works
 
 <div class="flow" role="list" aria-label="How Mosaic of Memories works">
@@ -30,7 +22,31 @@ Mine was the coffee cup. After a small bike accident, the owners of a bike shop 
   <div class="step"><span class="n">III</span><b>Add your own</b><small>Shape it in playdough and write a line.</small></div>
 </div>
 
+<figure class="connect" role="img" aria-label="Animation: a coffee cup drops onto the red and yellow plate, and the two cardboard strangers lean in toward each other until their hands meet">
+<svg viewBox="0 0 600 280" aria-hidden="true">
+  <defs>
+    <clipPath id="plL"><rect x="0" y="0" width="300" height="280"/></clipPath>
+    <clipPath id="plR"><rect x="300" y="0" width="300" height="280"/></clipPath>
+  </defs>
+  <line class="cn-table" x1="40" y1="246" x2="560" y2="246"/>
+  <g class="cn-fig cn-left"><circle cx="190" cy="62" r="13"/><path d="M182 76 Q178 120 172 170 L162 244 L214 244 L204 170 Q200 118 198 76 Z"/><path class="cn-arm" d="M198 98 L226 132"/></g>
+  <g class="cn-fig cn-right"><circle cx="410" cy="62" r="13"/><path d="M402 76 Q400 118 396 170 L386 244 L438 244 L428 170 Q422 120 418 76 Z"/><path class="cn-arm" d="M402 98 L374 132"/></g>
+  <g class="cn-plate"><ellipse clip-path="url(#plL)" cx="300" cy="238" rx="68" ry="12" fill="#F2C230"/><ellipse clip-path="url(#plR)" cx="300" cy="238" rx="68" ry="12" fill="#E5482B"/></g>
+  <g class="cn-cup"><path d="M286 206 h26 l-3 26 h-20 Z"/><path class="cn-handle" d="M311 212 q11 2 7 12 q-3 5 -9 4"/></g>
+  <path class="cn-heart" d="M300 112 c-6 -10 -20 -6 -16 6 c3 7 16 14 16 14 c0 0 13 -7 16 -14 c4 -12 -10 -16 -16 -6 Z"/>
+</svg>
+<figcaption>Put a memory on the plate, and the two strangers lean in.</figcaption>
+</figure>
+
 Visitors left a slice of pizza, gelato at Piazza Vecchia, a bowl of Maggi noodles that reminded someone of home, and "vino, vino & vino." The table kept growing.
+
+## Small kindnesses
+
+Each of us turned one moment into a small 3D-printed object: a key, a bed, a coffee cup, and a microphone. Each object sat on its story, printed in English and Italian.
+
+Mine was the coffee cup. After a small bike accident, the owners of a bike shop on Via Broseta sat me down, fixed my bike, made me a coffee, and wouldn't take any money.
+
+<figure class="wide"><img src="/experiments/mosaic-assets/coffee-story.webp" alt="Wayne's story in English and Italian about a bike shop on Via Broseta that fixed his bike and made him a coffee, next to a dashed circle labeled Coffee Cafe where the cup sits"/><figcaption>My story, with a place for the cup.</figcaption></figure>
 
 ## Building it
 

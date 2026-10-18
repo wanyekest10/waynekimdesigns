@@ -513,3 +513,24 @@ article figure.grid3.vj { grid-template-columns: repeat(3, 1fr); }
 article figure.grid3.vj video { width: 100%; border-radius: 6px; }
 article figure.grid3.vj figcaption { grid-column: 1 / -1; }
 @media (max-width: 560px) { article figure.grid3.vj { grid-template-columns: 1fr; } }
+/* Mosaic of Memories: a cup lands on the plate and the two cardboard strangers lean in. */
+article figure.connect { max-width: var(--wide); margin: 32px 0; }
+article figure.connect svg { display: block; width: 100%; height: auto; background: #EFE3CF; border-radius: 6px; }
+.connect .cn-table { stroke: #B9A27F; stroke-width: 2; }
+.connect .cn-fig { fill: #8C6A48; transform-box: view-box; animation: 6s ease-in-out infinite; }
+.connect .cn-arm { fill: none; stroke: #8C6A48; stroke-width: 7; stroke-linecap: round; }
+.connect .cn-left { transform-origin: 188px 244px; animation-name: cn-left; }
+.connect .cn-right { transform-origin: 412px 244px; animation-name: cn-right; }
+.connect .cn-plate { transform-box: view-box; transform-origin: 300px 238px; animation: cn-plate 6s ease-in-out infinite; }
+.connect .cn-cup { fill: #1E1E1E; animation: cn-cup 6s ease-in infinite; }
+.connect .cn-handle { fill: none; stroke: #1E1E1E; stroke-width: 3; }
+.connect .cn-heart { fill: #E5482B; transform-box: fill-box; transform-origin: center; animation: cn-heart 6s ease-out infinite; }
+@keyframes cn-cup { 0% { transform: translateY(-150px); opacity: 0; } 8% { opacity: 1; } 22% { transform: translateY(0); } 24% { transform: translateY(-5px); } 27%, 88% { transform: translateY(0); opacity: 1; } 96%, 100% { transform: translateY(0); opacity: 0; } }
+@keyframes cn-plate { 0%, 21% { transform: none; } 24% { transform: translateY(5px); } 30%, 100% { transform: translateY(3px); } }
+@keyframes cn-left { 0%, 28% { transform: none; } 50%, 88% { transform: translateX(36px) rotate(9deg); } 100% { transform: none; } }
+@keyframes cn-right { 0%, 28% { transform: none; } 50%, 88% { transform: translateX(-36px) rotate(-9deg); } 100% { transform: none; } }
+@keyframes cn-heart { 0%, 50% { transform: scale(0); opacity: 0; } 58% { transform: scale(1.25); opacity: 1; } 64%, 84% { transform: scale(1); opacity: 1; } 92%, 100% { transform: scale(0); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .connect .cn-fig, .connect .cn-plate, .connect .cn-cup, .connect .cn-heart { animation: none; }
+  .connect .cn-left { transform: translateX(36px) rotate(9deg); } .connect .cn-right { transform: translateX(-36px) rotate(-9deg); }
+}
