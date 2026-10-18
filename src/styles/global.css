@@ -513,3 +513,6 @@ article figure.grid3.vj, article figure.grid3.three { grid-template-columns: rep
 article figure.grid3.vj video, article figure.grid3.three video { width: 100%; border-radius: 6px; }
 article figure.grid3.vj figcaption, article figure.grid3.three figcaption { grid-column: 1 / -1; }
 @media (max-width: 560px) { article figure.grid3.vj, article figure.grid3.three { grid-template-columns: 1fr; } }
+/* A single photo at the size of a project card (half the wide column, 3:2). */
+article figure.cardsize { max-width: calc((var(--wide) - 16px) / 2); margin: 32px 0; }
+article figure.cardsize img { width: 100%; max-width: none; aspect-ratio: 3/2; object-fit: cover; object-position: 50% 30%; border-radius: 6px; margin: 0; }

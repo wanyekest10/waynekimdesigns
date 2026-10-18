@@ -22,7 +22,7 @@ Design an interactive experience about how it felt to arrive in Italy. We were a
   <div class="step"><span class="n">III</span><b>Add your own</b><small>Shape it in playdough and write a line.</small></div>
 </div>
 
-<figure class="wide"><img src="/experiments/mosaic-assets/visitors-laughing.webp" alt="Visitors laughing around the table in afternoon light, with the process sketches taped to the window behind"/></figure>
+<figure class="cardsize"><img src="/experiments/mosaic-assets/visitors-laughing.webp" alt="Visitors laughing around the table in afternoon light, with the process sketches taped to the window behind"/></figure>
 
 Visitors left a slice of pizza, gelato at Piazza Vecchia, a bowl of Maggi noodles that reminded someone of home, and "vino, vino & vino." The table kept growing.
 
