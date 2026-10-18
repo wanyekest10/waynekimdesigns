@@ -56,7 +56,7 @@ There are two layers. A sphere of shimmering squares, the disco ball, swells and
 
 It started as a grid of plain white squares. Then each square split into red, green, and blue, pulling apart and coming back together with the sound.
 
-<figure class="portrait has-sound"><div class="vs-wrap"><video src="/work/disco-assets/early-laptop.mp4" poster="/work/disco-assets/early-laptop-poster.jpg" autoplay muted loop playsinline aria-label="The early version on a laptop: a grid of white dots splits into red, green, and blue as the volume goes up and fingers snap near the mic"></video><button class="vl-sound" type="button" aria-pressed="false">Sound off</button></div><figcaption>White squares that split into red, green, and blue with the sound.</figcaption></figure>
+<figure class="pillar has-sound"><div class="vs-wrap"><video src="/work/disco-assets/early-laptop.mp4" poster="/work/disco-assets/early-laptop-poster.jpg" autoplay muted loop playsinline aria-label="The early version on a laptop: a grid of white dots splits into red, green, and blue as the volume goes up and fingers snap near the mic"></video><button class="vl-sound" type="button" aria-pressed="false">Sound off</button></div><figcaption>White squares that split into red, green, and blue with the sound.</figcaption></figure>
 
 
 ## What came next

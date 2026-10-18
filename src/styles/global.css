@@ -536,3 +536,13 @@ article figure.portrait video { width: 100%; max-width: none; aspect-ratio: 9 / 
 /* Case studies without a hero image: same breathing room before the first section as one with a hero. */
 .cs.no-hero .cs-body { margin-top: 48px; }
 .cs.no-hero article > :first-child { margin-top: 0; }
+/* A vertical clip shown in a wide dark frame, matching the idea video above it. */
+article figure.pillar { max-width: var(--wide); margin: 32px 0; }
+article figure.pillar .vs-wrap { aspect-ratio: 16 / 8; background: #000; border-radius: 6px; overflow: hidden; margin-bottom: 10px; display: flex; justify-content: center; }
+article figure.pillar video { height: 100%; width: auto; max-width: none; margin: 0; border-radius: 0; display: block; object-fit: cover; }
+article figure.pillar .vl-sound { bottom: 12px; }
+@media (max-width: 600px) {
+  /* Phones: no side bars, the clip fills the width. */
+  article figure.pillar .vs-wrap { aspect-ratio: auto; background: none; display: block; }
+  article figure.pillar video { width: 100%; height: auto; aspect-ratio: 9 / 14; object-position: 50% 40%; border-radius: 6px; }
+}
