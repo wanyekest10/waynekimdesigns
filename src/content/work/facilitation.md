@@ -12,7 +12,7 @@ hero: "/work/facilitation-assets/busan-wall.webp"
 heroAlt: "Wayne talking Busan Design Council participants through a wall of sticky notes at CIID"
 hideHero: true
 short:
-  - { lead: "What happened.", text: "At Glorify, one workshop became the research agenda for the year. I also ran workshops for the Busan Design Council, Wipro, and my own final project at CIID, and supported one for Trane." }
+  - { lead: "What happened.", text: "At Glorify, one workshop became the research agenda for the year. I also ran workshops for the Busan Design Council, Wipro, and my own final project at CIID, and supported one for a Fortune 500 HVAC company." }
 facts:
   - { label: "Where", value: "Designit · CIID · Glorify" }
   - { label: "Role", value: "Designer and facilitator" }
@@ -63,7 +63,7 @@ A brainstorm for the Bureau of Sanctioned Sketching with classmates. Before any 
 
 <figure class="frame"><video src="/work/facilitation-assets/ideation-constraints.mp4" poster="/work/facilitation-assets/ideation-constraints-poster.jpg" autoplay muted loop playsinline></video><figcaption>Then one new constraint every minute.</figcaption></figure>
 
-## Trane at Designit
+## A Fortune 500 HVAC company, at Designit
 
 <p class="ws-meta"><span>Remote</span> · <span>Employee experience</span> · <span>Supported</span></p>
 
