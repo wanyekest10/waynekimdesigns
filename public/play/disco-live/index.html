@@ -149,7 +149,21 @@
   // ---------- Sound: the room's mic, or a disco beat made right here ----------
   let ac = null, analyser = null, micStream = null, beat = null;
   const buf = new Float32Array(1024);
-  const ensureAC = () => { if (!ac) { ac = new (window.AudioContext || window.webkitAudioContext)(); analyser = ac.createAnalyser(); analyser.fftSize = 1024; } return ac.resume(); };
+  // iPhones mute Web Audio when the ringer switch is on silent. Asking for "playback" (Safari 17+) and
+  // playing a silent clip inside the tap moves sound to the media channel, so the beat plays anyway.
+  const SILENT = 'data:audio/wav;base64,UklGRkQDAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YSADAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgA==';
+  let unlocker = null;
+  const setSession = (type) => { try { if (navigator.audioSession) navigator.audioSession.type = type; } catch (e) {} };
+  const unlock = () => {
+    if (!unlocker) { unlocker = new Audio(SILENT); unlocker.loop = true; unlocker.setAttribute('playsinline', ''); unlocker.volume = 0.01; }
+    const p = unlocker.play(); if (p && p.catch) p.catch(() => {});
+  };
+  const ensureAC = (session = 'playback') => {
+    setSession(session);
+    unlock();
+    if (!ac) { ac = new (window.AudioContext || window.webkitAudioContext)(); analyser = ac.createAnalyser(); analyser.fftSize = 1024; }
+    return ac.resume();
+  };
   const btnBeat = document.getElementById('beat'), btnMic = document.getElementById('mic');
 
   function startBeat() {
@@ -178,12 +192,12 @@
     return { stop() { clearInterval(timer); out.gain.setTargetAtTime(0, ac.currentTime, 0.05); setTimeout(() => out.disconnect(), 300); } };
   }
   btnBeat.addEventListener('click', async () => {
-    await ensureAC();
+    await ensureAC(micStream ? 'play-and-record' : 'playback');
     if (beat) { beat.stop(); beat = null; btnBeat.setAttribute('aria-pressed', 'false'); btnBeat.textContent = '▶ Play a beat'; return; }
     beat = startBeat(); btnBeat.setAttribute('aria-pressed', 'true'); btnBeat.textContent = '■ Stop the beat';
   });
   btnMic.addEventListener('click', async () => {
-    await ensureAC();
+    await ensureAC(micStream ? 'playback' : 'play-and-record');
     if (micStream) { micStream.src.disconnect(); micStream.stream.getTracks().forEach((t) => t.stop()); micStream = null; btnMic.setAttribute('aria-pressed', 'false'); btnMic.textContent = '● Use my mic'; return; }
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
