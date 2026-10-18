@@ -73,3 +73,5 @@ I love music, and creative coding, starting with this project, is what opened up
 </figure>
 
 <figure class="wide"><video src="/work/disco-assets/vj-impactminds-crowd.mp4" poster="/work/disco-assets/vj-impactminds-crowd-poster.jpg" autoplay muted loop playsinline aria-label="Silhouettes of people dancing in front of an arch filled with red, green, and blue geometric visuals"></video><figcaption>The dance floor, same night.</figcaption></figure>
+
+Shoutout to [Jose Chavarría](https://www.linkedin.com/in/chavarria-jose/) ([CIID](https://www.ciid.dk/community/jose-chavarria)) for mentoring me on VJing with Resolume, and on the setup protocol for a live show.
