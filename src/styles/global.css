@@ -228,15 +228,14 @@ article figure.days { max-width: var(--measure); margin: 32px 0; display: grid; 
 .days .times { grid-column: 2; display: flex; justify-content: space-between; font: var(--meta); color: var(--gray); padding-top: 8px; border-top: 1px solid var(--rule); }
 .days figcaption { grid-column: 1 / -1; }
 /* room_tone: which layers are on at each stage */
-.layers { max-width: var(--measure); margin: 32px 0; }
-.layers .lrow { display: grid; grid-template-columns: 1fr repeat(3, 56px); gap: 10px; align-items: center; padding: 10px 0; border-top: 1px solid var(--rule); }
+.layers { max-width: 880px; margin: 32px 0; }
+.layers .lrow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr) repeat(3, 56px); gap: 10px 16px; align-items: start; padding: 12px 0; border-top: 1px solid var(--rule); }
 .layers .lrow.head { border-top: 0; padding: 0 0 8px; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); }
-.layers .lrow.head span:not(:first-child) { text-align: center; }
-.layers .lrow > span { font-size: 15px; color: var(--ink); }
+.layers .lrow.head span:nth-child(n+3) { text-align: center; }
+.layers .lrow > span { font-size: 15px; line-height: 1.5; color: var(--ink); min-width: 0; }
 .layers .lrow small { display: block; font: var(--small); font-size: 14px; color: var(--gray); }
-.layers .term { display: block; margin-top: 8px; padding: 6px 10px; border-radius: 4px; background: #141414; color: #EDEDE8; font: 400 12px/1.6 var(--mono); letter-spacing: -0.01em; white-space: pre; overflow-x: auto; max-width: 100%; }
-.layers .lrow > span { min-width: 0; }
-@media (max-width: 720px) { .layers .term { white-space: pre-wrap; font-size: 11px; padding: 6px 8px; } }
+.layers .term { display: block; min-width: 0; padding-top: 2px; color: var(--ink); font: 400 12.5px/1.75 var(--mono); letter-spacing: -0.01em; white-space: pre-wrap; }
+.layers .lrow > i { margin-top: 8px; }
 .layers i { height: 10px; border-radius: 2px; background: var(--rule); }
 .layers i.on { background: var(--gray); }
 .layers .focal i.on:last-child { background: var(--accent); }
@@ -252,8 +251,12 @@ article .seq .n { font: var(--meta); color: var(--gray); margin-right: 10px; }
   article figure.seq { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
-  .layers .lrow { grid-template-columns: 1fr repeat(3, 44px); }
+  .layers .lrow { grid-template-columns: minmax(0, 1fr) repeat(3, 44px); gap: 6px 8px; }
   .layers .lrow.head span { font-size: 10px; letter-spacing: 0; }
+  .layers .lrow.head .th-term { display: none; }
+  .layers .lrow > span:first-child { grid-column: 1; grid-row: 1; }
+  .layers .lrow > i { grid-row: 1; }
+  .layers .term { grid-column: 1 / -1; grid-row: 2; font-size: 11.5px; }
 }
 .layers .lrow.head > span { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); }
 .days .times { margin-bottom: 8px; }
