@@ -22,6 +22,8 @@ Design an interactive experience about how it felt to arrive in Italy. We were a
   <div class="step"><span class="n">III</span><b>Add your own</b><small>Shape it in playdough and write a line.</small></div>
 </div>
 
+<figure class="wide"><img src="/experiments/mosaic-assets/visitors-laughing.webp" alt="Visitors laughing around the table in afternoon light, with the process sketches taped to the window behind"/></figure>
+
 Visitors left a slice of pizza, gelato at Piazza Vecchia, a bowl of Maggi noodles that reminded someone of home, and "vino, vino & vino." The table kept growing.
 
 ## Small kindnesses
@@ -36,18 +38,11 @@ Mine was the coffee cup. After a small bike accident, the owners of a bike shop 
 
 We went from sketches to a working table in a day: who meets whom, what the objects could be, and how a plate could tell the figures to turn.
 
-<figure class="pair">
+<figure class="grid3 three">
   <img style="object-position: 50% 20%" src="/experiments/mosaic-assets/sketches.webp" alt="Sketches: small objects like a coffee cup, a key, and a bowl; a map of a stranger's arc from beginning to community; two figures connecting; and a hanging frame over a plate"/>
   <video src="/experiments/mosaic-assets/lab-build.mp4" poster="/experiments/mosaic-assets/lab-build-poster.jpg" autoplay muted loop playsinline aria-label="The team working at a long table in the lab, building the pieces"></video>
-  <figcaption>Concept to prototype, and building in the lab.</figcaption>
-</figure>
-
-## At the show
-
-<figure class="pair">
-  <img style="object-position: 50% 30%" src="/experiments/mosaic-assets/visitors-laughing.webp" alt="Visitors laughing around the table in afternoon light, with the process sketches taped to the window behind"/>
   <img src="/experiments/mosaic-assets/visitor-writing.webp" alt="A visitor leaning over the table to write her own memory, while another person watches"/>
-  <figcaption>People reading, laughing, and adding their own.</figcaption>
+  <figcaption>Concept to prototype, building in the lab, and a visitor adding her own.</figcaption>
 </figure>
 
 ## Parting thought

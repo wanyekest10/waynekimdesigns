@@ -509,7 +509,7 @@ article .flip-read b { font-weight: 400; color: var(--ink); }
 article figure.embed.live iframe { background: #140a07; }
 @media (max-width: 640px) { article figure.embed.live iframe { aspect-ratio: 4/5; } }
 /* VJ night: three across, kept three across until phones, where they stack. */
-article figure.grid3.vj { grid-template-columns: repeat(3, 1fr); }
-article figure.grid3.vj video { width: 100%; border-radius: 6px; }
-article figure.grid3.vj figcaption { grid-column: 1 / -1; }
-@media (max-width: 560px) { article figure.grid3.vj { grid-template-columns: 1fr; } }
+article figure.grid3.vj, article figure.grid3.three { grid-template-columns: repeat(3, 1fr); }
+article figure.grid3.vj video, article figure.grid3.three video { width: 100%; border-radius: 6px; }
+article figure.grid3.vj figcaption, article figure.grid3.three figcaption { grid-column: 1 / -1; }
+@media (max-width: 560px) { article figure.grid3.vj, article figure.grid3.three { grid-template-columns: 1fr; } }
