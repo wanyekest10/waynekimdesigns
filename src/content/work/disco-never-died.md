@@ -14,7 +14,7 @@ heroAlt: "A silver disco ball floating over layered red, yellow, and blue grids 
 hideHero: true
 short:
   - { lead: "The question.", text: "Can I help bring back a little Soul Train? I wanted the sound in a room to become something you could see and dance inside, with the look of '70s disco." }
-  - { lead: "What I built.", text: "A disco ball and a grid of colorful shapes that grow and glow with the room's volume. Drag to orbit around it in 3D." }
+  - { lead: "What I built.", text: "A disco ball and a grid of colorful shapes that grow and glow with the room's volume. Drag to orbit around it in 3D, or try it below." }
   - { lead: "What I learned.", text: "Disco balls are fun. And three simple squares, red, green, and blue, can go a long way." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
@@ -42,6 +42,10 @@ Two references: the look of Soul Train, and the way a disco ball turns one beam 
 <p class="flow-note">↻ Drag to orbit around it in 3D.</p>
 
 There are two layers. A sphere of shimmering squares, the disco ball, swells and brightens as it gets louder. Below it, layered grids in Soul Train colors react to the same sound.
+
+## Try it
+
+<figure class="embed live"><iframe src="/play/disco-live/" title="Disco Never Died, live: play a beat or turn on your mic, and drag to orbit" loading="lazy" allow="microphone; autoplay"></iframe><figcaption>The same sketch, ported to run in your browser. Play a beat, or turn on your mic and make some noise. Your mic's sound stays in your browser.</figcaption></figure>
 
 <figure class="wide"><img src="/work/disco-assets/renders.webp" alt="Three views of the piece: a silver disco ball over layered red, yellow, and blue grids of tiny squares, seen from different angles"/><figcaption>The disco ball over layered grids, from three angles.</figcaption></figure>
 

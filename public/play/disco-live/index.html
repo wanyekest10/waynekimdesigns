@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disco Never Died, live</title>
+<meta name="robots" content="noindex">
+<style>
+  /* Disco Never Died, ported from Wayne's Processing sketch to WebGL so it runs in the browser.
+     Same rules as the original: one loudness number drives every square's size and offset. */
+  @font-face { font-family: 'Geist Mono'; src: url('/fonts/geist-mono-latin-400-normal.woff2') format('woff2'); }
+  html, body { margin: 0; height: 100%; background: #140a07; overflow: hidden; }
+  canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+  canvas.drag { cursor: grabbing; }
+  .ui { position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font: 400 12.5px/1 'Geist Mono', ui-monospace, monospace; color: #fff; pointer-events: none; }
+  .ui > * { pointer-events: auto; }
+  button { font: inherit; color: #fff; background: rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 9px 14px; cursor: pointer; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  button[aria-pressed="true"] { background: #fff; color: #141414; border-color: #fff; }
+  button:focus-visible { outline: 2px solid #FFCA33; outline-offset: 2px; }
+  label.sens { display: flex; align-items: center; gap: 8px; background: rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 6px 14px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  input[type=range] { width: 90px; accent-color: #FFCA33; }
+  .hint { position: absolute; top: 12px; left: 12px; font: 400 12px/1.4 'Geist Mono', ui-monospace, monospace; color: rgba(255,255,255,.7); pointer-events: none; }
+  .meter { width: 46px; height: 6px; border-radius: 3px; background: rgba(255,255,255,.2); overflow: hidden; }
+  .meter i { display: block; height: 100%; width: 0; background: #FFCA33; }
+  @media (max-width: 480px) { .sens span { display: none; } input[type=range] { width: 70px; } }
+</style>
+</head>
+<body>
+<canvas id="c" aria-label="Disco Never Died: a disco ball over red, yellow, and blue grids that react to sound. Drag to orbit."></canvas>
+<p class="hint" id="hint">Drag to orbit · double-click to reset</p>
+<div class="ui">
+  <button type="button" id="beat" aria-pressed="false">▶ Play a beat</button>
+  <button type="button" id="mic" aria-pressed="false">● Use my mic</button>
+  <label class="sens"><span>Sensitivity</span><input type="range" id="sens" min="0.1" max="5" step="0.1" value="2.5" aria-label="Sensitivity"></label>
+  <span class="meter" aria-hidden="true"><i id="lvl"></i></span>
+</div>
+<script>
+(() => {
+  // ---------- The sketch's numbers, kept from the Processing version ----------
+  const COLS = 70, ROWS = 70, SPHERE_R = 70;
+  const VIRTUAL = 900;                       // stands in for min(width, height) of a laptop screen
+  const squareSize = VIRTUAL / Math.max(COLS, ROWS);
+  const rectSize = Math.floor(VIRTUAL / 70);
+  const RED = [235/255, 72/255, 36/255], YELLOW = [1, 202/255, 51/255], BLUE = [58/255, 64/255, 152/255];
+
+  const canvas = document.getElementById('c');
+  const gl = canvas.getContext('webgl2', { antialias: true, alpha: false });
+  if (!gl) { document.getElementById('hint').textContent = 'This browser needs WebGL2 to run the disco ball.'; return; }
+
+  // ---------- Shaders: one instanced quad, drawn as a square or a circle ----------
+  const vs = `#version 300 es
+  in vec2 corner;            // 0..1 unit quad
+  in vec3 base;              // where this square sits
+  in float kind;             // 0 red rect, 1 yellow rect, 2 blue circle, 3 sphere square
+  uniform mat4 viewProj;
+  uniform float size, dist, sphereSize;
+  out vec2 uv; flat out float k;
+  void main() {
+    vec3 p = base; vec2 c = corner;
+    if (kind < 0.5)      { p.xy += c * size; }
+    else if (kind < 1.5) { p.xy += vec2(dist, dist) + c * size; }
+    else if (kind < 2.5) { p.xy += vec2(dist, dist * 2.0) + (c - 0.5) * size; }
+    else                 { p.xy += (c - 0.5) * sphereSize; }
+    p.y = -p.y;              // Processing's y points down
+    uv = c; k = kind;
+    gl_Position = viewProj * vec4(p, 1.0);
+  }`;
+  const fs = `#version 300 es
+  precision mediump float;
+  in vec2 uv; flat in float k;
+  uniform vec3 red, yellow, blue;
+  out vec4 o;
+  void main() {
+    if (k < 0.5) o = vec4(red, 1.0);
+    else if (k < 1.5) o = vec4(yellow, 1.0);
+    else if (k < 2.5) { if (length(uv - 0.5) > 0.5) discard; o = vec4(blue, 1.0); }
+    else o = vec4(1.0, 1.0, 1.0, 150.0 / 255.0);
+  }`;
+  const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw gl.getShaderInfoLog(s); return s; };
+  const prog = gl.createProgram();
+  gl.attachShader(prog, sh(gl.VERTEX_SHADER, vs)); gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, fs)); gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const U = (n) => gl.getUniformLocation(prog, n);
+  gl.uniform3fv(U('red'), RED); gl.uniform3fv(U('yellow'), YELLOW); gl.uniform3fv(U('blue'), BLUE);
+
+  // Instances. The grid's three layers share one plane, like the original; a hair of random depth
+  // per shape gives the same speckled mix you get from Processing's z-fighting.
+  const grid = [], ball = [];
+  const marginX = -COLS * rectSize / 2, marginY = -ROWS * rectSize / 2;
+  for (let i = 0; i < COLS; i++) for (let j = 0; j < ROWS; j++)
+    for (let kind = 0; kind < 3; kind++) grid.push(marginX + i * rectSize, marginY + j * rectSize, (Math.random() - 0.5) * 0.6, kind);
+  for (let i = 0; i < COLS; i++) for (let j = 0; j < ROWS; j++) {
+    const th = i / COLS * Math.PI, ph = j / ROWS * Math.PI * 2;
+    ball.push(SPHERE_R * Math.sin(th) * Math.cos(ph), SPHERE_R * Math.sin(th) * Math.sin(ph), SPHERE_R * Math.cos(th) + 200, 3);
+  }
+  const quad = new Float32Array([0,0, 1,0, 0,1, 1,1]);
+  const mkVao = (data) => {
+    const vao = gl.createVertexArray(); gl.bindVertexArray(vao);
+    const qb = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, qb); gl.bufferData(gl.ARRAY_BUFFER, quad, gl.STATIC_DRAW);
+    const lc = gl.getAttribLocation(prog, 'corner'); gl.enableVertexAttribArray(lc); gl.vertexAttribPointer(lc, 2, gl.FLOAT, false, 0, 0);
+    const ib = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, ib); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(data), gl.STATIC_DRAW);
+    const lb = gl.getAttribLocation(prog, 'base'), lk = gl.getAttribLocation(prog, 'kind');
+    gl.enableVertexAttribArray(lb); gl.vertexAttribPointer(lb, 3, gl.FLOAT, false, 16, 0); gl.vertexAttribDivisor(lb, 1);
+    gl.enableVertexAttribArray(lk); gl.vertexAttribPointer(lk, 1, gl.FLOAT, false, 16, 12); gl.vertexAttribDivisor(lk, 1);
+    return { vao, n: data.length / 4 };
+  };
+  const gridV = mkVao(grid), ballV = mkVao(ball);
+
+  // ---------- Camera: orbit like PeasyCam ----------
+  const HOME = { az: -0.35, el: 0.62, d: innerWidth < innerHeight ? 1450 : 1080 };
+  if (matchMedia('(pointer: coarse)').matches) document.getElementById('hint').textContent = 'Drag to orbit · double-tap to reset';
+  let cam = { ...HOME }, goal = null;
+  const persp = (fov, a, n, f) => { const t = 1 / Math.tan(fov / 2), r = 1 / (n - f); return [t/a,0,0,0, 0,t,0,0, 0,0,(n+f)*r,-1, 0,0,2*n*f*r,0]; };
+  const sub = (a, b) => [a[0]-b[0], a[1]-b[1], a[2]-b[2]], cross = (a, b) => [a[1]*b[2]-a[2]*b[1], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0]];
+  const norm = (a) => { const l = Math.hypot(...a); return a.map((x) => x / l); }, dot = (a, b) => a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+  const lookAt = (e, t, up) => { const z = norm(sub(e, t)), x = norm(cross(up, z)), y = cross(z, x);
+    return [x[0],y[0],z[0],0, x[1],y[1],z[1],0, x[2],y[2],z[2],0, -dot(x,e),-dot(y,e),-dot(z,e),1]; };
+  const mul = (a, b) => { const o = new Array(16).fill(0); for (let c = 0; c < 4; c++) for (let r = 0; r < 4; r++) for (let k = 0; k < 4; k++) o[c*4+r] += a[k*4+r] * b[c*4+k]; return o; };
+
+  let dragging = null;
+  canvas.addEventListener('pointerdown', (e) => { dragging = { x: e.clientX, y: e.clientY }; goal = null; canvas.setPointerCapture(e.pointerId); canvas.classList.add('drag'); });
+  canvas.addEventListener('pointermove', (e) => { if (!dragging) return;
+    cam.az -= (e.clientX - dragging.x) * 0.006; cam.el = Math.max(-1.45, Math.min(1.5, cam.el + (e.clientY - dragging.y) * 0.006));
+    dragging = { x: e.clientX, y: e.clientY }; });
+  const end = () => { dragging = null; canvas.classList.remove('drag'); };
+  canvas.addEventListener('pointerup', end); canvas.addEventListener('pointercancel', end);
+  canvas.addEventListener('dblclick', () => { goal = { ...HOME }; });
+  canvas.addEventListener('wheel', (e) => { if (!e.ctrlKey && !e.metaKey) return; e.preventDefault(); cam.d = Math.max(120, Math.min(2600, cam.d * Math.exp(e.deltaY * 0.002))); }, { passive: false });
+
+  // ---------- Sound: the room's mic, or a disco beat made right here ----------
+  let ac = null, analyser = null, micStream = null, beat = null;
+  const buf = new Float32Array(1024);
+  const ensureAC = () => { if (!ac) { ac = new (window.AudioContext || window.webkitAudioContext)(); analyser = ac.createAnalyser(); analyser.fftSize = 1024; } return ac.resume(); };
+  const btnBeat = document.getElementById('beat'), btnMic = document.getElementById('mic');
+
+  function startBeat() {
+    const out = ac.createGain(); out.gain.value = 0.55; out.connect(ac.destination); const tap = ac.createGain(); tap.gain.value = 2.2; out.connect(tap).connect(analyser);
+    const noise = ac.createBuffer(1, ac.sampleRate * 0.5, ac.sampleRate); const nd = noise.getChannelData(0); for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+    const bpm = 118, step = 60 / bpm / 4; const bass = [41.2, 0, 41.2, 55, 0, 41.2, 61.7, 55];
+    let n = 0, next = ac.currentTime + 0.05;
+    const kick = (t) => { const o = ac.createOscillator(), g = ac.createGain(); o.frequency.setValueAtTime(140, t); o.frequency.exponentialRampToValueAtTime(45, t + 0.12);
+      g.gain.setValueAtTime(1, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.35); o.connect(g).connect(out); o.start(t); o.stop(t + 0.4); };
+    const hat = (t, open) => { const s = ac.createBufferSource(), f = ac.createBiquadFilter(), g = ac.createGain(); s.buffer = noise; f.type = 'highpass'; f.frequency.value = 7000;
+      g.gain.setValueAtTime(open ? 0.35 : 0.18, t); g.gain.exponentialRampToValueAtTime(0.001, t + (open ? 0.22 : 0.05)); s.connect(f).connect(g).connect(out); s.start(t); s.stop(t + 0.3); };
+    const clap = (t) => { const s = ac.createBufferSource(), f = ac.createBiquadFilter(), g = ac.createGain(); s.buffer = noise; f.type = 'bandpass'; f.frequency.value = 1500;
+      g.gain.setValueAtTime(0.6, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.18); s.connect(f).connect(g).connect(out); s.start(t); s.stop(t + 0.25); };
+    const bassNote = (t, hz) => { if (!hz) return; const o = ac.createOscillator(), f = ac.createBiquadFilter(), g = ac.createGain(); o.type = 'sawtooth'; o.frequency.value = hz * 2;
+      f.type = 'lowpass'; f.frequency.value = 600; g.gain.setValueAtTime(0.25, t); g.gain.exponentialRampToValueAtTime(0.001, t + step * 1.8); o.connect(f).connect(g).connect(out); o.start(t); o.stop(t + step * 2); };
+    const timer = setInterval(() => {
+      while (next < ac.currentTime + 0.12) {
+        const s = n % 16;
+        if (s % 4 === 0) kick(next);
+        if (s % 4 === 2) hat(next, true); else hat(next, false);
+        if (s === 4 || s === 12) clap(next);
+        if (s % 2 === 0) bassNote(next, bass[(s / 2) % 8]);
+        n++; next += step;
+      }
+    }, 25);
+    return { stop() { clearInterval(timer); out.gain.setTargetAtTime(0, ac.currentTime, 0.05); setTimeout(() => out.disconnect(), 300); } };
+  }
+  btnBeat.addEventListener('click', async () => {
+    await ensureAC();
+    if (beat) { beat.stop(); beat = null; btnBeat.setAttribute('aria-pressed', 'false'); btnBeat.textContent = '▶ Play a beat'; return; }
+    beat = startBeat(); btnBeat.setAttribute('aria-pressed', 'true'); btnBeat.textContent = '■ Stop the beat';
+  });
+  btnMic.addEventListener('click', async () => {
+    await ensureAC();
+    if (micStream) { micStream.src.disconnect(); micStream.stream.getTracks().forEach((t) => t.stop()); micStream = null; btnMic.setAttribute('aria-pressed', 'false'); btnMic.textContent = '● Use my mic'; return; }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+      const src = ac.createMediaStreamSource(stream); src.connect(analyser); micStream = { stream, src };
+      btnMic.setAttribute('aria-pressed', 'true'); btnMic.textContent = '● Mic on';
+    } catch (e) { btnMic.textContent = 'Mic blocked'; setTimeout(() => (btnMic.textContent = '● Use my mic'), 2500); }
+  });
+
+  const sens = document.getElementById('sens'), lvl = document.getElementById('lvl');
+  let level = 0;
+  const rms = () => { if (!analyser) return 0; analyser.getFloatTimeDomainData(buf); let s = 0; for (const v of buf) s += v * v; return Math.sqrt(s / buf.length); };
+  const map = (v, a, b, c, d) => c + (v - a) / (b - a) * (d - c);
+
+  // ---------- Draw ----------
+  const fit = () => { const dpr = Math.min(window.devicePixelRatio || 1, 2); const w = canvas.clientWidth * dpr | 0, h = canvas.clientHeight * dpr | 0;
+    if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; } gl.viewport(0, 0, canvas.width, canvas.height); };
+  let visible = true;
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(canvas);
+  document.addEventListener('visibilitychange', () => { visible = !document.hidden; });
+  function frame() {
+    requestAnimationFrame(frame);
+    if (!visible) return;
+    fit();
+    if (goal) { cam.az += (goal.az - cam.az) * 0.08; cam.el += (goal.el - cam.el) * 0.08; cam.d += (goal.d - cam.d) * 0.08; if (Math.abs(goal.d - cam.d) < 1 && Math.abs(goal.az - cam.az) < 0.002) goal = null; }
+    level += (rms() - level) * 0.5;
+    const a = Math.min(1.2, level * parseFloat(sens.value));         // adjustedSoundLevel
+    lvl.style.width = Math.min(100, a * 100) + '%';
+    const bg = map(a, 0, 1, 20, 100) / 255;
+    gl.clearColor(bg, bg / 2, bg / 3, 1); gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    const eye = [cam.d * Math.cos(cam.el) * Math.sin(cam.az), -cam.d * Math.cos(cam.el) * Math.cos(cam.az), cam.d * Math.sin(cam.el)];
+    const vp = mul(persp(Math.PI / 3, canvas.width / canvas.height, 10, 8000), lookAt(eye, [0, 0, 60], [0, 0, 1]));
+    gl.uniformMatrix4fv(U('viewProj'), false, vp);
+    gl.uniform1f(U('size'), map(a, 0, 1, 10, rectSize));
+    gl.uniform1f(U('dist'), a * 200);
+    gl.uniform1f(U('sphereSize'), map(a, 0, 1, 10, squareSize * 0.5));
+    // Grid first, solid; then the ball's see-through squares.
+    gl.enable(gl.DEPTH_TEST); gl.depthFunc(gl.LEQUAL); gl.depthMask(true); gl.disable(gl.BLEND);
+    gl.bindVertexArray(gridV.vao); gl.drawArraysInstanced(gl.TRIANGLE_STRIP, 0, 4, gridV.n);
+    gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA); gl.depthFunc(gl.LESS); // front squares hide the ones behind, as in Processing
+    gl.bindVertexArray(ballV.vao); gl.drawArraysInstanced(gl.TRIANGLE_STRIP, 0, 4, ballV.n);
+  }
+  frame();
+})();
+</script>
+</body>
+</html>

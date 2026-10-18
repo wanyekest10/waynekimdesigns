@@ -504,3 +504,6 @@ article .flip-read b { font-weight: 400; color: var(--ink); }
 .flip-range { width: 100%; accent-color: var(--ink); margin: 12px 0 0; display: block; }
 .flip-range:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @media (max-width: 720px) { article figure.ba { grid-template-columns: 1fr; } }
+/* A live, playable embed (Disco Never Died): a little taller on phones so its buttons fit. */
+article figure.embed.live iframe { background: #140a07; }
+@media (max-width: 640px) { article figure.embed.live iframe { aspect-ratio: 4/5; } }
