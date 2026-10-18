@@ -523,3 +523,6 @@ article figure.vl-crop .vl-wrap { overflow: hidden; aspect-ratio: 16 / 7.2; bord
 article figure.vl-crop .vl-wrap iframe { position: absolute; left: 0; top: 50%; width: 100%; aspect-ratio: 16 / 9; margin: 0; transform: translateY(-50%); border-radius: 0; }
 article figure.vl-crop .vl-sound { bottom: 12px; }
 @media (max-width: 640px) { article figure.vl-crop .vl-wrap { aspect-ratio: 16 / 8; } article figure.vl-crop .vl-wrap iframe { transform: translateY(-50%) scale(1.15); } }
+/* One portrait video, kept to a comfortable width. */
+article figure.portrait { max-width: 360px; margin: 32px 0; }
+article figure.portrait video { width: 100%; max-width: none; border-radius: 6px; margin: 0 0 10px; display: block; }
