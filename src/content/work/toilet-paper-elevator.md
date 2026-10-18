@@ -10,6 +10,8 @@ label: "Physical computing and fabrication"
 summary: "Toilet paper use, measured in landmark heights."
 hero: "/work/tpe-assets/hero-wall.webp"
 heroAlt: "Toilet Paper Elevator on a bathroom wall: a gray e-ink pod reading Ground floor, a slim raceway down to the holder, and a full roll on the bar"
+tocLabels:
+  "3 screens, 1 state machine": "Code & pixels"
 jumps:
   - { label: "Skip to how it works", to: "how-it-works" }
   - { label: "Why an elevator", to: "why-an-elevator" }
@@ -31,6 +33,10 @@ Most people in a home use toilet paper every day, and nobody ever sees how much.
 That set the rules early. The display had to be household-level and anonymous. It couldn't show sessions, single anyone out, or ask for attention. And it couldn't preach about sustainability, which would turn a curious object into a lecture.
 
 <figure class="frame hiw"><video src="/work/tpe-assets/how-it-works.mp4" poster="/work/tpe-assets/how-it-works-poster.jpg" autoplay muted loop playsinline aria-label="A new roll goes on, the screen climbs from 4 ft to 44 ft, then arrives at the Hollywood Sign and moves on past the Statue of Liberty and the Eiffel Tower"></video><figcaption>Install, climb, arrive. A new roll goes on, the count climbs, and the screen announces each landmark it passes.</figcaption></figure>
+
+## Why an elevator
+
+The first version was a highway: a roll spins like a wheel, so every pull was distance driven from LA City Hall to the Santa Monica Pier. But one household moves slowly, and a trip measured in miles barely changes from week to week. Height works better, because feet move every day and the world is full of tall things people already know. So it climbs from the ground floor past eighteen landmarks, from the Hollywood Sign to the Eiffel Tower to the Burj Khalifa.
 
 ## How it works
 
@@ -75,11 +81,7 @@ Three parts, one board.
 
 The slow e-paper refresh is on purpose. The number doesn't flash or animate when you're in the room. It's simply different the next time you look.
 
-## Why an elevator
-
-The first version was a highway: a roll spins like a wheel, so every pull was distance driven from LA City Hall to the Santa Monica Pier. But one household moves slowly, and a trip measured in miles barely changes from week to week. Height works better, because feet move every day and the world is full of tall things people already know. So it climbs from the ground floor past eighteen landmarks, from the Hollywood Sign to the Eiffel Tower to the Burj Khalifa.
-
-### Three screens, one state machine
+### 3 screens, 1 state machine
 
 The screen is a small state machine. It starts on G, climbs while nobody's looking, and flips to an arrival screen for one visit when the count passes a landmark.
 

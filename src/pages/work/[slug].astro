@@ -13,9 +13,10 @@ const beats = d.short ?? [];
 const facts = d.facts ?? [];
 // Section list: numbered h2s, h3s as indented sub-items. "Hack Week: the assumption broke" shows as "Hack Week".
 let n = 0;
+const d0 = w.data as any;
 const toc = headings
   .filter((h) => (h.depth === 2 && h.text !== 'TL;DR') || h.depth === 3)
-  .map((h) => ({ ...h, num: h.depth === 2 ? String(++n).padStart(2, '0') : null, label: h.text.split(':')[0] }));
+  .map((h) => ({ ...h, num: h.depth === 2 ? String(++n).padStart(2, '0') : null, label: (d0.tocLabels ?? {})[h.text] ?? h.text.split(':')[0] }));
 ---
 <Base wide title={`${d.title}, Wayne Kim`} description={d.summary} prompt="Working on something like this?">
   <div class="cs">
