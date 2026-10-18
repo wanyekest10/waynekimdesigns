@@ -66,19 +66,17 @@ const toc = headings
   </div>
 </Base>
 <script>
-// Flipbook: one screen that rides the whole climb. Autoplays when in view, scrub with the slider.
-document.querySelectorAll('.flip').forEach((root) => {
-  const frames = JSON.parse((root as HTMLElement).dataset.frames || "[]");
+// Flipbook: one screen that rides the whole climb. Plays whenever it's on screen; dragging the slider pauses it for a moment.
+document.querySelectorAll<HTMLElement>('.flip').forEach((root) => {
+  const frames = JSON.parse(root.dataset.frames || '[]');
   const img = root.querySelector('.flip-screen img') as HTMLImageElement;
   const range = root.querySelector('.flip-range') as HTMLInputElement;
-  const play = root.querySelector('.flip-play') as HTMLButtonElement;
   const read = root.querySelector('.flip-read b') as HTMLElement;
   const count = root.querySelector('.flip-read span') as HTMLElement;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const ICON_PLAY = '<svg viewBox="0 0 12 12"><path d="M2 1 L11 6 L2 11 Z"/></svg>';
-  const ICON_PAUSE = '<svg viewBox="0 0 12 12"><path d="M2 1 H5 V11 H2 Z M7 1 H10 V11 H7 Z"/></svg>';
   range.max = String(frames.length - 1);
-  let i = 0, timer: ReturnType<typeof setTimeout> | undefined, playing = false, seen = false;
+  let i = 0, inView = false;
+  let timer: ReturnType<typeof setTimeout> | undefined;
   const loaded = new Set<number>();
   const preload = (k: number) => { if (k < frames.length && !loaded.has(k)) { const im = new Image(); im.src = frames[k].src; loaded.add(k); } };
   const show = (k: number) => {
@@ -88,21 +86,20 @@ document.querySelectorAll('.flip').forEach((root) => {
     read.textContent = f.label; count.textContent = (k + 1) + ' / ' + frames.length;
     preload(k + 1); preload(k + 2);
   };
-  const tick = () => { show((i + 1) % frames.length); timer = setTimeout(tick, frames[i].kind === 'arrival' ? 1500 : 900); };
-  const setPlay = (on: boolean) => {
-    playing = on; clearTimeout(timer);
-    play.innerHTML = on ? ICON_PAUSE : ICON_PLAY; play.setAttribute('aria-label', on ? 'Pause' : 'Play');
-    if (on) timer = setTimeout(tick, 900);
-  };
-  range.addEventListener('input', () => { setPlay(false); show(Number(range.value)); });
-  play.addEventListener('click', () => setPlay(!playing));
-  show(0); setPlay(false);
-  if (!reduce && 'IntersectionObserver' in window) {
-    new IntersectionObserver(([e]) => {
-      if (e.isIntersecting && !seen) { seen = true; frames.forEach((_, k) => k < 6 && preload(k)); setPlay(true); }
-      else if (!e.isIntersecting && playing) setPlay(false);
-    }, { threshold: 0.5 }).observe(root);
-  }
+  const stop = () => { clearTimeout(timer); timer = undefined; };
+  const run = (delay = 900) => { stop(); if (reduce || !inView) return; timer = setTimeout(() => { show((i + 1) % frames.length); run(frames[i].kind === 'arrival' ? 1500 : 900); }, delay); };
+  range.addEventListener('input', () => { show(Number(range.value)); stop(); timer = setTimeout(() => run(), 2500); });
+  show(0);
+  new IntersectionObserver(([e]) => {
+    inView = e.isIntersecting;
+    if (inView) { for (let k = 0; k < 6; k++) preload(k); run(600); } else stop();
+  }, { threshold: 0.3 }).observe(root);
+});
+// Before: the two early screens trade places.
+document.querySelectorAll<HTMLElement>('.ba-before').forEach((box) => {
+  const ims = [...box.querySelectorAll('img')]; let k = 0;
+  if (ims.length < 2 || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  setInterval(() => { ims[k].classList.remove('on'); k = (k + 1) % ims.length; ims[k].classList.add('on'); }, 2400);
 });
 
   const v3d = document.querySelector<HTMLElement>('.v3d');
