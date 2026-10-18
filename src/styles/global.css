@@ -513,6 +513,6 @@ article figure.grid3.vj, article figure.grid3.three { grid-template-columns: rep
 article figure.grid3.vj video, article figure.grid3.three video { width: 100%; border-radius: 6px; }
 article figure.grid3.vj figcaption, article figure.grid3.three figcaption { grid-column: 1 / -1; }
 @media (max-width: 560px) { article figure.grid3.vj, article figure.grid3.three { grid-template-columns: 1fr; } }
-/* A single photo the width of one How it works step card. */
-article figure.cardsize { max-width: calc((var(--measure) - 56px) / 3); margin: 16px 0 28px; }
-article figure.cardsize img { width: 100%; max-width: none; aspect-ratio: 3/2; object-fit: cover; object-position: 50% 30%; border-radius: 6px; margin: 0; }
+/* A single photo as wide as the How it works steps, kept short. */
+article figure.cardsize { max-width: var(--measure); margin: 16px 0 28px; }
+article figure.cardsize img { width: 100%; max-width: none; aspect-ratio: 16/9; object-fit: cover; object-position: 50% 35%; border-radius: 6px; margin: 0; }
