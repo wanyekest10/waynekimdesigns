@@ -13,7 +13,7 @@ hero: "/work/disco-assets/card.webp"
 heroAlt: "A silver disco ball floating over layered red, yellow, and blue grids of tiny squares"
 hideHero: true
 short:
-  - { lead: "The question.", text: "Can you watch sound? I wanted to turn the noise in a room into something you could see and move around in, with the look of Soul Train-era disco." }
+  - { lead: "The question.", text: "Can I help bring back a little Soul Train? I wanted the sound in a room to become something you could see and dance inside, with the look of '70s disco." }
   - { lead: "What I built.", text: "A microphone listens to how loud the room is. A disco ball made of small squares, and a grid of colorful shapes, grow and brighten with it. Drag, and you can orbit around the whole thing in 3D." }
   - { lead: "What I learned.", text: "Disco balls are fun. And three simple squares, red, green, and blue, can go a long way." }
 facts:
