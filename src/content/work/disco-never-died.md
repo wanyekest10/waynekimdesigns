@@ -65,3 +65,11 @@ It started as a grid of plain white squares. Then each square split into red, gr
 ## What came next
 
 I love music, and creative coding, starting with this project, is what opened up VJing for me: making visuals live, in the room, with the sound.
+
+<figure class="pair tall">
+  <img src="/work/disco-assets/vj-impactminds-booth.webp" alt="Wayne at the laptop and mixer, lit up by warm orange speckled visuals projected across the wall and over him"/>
+  <video src="/work/disco-assets/vj-impactminds-tunnel.mp4" poster="/work/disco-assets/vj-impactminds-tunnel-poster.jpg" autoplay muted loop playsinline aria-label="A crowd dancing under a vaulted ceiling while swirling blue-white visuals fill the arch behind the DJ"></video>
+  <figcaption>VJing at CIID ImpactMinds, March 2026.</figcaption>
+</figure>
+
+<figure class="wide"><video src="/work/disco-assets/vj-impactminds-crowd.mp4" poster="/work/disco-assets/vj-impactminds-crowd-poster.jpg" autoplay muted loop playsinline aria-label="Silhouettes of people dancing in front of an arch filled with red, green, and blue geometric visuals"></video><figcaption>The dance floor, same night.</figcaption></figure>

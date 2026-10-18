@@ -59,7 +59,8 @@ article img, article video { width: 100%; max-width: var(--measure); margin: 32p
 article p:has(img), article figure { max-width: var(--measure); }
 /* Opt-in wide moments: pairs, trios, and figure.wide */
 article .pair, article .trio, article figure.wide { max-width: var(--wide); }
-article .pair img, article .pair video, article .trio img, article figure.wide img { max-width: none; }
+article .pair img, article .pair video, article .trio img, article figure.wide img, article figure.wide video { max-width: none; }
+article figure.wide video { width: 100%; display: block; }
 article figure.medium { max-width: 560px; }
 article figure > img, article figure > a > img { margin: 0 0 10px; }
 article figcaption { font: var(--small); color: var(--gray); }
