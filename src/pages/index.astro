@@ -33,8 +33,8 @@ const years = [
   <header class="intro">
     <h1 class="brush" aria-label="Interaction designer and researcher">Interaction designer and researcher</h1>
     <p class="method">Building prototypes and testing them with real people.</p>
+    <dl class="nowbefore"><dt>Now</dt><dd>Calm tech · Learning SolidWorks at LACI</dd><dt>Before</dt><dd>CIID · Glorify · Designit</dd></dl>
     <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
-    <p class="nowbefore"><span><b>Now</b>Calm tech prototypes · Learning SolidWorks at LACI</span><span><b>Before</b>CIID · Glorify · Designit</span></p>
   </header>
 
   <section id="work" class="block">
@@ -180,8 +180,11 @@ const years = [
   .method { color: var(--ink); max-width: 30em; }
   @media (max-width: 720px) { .intro h1 { font-size: 34px; } }
   .status { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-top: 12px; }
-  .nowbefore { margin-top: 6px; display: grid; gap: 2px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); }
-  .nowbefore b { font-weight: 400; color: var(--ink); display: inline-block; width: 7ch; }
+  .nowbefore { margin: 24px 0 0; display: grid; grid-template-columns: 64px 1fr; gap: 4px 12px; max-width: 34em; }
+  .nowbefore dt { font: 400 11px/1.95 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); }
+  .nowbefore dd { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--gray); }
+  .nowbefore + .status { margin-top: 24px; }
+  @media (max-width: 720px) { .nowbefore { grid-template-columns: 52px 1fr; gap: 4px 10px; } .nowbefore dd { font-size: 14px; } }
   .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
   .sub { color: var(--gray); max-width: 36em; }
   .block { margin-bottom: 120px; scroll-margin-top: 24px; }
