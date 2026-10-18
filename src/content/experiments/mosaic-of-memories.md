@@ -38,7 +38,7 @@ We went from sketches to a working table in a day: who meets whom, what the obje
 
 <figure class="pair">
   <img style="object-position: 50% 20%" src="/experiments/mosaic-assets/sketches.webp" alt="Sketches: small objects like a coffee cup, a key, and a bowl; a map of a stranger's arc from beginning to community; two figures connecting; and a hanging frame over a plate"/>
-  <video src="/experiments/mosaic-assets/lab-build.mp4" poster="/experiments/mosaic-assets/lab-build-poster.jpg" autoplay muted loop playsinline aria-label="The team at a table in the lab, cutting cardboard and building the pieces"></video>
+  <video src="/experiments/mosaic-assets/lab-build.mp4" poster="/experiments/mosaic-assets/lab-build-poster.jpg" autoplay muted loop playsinline aria-label="The team working at a long table in the lab, building the pieces"></video>
   <figcaption>Concept to prototype, and building in the lab.</figcaption>
 </figure>
 

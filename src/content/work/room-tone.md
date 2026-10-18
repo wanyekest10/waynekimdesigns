@@ -31,7 +31,7 @@ facts:
 
 At CIID, the day had a rhythm. Crits, shared lunches, someone leaning over to ask if you wanted coffee. When I came back to working alone in Los Angeles, that rhythm was gone. Hours disappeared. Time felt flat. Nothing in my room changed between 9am and 5pm except how stiff I was.
 
-<figure class="wide"><video src="/work/room-tone-assets/lab-wide.mp4" poster="/work/room-tone-assets/lab-wide-poster.jpg" autoplay muted loop playsinline></video><figcaption>The CIID lab on a normal afternoon: people building, testing, and checking in on each other.</figcaption></figure>
+<figure class="wide"><video src="/work/room-tone-assets/lab-table.mp4" poster="/work/room-tone-assets/lab-table-poster.jpg" autoplay muted loop playsinline></video><figcaption>The CIID lab on a normal afternoon: people building, testing, and checking in on each other.</figcaption></figure>
 
 <figure class="days" role="img" aria-label="Two lines from 9am to 5pm. The first is flat. The second rises and falls like a wave.">
   <div class="day">
