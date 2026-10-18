@@ -17,7 +17,6 @@ facts:
   - { label: "Where", value: "Designit · CIID · Glorify" }
   - { label: "Role", value: "Designer and facilitator" }
   - { label: "Methods", value: "Workshop design, How Might We, synthesis" }
-  - { label: "Outcome", value: "A research agenda for the year at Glorify · Product direction for Wipro" }
 ---
 
 ## Glorify
