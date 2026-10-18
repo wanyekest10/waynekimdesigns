@@ -522,11 +522,12 @@ article figure.cardsize img { width: 100%; max-width: none; aspect-ratio: 16/9; 
 /* Phones: size the hero line so its first half, up to the comma, fits on one line. */
 @media (max-width: 560px) { .intro .method { font-size: clamp(13px, calc((100vw - 32px) / 25.5), 16px); } }
 article h2 .eat { color: var(--accent); }
-/* Disco idea video: trim the empty ceiling and floor so the visuals read bigger, especially on phones. */
-article figure.vl-crop .vl-wrap { overflow: hidden; aspect-ratio: 16 / 7.2; border-radius: 6px; margin-bottom: 10px; background: #111; }
-article figure.vl-crop .vl-wrap iframe { position: absolute; left: 0; top: 50%; width: 100%; aspect-ratio: 16 / 9; margin: 0; transform: translateY(-50%); border-radius: 0; }
-article figure.vl-crop .vl-sound { bottom: 12px; }
-@media (max-width: 640px) { article figure.vl-crop .vl-wrap { aspect-ratio: 16 / 8; } article figure.vl-crop .vl-wrap iframe { transform: translateY(-50%) scale(1.15); } }
+/* Disco idea video: the clip is vertical inside Vimeo's wide player, so show only the vertical part,
+   and trim the empty floor at the bottom. The iframe is oversized and shifted so its middle third fills the frame. */
+article figure.vl-portrait { max-width: 400px; }
+article figure.vl-portrait .vl-wrap { overflow: hidden; aspect-ratio: 9 / 13.5; border-radius: 6px; margin-bottom: 10px; background: #111; }
+article figure.vl-portrait .vl-wrap iframe { position: absolute; width: 316.05%; left: -108.02%; top: -3%; aspect-ratio: 16 / 9; margin: 0; border-radius: 0; pointer-events: none; }
+article figure.vl-portrait .vl-sound { bottom: 12px; }
 /* One portrait video, kept to a comfortable width. */
 article figure.portrait { max-width: 360px; margin: 32px 0; }
 article figure.portrait video { width: 100%; max-width: none; border-radius: 6px; margin: 0 0 10px; display: block; }
