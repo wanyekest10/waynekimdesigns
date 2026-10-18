@@ -30,6 +30,12 @@ Most people in a home use toilet paper every day, and nobody ever sees how much.
 
 That set the rules early. The display had to be household-level and anonymous. It couldn't show sessions, single anyone out, or ask for attention. And it couldn't preach about sustainability, which would turn a curious object into a lecture.
 
+<figure class="grid3 tallnat compact">
+  <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Every part, before it went up.</p></div>
+  <div><img src="/work/tpe-assets/final-wall.webp" alt="The finished version in daylight: the gray pod showing 4 ft up above the holder and sleeve"/><p>The sleeve on the bar.</p></div>
+  <div><img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/><p>On the wall, with a roll.</p></div>
+</figure>
+
 ## How it works
 
 <figure class="wide tpe-mech" aria-label="Animation: the roll turns, its four magnets pass the Hall sensor, the square count climbs, and the e-paper screen updates from ground floor to the Hollywood Sign">
@@ -75,7 +81,7 @@ The slow e-paper refresh is on purpose. The number doesn't flash or animate when
 
 ## Why an elevator
 
-The first version was a highway: a roll spins like a wheel, so every pull was distance driven from LA City Hall to the Santa Monica Pier. But one household moves slowly, and a trip measured in miles barely changes from week to week. Height works better, because feet move every day and the world is full of tall things people already know. So the climb starts at the ground floor and passes eighteen landmarks, from the Hollywood Sign to the Eiffel Tower to the Burj Khalifa.
+The first version was a highway: a roll spins like a wheel, so every pull was distance driven from LA City Hall to the Santa Monica Pier. But one household moves slowly, and a trip measured in miles barely changes from week to week. Height works better, because feet move every day and the world is full of tall things people already know. So it climbs from the ground floor past eighteen landmarks, from the Hollywood Sign to the Eiffel Tower to the Burj Khalifa.
 
 ### Three screens, one state machine
 
@@ -188,12 +194,6 @@ How do you get a wire from the holder to the screen without anything exposed in 
 ## Installed
 
 <figure class="frame"><video src="/work/tpe-assets/install-loop.mp4" poster="/work/tpe-assets/install-loop-poster.jpg" autoplay muted loop playsinline aria-label="Installing a new roll: the sleeve slides into the roll, the bar comes off, the roll goes on, and it seats under the screen"></video></figure>
-
-<figure class="grid3 tallnat">
-  <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Every part, before it went up.</p></div>
-  <div><img src="/work/tpe-assets/final-wall.webp" alt="The finished version in daylight: the gray pod showing 4 ft up above the holder and sleeve"/><p>The sleeve on the bar.</p></div>
-  <div><img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/><p>On the wall, with a roll.</p></div>
-</figure>
 
 ## Reflection
 

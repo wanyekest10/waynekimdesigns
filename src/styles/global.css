@@ -448,3 +448,10 @@ article pre code { font: inherit; }
 
 article .pair.square > img { aspect-ratio: 1/1; }
 @media (max-width: 720px) { article pre { font-size: 11px; padding: 14px; } }
+
+/* Smaller three-up photo row at text width (TPE intro), stays three across on phones */
+article .grid3.compact { max-width: var(--measure); grid-template-columns: repeat(3, 1fr); gap: 12px; }
+article .grid3.compact p { font-size: 13px; }
+article .grid3.compact img { aspect-ratio: 4/5; }
+/* Avoid a lone last word on body paragraphs */
+article p { text-wrap: pretty; }
