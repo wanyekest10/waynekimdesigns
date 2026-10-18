@@ -30,6 +30,8 @@ Most people in a home use toilet paper every day, and nobody ever sees how much.
 
 That set the rules early. The display had to be household-level and anonymous. It couldn't show sessions, single anyone out, or ask for attention. And it couldn't preach about sustainability, which would turn a curious object into a lecture.
 
+<figure class="frame hiw"><video src="/work/tpe-assets/how-it-works.mp4" poster="/work/tpe-assets/how-it-works-poster.jpg" autoplay muted loop playsinline aria-label="A new roll goes on, the screen climbs from 4 ft to 44 ft, then arrives at the Hollywood Sign and moves on past the Statue of Liberty and the Eiffel Tower"></video><figcaption>Install, climb, arrive. A new roll goes on, the count climbs, and the screen announces each landmark it passes.</figcaption></figure>
+
 <figure class="grid3 tallnat compact">
   <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Every part, before it went up.</p></div>
   <div><img src="/work/tpe-assets/final-wall.webp" alt="The finished version in daylight: the gray pod showing 4 ft up above the holder and sleeve"/><p>The sleeve on the bar.</p></div>

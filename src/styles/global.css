@@ -455,3 +455,7 @@ article .grid3.compact p { font-size: 13px; }
 article .grid3.compact img { aspect-ratio: 4/5; }
 /* Avoid a lone last word on body paragraphs */
 article p { text-wrap: pretty; }
+
+/* TPE: short how-it-works loop at text width */
+article figure.hiw { max-width: min(var(--measure), 560px); }
+article figure.hiw video { max-width: 100%; }
