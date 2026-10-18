@@ -79,10 +79,6 @@ Before rebuilding, I wrote down how it should feel, using Bill Verplank's questi
   <div><h4>Control</h4><p>No button. Typing starts it, and typing ends it.</p></div>
 </div>
 
-### Why a disco ball
-
-It's personal. Disco balls were at the creative coding nights and CIID parties where work felt most like play. It also has three layers built in: light hits it, it turns, and music belongs with it. Those three layers became the stages of the system.
-
 ## How it runs
 
 Each layer arrives on its own, then leaves in reverse. At any point, I can keep working and let it pass.
@@ -117,6 +113,10 @@ A Python script on my laptop uses pynput to track keyboard and mouse activity an
 </div>
 
 The whole thing is a small state machine: noticing, activating, asking, playing, returning, settled. I gave each state a symbol in the terminal, so I could glance over and see exactly what the system thought was happening. Most of my tuning happened there: how long to wait before the ball, how many seconds of stillness count as a pause, how slowly each layer should fade.
+
+### Why a disco ball
+
+It's personal. Disco balls were at the creative coding nights and CIID parties where work felt most like play. It also has three layers built in: light hits it, it turns, and music belongs with it. Those three layers became the stages of the system.
 
 ## Reflection
 
