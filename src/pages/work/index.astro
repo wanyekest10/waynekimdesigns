@@ -4,11 +4,29 @@ import { getCollection } from 'astro:content';
 import Rows from '../../components/Rows.astro';
 import { archive } from '../../data/archive';
 const work = (await getCollection('work')).filter((w) => (w.data as any).listIn !== 'experiments').sort((a, b) => a.data.order - b.data.order);
+// Work done inside companies (on staff, or for Designit's clients), shown as its own group.
+const INDUSTRY = ['glorify-groups', 'designit-futures', 'facilitation', 'raiseme-portal']; // newest first
+const row = (w: any) => ({ name: w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/work/${w.id}/`, image: w.data.card ?? w.data.hero });
+const independent = work.filter((w) => !INDUSTRY.includes(w.id)).map(row);
+const industry = INDUSTRY.map((id) => work.find((w) => w.id === id)).filter(Boolean).map(row);
 ---
 <Base title="Work, Wayne Kim" description="Case studies and projects by Wayne Kim, researcher and interaction designer.">
   <h1>Work</h1>
   <p class="lead">Case studies in research and prototyping.</p>
-  <section class="block"><Rows rows={work.map((w) => ({ name: w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/work/${w.id}/`, image: w.data.card ?? w.data.hero }))} /></section>
+  <section class="block">
+    <div class="block-head">
+      <h2 class="section-title">Independent and CIID</h2>
+      <span class="block-sub">Prototypes I built on my own and at CIID.</span>
+    </div>
+    <Rows rows={independent} />
+  </section>
+  <section class="block">
+    <div class="block-head">
+      <h2 class="section-title">Industry work</h2>
+      <span class="block-sub">On staff at Glorify and RaiseMe, and with clients at Designit.</span>
+    </div>
+    <Rows rows={industry} />
+  </section>
   {archive.length > 0 && (
   <section class="block">
     <div class="block-head">
