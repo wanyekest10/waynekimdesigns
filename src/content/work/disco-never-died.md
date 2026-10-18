@@ -73,4 +73,4 @@ I love music, and creative coding, starting with this project, is what opened up
   <figcaption>VJing at CIID ImpactMinds, March 2026.</figcaption>
 </figure>
 
-Special thanks to [Jose Chavarría](https://www.linkedin.com/in/chavarria-jose/) for mentoring me on VJing in Resolume and live setup.
+Special thanks to [Jose Chavarría](https://www.ciid.dk/community/jose-chavarria) for mentoring me on VJing in Resolume and live setup.
