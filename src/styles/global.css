@@ -516,7 +516,8 @@ article figure.grid3.vj figcaption, article figure.grid3.three figcaption { grid
 /* A single photo as wide as the How it works steps, kept short. */
 article figure.cardsize { max-width: var(--measure); margin: 16px 0 28px; }
 article figure.cardsize img { width: 100%; max-width: none; aspect-ratio: 16/9; object-fit: cover; object-position: 50% 35%; border-radius: 6px; margin: 0; }
-@media (max-width: 560px) { .wide-br { display: none; } }
+/* Phones: size the hero line so its first half, up to the comma, fits on one line. */
+@media (max-width: 560px) { .intro .method { font-size: clamp(13px, calc((100vw - 32px) / 25.5), 16px); } }
 article h2 .eat { color: var(--accent); }
 /* Disco idea video: trim the empty ceiling and floor so the visuals read bigger, especially on phones. */
 article figure.vl-crop .vl-wrap { overflow: hidden; aspect-ratio: 16 / 7.2; border-radius: 6px; margin-bottom: 10px; background: #111; }
