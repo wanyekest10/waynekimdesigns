@@ -5,7 +5,7 @@ import Rows from '../../components/Rows.astro';
 import { archive } from '../../data/archive';
 const work = (await getCollection('work')).filter((w) => (w.data as any).listIn !== 'experiments').sort((a, b) => a.data.order - b.data.order);
 // Work done inside companies (on staff, or for Designit's clients), shown as its own group.
-const INDUSTRY = ['glorify-groups', 'designit-futures', 'facilitation', 'raiseme-portal']; // newest first
+const INDUSTRY = ['glorify-groups', 'raiseme-portal', 'designit-futures', 'facilitation'];
 const row = (w: any) => ({ name: w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/work/${w.id}/`, image: w.data.card ?? w.data.hero });
 const independent = work.filter((w) => !INDUSTRY.includes(w.id)).map(row);
 const industry = INDUSTRY.map((id) => work.find((w) => w.id === id)).filter(Boolean).map(row);
