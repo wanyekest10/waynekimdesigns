@@ -24,6 +24,10 @@ facts:
   - { label: "Tools", value: "Processing · PeasyCam · Microphone" }
 ---
 
+## Try it
+
+<figure class="embed live"><iframe src="/play/disco-live/" title="Disco Never Died, live: play a beat or turn on your mic, and drag to orbit" loading="lazy" allow="microphone; autoplay"></iframe><figcaption>The same sketch, ported to run in your browser. Play a beat, or turn on your mic and make some noise. Your mic's sound stays in your browser.</figcaption></figure>
+
 ## The idea
 
 <figure class="embed vimeo-live"><div class="vl-wrap"><iframe src="https://player.vimeo.com/video/1041186030?background=1&autoplay=1&loop=1&muted=1&dnt=1" title="Disco Never Died, video" allow="autoplay; fullscreen; picture-in-picture"></iframe><button class="vl-sound" type="button" aria-pressed="false">Sound off</button></div><figcaption>Turn the sound on: it's what drives the visuals.</figcaption></figure>
@@ -42,10 +46,6 @@ Two references: the look of Soul Train, and the way a disco ball turns one beam 
 <p class="flow-note">↻ Drag to orbit around it in 3D.</p>
 
 There are two layers. A sphere of shimmering squares, the disco ball, swells and brightens as it gets louder. Below it, layered grids in Soul Train colors react to the same sound.
-
-## Try it
-
-<figure class="embed live"><iframe src="/play/disco-live/" title="Disco Never Died, live: play a beat or turn on your mic, and drag to orbit" loading="lazy" allow="microphone; autoplay"></iframe><figcaption>The same sketch, ported to run in your browser. Play a beat, or turn on your mic and make some noise. Your mic's sound stays in your browser.</figcaption></figure>
 
 <figure class="wide"><img src="/work/disco-assets/renders.webp" alt="Three views of the piece: a silver disco ball over layered red, yellow, and blue grids of tiny squares, seen from different angles"/><figcaption>The disco ball over layered grids, from three angles.</figcaption></figure>
 
