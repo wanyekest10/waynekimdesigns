@@ -234,6 +234,9 @@ article figure.days { max-width: var(--measure); margin: 32px 0; display: grid; 
 .layers .lrow.head span:not(:first-child) { text-align: center; }
 .layers .lrow > span { font-size: 15px; color: var(--ink); }
 .layers .lrow small { display: block; font: var(--small); font-size: 14px; color: var(--gray); }
+.layers .term { display: block; margin-top: 8px; padding: 6px 10px; border-radius: 4px; background: #141414; color: #EDEDE8; font: 400 12px/1.6 var(--mono); letter-spacing: -0.01em; white-space: pre; overflow-x: auto; max-width: 100%; }
+.layers .lrow > span { min-width: 0; }
+@media (max-width: 720px) { .layers .term { white-space: pre-wrap; font-size: 11px; padding: 6px 8px; } }
 .layers i { height: 10px; border-radius: 2px; background: var(--rule); }
 .layers i.on { background: var(--gray); }
 .layers .focal i.on:last-child { background: var(--accent); }
