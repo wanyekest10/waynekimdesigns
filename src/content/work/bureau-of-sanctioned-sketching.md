@@ -116,6 +116,8 @@ In playtests, it didn't work. The technology became the thing people paid attent
 
 Three card stacks, one minute, one shared sheet of paper.
 
+<figure class="frame"><video src="/work/bss-assets/how-it-plays-3x2.mp4" poster="/work/bss-assets/how-it-plays-3x2-poster.jpg" autoplay muted loop playsinline></video></figure>
+
 <div class="flow" role="list" aria-label="How a round of BSS plays">
   <div class="step"><span class="n">01</span><b>Pull one card from each stack</b><small>Draw, Using, While.</small></div>
   <span class="to" aria-hidden="true">→</span>
@@ -126,8 +128,6 @@ Three card stacks, one minute, one shared sheet of paper.
   <div class="step"><span class="n">04</span><b>Look, laugh, pass</b><small>Then pull new cards.</small></div>
 </div>
 <p class="flow-note">↻ Repeat until someone writes their own card.</p>
-
-<figure class="frame"><video src="/work/bss-assets/how-it-plays-3x2.mp4" poster="/work/bss-assets/how-it-plays-3x2-poster.jpg" autoplay muted loop playsinline></video></figure>
 
 - **Draw** sets the subject: "the place you're in."
 - **Using** sets a physical limit: "your non-dominant hand," "eyes closed."
