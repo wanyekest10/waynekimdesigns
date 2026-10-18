@@ -65,8 +65,8 @@ const years = [
         <li class="egg">
           <button class="egg-line" type="button" aria-expanded="false" aria-label="Something between Colby and Reed"></button>
           <div class="egg-body"><div class="egg-in">
-            <span class="when">'14</span>
-            <span><strong>Three months on the road</strong><span class="note">Walked the Camino with my best friend, Fête de la Musique in Nantes, then Morocco.<br />Thought a lot about the value of a liberal arts education and met people from all walks of life.<br />Congrats, you found an Easter egg :)</span>
+            <span class="when">'14<span class="egg-yay">Congrats, you found an Easter egg :)</span></span>
+            <span><strong>Three months on the road</strong><span class="note">Walked the Camino with my best friend, Fête de la Musique in Nantes, then Morocco.<br />Thought a lot about the value of a liberal arts education and met people from all walks of life.</span>
               <span class="film">{travel.map((t) => <figure><img src={t.src} alt={t.alt} loading="lazy" /><figcaption>{t.caption}</figcaption></figure>)}</span>
             </span>
           </div></div>
@@ -155,7 +155,21 @@ const years = [
 
     document.querySelectorAll('.egg').forEach((egg) => {
       const btn = egg.querySelector('.egg-line') as HTMLButtonElement;
-      const set = (on: boolean) => { egg.classList.toggle('open', on); btn.setAttribute('aria-expanded', String(on)); };
+      const yay = egg.querySelector<HTMLElement>('.egg-yay');
+      let letters: HTMLElement[] = [];
+      if (yay) {
+        const t = yay.textContent || ''; yay.setAttribute('aria-label', t); yay.textContent = '';
+        t.split(' ').forEach((w, i, arr) => {
+          const word = document.createElement('span'); word.style.whiteSpace = 'nowrap'; word.setAttribute('aria-hidden', 'true');
+          for (const c of w) { const l = document.createElement('span'); l.className = 'ey'; l.textContent = c; word.appendChild(l); letters.push(l); }
+          yay.appendChild(word); if (i < arr.length - 1) yay.appendChild(document.createTextNode(' '));
+        });
+      }
+      const cheer = () => {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        letters.forEach((l, i) => l.animate([{ transform: 'rotate(0deg) translateY(0)' }, { transform: 'rotate(180deg) translateY(-3px)' }, { transform: 'rotate(360deg) translateY(0)' }], { duration: 650, delay: 250 + i * 28, easing: 'cubic-bezier(.2,.75,.25,1.05)' }));
+      };
+      const set = (on: boolean) => { const was = egg.classList.contains('open'); egg.classList.toggle('open', on); btn.setAttribute('aria-expanded', String(on)); if (on && !was) cheer(); };
       btn.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') set(true); });
       egg.addEventListener('pointerleave', (e) => { if ((e as PointerEvent).pointerType === 'mouse') set(false); });
       btn.addEventListener('click', (e) => { if ((e as PointerEvent).pointerType === 'mouse') return set(true); set(!egg.classList.contains('open')); });
@@ -207,6 +221,8 @@ const years = [
   .egg-in > * { padding: 0; }
   .egg.open .egg-in { border-top: 1px solid var(--rule); padding: 12px 0 16px; }
   .egg.open .egg-line { top: 0; height: 12px; }
+  .egg-yay { display: block; margin-top: 10px; font: var(--meta); font-size: 12px; line-height: 1.5; color: var(--accent); }
+  :global(.egg-yay .ey) { display: inline-block; }
   .film { display: flex; gap: 8px; margin-top: 12px; overflow-x: auto; scrollbar-width: none; }
   .film::-webkit-scrollbar { display: none; }
   .egg-in > span:last-child, .reveal > span:last-child { min-width: 0; }
