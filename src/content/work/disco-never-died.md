@@ -19,6 +19,7 @@ short:
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Course", value: "Introduction to Programming" }
+  - { label: "Faculty", value: "Dennis Paul · Jacob Remin" }
   - { label: "Year", value: "2024" }
   - { label: "Team", value: "Solo" }
   - { label: "Tools", value: "Processing · PeasyCam · Microphone" }
