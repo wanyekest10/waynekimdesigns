@@ -35,7 +35,7 @@ Design an interactive experience about how it felt to arrive in Italy. We were a
   <g class="cn-cup"><path d="M286 206 h26 l-3 26 h-20 Z"/><path class="cn-handle" d="M311 212 q11 2 7 12 q-3 5 -9 4"/></g>
   <path class="cn-heart" d="M300 112 c-6 -10 -20 -6 -16 6 c3 7 16 14 16 14 c0 0 13 -7 16 -14 c4 -12 -10 -16 -16 -6 Z"/>
 </svg>
-<figcaption>Put a memory on the plate, and the two strangers lean in.</figcaption>
+<figcaption>Put a memory on the plate, and the two strangers lean in. The plate is painted in red and yellow, the colors of Bergamo’s flag.</figcaption>
 </figure>
 
 Visitors left a slice of pizza, gelato at Piazza Vecchia, a bowl of Maggi noodles that reminded someone of home, and "vino, vino & vino." The table kept growing.
