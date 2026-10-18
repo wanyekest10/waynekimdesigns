@@ -31,7 +31,7 @@
 <div class="ui">
   <button type="button" id="beat" aria-pressed="false">▶ Play a beat</button>
   <button type="button" id="mic" aria-pressed="false">● Use my mic</button>
-  <button type="button" id="reset">↺ Reset view</button>
+  <button type="button" id="view" aria-pressed="false">◆ See it in 3D</button>
   <label class="sens"><span>Sensitivity</span><input type="range" id="sens" min="0.1" max="5" step="0.1" value="2.5" aria-label="Sensitivity"></label>
   <span class="meter" aria-hidden="true"><i id="lvl"></i></span>
 </div>
@@ -114,25 +114,36 @@
   const lookAt = (e, t, up) => { const z = norm(sub(e, t)), x = norm(cross(up, z)), y = cross(z, x);
     return [x[0],y[0],z[0],0, x[1],y[1],z[1],0, x[2],y[2],z[2],0, -dot(x,e),-dot(y,e),-dot(z,e),1]; };
   const mul = (a, b) => { const o = new Array(16).fill(0); for (let c = 0; c < 4; c++) for (let r = 0; r < 4; r++) for (let k = 0; k < 4; k++) o[c*4+r] += a[k*4+r] * b[c*4+k]; return o; };
-  // Starts looking straight down, like the original, pulled back just enough that the grid fills the frame.
-  const HOME = { az: 0, el: Math.PI / 2, d: 740 * Math.max(1, innerHeight / Math.max(1, innerWidth)) };
+  // Starts flat: looking straight down through a long lens, so it reads as a 2D pattern.
+  // "3D view" (or any drag) swings the lens wide and tilts, so the ball and layers pop out.
+  // f is how much of the scene fills the frame; the camera's distance follows from f and the lens.
+  const FLAT = 0.12, WIDE = Math.PI / 3;
+  const F0 = 740 * Math.tan(Math.PI / 6) * Math.max(1, innerHeight / Math.max(1, innerWidth));
+  const HOME = { az: 0, el: Math.PI / 2, f: F0, fov: FLAT };
+  const TILT = { az: -0.35, el: 0.62, f: F0 * 1.35, fov: WIDE };
   const coarse = matchMedia('(pointer: coarse)').matches;
   document.getElementById('hint').textContent = coarse ? 'Drag to orbit · pinch to zoom' : 'Drag to orbit · scroll to zoom';
   let cam = { ...HOME }, goal = null;
-  const clampD = (d) => Math.max(60, Math.min(3000, d));
+  const clampF = (f) => Math.max(25, Math.min(1800, f));
+  const btn3d = document.getElementById('view');
+  const is3d = () => (goal ? goal.fov : cam.fov) > 0.5;
+  const label = () => { btn3d.textContent = is3d() ? '▢ Back to 2D' : '◆ See it in 3D'; btn3d.setAttribute('aria-pressed', String(is3d())); };
+  const go = (g) => { cam.az = Math.atan2(Math.sin(cam.az), Math.cos(cam.az)); goal = { ...g }; label(); };
+  btn3d.addEventListener('click', () => go(is3d() ? HOME : TILT));
+  canvas.addEventListener('dblclick', () => go(HOME));
+  // Any drag or zoom from the flat view first widens the lens, keeping what you're looking at.
+  const widen = () => { if (cam.fov < WIDE - 0.01) goal = { ...cam, fov: WIDE, onlyFov: true }; label(); };
   const pts = new Map(); let pinch = null;
-  canvas.addEventListener('pointerdown', (e) => { pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); goal = null; canvas.setPointerCapture(e.pointerId); canvas.classList.add('drag');
-    if (pts.size === 2) { const [a, b] = [...pts.values()]; pinch = { dist: Math.hypot(a.x - b.x, a.y - b.y), d: cam.d }; } });
+  canvas.addEventListener('pointerdown', (e) => { pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); if (goal && !goal.onlyFov) goal = null; canvas.setPointerCapture(e.pointerId); canvas.classList.add('drag');
+    if (pts.size === 2) { const [a, b] = [...pts.values()]; pinch = { dist: Math.hypot(a.x - b.x, a.y - b.y), f: cam.f }; } });
   canvas.addEventListener('pointermove', (e) => { const prev = pts.get(e.pointerId); if (!prev) return;
     const now = { x: e.clientX, y: e.clientY }; pts.set(e.pointerId, now);
-    if (pts.size >= 2 && pinch) { const [a, b] = [...pts.values()]; cam.d = clampD(pinch.d * pinch.dist / Math.max(1, Math.hypot(a.x - b.x, a.y - b.y))); return; }
+    if (Math.hypot(now.x - prev.x, now.y - prev.y) > 0) widen();
+    if (pts.size >= 2 && pinch) { const [a, b] = [...pts.values()]; cam.f = clampF(pinch.f * pinch.dist / Math.max(1, Math.hypot(a.x - b.x, a.y - b.y))); return; }
     cam.az -= (now.x - prev.x) * 0.006; cam.el = Math.max(-1.5707, Math.min(1.5707, cam.el + (now.y - prev.y) * 0.006)); });
   const end = (e) => { pts.delete(e.pointerId); if (pts.size < 2) pinch = null; if (!pts.size) canvas.classList.remove('drag'); };
   canvas.addEventListener('pointerup', end); canvas.addEventListener('pointercancel', end);
-  const reset = () => { cam.az = Math.atan2(Math.sin(cam.az), Math.cos(cam.az)); goal = { ...HOME }; };   // unwind extra turns first
-  document.getElementById('reset').addEventListener('click', reset);
-  canvas.addEventListener('dblclick', reset);
-  canvas.addEventListener('wheel', (e) => { e.preventDefault(); goal = null; cam.d = clampD(cam.d * Math.exp(e.deltaY * 0.0015)); }, { passive: false });
+  canvas.addEventListener('wheel', (e) => { e.preventDefault(); if (goal && !goal.onlyFov) goal = null; cam.f = clampF(cam.f * Math.exp(e.deltaY * 0.0015)); }, { passive: false });
 
   // ---------- Sound: the room's mic, or a disco beat made right here ----------
   let ac = null, analyser = null, micStream = null, beat = null;
@@ -197,16 +208,20 @@
     const dt = Math.min(0.25, (now - last) / 1000); last = now;
     if (!visible) return;
     fit();
-    if (goal) { const k = 1 - Math.pow(0.88, dt * 60); cam.az += (goal.az - cam.az) * k; cam.el += (goal.el - cam.el) * k; cam.d += (goal.d - cam.d) * k; if (Math.abs(goal.d - cam.d) < 1 && Math.abs(goal.az - cam.az) < 0.002 && Math.abs(goal.el - cam.el) < 0.002) { cam = { ...goal }; goal = null; } }
+    if (goal) { const k = 1 - Math.pow(0.9, dt * 60);
+      if (goal.onlyFov) { cam.fov += (goal.fov - cam.fov) * k; if (Math.abs(goal.fov - cam.fov) < 0.002) { cam.fov = goal.fov; goal = null; } }
+      else { for (const key of ['az', 'el', 'f', 'fov']) cam[key] += (goal[key] - cam[key]) * k;
+        if (Math.abs(goal.f - cam.f) < 0.5 && Math.abs(goal.az - cam.az) < 0.002 && Math.abs(goal.el - cam.el) < 0.002 && Math.abs(goal.fov - cam.fov) < 0.002) { cam = { ...goal }; goal = null; } } }
+    const camD = cam.f / Math.tan(cam.fov / 2);
     level += (rms() - level) * 0.5;
     const a = Math.min(1.2, level * parseFloat(sens.value));         // adjustedSoundLevel
     lvl.style.width = Math.min(100, a * 100) + '%';
     const bg = map(a, 0, 1, 20, 100) / 255;
     gl.clearColor(bg, bg / 2, bg / 3, 1); gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     const ce = Math.cos(cam.el), se = Math.sin(cam.el), sa = Math.sin(cam.az), ca = Math.cos(cam.az);
-    const eye = [cam.d * ce * sa, -cam.d * ce * ca, cam.d * se];
+    const eye = [camD * ce * sa, -camD * ce * ca, camD * se];
     const up = [-se * sa, se * ca, ce];                          // stays valid looking straight down
-    const vp = mul(persp(Math.PI / 3, canvas.width / canvas.height, 2, 8000), lookAt(eye, [0, 0, 0], up));
+    const vp = mul(persp(cam.fov, canvas.width / canvas.height, Math.max(2, camD - 1000), camD + 1500), lookAt(eye, [0, 0, 0], up));
     gl.uniformMatrix4fv(U('viewProj'), false, vp);
     gl.uniform1f(U('size'), map(a, 0, 1, 10, rectSize));
     gl.uniform1f(U('dist'), a * 200);

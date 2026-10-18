@@ -14,8 +14,8 @@ heroAlt: "A silver disco ball floating over layered red, yellow, and blue grids 
 hideHero: true
 short:
   - { lead: "The question.", text: "Can I help bring back a little Soul Train? I wanted the sound in a room to become something you could see and dance inside, with the look of '70s disco." }
-  - { lead: "What I built.", text: "A disco ball and a grid of colorful shapes that grow and glow with the room's volume. Drag to orbit around it in 3D, or try it below." }
-  - { lead: "What I learned.", text: "Disco balls are fun. And three simple squares, red, green, and blue, can go a long way." }
+  - { lead: "What I built.", text: "A disco ball and a grid of colorful shapes that grow and glow with the room's volume. Try it below: it starts flat, then opens up into 3D." }
+  - { lead: "What I learned.", text: "Making something 2D, then evolving it into 3D and back, is fun. And three simple squares, red, green, and blue, can go a long way." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Course", value: "Introduction to Programming" }
