@@ -142,10 +142,10 @@ Two answers made it into the live app. Prayer requests became one of its most im
 With our lead designer, I turned the findings into three design principles, so they could guide future iterations across teams instead of living in a readout deck.
 
 <figure class="trio principles">
-  <div><img src="/work/glorify-assets/principle-intentional-space.webp" alt="Illustration of a woman resting her arms on a ledge"/><p><strong>Intentional Space</strong><br/>Create a dedicated environment that signals purpose and psychological safety for reflection and sharing.</p></div>
-  <div><img src="/work/glorify-assets/principle-mirroring.webp" alt="Illustration of a child looking up at an adult"/><p><strong>Mirroring</strong><br/>Seeing others participate encourages engagement and normalizes faith-related practices within the group.</p></div>
-  <div><img src="/work/glorify-assets/principle-warm-waters.webp" alt="Illustration of a woman stepping into the water"/><p><strong>Warm Waters</strong><br/>Gentle structure and permission help people feel safe expressing their beliefs.</p></div>
-  <figcaption>The principles that became product guardrails.</figcaption>
+  <div><img src="/work/glorify-assets/principle-intentional-space.webp" alt="Illustration of a woman resting her arms on a ledge"/><p><strong>Intentional Space</strong><br/>Create a dedicated environment that signals purpose and psychological safety for reflection and sharing.</p><p class="shipped"><strong>In the app:</strong> Groups is its own space, separate from everyday chat.</p></div>
+  <div><img src="/work/glorify-assets/principle-mirroring.webp" alt="Illustration of a child looking up at an adult"/><p><strong>Mirroring</strong><br/>Seeing others participate encourages engagement and normalizes faith-related practices within the group.</p><p class="shipped"><strong>In the app:</strong> a group feed where members see each other post and reply by video.</p></div>
+  <div><img src="/work/glorify-assets/principle-warm-waters.webp" alt="Illustration of a woman stepping into the water"/><p><strong>Warm Waters</strong><br/>Gentle structure and permission help people feel safe expressing their beliefs.</p><p class="shipped"><strong>In the app:</strong> sermon discussion prompts that give gentle structure.</p></div>
+  <figcaption>The principles, and where each one shows up in the shipped app.</figcaption>
 </figure>
 
 ## The decision

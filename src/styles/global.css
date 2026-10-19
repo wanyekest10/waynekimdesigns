@@ -565,3 +565,4 @@ article figure.quad { max-width: var(--measure); margin: 32px 0; }
 .quad .q-x span:last-child::after { content: " \2192"; }
 .quad .q-y::before { content: "\2191 "; }
 @media (max-width: 480px) { .quad .q { padding: 12px; min-height: 120px; } .quad .q-focal b { font-size: 18px; } }
+.trio p.shipped { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--rule); }

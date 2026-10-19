@@ -121,5 +121,5 @@ Wayne asked for these, and they are live. Review them, keep the content, fix the
 - The 40+ pastor interviews are credited as Glorify's earlier research, not Wayne's (Wayne confirmed). The TODO comment was removed.
 - "What didn't work yet" now ends with what shipped: prayer requests became one of the live app's most important features, and groups can share devotionals (shared context between meetings). Wayne confirmed both.
 - `offsite.webp`: coworkers' faces are blurred, and Wayne is still visible presenting.
-- Still open: Wayne can't recall how the three principles (Intentional Space, Mirroring, Warm Waters) mapped to shipped features. Don't invent links. He may ask Matt Regan or Paul Pow.
+- Principles to shipped features (Wayne confirmed, added under each principle card as `p.shipped`): Intentional Space = Groups as its own space, separate from everyday chat. Mirroring = the group feed where members see each other post and reply by video. Warm Waters = sermon discussion prompts.
 - Facts to keep consistent: 82 participants, two waves, 6 check-ins, 65% still checking in at the end of week two, 37 of 38 and 44 of 48 survey results, 3 of 4 pods, 1.8M+ users and 20% of daily actives by 2025.
