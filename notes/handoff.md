@@ -96,3 +96,12 @@ Still for Wayne to do: confirm www.waynekimdesigns.com loads the new site, remov
 - Discuss before building when Wayne asks to. Show previews for layout changes, not for small text edits.
 - Wayne batches feedback to save usage. Keep replies short.
 - Commit with author "Wayne Kim <waynekimdesigns@gmail.com>". Commits end with the Co-Authored-By and Claude-Session lines.
+
+## Status, Oct 18, 2026 (portfolio "good enough", moving to applications)
+- Hero: "Interaction designer" + "I build prototypes to find out what people actually need, some purposeful, some playful." Same line on the link preview image (public/og.jpg) and LinkedIn.
+- Nav: "Wayne Kim", hover says "← Home". Work page split: Independent and CIID, then Industry work (Glorify, RaiseMe, Futures, Facilitation).
+- Case study layout: facts and contents share one sidebar (.cs-side); pages with hideHero get the same gap as pages with a hero.
+- Disco Never Died: playable WebGL port at /play/disco-live/ (starts flat, "See it in 3D", beat or mic). Mosaic of Memories added to Play.
+- Resume: public/resume.pdf rebuilt in Instrument Sans + Geist Mono (one page, ATS-friendly, links to case studies). Build script lives outside the repo; ask Claude to rebuild if it needs edits.
+- Open: CTAs (Collaborate vs. "Hiring?" wording), Cloudflare Web Analytics, egg counter KV id, Reed dates on site timeline ('14–'17) vs resume (Jan 2015 – Nov 2018).
+- Next practice project: Surf Go/No-Go as a UI + front-end piece.
