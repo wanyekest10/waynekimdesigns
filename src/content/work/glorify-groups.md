@@ -97,9 +97,21 @@ I didn't design or build the prototype itself.
   <figcaption>What the TestFlight prototype let groups do.</figcaption>
 </figure>
 
-Participation held. 65% of participants were still checking in at the end of week two, and many asked us to keep the prototype open. People don't ask to keep a beta they don't use.
+Participation held. 65% of participants were still checking in at the end of week two, and members from several groups asked to keep the prototype open. People don't ask to keep a beta they don't use.
 
 ![Share of participants completing each of the six check-ins across the two-week pilot](/work/glorify-diagrams/study-timeline.svg)
+
+Keeping 82 people going for two weeks didn't run on reminders sent by hand. Activity from the prototype flowed through a server into a Google Sheet, which sent email and text nudges automatically.
+
+<div class="flow" role="list" aria-label="How check-in reminders were automated">
+  <div class="step"><span class="n">01</span><b>Prototype app</b><small>Records each participant's activity.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">02</span><b>Server</b><small>Passes it along.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">03</span><b>Google Sheet</b><small>Tracks who's checked in.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step focal"><span class="n">04</span><b>Email and text</b><small>Nudges go out on their own.</small></div>
+</div>
 
 ## What we found
 
@@ -155,4 +167,4 @@ Paul Pow, our VP of Product, and I presented the findings at the product, design
 
 **Trust isn't built at the readout either.** It was built through check-ins along the way: sharing early signals and answering questions from leadership and cross-functional teams as they came up.
 
-**What I'd change today.** Recruitment and panel health were manual. I'd automate both with an AI agent and spend the time saved on the parts that need human judgment.
+**What I'd change today.** Recruitment was manual, and keeping the panel healthy took a hand-built pipeline. I'd hand both to an AI agent and spend the time saved on the parts that need human judgment.
