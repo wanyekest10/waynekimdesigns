@@ -13,7 +13,7 @@ hero: "/work/disco-assets/card.webp"
 heroAlt: "A silver disco ball floating over layered red, yellow, and blue grids of tiny squares"
 hideHero: true
 short:
-  - { lead: "The question.", text: "Can I help bring back a little Soul Train, turning a room's sound into something you can see and dance inside? And how do you code a disco ball?" }
+  - { lead: "The question.", text: "How can I help bring back disco? And how do you code a disco ball?" }
   - { lead: "What I built.", text: "A disco ball and a grid of colorful shapes that grow and glow with the room's volume. Try it on this page: it starts flat, then opens up into 3D." }
   - { lead: "What I learned.", text: "Making something 2D, then evolving it into 3D and back, is fun. Three simple squares can go a long way: they got me into VJing." }
 facts:
