@@ -80,7 +80,7 @@ Ask people if they'd use a community feature and most say yes. That tells you ve
 - **Diary study:** six survey check-ins per participant across two weeks.
 - **Follow-up interviews:** with group leaders and members, to explore the moments of value behind the data.
 
-**My part.**
+My part in the study:
 
 - Designed the study and its six check-ins
 - Recruited the groups and kept them participating for two weeks
@@ -89,7 +89,7 @@ Ask people if they'd use a community feature and most say yes. That tells you ve
 - Presented the findings to leadership at the offsite
 - I didn't design or build the prototype
 
-<figure class="trio">
+<figure class="trio phones">
   <div><img src="/work/glorify-assets/testflight-share.webp" alt="Group chat and shared scripture in the prototype"/><p><strong>Share life together.</strong> Group chat and shared scripture.</p></div>
   <div><img src="/work/glorify-assets/testflight-enjoy.webp" alt="A group quiz and a group event in the prototype"/><p><strong>Enjoy life together.</strong> A quiz, or a group event.</p></div>
   <div><img src="/work/glorify-assets/testflight-grow.webp" alt="Group devotionals and life questions in the prototype"/><p><strong>Grow together.</strong> Devotionals and life questions.</p></div>
