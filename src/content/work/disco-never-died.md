@@ -7,7 +7,7 @@ order: 12
 year: "2024"
 featured: false
 listIn: experiments
-label: "Creative coding and sound"
+label: "Creative coding and VJing"
 summary: "A code-made disco ball that pulses with sound."
 hero: "/work/disco-assets/card.webp"
 heroAlt: "A silver disco ball floating over layered red, yellow, and blue grids of tiny squares"
