@@ -78,8 +78,9 @@ I love music, and learning to code this disco ball is what opened up VJing for m
 
 Special thanks to [Jose Chavarría](https://www.ciid.dk/community/jose-chavarria) for mentoring me on VJing in Resolume and live setup.
 
-<figure class="pair-fit" style="grid-template-columns: 0.75fr 1.328fr">
+<figure class="pair-fit" style="grid-template-columns: 0.562fr 0.75fr 1.328fr">
+  <img src="/work/disco-assets/jose-mount.webp" alt="Jose reaching up to fix a wooden projector mount to the beam under the stone vaulted ceiling"/>
   <img src="/work/disco-assets/jose-projector.webp" alt="Jose on a ladder under a stone vaulted ceiling, mounting a projector and throwing up a rock-on hand sign"/>
   <img src="/work/disco-assets/jose-mapping.webp" alt="A glowing blue grid projection-mapped onto the curved stone wall of the vaulted room, with a person standing inside it"/>
-  <figcaption>Setting up with Jose: hanging the projector, then mapping a grid to the curved stone walls.</figcaption>
+  <figcaption>Setting up with Jose: building the mount, hanging the projector, then mapping a grid to the curved stone walls.</figcaption>
 </figure>
