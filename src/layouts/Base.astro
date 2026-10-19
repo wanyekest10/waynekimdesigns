@@ -94,5 +94,24 @@ const { title, wide = false, noindex = false, prompt = 'Have something you\'re w
         document.head.appendChild(s);
       }
     </script>
+    <script>
+      // Tap a diagram marked .zoom to see it big. On phones it opens wider than the screen, so you can pan.
+      document.addEventListener('click', (e) => {
+        const img = e.target.closest && e.target.closest('img.zoom');
+        if (!img) return;
+        const box = document.createElement('div');
+        box.className = 'zoom-box';
+        box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Enlarged image');
+        box.innerHTML = '<button type="button" class="zoom-x" aria-label="Close">✕</button><div class="zoom-scroll"><img alt=""></div>';
+        const big = box.querySelector('.zoom-scroll img'); big.src = img.currentSrc || img.src; big.alt = img.alt;
+        const close = () => { box.remove(); document.removeEventListener('keydown', esc); document.documentElement.style.overflow = ''; };
+        const esc = (k) => { if (k.key === 'Escape') close(); };
+        box.addEventListener('click', (ev) => { if (ev.target === box || ev.target.closest('.zoom-x') || ev.target === box.querySelector('.zoom-scroll')) close(); });
+        document.addEventListener('keydown', esc);
+        document.documentElement.style.overflow = 'hidden';
+        document.body.append(box);
+        box.querySelector('.zoom-x').focus();
+      });
+    </script>
   </body>
 </html>

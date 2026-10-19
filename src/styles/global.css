@@ -597,3 +597,12 @@ article .trio.principles figcaption { margin-top: 16px; }
 /* An image kept to text width. */
 article figure.textw { max-width: var(--measure); margin: 32px 0; }
 article figure.textw img { width: 100%; border-radius: 6px; margin: 0 0 10px; }
+
+/* Tap-to-enlarge for wide diagrams */
+img.zoom { cursor: zoom-in; }
+.zoom-hint { display: none; }
+.zoom-box { position: fixed; inset: 0; z-index: 100; background: var(--paper, #fff); display: flex; align-items: center; }
+.zoom-scroll { width: 100%; max-height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; padding: 56px 16px; box-sizing: border-box; }
+.zoom-scroll img { display: block; width: max(100%, 960px); max-width: none; margin: 0 auto; background: #fff; border-radius: 6px; }
+.zoom-x { position: fixed; top: 12px; right: 12px; width: 40px; height: 40px; border: 1px solid var(--rule); border-radius: 50%; background: var(--paper, #fff); color: var(--ink); font-size: 16px; cursor: pointer; }
+@media (max-width: 720px) { .zoom-hint { display: inline; } }
