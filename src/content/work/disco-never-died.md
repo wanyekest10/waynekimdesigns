@@ -15,7 +15,7 @@ hideHero: true
 short:
   - { lead: "The question.", text: "Can I help bring back a little Soul Train, turning a room's sound into something you can see and dance inside? And how do you code a disco ball?" }
   - { lead: "What I built.", text: "A disco ball and a grid of colorful shapes that grow and glow with the room's volume. Try it on this page: it starts flat, then opens up into 3D." }
-  - { lead: "What I learned.", text: "Making something 2D, then evolving it into 3D and back, is fun. And three simple squares, red, green, and blue, can go a long way." }
+  - { lead: "What I learned.", text: "Making something 2D, then evolving it into 3D and back, is fun. Three simple squares can go a long way: they got me into VJing." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Course", value: "Introduction to Programming" }
