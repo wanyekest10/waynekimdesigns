@@ -43,7 +43,7 @@ Glorify had grown to 2.5M+ users on solo practice: prayer, meditation, daily dev
 
 The real question wasn't how to design Groups. It was whether Groups should exist at all.
 
-What I did:
+## What I did
 
 <div class="cols3">
   <div><h4>Frame</h4><p>Turned leadership's doubts into one testable hypothesis, then designed a study to test it.</p></div>
