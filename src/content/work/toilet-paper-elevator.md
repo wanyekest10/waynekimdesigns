@@ -9,7 +9,10 @@ featured: true
 label: "Physical computing and fabrication"
 summary: "Toilet paper use, measured in landmark heights."
 hero: "/work/tpe-assets/hero-wall.webp"
-heroAlt: "Toilet Paper Elevator on a bathroom wall: a gray e-ink pod reading Ground floor, a slim raceway down to the holder, and a full roll on the bar"
+card: "/work/tpe-assets/hero-wall.webp"
+heroVideo: "/work/tpe-assets/how-it-works.mp4"
+heroPoster: "/work/tpe-assets/how-it-works-poster.jpg"
+heroAlt: "A new roll goes on, the e-ink screen climbs from 4 ft to 44 ft, then arrives at the Hollywood Sign and moves on past the Statue of Liberty and the Eiffel Tower"
 tocLabels:
   "3 screens, 1 state machine": "Code & pixels"
 jumps:
@@ -31,8 +34,6 @@ facts:
 Most people in a home use toilet paper every day, and nobody ever sees how much. I wanted to explore making that constant, invisible habit visible, yet playful, in the one room where people least want to feel observed.
 
 That set the rules early. The display had to be household-level and anonymous. It couldn't show sessions, single anyone out, or ask for attention. And it couldn't preach about sustainability, which would turn a curious object into a lecture.
-
-<figure class="frame hiw"><video src="/work/tpe-assets/how-it-works.mp4" poster="/work/tpe-assets/how-it-works-poster.jpg" autoplay muted loop playsinline aria-label="A new roll goes on, the screen climbs from 4 ft to 44 ft, then arrives at the Hollywood Sign and moves on past the Statue of Liberty and the Eiffel Tower"></video><figcaption>Install, climb, arrive. A new roll goes on, the count climbs, and the screen announces each landmark it passes.</figcaption></figure>
 
 ## Why an elevator
 
