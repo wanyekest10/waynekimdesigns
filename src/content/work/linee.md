@@ -37,7 +37,7 @@ Linee (Italian for "lines") is a tactile clock and a deliberately low-fidelity d
 
 Our brief was to design a product that fosters togetherness in shared spaces. Home is a sanctuary for people with busy schedules, but sharing it still takes quiet coordination. We first imagined Linee as a way for housemates to signal everyday rhythms: who's in the kitchen, who's using the shower, who's on their way home.
 
-Linee became something else: ambient timekeeping, a system that communicates when without asking for attention. Coordination is felt over the course of the day instead of enforced through alerts.
+Linee became something else: ambient timekeeping, a system that communicates when without asking for attention. Coordination is felt over the course of the day instead of enforced through alerts. It's calm technology in the plainest sense: information that lives at the edge of attention, there when you glance at it and quiet when you don't.
 
 <figure class="frame"><video src="/work/linee-assets/storyboard.mp4" poster="/work/linee-assets/storyboard-poster.jpg" autoplay muted loop playsinline></video><figcaption>Storyboarding how a household would set it up and use it.</figcaption></figure>
 
@@ -110,3 +110,5 @@ At some point Massimo told us to stop sanding small pieces of wood and put it in
 <figure class="frame"><img src="/work/linee-assets/final.webp" alt="Two teammates smiling beside the wall: the first cardboard prototype mounted above the finished Linee"/><figcaption>From the first prototype, above, to the final form.</figcaption></figure>
 
 <figure class="embed"><iframe src="https://player.vimeo.com/video/1068790351?dnt=1&title=0&byline=0&portrait=0" title="Linee, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
+
+**Part of a bigger exploration.** Linee was a team project at CIID, and one of a few calm tech prototypes I've worked on: everyday objects that sit at the edge of attention instead of asking for it. See also [Toilet Paper Elevator](/work/toilet-paper-elevator/) and [room_tone](/work/room-tone/).
