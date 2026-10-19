@@ -111,4 +111,4 @@ At some point Massimo told us to stop sanding small pieces of wood and put it in
 
 <figure class="embed"><iframe src="https://player.vimeo.com/video/1068790351?dnt=1&title=0&byline=0&portrait=0" title="Linee, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
 
-**Part of a bigger exploration.** Linee was a team project at CIID, and one of a few calm tech prototypes I've worked on: everyday objects that sit at the edge of attention instead of asking for it. See also [Toilet Paper Elevator](/work/toilet-paper-elevator/) and [room_tone](/work/room-tone/).
+**Where it started.** Linee, a team project at CIID, is where my calm tech exploration started: everyday objects that sit at the edge of attention instead of asking for it. See also [Toilet Paper Elevator](/work/toilet-paper-elevator/) and [room_tone](/work/room-tone/).

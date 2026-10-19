@@ -215,6 +215,6 @@ How do you get a wire from the holder to the screen without anything exposed in 
 
 **Building to learn CAD.** I used this sprint to learn Fusion. Most of what I know about tolerances came from this pod.
 
-**Part of a bigger exploration.** Toilet Paper Elevator is one of a few calm tech prototypes I'm building: everyday objects that sit at the edge of attention instead of asking for it. See also [room_tone](/work/room-tone/) and [Linee](/work/linee/).
+**Part of a bigger exploration.** Toilet Paper Elevator is one of a few calm tech prototypes I'm building: everyday objects that sit at the edge of attention instead of asking for it. See also [room_tone](/work/room-tone/), and [Linee](/work/linee/), where it started.
 
 <figure class="embed"><iframe src="https://www.youtube-nocookie.com/embed/vQzPGvjoA7A?rel=0&modestbranding=1&playsinline=1" title="Toilet Paper Elevator, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
