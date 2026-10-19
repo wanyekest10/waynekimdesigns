@@ -103,30 +103,18 @@ Participation held. 65% of participants were still checking in at the end of wee
 
 ## What we found
 
-**1. Lowering the barrier to participation**
-Low-pressure digital sharing reduced social friction, especially for quieter members. The app complemented in-person community instead of replacing it.
+<div class="finds">
+  <div><span class="n">01</span><h4>Lowering the barrier</h4><p>Low-pressure sharing in the app made it easier for quieter members to take part, alongside meeting in person, not instead of it.</p><p class="q">"When people realize they share the same favorite scripture, the conversation opens naturally."<span>Small group leader</span></p></div>
+  <div><span class="n">02</span><h4>Carrying meaning across the week</h4><p>Shared context between gatherings meant members arrived grounded, and conversations went deeper.</p><p class="q">"They weren't starting from social anxiety; they already had something to share."<span>Small group member</span></p></div>
+  <div><span class="n">03</span><h4>A space set apart</h4><p>It didn't feel like another chat app. People described a dedicated space for faith, separate from everyday conversation.</p><p class="q">"It felt like a 'holier' space, separated from other social conversations."<span>Small group lead</span></p></div>
+</div>
 
-> "When people realize they share the same favorite scripture, the conversation opens naturally. Hearing why it matters to someone else brings that connection straight into the room."
->
-> Small Group Leader
+The numbers backed it up.
 
-**2. Carrying meaning across moments**
-Shared context between weekly gatherings created continuity. Members arrived grounded, and conversations went deeper.
-
-> "Seeing people engage on the app beforehand helped them come into the meeting more confident. They weren't starting from social anxiety; they already had something to share. Someone could say, 'Hey, that was cool what you wrote,' and the conversation would take off."
->
-> Small Group Member
-
-**3. A space set apart**
-Groups didn't feel like another chat app. Participants described it as a dedicated space for faith, separate from everyday conversation.
-
-> "We could use our regular Kakao chat, but it was different to use this app. It felt like a 'holier' space, separated from other social conversations."
->
-> Small Group Lead
-
-The numbers backed it up. 37 of 38 respondents agreed that Glorify Groups could enhance their small group experience, and 44 of 48 said they were likely to use it if it were developed further.
-
-![37 of 38 agreed Groups could enhance their small group; 44 of 48 likely to use it](/work/glorify-diagrams/survey-results.svg)
+<div class="agree" role="img" aria-label="37 of 38 respondents agreed Glorify Groups could enhance their small group: 21 strongly agreed, 16 agreed, 1 was neutral. 44 of 48 said they were likely to use it if it were developed further.">
+  <div><b>37 of 38</b><p>agreed Groups could enhance their small group experience</p><div class="bar"><i class="strong" style="width:55.3%"></i><i class="agree-i" style="width:42.1%"></i><i class="neutral" style="width:2.6%"></i></div><small><em class="sw strong"></em>Strongly agree 21 <em class="sw agree-i"></em>Agree 16 <em class="sw neutral"></em>Neutral 1</small></div>
+  <div><b>44 of 48</b><p>said they were likely to use it if it were developed further</p><div class="bar"><i class="strong" style="width:91.7%"></i><i class="neutral" style="width:8.3%"></i></div><small>4 or 5 out of 5</small></div>
+</div>
 
 Each finding answered one of leadership's doubts: people did engage, the sharing felt authentic, and the value carried from one week into the next. The flywheel held.
 

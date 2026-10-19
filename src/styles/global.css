@@ -566,3 +566,31 @@ article figure.quad { max-width: var(--measure); margin: 32px 0; }
 .quad .q-y::before { content: "\2191 "; }
 @media (max-width: 480px) { .quad .q { padding: 12px; min-height: 120px; } .quad .q-focal b { font-size: 18px; } }
 .trio p.shipped { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--rule); }
+/* Glorify findings: three short findings side by side, each with one quote. */
+article .finds { max-width: var(--wide); display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin: 28px 0 36px; }
+article .finds > div { border-top: 1px solid var(--ink); padding-top: 12px; }
+article .finds .n { display: block; font: var(--meta); color: var(--gray); margin-bottom: 6px; }
+article .finds h4 { font: var(--label); color: var(--ink); margin: 0 0 6px; }
+article .finds p { font-size: 15px; line-height: 1.55; color: var(--gray); margin: 0; }
+article .finds p.q { margin-top: 14px; color: var(--ink); }
+article .finds p.q span { display: block; margin-top: 4px; font: var(--meta); font-size: 12px; color: var(--gray); }
+@media (max-width: 720px) { article .finds { grid-template-columns: 1fr; gap: 24px; } }
+/* Glorify survey: two big numbers with agreement bars. */
+article .agree { max-width: var(--measure); display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 20px 0 36px; }
+article .agree b { display: block; font-weight: 500; font-size: 40px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); }
+article .agree p { font-size: 15px; line-height: 1.5; color: var(--gray); margin: 8px 0 12px; }
+article .agree .bar { display: flex; height: 10px; border-radius: 3px; overflow: hidden; background: var(--rule); }
+article .agree .bar i { display: block; height: 100%; }
+article .agree .strong { background: var(--accent); }
+article .agree .agree-i { background: #7F95E0; }
+article .agree .neutral { background: #CFCFCB; }
+article .agree small { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; margin-top: 8px; font: var(--meta); font-size: 12px; color: var(--gray); }
+article .agree small .sw { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-left: 6px; }
+article .agree small .sw:first-child { margin-left: 0; }
+@media (max-width: 560px) { article .agree { grid-template-columns: 1fr; } }
+/* Glorify principles: line up titles and "In the app" across the three cards. */
+article .trio.principles { grid-template-rows: auto auto auto auto; row-gap: 0; }
+article .trio.principles > div { display: grid; grid-row: span 3; grid-template-rows: subgrid; }
+article .trio.principles > div > img { margin-bottom: 12px; }
+article .trio.principles figcaption { margin-top: 16px; }
+@media (max-width: 720px) { article .trio.principles { grid-template-rows: none; row-gap: 32px; } article .trio.principles > div { grid-row: auto; grid-template-rows: none; } }
