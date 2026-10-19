@@ -207,6 +207,8 @@ How do you get a wire from the holder to the screen without anything exposed in 
 
 ## Reflection
 
+**It started conversations, not guilt.** Visitors who used it got curious instead of self-conscious. It led to talk about how much a household goes through in a year, and whether we should all get bidets.
+
 **Leave things out.** The per-session trip summary was the first thing I cut. It was interesting data, and exactly the kind that makes someone feel watched.
 
 **Calm by default.** E-ink only changes when it needs to, and never lights up. In a bathroom, that matters more than any feature.

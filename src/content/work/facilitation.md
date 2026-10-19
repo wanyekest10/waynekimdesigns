@@ -12,6 +12,7 @@ hero: "/work/facilitation-assets/busan-wall.webp"
 heroAlt: "Wayne talking Busan Design Council participants through a wall of sticky notes at CIID"
 hideHero: true
 short:
+  - { lead: "The question.", text: "How do you get a room to think together, so ideas end up on the wall and build on each other?" }
   - { lead: "What happened.", text: "At Glorify, one workshop became the research agenda for the year. I also ran workshops for the Busan Design Council, Wipro, and my own final project at CIID, and supported one for a Fortune 500 HVAC company." }
 facts:
   - { label: "Where", value: "Designit · CIID · Glorify" }

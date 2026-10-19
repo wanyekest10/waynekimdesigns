@@ -13,7 +13,7 @@ hero: "/work/disco-assets/card.webp"
 heroAlt: "A silver disco ball floating over layered red, yellow, and blue grids of tiny squares"
 hideHero: true
 short:
-  - { lead: "The question.", text: "Can I help bring back a little Soul Train? I wanted the sound in a room to become something you could see and dance inside, with the look of '70s disco." }
+  - { lead: "The question.", text: "Can I help bring back a little Soul Train? And how do you code a disco ball? I wanted the sound in a room to become something you could see and dance inside, with the look of '70s disco." }
   - { lead: "What I built.", text: "A disco ball and a grid of colorful shapes that grow and glow with the room's volume. Try it on this page: it starts flat, then opens up into 3D." }
   - { lead: "What I learned.", text: "Making something 2D, then evolving it into 3D and back, is fun. And three simple squares, red, green, and blue, can go a long way." }
 facts:
@@ -61,7 +61,7 @@ It started as a grid of plain white squares. Then each square split into red, gr
 
 ## What came next
 
-I love music, and creative coding, starting with this project, is what opened up VJing for me: making visuals live, in the room, with the sound.
+I love music, and learning to code this disco ball is what opened up VJing for me: making visuals live, in the room, with the sound.
 
 <figure class="grid3 tall vj">
   <img src="/work/disco-assets/vj-impactminds-booth.webp" alt="Wayne at the laptop and mixer, lit up by warm orange speckled visuals projected across the wall and over him"/>
