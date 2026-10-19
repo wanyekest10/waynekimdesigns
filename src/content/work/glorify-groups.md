@@ -57,13 +57,14 @@ I didn't design or build the prototype itself.
 
 Paul Pow, our VP of Product, and I presented the research at the product, design, and engineering leadership offsite. The research gave leadership the confidence to launch Glorify Groups, and they dedicated three of the four product, design, and engineering pods to it. Leadership, PMs, designers, and engineers built on this research as the foundation.
 
-<figure class="frame"><img src="/work/glorify-assets/offsite.webp" alt="Presenting findings to the product, design, and engineering team around a conference table"/><figcaption>Presenting at the product, design, and engineering offsite.</figcaption></figure>
 
 <div class="stats three">
   <div class="focal"><span class="k">Reach</span><b>1.8M+</b><p>users in Glorify Groups by 2025</p></div>
   <div><span class="k">Engagement</span><b>20%</b><p>of daily active users use Groups, by 2025</p></div>
   <div><span class="k">Commitment</span><b>3 of 4</b><p>product, design, and engineering pods</p></div>
 </div>
+
+<figure class="narrow"><img src="/work/glorify-assets/offsite.webp" alt="Presenting findings to the product, design, and engineering team around a conference table"/><figcaption>Presenting at the product, design, and engineering offsite.</figcaption></figure>
 
 ## What shaped the product
 
