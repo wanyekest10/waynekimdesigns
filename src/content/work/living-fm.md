@@ -18,7 +18,6 @@ featured: true
 label: "AI and prototyping"
 summary: "A radio host that notices you scrolling."
 hero: "/work/living-assets/hero-liv-phone.webp"
-cardFit: contain
 heroAlt: "Someone scrolling on their phone while Liv, a small wooden speaker with a camera eye and a soft blue light, watches from the side table"
 jumps:
   - { label: "Skip to the build", to: "building-liv" }
