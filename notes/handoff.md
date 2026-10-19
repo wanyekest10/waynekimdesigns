@@ -105,3 +105,21 @@ Still for Wayne to do: confirm www.waynekimdesigns.com loads the new site, remov
 - Resume: public/resume.pdf rebuilt in Instrument Sans + Geist Mono (one page, ATS-friendly, links to case studies). Build script lives outside the repo; ask Claude to rebuild if it needs edits.
 - Open: CTAs (Collaborate vs. "Hiring?" wording), Cloudflare Web Analytics, egg counter KV id. Reed is Jan 2015 – Nov 2017 on both site and resume.
 - Next practice project: Surf Go/No-Go as a UI + front-end piece.
+
+## Oct 18, 2026: Glorify changes made in a separate chat (commit fb5e008)
+Wayne asked for these, and they are live. Review them, keep the content, fix the styling.
+- TestFlight trio: the three `testflight-*.webp` images were replaced with clean phone mockups redrawn in the site palette (Instrument Sans, cobalt #002BBA). Same filenames and markup.
+- Market map: new `figure.quad` in "What I already knew", built as HTML, with CSS added at the end of `global.css` ("Quadrant map"). Top left: tools participants named. Top right (focal): Glorify Groups. Bottom right: YouVersion, Glorify before Groups. The caption says placement is Wayne's read of the interviews.
+- "My part." list added under the study section. It is rendered by `rehype-fields.mjs` as a two-column field row (bold label + list), which **Wayne says looks weird. Fix this first.** Keep the six points and match how the rest of the page handles lists.
+  - Designed the study and its six check-ins
+  - Recruited the groups and kept them participating for two weeks
+  - Ran the follow-up interviews with leaders and members
+  - Synthesized the findings, and turned them into design principles with Matt
+  - Presented the findings to leadership at the offsite
+  - Didn't design or build the prototype (Wayne confirmed)
+- Outcomes now say "by 2025" (short version, facts, stats block).
+- The 40+ pastor interviews are credited as Glorify's earlier research, not Wayne's (Wayne confirmed). The TODO comment was removed.
+- "What didn't work yet" now ends with what shipped: prayer requests became one of the live app's most important features, and groups can share devotionals (shared context between meetings). Wayne confirmed both.
+- `offsite.webp`: coworkers' faces are blurred, and Wayne is still visible presenting.
+- Still open: Wayne can't recall how the three principles (Intentional Space, Mirroring, Warm Waters) mapped to shipped features. Don't invent links. He may ask Matt Regan or Paul Pow.
+- Facts to keep consistent: 82 participants, two waves, 6 check-ins, 65% still checking in at the end of week two, 37 of 38 and 44 of 48 survey results, 3 of 4 pods, 1.8M+ users and 20% of daily actives by 2025.
