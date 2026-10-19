@@ -28,7 +28,7 @@ jumps:
   - { label: "Skip to making the case", to: "building-the-case" }
   - { label: "Skip to the impact", to: "results" }
 short:
-  - { lead: "The question.", text: "RaiseMe's college portal kept failing the people who used it every week, and contract renewals were coming. Why were colleges losing trust, and what would make them renew?" }
+  - { lead: "The question.", text: "RaiseMe's college portal kept failing its weekly users, with renewals coming up. Why were colleges losing trust, and what would make them renew?" }
   - { lead: "What I did.", text: "Took partner frustration from support tickets to the CEO: Hack Week research, a partner survey, and a case tying reliability to revenue." }
   - { lead: "What happened.", text: "Leadership committed to rebuilding the portal weeks before COVID. RaiseMe kept 90%+ of projected revenue through the pandemic." }
 facts:

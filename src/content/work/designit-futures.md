@@ -15,7 +15,7 @@ jumps:
   - { label: "Skip to the concepts", to: "three-futures-set-in-2122" }
   - { label: "Skip to the impact", to: "beyond-the-concept" }
 short:
-  - { lead: "The question.", text: "Designit North America wanted to show clients it could think long-term, but there was no precedent for a public futures point of view. How do you make speculative work credible?" }
+  - { lead: "The question.", text: "Designit North America had never published a futures point of view, but wanted clients to see it could think long-term. How do you make speculative work credible?" }
   - { lead: "What I did.", text: "Helped design and run a six-step futures process in three weeks, from the history of agriculture to three speculative concepts set in 2122." }
   - { lead: "What happened.", text: "The point of view opened conversations in new client domains, including Los Angeles World Airports, and became an internal tool for future-focused work." }
 facts:
