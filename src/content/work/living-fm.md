@@ -17,10 +17,9 @@ year: "2025"
 featured: true
 label: "AI and prototyping"
 summary: "A radio host that notices you scrolling."
-hero: "/work/living-assets/hero-liv.webp"
-heroVideo: "/work/living-assets/device-loop.mp4"
-heroPoster: "/work/living-assets/hero-liv.webp"
-heroAlt: "Liv, a small wooden speaker with a camera eye and a soft blue light, on a side table in front of a wood-paneled wall"
+hero: "/work/living-assets/hero-liv-phone.webp"
+cardFit: contain
+heroAlt: "Someone scrolling on their phone while Liv, a small wooden speaker with a camera eye and a soft blue light, watches from the side table"
 jumps:
   - { label: "Skip to the build", to: "building-liv" }
 short:
@@ -41,7 +40,7 @@ facts:
 
 We wanted to be more intentional about our free time at home. The habits we wanted to change, like reaching for the phone the moment we sat down, aren't failures of willpower. They're reinforced by products designed to hold attention. We wondered whether AI could do the opposite: a presence in the room that simply noticed, out loud.
 
-<figure class="frame"><img src="/work/living-assets/hero-couch.webp" alt="Someone scrolling on the couch while Liv sits on the side table"/><figcaption>The moment Liv was built for: sitting down, and reaching for the phone.</figcaption></figure>
+<figure class="frame"><video src="/work/living-assets/device-loop.mp4" poster="/work/living-assets/device-loop-poster.jpg" autoplay muted loop playsinline></video></figure>
 
 ## Building Liv
 
