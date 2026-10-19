@@ -82,5 +82,5 @@ Special thanks to [Jose Chavarría](https://www.ciid.dk/community/jose-chavarria
   <img src="/work/disco-assets/jose-mount.webp" alt="Jose reaching up to fix a wooden projector mount to the beam under the stone vaulted ceiling"/>
   <img src="/work/disco-assets/jose-projector.webp" alt="Jose on a ladder under a stone vaulted ceiling, mounting a projector and throwing up a rock-on hand sign"/>
   <img src="/work/disco-assets/jose-mapping.webp" alt="A glowing blue grid projection-mapped onto the curved stone wall of the vaulted room, with a person standing inside it"/>
-  <figcaption>Setting up with Jose: building the mount, hanging the projector, then mapping a grid to the curved stone walls in the basement of the <a href="https://monasterodiastino.it/">Monastero di Astino</a>.</figcaption>
+  <figcaption>Setting up with Jose: building the mount, hanging the projector, then mapping a grid to the curved stone walls in the basement of the <a href="https://monasterodiastino.it/" target="_blank" rel="noopener">Monastero di Astino</a>.</figcaption>
 </figure>
