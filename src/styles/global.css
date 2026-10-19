@@ -608,6 +608,8 @@ img.zoom { cursor: zoom-in; }
 @media (max-width: 720px) { .zoom-hint { display: inline; } }
 
 /* Two photos of different shapes, side by side at the same height. Set grid-template-columns inline to each photo's width/height in fr. */
-.pair-fit { display: grid; gap: 8px; }
+article .pair-fit { max-width: var(--wide); display: grid; gap: 16px; }
+article .pair-fit img { max-width: none; }
+@media (max-width: 720px) { article .pair-fit { gap: 8px; } }
 .pair-fit img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
 .pair-fit figcaption { grid-column: 1 / -1; }
