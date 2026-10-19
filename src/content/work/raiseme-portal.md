@@ -3,7 +3,7 @@ title: RaiseMe Portal
 slug: raiseme-portal
 headline: "Research that made a quiet B2B problem impossible to ignore, and got the partner portal rebuilt weeks before COVID."
 context: "RaiseMe, 2019 to 2020"
-role: UX Researcher
+role: UX Strategist
 timeline: October 2019 to June 2020
 team:
   - name: Katie Zellner
@@ -33,7 +33,7 @@ short:
   - { lead: "What happened.", text: "Leadership committed to rebuilding the portal weeks before COVID. That investment was part of how RaiseMe kept 90%+ of projected revenue through the pandemic." }
 facts:
   - { label: "Company", value: "RaiseMe" }
-  - { label: "Role", value: "UX Researcher" }
+  - { label: "Role", value: "UX Strategist" }
   - { label: "Timeline", value: "Oct 2019 to Jun 2020" }
   - { label: "Team", value: "Partner Success, Product, Sales, Engineering" }
   - { label: "Methods", value: "Interviews, usability tests, survey, journey mapping" }
