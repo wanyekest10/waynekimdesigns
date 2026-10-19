@@ -43,6 +43,16 @@ Glorify had grown to 2.5M+ users on solo practice: prayer, meditation, daily dev
 
 The real question wasn't how to design Groups. It was whether Groups should exist at all.
 
+What I did:
+
+<div class="cols3">
+  <div><h4>Frame</h4><p>Turned leadership's doubts into one testable hypothesis, then designed a study to test it.</p></div>
+  <div><h4>Run</h4><p>Recruited 82 people in real small groups, kept them going for two weeks, then interviewed leaders and members.</p></div>
+  <div><h4>Share</h4><p>Turned findings into design principles with Matt, and presented them with Paul at the leadership offsite.</p></div>
+</div>
+
+I didn't design or build the prototype itself.
+
 ## What changed
 
 Paul Pow, our VP of Product, and I presented the research at the product, design, and engineering leadership offsite. The research gave leadership the confidence to launch Glorify Groups, and they dedicated three of the four product, design, and engineering pods to it. Leadership, PMs, designers, and engineers built on this research as the foundation.
@@ -108,16 +118,6 @@ Ask people if they'd use a community feature and most say yes. That tells you ve
 - **Two waves:** groups not tied to a specific church, then groups from specific churches. Participants included church planters, young parents, marriage groups, dads' groups, and Bible study groups.
 - **Diary study:** six survey check-ins per participant across two weeks.
 - **Follow-up interviews:** with group leaders and members, to explore the moments of value behind the data.
-
-My part in the study:
-
-<div class="cols3">
-  <div><h4>Design</h4><p>The study, its six check-ins, and recruiting real small groups.</p></div>
-  <div><h4>Run</h4><p>Two weeks of check-ins, keeping groups going, then follow-up interviews.</p></div>
-  <div><h4>Share</h4><p>Findings into design principles with Matt, presented with Paul at the leadership offsite.</p></div>
-</div>
-
-I didn't design or build the prototype itself.
 
 <figure class="trio">
   <div><img src="/work/glorify-assets/testflight-share.webp" alt="Group chat and shared scripture in the prototype"/><p><strong>Share life together.</strong> Group chat and shared scripture.</p></div>
