@@ -1,44 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 1040 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fw-title fw-desc">
-  <title id="fw-title">The Glorify Groups flywheel: two wheels</title>
-  <desc id="fw-desc">An inner wheel, value to users, where group leads and group members drive each other. It turns an outer wheel, value to the small group: increased quality of engagement, making time in person more meaningful, and supporting discipleship, which loops back to more value for the group.</desc>
+<svg viewBox="0 0 1040 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fw-title fw-desc">
+  <title id="fw-title">The Glorify Groups flywheel, and the three doubts it tested</title>
+  <desc id="fw-desc">An inner wheel, value to users, where group leads and members drive each other, turns an outer wheel, value to the small group: increased quality of engagement, making time in person more meaningful, and supporting discipleship. Leadership's three doubts sit on the parts they test: will people engage with each other (inner wheel), will sharing faith in an app feel authentic (quality of engagement), and will it last past the novelty (time in person).</desc>
   <defs>
     <style>
       text { font-family: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #141414; }
-      .mono { font-family: 'Geist Mono', ui-monospace, Menlo, monospace; font-size: 15px; letter-spacing: 1px; fill: #6E6E6B; }
+      .mono { font-family: 'Geist Mono', ui-monospace, Menlo, monospace; font-size: 14px; letter-spacing: 1px; fill: #6E6E6B; }
       .big { font-size: 26px; font-weight: 500; }
       .lbl { font-size: 22px; }
       .focal { fill: #002BBA; }
-      .arc { fill: none; stroke: #6E6E6B; stroke-width: 2; }
+      .doubt { font-size: 16px; fill: #6E6E6B; }
+      .q { font-family: 'Geist Mono', ui-monospace, Menlo, monospace; font-size: 13px; fill: #ffffff; }
+      .arc { fill: none; stroke: #8A8A86; stroke-width: 2; }
       .arc-in { fill: none; stroke: #141414; stroke-width: 2; }
+      .pill { fill: #FFFFFF; stroke: #CFCFCB; stroke-dasharray: 4 3; }
     </style>
-    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6E6E6B"/></marker>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8A8A86"/></marker>
     <marker id="ahk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#141414"/></marker>
   </defs>
 
-  <!-- Outer wheel: value to the small group -->
-  <text class="mono" x="520" y="44" text-anchor="middle">OUTER WHEEL</text>
-  <text class="big" x="520" y="80" text-anchor="middle">Value to the small group</text>
+  <!-- Outer wheel labels -->
+  <text class="mono" x="520" y="40" text-anchor="middle">OUTER WHEEL</text>
+  <text class="big" x="520" y="76" text-anchor="middle">Value to the small group</text>
 
-  <text class="lbl" x="150" y="290" text-anchor="middle">Increased quality</text>
-  <text class="lbl" x="150" y="320" text-anchor="middle">of engagement</text>
+  <text class="lbl" x="150" y="285" text-anchor="middle">Increased quality</text>
+  <text class="lbl" x="150" y="313" text-anchor="middle">of engagement</text>
 
   <text class="lbl focal" x="520" y="580" text-anchor="middle">Making time in person more meaningful</text>
 
-  <text class="lbl" x="890" y="305" text-anchor="middle">Supporting discipleship</text>
+  <text class="lbl" x="890" y="298" text-anchor="middle">Supporting discipleship</text>
 
-  <!-- outer arrows, counterclockwise: top to left, left to bottom, bottom to right, right to top -->
-  <path class="arc" d="M 400 92 Q 230 120 165 255" marker-end="url(#ah)"/>
-  <path class="arc" d="M 165 345 Q 210 500 330 552" marker-end="url(#ah)"/>
-  <path class="arc" d="M 710 552 Q 840 500 880 335" marker-end="url(#ah)"/>
-  <path class="arc" d="M 880 275 Q 820 120 640 92" marker-end="url(#ah)"/>
+  <!-- Outer arrows: short arcs between neighbours, counterclockwise -->
+  <path class="arc" d="M 380 98 Q 220 130 175 240" marker-end="url(#ah)"/>
+  <path class="arc" d="M 150 400 Q 165 510 300 562" marker-end="url(#ah)"/>
+  <path class="arc" d="M 740 562 Q 875 510 890 335" marker-end="url(#ah)"/>
+  <path class="arc" d="M 870 255 Q 830 130 660 98" marker-end="url(#ah)"/>
 
-  <!-- Inner wheel: value to users -->
-  <rect x="330" y="180" width="380" height="250" rx="22" fill="#F4F4F2" stroke="#E6E6E3"/>
-  <text class="mono" x="520" y="222" text-anchor="middle">INNER WHEEL</text>
-  <text class="big" x="520" y="256" text-anchor="middle">Value to users</text>
-  <text class="lbl" x="425" y="345" text-anchor="middle">Group leads</text>
-  <text class="lbl" x="615" y="345" text-anchor="middle">Group members</text>
-  <path class="arc-in" d="M 450 315 Q 520 285 590 315" marker-end="url(#ahk)"/>
-  <path class="arc-in" d="M 590 370 Q 520 400 450 370" marker-end="url(#ahk)"/>
+  <!-- Inner wheel -->
+  <rect x="330" y="150" width="380" height="300" rx="22" fill="#F4F4F2" stroke="#E6E6E3"/>
+  <text class="mono" x="520" y="190" text-anchor="middle">INNER WHEEL</text>
+  <text class="big" x="520" y="224" text-anchor="middle">Value to users</text>
+  <text class="lbl" x="425" y="310" text-anchor="middle">Group leads</text>
+  <text class="lbl" x="615" y="310" text-anchor="middle">Group members</text>
+  <path class="arc-in" d="M 450 280 Q 520 250 590 280" marker-end="url(#ahk)"/>
+  <path class="arc-in" d="M 590 335 Q 520 365 450 335" marker-end="url(#ahk)"/>
+
+  <!-- Doubt 1: on the inner wheel -->
+  <rect class="pill" x="352" y="388" width="336" height="38" rx="19"/>
+  <circle cx="374" cy="407" r="11" fill="#002BBA"/><text class="q" x="374" y="411.5" text-anchor="middle">1</text>
+  <text class="doubt" x="392" y="412.5">Will people engage with each other?</text>
+
+  <!-- Doubt 2: on quality of engagement -->
+  <rect class="pill" x="20" y="332" width="262" height="58" rx="18"/>
+  <circle cx="42" cy="350" r="11" fill="#002BBA"/><text class="q" x="42" y="354.5" text-anchor="middle">2</text>
+  <text class="doubt" x="60" y="355">Will sharing faith in an</text>
+  <text class="doubt" x="60" y="377">app feel authentic?</text>
+
+  <!-- Doubt 3: on time in person -->
+  <rect class="pill" x="382" y="606" width="276" height="38" rx="19"/>
+  <circle cx="404" cy="625" r="11" fill="#002BBA"/><text class="q" x="404" y="629.5" text-anchor="middle">3</text>
+  <text class="doubt" x="422" y="630.5">Will it last past the novelty?</text>
 </svg>

@@ -70,7 +70,7 @@ Leadership doubted it would work. Their questions came from different angles: wo
 
 Rather than answer each question separately, I synthesized them into one hypothesis: value to individual users rolls up into value for the small group, and ultimately makes in-person gatherings more meaningful. We mapped it as a Flywheel Framework, and it shaped the whole research approach.
 
-![The Flywheel Framework, two wheels: value to users (group leads and members drive each other) turns value to the small group (better engagement, more meaningful time in person, supported discipleship)](/work/glorify-diagrams/flywheel.svg)
+<figure class="wide"><img src="/work/glorify-diagrams/flywheel.svg" alt="The Flywheel Framework, two wheels: value to users (group leads and members drive each other) turns value to the small group (better engagement, more meaningful time in person, supported discipleship). Leadership's three doubts sit on the parts they test."/><figcaption>Each of leadership's doubts, placed on the part of the flywheel it tests.</figcaption></figure>
 
 ## Studying real behavior, not stated interest
 
