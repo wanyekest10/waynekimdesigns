@@ -72,3 +72,4 @@ Done: Paul Pow and Wayne co-presented at the offsite (live).
 6. **B2B2C loose end.** "What I already knew" frames pastors as a B2B2C business, then it never comes back. Either close it in one line (did church-provided content or pastor tools ship?) or cut "B2B2C".
 7. Reflection: "Community is built on trust, not features" reads generic. Lead with the more specific one: trust was built through check-ins before the readout.
 8. Optional: the study timeline chart could drop the gray bar outlines (less ink). Flywheel is fine.
+- Oct 19 update: Glorify reordered impact first (Question, What changed, What shaped the product, How we knew with ### subsections, What didn't work, Reflection). Done in that pass: verbatim quotes (01, 02), one "Small group leader" label, 44 of 48 bar split 34/10/4, survey context line, 20% dated by 2025, reflection leads with trust. Still open from the list above: B2B2C loose end (#6), optional chart outlines (#8).
