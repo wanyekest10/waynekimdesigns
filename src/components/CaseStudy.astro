@@ -1,0 +1,123 @@
+---
+// The case-study page, used for Work and for Play items kept in the work collection.
+import MoreProjects from './MoreProjects.astro';
+import Base from '../layouts/Base.astro';
+import { render } from 'astro:content';
+const { w } = Astro.props;
+const { Content, headings } = await render(w);
+const d = w.data as any;
+const beats = d.short ?? [];
+const facts = d.facts ?? [];
+// Section list: numbered h2s, h3s as indented sub-items. "Hack Week: the assumption broke" shows as "Hack Week".
+let n = 0;
+const d0 = w.data as any;
+const toc = headings
+  .filter((h) => (h.depth === 2 && h.text !== 'TL;DR') || h.depth === 3)
+  .map((h) => ({ ...h, num: h.depth === 2 ? String(++n).padStart(2, '0') : null, label: (d0.tocLabels ?? {})[h.text] ?? h.text.split(':')[0] }));
+---
+<Base wide title={`${d.title}, Wayne Kim`} description={d.summary} prompt="Working on something like this?">
+  <div class:list={["cs", { "no-hero": d.hideHero }]}>
+    <header class="cs-top" id="overview">
+      <h1>{d.title}</h1>
+      <p class="lead">{d.headline}</p>
+      {beats.length > 0 && (
+        <div class="short">
+          <span class="short-tag">The 30-second version</span>
+          {beats.map((b: any) => <p><strong>{b.lead}</strong> {b.text}</p>)}
+        </div>
+      )}
+    </header>
+
+    <aside class="cs-side">
+      {facts.length > 0 && (
+        <dl class="cs-facts">
+          {facts.map((f: any) => <div><dt>{f.label}</dt><dd>{String(f.value).split(' · ').map((v: string) => <span>{v}</span>)}</dd></div>)}
+        </dl>
+      )}
+
+      <nav class="toc-col" aria-label="On this page">
+        <div class="toc">
+          {d.listIn === 'experiments' ? <a class="toc-back" href="/play/">← Play</a> : <a class="toc-back" href="/work/">← Work</a>}
+          <ol>
+            {toc.map((h) => (
+              <li class={h.depth === 3 ? 'sub' : undefined}><a href={`#${h.slug}`} data-id={h.slug}>{h.num && <span class="n">{h.num}</span>}{h.label}</a></li>
+            ))}
+          </ol>
+        </div>
+      </nav>
+    </aside>
+
+    {d.jumps && (
+      <nav class="jumps" aria-label="Jump to">
+        {d.jumps.map((j: any) => <a href={`#${j.to}`}>{j.label} ↓</a>)}
+      </nav>
+    )}
+
+    {!d.hideHero && (d.heroVideo
+      ? <video class="hero" src={d.heroVideo} poster={d.heroPoster} autoplay muted loop playsinline aria-label={d.heroAlt}></video>
+      : <img class="hero" src={d.hero} alt={d.heroAlt} />)}
+
+
+    <div class="cs-body">
+      <article class="numbered"><Content /></article>
+      <p class="back">{d.listIn === 'experiments' ? <a href="/play/">← All play</a> : <a href="/work/">← All work</a>}</p>
+      <MoreProjects current={`/${d.listIn === 'experiments' ? 'play' : 'work'}/${w.id}/`} />
+    </div>
+  </div>
+</Base>
+<script>
+// Flipbook: one screen that rides the whole climb. Plays whenever it's on screen; dragging the slider pauses it for a moment.
+document.querySelectorAll<HTMLElement>('.flip').forEach((root) => {
+  const frames = JSON.parse(root.dataset.frames || '[]');
+  const img = root.querySelector('.flip-screen img') as HTMLImageElement;
+  const range = root.querySelector('.flip-range') as HTMLInputElement;
+  const read = root.querySelector('.flip-read b') as HTMLElement;
+  const count = root.querySelector('.flip-read span') as HTMLElement;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  range.max = String(frames.length - 1);
+  let i = 0, inView = false;
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const loaded = new Set<number>();
+  const preload = (k: number) => { if (k < frames.length && !loaded.has(k)) { const im = new Image(); im.src = frames[k].src; loaded.add(k); } };
+  const show = (k: number) => {
+    i = k; const f = frames[k];
+    img.src = f.src; img.alt = f.label + ' (e-ink screen)';
+    range.value = String(k); range.setAttribute('aria-valuetext', f.label);
+    read.textContent = f.label; count.textContent = (k + 1) + ' / ' + frames.length;
+    preload(k + 1); preload(k + 2);
+  };
+  const stop = () => { clearTimeout(timer); timer = undefined; };
+  const run = (delay = 900) => { stop(); if (reduce || !inView) return; timer = setTimeout(() => { show((i + 1) % frames.length); run(frames[i].kind === 'arrival' ? 1500 : 900); }, delay); };
+  range.addEventListener('input', () => { show(Number(range.value)); stop(); timer = setTimeout(() => run(), 2500); });
+  show(0);
+  new IntersectionObserver(([e]) => {
+    inView = e.isIntersecting;
+    if (inView) { for (let k = 0; k < 6; k++) preload(k); run(600); } else stop();
+  }, { threshold: 0.3 }).observe(root);
+});
+// Before: the two early screens trade places.
+document.querySelectorAll<HTMLElement>('.ba-before').forEach((box) => {
+  const ims = [...box.querySelectorAll('img')]; let k = 0;
+  if (ims.length < 2 || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  setInterval(() => { ims[k].classList.remove('on'); k = (k + 1) % ims.length; ims[k].classList.add('on'); }, 2400);
+});
+
+  const v3d = document.querySelector<HTMLElement>('.v3d');
+  if (v3d) {
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { io.disconnect(); import('../scripts/tpe-viewer.ts').then((m) => m.mount(v3d)); } }, { rootMargin: '400px' });
+    io.observe(v3d);
+  }
+  // Highlight the section you're reading.
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a[data-id]')];
+  const targets = links.map((a) => document.getElementById(a.dataset.id!)).filter(Boolean) as HTMLElement[];
+  let queued = false;
+  const update = () => {
+    queued = false;
+    let current: HTMLElement | undefined;
+    for (const t of targets) if (t.getBoundingClientRect().top < window.innerHeight * 0.3) current = t;
+    links.forEach((a) => a.classList.toggle('active', !!current && a.dataset.id === current.id));
+  };
+  window.addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
+  update();
+</script>
+<style>.back { margin-top: 64px; }</style>

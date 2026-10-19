@@ -2,15 +2,21 @@
 // An Experiments write-up: one column, title, one line, a few facts, then the story.
 import MoreProjects from '../../components/MoreProjects.astro';
 import Base from '../../layouts/Base.astro';
+import CaseStudy from '../../components/CaseStudy.astro';
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
   const items = await getCollection('experiments');
-  return items.map((p) => ({ params: { slug: p.id }, props: { p } }));
+  const cases = (await getCollection('work')).filter((w) => (w.data as any).listIn === 'experiments');
+  return [
+    ...items.map((p) => ({ params: { slug: p.id }, props: { p } })),
+    ...cases.map((w) => ({ params: { slug: w.id }, props: { w } })),
+  ];
 }
-const { p } = Astro.props;
-const { Content } = await render(p);
-const d = p.data;
+const { p, w } = Astro.props as any;
+const { Content } = p ? await render(p) : { Content: null };
+const d = p?.data;
 ---
+{w ? <CaseStudy w={w} /> : (
 <Base title={`${d.title}, Wayne Kim`} description={d.headline} prompt="Working on something like this?">
   <header class="play-top">
     <a class="toc-back" href="/play/">← Play</a>
@@ -22,6 +28,7 @@ const d = p.data;
   <article class="play-body"><Content /></article>
   <MoreProjects current={`/play/${p.id}/`} />
 </Base>
+)}
 <style>
   .play-top { margin-top: 64px; max-width: var(--measure); }
   .play-top .toc-back { margin-bottom: 24px; }
