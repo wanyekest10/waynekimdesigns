@@ -85,7 +85,7 @@ My part in the study:
 <div class="cols3">
   <div><h4>Design</h4><p>The study, its six check-ins, and recruiting real small groups.</p></div>
   <div><h4>Run</h4><p>Two weeks of check-ins, keeping groups going, then follow-up interviews.</p></div>
-  <div><h4>Share</h4><p>Findings into design principles with Matt, presented at the leadership offsite.</p></div>
+  <div><h4>Share</h4><p>Findings into design principles with Matt, presented with Paul at the leadership offsite.</p></div>
 </div>
 
 I didn't design or build the prototype itself.
@@ -139,7 +139,7 @@ With our lead designer, I turned the findings into three design principles, so t
 
 ## The decision
 
-I presented the findings at the product, design, and engineering leadership offsite. The research gave leadership the confidence to launch Glorify Groups, and they dedicated three of the four product, design, and engineering pods to it. Leadership, PMs, designers, and engineers built on this research as the foundation.
+Paul Pow, our VP of Product, and I presented the findings at the product, design, and engineering leadership offsite. The research gave leadership the confidence to launch Glorify Groups, and they dedicated three of the four product, design, and engineering pods to it. Leadership, PMs, designers, and engineers built on this research as the foundation.
 
 <figure class="frame"><img src="/work/glorify-assets/offsite.webp" alt="Presenting findings to the product, design, and engineering team around a conference table"/><figcaption>Presenting at the product, design, and engineering offsite.</figcaption></figure>
 
