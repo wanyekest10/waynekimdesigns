@@ -57,3 +57,18 @@ Already live from that chat: Glorify clean phones + market map + "In the app" un
 8. **Resume pass.** Not reviewed yet. Check titles, dates, and numbers match the site exactly (82 participants, 3 of 4 pods, 1.8M+ by 2025, UX Strategist at RaiseMe).
 9. **Homepage, judgment call.** TPE leads Selected work. Consider a Living.fm-first order when applying somewhere conservative.
 10. **Next project = the screen-based one** (section above). Biggest gap for design technologist roles: something people can click on the site.
+
+## Glorify review, Oct 19 (Tufte pass)
+Done: Paul Pow and Wayne co-presented at the offsite (live).
+1. **Quotes must be verbatim.** Finding 01 and 02 quotes are paraphrased but shown in quote marks. Use exact words from the 2023 readout deck, trimmed with "...", or drop the quote marks. Verbatim options:
+   - 01: "We've seen people get excited that they have the same favorite scripture as someone else, as well as being able to hear why it's their favorite scripture."
+   - 02: "I feel we have learned more about each other through the app than we have in real life."
+   - 03 is fine ("...it felt like a 'holier' space separated from other social conversations").
+   The social-anxiety quote came from a group lead's interview, not a member. Use one label everywhere: "Small group leader".
+2. **44 of 48 bar.** Same dark cobalt as "Strongly agree" but it means "4 or 5 out of 5". Split it like the left bar: Very likely (5) 34, Likely (4) 10, Neutral (3) 4.
+3. **Response counts.** 38 and 48 answered those questions out of 82 participants. Add "of those who answered the end-of-pilot survey" so readers don't assume 82.
+4. **20% of daily actives** needs a date like the 1.8M+ ("by 2025").
+5. **"many asked us to keep the prototype open"** becomes "members from several groups asked to keep it", which is what Wayne confirmed.
+6. **B2B2C loose end.** "What I already knew" frames pastors as a B2B2C business, then it never comes back. Either close it in one line (did church-provided content or pastor tools ship?) or cut "B2B2C".
+7. Reflection: "Community is built on trust, not features" reads generic. Lead with the more specific one: trust was built through check-ins before the readout.
+8. Optional: the study timeline chart could drop the gray bar outlines (less ink). Flywheel is fine.
