@@ -1,19 +1,29 @@
 ---
 // Compact text rows: name, one line, year. Used for Experiments and the work archive.
 // image: optional preview shown beside the row on hover (pointer devices only).
-interface Row { name: string; line?: string; tags?: string; year?: string; href?: string; image?: string; sub?: string; try?: string }
+// preview: optional looping video used instead of the image; it loads and plays only while hovered.
+interface Row { name: string; line?: string; tags?: string; year?: string; href?: string; image?: string; preview?: string; sub?: string; try?: string }
 const { rows } = Astro.props as { rows: Row[] };
 ---
 <ul class="rows">
   {rows.map((r) => (
     <li class:list={{ 'has-preview': r.image }}>
-      {r.image && <img class="row-preview" src={r.image} alt="" loading="lazy" aria-hidden="true" />}
+      {r.preview ? <video class="row-preview" src={r.preview} poster={r.image} muted loop playsinline preload="none" aria-hidden="true"></video>
+        : r.image && <img class="row-preview" src={r.image} alt="" loading="lazy" aria-hidden="true" />}
       <span class="row-head">{r.href ? <a class="row-name" href={r.href}>{r.name}</a> : <span class="row-name">{r.name}</span>}{r.sub && <span class="row-sub">{r.sub}</span>}</span>
       <span class="row-line">{r.line ?? r.tags}{r.try && <> <a class="row-try" href={r.try}>Try it →</a></>}</span>
       <span class="row-year">{r.year}</span>
     </li>
   ))}
 </ul>
+<script>
+  document.querySelectorAll('.rows li.has-preview').forEach((li) => {
+    const v = li.querySelector('video.row-preview');
+    if (!v) return;
+    li.addEventListener('mouseenter', () => { v.play().catch(() => {}); });
+    li.addEventListener('mouseleave', () => { v.pause(); });
+  });
+</script>
 <style>
   .rows { list-style: none; border-bottom: 1px solid var(--rule); }
   .rows li { display: grid; grid-template-columns: 290px 1fr 64px; gap: 24px; padding: 12px 0; border-top: 1px solid var(--rule); align-items: baseline; }
