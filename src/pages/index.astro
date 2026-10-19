@@ -157,19 +157,42 @@ const years = [
       const btn = egg.querySelector('.egg-line') as HTMLButtonElement;
       const yay = egg.querySelector<HTMLElement>('.egg-yay');
       let letters: HTMLElement[] = [];
-      if (yay) {
-        const t = yay.textContent || ''; yay.setAttribute('aria-label', t); yay.textContent = '';
+      // Split the note into letters so it can spin when the egg opens.
+      const render = (t: string) => {
+        if (!yay) return;
+        yay.setAttribute('aria-label', t); yay.textContent = ''; letters = [];
         t.split(' ').forEach((w, i, arr) => {
           const word = document.createElement('span'); word.style.whiteSpace = 'nowrap'; word.setAttribute('aria-hidden', 'true');
           for (const c of w) { const l = document.createElement('span'); l.className = 'ey'; l.textContent = c; word.appendChild(l); letters.push(l); }
           yay.appendChild(word); if (i < arr.length - 1) yay.appendChild(document.createTextNode(' '));
         });
-      }
+      };
+      // Finder count: one shared number on the server, and a flag in this browser so it only counts once.
+      const ordinal = (n: number) => { const v = n % 100; return n + (['th', 'st', 'nd', 'rd'][(v - 20) % 10] || ['th', 'st', 'nd', 'rd'][v] || 'th'); };
+      const finderText = (n: number) => `Congrats, you're the ${ordinal(n)} person to find this :)`;
+      const KEY = 'egg-finder';
+      let mine = 0;
+      try { mine = parseInt(localStorage.getItem(KEY) || '0', 10) || 0; } catch (e) {}
+      render(mine ? finderText(mine) : (yay?.textContent || ''));
+      let counting = false;
+      const count = async () => {
+        if (mine || counting) return;
+        counting = true;
+        try {
+          const r = await fetch('/api/egg', { method: 'POST' });
+          if (!r.ok) return;
+          const { count: n } = await r.json();
+          if (!n) return;
+          mine = n;
+          try { localStorage.setItem(KEY, String(n)); } catch (e) {}
+          render(finderText(n)); cheer();
+        } catch (e) { /* offline or local preview: keep the plain note */ }
+      };
       const cheer = () => {
         if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         letters.forEach((l, i) => l.animate([{ transform: 'rotate(0deg) translateY(0)' }, { transform: 'rotate(180deg) translateY(-3px)' }, { transform: 'rotate(360deg) translateY(0)' }], { duration: 650, delay: 250 + i * 28, easing: 'cubic-bezier(.2,.75,.25,1.05)' }));
       };
-      const set = (on: boolean) => { const was = egg.classList.contains('open'); egg.classList.toggle('open', on); btn.setAttribute('aria-expanded', String(on)); if (on && !was) cheer(); };
+      const set = (on: boolean) => { const was = egg.classList.contains('open'); egg.classList.toggle('open', on); btn.setAttribute('aria-expanded', String(on)); if (on && !was) { cheer(); count(); } };
       btn.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') set(true); });
       egg.addEventListener('pointerleave', (e) => { if ((e as PointerEvent).pointerType === 'mouse') set(false); });
       btn.addEventListener('click', (e) => { if ((e as PointerEvent).pointerType === 'mouse') return set(true); set(!egg.classList.contains('open')); });
