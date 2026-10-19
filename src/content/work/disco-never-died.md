@@ -67,7 +67,7 @@ It started as a grid of plain white squares. Then each square split into red, gr
 
 ## What came next
 
-I love music, and learning to code this disco ball is what opened up VJing for me: making visuals live, in the room, with the sound.
+I love music, and learning to code this disco ball is what opened up VJing for me: making visuals live with the sound, to tell a story and create an atmosphere in the room.
 
 <figure class="grid3 tall vj">
   <img src="/work/disco-assets/vj-impactminds-booth.webp" alt="Wayne at the laptop and mixer, lit up by warm orange speckled visuals projected across the wall and over him"/>
