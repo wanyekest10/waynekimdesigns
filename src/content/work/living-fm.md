@@ -32,6 +32,7 @@ facts:
   - { label: "Team", value: "Juan Ignacio Garro, Alec Davis" }
   - { label: "Faculty", value: "Bjorn Karmann, Matteo Loglio" }
   - { label: "Tools", value: "Teachable Machine, Cursor, ElevenLabs, ESP32 camera" }
+  - { label: "Tested with", value: "CIID classmates" }
 ---
 
 

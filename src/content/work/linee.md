@@ -25,6 +25,7 @@ facts:
   - { label: "Team", value: "Alec Davis · Chokchey Cappai" }
   - { label: "Faculty", value: "Massimo Banzi · Pierluigi Dalla Rosa · Jose Chavarria" }
   - { label: "Tools", value: "Arduino · Stepper motor · Laser cutter" }
+  - { label: "Tested with", value: "CIID classmates" }
 ---
 
 ## Timekeeping without alarms or notifications

@@ -24,6 +24,7 @@ facts:
   - { label: "Duration", value: "5 days, 2025" }
   - { label: "Team and faculty", value: "Felix Lorsignol · Hun Han · Sahil Islam · David Rose · Ricardo Acosta" }
   - { label: "Tools", value: "Unity · Arduino · Meta Quest 3" }
+  - { label: "Tested with", value: "CIID classmates" }
 ---
 
 ## Subtle over prominent

@@ -26,6 +26,7 @@ facts:
   - { label: "Team", value: "Yase Dusu" }
   - { label: "Faculty", value: "Jacob Remin · Dennis Paul" }
   - { label: "Tools", value: "FaceOSC · Processing · Webcam · Projector" }
+  - { label: "Tested with", value: "CIID classmates" }
 ---
 
 ## A mirror and a stage
