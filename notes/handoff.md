@@ -123,3 +123,10 @@ Wayne asked for these, and they are live. Review them, keep the content, fix the
 - `offsite.webp`: coworkers' faces are blurred, and Wayne is still visible presenting.
 - Principles to shipped features (Wayne confirmed, added under each principle card as `p.shipped`): Intentional Space = Groups as its own space, separate from everyday chat. Mirroring = the group feed where members see each other post and reply by video. Warm Waters = sermon discussion prompts.
 - Facts to keep consistent: 82 participants, two waves, 6 check-ins, 65% still checking in at the end of week two, 37 of 38 and 44 of 48 survey results, 3 of 4 pods, 1.8M+ users and 20% of daily actives by 2025.
+
+## Oct 18, 2026: RaiseMe changes made in a separate chat
+- Added "My part:" + `.cols3` (Find, Connect, Decide) after "Why I saw it first", matching Glorify's pattern.
+- Added the Scheduled Templates prototype (`raiseme-assets/prototype-scheduled-templates.webp`, everything but the dialog blurred to hide student data) to Hack Week.
+- Titles: the VP is "VP of Partner Success" everywhere. Facts team row says Partner Success.
+- Revenue credit softened: the portal investment was "part of how" RaiseMe kept 90%+ (short version and Results).
+- Still open with Wayne: whether "3,500+ hours" should say projected, whether "15 → 2 min" was measured after launch, and the journey map (crop or drop). Wayne wants to keep RaiseMe as a full case study.

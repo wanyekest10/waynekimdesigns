@@ -7,7 +7,7 @@ role: UX Researcher
 timeline: October 2019 to June 2020
 team:
   - name: Katie Zellner
-    role: VP of Customer Success
+    role: VP of Partner Success
   - name: Dan Carew
     role: Director of Product
   - name: Laura Reisert
@@ -30,12 +30,12 @@ jumps:
 short:
   - { lead: "The question.", text: "RaiseMe's college portal kept failing its weekly users, with renewals coming up. Why were colleges losing trust, and what would make them renew?" }
   - { lead: "What I did.", text: "Took partner frustration from support tickets to the CEO: Hack Week research, a partner survey, and a case tying reliability to revenue." }
-  - { lead: "What happened.", text: "Leadership committed to rebuilding the portal weeks before COVID. RaiseMe kept 90%+ of projected revenue through the pandemic." }
+  - { lead: "What happened.", text: "Leadership committed to rebuilding the portal weeks before COVID. That investment was part of how RaiseMe kept 90%+ of projected revenue through the pandemic." }
 facts:
   - { label: "Company", value: "RaiseMe" }
   - { label: "Role", value: "UX Researcher" }
   - { label: "Timeline", value: "Oct 2019 to Jun 2020" }
-  - { label: "Team", value: "Customer Success, Product, Sales, Engineering" }
+  - { label: "Team", value: "Partner Success, Product, Sales, Engineering" }
   - { label: "Methods", value: "Interviews, usability tests, survey, journey mapping" }
   - { label: "Outcome", value: "Partners: exports 15 → 2 min · Business: 90%+ revenue kept" }
 ---
@@ -58,6 +58,14 @@ Each issue looked small. Together they were eroding trust, and the people renewi
 
 Before research, I worked in Customer Success with these partners. I knew the operational reality behind churn conversations, and the gap between what partners struggled with and what was on the roadmap. That position let me connect partner experience to decisions leadership couldn't ignore.
 
+My part:
+
+<div class="cols3">
+  <div><h4>Find</h4><p>Hack Week research with data operators, then partner interviews and a survey.</p></div>
+  <div><h4>Connect</h4><p>Matched what partners felt to what they paid, and ran workshops with Sales and Partner Success.</p></div>
+  <div><h4>Decide</h4><p>Framed the case with our Product Manager and brought it to the CEO and senior leadership.</p></div>
+</div>
+
 ## Hack Week: the assumption broke
 
 I used RaiseMe's first Hack Week to dig into a long-standing friction point: how colleges moved RaiseMe data into their CRMs. My team was three engineers and three people from Sales and Partner Success. In four days we ran five interviews, five surveys, and three moderated usability tests with college data operators.
@@ -74,6 +82,8 @@ We went in believing direct API integrations would solve it. The first two partn
 Trust was the deeper problem. Why would partners plug in an API from a vendor whose downloads kept failing? The engineers watched error messages appear in four of five sessions. And none of the five partners were downloading the fields their RaiseMe program needed. Their director had asked them to, but no one had explained why.
 
 The real job was getting RaiseMe data into a CRM-ready state. We prototyped Scheduled Templates: standardized, recurring exports that fit the workflows partners already had.
+
+<figure class="wide"><img src="/work/raiseme-assets/prototype-scheduled-templates.webp" alt="The Scheduled Templates prototype: a Download settings dialog that auto-generates a weekly CSV of high school followers every Monday"/><figcaption>The Scheduled Templates prototype: set it once, and a clean weekly export is waiting every Monday. Student details blurred.</figcaption></figure>
 
 > "This would save me 15 minutes per week to 2 minutes, and I would see no more error bars."
 >
@@ -186,7 +196,7 @@ Partner Dashboard V1 showed colleges what their RaiseMe program was producing, w
 
 ## Results
 
-The commitment came weeks before COVID disrupted higher ed budgets. That timing mattered. While institutions froze budgets and cut vendors, RaiseMe:
+The commitment came weeks before COVID disrupted higher ed budgets. That timing mattered. While institutions froze budgets and cut vendors, the rebuilt portal was part of how RaiseMe held on:
 
 <div class="stats">
   <div class="focal"><span class="k">For the business</span><b>90%+</b><p>of projected annual revenue kept</p></div>
