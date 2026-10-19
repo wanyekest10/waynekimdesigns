@@ -52,6 +52,12 @@ There are two layers. A sphere of shimmering squares, the disco ball, swells and
 
 <figure class="wide"><img src="/work/disco-assets/projected.webp" alt="The visuals projected large on a courtyard wall at night while people gather around a table of equipment"/></figure>
 
+### Building the ball
+
+The disco ball is squares and a bit of math. I started with a flat grid of squares, 70 by 70. Then I gave each square two angles: how far around the ball it sits, and how far from the top to the bottom. Sine and cosine turn those two angles into a point on a sphere, so each row of the grid wraps into a ring. When the room gets louder, every square gets bigger, and the ball shimmers.
+
+<figure class="wide"><img src="/work/disco-assets/how-the-ball-is-built.svg" alt="Three steps: a flat grid of squares; each square gets two angles, one around the ball and one from top to bottom, turned into a point with x = r sin θ cos φ, y = r sin θ sin φ, z = r cos θ; and the result, a ball of squares where one highlighted row of the grid has become one ring."/><figcaption>Same squares, new positions. The blue row in the grid is the blue ring on the ball.</figcaption></figure>
+
 ## Early versions
 
 It started as a grid of plain white squares. Then each square split into red, green, and blue, pulling apart and coming back together with the sound.
