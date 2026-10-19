@@ -22,10 +22,10 @@ featured: false
 label: "Research and service design"
 summary: "Why colleges stopped trusting their portal."
 hero: "/work/raiseme-assets/hero-download-settings.webp"
+hideHero: true
 heroAlt: "The redesigned Download settings screen: a weekly follower report that generates itself every Monday"
 jumps:
   - { label: "Skip to breaking assumptions", to: "hack-week-the-assumption-broke" }
-  - { label: "Skip to the impact", to: "results" }
 short:
   - { lead: "The question.", text: "RaiseMe's college portal kept failing its weekly users, with renewals coming up. Why were colleges losing trust, and what would make them renew?" }
   - { lead: "What I did.", text: "Took partner frustration from support tickets to the CEO: Hack Week research, a partner survey, and a case tying reliability to revenue." }
@@ -38,6 +38,29 @@ facts:
   - { label: "Methods", value: "Interviews, usability tests, survey, journey mapping" }
   - { label: "Outcome", value: "90%+ of projected revenue kept · Reliability 95% → 99%" }
 ---
+
+## The impact
+
+Research turned a quiet support problem into a leadership commitment, weeks before COVID hit higher ed budgets. The rebuilt portal shipped automated weekly downloads in place of a broken export, and it was part of how RaiseMe held on while colleges froze budgets and cut vendors.
+
+<div class="stats">
+  <div class="focal"><span class="k">For the business</span><b>90%+</b><p>of projected annual revenue kept</p></div>
+  <div><span class="k">For the business</span><b>150 → 65</b><p>partners filing usability tickets, out of 300</p></div>
+  <div><span class="k">For partners</span><b>95% → 99%</b><p>portal reliability</p></div>
+  <div><span class="k">For partners</span><b>15 → 2 min</b><p>for a weekly export task (estimated)</p></div>
+</div>
+
+<figure class="pair">
+  <img src="/work/raiseme-assets/before-portal-error.webp" alt="Before: the portal showing a red error banner and empty saved groups"/>
+  <img src="/work/raiseme-assets/after-scheduled-downloads.webp" alt="After: an Available downloads list with automatically generated weekly follower reports"/>
+  <figcaption>Before: errors on the most basic task. After: weekly exports that generate themselves and wait in a downloads list.</figcaption>
+</figure>
+
+The updated portal stayed in use after RaiseMe was acquired by CampusLogic in July 2020.
+
+> "Wayne drove real change in our product roadmap and client success trajectory by tying client needs directly to ROI."
+>
+> VP of Partner Success
 
 ## Growth without reliability
 
@@ -72,7 +95,7 @@ We went in believing API integrations would solve it. The first two partners lov
 
 Underneath it was trust: why plug in an API from a vendor whose downloads kept failing? We prototyped Scheduled Templates, standardized weekly exports that fit the workflows partners already had.
 
-<figure class="wide"><img src="/work/raiseme-assets/prototype-scheduled-templates.webp" alt="The Scheduled Templates prototype: a Download settings dialog that auto-generates a weekly CSV of high school followers every Monday"/><figcaption>The Scheduled Templates prototype: set it once, and a clean weekly export is waiting every Monday. Student details blurred.</figcaption></figure>
+<figure class="textw"><img src="/work/raiseme-assets/prototype-scheduled-templates.webp" alt="The Scheduled Templates prototype: a Download settings dialog that auto-generates a weekly CSV of high school followers every Monday"/><figcaption>The Scheduled Templates prototype: set it once, and a clean weekly export is waiting every Monday. Student details blurred.</figcaption></figure>
 
 > "This would save me 15 minutes per week to 2 minutes, and I would see no more error bars."
 >
@@ -147,34 +170,7 @@ With our Product Manager, I framed it as a business decision, not a UX improveme
   </div>
 </div>
 
-We aligned on a phased roadmap, reliability first, then interface fixes, then Scheduled Templates. I brought the case to the CEO and senior leadership, and it secured a commitment to rebuild the College Partner Portal in early 2020.
-
-## What shipped
-
-<figure class="pair">
-  <img src="/work/raiseme-assets/before-portal-error.webp" alt="Before: the portal showing a red error banner and empty saved groups"/>
-  <img src="/work/raiseme-assets/after-scheduled-downloads.webp" alt="After: an Available downloads list with automatically generated weekly follower reports"/>
-  <figcaption>Before: errors on the most basic task. After: weekly exports that generate themselves and wait in a downloads list.</figcaption>
-</figure>
-
-COVID forced trade-offs, and we cut custom download fields. The automated weekly downloads shipped, along with a first Partner Dashboard showing colleges what their RaiseMe program was producing.
-
-## Results
-
-The commitment came weeks before COVID disrupted higher ed budgets. While institutions froze budgets and cut vendors, the rebuilt portal was part of how RaiseMe held on:
-
-<div class="stats">
-  <div class="focal"><span class="k">For the business</span><b>90%+</b><p>of projected annual revenue kept</p></div>
-  <div><span class="k">For the business</span><b>150 → 65</b><p>partners filing usability tickets, out of 300</p></div>
-  <div><span class="k">For partners</span><b>95% → 99%</b><p>portal reliability</p></div>
-  <div><span class="k">For partners</span><b>15 → 2 min</b><p>for a weekly export task (estimated)</p></div>
-</div>
-
-The updated portal stayed in use after RaiseMe was acquired by CampusLogic in July 2020.
-
-> "Wayne drove real change in our product roadmap and client success trajectory by tying client needs directly to ROI."
->
-> VP of Partner Success
+We aligned on a phased roadmap, reliability first, then interface fixes, then Scheduled Templates. I brought the case to the CEO and senior leadership, and it secured a commitment to rebuild the College Partner Portal in early 2020. COVID forced trade-offs, so custom download fields were cut, but the automated weekly downloads and a first Partner Dashboard shipped.
 
 ## Reflection
 

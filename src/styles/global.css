@@ -594,3 +594,6 @@ article .trio.principles > div { display: grid; grid-row: span 3; grid-template-
 article .trio.principles > div > img { margin-bottom: 12px; }
 article .trio.principles figcaption { margin-top: 16px; }
 @media (max-width: 720px) { article .trio.principles { grid-template-rows: none; row-gap: 32px; } article .trio.principles > div { grid-row: auto; grid-template-rows: none; } }
+/* An image kept to text width. */
+article figure.textw { max-width: var(--measure); margin: 32px 0; }
+article figure.textw img { width: 100%; border-radius: 6px; margin: 0 0 10px; }
