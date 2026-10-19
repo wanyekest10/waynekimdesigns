@@ -82,14 +82,15 @@ Ask people if they'd use a community feature and most say yes. That tells you ve
 
 My part in the study:
 
-- Designed the study and its six check-ins
-- Recruited the groups and kept them participating for two weeks
-- Ran the follow-up interviews with leaders and members
-- Synthesized the findings, and turned them into design principles with Matt
-- Presented the findings to leadership at the offsite
-- I didn't design or build the prototype
+<div class="cols3">
+  <div><h4>Design</h4><p>The study, its six check-ins, and recruiting real small groups.</p></div>
+  <div><h4>Run</h4><p>Two weeks of check-ins, keeping groups going, then follow-up interviews.</p></div>
+  <div><h4>Share</h4><p>Findings into design principles with Matt, presented at the leadership offsite.</p></div>
+</div>
 
-<figure class="trio phones">
+I didn't design or build the prototype itself.
+
+<figure class="trio">
   <div><img src="/work/glorify-assets/testflight-share.webp" alt="Group chat and shared scripture in the prototype"/><p><strong>Share life together.</strong> Group chat and shared scripture.</p></div>
   <div><img src="/work/glorify-assets/testflight-enjoy.webp" alt="A group quiz and a group event in the prototype"/><p><strong>Enjoy life together.</strong> A quiz, or a group event.</p></div>
   <div><img src="/work/glorify-assets/testflight-grow.webp" alt="Group devotionals and life questions in the prototype"/><p><strong>Grow together.</strong> Devotionals and life questions.</p></div>
