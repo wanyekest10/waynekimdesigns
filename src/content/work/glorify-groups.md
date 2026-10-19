@@ -26,14 +26,14 @@ jumps:
 short:
   - { lead: "The question.", text: "After its Series B, Glorify's leadership was weighing community as the next bet for its 2.5M+ users, and doubted it would work. Should Groups exist at all?" }
   - { lead: "What I did.", text: "Turned their doubts into one testable hypothesis, then ran a 2-week prototype diary study with 82 people in their real small groups." }
-  - { lead: "What happened.", text: "Leadership launched Glorify Groups and committed three of four product, design, and engineering pods. 1.8M+ people use it today." }
+  - { lead: "What happened.", text: "Leadership launched Glorify Groups and committed three of four product, design, and engineering pods. By 2025, 1.8M+ people were using it." }
 facts:
   - { label: "Company", value: "Glorify" }
   - { label: "Role", value: "Senior Design Researcher" }
   - { label: "Timeline", value: "6 weeks, Mar to May 2023" }
   - { label: "Team", value: "Paul Pow, VP of Product · Matt Regan, Lead Designer" }
   - { label: "Methods", value: "Prototype diary study, interviews, survey" }
-  - { label: "Outcome", value: "1.8M+ users · 20% of daily actives · 3 of 4 pods committed" }
+  - { label: "Outcome", value: "1.8M+ users by 2025 · 20% of daily actives · 3 of 4 pods committed" }
 ---
 
 
@@ -45,12 +45,24 @@ The real question wasn't how to design Groups. It was whether Groups should exis
 
 ## What I already knew
 
-My own time in Christian small groups, and interviews with other small group leaders and members, pointed the same way. <!-- TODO: confirm whether the earlier 40+ interviews with pastors and small group leaders (13 churches and ministries, 8 states, 6 denominations) were yours. If so, name them here. -->
+My own time in Christian small groups pointed one way. So did Glorify's earlier research, done before my study: 40+ interviews with pastors and small group leaders across 13 churches and ministries, 8 states, and 6 denominations.
 
 - **Small groups are the lifeblood of the church.** They drive accountability, connection, and meaning for members.
 - **Volunteer leaders drive growth.** The "unofficial leaders" of small groups are who grow discipleship in a church.
 - **Pastors invest in those leaders.** Churches put their effort and money into supporting group leaders, which made Groups a potential B2B2C business, not just a feature.
 - **Groups were already online, in the wrong place.** They gathered in KakaoTalk, WhatsApp, GroupMe, and group texts, where faith conversations got lost among everything else.
+
+<figure class="quad">
+  <p class="q-axis q-y">Together</p>
+  <div class="q-grid">
+    <div class="q"><span class="q-k">Together, any conversation</span><div class="q-chips"><span>Group texts</span><span>WhatsApp</span><span>KakaoTalk</span><span>GroupMe</span><span>Messenger</span><span>Snapchat</span><span>Zoom</span><span>Instagram Live</span></div></div>
+    <div class="q q-focal"><span class="q-k">Together, built for faith</span><b>Glorify Groups</b><p>The gap no tool filled.</p></div>
+    <div class="q q-empty"><span class="q-k">On your own, any conversation</span></div>
+    <div class="q"><span class="q-k">On your own, built for faith</span><div class="q-chips"><span>YouVersion</span><span>Glorify, before Groups</span></div></div>
+  </div>
+  <p class="q-axis q-x"><span>Any conversation</span><span>Built for faith practice</span></p>
+  <figcaption>The real competition was the group chat, not another Bible app. Tools in the top left are the ones participants said their groups already used. Placement is my read of the interviews.</figcaption>
+</figure>
 
 ## What leadership needed to know
 
@@ -67,6 +79,15 @@ Ask people if they'd use a community feature and most say yes. That tells you ve
 - **Two waves:** groups not tied to a specific church, then groups from specific churches. Participants included church planters, young parents, marriage groups, dads' groups, and Bible study groups.
 - **Diary study:** six survey check-ins per participant across two weeks.
 - **Follow-up interviews:** with group leaders and members, to explore the moments of value behind the data.
+
+**My part.**
+
+- Designed the study and its six check-ins
+- Recruited the groups and kept them participating for two weeks
+- Ran the follow-up interviews with leaders and members
+- Synthesized the findings, and turned them into design principles with Matt
+- Presented the findings to leadership at the offsite
+- I didn't design or build the prototype
 
 <figure class="trio">
   <div><img src="/work/glorify-assets/testflight-share.webp" alt="Group chat and shared scripture in the prototype"/><p><strong>Share life together.</strong> Group chat and shared scripture.</p></div>
@@ -114,6 +135,8 @@ Not everyone was convinced, and that mattered as much as the praise. Some partic
 
 Those critiques became the next questions: how to design for groups of strangers, and what Groups could offer that a chat app couldn't, like prayer requests and church-provided content.
 
+Two answers made it into the live app. Prayer requests became one of its most important features, something a group chat doesn't give you. And groups can share devotionals, which carries the shared context between meetings that the study found mattered.
+
 ## Turning findings into principles
 
 With our lead designer, I turned the findings into three design principles, so they could guide future iterations across teams instead of living in a readout deck.
@@ -132,7 +155,7 @@ I presented the findings at the product, design, and engineering leadership offs
 <figure class="frame"><img src="/work/glorify-assets/offsite.webp" alt="Presenting findings to the product, design, and engineering team around a conference table"/><figcaption>Presenting at the product, design, and engineering offsite.</figcaption></figure>
 
 <div class="stats three">
-  <div class="focal"><span class="k">Reach</span><b>1.8M+</b><p>users in Glorify Groups</p></div>
+  <div class="focal"><span class="k">Reach</span><b>1.8M+</b><p>users in Glorify Groups by 2025</p></div>
   <div><span class="k">Engagement</span><b>20%</b><p>of daily active users use Groups</p></div>
   <div><span class="k">Commitment</span><b>3 of 4</b><p>product, design, and engineering pods</p></div>
 </div>

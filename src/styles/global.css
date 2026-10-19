@@ -546,3 +546,22 @@ article figure.pillar .vl-sound { bottom: 12px; }
   article figure.pillar .vs-wrap { aspect-ratio: auto; background: none; display: block; }
   article figure.pillar video { width: 100%; height: auto; aspect-ratio: 9 / 14; object-position: 50% 40%; border-radius: 6px; }
 }
+
+/* Quadrant map (Glorify market map). Built in HTML so it stays readable on phones. */
+article figure.quad { max-width: var(--measure); margin: 32px 0; }
+.quad .q-grid { display: grid; grid-template-columns: 1fr 1fr; border-left: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.quad .q { padding: 16px; min-height: 140px; display: flex; flex-direction: column; gap: 10px; border-right: 1px solid var(--rule); border-top: 1px solid var(--rule); }
+.quad .q:nth-child(2n) { border-right: 0; }
+.quad .q:nth-child(-n+2) { border-top: 0; }
+.quad .q-k { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); }
+.quad .q-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.quad .q-chips span { font: var(--small); color: var(--ink); border: 1px solid var(--rule); border-radius: 999px; padding: 2px 10px; background: var(--paper); }
+.quad .q-focal { background: var(--panel); outline: 1px dashed var(--accent); outline-offset: -8px; }
+.quad .q-focal .q-k, .quad .q-focal b { color: var(--accent); }
+.quad .q-focal b { font: 500 22px/1.2 var(--sans); letter-spacing: -0.02em; }
+.quad .q-focal p { font: var(--small); color: var(--gray); margin: 0; }
+.quad .q-axis { font: var(--small); color: var(--gray); margin: 0 0 8px; }
+.quad .q-x { display: flex; justify-content: space-between; margin: 8px 0 12px; }
+.quad .q-x span:last-child::after { content: " \2192"; }
+.quad .q-y::before { content: "\2191 "; }
+@media (max-width: 480px) { .quad .q { padding: 12px; min-height: 120px; } .quad .q-focal b { font-size: 18px; } }
