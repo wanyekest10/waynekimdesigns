@@ -27,14 +27,21 @@ jumps:
 short:
   - { lead: "The question.", text: "After its Series B, Glorify's leadership was weighing community as the next bet for its 2.5M+ users, and doubted it would work. Should Groups exist at all?" }
   - { lead: "What I did.", text: "Turned their doubts into one testable hypothesis, then ran a 2-week prototype diary study with 82 people in their real small groups." }
-  - { lead: "What happened.", text: "Leadership launched Glorify Groups and committed three of four product, design, and engineering pods. By 2025, 1.8M+ people were using it." }
+  - { lead: "What happened.", text: "Leadership launched Glorify Groups." }
+skills: [Design research, Strategy, Synthesis, Facilitation]
+contributions:
+  - { skill: "Strategy", text: "Turned leadership's doubts about community into one testable hypothesis, through several leadership workshops" }
+  - { skill: "Design research", text: "Designed and ran a 2-week prototype diary study, recruiting 82 people in their real small groups and keeping them going, then ran follow-up interviews" }
+  - { skill: "Synthesis", text: "Turned the findings into design principles" }
+  - { skill: "Facilitation", text: "Presented the findings with Paul Pow, VP of Product, at the leadership offsite" }
+  - { skill: "Not mine", text: "The prototype itself was designed and built by the product team", shared: true }
+  - { skill: "Impact", text: "3 of 4 product pods committed to Groups. By 2025: 1.8M+ users, 20% of daily actives", impact: true }
 facts:
   - { label: "Company", value: "Glorify" }
   - { label: "Role", value: "Senior Design Researcher" }
   - { label: "Timeline", value: "6 weeks, Mar to May 2023" }
   - { label: "Team", value: "Paul Pow, VP of Product · Matt Regan, Lead Designer" }
   - { label: "Methods", value: "Prototype diary study, interviews, survey" }
-  - { label: "Outcome", value: "1.8M+ users by 2025 · 20% of daily actives · 3 of 4 pods committed" }
 ---
 
 ## Should Groups exist at all?
@@ -42,16 +49,6 @@ facts:
 Glorify had grown to 2.5M+ users on solo practice: prayer, meditation, daily devotionals. With a board meeting coming after the Series B, the company needed to show where further revenue and growth would come from. Community was on the table. Building it meant committing product pods. Not building it meant passing on the most obvious growth story the company had.
 
 The real question wasn't how to design Groups. It was whether Groups should exist at all.
-
-## What I did
-
-<div class="cols3">
-  <div><h4>Frame</h4><p>Turned leadership's doubts into one testable hypothesis, then designed a study to test it.</p></div>
-  <div><h4>Run</h4><p>Recruited 82 people in real small groups, kept them going for two weeks, then interviewed leaders and members.</p></div>
-  <div><h4>Share</h4><p>Turned findings into design principles with Matt, and presented them with Paul at the leadership offsite.</p></div>
-</div>
-
-I didn't design or build the prototype itself.
 
 ## What changed
 

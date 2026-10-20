@@ -19,9 +19,13 @@ short:
   - { lead: "The question.", text: "How do you design an experience that gets people to make silly faces, in public, in front of other people?" }
   - { lead: "What we built.", text: "A translucent canvas that works as both mirror and stage. Face tracking and a microphone turn expressions and voice into live projected visuals." }
   - { lead: "What I learned.", text: "Creative coding let us prototype play fast, and absurdity turned out to be contagious: ridiculous prototypes gave the whole room permission to play." }
+skills: [Creative coding]
+contributions:
+  - { skill: "Creative coding", text: "Turned face tracking and voice into live projected visuals with FaceOSC and Processing" }
+  - { skill: "With Yase", text: "The concept and the translucent canvas installation", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
-  - { label: "Responsibility", value: "Creative coding" }
+  - { label: "Role", value: "Face tracking and live visuals" }
   - { label: "Duration", value: "4 days, 2024" }
   - { label: "Team", value: "Yase Dusu" }
   - { label: "Faculty", value: "Jacob Remin · Dennis Paul" }

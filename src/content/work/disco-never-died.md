@@ -16,12 +16,17 @@ short:
   - { lead: "The question.", text: "How can I help bring back disco? And how do you code a disco ball?" }
   - { lead: "What I built.", text: "A disco ball and a grid of colorful shapes that grow and glow with the room's volume. Try it on this page: it starts flat, then opens up into 3D." }
   - { lead: "What I learned.", text: "Making something 2D, then evolving it into 3D and back, is fun. Three simple squares can go a long way: they got me into VJing." }
+skills: [Creative coding, Interaction design, Prototyping]
+contributions:
+  - { skill: "Creative coding", text: "Built the dance floor grid, then the disco ball from squares and sine and cosine, in Processing" }
+  - { skill: "Interaction design", text: "Made the room's sound drive everything: louder room, bigger squares" }
+  - { skill: "Prototyping", text: "Ported it to the browser so anyone can try it with a beat or their mic" }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
+  - { label: "Role", value: "Designer and developer, solo" }
   - { label: "Course", value: "Introduction to Programming" }
   - { label: "Faculty", value: "Dennis Paul · Jacob Remin" }
   - { label: "Year", value: "2024" }
-  - { label: "Team", value: "Solo" }
   - { label: "Tools", value: "Processing · PeasyCam · Microphone" }
 ---
 

@@ -18,9 +18,14 @@ short:
   - { lead: "The question.", text: "Riders can't see their blind spots, and turning your head at speed is its own risk. What if the helmet could tell you, without pulling your eyes off the road?" }
   - { lead: "What we built.", text: "Lume, a VR simulation of an AR helmet. A red light flags a vehicle in your blind spot, and speed and fuel sit at the edge of view. A physical handlebar steers the ride." }
   - { lead: "What I learned.", text: "Riders didn't want a dashboard in their visor. The best cue was the one you barely notice until you need it." }
+skills: [Prototyping, Design research]
+contributions:
+  - { skill: "Prototyping", text: "Built the helmet camera point of view, and integrated that software into the main testing environment" }
+  - { skill: "Design research", text: "Desk research on blind spots and rider safety" }
+  - { skill: "With the team", text: "The Unity simulation and the physical handlebar, with Felix Lorsignol, Hun Han, and Sahil Islam", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
-  - { label: "Responsibility", value: "Helmet camera POV" }
+  - { label: "Role", value: "Helmet camera POV and integration" }
   - { label: "Duration", value: "5 days, 2025" }
   - { label: "Team", value: "Felix Lorsignol · Hun Han · Sahil Islam" }
   - { label: "Faculty", value: "David Rose · Ricardo Acosta" }

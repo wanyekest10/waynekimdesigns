@@ -21,6 +21,12 @@ short:
   - { lead: "The question.", text: "Most adults stop drawing not for lack of skill, but because somewhere around 9 to 13 they decided they weren't allowed to be bad at it. Can permission be designed?" }
   - { lead: "What I built.", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software. The one that worked was a deck of cards." }
   - { lead: "What I learned.", text: "Constraints, not freedom, get adults drawing. And permission spreads once someone goes first." }
+skills: [Design research, Prototyping, Interaction design, Facilitation]
+contributions:
+  - { skill: "Design research", text: "Explored why adults stop drawing as they grow up" }
+  - { skill: "Prototyping", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software" }
+  - { skill: "Interaction design", text: "A deck of cards that uses constraints to give adults permission to draw" }
+  - { skill: "Facilitation", text: "Ran playtests and a workshop to test it with people" }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design" }
   - { label: "Role", value: "Designer and builder, solo" }

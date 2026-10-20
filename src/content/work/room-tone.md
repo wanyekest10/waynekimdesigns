@@ -20,6 +20,11 @@ short:
   - { lead: "The question.", text: "Working alone, hours disappeared, and every break tool I tried was an alarm underneath. Could the room ask, the way a person would, with no guilt either way?" }
   - { lead: "What I built.", text: "A Python state machine that notices 90 minutes of steady work, then brings in a light, a spinning disco ball, and music, one layer at a time." }
   - { lead: "What I learned.", text: "I thought I wanted a reward. I didn't. I wanted permission." }
+skills: [Creative coding, Physical computing, Interaction design]
+contributions:
+  - { skill: "Creative coding", text: "A Python state machine that notices 90 minutes of steady work" }
+  - { skill: "Physical computing", text: "Wired smart plugs, a light, a disco ball motor, and Spotify into one sequence" }
+  - { skill: "Interaction design", text: "Cues that arrive one layer at a time and ask, rather than alarm" }
 facts:
   - { label: "Project", value: "Personal project" }
   - { label: "Role", value: "Designer and developer, solo" }

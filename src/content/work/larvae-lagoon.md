@@ -20,6 +20,7 @@ short:
   - { lead: "What I learned.", text: "Designing for a non-human user means bringing your strengths as a designer, knowing how much you don't know, and leaning on the experts who do." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
+  - { label: "Role", value: "Field research · Led expert conversations" }
   - { label: "Course", value: "Designing across Biological Scales" }
   - { label: "Duration", value: "5 days, 2024" }
   - { label: "Team", value: "Eva Barth · Leon Fan · Vedant Jain" }

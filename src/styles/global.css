@@ -613,3 +613,13 @@ article .pair-fit img { max-width: none; }
 @media (max-width: 720px) { article .pair-fit { gap: 8px; } }
 .pair-fit img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
 .pair-fit figcaption { grid-column: 1 / -1; }
+
+/* My role and contributions table */
+.my-role { max-width: var(--measure); margin-top: 36px; }
+.my-role dl { margin: 0; border-top: 1px solid var(--rule); }
+.my-role dl > div { display: grid; grid-template-columns: 170px 1fr; gap: 4px 24px; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+.my-role dt { color: var(--gray); font-size: 15px; }
+.my-role dd { margin: 0; font-size: 15px; color: var(--ink); }
+.my-role .shared dt, .my-role .shared dd { color: var(--gray); }
+@media (max-width: 600px) { .my-role dl > div { grid-template-columns: 1fr; gap: 2px; } .my-role dt { font: var(--meta); text-transform: uppercase; letter-spacing: -0.02em; } }
+.my-role .impact dd { font-weight: 500; }

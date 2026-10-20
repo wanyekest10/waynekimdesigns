@@ -8,7 +8,10 @@ const { w } = Astro.props;
 const { Content, headings } = await render(w);
 const d = w.data as any;
 const beats = d.short ?? [];
-const facts = d.facts ?? [];
+const skills = d.skills ?? [];
+const contrib = d.contributions ?? [];
+const facts = (d.facts ?? []).filter((f: any) => !(skills.length && f.label === 'Methods'));
+if (skills.length) facts.splice(Math.min(2, facts.length), 0, { label: 'Skills', value: skills.join(' · ') });
 // Section list: numbered h2s, h3s as indented sub-items. "Hack Week: the assumption broke" shows as "Hack Week".
 let n = 0;
 const d0 = w.data as any;
@@ -25,6 +28,12 @@ const toc = headings
         <div class="short">
           <span class="short-tag">The 30-second version</span>
           {beats.map((b: any) => <p><strong>{b.lead}</strong> {b.text}</p>)}
+        </div>
+      )}
+      {contrib.length > 0 && (
+        <div class="my-role">
+          <span class="short-tag">My role and contributions</span>
+          <dl>{contrib.map((r: any) => <div class:list={{ shared: r.shared, impact: r.impact }}><dt>{r.skill}</dt><dd>{r.text}</dd></div>)}</dl>
         </div>
       )}
     </header>
