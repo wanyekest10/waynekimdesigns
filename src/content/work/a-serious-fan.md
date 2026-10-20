@@ -21,7 +21,8 @@ facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Course", value: "Prototyping as a Process" }
   - { label: "Duration", value: "4 days, 2025" }
-  - { label: "Team and faculty", value: "Hun Han · Jose Chavarria · Andrea Desiato" }
+  - { label: "Team", value: "Hun Han" }
+  - { label: "Faculty", value: "Jose Chavarria · Andrea Desiato" }
   - { label: "Tools", value: "Cardboard · Paper · Motor · LED" }
 ---
 
