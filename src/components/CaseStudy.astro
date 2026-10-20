@@ -3,6 +3,7 @@
 import MoreProjects from './MoreProjects.astro';
 import Base from '../layouts/Base.astro';
 import { render } from 'astro:content';
+import { linkPeople } from '../data/people';
 const { w } = Astro.props;
 const { Content, headings } = await render(w);
 const d = w.data as any;
@@ -31,7 +32,7 @@ const toc = headings
     <aside class="cs-side">
       {facts.length > 0 && (
         <dl class="cs-facts">
-          {facts.map((f: any) => <div><dt>{f.label}</dt><dd>{String(f.value).split(' · ').map((v: string) => <span>{v}</span>)}</dd></div>)}
+          {facts.map((f: any) => <div><dt>{f.label}</dt><dd>{String(f.value).split(' · ').map((v: string) => <span set:html={linkPeople(v)} />)}</dd></div>)}
         </dl>
       )}
 

@@ -6,7 +6,7 @@ hero: "/experiments/mosaic-assets/table.webp"
 heroAlt: "The installation on a table: two cardboard figures facing each other over a red and yellow plate, four 3D-printed objects (a key, a bed, a coffee cup, a microphone) on printed stories, and playdough memories left by visitors"
 ---
 
-One of our first builds at CIID, made in 24 hours by four of us who had just arrived in Bergamo. With Gayatri Kalra, Felix Lorsignol, and Ali Kargin.
+One of our first builds at CIID, made in 24 hours by four of us who had just arrived in Bergamo. With [Gayatri Kalra](https://www.ciid.dk/community/gayatri-kalra), [Felix Lorsignol](https://www.ciid.dk/community/felix-lorsignol), and [Ali Kargin](https://www.ciid.dk/community/ali-kargin).
 
 ## The prompt
 
