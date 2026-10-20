@@ -22,7 +22,8 @@ facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Responsibility", value: "Helmet camera POV" }
   - { label: "Duration", value: "5 days, 2025" }
-  - { label: "Team and faculty", value: "Felix Lorsignol · Hun Han · Sahil Islam · David Rose · Ricardo Acosta" }
+  - { label: "Team", value: "Felix Lorsignol · Hun Han · Sahil Islam" }
+  - { label: "Faculty", value: "David Rose · Ricardo Acosta" }
   - { label: "Tools", value: "Unity · Arduino · Meta Quest 3" }
 ---
 
