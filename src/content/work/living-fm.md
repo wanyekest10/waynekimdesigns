@@ -35,9 +35,9 @@ facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Role", value: "Vision model and state machine · Liv's tone and responses · Testing interface" }
   - { label: "Duration", value: "4 days, 2025" }
-  - { label: "Team", value: "Juan Ignacio Garro, Alec Davis" }
-  - { label: "Faculty", value: "Bjorn Karmann, Matteo Loglio" }
-  - { label: "Tools", value: "Teachable Machine, Cursor, ElevenLabs, ESP32 camera" }
+  - { label: "Team", value: "Juan Ignacio Garro · Alec Davis" }
+  - { label: "Faculty", value: "Bjorn Karmann · Matteo Loglio" }
+  - { label: "Tools", value: "Teachable Machine · Cursor · ElevenLabs · ESP32 camera" }
 ---
 
 

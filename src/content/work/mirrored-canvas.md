@@ -25,7 +25,7 @@ contributions:
   - { skill: "With Yase", text: "The concept and the translucent canvas installation", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
-  - { label: "Role", value: "Creative coding" }
+  - { label: "Role", value: "Face tracking and live visuals" }
   - { label: "Duration", value: "4 days, 2024" }
   - { label: "Team", value: "Yase Dusu" }
   - { label: "Faculty", value: "Jacob Remin · Dennis Paul" }
