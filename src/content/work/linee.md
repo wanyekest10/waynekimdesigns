@@ -18,6 +18,12 @@ short:
   - { lead: "The question.", text: "Shared homes run on group chats, alarms, and reminders. Could a household stay in sync by asking for less attention, not more?" }
   - { lead: "What we built.", text: "Linee, a 24-hour timeline of wooden blocks. Press a block to mark an event. A motorized needle crosses the day and gives each marked hour a soft knock as it passes." }
   - { lead: "What I learned.", text: "Calm technology isn't silent: it moves information to the edge of attention, where you can glance at it instead of being interrupted." }
+skills: [Physical computing, Prototyping, Interaction design]
+contributions:
+  - { skill: "Physical computing", text: "Wrote the code for the stepper motor and LEDs" }
+  - { skill: "Prototyping", text: "Led the block prototyping" }
+  - { skill: "Interaction design", text: "Proposed the magnetic tiles concept" }
+  - { skill: "With the team", text: "Concept and the laser-cut build, with Alec Davis and Chokchey Cappai", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Responsibility", value: "Stepper motor and LED code · Block prototyping · Magnetic tiles concept" }

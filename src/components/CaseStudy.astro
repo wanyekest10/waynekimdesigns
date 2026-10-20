@@ -8,7 +8,7 @@ const { w } = Astro.props;
 const { Content, headings } = await render(w);
 const d = w.data as any;
 const beats = d.short ?? [];
-const VARIANT = process.env.ROLE_VARIANT ?? 'A';
+const VARIANT = process.env.ROLE_VARIANT ?? 'B';
 const skills = d.skills ?? [];
 const contrib = d.contributions ?? [];
 const facts = (d.facts ?? []).filter((f: any) => !(skills.length && f.label === 'Methods'));

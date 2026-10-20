@@ -14,6 +14,11 @@ hideHero: true
 short:
   - { lead: "The question.", text: "How do you get a room to think together, so ideas end up on the wall and build on each other?" }
   - { lead: "What happened.", text: "At Glorify, one workshop became the research agenda for the year. I also ran workshops for the Busan Design Council, Wipro, and my own final project at CIID, and supported one for a Fortune 500 HVAC company." }
+skills: [Facilitation, Strategy, Synthesis]
+contributions:
+  - { skill: "Facilitation", text: "Designed and ran workshops for Glorify, the Busan Design Council, Wipro, and my CIID final project" }
+  - { skill: "Strategy", text: "At Glorify, one workshop became the research agenda for the year" }
+  - { skill: "Synthesis", text: "Turned walls of sticky notes into themes and How Might We questions" }
 facts:
   - { label: "Where", value: "Designit · CIID · Glorify" }
   - { label: "Role", value: "Designer and facilitator" }

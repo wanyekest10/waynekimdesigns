@@ -18,6 +18,12 @@ short:
   - { lead: "The question.", text: "Designit North America had never published a futures point of view, but wanted clients to see it could think long-term. How do you make speculative work credible?" }
   - { lead: "What I did.", text: "Helped design and run a six-step futures process in three weeks, from the history of agriculture to three speculative concepts set in 2122." }
   - { lead: "What happened.", text: "The point of view opened conversations in new client domains, including Los Angeles World Airports, and became an internal tool for future-focused work." }
+skills: [Foresight, Design research, Concept]
+contributions:
+  - { skill: "Design research", text: "Mapped drivers of change, from the history of agriculture to water" }
+  - { skill: "Foresight", text: "Generated the primary direction after the drivers of change ideation" }
+  - { skill: "Concept", text: "Developed the virtual water concept: a score that shows how much water went into a product" }
+  - { skill: "With the team", text: "The six-step process and three concepts set in 2122, with Eli Wood, Karina Hernandez, Renee Yu, and Michelle Shin", shared: true }
 facts:
   - { label: "Company", value: "Designit" }
   - { label: "Role", value: "Design Researcher" }

@@ -25,6 +25,12 @@ short:
   - { lead: "The question.", text: "Technology built to hold attention reinforces habits like doomscrolling. Could a little self-awareness, at the right moment, work as gentle friction?" }
   - { lead: "What I built.", text: "Liv, a wooden speaker with a camera that recognizes four activities and comments like a late-night radio host. I trained the vision model, wrote her personality, and built a live testing interface." }
   - { lead: "What I learned.", text: "In an ambient system, the interpretation is the product. Liv only works when she knows when to stay quiet." }
+skills: [AI prototyping, Interaction design, Prototyping]
+contributions:
+  - { skill: "AI prototyping", text: "Trained the vision model, then coded the machine's logic in Cursor: the state machine that decides what Liv sees and when she speaks" }
+  - { skill: "Interaction design", text: "Wrote Liv's tone and responses, including when she should stay quiet" }
+  - { skill: "Prototyping", text: "Built a live testing interface showing what the camera saw next to what Liv would say" }
+  - { skill: "With the team", text: "Concept and the wooden speaker, with Juan Ignacio Garro and Alec Davis", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Responsibility", value: "Training the vision model · Writing Liv's personality · Building the testing interface" }

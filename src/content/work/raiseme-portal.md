@@ -30,6 +30,12 @@ short:
   - { lead: "The question.", text: "RaiseMe's college portal kept failing its weekly users, with renewals coming up. Why were colleges losing trust, and what would make them renew?" }
   - { lead: "What I did.", text: "Took partner frustration from support tickets to the CEO: Hack Week research, a partner survey, and a case tying reliability to revenue." }
   - { lead: "What happened.", text: "Leadership committed to rebuilding the portal weeks before COVID. That investment was part of how RaiseMe kept 90%+ of projected revenue through the pandemic." }
+skills: [Design research, Strategy, Facilitation]
+contributions:
+  - { skill: "Design research", text: "Ran Hack Week research with data operators, then partner interviews and a survey" }
+  - { skill: "Strategy", text: "Matched what partners said about the portal to what each one paid, and built the case with our Product Manager" }
+  - { skill: "Facilitation", text: "Ran workshops with Sales and Partner Success" }
+  - { skill: "Strategy", text: "Brought the case to the CEO and senior leadership, who committed to rebuilding the portal" }
 facts:
   - { label: "Company", value: "RaiseMe" }
   - { label: "Role", value: "UX Strategist" }

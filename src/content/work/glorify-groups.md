@@ -28,11 +28,11 @@ short:
   - { lead: "The question.", text: "After its Series B, Glorify's leadership was weighing community as the next bet for its 2.5M+ users, and doubted it would work. Should Groups exist at all?" }
   - { lead: "What I did.", text: "Turned their doubts into one testable hypothesis, then ran a 2-week prototype diary study with 82 people in their real small groups." }
   - { lead: "What happened.", text: "Leadership launched Glorify Groups and committed three of four product, design, and engineering pods. By 2025, 1.8M+ people were using it." }
-skills: [Design research, Strategy, Prototype testing, Facilitation]
+skills: [Design research, Strategy, Synthesis, Facilitation]
 contributions:
-  - { skill: "Strategy", text: "Turned leadership's doubts about community into one testable hypothesis" }
-  - { skill: "Design research", text: "Designed and ran a 2-week prototype diary study with 82 people in their real small groups" }
-  - { skill: "Synthesis", text: "Turned findings into design principles with Matt Regan, Lead Designer" }
+  - { skill: "Strategy", text: "Turned leadership's doubts about community into one testable hypothesis, through several leadership workshops" }
+  - { skill: "Design research", text: "Designed and ran a 2-week prototype diary study with 82 people in their real small groups, then follow-up interviews" }
+  - { skill: "Synthesis", text: "Turned the findings into design principles" }
   - { skill: "Facilitation", text: "Presented the findings with Paul Pow, VP of Product, at the leadership offsite" }
   - { skill: "Not mine", text: "The prototype itself was designed and built by the product team", shared: true }
 facts:
