@@ -26,7 +26,7 @@ contributions:
   - { skill: "With the team", text: "Concept and the laser-cut build, with Alec Davis and Chokchey Cappai", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
-  - { label: "Responsibility", value: "Stepper motor and LED code · Block prototyping · Magnetic tiles concept" }
+  - { label: "Role", value: "Stepper motor and LED code · Block prototyping · Magnetic tiles concept" }
   - { label: "Duration", value: "2 weeks, 2025" }
   - { label: "Team", value: "Alec Davis · Chokchey Cappai" }
   - { label: "Faculty", value: "Massimo Banzi · Pierluigi Dalla Rosa · Jose Chavarria" }

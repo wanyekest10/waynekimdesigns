@@ -33,7 +33,7 @@ contributions:
   - { skill: "With the team", text: "Concept and the wooden speaker, with Juan Ignacio Garro and Alec Davis", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
-  - { label: "Responsibility", value: "Training the vision model · Writing Liv's personality · Building the testing interface" }
+  - { label: "Role", value: "Vision model and state machine · Liv's tone and responses · Testing interface" }
   - { label: "Duration", value: "4 days, 2025" }
   - { label: "Team", value: "Juan Ignacio Garro, Alec Davis" }
   - { label: "Faculty", value: "Bjorn Karmann, Matteo Loglio" }

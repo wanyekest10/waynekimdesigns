@@ -25,7 +25,7 @@ contributions:
   - { skill: "With the team", text: "The Unity simulation and the physical handlebar, with Felix Lorsignol, Hun Han, and Sahil Islam", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
-  - { label: "Responsibility", value: "Helmet camera POV" }
+  - { label: "Role", value: "Helmet camera POV and integration" }
   - { label: "Duration", value: "5 days, 2025" }
   - { label: "Team", value: "Felix Lorsignol · Hun Han · Sahil Islam" }
   - { label: "Faculty", value: "David Rose · Ricardo Acosta" }

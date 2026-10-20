@@ -23,10 +23,10 @@ contributions:
   - { skill: "Prototyping", text: "Ported it to the browser so anyone can try it with a beat or their mic" }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
+  - { label: "Role", value: "Designer and developer, solo" }
   - { label: "Course", value: "Introduction to Programming" }
   - { label: "Faculty", value: "Dennis Paul · Jacob Remin" }
   - { label: "Year", value: "2024" }
-  - { label: "Team", value: "Solo" }
   - { label: "Tools", value: "Processing · PeasyCam · Microphone" }
 ---
 
