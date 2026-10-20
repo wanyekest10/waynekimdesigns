@@ -33,9 +33,8 @@ short:
 skills: [Design research, Strategy, Facilitation]
 contributions:
   - { skill: "Design research", text: "Ran Hack Week research with data operators, then partner interviews and a survey" }
-  - { skill: "Strategy", text: "Matched what partners said about the portal to what each one paid, and built the case with our Product Manager" }
+  - { skill: "Strategy", text: "Matched what partners said about the portal to what each one paid, built the case with our Product Manager, and brought it to the CEO and senior leadership" }
   - { skill: "Facilitation", text: "Ran workshops with Sales and Partner Success" }
-  - { skill: "Strategy", text: "Brought the case to the CEO and senior leadership, who committed to rebuilding the portal" }
 facts:
   - { label: "Company", value: "RaiseMe" }
   - { label: "Role", value: "UX Strategist" }
@@ -77,14 +76,6 @@ Colleges paid RaiseMe to reach students early. To use that data, someone at each
 > Data operator, by email
 
 Each issue looked small. Together they were eroding trust, and the people renewing the contracts would eventually hear about it. Before research, I worked in Partner Success with these colleges, so I saw the gap between what partners struggled with and what was on the roadmap.
-
-My part:
-
-<div class="cols3">
-  <div><h4>Find</h4><p>Hack Week research with data operators, then partner interviews and a survey.</p></div>
-  <div><h4>Connect</h4><p>Matched what partners felt to what they paid, and ran workshops with Sales and Partner Success.</p></div>
-  <div><h4>Decide</h4><p>Framed the case with our Product Manager and brought it to the CEO and senior leadership.</p></div>
-</div>
 
 ## Hack Week: the assumption broke
 

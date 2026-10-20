@@ -31,7 +31,7 @@ short:
 skills: [Design research, Strategy, Synthesis, Facilitation]
 contributions:
   - { skill: "Strategy", text: "Turned leadership's doubts about community into one testable hypothesis, through several leadership workshops" }
-  - { skill: "Design research", text: "Designed and ran a 2-week prototype diary study with 82 people in their real small groups, then follow-up interviews" }
+  - { skill: "Design research", text: "Designed and ran a 2-week prototype diary study, recruiting 82 people in their real small groups and keeping them going, then ran follow-up interviews" }
   - { skill: "Synthesis", text: "Turned the findings into design principles" }
   - { skill: "Facilitation", text: "Presented the findings with Paul Pow, VP of Product, at the leadership offsite" }
   - { skill: "Not mine", text: "The prototype itself was designed and built by the product team", shared: true }
@@ -49,16 +49,6 @@ facts:
 Glorify had grown to 2.5M+ users on solo practice: prayer, meditation, daily devotionals. With a board meeting coming after the Series B, the company needed to show where further revenue and growth would come from. Community was on the table. Building it meant committing product pods. Not building it meant passing on the most obvious growth story the company had.
 
 The real question wasn't how to design Groups. It was whether Groups should exist at all.
-
-## What I did
-
-<div class="cols3">
-  <div><h4>Frame</h4><p>Turned leadership's doubts into one testable hypothesis, then designed a study to test it.</p></div>
-  <div><h4>Run</h4><p>Recruited 82 people in real small groups, kept them going for two weeks, then interviewed leaders and members.</p></div>
-  <div><h4>Share</h4><p>Turned findings into design principles with Matt, and presented them with Paul at the leadership offsite.</p></div>
-</div>
-
-I didn't design or build the prototype itself.
 
 ## What changed
 
