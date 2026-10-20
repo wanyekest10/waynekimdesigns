@@ -35,7 +35,7 @@ const toc = headings
       {contrib.length > 0 && (
         <div class="my-role">
           <span class="short-tag">My role and contributions</span>
-          <dl>{contrib.map((r: any) => <div class:list={{ shared: r.shared }}><dt>{r.skill}</dt><dd>{r.text}</dd></div>)}</dl>
+          <dl>{contrib.map((r: any) => <div class:list={{ shared: r.shared, impact: r.impact }}><dt>{r.skill}</dt><dd>{r.text}</dd></div>)}</dl>
         </div>
       )}
     </header>

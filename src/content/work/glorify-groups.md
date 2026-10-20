@@ -27,7 +27,7 @@ jumps:
 short:
   - { lead: "The question.", text: "After its Series B, Glorify's leadership was weighing community as the next bet for its 2.5M+ users, and doubted it would work. Should Groups exist at all?" }
   - { lead: "What I did.", text: "Turned their doubts into one testable hypothesis, then ran a 2-week prototype diary study with 82 people in their real small groups." }
-  - { lead: "What happened.", text: "Leadership launched Glorify Groups and committed three of four product, design, and engineering pods. By 2025, 1.8M+ people were using it." }
+  - { lead: "What happened.", text: "Leadership launched Glorify Groups." }
 skills: [Design research, Strategy, Synthesis, Facilitation]
 contributions:
   - { skill: "Strategy", text: "Turned leadership's doubts about community into one testable hypothesis, through several leadership workshops" }
@@ -35,13 +35,13 @@ contributions:
   - { skill: "Synthesis", text: "Turned the findings into design principles" }
   - { skill: "Facilitation", text: "Presented the findings with Paul Pow, VP of Product, at the leadership offsite" }
   - { skill: "Not mine", text: "The prototype itself was designed and built by the product team", shared: true }
+  - { skill: "Impact", text: "3 of 4 product pods committed to Groups. By 2025: 1.8M+ users, 20% of daily actives", impact: true }
 facts:
   - { label: "Company", value: "Glorify" }
   - { label: "Role", value: "Senior Design Researcher" }
   - { label: "Timeline", value: "6 weeks, Mar to May 2023" }
   - { label: "Team", value: "Paul Pow, VP of Product · Matt Regan, Lead Designer" }
   - { label: "Methods", value: "Prototype diary study, interviews, survey" }
-  - { label: "Outcome", value: "1.8M+ users by 2025 · 20% of daily actives · 3 of 4 pods committed" }
 ---
 
 ## Should Groups exist at all?

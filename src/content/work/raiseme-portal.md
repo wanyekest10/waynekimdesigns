@@ -29,19 +29,19 @@ jumps:
 short:
   - { lead: "The question.", text: "RaiseMe's college portal kept failing its weekly users, with renewals coming up. Why were colleges losing trust, and what would make them renew?" }
   - { lead: "What I did.", text: "Took partner frustration from support tickets to the CEO: Hack Week research, a partner survey, and a case tying reliability to revenue." }
-  - { lead: "What happened.", text: "Leadership committed to rebuilding the portal weeks before COVID. That investment was part of how RaiseMe kept 90%+ of projected revenue through the pandemic." }
+  - { lead: "What happened.", text: "Leadership committed to rebuilding the portal, weeks before COVID." }
 skills: [Design research, Strategy, Facilitation]
 contributions:
   - { skill: "Design research", text: "Ran Hack Week research with data operators, then partner interviews and a survey" }
   - { skill: "Strategy", text: "Matched what partners said about the portal to what each one paid, built the case with our Product Manager, and brought it to the CEO and senior leadership" }
   - { skill: "Facilitation", text: "Ran workshops with Sales and Partner Success" }
+  - { skill: "Impact", text: "The rebuilt portal helped RaiseMe keep 90%+ of projected revenue through the pandemic. Reliability went from 95% to 99%", impact: true }
 facts:
   - { label: "Company", value: "RaiseMe" }
   - { label: "Role", value: "UX Strategist" }
   - { label: "Timeline", value: "Oct 2019 to Jun 2020" }
   - { label: "Team", value: "Partner Success, Product, Sales, Engineering" }
   - { label: "Methods", value: "Interviews, usability tests, survey, journey mapping" }
-  - { label: "Outcome", value: "90%+ of projected revenue kept · Reliability 95% → 99%" }
 ---
 
 ## The impact

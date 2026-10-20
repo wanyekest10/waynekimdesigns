@@ -624,3 +624,4 @@ article .pair-fit img { max-width: none; }
 .my-role dd { margin: 0; font-size: 15px; color: var(--ink); }
 .my-role .shared dt, .my-role .shared dd { color: var(--gray); }
 @media (max-width: 600px) { .my-role dl > div { grid-template-columns: 1fr; gap: 2px; } .my-role dt { font: var(--meta); text-transform: uppercase; letter-spacing: -0.02em; } }
+.my-role .impact dd { font-weight: 500; }
