@@ -22,6 +22,12 @@ short:
   - { lead: "The question.", text: "How do you make an invisible, private, slightly taboo habit visible, without making anyone in the house feel watched?" }
   - { lead: "What I built.", text: "A sleeve inside the roll counts every square. A quiet e-ink screen above the holder turns the total into a climb: 4 ft up, next stop, the Hollywood Sign." }
   - { lead: "What I learned.", text: "In an intimate space, the design is mostly what you leave out. No sessions, no names, no alerts. Just a slow number going up." }
+skills: [Physical computing, Fabrication, Interaction design, Design research]
+contributions:
+  - { skill: "Physical computing", text: "A sleeve with a hall effect sensor that counts every square, on an Arduino" }
+  - { skill: "Fabrication", text: "Modeled the sleeve and screen mount in Fusion 360 and printed them on a Prusa" }
+  - { skill: "Interaction design", text: "Turned the count into an elevator climb past LA landmarks on a quiet e-ink screen" }
+  - { skill: "Design research", text: "Tested it at home and cut everything that felt like being watched: no sessions, names, or alerts" }
 facts:
   - { label: "Project", value: "Personal project" }
   - { label: "Role", value: "Designer and builder, solo" }
