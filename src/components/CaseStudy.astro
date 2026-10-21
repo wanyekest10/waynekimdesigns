@@ -24,19 +24,26 @@ const toc = headings
     <header class="cs-top" id="overview">
       <h1>{d.title}</h1>
       <p class="lead">{d.headline}</p>
-      {beats.length > 0 && (
-        <div class="short">
-          <span class="short-tag">The 30-second version</span>
-          {beats.map((b: any) => <p><strong>{b.lead}</strong> {b.text}</p>)}
-        </div>
-      )}
-      {contrib.length > 0 && (
-        <div class="my-role">
-          <span class="short-tag">My role and contributions</span>
-          <dl>{contrib.map((r: any) => <div class:list={{ shared: r.shared, impact: r.impact }}><dt>{r.skill}</dt><dd>{r.text}</dd></div>)}</dl>
-        </div>
-      )}
     </header>
+
+    {!d.hideHero && (d.heroVideo
+      ? <video class="hero" src={d.heroVideo} poster={d.heroPoster} autoplay muted loop playsinline aria-label={d.heroAlt}></video>
+      : <img class="hero" src={d.hero} alt={d.heroAlt} />)}
+
+    <div class="cs-sum">
+      {beats.length > 0 && (
+          <div class="short">
+            <span class="short-tag">The 30-second version</span>
+            {beats.map((b: any) => <p><strong>{b.lead}</strong> {b.text}</p>)}
+          </div>
+        )}
+        {contrib.length > 0 && (
+          <div class="my-role">
+            <span class="short-tag">My role and contributions</span>
+            <dl>{contrib.map((r: any) => <div class:list={{ shared: r.shared, impact: r.impact }}><dt>{r.skill}</dt><dd>{r.text}</dd></div>)}</dl>
+          </div>
+        )}
+    </div>
 
     <aside class="cs-side">
       {facts.length > 0 && (
@@ -63,9 +70,7 @@ const toc = headings
       </nav>
     )}
 
-    {!d.hideHero && (d.heroVideo
-      ? <video class="hero" src={d.heroVideo} poster={d.heroPoster} autoplay muted loop playsinline aria-label={d.heroAlt}></video>
-      : <img class="hero" src={d.hero} alt={d.heroAlt} />)}
+
 
 
     <div class="cs-body">

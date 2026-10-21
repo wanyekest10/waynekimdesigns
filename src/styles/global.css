@@ -178,12 +178,13 @@ article .tldr .field { max-width: none; border-top-color: rgba(20, 20, 20, 0.08)
   /* Facts and the table of contents share one sidebar that runs the full height,
      so a long facts list never pushes the article down. */
   .cs { display: grid; grid-template-columns: 200px minmax(0, 1fr); column-gap: 56px;
-        grid-template-areas: "side top" "side hero" "side body"; }
+        grid-template-areas: "side top" "side hero" "side sum" "side body"; }
   .cs-top { grid-area: top; }
   .cs-side { grid-area: side; }
   .cs-facts { display: block; margin-top: 68px; }
   .cs-facts > div { margin-bottom: 22px; }
   .hero { grid-area: hero; }
+  .cs-sum { grid-area: sum; }
   .toc-col { display: block; margin-top: 40px; position: sticky; top: 88px; }
   .toc { max-height: calc(100vh - 120px); overflow-y: auto; }
   .cs-body { grid-area: body; }
@@ -623,3 +624,10 @@ article .pair-fit img { max-width: none; }
 .my-role .shared dt, .my-role .shared dd { color: var(--gray); }
 @media (max-width: 600px) { .my-role dl > div { grid-template-columns: 1fr; gap: 2px; } .my-role dt { font: var(--meta); text-transform: uppercase; letter-spacing: -0.02em; } }
 .my-role .impact dd { font-weight: 500; }
+
+/* Hero sits right under the headline; the 30-second version and role table follow it */
+.cs .hero { margin: 36px 0 8px; }
+.cs-sum { min-width: 0; }
+.cs-sum > :first-child { margin-top: 32px; }
+.cs.no-hero .cs-sum > :first-child { margin-top: 32px; }
+@media (max-width: 720px) { .cs .hero { margin: 28px 0 0; } }
