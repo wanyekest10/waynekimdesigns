@@ -169,25 +169,33 @@ const years = [
         });
       };
       // Finder count: one shared number on the server, and a flag in this browser so it only counts once.
-      const ordinal = (n: number) => { const v = n % 100; return n + (['th', 'st', 'nd', 'rd'][(v - 20) % 10] || ['th', 'st', 'nd', 'rd'][v] || 'th'); };
-      const finderText = (n: number) => `Congrats, you're the ${ordinal(n)} person to find this Easter egg :)`;
+      // Show the running total: "You and N others found this Easter egg :)"
+      const finderText = (total: number) => {
+        const others = total - 1;
+        if (others <= 0) return "You're the first to find this Easter egg :)";
+        return `You and ${others.toLocaleString()} ${others === 1 ? 'other person' : 'others'} found this Easter egg :)`;
+      };
       const KEY = 'egg-finder';
       let mine = 0;
       try { mine = parseInt(localStorage.getItem(KEY) || '0', 10) || 0; } catch (e) {}
-      render(mine ? finderText(mine) : (yay?.textContent || ''));
+      let shown = '';
+      const show = (total: number) => { const t = finderText(total); if (t !== shown) { shown = t; render(t); } };
+      if (mine) show(mine); else render(yay?.textContent || '');
       let counting = false;
       const count = async () => {
-        if (mine || counting) return;
+        if (counting) return;
         counting = true;
         try {
-          const r = await fetch('/api/egg', { method: 'POST' });
+          // First find adds one to the total; after that, just read the latest total.
+          const r = await fetch('/api/egg', { method: mine ? 'GET' : 'POST' });
           if (!r.ok) return;
           const { count: n } = await r.json();
           if (!n) return;
-          mine = n;
-          try { localStorage.setItem(KEY, String(n)); } catch (e) {}
-          render(finderText(n)); cheer();
+          const first = !mine;
+          if (first) { mine = n; try { localStorage.setItem(KEY, String(n)); } catch (e) {} }
+          show(Math.max(n, mine)); if (first) cheer();
         } catch (e) { /* offline or local preview: keep the plain note */ }
+        finally { counting = false; }
       };
       const cheer = () => {
         if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
