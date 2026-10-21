@@ -47,6 +47,12 @@ We wanted to be more intentional about our free time at home. The habits we want
 
 <figure class="frame"><video src="/work/living-assets/device-loop.mp4" poster="/work/living-assets/device-loop-poster.jpg" autoplay muted loop playsinline></video></figure>
 
+<figure class="pair">
+  <video src="/work/living-assets/liv-in-action-1.mp4" poster="/work/living-assets/liv-in-action-1-poster.jpg" autoplay muted loop playsinline></video>
+  <video src="/work/living-assets/liv-in-action-2.mp4" poster="/work/living-assets/liv-in-action-2-poster.jpg" autoplay muted loop playsinline></video>
+  <figcaption>Liv in action.</figcaption>
+</figure>
+
 ## Building Liv
 
 Liv is a small wooden enclosure holding an ESP32 camera, a Bluetooth speaker, and a 5V battery. The camera watches the room, a model classifies what you're doing, and Liv answers through the speaker.
@@ -98,18 +104,6 @@ Before we could trust Liv's responses, we needed to see her reasoning. I built a
 
 <figure class="medium"><img src="/work/living-assets/testing-interface.webp" alt="The testing interface: live classification percentages for each activity, with Liv's response below"/></figure>
 
-## Bodystorming: timing beats content
-
-Before building anything, we acted it out. We collapsed on the couch, stretched between tasks, scrolled, and shared space, while one of us narrated the other in real time.
-
-The surprise was that the words mattered less than the timing. Commentary that arrived too early felt like being watched. Too late, and it was pointless. That became the core design problem: deciding when Liv should speak, and when she should hold back.
-
-<figure class="pair">
-  <video src="/work/living-assets/bodystorm-1.mp4" poster="/work/living-assets/bodystorm-1-poster.jpg" autoplay muted loop playsinline></video>
-  <video src="/work/living-assets/bodystorm-2.mp4" poster="/work/living-assets/bodystorm-2-poster.jpg" autoplay muted loop playsinline></video>
-  <figcaption>Bodystorming: narrating each other's everyday moments to feel out timing and tone.</figcaption>
-</figure>
-
 ## When care becomes nagging
 
 Our early prototypes focused on interrupting doomscrolling. User testing showed it just felt like nagging.
@@ -119,12 +113,6 @@ Our early prototypes focused on interrupting doomscrolling. User testing showed 
 > Tester
 
 In Korean, 잔소리 (jansori) describes exactly this: nagging that overwhelms care through repetition. So we expanded Liv's role beyond interruption to positive reinforcement and ambient music. She encourages you when you cook or stretch, plays something fitting, and only sometimes teases you for scrolling. In a future version, people would get more control over when and how she speaks.
-
-<figure class="pair">
-  <video src="/work/living-assets/liv-in-action-1.mp4" poster="/work/living-assets/liv-in-action-1-poster.jpg" autoplay muted loop playsinline></video>
-  <video src="/work/living-assets/liv-in-action-2.mp4" poster="/work/living-assets/liv-in-action-2-poster.jpg" autoplay muted loop playsinline></video>
-  <figcaption>Liv in action.</figcaption>
-</figure>
 
 ## A speculative exploration
 
