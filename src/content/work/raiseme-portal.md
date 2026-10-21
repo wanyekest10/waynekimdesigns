@@ -21,9 +21,9 @@ year: "2019–20"
 featured: false
 label: "Research and service design"
 summary: "Why colleges stopped trusting their portal."
-hero: "/work/raiseme-assets/hero-download-settings.webp"
-hideHero: true
-heroAlt: "The redesigned Download settings screen: a weekly follower report that generates itself every Monday"
+hero: "/work/raiseme-assets/hero-before-after.webp"
+card: "/work/raiseme-assets/hero-download-settings.webp"
+heroAlt: "Before: the old portal showing a red error banner and empty saved groups. After: an Available downloads list with weekly reports that generate themselves."
 jumps:
   - { label: "Skip to breaking assumptions", to: "hack-week-the-assumption-broke" }
 short:
