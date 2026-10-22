@@ -56,11 +56,16 @@ Five paintings, each paired with a passage from his letters to Theo. Pick any of
 
 ## A letter I keep coming back to
 
-My favorite passage isn't about a painting at all. In August 1876, years before he started painting, Vincent visited a friend whose young sister had just died, and wrote to Theo about it afterwards:
+My favorite passage isn't about a painting at all. It's from a letter in August 1876, years before he started painting.
 
-> He and I, we know each other intimately; his work is mine, I know as well as he the people that he knows down here, their lives are as mine. … So then, we walked up and down the platform of the station, an ordinary world, but we were animated by thoughts that were not ordinary. Such moments do not last long, and soon we had to part. From the train the view of London was beautiful, squatting in its gloom, with Saint Paul's and the other churches in the distance.
->
-> Vincent to Theo, Isleworth, 18 August 1876. He was 23.
+<blockquote class="letter">
+<p>My dear Theo,</p>
+<p>Yesterday, I went to see Gladwell, who is home for a few days. A terrible blow has struck them, his young sister, so full of life, with dark eyes and hair, had fallen from a horse at Blackheath; they found her unconscious and she died five hours later, without regaining consciousness. She was seventeen years old…</p>
+<p>They had all just come back from the funeral; the whole household was in mourning.</p>
+<p>…So then, we walked up and down the platform of the station, an ordinary world, but we were animated by thoughts that were not ordinary. Such moments do not last long, and soon we had to part.</p>
+<p>Your loving brother,<br>Vincent</p>
+<p class="cite">Vincent to Theo, Isleworth, 18 August 1876. He was 23.</p>
+</blockquote>
 
 That's what I mean by how he saw the world. It was there before the paintings.
 

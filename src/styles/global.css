@@ -55,6 +55,9 @@ article hr { border: 0; border-top: 1px solid var(--rule); margin: 48px 0; max-w
 article blockquote { border: 1px solid var(--rule); border-radius: 6px; padding: 20px 24px; margin: 20px 0 32px; }
 article blockquote p { color: var(--ink); margin: 0; }
 article blockquote p + p { font: var(--small); color: var(--gray); margin-top: 12px; }
+/* A quoted letter: every paragraph stays in the letter's voice; only the last line is the credit. */
+article blockquote.letter p + p { font: inherit; color: var(--ink); margin-top: 14px; }
+article blockquote.letter p.cite { font: var(--small); color: var(--gray); margin-top: 16px; }
 article img, article video { width: 100%; max-width: var(--measure); margin: 32px 0; border-radius: 6px; }
 article p:has(img), article figure { max-width: var(--measure); }
 /* Opt-in wide moments: pairs, trios, and figure.wide */
