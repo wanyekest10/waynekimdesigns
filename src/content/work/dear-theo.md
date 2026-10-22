@@ -36,7 +36,7 @@ facts:
 
 ## The idea
 
-I started reading *Ever Yours*, the collected letters of Vincent van Gogh, while watching the sunset most evenings. In his letters to his brother Theo, he described the sky all the time, and I kept wondering how he saw the world.
+I started reading *Ever Yours*, Van Gogh's letters to his brother Theo, while watching the sunset most evenings. He described the sky all the time, and I kept wondering how he saw the world.
 
 They say copy the greats. Copying his words out is a way to slow down and read them closely. Here, as you type, one of his paintings is laid down tile by tile.
 
