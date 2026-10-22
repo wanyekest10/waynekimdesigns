@@ -182,7 +182,8 @@ const keys=document.getElementById('keys'), viewBtn=document.getElementById('vie
 let pi=0, current=PAINTINGS[0], lineIdx=0, pos=0, line='', spans=[], typed=0, total=0, done=false;
 let revealShown=0, sat=0.1, boost=0, ready=false, token=0;
 const WORDCH=/[A-Za-zÀ-ÿ'’]/;
-const typable=ch=>/[A-Za-zÀ-ÿ0-9 ']/.test(ch);
+// on phones, punctuation needs a second keyboard, so it fills itself in: you type letters and spaces only
+const typable=ch=>(coarse?/[A-Za-zÀ-ÿ0-9 ]/:/[A-Za-zÀ-ÿ0-9 ']/).test(ch);
 const norm=ch=>ch.normalize('NFD').replace(/[̀-ͯ]/g,'').replace('’',"'").toLowerCase();
 const clean=t=>t.toUpperCase().replace(/[^A-Z]/g,'');
 PAINTINGS.forEach((P,k)=>{ const b=document.createElement('button'); b.type='button'; b.title=P.title; b.setAttribute('aria-label',P.title); const im=document.createElement('img'); im.src=IMG[P.img]; im.alt=''; b.appendChild(im); b.addEventListener('click',()=>{ setPainting(k); focusKeys(); }); stripEl.appendChild(b); });
