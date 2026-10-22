@@ -59,7 +59,7 @@ They say copy the greats. Van Gogh did. In Paris he painted copies of Hiroshige'
 
 Copying was how he learned to see. So here, you copy him. As you type out his words, his way of seeing is laid down tile by tile, each colour word set into the part of the painting it names, until the painting itself appears.
 
-He was prolific. He cared about his craft. He battled his demons and kept going anyway. And through all of it, he noticed things. Reading him at a stage in my life when I'm figuring out what's worth doing, that's what stays with me.
+He was prolific. He cared about his craft. He battled his demons and kept going anyway. And through all of it, he noticed things.
 
 ## How it works
 
