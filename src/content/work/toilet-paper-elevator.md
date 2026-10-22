@@ -8,6 +8,7 @@ year: "2026"
 featured: true
 label: "Physical computing and fabrication"
 summary: "Toilet paper use, measured in landmark heights."
+cardVideo: "/work/tpe-assets/card-loop.mp4"
 hero: "/work/tpe-assets/hero-wall.webp"
 card: "/work/tpe-assets/hero-wall.webp"
 heroVideo: "/work/tpe-assets/how-it-works.mp4"

@@ -8,6 +8,7 @@ year: "2026"
 featured: true
 label: "Physical computing and prototyping"
 summary: "A room that offers a break, not an alarm."
+cardVideo: "/work/room-tone-assets/card-loop.mp4"
 hero: "/work/room-tone-assets/hero.webp"
 heroAlt: "Working at a desk at dusk while a lamp glows on the wall and a disco ball scatters light across the room"
 card: "/work/room-tone-assets/card.webp"

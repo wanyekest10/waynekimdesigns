@@ -8,6 +8,7 @@ year: "2025"
 featured: true
 label: "Physical computing and fabrication"
 summary: "A timekeeper for shared homes, with no alarms."
+cardVideo: "/work/linee-assets/card-loop.mp4"
 hero: "/work/linee-assets/hero.webp"
 heroAlt: "Linee on a wall: a long row of wooden hour blocks numbered 1 to 24"
 card: "/work/linee-assets/card.webp"
