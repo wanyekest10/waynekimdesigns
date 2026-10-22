@@ -55,9 +55,9 @@ facts:
 
 I started reading *Ever Yours*, Van Gogh's letters to his brother Theo. He described the sky all the time, and I kept wondering how he saw the world.
 
-Here, you step into his shoes for a little while. You write out his letters yourself, and one of his paintings comes in as you go, each colour word filling in the part of the picture it names.
-
 They say copy the greats. Van Gogh did. In Paris he painted copies of Hiroshige's woodblock prints, and at the asylum in Saint-Rémy he made twenty-one paintings after Millet. He told Theo it was "not purely and simply copying." He was translating them into colour.
+
+So here, you step into his shoes for a little while. You write out his letters yourself, and one of his paintings comes in as you go, each colour word filling in the part of the picture it names.
 
 He was prolific. He cared about his craft. He battled his demons and kept going anyway. And through all of it, he noticed things.
 
