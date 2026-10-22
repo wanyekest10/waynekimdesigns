@@ -13,14 +13,14 @@ hero: "/work/ever-yours-assets/card.webp"
 heroAlt: "The Bedroom by Van Gogh as a mosaic of small square tiles, with the words violet, yellow, butter and tiles set into the parts they name"
 hideHero: true
 short:
-  - { lead: "The question.", text: "How did Van Gogh see the world? He described the sky, his room, and his paintings to his brother Theo all the time." }
+  - { lead: "The question.", text: "How did Van Gogh see the world? In his letters to his brother Theo, he described the sky, his room, and his paintings all the time." }
   - { lead: "What I built.", text: "A typing piece. You copy out a passage from his letters, and the painting he was writing about is laid down tile by tile, then gives way to the painting itself." }
-  - { lead: "What I learned.", text: "A good-looking mosaic wasn't enough. The words had to do something, and the visitor needed something to do. Copying gave them both." }
+  - { lead: "What I learned.", text: "Copying is a slow way to read. Typing out \"the yellow of fresh butter\" makes you look for it in the painting." }
 skills: [Creative coding, Interaction design, Prototyping]
 contributions:
   - { skill: "Creative coding", text: "Built the mosaic in the browser: each painting sampled into tiles that are laid down in patches as you type" }
   - { skill: "Interaction design", text: "Turned reading into copying: every correct letter places tiles, and each colour word is set into the part of the painting it names" }
-  - { skill: "Prototyping", text: "Went through five versions, from text mosaics to a live sky, before landing on typing" }
+  - { skill: "Prototyping", text: "Built it to run in the browser, so anyone can try it with a keyboard" }
 facts:
   - { label: "Role", value: "Designer and developer, solo" }
   - { label: "Year", value: "2026" }
@@ -30,7 +30,11 @@ facts:
 
 ## The idea
 
-They say copy the greats. But first I wondered how they saw the world. In his letters to his brother Theo, Vincent described the sky all the time. Copying his words out is a way to slow down and read them closely, and here, as you type, the painting he was writing about is laid down tile by tile.
+I started reading *Ever Yours*, the collected letters of Vincent van Gogh, while watching the sunset most evenings. In his letters to his brother Theo, he described the sky all the time, and I kept wondering how he saw the world.
+
+Most of his work was only valued after he died. He kept painting anyway, with passion and almost no recognition in his lifetime. I'm at a point in my own life where I'm exploring what's worth doing, and that stayed with me.
+
+They say copy the greats. Copying his words out is a way to slow down and read them closely. Here, as you type, the painting he was writing about is laid down tile by tile.
 
 ## Try it
 
@@ -49,21 +53,6 @@ They say copy the greats. But first I wondered how they saw the world. In his le
 Each painting starts as a faint grey ghost. The tiles are laid down in patches, the way a mosaic goes down a section at a time, and the colour builds as you go. When you finish a word like "violet," "butter," or "corn," it is set into the mosaic on the spot that matches that colour. At the end, your copy holds for a moment, then the real painting fades in over it, so you see how close the copy got and how much more is in his brushwork.
 
 Six paintings, each with what he wrote about it: The Bedroom, The Starry Night, Wheatfield with Crows, Sunflowers, Café Terrace at Night, and Starry Night Over the Rhône.
-
-## How I got here
-
-It started with a style. I saw posters made of words, where the text forms an image, and wanted to try it with Van Gogh's letters. The first versions looked right but didn't say much.
-
-<figure class="grid3 three">
-  <img src="/work/ever-yours-assets/early-1.webp" alt="The swirl from The Starry Night as bands of word tiles in navy, black and grey on white"/>
-  <img src="/work/ever-yours-assets/early-2.webp" alt="A night sky mosaic with a full moon, stars, a cypress and a lit-up skyline, made of tiny letter tiles"/>
-  <img src="/work/ever-yours-assets/early-3.webp" alt="A teal night sky mosaic with the words aquamarine, sky and water set into it in large tiles"/>
-  <figcaption>Earlier versions: the swirl as word tiles, the real sky over Los Angeles, then the sky over Saint-Rémy coloured in as he names each colour.</figcaption>
-</figure>
-
-The swirl made a nice poster, but the words were just texture. The live sky was more interesting: it followed the real sun, moon and Venus, and picked a passage from his letters to match. But you only watched it. The best moment came when the sky stayed grey until he said "aquamarine." The words finally did something.
-
-What it still needed was something for the visitor to do. Typing his words out gave the piece a verb, and copying is how you learn from the greats anyway.
 
 ## Sources
 
