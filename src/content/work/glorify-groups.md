@@ -23,7 +23,7 @@ hero: "/work/glorify-assets/shipped-screens.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
 jumps:
   - { label: "Skip to the impact", to: "what-changed" }
-  - { label: "Skip to the evidence", to: "how-we-knew" }
+  - { label: "Skip to the evidence", to: "how-we-found-out" }
 short:
   - { lead: "The question.", text: "After its Series B, Glorify's leadership was weighing community as the next bet for its 2.5M+ users, and doubted it would work. Should Groups exist at all?" }
   - { lead: "What I did.", text: "Turned their doubts into one testable hypothesis, then ran a 2-week prototype diary study with 82 people in their real small groups." }
@@ -50,7 +50,7 @@ Glorify had grown to 2.5M+ users on solo practice: prayer, meditation, daily dev
 
 The real question wasn't how to design Groups. It was whether Groups should exist at all.
 
-## How we knew
+## How we found out
 
 The decision rested on evidence gathered in six weeks. Here is where it came from.
 
