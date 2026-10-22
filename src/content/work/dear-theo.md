@@ -1,14 +1,14 @@
 ---
 title: "Dear Theo, Ever Yours"
 slug: dear-theo
-headline: "Step into Van Gogh's shoes for a while. Write out his letters to his brother, and the painting he was describing comes in as you go."
+headline: "Step into Van Gogh's shoes for a while. Write out his letters to his brother, and one of his paintings comes in as you go."
 context: "Personal project, 2026"
 order: 13
 year: "2026"
 featured: false
 listIn: experiments
 label: "Creative coding and interaction design"
-summary: "Write out Van Gogh's letters, and the painting he was describing comes in."
+summary: "Write out Van Gogh's letters, and one of his paintings comes in as you go."
 hero: "/work/dear-theo-assets/card.webp"
 heroAlt: "A passage from Van Gogh's letter is typed out under a blank tile board, and The Starry Night is laid down tile by tile until the real painting fades in"
 heroVideo: "/work/dear-theo-assets/typing.mp4"
@@ -17,7 +17,7 @@ og: "/work/dear-theo-assets/og.jpg"
 ogAlt: "The Starry Night by Van Gogh as a mosaic of small square tiles"
 short:
   - { lead: "The question.", text: "How did Van Gogh see the world? In his letters to his brother Theo, he described the sky, his room, and his paintings all the time." }
-  - { lead: "What I built.", text: "A typing piece that puts you in his shoes for a while. You write out a passage from his letters to Theo, and the painting he was describing comes in tile by tile, each colour word filling in the part it names." }
+  - { lead: "What I built.", text: "A typing piece that puts you in his shoes for a while. You write out a passage from his letters to Theo, and a painting he made around the same time comes in tile by tile, each colour word filling in the part it names." }
 skills: [Creative coding, Interaction design, Prototyping]
 contributions:
   - { skill: "Creative coding", text: "Built the mosaic in the browser: each painting sampled into tiles that are laid down in patches as you type, and each colour word matched to the part of the painting closest to it" }
@@ -57,7 +57,7 @@ I started reading *Ever Yours*, Van Gogh's letters to his brother Theo. He descr
 
 They say copy the greats. Van Gogh did. In Paris he painted copies of Hiroshige's woodblock prints, and at the asylum in Saint-Rémy he made twenty-one paintings after Millet. He told Theo it was "not purely and simply copying." He was translating them into colour.
 
-So here, you step into his shoes for a little while. You write out his letters yourself, and the painting he was describing comes in as you go, each colour word filling in the part of the picture it names.
+So here, you step into his shoes for a little while. You write out his letters yourself, and one of his paintings comes in as you go, each colour word filling in the part of the picture it names.
 
 He was prolific. He cared about his craft. He battled his demons and kept going anyway. And through all of it, he noticed things.
 
