@@ -67,7 +67,7 @@ My favorite passage isn't about a painting at all. It's from a letter in August 
 <p class="cite">Vincent to Theo, Isleworth, 18 August 1876. He was 23.</p>
 </blockquote>
 
-That's what I mean by how he saw the world. It was there before the paintings.
+This was before he was a painter, when he still hoped to become a preacher. In the middle of all of it, he could still notice.
 
 ## Sources
 
