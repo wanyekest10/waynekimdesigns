@@ -17,7 +17,7 @@ const { Content } = p ? await render(p) : { Content: null };
 const d = p?.data;
 ---
 {w ? <CaseStudy w={w} /> : (
-<Base title={`${d.title}, Wayne Kim`} description={d.headline} prompt="Working on something like this?">
+<Base title={`${d.title}, Wayne Kim`} description={d.headline} image={d.og ?? d.hero} imageAlt={d.heroAlt} prompt="Working on something like this?">
   <header class="play-top">
     <a class="toc-back" href="/play/">← Play</a>
     <h1>{d.title}</h1>

@@ -12,6 +12,8 @@ summary: "Type Van Gogh's letters, and his paintings appear tile by tile."
 hero: "/work/ever-yours-assets/card.webp"
 heroAlt: "The Bedroom by Van Gogh as a mosaic of small square tiles, with the words violet, yellow, butter and tiles set into the parts they name"
 hideHero: true
+og: "/work/ever-yours-assets/og.jpg"
+ogAlt: "The Starry Night by Van Gogh as a mosaic of small square tiles"
 short:
   - { lead: "The question.", text: "How did Van Gogh see the world? In his letters to his brother Theo, he described the sky, his room, and his paintings all the time." }
   - { lead: "What I built.", text: "A typing piece. You copy out a passage from his letters, and the painting he was writing about is laid down tile by tile, then gives way to the painting itself." }
@@ -22,7 +24,7 @@ contributions:
   - { skill: "Prototyping", text: "Built it to run in the browser, so anyone can try it with a keyboard" }
 facts:
   - { label: "Role", value: "Designer and developer, solo" }
-  - { label: "Year", value: "2026" }
+  - { label: "Year", value: "2026 · One evening" }
   - { label: "Tools", value: "JavaScript · Canvas" }
   - { label: "Text", value: "Letters of Vincent van Gogh, 1888 to 1890" }
 ---
@@ -49,9 +51,7 @@ They say copy the greats. Copying his words out is a way to slow down and read t
   <div class="step focal"><span class="n">03</span><b>Reveal</b><small>At "Ever yours, Vincent," the mosaic gives way to the painting.</small></div>
 </div>
 
-Each painting starts as a faint grey ghost. The tiles are laid down in patches, the way a mosaic goes down a section at a time, and the colour builds as you go. When you finish a word like "violet," "butter," or "corn," it is set into the mosaic on the spot that matches that colour. At the end, your copy holds for a moment, then the real painting fades in over it, so you see how close the copy got and how much more is in his brushwork.
-
-Six paintings, each with what he wrote about it: The Bedroom, The Starry Night, Wheatfield with Crows, Sunflowers, Café Terrace at Night, and Starry Night Over the Rhône.
+Six paintings, each paired with what he wrote about it. Pick any of them from the row under the picture.
 
 ## Sources
 
