@@ -55,7 +55,7 @@ facts:
 
 I started reading *Ever Yours*, Van Gogh's letters to his brother Theo. He described the sky all the time, and I kept wondering how he saw the world.
 
-They say copy the greats. Van Gogh did. In Paris he painted copies of Hiroshige's woodblock prints<sup class="fn"><a href="#src-1" id="ref-1" aria-label="Source 1">1</a></sup>, and at the asylum in Saint-Rémy he made twenty-one paintings after Millet.<sup class="fn"><a href="#src-2" id="ref-2" aria-label="Source 2">2</a></sup> He told Theo it was "not purely and simply copying."<sup class="fn"><a href="#src-3" id="ref-3" aria-label="Source 3">3</a></sup> He was translating them into color.
+They say copy the greats. Van Gogh did. In Paris he painted copies of <span class="vs" tabindex="0" role="button" aria-expanded="false">Hiroshige's woodblock prints<span class="vs-pop" role="tooltip"><span class="vs-img"><img src="/work/dear-theo-assets/copy-hiroshige.webp" alt="Hiroshige's woodblock print of a plum tree in a garden" loading="lazy"><span class="cap">Hiroshige, 1857</span></span><span class="to" aria-hidden="true">→</span><span class="vs-img"><img src="/work/dear-theo-assets/copy-vangogh-plum.webp" alt="Van Gogh's painted copy of the same plum tree, with a calligraphy border" loading="lazy"><span class="cap">Van Gogh, 1887</span></span></span></span><sup class="fn"><a href="#src-1" id="ref-1" aria-label="Source 1">1</a></sup>, and at the asylum in Saint-Rémy he made <span class="vs" tabindex="0" role="button" aria-expanded="false">twenty-one paintings after Millet<span class="vs-pop" role="tooltip"><span class="vs-img"><img src="/work/dear-theo-assets/copy-millet.webp" alt="Millet's drawing of a child taking her first steps toward her father" loading="lazy"><span class="cap">Millet, c. 1859–66</span></span><span class="to" aria-hidden="true">→</span><span class="vs-img"><img src="/work/dear-theo-assets/copy-vangogh-steps.webp" alt="Van Gogh's painting of the same scene, in color" loading="lazy"><span class="cap">Van Gogh, 1890</span></span></span></span>.<sup class="fn"><a href="#src-2" id="ref-2" aria-label="Source 2">2</a></sup> He told Theo it was "not purely and simply copying."<sup class="fn"><a href="#src-3" id="ref-3" aria-label="Source 3">3</a></sup> He was translating them into color.
 
 So here, you step into his shoes for a little while. You write out his letters yourself, and one of his paintings comes in as you go, each color word filling in the part of the picture it names.
 
@@ -96,4 +96,30 @@ This was before he was a painter, when he still hoped to become a preacher. In t
 <li id="src-3">His <a href="https://www.webexhibits.org/vangogh/letter/20/623.htm">letter to Theo on copying Millet, January 1890</a>. <a href="#ref-3" aria-label="Back to the text">↩</a></li>
 </ol>
 
-Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/), including the [letter from Isleworth, 18 August 1876](https://www.webexhibits.org/vangogh/letter/4/073.htm). Paintings are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
+Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/), including the [letter from Isleworth, 18 August 1876](https://www.webexhibits.org/vangogh/letter/4/073.htm). Paintings and prints are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/); the comparisons above are from the [Van Gogh Museum](https://www.vangoghmuseum.nl/en/collection/s0115V1962), the [Cleveland Museum of Art](https://www.clevelandart.org/art/1962.407) and [The Met](https://www.metmuseum.org/art/collection/search/436526).
+
+<script>
+// Hover (or tap) a phrase to see the original beside Van Gogh's copy. Kept on screen: above the phrase, or below if there's no room.
+(() => {
+  // place each pop on screen: above the phrase if there's room, otherwise below; tap toggles on touch
+  const place = (vs) => {
+    const pop = vs.querySelector('.vs-pop'), r = vs.getBoundingClientRect(), pr = pop.getBoundingClientRect(), m = 16;
+    let left = r.left + r.width / 2 - pr.width / 2; left = Math.max(m, Math.min(left, innerWidth - pr.width - m));
+    let top = r.top - pr.height - 10; if (top < m) top = r.bottom + 10;
+    pop.style.left = left + 'px'; pop.style.top = top + 'px';
+  };
+  const show = (vs, on) => { const pop = vs.querySelector('.vs-pop'); if (on) place(vs); pop.classList.toggle('on', on); vs.classList.toggle('open', on); vs.setAttribute('aria-expanded', on); };
+  const all = [...document.querySelectorAll('.vs')];
+  all.forEach((vs) => {
+    vs.addEventListener('pointerenter', (e) => e.pointerType === 'mouse' && show(vs, true));
+    vs.addEventListener('pointerleave', (e) => e.pointerType === 'mouse' && show(vs, false));
+    vs.addEventListener('focus', () => { vs._f = Date.now(); show(vs, true); });
+    vs.addEventListener('blur', () => show(vs, false));
+    document.addEventListener('pointerdown', (e) => { if (!vs.contains(e.target)) show(vs, false); });
+    vs.addEventListener('click', (e) => { e.preventDefault(); const on = Date.now() - (vs._f || 0) < 400 ? true : !vs.classList.contains('open'); all.forEach((o) => o !== vs && show(o, false)); show(vs, on); });
+    vs.addEventListener('keydown', (e) => { if (e.key === 'Escape') { show(vs, false); vs.blur(); } });
+    vs.querySelectorAll('img').forEach((im) => im.addEventListener('load', () => vs.classList.contains('open') && place(vs)));
+  });
+  addEventListener('scroll', () => all.forEach((vs) => vs.classList.contains('open') && place(vs)), { passive: true });
+})();
+</script>
