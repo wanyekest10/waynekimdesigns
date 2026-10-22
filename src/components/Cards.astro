@@ -1,11 +1,13 @@
 ---
-// Case study cards: title and year on top, then the one-liner, then the skill label.
+// Case study cards: image, then title and year, the one-liner, and the skill label.
 const { items } = Astro.props;
 ---
 <div class="cards">
   {items.map((w) => (
     <a class="card" href={`/${(w.data as any).listIn === 'experiments' ? 'play' : 'work'}/${w.id}/`}>
-      <img src={w.data.card ?? w.data.hero} alt={w.data.cardAlt ?? w.data.heroAlt} loading="lazy" class={w.data.cardFit === 'contain' ? 'contain' : undefined} />
+      <div class="card-img">
+        <img src={w.data.card ?? w.data.hero} alt={w.data.cardAlt ?? w.data.heroAlt} loading="lazy" class={w.data.cardFit === 'contain' ? 'contain' : undefined} />
+      </div>
       <div class="card-text">
         <span class="card-title">{w.data.title}</span>
         <span class="card-year">{w.data.year}</span>
@@ -16,17 +18,20 @@ const { items } = Astro.props;
   ))}
 </div>
 <style>
-  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 24px; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 20px; }
   .card { color: var(--ink); text-decoration: none; display: block; min-width: 0; }
   .card:hover { text-decoration: none; }
-  .card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 6px; background: var(--panel); margin-bottom: 14px; transition: opacity .2s; }
+  .card-img { position: relative; border-radius: 6px; overflow: hidden; margin-bottom: 12px; background: var(--panel); }
+  .card img { display: block; width: 100%; aspect-ratio: 3/2; object-fit: cover; }
   .card img.contain { object-fit: contain; }
-  .card:hover img { opacity: .9; }
   .card:hover .card-title { color: var(--accent); }
   .card-text { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
   .card-title { font: var(--label); font-size: 16px; }
   .card-year { font: var(--meta); color: var(--gray); white-space: nowrap; }
-  .card-label { font: var(--meta); color: var(--gray); margin-top: 6px; }
-  .card-line { font: var(--small); font-size: 14px; color: var(--gray); margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card-label { font: var(--meta); color: var(--gray); margin-top: 5px; }
+  .card-line { font: var(--small); font-size: 14px; line-height: 1.4; color: var(--gray); margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card img { transition: opacity .2s; }
+  .card:hover img { opacity: .9; }
+  @media (max-width: 1000px) { .cards { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
 </style>
