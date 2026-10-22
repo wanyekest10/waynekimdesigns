@@ -1,0 +1,47 @@
+---
+// Preview only (not linked): the Dear Theo case study with the "he copied the greats" hovers added.
+import CaseStudy from '../../components/CaseStudy.astro';
+import { getCollection } from 'astro:content';
+const w = (await getCollection('work')).find((x) => x.id === 'dear-theo');
+---
+<CaseStudy w={w} />
+<script is:inline>
+(() => {
+  const A = '/work/dear-theo-assets/';
+  const pair = (phrase, a, b) =>
+    `<span class="vs" tabindex="0" role="button" aria-expanded="false">${phrase}<span class="vs-pop" role="tooltip">` +
+    `<span class="vs-img"><img src="${A}${a.src}" alt="${a.alt}" loading="lazy"><span class="cap">${a.cap}</span></span>` +
+    `<span class="to" aria-hidden="true">→</span>` +
+    `<span class="vs-img"><img src="${A}${b.src}" alt="${b.alt}" loading="lazy"><span class="cap">${b.cap}</span></span></span></span>`;
+  const p = [...document.querySelectorAll('article p, .cs p')].find((x) => x.textContent.startsWith('They say copy the greats.'));
+  if (!p) return;
+  p.innerHTML = p.innerHTML
+    .replace("Hiroshige’s woodblock prints", pair("Hiroshige’s woodblock prints",
+      { src: 'copy-hiroshige.webp', alt: "Hiroshige's woodblock print of a plum tree in a garden", cap: 'Hiroshige, 1857' },
+      { src: 'copy-vangogh-plum.webp', alt: "Van Gogh's painted copy of the same plum tree", cap: 'Van Gogh, 1887' }))
+    .replace("twenty-one paintings after Millet", pair("twenty-one paintings after Millet",
+      { src: 'copy-millet.webp', alt: "Millet's drawing of a child taking first steps toward her father", cap: 'Millet, c. 1859–66' },
+      { src: 'copy-vangogh-steps.webp', alt: "Van Gogh's painting of the same scene, in color", cap: 'Van Gogh, 1890' }));
+
+  // place each pop on screen: above the phrase if there's room, otherwise below; tap toggles on touch
+  const place = (vs) => {
+    const pop = vs.querySelector('.vs-pop'), r = vs.getBoundingClientRect(), pr = pop.getBoundingClientRect(), m = 16;
+    let left = r.left + r.width / 2 - pr.width / 2; left = Math.max(m, Math.min(left, innerWidth - pr.width - m));
+    let top = r.top - pr.height - 10; if (top < m) top = r.bottom + 10;
+    pop.style.left = left + 'px'; pop.style.top = top + 'px';
+  };
+  const show = (vs, on) => { const pop = vs.querySelector('.vs-pop'); if (on) place(vs); pop.classList.toggle('on', on); vs.classList.toggle('open', on); vs.setAttribute('aria-expanded', on); };
+  const all = [...document.querySelectorAll('.vs')];
+  all.forEach((vs) => {
+    vs.addEventListener('pointerenter', (e) => e.pointerType === 'mouse' && show(vs, true));
+    vs.addEventListener('pointerleave', (e) => e.pointerType === 'mouse' && show(vs, false));
+    vs.addEventListener('focus', () => { vs._f = Date.now(); show(vs, true); });
+    vs.addEventListener('blur', () => show(vs, false));
+    document.addEventListener('pointerdown', (e) => { if (!vs.contains(e.target)) show(vs, false); });
+    vs.addEventListener('click', (e) => { e.preventDefault(); const on = Date.now() - (vs._f || 0) < 400 ? true : !vs.classList.contains('open'); all.forEach((o) => o !== vs && show(o, false)); show(vs, on); });
+    vs.addEventListener('keydown', (e) => { if (e.key === 'Escape') { show(vs, false); vs.blur(); } });
+    vs.querySelectorAll('img').forEach((im) => im.addEventListener('load', () => vs.classList.contains('open') && place(vs)));
+  });
+  addEventListener('scroll', () => all.forEach((vs) => vs.classList.contains('open') && place(vs)), { passive: true });
+})();
+</script>
