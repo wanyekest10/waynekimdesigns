@@ -16,7 +16,23 @@
   .app { height:100%; display:flex; flex-direction:column; gap:10px; padding:0; box-sizing:border-box; }
   .stage { position:relative; flex:1 1 auto; min-height:180px; background:#F0EEE8; border-radius:6px; overflow:hidden; cursor:text; }
   canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
-  #keys { position:absolute; left:0; top:0; width:1px; height:1px; opacity:0; border:0; padding:0; }
+  /* 16px stops iOS from zooming in on focus; parked at the bottom so the browser doesn't scroll to the top of the frame */
+  #keys { position:absolute; left:0; bottom:0; width:1px; height:1px; opacity:0; border:0; padding:0; font-size:16px; }
+  /* colour words picked out in the passage, and the palette they leave behind */
+  .prompt span.hue { color:var(--ink); background:var(--h); box-shadow:none; transition:background .4s; }
+  .palette { display:none; flex-wrap:wrap; gap:6px; min-height:24px; }
+  .passage .palette { display:flex; }
+  .palette span { display:inline-flex; align-items:center; gap:6px; font:400 12px/1 var(--mono); color:var(--gray); padding:4px 8px 4px 4px; border:1px solid var(--rule); border-radius:999px; animation:chip .5s ease-out both; }
+  .palette i { width:14px; height:14px; border-radius:50%; background:var(--h); display:block; }
+  @keyframes chip { from { opacity:0; transform:translateY(4px); } }
+  /* phones, while the keyboard is up: the frame fills what's left of the screen; painting on top, the line you're typing just above the keys */
+  #done { display:none; }
+  .mob .app { gap:6px; padding:8px 12px 6px; }
+  .mob .strip, .mob #who, .mob #stats, .mob #letters, .mob #next, .mob #view, .mob .palette { display:none !important; }
+  .mob .stage { min-height:0; }
+  .mob .prompt { font-size:17px; min-height:0; }
+  .mob .meta { gap:6px 12px; }
+  .mob #done { display:inline-block; }
   .strip { display:flex; gap:8px; overflow-x:auto; flex:0 0 auto; }
   .strip button { padding:0; border:2px solid transparent; border-radius:3px; background:none; line-height:0; opacity:.55; flex:0 0 auto; cursor:pointer; }
   .strip button:hover { opacity:.9; border-color:var(--rule); }
@@ -51,6 +67,7 @@
   <div class="strip" id="strip" role="group" aria-label="Choose a painting"></div>
   <div class="type" id="type">
     <p class="prompt idle" id="prompt" aria-live="polite"></p>
+    <div class="palette" id="palette" aria-label="Colours you've named so far"></div>
     <div class="meta">
       <span class="painting" id="painting"></span>
       <span id="who"></span>
@@ -59,6 +76,7 @@
       <button class="pill" id="letters" aria-pressed="true">Colour notes</button>
       <button class="pill" id="view" hidden>See the mosaic</button>
       <button class="pill" id="next">Next painting</button>
+      <button class="pill" id="done">Done</button>
     </div>
   </div>
 </div>
@@ -83,6 +101,11 @@ const HUE={SUNFLOWERS:'#e3b13a',BOUILLABAISSE:'#d77a33',RED:'#b3322b',GREEN:'#2f
  YELLOW:'#e7bf45',BUTTER:'#edcf63',WOOD:'#d49a3d',BED:'#d49a3d',CHAIRS:'#d6a948',WALLS:'#8f9ac8',FLOOR:'#b8643c',
  STAR:'#f3efd2',COUNTRYSIDE:'#3c5f6a',WINDOW:'#9cb6d6',CORN:'#d6a33b',SKIES:'#22336f',TROUBLED:'#1c2850'};
 const SPELL={};
+// each colour word paints its part of the picture (default). Other versions kept for reference:
+// ?mode=tiles (word spelled in tiles only) | passage (word marked in the line + a palette) | all
+const MODE=new URLSearchParams(location.search).get('mode')||'paint';
+const PASSAGE=MODE==='passage'||MODE==='all', PAINT=MODE==='paint'||MODE==='all';
+if(PASSAGE) document.documentElement.classList.add('passage');
 
 function hex(h){return [1,3,5].map(i=>parseInt(h.slice(i,i+2),16));}
 function mix(a,b,t){return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t];}
@@ -117,7 +140,19 @@ function buildPainting(){
     key.push([nz*0.75+hash(i*0.913+seed)*0.35,i]); }
   key.sort((a,b)=>a[0]-b[0]);
   rank=new Float32Array(cols*rows).fill(1e9); key.forEach(([,i],r)=>rank[i]=r);
+  MASKS.length=0; for(const p of PAINTED) MASKS.push(maskFor(p.w,p.t0));
 }
+
+// ---------- paint: a colour word fills in the part of the picture closest to that colour ----------
+const PAINTED=[], MASKS=[];
+function maskFor(word,t0){
+  const t=hex(HUE[word]), m=new Float32Array(cols*rows), ds=[];
+  for(let i=0;i<cols*rows;i++){ if(!inside[i]) continue; const o=i*3; const d=Math.sqrt((col[o]-t[0])**2+(col[o+1]-t[1])**2+(col[o+2]-t[2])**2); m[i]=d; ds.push(d); }
+  ds.sort((a,b)=>a-b); const thr=Math.min(160,Math.max(60,ds[Math.floor(ds.length*0.14)]||60));
+  for(let i=0;i<cols*rows;i++){ if(!inside[i]){ m[i]=0; continue; } m[i]=Math.min(1,Math.max(0,(1-m[i]/thr)*2.2)); }
+  return {m,t0,rgb:t};
+}
+function paintWord(word,now){ if(PAINTED.some(p=>p.w===word)) return; PAINTED.push({w:word,t0:now}); if(col) MASKS.push(maskFor(word,now)); }
 function resize(){
   const dpr=window.devicePixelRatio||1, w=stage.clientWidth, h=stage.clientHeight;
   H=Math.round(W*h/Math.max(1,w)); scale=w/W; cv.width=Math.round(w*dpr); cv.height=Math.round(h*dpr);
@@ -148,7 +183,8 @@ const keys=document.getElementById('keys'), viewBtn=document.getElementById('vie
 let pi=0, current=PAINTINGS[0], lineIdx=0, pos=0, line='', spans=[], typed=0, total=0, done=false;
 let revealShown=0, sat=0.1, boost=0, ready=false, token=0;
 const WORDCH=/[A-Za-zÀ-ÿ'’]/;
-const typable=ch=>/[A-Za-zÀ-ÿ0-9 ']/.test(ch);
+// on phones, punctuation needs a second keyboard, so it fills itself in: you type letters and spaces only
+const typable=ch=>(coarse?/[A-Za-zÀ-ÿ0-9 ]/:/[A-Za-zÀ-ÿ0-9 ']/).test(ch);
 const norm=ch=>ch.normalize('NFD').replace(/[̀-ͯ]/g,'').replace('’',"'").toLowerCase();
 const clean=t=>t.toUpperCase().replace(/[^A-Z]/g,'');
 PAINTINGS.forEach((P,k)=>{ const b=document.createElement('button'); b.type='button'; b.title=P.title; b.setAttribute('aria-label',P.title); const im=document.createElement('img'); im.src=IMG[P.img]; im.alt=''; b.appendChild(im); b.addEventListener('click',()=>{ setPainting(k); focusKeys(); }); stripEl.appendChild(b); });
@@ -156,6 +192,7 @@ function setPainting(i){
   pi=(i+PAINTINGS.length)%PAINTINGS.length; current=PAINTINGS[pi];
   lineIdx=0; typed=0; done=false; ready=false; painting=0; showPainting=true; viewBtn.hidden=true; viewBtn.textContent='See the mosaic'; token++; revealShown=0; sat=0.1; boost=0;
   for(const L of LABELS) if(!L.out) L.out=performance.now();
+  PAINTED.length=0; MASKS.length=0; paletteEl.textContent='';
   total=current.lines.reduce((s,l)=>s+l.length,0);
   paintingEl.textContent=current.title+', '+current.year; whoEl.textContent='Vincent '+current.who; statsEl.textContent='';
   [...stripEl.children].forEach((b,k)=>b.setAttribute('aria-current',k===pi));
@@ -175,7 +212,7 @@ function key(ch){
   const want=line[pos];
   if(norm(ch)===norm(want)){
     spans[pos].className='ok'; pos++; typed++;
-    if(WORDCH.test(want) && (pos>=line.length || !WORDCH.test(line[pos]))){ const w=clean(wordEndingAt(pos)); if(HUE[w]){ boost=Math.min(0.5,boost+0.14); placeLabel(w,performance.now()); } }
+    if(WORDCH.test(want) && (pos>=line.length || !WORDCH.test(line[pos]))){ const w=clean(wordEndingAt(pos)); if(HUE[w]){ boost=Math.min(0.5,boost+0.14); const now=performance.now(); placeLabel(w,now); if(PASSAGE) pickOut(w,pos); if(PAINT) paintWord(w,now); } }
     autoFill();
     if(pos>=line.length){ if(lineIdx<current.lines.length-1){ lineIdx++; setTimeout(setLine,300); } else finish(); }
     mark();
@@ -183,6 +220,15 @@ function key(ch){
     spans[pos].className='miss'; const p=pos; setTimeout(()=>{ if(spans[p] && spans[p].className==='miss') spans[p].className='cur'; },220);
   }
   promptEl.classList.remove('idle'); document.getElementById('hint').style.opacity=0;
+}
+// passage: the colour word is marked in its own colour, and joins the palette for this painting
+const paletteEl=document.getElementById('palette');
+function pickOut(word,end){
+  const text=wordEndingAt(end), a=end-text.length, c=hex(HUE[word]);
+  for(let i=a;i<end;i++){ spans[i].classList.add('hue'); spans[i].style.setProperty('--h',css(c,0.38)); spans[i].dataset.hue=1; }
+  if([...paletteEl.children].some(s=>s.dataset.w===word)) return;
+  const chip=document.createElement('span'); chip.dataset.w=word; chip.style.setProperty('--h',HUE[word]);
+  chip.innerHTML='<i></i>'; chip.appendChild(document.createTextNode(text.toLowerCase())); paletteEl.appendChild(chip);
 }
 function finish(){
   done=true; typed=total; const tk=token;
@@ -193,7 +239,33 @@ keys.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); ke
 const focusKeys=()=>keys.focus({preventScroll:true});
 stage.addEventListener('click',()=>{ if(ready) viewBtn.click(); else focusKeys(); });
 document.getElementById('type').addEventListener('click',e=>{ if(e.target.tagName!=='BUTTON') focusKeys(); });
-keys.addEventListener('blur',()=>promptEl.classList.add('idle'));
+keys.addEventListener('blur',()=>{ promptEl.classList.add('idle'); typingMode(false); });
+keys.addEventListener('focus',()=>typingMode(true));
+document.getElementById('done').addEventListener('click',()=>keys.blur());
+
+// ---------- phones: while the keyboard is up, take over the screen above it ----------
+// The case study page listens for this message and pins the frame to the visible part of the screen.
+const coarse=matchMedia('(pointer: coarse)').matches, framed=window.parent!==window, vv=window.visualViewport;
+let typingOn=false, offTimer=0;
+function typingMode(on){
+  if(!coarse) return;
+  clearTimeout(offTimer);
+  if(!on){ offTimer=setTimeout(()=>applyTyping(false),250); return; } // a tap on a button blurs for a moment; don't flicker
+  applyTyping(true);
+}
+function applyTyping(on){
+  if(on===typingOn) return; typingOn=on;
+  document.documentElement.classList.toggle('mob',on);
+  if(framed) parent.postMessage({dt:'typing',on},location.origin);
+  else fitAlone();
+}
+function fitAlone(){ // opened on its own, not in the case study: size the page to the visible area
+  const de=document.documentElement;
+  if(typingOn&&vv){ de.style.height=vv.height+'px'; document.body.style.height=vv.height+'px'; window.scrollTo(0,0); }
+  else { de.style.height=''; document.body.style.height=''; }
+}
+if(vv&&!framed){ vv.addEventListener('resize',fitAlone); }
+if(coarse) document.getElementById('hint').textContent='Tap here and start typing';
 document.getElementById('next').addEventListener('click',()=>{ setPainting(pi+1); focusKeys(); });
 viewBtn.addEventListener('click',()=>{ showPainting=!showPainting; viewBtn.textContent=showPainting?'See the mosaic':'See the painting'; focusKeys(); });
 let showNotes=true; const notesBtn=document.getElementById('letters');
@@ -222,8 +294,13 @@ function draw(now){
   for(let i=0;i<cols*rows;i++){
     if(!inside[i]) continue;
     const o=i*3, r=col[o], g=col[o+1], b=col[o+2], L=0.3*r+0.59*g+0.11*b;
-    let c=[L+(r-L)*sat, L+(g-L)*sat, L+(b-L)*sat];
-    const a=Math.max(0,Math.min(1,(revealShown-rank[i])/fade));
+    // a painted word lays its part of the picture down early, in full colour, with a brief glow of that colour
+    let pw=0, glow=0, gc=null;
+    for(const M of MASKS){ const v=M.m[i]; if(!v) continue; const age=now-M.t0, w=v*(reduce?1:Math.min(1,Math.max(0,(age-(1-v)*500)/600))); if(w>pw) pw=w; const gl=v*Math.max(0,1-age/1600); if(gl>glow){ glow=gl; gc=M.rgb; } }
+    const s=sat+(1-sat)*pw;
+    let c=[L+(r-L)*s, L+(g-L)*s, L+(b-L)*s];
+    if(glow>0&&!reduce) c=mix(c,gc,0.35*glow);
+    const a=Math.max(pw,Math.max(0,Math.min(1,(revealShown-rank[i])/fade)));
     if(a<1){ const ghost=mix(PAPER,[L,L,L],0.13); c=mix(ghost,c,a); }
     ctx.fillStyle=css(c); ctx.fillRect((i%cols)*ts,Math.floor(i/cols)*ts,ts,ts);
   }

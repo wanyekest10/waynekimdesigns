@@ -32,7 +32,24 @@ facts:
 
 ## Try it
 
-<figure class="embed live ever"><iframe src="/play/dear-theo-live/" title="Dear Theo, Ever Yours, live: type Van Gogh's words and the painting is laid down as a mosaic" loading="lazy"></iframe><figcaption>Click the picture and start typing. Pick any painting from the row underneath. Works best with a keyboard.</figcaption></figure>
+<figure class="embed live ever"><iframe src="/play/dear-theo-live/" title="Dear Theo, Ever Yours, live: type Van Gogh's words and the painting is laid down as a mosaic" loading="lazy"></iframe><figcaption>Click or tap the picture and start typing. Pick any painting from the row underneath.</figcaption></figure>
+
+<script>
+// Phones: the piece says when the keyboard is up, and the page pins it to the part of the screen still visible.
+(() => {
+  const frame = document.querySelector('figure.ever iframe'); if (!frame) return;
+  const fig = frame.closest('figure'), vv = window.visualViewport;
+  let on = false, keepY = 0;
+  const fit = () => { if (!on) return; frame.style.top = (vv ? vv.offsetTop : 0) + 'px'; frame.style.height = (vv ? vv.height : innerHeight) + 'px'; };
+  const set = v => {
+    if (v === on) return; on = v;
+    if (v) { keepY = scrollY; fig.style.minHeight = fig.offsetHeight + 'px'; frame.classList.add('typing'); document.documentElement.classList.add('dt-typing'); fit(); }
+    else { frame.classList.remove('typing'); frame.style.top = frame.style.height = ''; document.documentElement.classList.remove('dt-typing'); fig.style.minHeight = ''; scrollTo(0, keepY); }
+  };
+  addEventListener('message', e => { if (e.source === frame.contentWindow && e.data && e.data.dt === 'typing') set(!!e.data.on); });
+  if (vv) { vv.addEventListener('resize', fit); vv.addEventListener('scroll', fit); }
+})();
+</script>
 
 ## The idea
 
