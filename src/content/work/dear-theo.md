@@ -62,7 +62,7 @@ My favorite passage isn't about a painting at all. It's from a letter in August 
 <p>My dear Theo,</p>
 <p>Yesterday, I went to see Gladwell, who is home for a few days. A terrible blow has struck them, his young sister, so full of life, with dark eyes and hair, had fallen from a horse at Blackheath; they found her unconscious and she died five hours later, without regaining consciousness. She was seventeen years old…</p>
 <p>They had all just come back from the funeral; the whole household was in mourning.</p>
-<p>…So then, we walked up and down the platform of the station, an ordinary world, but we were animated by thoughts that were not ordinary. Such moments do not last long, and soon we had to part.</p>
+<p>…So then, <em>we walked up and down the platform of the station, an ordinary world, but we were animated by thoughts that were not ordinary.</em> Such moments do not last long, and soon we had to part.</p>
 <p>Your loving brother,<br>Vincent</p>
 <p class="cite">Vincent to Theo, Isleworth, 18 August 1876. He was 23.</p>
 </blockquote>
