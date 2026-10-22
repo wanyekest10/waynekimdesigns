@@ -16,9 +16,9 @@ team:
     role: Engineering Manager
 methods: [Interviews, Workflow observation, Survey, Journey mapping, Workshops]
 tags: [UX research, Service design, B2B]
-order: 4
+order: 7
 year: "2019–20"
-featured: true
+featured: false
 label: "Research and service design"
 summary: "Why colleges stopped trusting their portal."
 hero: "/work/raiseme-assets/hero-before-after.webp"

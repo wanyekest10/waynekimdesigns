@@ -13,7 +13,7 @@ team:
 methods: [Prototype diary study, Interviews]
 tags: [UX research, Strategy, Community]
 reading_time: About 2 minutes
-order: 2
+order: 4
 year: "2023"
 featured: true
 cardFit: contain
