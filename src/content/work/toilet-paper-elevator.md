@@ -3,7 +3,7 @@ title: Toilet Paper Elevator
 slug: toilet-paper-elevator
 headline: "A small e-ink screen above the toilet paper holder that turns a household's toilet paper into an elevator ride past the world's landmarks."
 context: "Personal project, 2026"
-order: 3
+order: 4
 year: "2026"
 featured: true
 label: "Physical computing and fabrication"
