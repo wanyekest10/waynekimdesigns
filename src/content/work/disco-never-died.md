@@ -8,6 +8,7 @@ year: "2024"
 featured: true
 label: "Creative coding and VJing"
 summary: "A code-made disco ball that pulses with sound."
+card: "/work/disco-assets/card-still.webp"
 cardVideo: "/work/disco-assets/card-loop.mp4"
 hero: "/work/disco-assets/card.webp"
 heroAlt: "A silver disco ball floating over layered red, yellow, and blue grids of tiny squares"
