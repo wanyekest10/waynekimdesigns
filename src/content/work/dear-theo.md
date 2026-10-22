@@ -36,11 +36,13 @@ facts:
 
 ## The idea
 
-I started reading *Ever Yours*, Van Gogh's letters to his brother Theo, while watching the sunset most evenings. He described the sky all the time, and I kept wondering how he saw the world.
+I started reading *Ever Yours*, Van Gogh's letters to his brother Theo. He described the sky all the time, and I kept wondering how he saw the world.
 
-They say copy the greats. Copying his words out is a way to slow down and read them closely. Here, as you type, one of his paintings is laid down tile by tile.
+They say copy the greats. Van Gogh did. In Paris he painted copies of Hiroshige's woodblock prints, and at the asylum in Saint-Rémy he made twenty-one paintings after Millet. He told Theo it was "not purely and simply copying." He was translating them into colour.
 
-Most of his work was only valued after he died. He kept painting anyway, with passion and almost no recognition in his lifetime. I'm at a stage in my own life where I'm exploring what's worth doing and trying different experiments, and that stayed with me.
+Copying was how he learned to see. So here, you copy him. As you type out his words, his way of seeing is laid down tile by tile, each colour word set into the part of the painting it names, until the painting itself appears.
+
+He was prolific. He cared about his craft. He battled his demons and kept going anyway. And through all of it, he noticed things. Reading him at a stage in my life when I'm figuring out what's worth doing, that's what stays with me.
 
 ## How it works
 
@@ -71,4 +73,4 @@ This was before he was a painter, when he still hoped to become a preacher. In t
 
 ## Sources
 
-Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/), including the [letter from Isleworth, 18 August 1876](https://www.webexhibits.org/vangogh/letter/4/073.htm). Paintings are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
+Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/), including the [letter from Isleworth, 18 August 1876](https://www.webexhibits.org/vangogh/letter/4/073.htm) and his [letter on copying Millet, January 1890](https://www.webexhibits.org/vangogh/letter/20/623.htm). On his copies after Hiroshige, the [Van Gogh Museum](https://www.vangoghmuseum.nl/en/japanese-prints/person/33202); after Millet, [The Met](https://www.metmuseum.org/art/collection/search/436526). Paintings are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
