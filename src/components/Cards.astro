@@ -29,7 +29,7 @@ const { items } = Astro.props;
   .card-title { font: var(--label); font-size: 16px; }
   .card-year { font: var(--meta); color: var(--gray); white-space: nowrap; }
   .card-label { font: var(--meta); color: var(--gray); margin-top: 5px; }
-  .card-line { font: var(--small); font-size: 14px; line-height: 1.4; color: var(--gray); margin-top: 3px; }
+  .card-line { font: var(--small); font-size: 14px; line-height: 1.4; color: var(--gray); margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .card img { transition: opacity .2s; }
   .card:hover img { opacity: .9; }
   @media (max-width: 1000px) { .cards { grid-template-columns: 1fr 1fr; } }
