@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Dear Theo test page</title>
+<style>
+  @font-face { font-family: 'Instrument Sans'; src: url('/fonts/instrument-sans-latin-400-normal.woff2') format('woff2'); font-weight: 400; }
+  @font-face { font-family: 'Instrument Sans'; src: url('/fonts/instrument-sans-latin-500-normal.woff2') format('woff2'); font-weight: 500; }
+  @font-face { font-family: 'Geist Mono'; src: url('/fonts/geist-mono-latin-400-normal.woff2') format('woff2'); font-weight: 400; }
+  :root { --ink:#141414; --gray:#6E6E6B; --rule:#E6E6E3; --accent:#002BBA; color-scheme: light; }
+  body { margin:0; background:#fff; color:var(--ink); font:400 17px/1.55 "Instrument Sans", system-ui, sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:32px 16px 120px; }
+  .tag { font:400 12px/1.4 "Geist Mono", ui-monospace, monospace; color:var(--gray); text-transform:uppercase; letter-spacing:.04em; }
+  h1 { font-weight:500; font-size:28px; line-height:1.2; margin:6px 0 12px; }
+  p { margin:0 0 16px; max-width:640px; }
+  .modes { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 8px; }
+  .modes a { font:500 14px/1.4 "Instrument Sans", sans-serif; text-decoration:none; color:var(--ink); border:1px solid var(--rule); border-radius:999px; padding:7px 14px; }
+  .modes a[aria-current="true"] { background:var(--ink); border-color:var(--ink); color:#fff; }
+  .note { font-size:15px; color:var(--gray); min-height:3em; }
+  figure { margin:16px 0 0; }
+  figure iframe { display:block; width:100%; aspect-ratio:1/1; border:0; background:#fff; }
+  @media (max-width:640px) { figure iframe { aspect-ratio:3/5; } }
+  figcaption { font-size:14px; color:var(--gray); margin-top:10px; }
+  .filler { margin-top:40px; color:var(--gray); }
+
+  /* Phone typing mode: the frame is pinned to the part of the screen above the keyboard. */
+  figure iframe.typing { position:fixed; left:0; width:100vw; aspect-ratio:auto; z-index:1000; }
+  html.dt-typing, html.dt-typing body { overflow:hidden; overscroll-behavior:none; }
+</style>
+</head>
+<body>
+<main>
+  <div class="tag">Test page · not linked from the site</div>
+  <h1>Dear Theo, Ever Yours</h1>
+  <p>Two things to try here. On a phone: tap the picture and type. The painting and the line you're typing should both stay in view above the keyboard. Tap Done or close the keyboard to go back.</p>
+  <p>And the colour words, in three versions. Type the first line of The Bedroom ("pale violet", "red tiles") to see the difference.</p>
+
+  <nav class="modes" id="modes" aria-label="Colour word version">
+    <a href="?mode=tiles" data-mode="tiles">As live</a>
+    <a href="?mode=passage" data-mode="passage">A · In the passage</a>
+    <a href="?mode=paint" data-mode="paint">B · Paints its part</a>
+    <a href="?mode=all" data-mode="all">A + B</a>
+  </nav>
+  <p class="note" id="note"></p>
+
+  <figure class="embed live ever">
+    <iframe id="frame" title="Dear Theo, Ever Yours, test version"></iframe>
+    <figcaption>Click the picture and start typing. Pick any painting from the row underneath.</figcaption>
+  </figure>
+
+  <p class="filler">(The rest of the case study would be down here. This space is so you can check the page doesn't jump around when the keyboard opens and closes.)</p>
+  <p class="filler">How it works · A letter I keep coming back to · Sources</p>
+</main>
+<script>
+(() => {
+  const NOTES = {
+    tiles: "What's live now: a colour word is spelled out in tiles on the matching part of the painting.",
+    passage: "A: the colour word is marked in its own colour in the line you're typing, and collects in a small palette under it. By the end you have his palette for that painting, in his words.",
+    paint: "B: when you finish a colour word, the part of the painting closest to that colour fills in right away, in full colour, spreading out from the strongest match. \"Violet\" lays down the walls.",
+    all: "A and B together."
+  };
+  const mode = new URLSearchParams(location.search).get('mode') || 'tiles';
+  const frame = document.getElementById('frame');
+  frame.src = '/play/dear-theo-live-test/?mode=' + encodeURIComponent(mode);
+  document.getElementById('note').textContent = NOTES[mode] || NOTES.tiles;
+  document.querySelectorAll('#modes a').forEach(a => a.setAttribute('aria-current', a.dataset.mode === mode));
+
+  // Phone typing mode, page side: the piece says when the keyboard is up; pin the frame to what's visible.
+  const fig = frame.closest('figure'), vv = window.visualViewport;
+  let on = false, keepY = 0;
+  function fit() {
+    if (!on) return;
+    frame.style.top = (vv ? vv.offsetTop : 0) + 'px';
+    frame.style.height = (vv ? vv.height : innerHeight) + 'px';
+  }
+  function set(v) {
+    if (v === on) return; on = v;
+    if (v) {
+      keepY = scrollY;
+      fig.style.minHeight = fig.offsetHeight + 'px';   // hold the frame's place so the page doesn't reflow
+      frame.classList.add('typing'); document.documentElement.classList.add('dt-typing'); fit();
+    } else {
+      frame.classList.remove('typing'); frame.style.top = frame.style.height = '';
+      document.documentElement.classList.remove('dt-typing'); fig.style.minHeight = '';
+      scrollTo(0, keepY);
+    }
+  }
+  addEventListener('message', e => {
+    if (e.source !== frame.contentWindow || !e.data || e.data.dt !== 'typing') return;
+    set(!!e.data.on);
+  });
+  if (vv) { vv.addEventListener('resize', fit); vv.addEventListener('scroll', fit); }
+})();
+</script>
+</body>
+</html>
