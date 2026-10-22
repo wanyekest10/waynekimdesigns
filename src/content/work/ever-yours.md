@@ -10,8 +10,9 @@ listIn: experiments
 label: "Creative coding and interaction design"
 summary: "Type Van Gogh's letters, and his paintings appear tile by tile."
 hero: "/work/ever-yours-assets/card.webp"
-heroAlt: "The Bedroom by Van Gogh as a mosaic of small square tiles, with the words violet, yellow, butter and tiles set into the parts they name"
-hideHero: true
+heroAlt: "A passage from Van Gogh's letter is typed out under a blank tile board, and The Starry Night is laid down tile by tile until the real painting fades in"
+heroVideo: "/work/ever-yours-assets/typing.mp4"
+heroPoster: "/work/ever-yours-assets/typing-poster.jpg"
 og: "/work/ever-yours-assets/og.jpg"
 ogAlt: "The Starry Night by Van Gogh as a mosaic of small square tiles"
 short:
