@@ -17,11 +17,11 @@ og: "/work/dear-theo-assets/og.jpg"
 ogAlt: "The Starry Night by Van Gogh as a mosaic of small square tiles"
 short:
   - { lead: "The question.", text: "How did Van Gogh see the world? In his letters to his brother Theo, he described the sky, his room, and his paintings all the time." }
-  - { lead: "What I built.", text: "A typing piece that puts you in his shoes for a while. You write out a passage from his letters to Theo, and a painting he made around the same time comes in tile by tile, each colour word filling in the part it names." }
+  - { lead: "What I built.", text: "A typing piece that puts you in his shoes for a while. You write out a passage from his letters to Theo, and a painting he made around the same time comes in tile by tile, each color word filling in the part it names." }
 skills: [Creative coding, Interaction design, Prototyping]
 contributions:
-  - { skill: "Creative coding", text: "Built the mosaic in the browser: each painting sampled into tiles that are laid down in patches as you type, and each colour word matched to the part of the painting closest to it" }
-  - { skill: "Interaction design", text: "Turned reading his letters into writing them: every correct letter places tiles, and each colour word fills in the part of the painting it names" }
+  - { skill: "Creative coding", text: "Built the mosaic in the browser: each painting sampled into tiles that are laid down in patches as you type, and each color word matched to the part of the painting closest to it" }
+  - { skill: "Interaction design", text: "Turned reading his letters into writing them: every correct letter places tiles, and each color word fills in the part of the painting it names" }
   - { skill: "Prototyping", text: "Built it to run in the browser on a laptop or a phone, with punctuation filled in for you on a phone keyboard" }
 facts:
   - { label: "Role", value: "Designer and developer, solo" }
@@ -55,9 +55,9 @@ facts:
 
 I started reading *Ever Yours*, Van Gogh's letters to his brother Theo. He described the sky all the time, and I kept wondering how he saw the world.
 
-They say copy the greats. Van Gogh did. In Paris he painted copies of Hiroshige's woodblock prints, and at the asylum in Saint-Rémy he made twenty-one paintings after Millet. He told Theo it was "not purely and simply copying." He was translating them into colour.
+They say copy the greats. Van Gogh did. In Paris he painted copies of Hiroshige's woodblock prints, and at the asylum in Saint-Rémy he made twenty-one paintings after Millet. He told Theo it was "not purely and simply copying." He was translating them into color.
 
-So here, you step into his shoes for a little while. You write out his letters yourself, and one of his paintings comes in as you go, each colour word filling in the part of the picture it names.
+So here, you step into his shoes for a little while. You write out his letters yourself, and one of his paintings comes in as you go, each color word filling in the part of the picture it names.
 
 He was prolific. He cared about his craft. He battled his demons and kept going anyway. And through all of it, he noticed things.
 
@@ -66,7 +66,7 @@ He was prolific. He cared about his craft. He battled his demons and kept going 
 <div class="flow" role="list" aria-label="How typing becomes a painting">
   <div class="step"><span class="n">01</span><b>Type</b><small>Write out a passage from one of his letters.</small></div>
   <span class="to" aria-hidden="true">→</span>
-  <div class="step"><span class="n">02</span><b>Lay</b><small>Every correct letter lays down more tiles. Colour words fill in the part of the painting they name.</small></div>
+  <div class="step"><span class="n">02</span><b>Lay</b><small>Every correct letter lays down more tiles. Color words fill in the part of the painting they name.</small></div>
   <span class="to" aria-hidden="true">→</span>
   <div class="step focal"><span class="n">03</span><b>Reveal</b><small>At "Ever yours, Vincent," the mosaic gives way to the painting.</small></div>
 </div>
