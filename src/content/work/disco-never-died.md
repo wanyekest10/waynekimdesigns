@@ -7,7 +7,7 @@ order: 2
 year: "2024"
 featured: true
 label: "Creative coding and VJing"
-summary: "A code-made disco ball that pulses with sound."
+summary: "A disco ball made of code and sound."
 card: "/work/disco-assets/card-still.webp"
 cardVideo: "/work/disco-assets/card-loop.mp4"
 hero: "/work/disco-assets/card.webp"
