@@ -1,7 +1,7 @@
 ---
 title: "Dear Theo, Ever Yours"
 slug: dear-theo
-headline: "Copy out what Van Gogh was writing to his brother while he painted, and the painting builds up as you go."
+headline: "Copy out Van Gogh's letters to his brother to see the world the way he did. A painting builds up as you go."
 context: "Personal project, 2026"
 order: 13
 year: "2026"
@@ -17,7 +17,7 @@ og: "/work/dear-theo-assets/og.jpg"
 ogAlt: "The Starry Night by Van Gogh as a mosaic of small square tiles"
 short:
   - { lead: "The question.", text: "How did Van Gogh see the world? In his letters to his brother Theo, he described the sky, his room, and his paintings all the time." }
-  - { lead: "What I built.", text: "A typing piece. You copy out a passage he wrote to Theo while he was painting, and the painting is laid down tile by tile, then gives way to the painting itself." }
+  - { lead: "What I built.", text: "A typing piece. You copy out a passage from his letters to Theo, and one of his paintings is laid down tile by tile, then gives way to the painting itself." }
 skills: [Creative coding, Interaction design, Prototyping]
 contributions:
   - { skill: "Creative coding", text: "Built the mosaic in the browser: each painting sampled into tiles that are laid down in patches as you type" }
@@ -52,7 +52,7 @@ They say copy the greats. Copying his words out is a way to slow down and read t
   <div class="step focal"><span class="n">03</span><b>Reveal</b><small>At "Ever yours, Vincent," the mosaic gives way to the painting.</small></div>
 </div>
 
-Five paintings, each paired with what he was writing to Theo at the time. Pick any of them from the row under the picture.
+Five paintings, each paired with a passage from his letters to Theo. Pick any of them from the row under the picture.
 
 ## Sources
 
