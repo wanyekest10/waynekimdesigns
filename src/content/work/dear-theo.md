@@ -38,7 +38,7 @@ facts:
 
 I started reading *Ever Yours*, the collected letters of Vincent van Gogh, while watching the sunset most evenings. In his letters to his brother Theo, he described the sky all the time, and I kept wondering how he saw the world.
 
-Most of his work was only valued after he died. He kept painting anyway, with passion and almost no recognition in his lifetime. I'm at a point in my own life where I'm exploring what's worth doing, and that stayed with me.
+Most of his work was only valued after he died. He kept painting anyway, with passion and almost no recognition in his lifetime. I'm at a stage in my own life where I'm exploring what's worth doing and trying different experiments, and that stayed with me.
 
 They say copy the greats. Copying his words out is a way to slow down and read them closely. Here, as you type, the painting he was writing about is laid down tile by tile.
 
