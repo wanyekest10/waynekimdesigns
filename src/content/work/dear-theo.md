@@ -59,8 +59,6 @@ They say copy the greats. Van Gogh did. In Paris he painted copies of Hiroshige'
 
 So here, you step into his shoes for a little while. You write out his letters yourself, and one of his paintings comes in as you go, each color word filling in the part of the picture it names.
 
-He was prolific. He cared about his craft. He battled his demons and kept going anyway. And through all of it, he noticed things.
-
 Writing out his letters slowed me down enough to notice what he noticed, and the more I noticed how he noticed, the more his paintings meant to me. It's a way of paying attention to someone else's attention.
 
 ## How it works
