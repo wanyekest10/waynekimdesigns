@@ -7,7 +7,7 @@
 export const experiments = [
   { name: 'Mirrored Canvas', sub: 'Computer vision and play design', home: true, line: 'A mirror that turns silly faces into projected visuals.', year: '2024', href: '/play/mirrored-canvas/', image: '/work/mirrored-canvas-assets/hero.webp' },
   { name: 'Dear Theo, Ever Yours', home: true, sub: 'Creative coding and interaction design', line: 'A Van Gogh painting that appears as you write out his letters.', year: '2026', href: '/play/dear-theo/', try: '/play/dear-theo/#try-it', image: '/work/dear-theo-assets/card.webp', preview: '/work/dear-theo-assets/preview.mp4' },
-  { name: 'Tamer Kebap Eating Club', sub: 'Graphic design and printing', line: 'A thank-you shirt for the kebab shop that fed our class.', year: '2026', href: '/play/tamer-kebap/', image: '/experiments/tamer-kebap-assets/shirts.webp' },
+  { name: 'Tamer Kebap Eating Club', sub: 'Graphic design and printing', home: true, line: 'A thank-you shirt for the kebab shop that fed our class.', year: '2026', href: '/play/tamer-kebap/', image: '/experiments/tamer-kebap-assets/shirts.webp' },
   { name: 'Larvae Lagoon', sub: 'Research and biomimicry', line: 'A dragonfly habitat for a valley between droughts and floods.', year: '2024', href: '/play/larvae-lagoon/', image: '/work/larvae-assets/hero.webp' },
   { name: 'Mosaic of Memories', sub: 'Installation and participatory design', line: 'Small kindnesses from strangers, as objects you can add to.', year: '2024', href: '/play/mosaic-of-memories/', image: '/experiments/mosaic-assets/card.webp' },
   { name: 'A Serious Fan', sub: 'Physical computing and prototyping', line: 'A fan that cools you down only when you keep your word.', year: '2025', href: '/play/a-serious-fan/', image: '/work/fan-assets/hero.webp' },
