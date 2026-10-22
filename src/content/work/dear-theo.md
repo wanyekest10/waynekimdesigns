@@ -47,6 +47,12 @@ facts:
     else { frame.classList.remove('typing'); frame.style.top = frame.style.height = ''; document.documentElement.classList.remove('dt-typing'); fig.style.minHeight = ''; scrollTo(0, keepY); }
   };
   addEventListener('message', e => { if (e.source === frame.contentWindow && e.data && e.data.dt === 'typing') set(!!e.data.on); });
+  // Desktop: when you click in to type, bring the whole piece into view (painting and the line you're typing)
+  addEventListener('message', e => {
+    if (e.source !== frame.contentWindow || !e.data || e.data.dt !== 'focus') return;
+    const r = frame.getBoundingClientRect();
+    if (r.top < 70 || r.bottom > innerHeight) window.scrollBy({ top: r.top - Math.max(70, (innerHeight - r.height) / 2), behavior: 'smooth' });
+  });
   if (vv) { vv.addEventListener('resize', fit); vv.addEventListener('scroll', fit); }
 })();
 </script>

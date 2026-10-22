@@ -244,7 +244,7 @@ const focusKeys=()=>keys.focus({preventScroll:true});
 stage.addEventListener('click',()=>{ if(ready) viewBtn.click(); else focusKeys(); });
 document.getElementById('type').addEventListener('click',e=>{ if(e.target.tagName!=='BUTTON') focusKeys(); });
 keys.addEventListener('blur',()=>{ promptEl.classList.add('idle'); typingMode(false); });
-keys.addEventListener('focus',()=>typingMode(true));
+keys.addEventListener('focus',()=>{ typingMode(true); if(!coarse && window.parent!==window) parent.postMessage({dt:'focus'},location.origin); });
 document.getElementById('done').addEventListener('click',()=>keys.blur());
 
 // ---------- phones: while the keyboard is up, take over the screen above it ----------

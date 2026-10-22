@@ -518,6 +518,8 @@ article figure.embed.live iframe { background: #140a07; }
 /* Dear Theo, Ever Yours: the typing piece needs room for the passage under the picture. */
 article figure.embed.live.ever iframe { aspect-ratio: 1/1; background: #fff; border-radius: 0; }
 @media (max-width: 640px) { article figure.embed.live.ever iframe { aspect-ratio: 3/5; } }
+/* Desktop: never taller than the screen (minus the sticky nav), so the painting and the line you're typing are both in view. */
+@media (min-width: 641px) { article figure.embed.live.ever iframe { max-height: calc(100vh - 150px); min-height: 520px; } }
 /* Phones, while typing: the piece is pinned to the part of the screen above the keyboard (see the script in dear-theo.md). */
 article figure.embed.live.ever iframe.typing { position: fixed; left: 0; width: 100vw; max-width: none; aspect-ratio: auto; margin: 0; z-index: 1000; }
 html.dt-typing, html.dt-typing body { overflow: hidden; overscroll-behavior: none; }
