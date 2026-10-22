@@ -3,14 +3,15 @@ title: room_tone
 slug: room-tone
 headline: "A room that notices when I've been working too long and offers a way out, with light, motion, and music instead of an alarm."
 context: "Personal project, 2026"
-order: 5
+order: 3
 year: "2026"
 featured: true
 label: "Physical computing and prototyping"
 summary: "A room that offers a break, not an alarm."
+cardVideo: "/work/room-tone-assets/card-loop.mp4"
 hero: "/work/room-tone-assets/hero.webp"
 heroAlt: "Working at a desk at dusk while a lamp glows on the wall and a disco ball scatters light across the room"
-card: "/work/room-tone-assets/card.webp"
+card: "/work/room-tone-assets/card-still.webp"
 cardAlt: "Wayne at his desk looking up at a spinning disco ball, light glowing around the window, a terminal reading room_tone: 90 minutes, activating"
 heroVideo: "/work/room-tone-assets/showcase.mp4"
 heroPoster: "/work/room-tone-assets/showcase-poster.jpg"

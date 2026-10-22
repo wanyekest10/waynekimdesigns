@@ -3,13 +3,14 @@ title: Toilet Paper Elevator
 slug: toilet-paper-elevator
 headline: "A small e-ink screen above the toilet paper holder that turns a household's toilet paper into an elevator ride past the world's landmarks."
 context: "Personal project, 2026"
-order: 3
+order: 4
 year: "2026"
 featured: true
 label: "Physical computing and fabrication"
 summary: "Toilet paper use, measured in landmark heights."
+cardVideo: "/work/tpe-assets/card-loop.mp4"
 hero: "/work/tpe-assets/hero-wall.webp"
-card: "/work/tpe-assets/hero-wall.webp"
+card: "/work/tpe-assets/card-still.webp"
 heroVideo: "/work/tpe-assets/how-it-works.mp4"
 heroPoster: "/work/tpe-assets/how-it-works-poster.jpg"
 heroAlt: "A new roll goes on, the e-ink screen climbs from 4 ft to 44 ft, then arrives at the Hollywood Sign and moves on past the Statue of Liberty and the Eiffel Tower"
