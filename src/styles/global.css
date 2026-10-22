@@ -656,3 +656,14 @@ article .pair-fit img { max-width: none; }
 .vs-pop .to { align-self: center; color: var(--faint, #B4B4AF); font: 400 18px/1 var(--sans, sans-serif); margin-top: -18px; }
 @media (max-width: 640px) { .vs-pop { gap: 8px; padding: 10px; } .vs-pop img, article .vs-pop img { height: auto; width: 100%; } .vs-pop .vs-img { flex: 1 1 0; } .vs-pop .cap { white-space: normal; } }
 @media (prefers-reduced-motion: reduce) { .vs-pop, .vs-pop.on { transition: none; transform: none; } }
+
+/* Footnotes: a small number in the text, a numbered source under Sources, and a way back. */
+sup.fn { font: 400 11px/0 var(--mono); vertical-align: super; margin-left: 1px; }
+sup.fn a { color: var(--accent); text-decoration: none; padding: 0 1px; }
+sup.fn a:hover { text-decoration: underline; }
+article ol.refs { list-style: decimal; padding-left: 1.4em; margin: 0 0 20px; }
+article ol.refs li { margin-bottom: 6px; }
+article ol.refs li::marker { font: var(--meta); color: var(--gray); }
+article ol.refs li:target { background: #EEF1FB; border-radius: 3px; }
+article ol.refs a[href^="#ref"] { text-decoration: none; color: var(--gray); }
+[id^="ref-"], [id^="src-"] { scroll-margin-top: 96px; }

@@ -55,7 +55,7 @@ facts:
 
 I started reading *Ever Yours*, Van Gogh's letters to his brother Theo. He described the sky all the time, and I kept wondering how he saw the world.
 
-They say copy the greats. Van Gogh did. In Paris he painted copies of Hiroshige's woodblock prints, and at the asylum in Saint-Rémy he made twenty-one paintings after Millet. He told Theo it was "not purely and simply copying." He was translating them into color.
+They say copy the greats. Van Gogh did. In Paris he painted copies of Hiroshige's woodblock prints<sup class="fn"><a href="#src-1" id="ref-1" aria-label="Source 1">1</a></sup>, and at the asylum in Saint-Rémy he made twenty-one paintings after Millet.<sup class="fn"><a href="#src-2" id="ref-2" aria-label="Source 2">2</a></sup> He told Theo it was "not purely and simply copying."<sup class="fn"><a href="#src-3" id="ref-3" aria-label="Source 3">3</a></sup> He was translating them into color.
 
 So here, you step into his shoes for a little while. You write out his letters yourself, and one of his paintings comes in as you go, each color word filling in the part of the picture it names.
 
@@ -90,4 +90,10 @@ This was before he was a painter, when he still hoped to become a preacher. In t
 
 ## Sources
 
-Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/), including the [letter from Isleworth, 18 August 1876](https://www.webexhibits.org/vangogh/letter/4/073.htm) and his [letter on copying Millet, January 1890](https://www.webexhibits.org/vangogh/letter/20/623.htm). On his copies after Hiroshige, the [Van Gogh Museum](https://www.vangoghmuseum.nl/en/japanese-prints/person/33202); after Millet, [The Met](https://www.metmuseum.org/art/collection/search/436526). Paintings are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
+<ol class="refs">
+<li id="src-1">On his copies after Hiroshige: the <a href="https://www.vangoghmuseum.nl/en/japanese-prints/person/33202">Van Gogh Museum</a>. <a href="#ref-1" aria-label="Back to the text">↩</a></li>
+<li id="src-2">On his twenty-one copies after Millet at Saint-Rémy: <a href="https://www.metmuseum.org/art/collection/search/436526">The Met</a>. <a href="#ref-2" aria-label="Back to the text">↩</a></li>
+<li id="src-3">His <a href="https://www.webexhibits.org/vangogh/letter/20/623.htm">letter to Theo on copying Millet, January 1890</a>. <a href="#ref-3" aria-label="Back to the text">↩</a></li>
+</ol>
+
+Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/), including the [letter from Isleworth, 18 August 1876](https://www.webexhibits.org/vangogh/letter/4/073.htm). Paintings are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
