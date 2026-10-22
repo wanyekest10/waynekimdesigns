@@ -27,6 +27,10 @@ facts:
   - { label: "Text", value: "Letters of Vincent van Gogh, 1888 to 1890" }
 ---
 
+## Try it
+
+<figure class="embed live ever"><iframe src="/play/ever-yours-live/" title="Ever Yours, live: type Van Gogh's words and the painting is laid down as a mosaic" loading="lazy"></iframe><figcaption>Click the picture and start typing. Pick any painting from the row underneath. Works best with a keyboard.</figcaption></figure>
+
 ## The idea
 
 I started reading *Ever Yours*, the collected letters of Vincent van Gogh, while watching the sunset most evenings. In his letters to his brother Theo, he described the sky all the time, and I kept wondering how he saw the world.
@@ -34,10 +38,6 @@ I started reading *Ever Yours*, the collected letters of Vincent van Gogh, while
 Most of his work was only valued after he died. He kept painting anyway, with passion and almost no recognition in his lifetime. I'm at a point in my own life where I'm exploring what's worth doing, and that stayed with me.
 
 They say copy the greats. Copying his words out is a way to slow down and read them closely. Here, as you type, the painting he was writing about is laid down tile by tile.
-
-## Try it
-
-<figure class="embed live ever"><iframe src="/play/ever-yours-live/" title="Ever Yours, live: type Van Gogh's words and the painting is laid down as a mosaic" loading="lazy"></iframe><figcaption>Click the picture and start typing. Pick any painting from the row underneath. Works best with a keyboard.</figcaption></figure>
 
 ## How it works
 
