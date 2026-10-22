@@ -38,9 +38,9 @@ facts:
 
 I started reading *Ever Yours*, the collected letters of Vincent van Gogh, while watching the sunset most evenings. In his letters to his brother Theo, he described the sky all the time, and I kept wondering how he saw the world.
 
-Most of his work was only valued after he died. He kept painting anyway, with passion and almost no recognition in his lifetime. I'm at a stage in my own life where I'm exploring what's worth doing and trying different experiments, and that stayed with me.
+They say copy the greats. Copying his words out is a way to slow down and read them closely. Here, as you type, one of his paintings is laid down tile by tile.
 
-They say copy the greats. Copying his words out is a way to slow down and read them closely. Here, as you type, the painting he was writing about is laid down tile by tile.
+Most of his work was only valued after he died. He kept painting anyway, with passion and almost no recognition in his lifetime. I'm at a stage in my own life where I'm exploring what's worth doing and trying different experiments, and that stayed with me.
 
 ## How it works
 
@@ -54,6 +54,16 @@ They say copy the greats. Copying his words out is a way to slow down and read t
 
 Five paintings, each paired with a passage from his letters to Theo. Pick any of them from the row under the picture.
 
+## A letter I keep coming back to
+
+My favorite passage isn't about a painting at all. In August 1876, years before he started painting, Vincent visited a friend whose young sister had just died, and wrote to Theo about it afterwards:
+
+> He and I, we know each other intimately; his work is mine, I know as well as he the people that he knows down here, their lives are as mine. … So then, we walked up and down the platform of the station, an ordinary world, but we were animated by thoughts that were not ordinary. Such moments do not last long, and soon we had to part. From the train the view of London was beautiful, squatting in its gloom, with Saint Paul's and the other churches in the distance.
+>
+> Vincent to Theo, Isleworth, 18 August 1876. He was 23.
+
+That's what I mean by how he saw the world. It was there before the paintings.
+
 ## Sources
 
-Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/). Paintings are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
+Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/), including the [letter from Isleworth, 18 August 1876](https://www.webexhibits.org/vangogh/letter/4/073.htm). Paintings are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
