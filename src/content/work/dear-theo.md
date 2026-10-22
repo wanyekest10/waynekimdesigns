@@ -8,7 +8,7 @@ year: "2026"
 featured: false
 listIn: experiments
 label: "Creative coding and interaction design"
-summary: "Write out Van Gogh's letters, and one of his paintings comes in as you go."
+summary: "A Van Gogh painting that appears as you write out his letters."
 hero: "/work/dear-theo-assets/card.webp"
 heroAlt: "A passage from Van Gogh's letter is typed out under a blank tile board, and The Starry Night is laid down tile by tile until the real painting fades in"
 heroVideo: "/work/dear-theo-assets/typing.mp4"
