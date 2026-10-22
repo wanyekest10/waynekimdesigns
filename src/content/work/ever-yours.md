@@ -15,7 +15,6 @@ hideHero: true
 short:
   - { lead: "The question.", text: "How did Van Gogh see the world? In his letters to his brother Theo, he described the sky, his room, and his paintings all the time." }
   - { lead: "What I built.", text: "A typing piece. You copy out a passage from his letters, and the painting he was writing about is laid down tile by tile, then gives way to the painting itself." }
-  - { lead: "What I learned.", text: "Copying is a slow way to read. Typing out \"the yellow of fresh butter\" makes you look for it in the painting." }
 skills: [Creative coding, Interaction design, Prototyping]
 contributions:
   - { skill: "Creative coding", text: "Built the mosaic in the browser: each painting sampled into tiles that are laid down in patches as you type" }
