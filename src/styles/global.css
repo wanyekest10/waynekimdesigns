@@ -2,12 +2,13 @@
    Cobalt is the only accent: links and one focal mark per figure. */
 @font-face { font-family: 'Instrument Sans'; src: url('/fonts/instrument-sans-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
 @font-face { font-family: 'Instrument Sans'; src: url('/fonts/instrument-sans-latin-500-normal.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('/fonts/eb-garamond-latin-500-normal.woff2') format('woff2'); font-weight: 500; font-display: swap; }
 @font-face { font-family: 'Geist Mono'; src: url('/fonts/geist-mono-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
 
 :root {
   --paper: #FFFFFF; --ink: #141414; --gray: #6E6E6B; --rule: #E6E6E3; --panel: #F4F4F2; --accent: #002BBA;
-  --sans: 'Instrument Sans', system-ui, sans-serif; --mono: 'Geist Mono', ui-monospace, monospace;
-  --display: 500 44px/1.05 var(--sans); --lead: 400 20px/1.4 var(--sans); --h2: 500 20px/1.4 var(--sans);
+  --sans: 'Instrument Sans', system-ui, sans-serif; --mono: 'Geist Mono', ui-monospace, monospace; --serif: 'EB Garamond', Garamond, 'Times New Roman', serif;
+  --display: 500 54px/1.02 var(--serif); --lead: 400 20px/1.4 var(--sans); --h2: 500 20px/1.4 var(--sans);
   --body: 400 16px/1.6 var(--sans); --label: 500 14px/1.5 var(--sans); --small: 400 13px/1.5 var(--sans);
   --meta: 400 12px/1.4 var(--mono);
   --measure: 64ch; --wide: 960px;
@@ -32,7 +33,7 @@ strong { font-weight: 500; color: var(--ink); }
 .nav ul a:hover { color: var(--ink); }
 .nav ul { list-style: none; display: flex; gap: 20px; }
 .meta { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 16px; }
-h1 { font: var(--display); letter-spacing: -0.04em; margin-bottom: 16px; }
+h1 { font: var(--display); letter-spacing: -0.01em; margin-bottom: 16px; }
 .lead { font: var(--lead); letter-spacing: -0.01em; max-width: 30em; }
 .section-title { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 20px; }
 .closing { margin-top: 120px; padding: 40px 0; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
@@ -84,7 +85,7 @@ figure.inline img { margin: 0 0 8px; }
 @media (max-width: 720px) {
   body { padding: 20px 16px 0; }
   .nav { margin-bottom: 40px; }
-  h1 { font-size: 34px; }
+  h1 { font-size: 42px; }
   .field { grid-template-columns: 1fr; gap: 6px; }
   .trio, .pair { grid-template-columns: 1fr; }
 }
