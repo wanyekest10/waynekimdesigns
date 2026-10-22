@@ -512,6 +512,9 @@ article .flip-read b { font-weight: 400; color: var(--ink); }
 /* A live, playable embed (Disco Never Died): a little taller on phones so its buttons fit. */
 article figure.embed.live iframe { background: #140a07; }
 @media (max-width: 640px) { article figure.embed.live iframe { aspect-ratio: 4/5; } }
+/* Ever Yours: the typing piece needs room for the passage under the picture. */
+article figure.embed.live.ever iframe { aspect-ratio: 1/1; background: #fff; border-radius: 0; }
+@media (max-width: 640px) { article figure.embed.live.ever iframe { aspect-ratio: 3/5; } }
 /* VJ night: three across, kept three across until phones, where they stack. */
 article figure.grid3.vj, article figure.grid3.three { grid-template-columns: repeat(3, 1fr); }
 article figure.grid3.vj video, article figure.grid3.three video { width: 100%; border-radius: 6px; }

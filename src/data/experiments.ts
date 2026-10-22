@@ -5,6 +5,7 @@
 // sub is the skill label shown under the name, matching the Work page.
 // try is optional: a "Try it" link after the line, for pieces people can play with in the browser.
 export const experiments = [
+  { name: 'Ever Yours', sub: 'Creative coding and interaction design', line: "Type out Van Gogh's letters, and his paintings appear tile by tile.", year: '2026', href: '/play/ever-yours/', try: '/play/ever-yours/#try-it', image: '/work/ever-yours-assets/card.webp' },
   { name: 'Mirrored Canvas', sub: 'Computer vision and play design', home: true, line: 'A mirror that turns silly faces into projected visuals.', year: '2024', href: '/play/mirrored-canvas/', image: '/work/mirrored-canvas-assets/hero.webp' },
   { name: 'Disco Never Died', sub: 'Creative coding and VJing', home: true, line: 'A code-made disco ball that pulses with the sound in the room.', year: '2024', href: '/play/disco-never-died/', try: '/play/disco-never-died/#try-it', image: '/work/disco-assets/card.webp', preview: '/work/disco-assets/preview.mp4' },
   { name: 'Tamer Kebap Eating Club', home: true, sub: 'Graphic design and printing', line: 'A thank-you shirt for the kebab shop that fed our class.', year: '2026', href: '/play/tamer-kebap/', image: '/experiments/tamer-kebap-assets/shirts.webp' },
