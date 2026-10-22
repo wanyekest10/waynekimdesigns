@@ -50,32 +50,6 @@ Glorify had grown to 2.5M+ users on solo practice: prayer, meditation, daily dev
 
 The real question wasn't how to design Groups. It was whether Groups should exist at all.
 
-## What changed
-
-Paul Pow, our VP of Product, and I presented the research at the product, design, and engineering leadership offsite. The research gave leadership the confidence to launch Glorify Groups, and they dedicated three of the four product, design, and engineering pods to it. Leadership, PMs, designers, and engineers built on this research as the foundation.
-
-
-<div class="stats three">
-  <div class="focal"><span class="k">Reach</span><b>1.8M+</b><p>users in Glorify Groups by 2025</p></div>
-  <div><span class="k">Engagement</span><b>20%</b><p>of daily active users use Groups, by 2025</p></div>
-  <div><span class="k">Commitment</span><b>3 of 4</b><p>product, design, and engineering pods</p></div>
-</div>
-
-<figure class="narrow"><img src="/work/glorify-assets/offsite.webp" alt="Presenting findings to the product, design, and engineering team around a conference table"/><figcaption>Presenting at the product, design, and engineering offsite.</figcaption></figure>
-
-## What shaped the product
-
-With our lead designer, I turned the findings into three design principles, so they could guide future iterations across teams instead of living in a readout deck.
-
-<figure class="trio principles">
-  <div><img src="/work/glorify-assets/principle-intentional-space.webp" alt="Illustration of a woman resting her arms on a ledge"/><p><strong>Intentional Space</strong><br/>Create a dedicated environment that signals purpose and psychological safety for reflection and sharing.</p><p class="shipped"><strong>In the app:</strong> Groups is its own space, separate from everyday chat.</p></div>
-  <div><img src="/work/glorify-assets/principle-mirroring.webp" alt="Illustration of a child looking up at an adult"/><p><strong>Mirroring</strong><br/>Seeing others participate encourages engagement and normalizes faith-related practices within the group.</p><p class="shipped"><strong>In the app:</strong> a group feed where members see each other post and reply by video.</p></div>
-  <div><img src="/work/glorify-assets/principle-warm-waters.webp" alt="Illustration of a woman stepping into the water"/><p><strong>Warm Waters</strong><br/>Gentle structure and permission help people feel safe expressing their beliefs.</p><p class="shipped"><strong>In the app:</strong> sermon discussion prompts that give gentle structure.</p></div>
-  <figcaption>The principles, and where each one shows up in the shipped app.</figcaption>
-</figure>
-
-Two features came straight from what participants told us. Prayer requests became one of the live app's most important features, something a group chat doesn't give you. And groups can share devotionals, which carries the shared context between meetings that the study found mattered.
-
 ## How we knew
 
 The decision rested on evidence gathered in six weeks. Here is where it came from.
@@ -156,6 +130,32 @@ The end-of-pilot survey backed it up, among the participants who answered it.
 </div>
 
 Each finding answered one of leadership's three doubts: people did engage, the sharing felt authentic, and the value carried from one week into the next. The flywheel held.
+
+## What shaped the product
+
+With our lead designer, I turned the findings into three design principles, so they could guide future iterations across teams instead of living in a readout deck.
+
+<figure class="trio principles">
+  <div><img src="/work/glorify-assets/principle-intentional-space.webp" alt="Illustration of a woman resting her arms on a ledge"/><p><strong>Intentional Space</strong><br/>Create a dedicated environment that signals purpose and psychological safety for reflection and sharing.</p><p class="shipped"><strong>In the app:</strong> Groups is its own space, separate from everyday chat.</p></div>
+  <div><img src="/work/glorify-assets/principle-mirroring.webp" alt="Illustration of a child looking up at an adult"/><p><strong>Mirroring</strong><br/>Seeing others participate encourages engagement and normalizes faith-related practices within the group.</p><p class="shipped"><strong>In the app:</strong> a group feed where members see each other post and reply by video.</p></div>
+  <div><img src="/work/glorify-assets/principle-warm-waters.webp" alt="Illustration of a woman stepping into the water"/><p><strong>Warm Waters</strong><br/>Gentle structure and permission help people feel safe expressing their beliefs.</p><p class="shipped"><strong>In the app:</strong> sermon discussion prompts that give gentle structure.</p></div>
+  <figcaption>The principles, and where each one shows up in the shipped app.</figcaption>
+</figure>
+
+Two features came straight from what participants told us. Prayer requests became one of the live app's most important features, something a group chat doesn't give you. And groups can share devotionals, which carries the shared context between meetings that the study found mattered.
+
+## What changed
+
+Paul Pow, our VP of Product, and I presented the research at the product, design, and engineering leadership offsite. The research gave leadership the confidence to launch Glorify Groups, and they dedicated three of the four product, design, and engineering pods to it. Leadership, PMs, designers, and engineers built on this research as the foundation.
+
+
+<div class="stats three">
+  <div class="focal"><span class="k">Reach</span><b>1.8M+</b><p>users in Glorify Groups by 2025</p></div>
+  <div><span class="k">Engagement</span><b>20%</b><p>of daily active users use Groups, by 2025</p></div>
+  <div><span class="k">Commitment</span><b>3 of 4</b><p>product, design, and engineering pods</p></div>
+</div>
+
+<figure class="narrow"><img src="/work/glorify-assets/offsite.webp" alt="Presenting findings to the product, design, and engineering team around a conference table"/><figcaption>Presenting at the product, design, and engineering offsite.</figcaption></figure>
 
 ## What didn't work yet
 
