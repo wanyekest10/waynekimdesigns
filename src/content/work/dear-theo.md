@@ -1,23 +1,23 @@
 ---
-title: Ever Yours
-slug: ever-yours
-headline: "Type out what Van Gogh wrote about his paintings, and each painting is laid down as a mosaic, tile by tile."
+title: "Dear Theo, Ever Yours"
+slug: dear-theo
+headline: "Copy out what Van Gogh was writing to his brother while he painted, and the painting builds up as you go."
 context: "Personal project, 2026"
 order: 13
 year: "2026"
 featured: false
 listIn: experiments
 label: "Creative coding and interaction design"
-summary: "Type Van Gogh's letters, and his paintings appear tile by tile."
-hero: "/work/ever-yours-assets/card.webp"
+summary: "Copy out Van Gogh's letters to see the world the way he did."
+hero: "/work/dear-theo-assets/card.webp"
 heroAlt: "A passage from Van Gogh's letter is typed out under a blank tile board, and The Starry Night is laid down tile by tile until the real painting fades in"
-heroVideo: "/work/ever-yours-assets/typing.mp4"
-heroPoster: "/work/ever-yours-assets/typing-poster.jpg"
-og: "/work/ever-yours-assets/og.jpg"
+heroVideo: "/work/dear-theo-assets/typing.mp4"
+heroPoster: "/work/dear-theo-assets/typing-poster.jpg"
+og: "/work/dear-theo-assets/og.jpg"
 ogAlt: "The Starry Night by Van Gogh as a mosaic of small square tiles"
 short:
   - { lead: "The question.", text: "How did Van Gogh see the world? In his letters to his brother Theo, he described the sky, his room, and his paintings all the time." }
-  - { lead: "What I built.", text: "A typing piece. You copy out a passage from his letters, and the painting he was writing about is laid down tile by tile, then gives way to the painting itself." }
+  - { lead: "What I built.", text: "A typing piece. You copy out a passage he wrote to Theo while he was painting, and the painting is laid down tile by tile, then gives way to the painting itself." }
 skills: [Creative coding, Interaction design, Prototyping]
 contributions:
   - { skill: "Creative coding", text: "Built the mosaic in the browser: each painting sampled into tiles that are laid down in patches as you type" }
@@ -32,7 +32,7 @@ facts:
 
 ## Try it
 
-<figure class="embed live ever"><iframe src="/play/ever-yours-live/" title="Ever Yours, live: type Van Gogh's words and the painting is laid down as a mosaic" loading="lazy"></iframe><figcaption>Click the picture and start typing. Pick any painting from the row underneath. Works best with a keyboard.</figcaption></figure>
+<figure class="embed live ever"><iframe src="/play/dear-theo-live/" title="Dear Theo, Ever Yours, live: type Van Gogh's words and the painting is laid down as a mosaic" loading="lazy"></iframe><figcaption>Click the picture and start typing. Pick any painting from the row underneath. Works best with a keyboard.</figcaption></figure>
 
 ## The idea
 
@@ -52,8 +52,8 @@ They say copy the greats. Copying his words out is a way to slow down and read t
   <div class="step focal"><span class="n">03</span><b>Reveal</b><small>At "Ever yours, Vincent," the mosaic gives way to the painting.</small></div>
 </div>
 
-Six paintings, each paired with what he wrote about it. Pick any of them from the row under the picture.
+Five paintings, each paired with what he was writing to Theo at the time. Pick any of them from the row under the picture.
 
 ## Sources
 
-Letters to Theo in Johanna van Gogh-Bonger's translation, and the letter to his sister Wil, as published on [WebExhibits](https://www.webexhibits.org/vangogh/). Paintings are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
+Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/). Paintings are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
