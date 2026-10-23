@@ -66,6 +66,8 @@ Writing out his letters slowed me down. For a few minutes I'm paying attention t
 
 ## How it works
 
+<figure class="frame"><video src="/work/dear-theo-assets/typing.mp4" poster="/work/dear-theo-assets/typing-poster.jpg" autoplay muted loop playsinline aria-label="The Starry Night passage being written out, color words filling in their part of the painting, until the real painting appears"></video><figcaption>Writing out his June 1889 letter: "countryside," "window" and "star" fill in their part of The Starry Night, then the painting appears.</figcaption></figure>
+
 <div class="flow" role="list" aria-label="How typing becomes a painting">
   <div class="step"><span class="n">01</span><b>Type</b><small>Write out a passage from one of his letters.</small></div>
   <span class="to" aria-hidden="true">→</span>
@@ -73,8 +75,6 @@ Writing out his letters slowed me down. For a few minutes I'm paying attention t
   <span class="to" aria-hidden="true">→</span>
   <div class="step focal"><span class="n">03</span><b>Reveal</b><small>At "Ever yours, Vincent," the mosaic gives way to the painting.</small></div>
 </div>
-
-<figure class="frame" style="margin-top: 40px"><video src="/work/dear-theo-assets/typing.mp4" poster="/work/dear-theo-assets/typing-poster.jpg" autoplay muted loop playsinline aria-label="The Starry Night passage being written out, color words filling in their part of the painting, until the real painting appears"></video><figcaption>Writing out his June 1889 letter: "countryside," "window" and "star" fill in their part of The Starry Night, then the painting appears.</figcaption></figure>
 
 Five paintings, each paired with a passage from his letters to Theo. Pick any of them from the row under the picture.
 
