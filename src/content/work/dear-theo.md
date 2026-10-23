@@ -74,6 +74,8 @@ Writing out his letters slowed me down. For a few minutes I'm paying attention t
   <div class="step focal"><span class="n">03</span><b>Reveal</b><small>At "Ever yours, Vincent," the mosaic gives way to the painting.</small></div>
 </div>
 
+<figure class="frame" style="margin-top: 40px"><video src="/work/dear-theo-assets/typing.mp4" poster="/work/dear-theo-assets/typing-poster.jpg" autoplay muted loop playsinline aria-label="The Starry Night passage being written out, color words filling in their part of the painting, until the real painting appears"></video><figcaption>Writing out his June 1889 letter: "countryside," "window" and "star" fill in their part of The Starry Night, then the painting appears.</figcaption></figure>
+
 Five paintings, each paired with a passage from his letters to Theo. Pick any of them from the row under the picture.
 
 ## A letter I keep coming back to
