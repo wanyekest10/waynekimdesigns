@@ -18,6 +18,7 @@ ogAlt: "The Starry Night by Van Gogh as a mosaic of small square tiles"
 short:
   - { lead: "The question.", text: "How did Van Gogh see the world? In his letters to his brother Theo, he described the sky, his room, and his paintings all the time." }
   - { lead: "What I built.", text: "A typing piece that puts you in his shoes for a while. You write out a passage from his letters to Theo, and a painting he made around the same time comes in tile by tile, each color word filling in the part it names." }
+tryIt: '<figure class="embed live ever"><iframe src="/play/dear-theo-live/" title="Dear Theo, Ever Yours, live: type Van Gogh''s words and the painting is laid down as a mosaic" loading="lazy"></iframe><figcaption>Click or tap the picture and start typing. Pick any painting from the row underneath.</figcaption></figure>'
 skills: [Creative coding, Interaction design, Prototyping]
 contributions:
   - { skill: "Creative coding", text: "Built the mosaic in the browser: each painting sampled into tiles that are laid down in patches as you type, and each color word matched to the part of the painting closest to it" }
@@ -29,10 +30,6 @@ facts:
   - { label: "Tools", value: "JavaScript · Canvas" }
   - { label: "Text", value: "Letters of Vincent van Gogh, 1888 to 1890" }
 ---
-
-## Try it
-
-<figure class="embed live ever"><iframe src="/play/dear-theo-live/" title="Dear Theo, Ever Yours, live: type Van Gogh's words and the painting is laid down as a mosaic" loading="lazy"></iframe><figcaption>Click or tap the picture and start typing. Pick any painting from the row underneath.</figcaption></figure>
 
 <script>
 // Phones: the piece says when the keyboard is up, and the page pins it to the part of the screen still visible.

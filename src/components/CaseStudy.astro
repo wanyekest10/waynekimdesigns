@@ -4,7 +4,7 @@ import MoreProjects from './MoreProjects.astro';
 import Base from '../layouts/Base.astro';
 import { render } from 'astro:content';
 import { linkPeople } from '../data/people';
-const { w, collapseRole = false } = Astro.props;
+const { w, collapseRole = true } = Astro.props;
 const { Content, headings } = await render(w);
 const d = w.data as any;
 const beats = d.short ?? [];
@@ -16,11 +16,12 @@ if (skills.length) facts.splice(Math.min(2, facts.length), 0, { label: 'Skills',
 const foldFacts = facts.filter((f: any) => f.label !== 'Skills');
 const foldLine = ['Role', 'Year'].map((l) => facts.find((f: any) => f.label === l)?.value).filter(Boolean).join(' · ');
 // Section list: numbered h2s, h3s as indented sub-items. "Hack Week: the assumption broke" shows as "Hack Week".
-let n = 0;
+let n = d.tryIt ? 1 : 0;
 const d0 = w.data as any;
 const toc = headings
   .filter((h) => (h.depth === 2 && h.text !== 'TL;DR') || h.depth === 3)
   .map((h) => ({ ...h, num: h.depth === 2 ? String(++n).padStart(2, '0') : null, label: (d0.tocLabels ?? {})[h.text] ?? h.text.split(':')[0] }));
+if (d.tryIt) toc.unshift({ depth: 2, slug: 'try-it', text: 'Try it', num: '01', label: 'Try it' } as any);
 ---
 <Base wide title={`${d.title}, Wayne Kim`} description={d.summary} image={d.og ?? d.heroPoster ?? d.hero} imageAlt={d.ogAlt ?? d.heroAlt} prompt="Working on something like this?">
   <div class:list={["cs", { "no-hero": d.hideHero }]}>
@@ -29,11 +30,17 @@ const toc = headings
       <p class="lead">{d.headline}</p>
     </header>
 
-    {!d.hideHero && (d.heroVideo
+    {!d.hideHero && !d.tryIt && (d.heroVideo
       ? <video class="hero" src={d.heroVideo} poster={d.heroPoster} autoplay muted loop playsinline aria-label={d.heroAlt}></video>
       : <img class="hero" src={d.hero} alt={d.heroAlt} />)}
 
     <div class="cs-sum">
+      {d.tryIt && (
+        <article class="try-first" id="try-it">
+          <h2>Try it</h2>
+          <Fragment set:html={d.tryIt} />
+        </article>
+      )}
       {beats.length > 0 && (
           <div class="short">
             <span class="short-tag">The 30-second version</span>
@@ -91,7 +98,7 @@ const toc = headings
 
 
     <div class="cs-body">
-      <article class="numbered"><Content /></article>
+      <article class="numbered" style={d.tryIt ? 'counter-reset: sec 1' : undefined}><Content /></article>
       <p class="back">{d.listIn === 'experiments' ? <a href="/play/">← All play</a> : <a href="/work/">← All work</a>}</p>
       <MoreProjects current={`/${d.listIn === 'experiments' ? 'play' : 'work'}/${w.id}/`} />
     </div>
