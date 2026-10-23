@@ -65,7 +65,7 @@ They say copy the greats. Van Gogh did. In Paris he painted copies of <span clas
 
 The [immersive Van Gogh shows](https://lareviewofbooks.org/article/van-gogh-experiences-immersive-art-in-the-covid-era/) wrap you in his paintings. I wanted something slower: something you do yourself. So here, you step into his shoes for a little while. You write out his letters, and one of his paintings comes in as you go, each color word filling in the part of the picture it names.
 
-Writing out his letters slowed me down enough to notice what he noticed, and the more I noticed how he noticed, the more his paintings meant to me. It's a way of paying attention to someone else's attention.
+Writing out his letters slowed me down. For a few minutes I'm paying attention to what he paid attention to, and his paintings mean more to me after.
 
 ## How it works
 
