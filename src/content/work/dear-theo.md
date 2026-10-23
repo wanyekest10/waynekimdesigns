@@ -94,7 +94,7 @@ My favorite passage isn't about a painting at all. It's from a letter in August 
 
 This was before he was a painter, when he still hoped to become a preacher. But the habit was already there: paying close attention, then finding a way to say it. Later, he said it in paint.
 
-I'm figuring a lot out in my own life right now. Reading him makes me want to slow down and notice more, as I find my own way to "paint."
+As I'm figuring out a lot in my own life right now, reading about his journey reminds me to continue to slow down and notice more as I find my own way to "paint."
 
 ## Sources
 
