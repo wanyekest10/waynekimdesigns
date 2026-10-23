@@ -185,14 +185,15 @@ const keys=document.getElementById('keys'), viewBtn=document.getElementById('vie
 let pi=0, current=PAINTINGS[0], lineIdx=0, pos=0, line='', spans=[], typed=0, total=0, done=false;
 let revealShown=0, sat=0.1, boost=0, ready=false, token=0;
 const WORDCH=/[A-Za-zÀ-ÿ'’]/;
-// on phones, punctuation needs a second keyboard, so it fills itself in: you type letters and spaces only
-const typable=ch=>(coarse?/[A-Za-zÀ-ÿ0-9 ]/:/[A-Za-zÀ-ÿ0-9 ']/).test(ch);
+// you only type the letters: spaces and punctuation fill themselves in (a space typed out of habit is simply ignored)
+const typable=ch=>/[A-Za-zÀ-ÿ0-9]/.test(ch);
+let pending=[];
 const norm=ch=>ch.normalize('NFD').replace(/[̀-ͯ]/g,'').replace('’',"'").toLowerCase();
 const clean=t=>t.toUpperCase().replace(/[^A-Z]/g,'');
 PAINTINGS.forEach((P,k)=>{ const b=document.createElement('button'); b.type='button'; b.title=P.title; b.setAttribute('aria-label',P.title); const im=document.createElement('img'); im.src=IMG[P.img]; im.alt=''; b.appendChild(im); b.addEventListener('click',()=>{ setPainting(k); focusKeys(); }); stripEl.appendChild(b); });
 function setPainting(i){
   pi=(i+PAINTINGS.length)%PAINTINGS.length; current=PAINTINGS[pi];
-  lineIdx=0; typed=0; done=false; ready=false; painting=0; showPainting=true; viewBtn.hidden=true; viewBtn.textContent='See the mosaic'; token++; revealShown=0; sat=0.1; boost=0;
+  lineIdx=0; typed=0; done=false; pending=[]; ready=false; painting=0; showPainting=true; viewBtn.hidden=true; viewBtn.textContent='See the mosaic'; token++; revealShown=0; sat=0.1; boost=0;
   for(const L of LABELS) if(!L.out) L.out=performance.now();
   PAINTED.length=0; MASKS.length=0; paletteEl.textContent='';
   total=current.lines.reduce((s,l)=>s+l.length,0);
@@ -206,13 +207,16 @@ function setLine(){
   // his words, in quotation marks: opening on the first line of a passage, closing on the last
   promptEl.classList.toggle('q-open',lineIdx===0); promptEl.classList.toggle('q-close',lineIdx===current.lines.length-1);
   autoFill(); mark();
+  // letters typed during the short pause between lines carry over instead of being lost
+  const q=pending; pending=[]; for(const c of q) key(c);
 }
 function autoFill(){ while(pos<line.length && !typable(line[pos])){ spans[pos].className='ok'; pos++; typed++; } }
 function mark(){ spans.forEach((sp,i)=>{ if(i===pos) sp.className='cur'; }); }
 function wordEndingAt(i){ let a=i; while(a>0 && WORDCH.test(line[a-1])) a--; return line.slice(a,i); }
 function key(ch){
   if(done){ if(ready && (ch===' '||ch==='\n')) setPainting(pi+1); return; }
-  if(pos>=line.length) return;
+  if(!typable(ch)) return;
+  if(pos>=line.length){ pending.push(ch); return; }   // between lines: hold it for the next line
   const want=line[pos];
   if(norm(ch)===norm(want)){
     spans[pos].className='ok'; pos++; typed++;
@@ -220,7 +224,7 @@ function key(ch){
     autoFill();
     if(pos>=line.length){ if(lineIdx<current.lines.length-1){ lineIdx++; setTimeout(setLine,300); } else finish(); }
     mark();
-  }else if(/[A-Za-z0-9 ]/.test(ch)){
+  }else{
     spans[pos].className='miss'; const p=pos; setTimeout(()=>{ if(spans[p] && spans[p].className==='miss') spans[p].className='cur'; },220);
   }
   promptEl.classList.remove('idle'); document.getElementById('hint').style.opacity=0;
