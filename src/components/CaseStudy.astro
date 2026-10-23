@@ -12,6 +12,9 @@ const skills = d.skills ?? [];
 const contrib = d.contributions ?? [];
 const facts = (d.facts ?? []).filter((f: any) => !(skills.length && f.label === 'Methods'));
 if (skills.length) facts.splice(Math.min(2, facts.length), 0, { label: 'Skills', value: skills.join(' · ') });
+// Phone dropdown: the facts minus Skills (the contribution headings already name them), and a one-line summary for the closed row.
+const foldFacts = facts.filter((f: any) => f.label !== 'Skills');
+const foldLine = ['Role', 'Year'].map((l) => facts.find((f: any) => f.label === l)?.value).filter(Boolean).join(' · ');
 // Section list: numbered h2s, h3s as indented sub-items. "Hack Week: the assumption broke" shows as "Hack Week".
 let n = 0;
 const d0 = w.data as any;
@@ -40,8 +43,13 @@ const toc = headings
         {contrib.length > 0 && (
           collapseRole ? (
             <details class="my-role fold" open>
-              <summary class="short-tag">My role and contributions</summary>
+              <summary><span class="short-tag">My role and contributions</span>{foldLine && <span class="fold-line">{foldLine}</span>}</summary>
               <dl>{contrib.map((r: any) => <div class:list={{ shared: r.shared, impact: r.impact }}><dt>{r.skill}</dt><dd>{r.text}</dd></div>)}</dl>
+              {foldFacts.length > 0 && (
+                <dl class="cs-facts fold-facts">
+                  {foldFacts.map((f: any) => <div><dt>{f.label}</dt><dd>{String(f.value).split(' · ').map((v: string) => <span set:html={linkPeople(v)} />)}</dd></div>)}
+                </dl>
+              )}
             </details>
           ) : (
           <div class="my-role">
@@ -56,7 +64,7 @@ const toc = headings
 
     <aside class="cs-side">
       {facts.length > 0 && (
-        <dl class="cs-facts">
+        <dl class:list={["cs-facts", { "has-fold": collapseRole && contrib.length > 0 }]}>
           {facts.map((f: any) => <div><dt>{f.label}</dt><dd>{String(f.value).split(' · ').map((v: string) => <span set:html={linkPeople(v)} />)}</dd></div>)}
         </dl>
       )}

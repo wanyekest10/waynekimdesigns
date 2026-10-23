@@ -670,16 +670,24 @@ article ol.refs li:target { background: #EEF1FB; border-radius: 3px; }
 article ol.refs a[href^="#ref"] { text-decoration: none; color: var(--gray); }
 [id^="ref-"], [id^="src-"] { scroll-margin-top: 96px; }
 
-/* "My role and contributions" as a dropdown on phones (closed by default), always open on wider screens. */
-.my-role.fold > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+/* "My role and contributions" as a dropdown on phones (closed by default, with a one-line summary), always open on wider screens.
+   On phones the dropdown also holds the facts, so the separate facts block is hidden there. */
+.my-role.fold > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 12px; }
 .my-role.fold > summary::-webkit-details-marker { display: none; }
-.my-role.fold > summary::after { content: '+'; font: 400 18px/1 var(--sans); color: var(--gray); }
+.my-role.fold > summary .short-tag { margin: 0; }
+.my-role.fold > summary::after { content: '+'; font: 400 18px/1 var(--sans); color: var(--gray); grid-column: 2; grid-row: 1 / span 2; }
 .my-role.fold[open] > summary::after { content: '−'; }
+.my-role.fold .fold-line { grid-column: 1; font-size: 15px; color: var(--ink); margin-top: 6px; }
+.my-role.fold[open] .fold-line { display: none; }
+.my-role.fold .fold-facts { margin-top: 20px; }
 @media (max-width: 600px) {
-  .my-role.fold > summary { margin-bottom: 0; padding: 14px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .my-role.fold > summary { padding: 14px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .my-role.fold[open] > summary { border-bottom: 0; }
+  .cs-facts.has-fold { display: none; }
 }
 @media (min-width: 601px) {
-  .my-role.fold > summary { pointer-events: none; }
+  .my-role.fold > summary { pointer-events: none; display: block; }
+  .my-role.fold > summary .short-tag { margin-bottom: 12px; }
   .my-role.fold > summary::after, .my-role.fold[open] > summary::after { content: none; }
+  .my-role.fold .fold-line, .my-role.fold .fold-facts { display: none; }
 }
