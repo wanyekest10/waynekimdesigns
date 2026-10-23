@@ -4,7 +4,7 @@ import MoreProjects from './MoreProjects.astro';
 import Base from '../layouts/Base.astro';
 import { render } from 'astro:content';
 import { linkPeople } from '../data/people';
-const { w } = Astro.props;
+const { w, collapseRole = false } = Astro.props;
 const { Content, headings } = await render(w);
 const d = w.data as any;
 const beats = d.short ?? [];
@@ -38,12 +38,21 @@ const toc = headings
           </div>
         )}
         {contrib.length > 0 && (
+          collapseRole ? (
+            <details class="my-role fold" open>
+              <summary class="short-tag">My role and contributions</summary>
+              <dl>{contrib.map((r: any) => <div class:list={{ shared: r.shared, impact: r.impact }}><dt>{r.skill}</dt><dd>{r.text}</dd></div>)}</dl>
+            </details>
+          ) : (
           <div class="my-role">
             <span class="short-tag">My role and contributions</span>
             <dl>{contrib.map((r: any) => <div class:list={{ shared: r.shared, impact: r.impact }}><dt>{r.skill}</dt><dd>{r.text}</dd></div>)}</dl>
           </div>
+          )
         )}
     </div>
+
+    {collapseRole && <script is:inline set:html={"(() => { const d = document.querySelector('details.my-role.fold'); if (d && matchMedia('(max-width: 600px)').matches) d.open = false; })();"} />}
 
     <aside class="cs-side">
       {facts.length > 0 && (
