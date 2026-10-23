@@ -22,7 +22,7 @@ skills: [Creative coding, Interaction design, Prototyping]
 contributions:
   - { skill: "Creative coding", text: "Built the mosaic in the browser: each painting sampled into tiles that are laid down in patches as you type, and each color word matched to the part of the painting closest to it" }
   - { skill: "Interaction design", text: "Turned reading his letters into writing them: every correct letter places tiles, and each color word fills in the part of the painting it names" }
-  - { skill: "Prototyping", text: "Built it to run in the browser on a laptop or a phone, with punctuation filled in for you on a phone keyboard" }
+  - { skill: "Prototyping", text: "Built it to run in the browser, on a laptop or a phone" }
 facts:
   - { label: "Role", value: "Designer and developer, solo" }
   - { label: "Year", value: "2026 · One evening" }
