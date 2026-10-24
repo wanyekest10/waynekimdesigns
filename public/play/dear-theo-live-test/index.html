@@ -194,15 +194,15 @@ const WORDCH=/[A-Za-zÀ-ÿ'’]/;
 // you only type the letters: spaces and punctuation fill themselves in (a space typed out of habit is simply ignored)
 const typable=ch=>/[A-Za-zÀ-ÿ0-9]/.test(ch);
 let pending=[];
-// Phones: fat-finger tolerance. A key touching the right one on a phone keyboard counts as right.
+// Fat-finger tolerance: a key touching the right one counts as right (phones and laptops).
 // Rows are staggered like a phone keyboard (second row half a key in, third row a key and a half in),
-// so a key touches its two row neighbours and up to two keys above and below. Desktop stays exact.
+// so a key touches its two row neighbours and the keys above and below it.
 const NEAR=(()=>{ const rows=['qwertyuiop','asdfghjkl','zxcvbnm'], off=[0,0.5,1.5], pos={}, m={};
   rows.forEach((r,y)=>[...r].forEach((c,i)=>pos[c]=[i+off[y],y]));
   for(const a in pos){ m[a]=new Set(); for(const b in pos){ if(a===b) continue; const dx=Math.abs(pos[a][0]-pos[b][0]), dy=Math.abs(pos[a][1]-pos[b][1]);
     if((dy===0&&dx===1)||(dy===1&&dx<=1)) m[a].add(b); } }
   return m; })();
-const near=(a,b)=>coarse && !!NEAR[b] && NEAR[b].has(a);
+const near=(a,b)=>!!NEAR[b] && NEAR[b].has(a);   // phones and laptops alike
 const norm=ch=>ch.normalize('NFD').replace(/[̀-ͯ]/g,'').replace('’',"'").toLowerCase();
 const clean=t=>t.toUpperCase().replace(/[^A-Z]/g,'');
 PAINTINGS.forEach((P,k)=>{ const b=document.createElement('button'); b.type='button'; b.title=P.title; b.setAttribute('aria-label',P.title); const im=document.createElement('img'); im.src=IMG[P.img]; im.alt=''; b.appendChild(im); b.addEventListener('click',()=>{ setPainting(k); focusKeys(); }); stripEl.appendChild(b); });
