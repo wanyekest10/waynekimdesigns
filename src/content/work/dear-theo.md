@@ -78,7 +78,17 @@ Writing out his letters slowed me down. For a few minutes I'm paying attention t
 
 Five paintings, each paired with a passage from his letters to Theo. Pick any of them from the row under the picture.
 
-## A letter I keep coming back to
+## Sources
+
+<ol class="refs">
+<li id="src-1">On his copies after Hiroshige: the <a href="https://www.vangoghmuseum.nl/en/japanese-prints/person/33202">Van Gogh Museum</a>. <a href="#ref-1" aria-label="Back to the text">↩</a></li>
+<li id="src-2">On his twenty-one copies after Millet at Saint-Rémy: <a href="https://www.metmuseum.org/art/collection/search/436526">The Met</a>. <a href="#ref-2" aria-label="Back to the text">↩</a></li>
+<li id="src-3">His <a href="https://www.webexhibits.org/vangogh/letter/20/623.htm">letter to Theo on copying Millet, January 1890</a>. <a href="#ref-3" aria-label="Back to the text">↩</a></li>
+</ol>
+
+Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/), including the [letter from Isleworth, 18 August 1876](https://www.webexhibits.org/vangogh/letter/4/073.htm). Paintings and prints are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/); the comparisons above are from the [Van Gogh Museum](https://www.vangoghmuseum.nl/en/collection/s0115V1962), the [Cleveland Museum of Art](https://www.clevelandart.org/art/1962.407) and [The Met](https://www.metmuseum.org/art/collection/search/436526).
+
+## P.S. A letter I keep coming back to
 
 My favorite passage isn't about a painting at all. It's from a letter in August 1876, years before he started painting.
 
@@ -99,16 +109,6 @@ This was before he was a painter, when he still hoped to become a preacher. But 
 As I'm figuring out a lot in my own life right now, reading about his journey reminds me to continue to slow down and notice more as I find my own way to "paint."
 
 </details>
-
-## Sources
-
-<ol class="refs">
-<li id="src-1">On his copies after Hiroshige: the <a href="https://www.vangoghmuseum.nl/en/japanese-prints/person/33202">Van Gogh Museum</a>. <a href="#ref-1" aria-label="Back to the text">↩</a></li>
-<li id="src-2">On his twenty-one copies after Millet at Saint-Rémy: <a href="https://www.metmuseum.org/art/collection/search/436526">The Met</a>. <a href="#ref-2" aria-label="Back to the text">↩</a></li>
-<li id="src-3">His <a href="https://www.webexhibits.org/vangogh/letter/20/623.htm">letter to Theo on copying Millet, January 1890</a>. <a href="#ref-3" aria-label="Back to the text">↩</a></li>
-</ol>
-
-Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/), including the [letter from Isleworth, 18 August 1876](https://www.webexhibits.org/vangogh/letter/4/073.htm). Paintings and prints are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/); the comparisons above are from the [Van Gogh Museum](https://www.vangoghmuseum.nl/en/collection/s0115V1962), the [Cleveland Museum of Art](https://www.clevelandart.org/art/1962.407) and [The Met](https://www.metmuseum.org/art/collection/search/436526).
 
 <script>
 // Hover (or tap) a phrase to see the original beside Van Gogh's copy. Kept on screen: above the phrase, or below if there's no room.
