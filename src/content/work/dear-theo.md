@@ -64,7 +64,7 @@ The [immersive Van Gogh shows](https://lareviewofbooks.org/article/van-gogh-expe
 
 ## How it works
 
-<figure class="frame"><video src="/work/dear-theo-assets/typing.mp4" poster="/work/dear-theo-assets/typing-poster.jpg" autoplay muted loop playsinline aria-label="The Starry Night passage being written out, color words filling in their part of the painting, until the real painting appears"></video><figcaption>Writing out his June 1889 letter: "countryside," "window" and "star" fill in their part of The Starry Night, then the painting appears.</figcaption></figure>
+<figure class="frame"><video style="aspect-ratio: auto" src="/work/dear-theo-assets/typing.mp4" poster="/work/dear-theo-assets/typing-poster.jpg" autoplay muted loop playsinline aria-label="The Starry Night passage being written out, color words filling in their part of the painting, until the real painting appears"></video><figcaption>Writing out his June 1889 letter: "countryside," "window" and "star" fill in their part of The Starry Night, then the painting appears.</figcaption></figure>
 
 <div class="flow" role="list" aria-label="How typing becomes a painting">
   <div class="step"><span class="n">01</span><b>Type</b><small>Write out a passage from one of his letters.</small></div>
