@@ -42,10 +42,9 @@
   .type { flex:0 0 auto; display:grid; gap:8px; cursor:text; }
   .prompt { font:400 clamp(16px,2.1vw,21px)/1.45 var(--sans); margin:0; position:relative; overflow:hidden; max-height:10.5em; }
   .prompt { font-style:italic; }   /* his words, so set in italics, like a quotation */
-  .prompt .sal, .prompt .sig { color:var(--faint); transition:color .5s; }
+  .prompt .sal, .prompt .sig { color:var(--gray); }   /* already on the page: you only write the middle */
   .prompt .sal { margin-bottom:.3em; }
   .prompt .sig { margin-top:.3em; }
-  .prompt .sig.on { color:var(--ink); }
   @media (max-width:640px) { .prompt { font-size:15px; max-height:9em; } }
   .prompt span { color:var(--faint); transition:color .12s; }
   .prompt span.ok { color:var(--ink); }
@@ -263,7 +262,7 @@ function pickOut(word,end){
 }
 function finish(){
   done=true; typed=total; const tk=token;
-  setTimeout(()=>{ if(tk!==token) return; ready=true; readyAt=performance.now(); viewBtn.hidden=false; const sg=document.getElementById('sig'); if(sg) sg.classList.add('on'); promptEl.classList.add('idle'); spans.forEach(sp=>{ if(sp.className==='cur') sp.className='ok'; }); statsEl.textContent=pi<PAINTINGS.length-1?'Press space for the next painting':'Press space to begin again'; },450);
+  setTimeout(()=>{ if(tk!==token) return; ready=true; readyAt=performance.now(); viewBtn.hidden=false; promptEl.classList.add('idle'); spans.forEach(sp=>{ if(sp.className==='cur') sp.className='ok'; }); statsEl.textContent=pi<PAINTINGS.length-1?'Press space for the next painting':'Press space to begin again'; },450);
 }
 keys.addEventListener('input',()=>{ const v=keys.value; keys.value=''; for(const ch of v) key(ch); });
 keys.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); key('\n'); } });
