@@ -1,7 +1,7 @@
 ---
 title: "Dear Theo, Ever Yours"
 slug: dear-theo
-headline: "Step into Van Gogh's shoes for a while. Write out his letters to his brother, and one of his paintings comes in as you go."
+headline: "Step into Van Gogh's shoes for a letter. Write out his letters to his brother, and one of his paintings comes in as you go."
 context: "Personal project, 2026"
 order: 13
 year: "2026"
