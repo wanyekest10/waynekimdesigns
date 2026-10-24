@@ -56,7 +56,7 @@ facts:
 
 ## The idea
 
-I started reading *Ever Yours*, Van Gogh's letters to his brother Theo. He described the sky all the time, and I kept wondering how he saw the world.
+I started reading <a class="vs vs-link" href="https://yalebooks.yale.edu/book/9780300209471/ever-yours/" target="_blank" rel="noopener" aria-expanded="false"><em>Ever Yours</em><span class="vs-pop" role="tooltip"><span class="vs-img"><img src="/work/dear-theo-assets/ever-yours-cover.webp" alt="Cover of Ever Yours: The Essential Letters, with a Van Gogh drawing of a man sowing a field under a page of his handwriting" loading="lazy"><span class="cap">Yale University Press, 2014 ↗</span></span></span></a>, Van Gogh's letters to his brother Theo. He described the sky all the time, and I kept wondering how he saw the world.
 
 They say copy the greats. Van Gogh did. In Paris he painted copies of <span class="vs" tabindex="0" role="button" aria-expanded="false">Hiroshige's woodblock prints<span class="vs-pop" role="tooltip"><span class="vs-img"><img src="/work/dear-theo-assets/copy-hiroshige.webp" alt="Hiroshige's woodblock print of a plum tree in a garden" loading="lazy"><span class="cap">Hiroshige, 1857</span></span><span class="to" aria-hidden="true">→</span><span class="vs-img"><img src="/work/dear-theo-assets/copy-vangogh-plum.webp" alt="Van Gogh's painted copy of the same plum tree, with a calligraphy border" loading="lazy"><span class="cap">Van Gogh, 1887</span></span></span></span><sup class="fn"><a href="#src-1" id="ref-1" aria-label="Source 1">1</a></sup>, and at the asylum in Saint-Rémy he made <span class="vs" tabindex="0" role="button" aria-expanded="false">twenty-one paintings after Millet<span class="vs-pop" role="tooltip"><span class="vs-img"><img src="/work/dear-theo-assets/copy-millet.webp" alt="Millet's drawing of a child taking her first steps toward her father" loading="lazy"><span class="cap">Millet, c. 1859–66</span></span><span class="to" aria-hidden="true">→</span><span class="vs-img"><img src="/work/dear-theo-assets/copy-vangogh-steps.webp" alt="Van Gogh's painting of the same scene, in color" loading="lazy"><span class="cap">Van Gogh, 1890</span></span></span></span>.<sup class="fn"><a href="#src-2" id="ref-2" aria-label="Source 2">2</a></sup> He told Theo it was "not purely and simply copying."<sup class="fn"><a href="#src-3" id="ref-3" aria-label="Source 3">3</a></sup> He was translating them into color.
 
@@ -126,7 +126,8 @@ As I'm figuring out a lot in my own life right now, reading about his journey re
     vs.addEventListener('focus', () => { vs._f = Date.now(); show(vs, true); });
     vs.addEventListener('blur', () => show(vs, false));
     document.addEventListener('pointerdown', (e) => { if (!vs.contains(e.target)) show(vs, false); });
-    vs.addEventListener('click', (e) => { e.preventDefault(); const on = Date.now() - (vs._f || 0) < 400 ? true : !vs.classList.contains('open'); all.forEach((o) => o !== vs && show(o, false)); show(vs, on); });
+    vs.addEventListener('pointerdown', (e) => { vs._pt = e.pointerType; });
+    vs.addEventListener('click', (e) => { if (vs.tagName === 'A' && (vs._pt === 'mouse' || (vs.classList.contains('open') && Date.now() - (vs._f || 0) >= 400))) return; e.preventDefault(); const on = Date.now() - (vs._f || 0) < 400 ? true : !vs.classList.contains('open'); all.forEach((o) => o !== vs && show(o, false)); show(vs, on); });
     vs.addEventListener('keydown', (e) => { if (e.key === 'Escape') { show(vs, false); vs.blur(); } });
     vs.querySelectorAll('img').forEach((im) => im.addEventListener('load', () => vs.classList.contains('open') && place(vs)));
   });

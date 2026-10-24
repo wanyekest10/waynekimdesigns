@@ -647,6 +647,8 @@ article .pair-fit img { max-width: none; }
    (Dear Theo: Hiroshige and Millet beside Van Gogh's versions). Positioned by script so it stays on screen. */
 .vs { position: relative; text-decoration: underline dotted var(--gray); text-underline-offset: 4px; text-decoration-thickness: 1px; cursor: default; outline: none; }
 .vs:hover, .vs:focus-visible, .vs.open { text-decoration-color: var(--ink); }
+a.vs-link { color: inherit; cursor: pointer; }
+@media (max-width: 640px) { a.vs-link .vs-pop img, article a.vs-link .vs-pop img { width: auto; height: 240px; } a.vs-link .vs-pop .vs-img { flex: 0 0 auto; } }
 .vs:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 .vs-pop { position: fixed; z-index: 50; display: flex; align-items: flex-start; gap: 12px; padding: 12px; background: var(--paper, #fff);
   border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,.12); opacity: 0; visibility: hidden;
