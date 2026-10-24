@@ -16,7 +16,6 @@ heroVideo: "/work/bss-assets/playtest.mp4"
 heroPoster: "/work/bss-assets/playtest-poster.jpg"
 jumps:
   - { label: "Skip to the prototypes", to: "prototyping-my-way-there" }
-  - { label: "Watch the full film", to: "film" }
 short:
   - { lead: "The question.", text: "Most adults stop drawing not for lack of skill, but because somewhere around 9 to 13 they decided they weren't allowed to be bad at it. Can permission be designed?" }
   - { lead: "What I built.", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software. The one that worked was a deck of cards." }
