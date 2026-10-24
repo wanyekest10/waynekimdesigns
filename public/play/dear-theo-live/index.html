@@ -55,7 +55,12 @@
   @media (prefers-reduced-motion: reduce) { .prompt.idle span.cur { animation:none; } }
   .meta { display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; font:400 12px/1.4 var(--mono); color:var(--gray); }
   .meta .spacer { flex:1; }
-  .painting { font:500 14px/1.4 var(--sans); color:var(--ink); }
+  .painting { font:400 14px/1.4 var(--sans); color:var(--gray); }
+  .painting b { font-weight:400; color:var(--ink); }
+  #who, #next { display:none !important; }
+  /* quiet text toggles, so his words stay the loudest thing under the painting */
+  button.quiet { font:400 13px/1.4 var(--sans); cursor:pointer; border:0; background:none; padding:4px 0; color:var(--gray); }
+  button.quiet:hover { color:var(--ink); }
   button.pill { font:500 13px/1.4 var(--sans); cursor:pointer; border-radius:999px; padding:6px 12px; border:1px solid var(--rule); background:var(--paper); color:var(--ink); }
   button.pill[aria-pressed="true"] { background:var(--ink); border-color:var(--ink); color:var(--paper); }
   button.pill:hover { border-color:var(--ink); }
@@ -79,8 +84,8 @@
       <span id="who"></span>
       <span class="spacer"></span>
       <span id="stats"></span>
-      <button class="pill" id="letters" aria-pressed="true">Color notes</button>
-      <button class="pill" id="view" hidden>See the mosaic</button>
+      <button class="quiet" id="letters" aria-pressed="true">Color notes: on</button>
+      <button class="quiet" id="view" hidden>See the mosaic</button>
       <button class="pill" id="next">Next painting</button>
       <button class="pill" id="done">Done</button>
     </div>
@@ -212,7 +217,7 @@ function setPainting(i){
   for(const L of LABELS) if(!L.out) L.out=performance.now();
   PAINTED.length=0; MASKS.length=0; paletteEl.textContent='';
   total=joinLines(current.lines).length;
-  paintingEl.textContent=current.title+', '+current.year; whoEl.textContent='Vincent '+current.who; statsEl.textContent='';
+  paintingEl.innerHTML='<b>'+current.title+'</b> · '+current.who.replace(/^to [^·]*· /,''); whoEl.textContent='Vincent '+current.who; statsEl.textContent='';
   [...stripEl.children].forEach((b,k)=>b.setAttribute('aria-current',k===pi));
   buildPainting(); setLine();
 }
@@ -299,7 +304,7 @@ if(coarse) document.getElementById('hint').textContent='Tap here and start typin
 document.getElementById('next').addEventListener('click',()=>{ setPainting(pi+1); focusKeys(); });
 viewBtn.addEventListener('click',()=>{ showPainting=!showPainting; viewBtn.textContent=showPainting?'See the mosaic':'See the painting'; focusKeys(); });
 let showNotes=true; const notesBtn=document.getElementById('letters');
-notesBtn.addEventListener('click',()=>{ showNotes=!showNotes; notesBtn.setAttribute('aria-pressed',showNotes); });
+notesBtn.addEventListener('click',()=>{ showNotes=!showNotes; notesBtn.setAttribute('aria-pressed',showNotes); notesBtn.textContent='Color notes: '+(showNotes?'on':'off'); });
 
 // ---------- drawing ----------
 let last=0;
@@ -336,7 +341,7 @@ function draw(now){
     ctx.fillStyle=css(c); ctx.fillRect((i%cols)*ts,Math.floor(i/cols)*ts,ts,ts);
   }
   // grout
-  const pe=ease(painting); ctx.fillStyle=`rgba(0,0,0,${0.10*(1-Math.min(1,pe*2.5))})`;
+  const pe=ease(painting); ctx.fillStyle=`rgba(0,0,0,${0.055*(1-Math.min(1,pe*2.5))})`;
   for(let r0=1;r0<rows;r0++) ctx.fillRect(0,r0*ts-0.25,W,0.5);
   for(let c0=1;c0<cols;c0++) ctx.fillRect(c0*ts-0.25,0,0.5,H);
   // colour notes, written in one letter at a time, fading like ink when the page turns
