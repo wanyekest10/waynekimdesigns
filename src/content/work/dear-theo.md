@@ -71,7 +71,7 @@ The [immersive Van Gogh shows](https://lareviewofbooks.org/article/van-gogh-expe
   <span class="to" aria-hidden="true">→</span>
   <div class="step"><span class="n">02</span><b>Lay</b><small>Every correct letter lays down more tiles. Color words fill in the part of the painting they name.</small></div>
   <span class="to" aria-hidden="true">→</span>
-  <div class="step focal"><span class="n">03</span><b>Reveal</b><small>At "Ever yours, Vincent," the mosaic gives way to the painting.</small></div>
+  <div class="step focal"><span class="n">03</span><b>Reveal</b><small>When you finish the passage, the mosaic sharpens into the painting.</small></div>
 </div>
 
 Five paintings, each paired with a passage from his letters to Theo. Pick any of them from the row under the picture.
