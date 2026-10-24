@@ -90,22 +90,22 @@
 (() => {
 const IMG={'1-starry-night':'/work/dear-theo-assets/starry-night.webp','2-starry-night-over-the-rhone':'/work/dear-theo-assets/rhone.webp','5-the-bedroom':'/work/dear-theo-assets/bedroom.webp','6-sunflowers':'/work/dear-theo-assets/sunflowers.webp','7-wheatfield-with-crows':'/work/dear-theo-assets/wheatfield.webp'};
 const PAINTINGS=[
- {img:'5-the-bedroom', title:'The Bedroom', year:'1888', who:'to Theo · Arles, 16 October 1888',
-  lines:["The walls are pale violet. The floor is of red tiles.","The wood of the bed and chairs is the yellow of fresh butter,","In a word, looking at the picture ought to rest the brain, or rather the imagination."]},
- {img:'1-starry-night', title:'The Starry Night', year:'1889', who:'to Theo · Saint-Rémy, June 1889',
+ {img:'5-the-bedroom', title:'The Bedroom', year:'1888', who:'to Theo · Arles, 16 October 1888', hi:'My dear Theo,',
+  lines:["The walls are pale violet. The floor is of red tiles.","The wood of the bed and chairs is the yellow of fresh butter, the sheets and pillows very light greenish-citron.","The coverlet scarlet. The window green."]},
+ {img:'1-starry-night', title:'The Starry Night', year:'1889', who:'to Theo · Saint-Rémy, June 1889', hi:'My dear Theo,',
   lines:["This morning I saw the countryside from my window a long time before sunrise, with nothing but the morning star, which looked very big."]},
- {img:'7-wheatfield-with-crows', title:'Wheatfield with Crows', year:'1890', who:'to Theo and Jo · Auvers, July 1890',
+ {img:'7-wheatfield-with-crows', title:'Wheatfield with Crows', year:'1890', who:'to Theo and Jo · Auvers, July 1890', hi:'Dear brother and sister,',
   lines:["They are vast stretches of corn under troubled skies,","I did not have to go out of my way very much in order to try to express sadness and extreme loneliness.","I'm fairly sure that these canvases will tell you what I cannot say in words."]},
- {img:'6-sunflowers', title:'Sunflowers', year:'1888', who:'to Theo · Arles, August 1888',
-  lines:["I am hard at it, painting with the enthusiasm of a Marseillais eating bouillabaisse,","which won't surprise you when you know that what I'm at is the painting of some sunflowers."]},
- {img:'2-starry-night-over-the-rhone', title:'Starry Night Over the Rhône', year:'1888', who:'to Theo · Arles, July 1888',
-  lines:["But to look at the stars always makes me dream, as simply as I dream over the black dots of a map representing towns and villages.","Why, I ask myself, should the shining dots of the sky not be as accessible as the black dots on the map of France?"]}
+ {img:'6-sunflowers', title:'Sunflowers', year:'1888', who:'to Theo · Arles, August 1888', hi:'My dear Theo,',
+  lines:["I am hard at it, painting with the enthusiasm of a Marseillais eating bouillabaisse,","which won't surprise you when you know that what I'm at is the painting of some big sunflowers."]},
+ {img:'2-starry-night-over-the-rhone', title:'Starry Night Over the Rhône', year:'1888', who:'to Theo · Arles, 28 September 1888', hi:'My dear Theo,',
+  lines:["The sky is aquamarine, the water is royal blue, the ground is mauve.","The town is blue and purple.","The gas is yellow and the reflections are russet gold descending down to green-bronze."]}
 ];
 // words that name a colour or a thing in the picture, and the colour to look for
 const HUE={SUNFLOWERS:'#e3b13a',BOUILLABAISSE:'#d77a33',RED:'#b3322b',GREEN:'#2f6e45',NIGHT:'#1d2b5e',COLOURED:'#e2a93b',DAY:'#e9cc6a',
  AQUAMARINE:'#3f8e9b',ROYAL:'#24429c',BLUE:'#24429c',WATER:'#1f3b85',MAUVE:'#6f5a86',STARS:'#efe39a',VIOLET:'#8f8fc4',TILES:'#b8643c',
  YELLOW:'#e7bf45',BUTTER:'#edcf63',WOOD:'#d49a3d',BED:'#d49a3d',CHAIRS:'#d6a948',WALLS:'#8f9ac8',FLOOR:'#b8643c',
- STAR:'#f3efd2',SKY:'#24429c',COUNTRYSIDE:'#3c5f6a',WINDOW:'#9cb6d6',CORN:'#d6a33b',SKIES:'#22336f',TROUBLED:'#1c2850'};
+ STAR:'#f3efd2',CITRON:'#dcd98c',GREENISH:'#c6d08e',SHEETS:'#d9dcae',PILLOWS:'#dfe1b8',COVERLET:'#b3322b',SCARLET:'#b8322a',TOWN:'#3b4a8a',PURPLE:'#5b4a8a',GAS:'#e9c35a',REFLECTIONS:'#c99a3e',RUSSET:'#a8692e',GOLD:'#d4a23a',BRONZE:'#5c6a3e',GROUND:'#6f5a86',SKY:'#24429c',COUNTRYSIDE:'#3c5f6a',WINDOW:'#9cb6d6',CORN:'#d6a33b',SKIES:'#22336f',TROUBLED:'#1c2850'};
 const SPELL={};
 // each colour word paints its part of the picture (default). Other versions kept for reference:
 // ?mode=tiles (word spelled in tiles only) | passage (word marked in the line + a palette) | all
@@ -223,7 +223,7 @@ const joinLines=ls=>ls.reduce((a,l)=>!a?l:(/,$/.test(a)&&/^[A-Z]/.test(l)?a+' �
 function setLine(){
   line=joinLines(current.lines); pos=0;
   promptEl.textContent='';
-  const sal=document.createElement('div'); sal.className='sal'; sal.textContent='My dear Theo,'; promptEl.appendChild(sal);
+  const sal=document.createElement('div'); sal.className='sal'; sal.textContent=current.hi||'My dear Theo,'; promptEl.appendChild(sal);
   const body=document.createElement('div'); body.className='body'; promptEl.appendChild(body);
   spans=[...line].map(ch=>{ const sp=document.createElement('span'); sp.textContent=ch; body.appendChild(sp); return sp; });
   const sig=document.createElement('div'); sig.className='sig'; sig.id='sig'; sig.textContent='Ever yours, Vincent.'; promptEl.appendChild(sig);
