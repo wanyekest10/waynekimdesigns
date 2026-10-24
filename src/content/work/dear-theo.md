@@ -74,7 +74,7 @@ The [immersive Van Gogh shows](https://lareviewofbooks.org/article/van-gogh-expe
   <div class="step focal"><span class="n">03</span><b>Reveal</b><small>When you finish the passage, the mosaic sharpens into the painting.</small></div>
 </div>
 
-Five paintings, each paired with a passage from his letters to Theo. Pick any of them from the row under the picture.
+Five paintings, each paired with a passage from his letters to Theo. Pick any of them from the row under the picture. You only type the letters: spaces and punctuation fill themselves in, and a slip onto a neighboring key still counts. The attention stays on his words, not on typing them perfectly.
 
 ## Sources
 
