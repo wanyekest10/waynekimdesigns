@@ -695,6 +695,14 @@ article ol.refs a[href^="#ref"] { text-decoration: none; color: var(--gray); }
   .my-role.fold > summary::after, .my-role.fold[open] > summary::after { content: none; }
   .my-role.fold .fold-line, .my-role.fold .fold-facts { display: none; }
 }
+/* Case studies that fold the role on desktop too (the sidebar already has the facts) */
+@media (min-width: 601px) {
+  .my-role.fold.fold-desk > summary { pointer-events: auto; display: grid; padding: 14px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .my-role.fold.fold-desk[open] > summary { border-bottom: 0; }
+  .my-role.fold.fold-desk > summary .short-tag { margin-bottom: 0; }
+  .my-role.fold.fold-desk > summary::after { content: '+'; }
+  .my-role.fold.fold-desk[open] > summary::after { content: '−'; }
+}
 
 /* Play pieces with a live "Try it": the piece comes first, right under the title, in place of the hero. */
 .try-first { margin-top: 32px; }

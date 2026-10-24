@@ -49,7 +49,7 @@ if (d.tryIt) toc.unshift({ depth: 2, slug: 'try-it', text: 'Try it', num: '01', 
         )}
         {contrib.length > 0 && (
           collapseRole ? (
-            <details class="my-role fold" open>
+            <details class:list={["my-role", "fold", { "fold-desk": d.foldRole }]} open>
               <summary><span class="short-tag">My role and contributions</span>{foldLine && <span class="fold-line">{foldLine}</span>}</summary>
               <dl>{contrib.map((r: any) => <div class:list={{ shared: r.shared, impact: r.impact }}><dt>{r.skill}</dt><dd>{r.text}</dd></div>)}</dl>
               {foldFacts.length > 0 && (
@@ -67,7 +67,7 @@ if (d.tryIt) toc.unshift({ depth: 2, slug: 'try-it', text: 'Try it', num: '01', 
         )}
     </div>
 
-    {collapseRole && <script is:inline set:html={"(() => { const d = document.querySelector('details.my-role.fold'); if (d && matchMedia('(max-width: 600px)').matches) d.open = false; })();"} />}
+    {collapseRole && <script is:inline set:html={"(() => { const d = document.querySelector('details.my-role.fold'); if (d && (d.classList.contains('fold-desk') || matchMedia('(max-width: 600px)').matches)) d.open = false; })();"} />}
 
     <aside class="cs-side">
       {facts.length > 0 && (
