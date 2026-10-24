@@ -28,4 +28,10 @@ const experiments = defineCollection({
   }),
 });
 
-export const collections = { work, experiments };
+// Preview: drafts of case studies, shown only at /preview/<slug>/ and never listed anywhere.
+const preview = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/preview' }),
+  schema: z.object({ title: z.string(), headline: z.string(), summary: z.string(), hero: z.string(), heroAlt: z.string() }).passthrough(),
+});
+
+export const collections = { work, experiments, preview };

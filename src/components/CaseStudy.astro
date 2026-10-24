@@ -4,7 +4,7 @@ import MoreProjects from './MoreProjects.astro';
 import Base from '../layouts/Base.astro';
 import { render } from 'astro:content';
 import { linkPeople } from '../data/people';
-const { w, collapseRole = true } = Astro.props;
+const { w, collapseRole = true, noindex = false } = Astro.props;
 const { Content, headings } = await render(w);
 const d = w.data as any;
 const beats = d.short ?? [];
@@ -23,7 +23,7 @@ const toc = headings
   .map((h) => ({ ...h, num: h.depth === 2 ? String(++n).padStart(2, '0') : null, label: (d0.tocLabels ?? {})[h.text] ?? h.text.split(':')[0] }));
 if (d.tryIt) toc.unshift({ depth: 2, slug: 'try-it', text: 'Try it', num: '01', label: 'Try it' } as any);
 ---
-<Base wide title={`${d.title}, Wayne Kim`} description={d.summary} image={d.og ?? d.heroPoster ?? d.hero} imageAlt={d.ogAlt ?? d.heroAlt} prompt="Working on something like this?">
+<Base wide noindex={noindex} title={`${d.title}, Wayne Kim`} description={d.summary} image={d.og ?? d.heroPoster ?? d.hero} imageAlt={d.ogAlt ?? d.heroAlt} prompt="Working on something like this?">
   <div class:list={["cs", { "no-hero": d.hideHero }]}>
     <header class="cs-top" id="overview">
       <h1>{d.title}</h1>

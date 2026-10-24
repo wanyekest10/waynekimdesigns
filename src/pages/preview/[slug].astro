@@ -1,0 +1,10 @@
+---
+// Drafts of case studies for review. Not linked anywhere, and kept out of search.
+import CaseStudy from '../../components/CaseStudy.astro';
+import { getCollection } from 'astro:content';
+export async function getStaticPaths() {
+  return (await getCollection('preview')).map((w) => ({ params: { slug: w.id }, props: { w } }));
+}
+const { w } = Astro.props;
+---
+<CaseStudy w={w} noindex />
