@@ -86,6 +86,7 @@ He's known for his brushstrokes. Here you type, so the painting comes in as pixe
 <li>His letter to Theo on copying Millet, January 1890: <a href="https://www.webexhibits.org/vangogh/letter/20/623.htm">WebExhibits</a>.</li>
 <li>Letters to Theo, in Johanna van Gogh-Bonger's translation: <a href="https://www.webexhibits.org/vangogh/">WebExhibits</a>.</li>
 <li>The letter in the P.S., Isleworth, 18 August 1876: <a href="https://www.webexhibits.org/vangogh/letter/4/073.htm">WebExhibits</a>.</li>
+<li>Its station line, in the newer translation: <a href="https://www.vangoghletters.org/vg/letters/let088/letter.html">Van Gogh Letters</a> (Van Gogh Museum and Huygens ING).</li>
 <li><em>Ever Yours: The Essential Letters</em>: <a href="https://yalebooks.yale.edu/book/9780300209471/ever-yours/">Yale University Press</a>, 2014.</li>
 <li>Paintings and prints: <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.</li>
 <li>Comparison images: <a href="https://www.vangoghmuseum.nl/en/collection/s0115V1962">Van Gogh Museum</a>, <a href="https://www.clevelandart.org/art/1962.407">Cleveland Museum of Art</a> and <a href="https://www.metmuseum.org/art/collection/search/436526">The Met</a>.</li>
@@ -104,7 +105,7 @@ My favorite passage isn't about a painting at all. It's from August 1876, years 
 <p>My dear Theo,</p>
 <p>Yesterday, I went to see Gladwell, who is home for a few days. A terrible blow has struck them, his young sister, so full of life, with dark eyes and hair, had fallen from a horse at Blackheath; they found her unconscious and she died five hours later, without regaining consciousness. She was seventeen years old…</p>
 <p>They had all just come back from the funeral; the whole household was in mourning.</p>
-<p>…So then, <em>we walked up and down the platform of the station, an ordinary world, but we were animated by thoughts that were not ordinary.</em> Such moments do not last long, and soon we had to part.</p>
+<p>…<em>So we walked back and forth on that station, in that everyday world, but with a feeling that was not everyday.</em> Such moments do not last long, and soon we had to part.</p>
 <p>Your loving brother,<br>Vincent</p>
 <p class="cite">Vincent to Theo, Isleworth, 18 August 1876. He was 23.</p>
 </blockquote>
