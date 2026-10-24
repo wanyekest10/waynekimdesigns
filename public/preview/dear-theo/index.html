@@ -34,16 +34,7 @@
 <main>
   <div class="tag">Test page · not linked from the site</div>
   <h1>Dear Theo, Ever Yours</h1>
-  <p>Two things to try here. On a phone: tap the picture and type. The painting and the line you're typing should both stay in view above the keyboard. Tap Done or close the keyboard to go back.</p>
-  <p>And the colour words, in three versions. Type the first line of The Bedroom ("pale violet", "red tiles") to see the difference.</p>
-
-  <nav class="modes" id="modes" aria-label="Colour word version">
-    <a href="?mode=tiles" data-mode="tiles">As live</a>
-    <a href="?mode=passage" data-mode="passage">A · In the passage</a>
-    <a href="?mode=paint" data-mode="paint">B · Paints its part</a>
-    <a href="?mode=all" data-mode="all">A + B</a>
-  </nav>
-  <p class="note" id="note"></p>
+  <p>The whole passage is on the page at once, between "My dear Theo," and "Ever yours, Vincent." You write the middle. Try it on a laptop and on your phone.</p>
 
   <figure class="embed live ever">
     <iframe id="frame" title="Dear Theo, Ever Yours, test version"></iframe>
@@ -63,9 +54,9 @@
   };
   const mode = new URLSearchParams(location.search).get('mode') || 'tiles';
   const frame = document.getElementById('frame');
-  frame.src = '/play/dear-theo-live-test/?mode=' + encodeURIComponent(mode);
-  document.getElementById('note').textContent = NOTES[mode] || NOTES.tiles;
-  document.querySelectorAll('#modes a').forEach(a => a.setAttribute('aria-current', a.dataset.mode === mode));
+  frame.src = '/play/dear-theo-live-test/';
+  
+  
 
   // Phone typing mode, page side: the piece says when the keyboard is up; pin the frame to what's visible.
   const fig = frame.closest('figure'), vv = window.visualViewport;
