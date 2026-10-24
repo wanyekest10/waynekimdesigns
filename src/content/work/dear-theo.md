@@ -95,7 +95,7 @@ His letters, Johanna van Gogh-Bonger's translation, and every painting and print
 
 ## P.S. A letter I keep coming back to
 
-My favorite passage isn't about a painting at all. It's from a letter in August 1876, years before he started painting.
+My favorite passage isn't about a painting at all. It's from August 1876, years before he started painting, and it's strangely poignant, yet as observant as anything he painted.
 
 <details class="fold-section">
 <summary>Read the letter</summary>
