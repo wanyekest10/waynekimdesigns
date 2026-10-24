@@ -50,7 +50,7 @@ Research turned a quiet support problem into a leadership commitment, weeks befo
 
 <div class="stats">
   <div class="focal"><span class="k">For the business</span><b>90%+</b><p>of projected annual revenue kept</p></div>
-  <div><span class="k">For the business</span><b>150 → 65</b><p>partners filing usability tickets, out of 300</p></div>
+  <div><span class="k">For the business</span><b>150 → 65</b><p>partners filing usability tickets, out of 330+</p></div>
   <div><span class="k">For partners</span><b>95% → 99%</b><p>portal reliability</p></div>
   <div><span class="k">For partners</span><b>15 → 2 min</b><p>for a weekly export task (estimated)</p></div>
 </div>

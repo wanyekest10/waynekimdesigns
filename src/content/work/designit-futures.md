@@ -104,7 +104,7 @@ We turned the systems into illustrated vignettes set 100 years out. They were me
 
 ## Beyond the concept
 
-Grounded in agriculture, the point of view still translated across domains. In three weeks, it:
+Grounded in agriculture, the point of view still translated across domains. After the three-week sprint, it:
 
 - Opened conversations with new client domains: CPG, pharma, and the public sector.
 - Fed discussions with Los Angeles World Airports about a new employee experience, app, and brand ahead of the FIFA World Cup and the Olympic Games.

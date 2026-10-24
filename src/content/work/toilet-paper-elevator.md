@@ -27,7 +27,7 @@ skills: [Physical computing, Fabrication, Interaction design]
 contributions:
   - { skill: "Physical computing", text: "A sleeve with a hall effect sensor that counts every square, on an Arduino" }
   - { skill: "Fabrication", text: "Modeled the sleeve and screen mount in Fusion 360 and printed them on a Prusa" }
-  - { skill: "Interaction design", text: "Designed the state machine and screens that turn the count into an elevator climb past LA landmarks" }
+  - { skill: "Interaction design", text: "Designed the state machine and screens that turn the count into an elevator climb past landmarks around the world" }
 facts:
   - { label: "Project", value: "Personal project" }
   - { label: "Role", value: "Designer and builder, solo" }
