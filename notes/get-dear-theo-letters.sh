@@ -3,7 +3,7 @@
 # into ~/Downloads/portfolio-rebuild/dear-theo-letters/ for the Dear Theo reel.
 set -e
 d=~/Downloads/portfolio-rebuild/dear-theo-letters; mkdir -p "$d"
-get() { printf '%s\n' "$1"; curl -sSfL -A "Mozilla/5.0" "https://iiif.micr.io/$2/full/1600,/0/default.jpg" -o "$d/$1"; }
+get() { printf '%s\n' "$1"; curl -sSfL -A "Mozilla/5.0" "https://iiif.micr.io/$2/full/1280,/0/default.jpg" -o "$d/$1"; }
 get bedroom-letter.jpg       mLXNw
 get yellow-house-letter.jpg  pUVaI
 get cicada-letter.jpg        akJLF
