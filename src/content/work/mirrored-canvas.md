@@ -21,8 +21,8 @@ short:
   - { lead: "What I learned.", text: "Creative coding let us prototype play fast, and absurdity turned out to be contagious: ridiculous prototypes gave the whole room permission to play." }
 skills: [Creative coding]
 contributions:
-  - { skill: "Creative coding", text: "Turned face tracking and voice into live projected visuals with FaceOSC and Processing" }
-  - { skill: "With Yase", text: "The concept and the translucent canvas installation", shared: true }
+  - { skill: "Creative coding", text: "Face tracking with FaceOSC and Processing" }
+  - { skill: "With Yase", text: "The concept, voice, and the canvas installation", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Role", value: "Face tracking and live visuals" }
