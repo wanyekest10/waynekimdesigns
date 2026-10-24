@@ -94,7 +94,7 @@ He's known for his brushstrokes. Here you type, so the painting comes in as pixe
 <li>Comparison images: <a href="https://www.vangoghmuseum.nl/en/collection/s0115V1962">Van Gogh Museum</a>, <a href="https://www.clevelandart.org/art/1962.407">Cleveland Museum of Art</a> and <a href="https://www.metmuseum.org/art/collection/search/436526">The Met</a>.</li>
 </ul>
 
-His letters, the 1914 translation, and every painting and print here are in the public domain.
+His letters, Johanna van Gogh-Bonger's translation, and every painting and print here are in the public domain.
 
 ## P.S. A letter I keep coming back to
 
