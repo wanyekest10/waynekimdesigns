@@ -9,6 +9,7 @@
   /* Dear Theo, Ever Yours: type Van Gogh's words about a painting, and the painting is laid down as a mosaic. */
   @font-face { font-family: 'Instrument Sans'; src: url('/fonts/instrument-sans-latin-400-normal.woff2') format('woff2'); font-weight: 400; }
   @font-face { font-family: 'Instrument Sans'; src: url('/fonts/instrument-sans-latin-500-normal.woff2') format('woff2'); font-weight: 500; }
+  @font-face { font-family: 'Instrument Sans'; src: url('/fonts/instrument-sans-latin-400-italic.woff2') format('woff2'); font-weight: 400; font-style: italic; }
   @font-face { font-family: 'Geist Mono'; src: url('/fonts/geist-mono-latin-400-normal.woff2') format('woff2'); font-weight: 400; }
   :root { --ink:#141414; --gray:#6E6E6B; --faint:#B4B4AF; --rule:#E6E6E3; --paper:#FFFFFF; --accent:#002BBA; --miss:#C8402F;
     --sans:"Instrument Sans", system-ui, sans-serif; --mono:"Geist Mono", ui-monospace, monospace; color-scheme: light; }
@@ -40,6 +41,7 @@
   .strip img { height:40px; width:auto; display:block; border-radius:1px; }
   .type { flex:0 0 auto; display:grid; gap:8px; cursor:text; }
   .prompt { font:400 clamp(16px,2.1vw,21px)/1.45 var(--sans); margin:0; position:relative; overflow:hidden; max-height:10.5em; }
+  .prompt { font-style:italic; }   /* his words, so set in italics, like a quotation */
   .prompt .sal, .prompt .sig { color:var(--faint); transition:color .5s; }
   .prompt .sal { margin-bottom:.3em; }
   .prompt .sig { margin-top:.3em; }
