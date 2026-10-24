@@ -76,6 +76,8 @@ The [immersive Van Gogh shows](https://lareviewofbooks.org/article/van-gogh-expe
 
 Five paintings, each paired with a passage from his letters to Theo. Pick any of them from the row under the picture. You only type the letters: spaces and punctuation fill themselves in, and a slip onto a neighboring key still counts. The attention stays on his words, not on typing them perfectly.
 
+He's known for his brushstrokes. Here you type, so the painting comes in as pixels, until his strokes show through at the end.
+
 ## Sources
 
 <ol class="refs">
