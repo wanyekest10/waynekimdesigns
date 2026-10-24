@@ -19,11 +19,12 @@ const { items } = Astro.props;
   ))}
 </div>
 <script>
-  // Hover loops load and play only while hovered, and only where a mouse can hover.
+  // Hover loops load ahead and play while hovered, only where a mouse can hover (phones never load them).
   if (matchMedia('(hover: hover)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll<HTMLAnchorElement>('.card').forEach((card) => {
       const v = card.querySelector<HTMLVideoElement>('.card-vid');
       if (!v) return;
+      v.preload = 'auto';   // load ahead on desktop, so the loop starts the moment you hover
       card.addEventListener('mouseenter', () => { v.play().then(() => card.classList.add('playing')).catch(() => {}); });
       card.addEventListener('mouseleave', () => { v.pause(); card.classList.remove('playing'); });
     });
