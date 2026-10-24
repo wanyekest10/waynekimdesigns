@@ -81,12 +81,20 @@ He's known for his brushstrokes. Here you type, so the painting comes in as pixe
 ## Sources
 
 <ol class="refs">
-<li id="src-1">On his copies after Hiroshige: the <a href="https://www.vangoghmuseum.nl/en/japanese-prints/person/33202">Van Gogh Museum</a>. <a href="#ref-1" aria-label="Back to the text">↩</a></li>
-<li id="src-2">On his twenty-one copies after Millet at Saint-Rémy: <a href="https://www.metmuseum.org/art/collection/search/436526">The Met</a>. <a href="#ref-2" aria-label="Back to the text">↩</a></li>
-<li id="src-3">His <a href="https://www.webexhibits.org/vangogh/letter/20/623.htm">letter to Theo on copying Millet, January 1890</a>. <a href="#ref-3" aria-label="Back to the text">↩</a></li>
+<li id="src-1">His copies after Hiroshige: <a href="https://www.vangoghmuseum.nl/en/japanese-prints/person/33202">Van Gogh Museum</a>. <a href="#ref-1" aria-label="Back to the text">↩</a></li>
+<li id="src-2">His twenty-one copies after Millet at Saint-Rémy: <a href="https://www.metmuseum.org/art/collection/search/436526">The Met</a>. <a href="#ref-2" aria-label="Back to the text">↩</a></li>
+<li id="src-3">His letter to Theo on copying Millet, January 1890: <a href="https://www.webexhibits.org/vangogh/letter/20/623.htm">WebExhibits</a>. <a href="#ref-3" aria-label="Back to the text">↩</a></li>
 </ol>
 
-Letters to Theo in Johanna van Gogh-Bonger's translation, as published on [WebExhibits](https://www.webexhibits.org/vangogh/), including the [letter from Isleworth, 18 August 1876](https://www.webexhibits.org/vangogh/letter/4/073.htm). Paintings and prints are public domain, via [Wikimedia Commons](https://commons.wikimedia.org/); the comparisons above are from the [Van Gogh Museum](https://www.vangoghmuseum.nl/en/collection/s0115V1962), the [Cleveland Museum of Art](https://www.clevelandart.org/art/1962.407) and [The Met](https://www.metmuseum.org/art/collection/search/436526).
+<ul class="refs">
+<li>Letters to Theo, in Johanna van Gogh-Bonger's translation: <a href="https://www.webexhibits.org/vangogh/">WebExhibits</a>.</li>
+<li>The letter in the P.S., Isleworth, 18 August 1876: <a href="https://www.webexhibits.org/vangogh/letter/4/073.htm">WebExhibits</a>.</li>
+<li><em>Ever Yours: The Essential Letters</em>: <a href="https://yalebooks.yale.edu/book/9780300209471/ever-yours/">Yale University Press</a>, 2014.</li>
+<li>Paintings and prints: <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.</li>
+<li>Comparison images: <a href="https://www.vangoghmuseum.nl/en/collection/s0115V1962">Van Gogh Museum</a>, <a href="https://www.clevelandart.org/art/1962.407">Cleveland Museum of Art</a> and <a href="https://www.metmuseum.org/art/collection/search/436526">The Met</a>.</li>
+</ul>
+
+His letters, the 1914 translation, and every painting and print here are in the public domain.
 
 ## P.S. A letter I keep coming back to
 
