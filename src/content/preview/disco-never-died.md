@@ -69,7 +69,7 @@ It started as a grid of plain white squares. Then each square split into red, gr
 
 ## What came next
 
-<figure class="wide"><img src="/work/disco-assets/projected.webp" alt="The visuals projected large on a courtyard wall at night while people gather around a table of equipment"/><figcaption>[Caption to come: where and when was this?]</figcaption></figure>
+<figure class="wide"><img src="/work/disco-assets/projected.webp" alt="The visuals projected large on a courtyard wall at night while people gather around a table of equipment"/><figcaption>Projected on the walls after our class demo.</figcaption></figure>
 
 I love music, and learning to code this disco ball is what opened up VJing for me: making visuals live with the sound, to tell a story and create an atmosphere in the room.
 
