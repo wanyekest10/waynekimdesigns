@@ -22,6 +22,7 @@
   figure { margin:16px 0 0; }
   figure iframe { display:block; width:100%; aspect-ratio:1/1; border:0; background:#fff; }
   @media (max-width:640px) { figure iframe { aspect-ratio:3/5; } }
+  @media (min-width:641px) { figure iframe { max-height: calc(100vh - 60px); min-height: 520px; } }
   figcaption { font-size:14px; color:var(--gray); margin-top:10px; }
   .filler { margin-top:40px; color:var(--gray); }
 
@@ -83,6 +84,12 @@
     set(!!e.data.on);
   });
   if (vv) { vv.addEventListener('resize', fit); vv.addEventListener('scroll', fit); }
+  // Desktop: when you click in to type, bring the whole piece into view (painting and the passage)
+  addEventListener('message', e => {
+    if (e.source !== frame.contentWindow || !e.data || e.data.dt !== 'focus') return;
+    const r = frame.getBoundingClientRect(), top = 24;
+    if (r.top < top || r.bottom > innerHeight - 8) window.scrollBy({ top: r.top - Math.max(top, (innerHeight - r.height) / 2), behavior: 'smooth' });
+  });
 })();
 </script>
 </body>
