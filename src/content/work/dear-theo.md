@@ -82,6 +82,9 @@ Five paintings, each paired with a passage from his letters to Theo. Pick any of
 
 My favorite passage isn't about a painting at all. It's from a letter in August 1876, years before he started painting.
 
+<details class="fold-section">
+<summary>Read the letter</summary>
+
 <blockquote class="letter">
 <p>My dear Theo,</p>
 <p>Yesterday, I went to see Gladwell, who is home for a few days. A terrible blow has struck them, his young sister, so full of life, with dark eyes and hair, had fallen from a horse at Blackheath; they found her unconscious and she died five hours later, without regaining consciousness. She was seventeen years old…</p>
@@ -94,6 +97,8 @@ My favorite passage isn't about a painting at all. It's from a letter in August 
 This was before he was a painter, when he still hoped to become a preacher. But the habit was already there: paying close attention, then finding a way to say it. Later, he said it in paint.
 
 As I'm figuring out a lot in my own life right now, reading about his journey reminds me to continue to slow down and notice more as I find my own way to "paint."
+
+</details>
 
 ## Sources
 

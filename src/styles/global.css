@@ -697,3 +697,12 @@ article ol.refs a[href^="#ref"] { text-decoration: none; color: var(--gray); }
 .try-first > h2 { font: var(--h2); margin: 0 0 16px; scroll-margin-top: 88px; }
 .try-first > h2::before { content: '01'; font: var(--meta); color: var(--gray); margin-right: 14px; vertical-align: 2px; }
 .try-first figure.embed { margin-top: 0; }
+
+/* A section's optional part, folded away: a quiet "Read the letter +" row that opens in place. */
+details.fold-section { margin: 4px 0 8px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+details.fold-section > summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 14px 0; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); max-width: var(--measure); }
+details.fold-section > summary::-webkit-details-marker { display: none; }
+details.fold-section > summary::after { content: '+'; font: 400 18px/1 var(--sans); color: var(--gray); }
+details.fold-section[open] > summary::after { content: '−'; }
+details.fold-section > summary:hover, details.fold-section > summary:hover::after { color: var(--ink); }
+details.fold-section[open] { padding-bottom: 12px; }
