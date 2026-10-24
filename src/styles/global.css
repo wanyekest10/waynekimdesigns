@@ -667,7 +667,7 @@ sup.fn a { color: var(--accent); text-decoration: none; padding: 0 1px; }
 sup.fn a:hover { text-decoration: underline; }
 article ol.refs { list-style: decimal; padding-left: 1.4em; margin: 0 0 20px; }
 article ol.refs li, article ul.refs li { margin-bottom: 6px; }
-article ul.refs { list-style: none; padding-left: 1.4em; margin: 0 0 20px; }
+article ul.refs { list-style: none; padding-left: 0; margin: 0 0 20px; }
 article ol.refs li::marker { font: var(--meta); color: var(--gray); }
 article ol.refs li:target { background: #EEF1FB; border-radius: 3px; }
 article ol.refs a[href^="#ref"] { text-decoration: none; color: var(--gray); }
