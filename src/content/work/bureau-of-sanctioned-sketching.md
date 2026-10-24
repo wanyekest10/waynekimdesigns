@@ -16,7 +16,7 @@ heroVideo: "/work/bss-assets/playtest.mp4"
 heroPoster: "/work/bss-assets/playtest-poster.jpg"
 jumps:
   - { label: "Skip to the prototypes", to: "prototyping-my-way-there" }
-  - { label: "Skip to the game", to: "how-it-plays" }
+  - { label: "Watch the full film", to: "film" }
 short:
   - { lead: "The question.", text: "Most adults stop drawing not for lack of skill, but because somewhere around 9 to 13 they decided they weren't allowed to be bad at it. Can permission be designed?" }
   - { lead: "What I built.", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software. The one that worked was a deck of cards." }
@@ -35,13 +35,62 @@ facts:
   - { label: "Tools", value: "Card stock, Arduino, p5.js, motion tracking" }
 ---
 
-## Permission, not skill
+## How it plays
+
+Three card stacks, one minute, one shared sheet of paper. <a href="#film">Watch the full film ↓</a>
+
+<figure class="frame"><video src="/work/bss-assets/how-it-plays-3x2.mp4" poster="/work/bss-assets/how-it-plays-3x2-poster.jpg" autoplay muted loop playsinline></video></figure>
+
+<div class="flow" role="list" aria-label="How a round of BSS plays">
+  <div class="step"><span class="n">01</span><b>Pull one card from each stack</b><small>Draw, Using, While.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">02</span><b>Read them together</b><small>"The place you're in, eyes closed, having a conversation."</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step focal"><span class="n">03</span><b>Draw for one minute</b><small>Everyone at once, on one shared sheet.</small></div>
+  <span class="to" aria-hidden="true">→</span>
+  <div class="step"><span class="n">04</span><b>Look, laugh, pass</b><small>Then pull new cards.</small></div>
+</div>
+<p class="flow-note">↻ Repeat until someone writes their own card.</p>
+
+- **Draw** sets the subject: "the place you're in."
+- **Using** sets a physical limit: "your non-dominant hand," "eyes closed."
+- **While** sets a rule for the group: "having a conversation," "guide your neighbor's hand."
+
+The same deck works at three levels of closeness:
+
+<div class="cols3">
+  <div><h4>Strangers</h4><p>A low-stakes alternative to small talk.</p></div>
+  <div><h4>Colleagues</h4><p>Outside permission to be silly at work.</p></div>
+  <div><h4>Old friends</h4><p>The main event of the night.</p></div>
+</div>
+
+<figure class="pair">
+  <img src="/work/bss-assets/in-play.webp" alt="Cards for Draw, Using, and While on the table as someone draws with two fingers"/>
+  <img src="/work/bss-assets/deck-and-drawing.webp" alt="A player drawing next to the deck and loose cards"/>
+</figure>
+
+### Why a bureau
+
+Playful drawing fades in the places that run on forms: school, then work. Real bureaucracy gets compliance through fear. The Bureau keeps the structure, official cards and stamps and procedure, and drops the fear. People already follow official instructions without thinking. Here, those instructions say to draw.
+
+<figure class="pair">
+  <img src="/work/bss-assets/box-dieline.webp" alt="The flattened BSS box: 'Official permission to draw freely', a quick start of pull files, create directive, draw, play, repeat, and a warning that it may result in joy and creative wonder"/>
+  <img src="/work/bss-assets/bureau-card.webp" alt="A hand holding a card titled Official BSS position"/>
+  <figcaption>The box, flattened. Quick start: pull files, create directive, draw, play, repeat.</figcaption>
+</figure>
+
+## Why adults stop drawing
 
 Adults still want to play. They just stop believing they're allowed to, and drawing is often the first kind of play to go.
 
 I started with desk research. Erving Goffman's idea of <a href="https://en.wikipedia.org/wiki/The_Presentation_of_Self_in_Everyday_Life" target="_blank" rel="noopener">performed selves</a> explains why adults guard how they look in front of others. Johan Huizinga's <a href="https://en.wikipedia.org/wiki/Magic_circle_(games)" target="_blank" rel="noopener">magic circle</a> describes the agreed-upon space where play is allowed. Together they pointed me at the space that comes before play: permission.
 
-Then I talked to 14 people, adults aged 23 to 40, play designers, and therapists, and ran a drawing survey with 47 people. The block was rarely about skill.
+Then I asked people about it directly. The block was rarely about skill.
+
+<div class="stats">
+  <div><span class="k">Interviews</span><b>14</b><p>adults aged 23 to 40, play designers, and therapists</p></div>
+  <div><span class="k">Survey</span><b>47</b><p>people on when and why they stopped drawing</p></div>
+</div>
 
 > "I wouldn't really know where to start."
 >
@@ -107,7 +156,7 @@ I folded the best parts into one piece of software, Happy Accidents Studio: hand
 
 In playtests, it didn't work. The technology became the thing people paid attention to, and some people couldn't get past setting it up. So I went back through each prototype and asked what it had actually taught me.
 
-## What each prototype taught
+### What each prototype taught
 
 <table>
   <thead><tr><th>What I saw</th><th>The lesson</th><th>Became</th></tr></thead>
@@ -118,40 +167,6 @@ In playtests, it didn't work. The technology became the thing people paid attent
     <tr><td>Happy Accidents Studio</td><td class="feel">Technology gets in the way of starting</td><td>Cards</td></tr>
   </tbody>
 </table>
-
-## How it plays
-
-Three card stacks, one minute, one shared sheet of paper.
-
-<figure class="frame"><video src="/work/bss-assets/how-it-plays-3x2.mp4" poster="/work/bss-assets/how-it-plays-3x2-poster.jpg" autoplay muted loop playsinline></video></figure>
-
-<div class="flow" role="list" aria-label="How a round of BSS plays">
-  <div class="step"><span class="n">01</span><b>Pull one card from each stack</b><small>Draw, Using, While.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step"><span class="n">02</span><b>Read them together</b><small>"The place you're in, eyes closed, having a conversation."</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step focal"><span class="n">03</span><b>Draw for one minute</b><small>Everyone at once, on one shared sheet.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step"><span class="n">04</span><b>Look, laugh, pass</b><small>Then pull new cards.</small></div>
-</div>
-<p class="flow-note">↻ Repeat until someone writes their own card.</p>
-
-- **Draw** sets the subject: "the place you're in."
-- **Using** sets a physical limit: "your non-dominant hand," "eyes closed."
-- **While** sets a rule for the group: "having a conversation," "guide your neighbor's hand."
-
-The same deck works at three levels of closeness:
-
-<div class="cols3">
-  <div><h4>Strangers</h4><p>A low-stakes alternative to small talk.</p></div>
-  <div><h4>Colleagues</h4><p>Outside permission to be silly at work.</p></div>
-  <div><h4>Old friends</h4><p>The main event of the night.</p></div>
-</div>
-
-<figure class="pair">
-  <img src="/work/bss-assets/in-play.webp" alt="Cards for Draw, Using, and While on the table as someone draws with two fingers"/>
-  <img src="/work/bss-assets/deck-and-drawing.webp" alt="A player drawing next to the deck and loose cards"/>
-</figure>
 
 ## Playtesting
 
@@ -165,8 +180,7 @@ Players often forgot they were using cards at all. They were drawing and talking
 >
 > Playtester
 
-<figure class="pair keep">
-  <video src="/work/bss-assets/playtest.mp4" poster="/work/bss-assets/playtest-poster.jpg" autoplay muted loop playsinline></video>
+<figure class="frame">
   <img src="/work/bss-assets/playtest-cards.webp" alt="Players reaching across the table, pulling cards from the Draw, Using, and While stacks beside an hourglass while others draw"/>
 </figure>
 
@@ -189,16 +203,6 @@ That became the blank wildcards. They weren't in the plan. They came from watchi
 
 <figure class="frame"><img src="/work/bss-assets/group-play.webp" alt="Several people drawing at once around a table covered in BSS cards"/></figure>
 
-## Why a bureau
-
-Playful drawing fades in the places that run on forms: school, then work. Real bureaucracy gets compliance through fear. The Bureau keeps the structure, official cards and stamps and procedure, and drops the fear. People already follow official instructions without thinking. Here, those instructions say to draw.
-
-<figure class="pair">
-  <img src="/work/bss-assets/box-dieline.webp" alt="The flattened BSS box: 'Official permission to draw freely', a quick start of pull files, create directive, draw, play, repeat, and a warning that it may result in joy and creative wonder"/>
-  <img src="/work/bss-assets/bureau-card.webp" alt="A hand holding a card titled Official BSS position"/>
-  <figcaption>The box, flattened. Quick start: pull files, create directive, draw, play, repeat.</figcaption>
-</figure>
-
 ## Reflection
 
 **Permission is contagious.** Once one person draws badly in front of others, the whole table follows.
@@ -209,4 +213,4 @@ Playful drawing fades in the places that run on forms: school, then work. Real b
 
 <figure class="frame"><img src="/work/bss-assets/drawing-wall-3x2.webp" alt="A wall of playtest drawings pinned up in a grid"/><figcaption>Everything players drew during playtests.</figcaption></figure>
 
-<figure class="embed"><iframe src="https://player.vimeo.com/video/1101261294?dnt=1&title=0&byline=0&portrait=0" title="Bureau of Sanctioned Sketching, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
+<figure class="embed" id="film"><iframe src="https://player.vimeo.com/video/1101261294?dnt=1&title=0&byline=0&portrait=0" title="Bureau of Sanctioned Sketching, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
