@@ -7,7 +7,7 @@ order: 6.2
 year: "2025"
 featured: false
 label: "Prototyping and play design"
-summary: "A card game of playful constraints that gives adults permission to draw."
+summary: "A card game that gets adults drawing again."
 hero: "/work/bss-assets/deck.webp"
 heroAlt: "The Bureau of Sanctioned Sketching deck: a navy box with an octopus seal and three card stacks labeled Draw, Using, and While"
 card: "/work/bss-assets/card.webp"

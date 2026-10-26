@@ -4,29 +4,33 @@ import { getCollection } from 'astro:content';
 import Rows from '../../components/Rows.astro';
 import { archive } from '../../data/archive';
 const work = (await getCollection('work')).filter((w) => (w.data as any).listIn !== 'experiments').sort((a, b) => a.data.order - b.data.order);
-// Work done inside companies (on staff, or for Designit's clients), shown as its own group.
-const INDUSTRY = ['glorify-groups', 'raiseme-portal', 'designit-futures', 'facilitation'];
-const row = (w: any) => ({ name: w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/work/${w.id}/`, image: w.data.card ?? w.data.hero });
-const independent = work.filter((w) => !INDUSTRY.includes(w.id)).map(row);
-const industry = INDUSTRY.map((id) => work.find((w) => w.id === id)).filter(Boolean).map(row);
+// How far each project got.
+const STATUS: Record<string, string> = {
+  'living-fm': 'Prototype', 'toilet-paper-elevator': 'Prototype', 'room-tone': 'Prototype', 'disco-never-died': 'Performed live',
+  'linee': 'Prototype', 'bureau-of-sanctioned-sketching': 'Playtested', 'lume': 'Prototype',
+  'glorify-groups': 'Shipped', 'raiseme-portal': 'Shipped', 'designit-futures': 'Shipped', 'facilitation': 'Delivered',
+};
+const row = (w: any) => ({ status: STATUS[w.id], name: w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/work/${w.id}/`, image: w.data.card ?? w.data.hero });
+// Grouped by the kind of work, so each team finds theirs first. Shipped work sits next to prototypes.
+const GROUPS = [
+  { title: 'Physical products', sub: 'Objects and spaces, built with electronics and fabrication.', ids: ['toilet-paper-elevator', 'room-tone', 'linee', 'lume'] },
+  { title: 'Play and games', sub: 'Games and performances that get people playing.', ids: ['bureau-of-sanctioned-sketching', 'disco-never-died'] },
+  { title: 'AI and software', sub: 'Apps and AI, from prototypes to shipped products.', ids: ['living-fm', 'glorify-groups', 'raiseme-portal'] },
+  { title: 'Strategy and facilitation', sub: 'Helping teams decide what to make.', ids: ['designit-futures', 'facilitation'] },
+].map((g) => ({ ...g, rows: g.ids.map((id) => work.find((w) => w.id === id)).filter(Boolean).map(row) }));
 ---
 <Base title="Work, Wayne Kim" description="Case studies and projects by Wayne Kim, researcher and interaction designer.">
   <h1>Work</h1>
-  <p class="lead">Case studies in prototyping and research.</p>
+  <p class="lead">From first prototype to shipped product.</p>
+  {GROUPS.map((g) => (
   <section class="block">
     <div class="block-head">
-      <h2 class="section-title">Independent and CIID</h2>
-      <span class="block-sub">Prototypes I built on my own and at CIID.</span>
+      <h2 class="section-title">{g.title}</h2>
+      <span class="block-sub">{g.sub}</span>
     </div>
-    <Rows rows={independent} />
+    <Rows rows={g.rows} />
   </section>
-  <section class="block">
-    <div class="block-head">
-      <h2 class="section-title">Industry work</h2>
-      <span class="block-sub">On staff at Glorify and RaiseMe, and with clients at Designit.</span>
-    </div>
-    <Rows rows={industry} />
-  </section>
+  ))}
   {archive.length > 0 && (
   <section class="block">
     <div class="block-head">

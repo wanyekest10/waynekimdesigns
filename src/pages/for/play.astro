@@ -1,0 +1,279 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import Cards from '../../components/Cards.astro';
+import Rows from '../../components/Rows.astro';
+import CopyEmail from '../../components/CopyEmail.astro';
+import { experiments } from '../../data/experiments';
+// Unlisted homepage for toy, game, and play roles. Same page, different six. Not in search, not linked from the site.
+const pick = ['bureau-of-sanctioned-sketching', 'living-fm', 'mirrored-canvas', 'toilet-paper-elevator', 'disco-never-died', 'glorify-groups'];
+const all = await getCollection('work');
+const work = pick.map((id) => all.find((w) => w.id === id)!);
+const playRows = ['Dear Theo, Ever Yours', 'A Serious Fan', 'Tamer Kebap Eating Club'].map((n) => experiments.find((e: any) => e.name === n));
+
+const travel = [
+  { src: '/about/travel-camino-perdon.webp', alt: 'Five hikers in front of rusted metal pilgrim silhouettes on a hilltop', caption: 'Alto del Perdón' },
+  { src: '/about/travel-sunset.webp', alt: 'A pink and violet sunset in Bordeaux, people silhouetted walking across shallow water', caption: 'Bordeaux, France' },
+  { src: '/about/travel-chefchaouen.webp', alt: 'Wayne and his best friend above a hillside city of blue and white houses', caption: 'Chefchaouen, Morocco' },
+];
+
+const years = [
+  { when: "'25–now", what: 'Interaction designer, independent', note: 'Building calm tech prototypes, like <a href="/work/room-tone/">room_tone</a> and <a href="/work/toilet-paper-elevator/">Toilet Paper Elevator</a>.<br>Also, learning SolidWorks with cleantech startups at <a href="https://laincubator.org/">LACI</a>.' },
+  { when: "'24–'25", what: 'M.S. Interaction Design, CIID', film: [
+    { src: '/about/ciid-studio-night.webp', alt: 'Classmates around a long studio table covered in laptops, breadboards and wood prototypes', caption: 'Studio nights' },
+    { src: '/about/ciid-linee-show.webp', alt: 'Wayne laughing and reaching up to Linee on the wall, with two teammates beside him', caption: 'Linee, final show' },
+    { src: '/about/ciid-graduation.webp', alt: 'The class in flower crowns, holding up their certificates', caption: 'Graduation day' },
+  ], note: 'A year of research, build, test, repeat, prototyping across mediums.' },
+  { when: "'23–'24", what: 'Senior Design Researcher, Glorify', note: 'Built the research practice and led 3 researchers. Shaped Glorify Groups (1.8M+ users).' },
+  { when: "'21–'23", what: 'Design Researcher, Designit', note: 'Led research for Fortune 500 clients, plus <a href="/work/designit-futures/">speculative futures work</a>.' },
+  { when: "'20–'21", what: 'Independent designer and researcher', note: 'Projects for Y Combinator companies like Govly, Rally.Video, and Measured.' },
+  { when: "'17–'20", what: 'UX Strategist, RaiseMe', note: 'Research and strategy for a B2B2C edtech company.' },
+  { when: "'15–'17", what: 'Assistant Dean, Reed College', note: 'Designed the <a href="https://www.reed.edu/admission-aid/visit/multicultural-programs/junior-scholars.html">Junior Scholars program</a> from 0 to 1, then grew applicants 8x. Also ran the Senior Scholars program.' },
+  { egg: true },
+  { when: "'10–'14", what: 'B.A. Sociology, Colby College', note: 'Coursework in Philosophy and STS (Science, Technology, and Society).' },
+];
+---
+<Base title="Wayne Kim, Interaction designer" noindex>
+  <header class="intro">
+    <h1 class="brush" aria-label="Interaction designer">Interaction designer</h1>
+    <p class="method">I build prototypes to find out what people actually need,<br class="wide-br"> some purposeful, some playful.</p>
+    <dl class="nowbefore"><dt>Now</dt><dd>Prototyping calm tech · SolidWorks at LACI</dd><dt>Before</dt><dd>CIID · Glorify · Designit</dd></dl>
+    <p class="status"><span class="dot" aria-hidden="true"></span><span>Open to design technologist, prototyping, and product design roles</span></p>
+  </header>
+
+  <section id="work" class="block">
+    <h2 class="section-title">Selected work</h2>
+    <Cards items={work} />
+    <p class="more"><a href="/work/">See all work →</a></p>
+  </section>
+
+  <section id="play" class="block">
+    <div class="block-head">
+      <h2 class="section-title">Play</h2>
+      <span class="block-sub">Side quests and curiosities.</span>
+    </div>
+    <Rows rows={playRows} />
+    <p class="more"><a href="/play/">See all play →</a></p>
+  </section>
+
+  <section id="about" class="block">
+    <h2 class="section-title">About</h2>
+    <div class="about">
+      <p>I'm Wayne, an interaction designer. I build prototypes to find out what people actually need, some purposeful, some playful. Each one starts with a question: I learn the context, build something, test it with people, and repeat.</p>
+      <p>I spent seven years in design research, at startups backed by a16z, YC, and SoftBank and at the design firm Designit, where I led research for Fortune 500 clients. Then I spent a year at CIID learning to build, with code, electronics, computer vision, and AI.</p>
+      <p>Lately I'm exploring <a href="https://calmtech.com/">calm tech</a> through personal prototypes and learning SolidWorks with cleantech startups at <a href="https://laincubator.org/">LACI</a>. Outside of work, I'm surfing and experiencing museums.</p>
+      <p>I'm looking for interaction designer, design technologist, creative technologist, or prototyping roles on teams where testing with people shapes what gets made: physical products, toys and play, museums and exhibits, and AI products. Open to full-time or freelance, based in LA.</p>
+    </div>
+    <p class="about-links"><CopyEmail label="Email" /><a href="/resume.pdf">Resume</a><a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a></p>
+    <ul class="years">
+      {years.map((y: any) => y.egg ? (
+        <li class="egg">
+          <button class="egg-line" type="button" aria-expanded="false" aria-label="Something between Colby and Reed"></button>
+          <div class="egg-body"><div class="egg-in">
+            <span class="when">'14<span class="egg-yay">Congrats, you found an Easter egg :)</span></span>
+            <span><strong>Three months on the road</strong><span class="note">Walked the Camino de Santiago with my best friend, spent time in Portugal and France, then Essaouira to Chefchaouen in Morocco. Met people from all walks of life along the way.</span>
+              <span class="film">{travel.map((t) => <figure><img src={t.src} alt={t.alt} loading="lazy" /><figcaption>{t.caption}</figcaption></figure>)}</span>
+            </span>
+          </div></div>
+        </li>
+      ) : (
+        <li class:list={{ reveal: y.film }}><span class="when">{y.when}</span><span>{y.film ? (
+          <button class="reveal-title" type="button" aria-expanded="false"><strong>{y.what}</strong></button>
+        ) : <strong>{y.what}</strong>}{y.note && <span class="note" set:html={y.note} />}{y.film && (
+          <span class="reveal-body"><span class="reveal-in"><span class="film">{y.film.map((t: any) => <figure><img src={t.src} alt={t.alt} loading="lazy" /><figcaption>{t.caption}</figcaption></figure>)}</span></span></span>
+        )}</span></li>
+      ))}
+    </ul>
+  </section>
+  <script>
+    // Brush and settle: letters you brush past tip and slide a little, then spring back.
+    (() => {
+      const h1 = document.querySelector<HTMLElement>('h1.brush');
+      if (!h1) return;
+      const text = h1.textContent || '';
+      h1.textContent = '';
+      text.split(' ').forEach((word, wi, arr) => {
+        const w = document.createElement('span'); w.className = 'bw'; w.setAttribute('aria-hidden', 'true');
+        for (const c of word) { const s = document.createElement('span'); s.className = 'bc'; s.textContent = c; w.appendChild(s); }
+        h1.appendChild(w);
+        if (wi < arr.length - 1) h1.appendChild(document.createTextNode(' '));
+      });
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+      const cfg = { radius: 70, push: 0.22, spin: 1.6, spring: 0.035, damp: 0.86, max: 22, maxR: 45 };
+      const P = [...h1.querySelectorAll<HTMLElement>('.bc')].map((el) => ({ el, x: 0, y: 0, r: 0, vx: 0, vy: 0, vr: 0, cx: 0, cy: 0 }));
+      const measure = () => P.forEach((p) => {
+        const t = p.el.style.transform; p.el.style.transform = '';
+        const b = p.el.getBoundingClientRect();
+        p.cx = b.left + b.width / 2 + scrollX; p.cy = b.top + b.height / 2 + scrollY;
+        p.el.style.transform = t;
+      });
+      measure();
+      addEventListener('resize', measure);
+      document.fonts?.ready.then(measure);
+      let running = false;
+      const clamp = (v: number, m: number) => Math.max(-m, Math.min(m, v));
+      const tick = () => {
+        let moving = false;
+        for (const p of P) {
+          p.vx = (p.vx - p.x * cfg.spring) * cfg.damp; p.vy = (p.vy - p.y * cfg.spring) * cfg.damp; p.vr = (p.vr - p.r * cfg.spring) * cfg.damp;
+          p.x = clamp(p.x + p.vx, cfg.max); p.y = clamp(p.y + p.vy, cfg.max); p.r = clamp(p.r + p.vr, cfg.maxR);
+          if (Math.abs(p.x) + Math.abs(p.y) + Math.abs(p.r) + Math.abs(p.vx) + Math.abs(p.vy) + Math.abs(p.vr) > 0.05) moving = true;
+          else p.x = p.y = p.r = p.vx = p.vy = p.vr = 0;
+          p.el.style.transform = p.x || p.y || p.r ? `translate(${p.x.toFixed(2)}px, ${p.y.toFixed(2)}px) rotate(${p.r.toFixed(2)}deg)` : '';
+        }
+        if (moving) requestAnimationFrame(tick); else running = false;
+      };
+      const brush = (x: number, y: number, dx: number, dy: number) => {
+        if (reduce.matches) return;
+        for (const p of P) {
+          const ex = x - p.cx, ey = y - p.cy, d = Math.hypot(ex, ey);
+          if (d > cfg.radius) continue;
+          const f = (1 - d / cfg.radius) ** 2;
+          p.vx += dx * cfg.push * f; p.vy += dy * cfg.push * f;
+          p.vr += (dx * Math.sign(-ey || 1) - dy * Math.sign(ex || 1)) * cfg.spin * f * 0.5;
+        }
+        if (!running) { running = true; requestAnimationFrame(tick); }
+      };
+      let last: { x: number; y: number } | null = null;
+      addEventListener('pointermove', (e) => {
+        if (last) brush(e.pageX, e.pageY, clamp(e.pageX - last.x, 40), clamp(e.pageY - last.y, 40));
+        last = { x: e.pageX, y: e.pageY };
+      }, { passive: true });
+      addEventListener('pointerup', (e) => { if (e.pointerType !== 'mouse') last = null; });
+      document.addEventListener('pointerleave', () => { last = null; });
+      // One sweep on load, so phones (no hover) see it too.
+      setTimeout(() => {
+        if (reduce.matches) return;
+        measure();
+        const xs = P.map((p) => p.cx), ys = P.map((p) => p.cy);
+        const x0 = Math.min(...xs) - 40, x1 = Math.max(...xs) + 40, y0 = Math.min(...ys), y1 = Math.max(...ys);
+        const steps = 46; let i = 0, px = x0, py = y0;
+        const step = () => {
+          const t = i / steps, x = x0 + (x1 - x0) * t;
+          const y = y1 - y0 > 20 ? y0 + (y1 - y0) * t : y0 + Math.sin(t * Math.PI * 2) * 12;
+          brush(x, y, (x - px) * 0.6, (y - py) * 0.6); px = x; py = y;
+          if (++i <= steps) requestAnimationFrame(step);
+        };
+        step();
+      }, 500);
+    })();
+
+    document.querySelectorAll('.egg').forEach((egg) => {
+      const btn = egg.querySelector('.egg-line') as HTMLButtonElement;
+      const yay = egg.querySelector<HTMLElement>('.egg-yay');
+      let letters: HTMLElement[] = [];
+      // Split the note into letters so it can spin when the egg opens.
+      const render = (t: string) => {
+        if (!yay) return;
+        yay.setAttribute('aria-label', t); yay.textContent = ''; letters = [];
+        t.split(' ').forEach((w, i, arr) => {
+          const word = document.createElement('span'); word.style.whiteSpace = 'nowrap'; word.setAttribute('aria-hidden', 'true');
+          for (const c of w) { const l = document.createElement('span'); l.className = 'ey'; l.textContent = c; word.appendChild(l); letters.push(l); }
+          yay.appendChild(word); if (i < arr.length - 1) yay.appendChild(document.createTextNode(' '));
+        });
+      };
+      // Finder count: one shared number on the server, and a flag in this browser so it only counts once.
+      // Show the running total: "You and N others found this Easter egg :)"
+      const finderText = (total: number) => {
+        const others = total - 1;
+        if (others <= 0) return "You're the first to find this Easter egg :)";
+        return `You and ${others.toLocaleString()} ${others === 1 ? 'other person' : 'others'} found this Easter egg :)`;
+      };
+      const KEY = 'egg-finder';
+      let mine = 0;
+      try { mine = parseInt(localStorage.getItem(KEY) || '0', 10) || 0; } catch (e) {}
+      let shown = '';
+      const show = (total: number) => { const t = finderText(total); if (t !== shown) { shown = t; render(t); } };
+      if (mine) show(mine); else render(yay?.textContent || '');
+      let counting = false;
+      const count = async () => {
+        if (counting) return;
+        counting = true;
+        try {
+          // First find adds one to the total; after that, just read the latest total.
+          const r = await fetch('/api/egg', { method: mine ? 'GET' : 'POST' });
+          if (!r.ok) return;
+          const { count: n } = await r.json();
+          if (!n) return;
+          const first = !mine;
+          if (first) { mine = n; try { localStorage.setItem(KEY, String(n)); } catch (e) {} }
+          show(Math.max(n, mine)); if (first) cheer();
+        } catch (e) { /* offline or local preview: keep the plain note */ }
+        finally { counting = false; }
+      };
+      const cheer = () => {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        letters.forEach((l, i) => l.animate([{ transform: 'rotate(0deg) translateY(0)' }, { transform: 'rotate(180deg) translateY(-3px)' }, { transform: 'rotate(360deg) translateY(0)' }], { duration: 650, delay: 250 + i * 28, easing: 'cubic-bezier(.2,.75,.25,1.05)' }));
+      };
+      const set = (on: boolean) => { const was = egg.classList.contains('open'); egg.classList.toggle('open', on); btn.setAttribute('aria-expanded', String(on)); if (on && !was) { cheer(); count(); } };
+      btn.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') set(true); });
+      egg.addEventListener('pointerleave', (e) => { if ((e as PointerEvent).pointerType === 'mouse') set(false); });
+      btn.addEventListener('click', (e) => { if ((e as PointerEvent).pointerType === 'mouse') return set(true); set(!egg.classList.contains('open')); });
+    });
+    document.querySelectorAll('.reveal').forEach((row) => {
+      const btn = row.querySelector('.reveal-title') as HTMLButtonElement;
+      const set = (on: boolean) => { row.classList.toggle('open', on); btn.setAttribute('aria-expanded', String(on)); };
+      row.addEventListener('pointerenter', (e) => { if ((e as PointerEvent).pointerType === 'mouse') set(true); });
+      row.addEventListener('pointerleave', (e) => { if ((e as PointerEvent).pointerType === 'mouse') set(false); });
+      btn.addEventListener('click', (e) => { if ((e as PointerEvent).pointerType === 'mouse') return set(true); set(!row.classList.contains('open')); });
+    });
+  </script>
+</Base>
+
+<style>
+  .intro { margin-bottom: 120px; }
+  /* The letter spans are made by script, so they need global rules. */
+  :global(h1.brush .bw) { display: inline-block; white-space: nowrap; }
+  :global(h1.brush .bc) { display: inline-block; will-change: transform; }
+  h1.brush { cursor: default; user-select: none; -webkit-user-select: none; touch-action: pan-y; }
+  .intro h1 { font-size: 40px; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; text-wrap: balance; }
+  .method { color: var(--ink); max-width: 30em; }
+  @media (max-width: 720px) { .intro h1 { font-size: 34px; } }
+  .status { display: flex; align-items: flex-start; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-top: 12px; }
+  .nowbefore { margin: 24px 0 0; display: grid; grid-template-columns: 64px 1fr; gap: 4px 12px; max-width: 34em; }
+  .nowbefore dt { font: 400 11px/1.95 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); }
+  .nowbefore dd { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--gray); }
+  .nowbefore + .status { margin-top: 24px; }
+  @media (max-width: 720px) { .nowbefore { grid-template-columns: 52px 1fr; gap: 4px 10px; } .nowbefore dd { font-size: 14px; } }
+  .dot { flex: none; margin: calc(0.8em - 3.5px) 0 0 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
+  .sub { color: var(--gray); max-width: 36em; }
+  .block { margin-bottom: 120px; scroll-margin-top: 24px; }
+  .years { list-style: none; max-width: 760px; }
+  .more { margin-top: 24px; text-align: right; font-size: 15px; }
+  .block-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 20px; }
+  .block-head .section-title { margin-bottom: 0; }
+  .block-sub { color: var(--gray); font-size: 15px; }
+  .about { max-width: var(--measure); margin-bottom: 20px; }
+  .about-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 24px; font-size: 15px; margin-bottom: 40px; }
+  .about p { color: var(--gray); margin-bottom: 16px; }
+  .years li { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 12px 0; border-top: 1px solid var(--rule); }
+  .when { font: var(--meta); color: var(--gray); padding-top: 3px; }
+  .years li.egg { display: block; padding: 0; border-top: 0; position: relative; }
+  .egg-line { position: absolute; left: 0; right: 0; top: -8px; height: 17px; z-index: 1; border: 0; padding: 0; background: none; cursor: pointer; }
+  .egg-line:focus-visible { outline: 2px solid var(--ink); outline-offset: -6px; }
+  .egg-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s ease; }
+  .egg.open .egg-body { grid-template-rows: 1fr; }
+  .egg-in { overflow: hidden; display: grid; grid-template-columns: 80px 1fr; gap: 24px; min-height: 0; }
+  .egg-in > * { padding: 0; }
+  .egg.open .egg-in { border-top: 1px solid var(--rule); padding: 12px 0 16px; }
+  .egg.open .egg-line { top: 0; height: 12px; }
+  .egg-yay { display: block; margin-top: 10px; font: var(--meta); font-size: 12px; line-height: 1.5; color: var(--accent); }
+  :global(.egg-yay .ey) { display: inline-block; }
+  .film { display: flex; gap: 8px; margin-top: 12px; overflow-x: auto; scrollbar-width: none; }
+  .film::-webkit-scrollbar { display: none; }
+  .egg-in > span:last-child, .reveal > span:last-child { min-width: 0; }
+  .film figure { flex: 0 0 auto; margin: 0; }
+  .film img { height: 130px; width: auto; border-radius: 4px; display: block; }
+  .film figcaption { font: var(--small); color: var(--gray); margin-top: 4px; width: 0; min-width: 100%; }
+  .reveal-title { all: unset; cursor: pointer; display: block; }
+  .reveal-title:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .reveal-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s ease; }
+  .reveal.open .reveal-body { grid-template-rows: 1fr; }
+  .reveal-in { overflow: hidden; min-height: 0; display: block; }
+  @media (max-width: 720px) { .film img { height: 110px; } }
+  .years strong { font: var(--label); display: block; }
+  .note { display: block; color: var(--gray); font-size: 15px; }
+  @media (max-width: 720px) {
+    .intro, .block { margin-bottom: 80px; }
+  }
+</style>
