@@ -20,7 +20,7 @@ const years = [
     { src: '/about/ciid-linee-show.webp', alt: 'Wayne laughing and reaching up to Linee on the wall, with two teammates beside him', caption: 'Linee, final show' },
     { src: '/about/ciid-graduation.webp', alt: 'The class in flower crowns, holding up their certificates', caption: 'Graduation day' },
   ], note: 'A year of research, build, test, repeat, prototyping across mediums.' },
-  { when: "'23–'24", what: 'Senior UX Researcher, Glorify', note: 'Built the research practice and led 3 researchers. Shaped Glorify Groups (1.8M+ users).' },
+  { when: "'23–'24", what: 'Senior Design Researcher, Glorify', note: 'Built the research practice and led 3 researchers. Shaped Glorify Groups (1.8M+ users).' },
   { when: "'21–'23", what: 'Design Researcher, Designit', note: 'Led research for Fortune 500 clients, plus <a href="/work/designit-futures/">speculative futures work</a>.' },
   { when: "'20–'21", what: 'Independent designer and researcher', note: 'Projects for Y Combinator companies like Govly, Rally.Video, and Measured.' },
   { when: "'17–'20", what: 'UX Strategist, RaiseMe', note: 'Research and strategy for a B2B2C edtech company.' },
@@ -34,7 +34,7 @@ const years = [
     <h1 class="brush" aria-label="Interaction designer">Interaction designer</h1>
     <p class="method">I build prototypes to find out what people actually need,<br class="wide-br"> some purposeful, some playful.</p>
     <dl class="nowbefore"><dt>Now</dt><dd>Prototyping calm tech · SolidWorks at LACI</dd><dt>Before</dt><dd>CIID · Glorify · Designit</dd></dl>
-    <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
+    <p class="status"><span class="dot" aria-hidden="true"></span><span>Open to design technologist, prototyping, and product design roles</span></p>
   </header>
 
   <section id="work" class="block">
@@ -225,13 +225,13 @@ const years = [
   .intro h1 { font-size: 40px; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; text-wrap: balance; }
   .method { color: var(--ink); max-width: 30em; }
   @media (max-width: 720px) { .intro h1 { font-size: 34px; } }
-  .status { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-top: 12px; }
+  .status { display: flex; align-items: flex-start; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-top: 12px; }
   .nowbefore { margin: 24px 0 0; display: grid; grid-template-columns: 64px 1fr; gap: 4px 12px; max-width: 34em; }
   .nowbefore dt { font: 400 11px/1.95 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); }
   .nowbefore dd { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--gray); }
   .nowbefore + .status { margin-top: 24px; }
   @media (max-width: 720px) { .nowbefore { grid-template-columns: 52px 1fr; gap: 4px 10px; } .nowbefore dd { font-size: 14px; } }
-  .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
+  .dot { flex: none; margin: calc(0.8em - 3.5px) 0 0 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
   .sub { color: var(--gray); max-width: 36em; }
   .block { margin-bottom: 120px; scroll-margin-top: 24px; }
   .years { list-style: none; max-width: 760px; }
