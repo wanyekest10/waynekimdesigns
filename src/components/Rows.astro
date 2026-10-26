@@ -51,7 +51,14 @@ const { rows } = Astro.props as { rows: Row[] };
     .rows li { grid-template-columns: 1fr auto; gap: 2px 16px; }
     .row-line { grid-column: 1; grid-row: 2; }
     .row-year { grid-column: 2; grid-row: 1; }
-    .rows.has-status li { grid-template-columns: 1fr auto; }
-    .row-status { grid-column: 2; grid-row: 2; text-align: right; }
+    /* Rows with a status: name and status, then the one-liner full width, then year and skill on one line. */
+    .rows.has-status li { grid-template-columns: auto 1fr auto; gap: 4px 0; padding: 16px 0; }
+    .rows.has-status .row-head { display: contents; }
+    .rows.has-status .row-name { grid-area: 1 / 1 / 2 / 3; }
+    .rows.has-status .row-status { grid-area: 1 / 3 / 2 / 4; text-align: right; }
+    .rows.has-status .row-line { grid-area: 2 / 1 / 3 / 4; }
+    .rows.has-status .row-year { grid-area: 3 / 1 / 4 / 2; text-align: left; }
+    .rows.has-status .row-sub { grid-area: 3 / 2 / 4 / 4; }
+    .rows.has-status .row-sub::before { content: '·'; margin: 0 7px; }
   }
 </style>
