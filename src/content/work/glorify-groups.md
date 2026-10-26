@@ -46,22 +46,13 @@ facts:
 
 ## Should Groups exist at all?
 
-Glorify had grown to 2.5M+ users on solo practice: prayer, meditation, daily devotionals. With a board meeting coming after the Series B, the company needed to show where further revenue and growth would come from. Community was on the table. Building it meant committing product pods. Not building it meant passing on the most obvious growth story the company had.
-
-The real question wasn't how to design Groups. It was whether Groups should exist at all.
+Glorify had 2.5M+ users praying and reading on their own. After the Series B, leadership needed a next growth bet, and community was the obvious one. Building it meant committing product pods, so the question wasn't how to design Groups. It was whether Groups should exist at all.
 
 ## How we found out
 
-The decision rested on evidence gathered in six weeks. Here is where it came from.
-
 ### What we knew going in
 
-My own time in Christian small groups pointed one way. So did Glorify's earlier research, done before my study: 40+ interviews with pastors and small group leaders across 13 churches and ministries, 8 states, and 6 denominations.
-
-- **Small groups are the lifeblood of the church.** They drive accountability, connection, and meaning for members.
-- **Volunteer leaders drive growth.** The "unofficial leaders" of small groups are who grow discipleship in a church.
-- **Pastors invest in those leaders.** Churches put their effort and money into supporting group leaders, which made Groups a potential B2B2C business, not just a feature.
-- **Groups were already online, in the wrong place.** They gathered in KakaoTalk, WhatsApp, GroupMe, and group texts, where faith conversations got lost among everything else.
+Earlier interviews with 40+ pastors and group leaders said small groups are the heart of a church, and churches invest in their leaders. Groups were already meeting online, just in the wrong place: group chats, where faith got lost among everything else.
 
 <figure class="quad">
   <p class="q-axis q-y">Together</p>
@@ -77,19 +68,13 @@ My own time in Christian small groups pointed one way. So did Glorify's earlier 
 
 ### Three doubts, one hypothesis
 
-Leadership doubted it would work. Their questions came from different angles: would people actually engage with each other, would sharing faith in an app feel authentic, and would any of it last past the novelty?
-
-Rather than answer each question separately, I synthesized them into one hypothesis: value to individual users rolls up into value for the small group, and ultimately makes in-person gatherings more meaningful. We mapped it as a Flywheel Framework, and it shaped the whole research approach.
+Leadership had three doubts: would people engage, would sharing faith in an app feel authentic, and would it last past the novelty? I combined them into one hypothesis to test: value to each person rolls up into value for the group, and makes meeting in person more meaningful.
 
 <figure class="wide"><img src="/work/glorify-diagrams/flywheel.svg" alt="The Flywheel Framework, two wheels: value to users (group leads and members drive each other) turns value to the small group (better engagement, more meaningful time in person, supported discipleship). Leadership's three doubts sit on the parts they test."/><figcaption>Each of leadership's doubts, placed on the part of the flywheel it tests.</figcaption></figure>
 
 ### Studying real behavior, not stated interest
 
-Ask people if they'd use a community feature and most say yes. That tells you very little. So I designed and ran a 2-week prototype diary study with 82 participants, using a TestFlight beta inside their real small groups.
-
-- **Two waves:** groups not tied to a specific church, then groups from specific churches. Participants included church planters, young parents, marriage groups, dads' groups, and Bible study groups.
-- **Diary study:** six survey check-ins per participant across two weeks.
-- **Follow-up interviews:** with group leaders and members, to explore the moments of value behind the data.
+Ask people if they'd use a community feature and most say yes. So instead, 82 people used a working prototype inside their real small groups for two weeks, with six check-ins each and follow-up interviews.
 
 <figure class="trio">
   <div><img src="/work/glorify-assets/testflight-share.webp" alt="Group chat and shared scripture in the prototype"/><p><strong>Share life together.</strong> Group chat and shared scripture.</p></div>
@@ -98,11 +83,11 @@ Ask people if they'd use a community feature and most say yes. That tells you ve
   <figcaption>What the TestFlight prototype let groups do.</figcaption>
 </figure>
 
-Participation held. 65% of participants were still checking in at the end of week two, and members from several groups asked to keep the prototype open. People don't ask to keep a beta they don't use.
+65% were still checking in at the end of week two, and several groups asked to keep the prototype. People don't ask to keep a beta they don't use.
 
 ![Share of participants completing each of the six check-ins across the two-week pilot](/work/glorify-diagrams/study-timeline.svg)
 
-Keeping 82 people going for two weeks didn't run on reminders sent by hand. Activity from the prototype flowed through a server into a Google Sheet, which sent email and text nudges automatically.
+To keep 82 people going, the reminders ran on their own.
 
 <div class="flow" role="list" aria-label="How check-in reminders were automated">
   <div class="step"><span class="n">01</span><b>Prototype app</b><small>Records each participant's activity.</small></div>
@@ -122,18 +107,18 @@ Keeping 82 people going for two weeks didn't run on reminders sent by hand. Acti
   <div><span class="n">03</span><h4>A space set apart</h4><p>It didn't feel like another chat app. People described a dedicated space for faith, separate from everyday conversation.</p><p class="q">"It felt like a 'holier' space separated from other social conversations."<span>Small group leader</span></p></div>
 </div>
 
-The end-of-pilot survey backed it up, among the participants who answered it.
+The end-of-study survey agreed.
 
 <div class="agree" role="img" aria-label="37 of 38 respondents agreed Glorify Groups could enhance their small group: 21 strongly agreed, 16 agreed, 1 was neutral. 44 of 48 said they were likely to use it if it were developed further: 34 very likely, 10 likely, 4 neutral.">
   <div><b>37 of 38</b><p>agreed Groups could enhance their small group experience</p><div class="bar"><i class="strong" style="width:55.3%"></i><i class="agree-i" style="width:42.1%"></i><i class="neutral" style="width:2.6%"></i></div><small><em class="sw strong"></em>Strongly agree 21 <em class="sw agree-i"></em>Agree 16 <em class="sw neutral"></em>Neutral 1</small></div>
   <div><b>44 of 48</b><p>said they were likely to use it if it were developed further</p><div class="bar"><i class="strong" style="width:70.8%"></i><i class="agree-i" style="width:20.8%"></i><i class="neutral" style="width:8.4%"></i></div><small><em class="sw strong"></em>Very likely 34 <em class="sw agree-i"></em>Likely 10 <em class="sw neutral"></em>Neutral 4</small></div>
 </div>
 
-Each finding answered one of leadership's three doubts: people did engage, the sharing felt authentic, and the value carried from one week into the next. The flywheel held.
+Each finding answered one of leadership's doubts.
 
 ## What shaped the product
 
-With our lead designer, I turned the findings into three design principles, so they could guide future iterations across teams instead of living in a readout deck.
+With our lead designer, I turned the findings into three principles the teams could build from.
 
 <figure class="trio principles">
   <div><img src="/work/glorify-assets/principle-intentional-space.webp" alt="Illustration of a woman resting her arms on a ledge"/><p><strong>Intentional Space</strong><br/>Create a dedicated environment that signals purpose and psychological safety for reflection and sharing.</p><p class="shipped"><strong>In the app:</strong> Groups is its own space, separate from everyday chat.</p></div>
@@ -142,11 +127,11 @@ With our lead designer, I turned the findings into three design principles, so t
   <figcaption>The principles, and where each one shows up in the shipped app.</figcaption>
 </figure>
 
-Two features came straight from what participants told us. Prayer requests became one of the live app's most important features, something a group chat doesn't give you. And groups can share devotionals, which carries the shared context between meetings that the study found mattered.
+Two features came straight from participants: prayer requests, now one of the app's most important features, and shared devotionals between meetings.
 
 ## What changed
 
-Paul Pow, our VP of Product, and I presented the research at the product, design, and engineering leadership offsite. The research gave leadership the confidence to launch Glorify Groups, and they dedicated three of the four product, design, and engineering pods to it. Leadership, PMs, designers, and engineers built on this research as the foundation.
+Paul Pow, our VP of Product, and I presented at the leadership offsite. Leadership launched Glorify Groups and put three of four pods on it.
 
 
 <div class="stats three">
@@ -159,14 +144,10 @@ Paul Pow, our VP of Product, and I presented the research at the product, design
 
 ## What didn't work yet
 
-Not everyone was convinced, and that mattered as much as the praise. Some participants called it "just a chat room for Christians" and said it would need to beat WhatsApp to earn a place on their phone. Groups that didn't already know each other struggled to get conversations started.
-
-Those critiques became the next questions: how to design for groups of strangers, and what Groups could offer that a chat app couldn't. Prayer requests and shared devotionals, above, were two of the answers.
+Some called it "just a chat room for Christians," and groups of strangers struggled to get talking. Those became the next questions: how to design for strangers, and what Groups offers that a chat app can't.
 
 ## Reflection
 
-**Trust isn't built at the readout.** It was built through check-ins along the way: sharing early signals and answering questions from leadership and cross-functional teams as they came up.
+**Trust isn't built at the readout.** It came from sharing early signals with leadership along the way.
 
-**Community is built on trust, not features.** By revealing the dynamics behind participation, research turned uncertainty into confidence. My background in sociology shapes how I approach this: explore the unknown first, and set boundaries before scale.
-
-**What I'd change today.** Recruitment was manual, and keeping the panel healthy took a hand-built pipeline. I'd hand both to an AI agent and spend the time saved on the parts that need human judgment.
+**What I'd change today.** I'd hand recruiting and reminders to an AI agent, and spend the time on the parts that need judgment.
