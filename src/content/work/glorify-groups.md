@@ -18,7 +18,7 @@ year: "2023"
 featured: true
 cardFit: contain
 label: "Research through prototyping"
-summary: "Small faith groups that stay close all week."
+summary: "Small faith groups, now 1.8M+ users."
 hero: "/work/glorify-assets/shipped-screens.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
 jumps:
