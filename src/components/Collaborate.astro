@@ -2,30 +2,39 @@
 // Collaborate: the three services, how it starts, and the message form. Used by /collaborate/.
 import CopyEmail from './CopyEmail.astro';
 
+// Each way of helping, with a photo and results from the project that backs it up.
 const ways = [
   {
     title: 'Should we build this?',
-    time: 'Usually 2 to 6 weeks',
     when: "You're about to commit to a bet, and you're not sure it's the right one.",
-    what: "I turn the doubt into one question we can test, then pick the method that fits: interviews, surveys, a service blueprint of how things work today, or a rough mockup to see how people react.",
+    what: "I turn the doubt into one question we can test, then pick the method that fits: interviews, surveys, a service blueprint of how things work today, or a rough prototype to see how people react.",
     get: 'a clear go, no-go, or what to change, with evidence behind it.',
-    proof: [ { name: 'Glorify Groups', href: '/work/glorify-groups/' }, { name: 'RaiseMe Portal', href: '/work/raiseme-portal/' } ],
+    proof: [
+      { name: 'Glorify Groups', href: '/work/glorify-groups/', image: '/work/glorify-assets/shipped-screens.webp', result: '6 weeks. Leadership put 3 of 4 pods on it. Now 1.8M+ users.' },
+      { name: 'RaiseMe Portal', href: '/work/raiseme-portal/', image: '/work/raiseme-assets/journey-map.webp', result: 'Helped keep 90%+ of projected revenue through the pandemic.' },
+    ],
   },
   {
     title: 'Will it actually work?',
-    time: 'Usually 1 to 4 weeks',
     when: "The idea involves sensors, a camera, hardware, a digital experience, or AI, and slides won't settle it.",
     what: 'I build a working prototype, from the code and electronics to the thing you hold, and test it where it would actually live.',
     get: 'a working prototype, and a list of what to fix before you build the real one.',
-    proof: [ { name: 'Living.fm', href: '/work/living-fm/' }, { name: 'room_tone', href: '/work/room-tone/' }, { name: 'Toilet Paper Elevator', href: '/work/toilet-paper-elevator/' }, { name: 'Linee', href: '/work/linee/' } ],
+    proof: [
+      { name: 'Living.fm', href: '/work/living-fm/', image: '/work/living-assets/card-still.webp', result: '4 days. An AI host, tested with a live view of what the camera saw.' },
+      { name: 'Toilet Paper Elevator', href: '/work/toilet-paper-elevator/', image: '/work/tpe-assets/card-still.webp', result: 'A rotation sensor and an e-ink screen.' },
+      { name: 'Mirrored Canvas', href: '/play/mirrored-canvas/', image: '/work/mirrored-canvas-assets/hero.webp', result: 'Camera and computer vision.' },
+    ],
   },
   {
     title: "We're stuck. Where do we go from here?",
-    time: 'Half a day to 3 days',
     when: "Your team keeps circling the same safe ideas, or has strong opinions that haven't been tested against each other.",
     what: 'I design and run workshops that open up first, with playful constraints that get a room past its first ideas, then narrow down to a plan everyone had a say in.',
     get: 'fresh ideas worth testing, and a plan someone can act on.',
-    proof: [ { name: 'Facilitation', href: '/work/facilitation/' } ],
+    proof: [
+      { name: 'Facilitation', href: '/work/facilitation/', image: '/work/facilitation-assets/busan-wall.webp', result: 'Workshops for Glorify, the Busan Design Council, and Wipro.' },
+      { name: 'Designit: Futures', href: '/work/designit-futures/', image: '/work/futures-assets/water-score.webp', result: '3 weeks. Opened new client conversations, including LA World Airports.' },
+      { name: 'Bureau of Sanctioned Sketching', href: '/work/bureau-of-sanctioned-sketching/', image: '/work/bss-assets/group-play.webp', result: 'Playful constraints, as a card game.' },
+    ],
   },
 ];
 
@@ -33,34 +42,45 @@ const ways = [
 const FORM_KEY = '9ed02531-3f35-430d-bad9-e33fcda2306d';
 
 const steps = [
-  'Send me a few lines about what you are working on. It doesn\'t need to be polished.',
+  "Send me a few lines about what you are working on. It doesn't need to be polished.",
   'We talk for 30 minutes about where you are and what is in the way.',
-  'If it\'s a fit, I send a short proposal with scope and timeline.',
+  "If it's a fit, I send a short proposal with scope and timeline.",
 ];
 ---
 <section id="collaborate" class="collaborate">
   <header class="collab-top">
     <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and contract roles</p>
     <h1>Collaborate</h1>
-    <p class="collab-lead">I help teams understand a problem, then build something to test it.</p>
+    <p class="collab-lead">I help teams understand a problem, then build something to test it, on your team or for a project.</p>
   </header>
+  <div class="doors">
+    <div class="door">
+      <p class="door-title">Hiring?</p>
+      <p>I'm looking for design technologist, prototyping, and interaction design roles in LA.</p>
+      <p class="door-links"><a href="/resume.pdf">Resume</a><a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a><a href="#message" data-topic="A full-time role">Send a message</a></p>
+    </div>
+    <div class="door">
+      <p class="door-title">Have a project?</p>
+      <p>From a half-day workshop to about 6 weeks, depending on the question.</p>
+      <p class="door-links"><a href="#message" data-topic="A project">Tell me about it</a></p>
+    </div>
+  </div>
   <div class="ways">
     {ways.map((w, i) => (
       <section class="way" id={`way-${i + 1}`}>
-        <div class="w-head"><h3>{w.title}</h3><p class="w-time">{w.time}</p></div>
+        <div class="w-img" aria-hidden="true">{w.proof.map((p, j) => <img class:list={{ on: j === 0 }} src={p.image} alt="" loading="lazy" />)}</div>
+        <h3>{w.title}</h3>
         <p class="w-when">{w.when}</p>
         <p class="w-what">{w.what}</p>
-        <p class="w-get"><b>You get</b> {w.get}</p>
-        <div class="proof"><span class="proof-label">Related projects</span><p class="proof-links">{w.proof.map((p) => <a href={p.href}>{p.name}</a>)}</p></div>
+        <p class="w-get"><b>What changes</b> {w.get}</p>
+        <div class="proof"><span class="proof-label">Done before</span><ul class="proof-list">{w.proof.map((p, j) => <li class:list={{ on: j === 0 }}><a href={p.href}>{p.name}</a><span>{p.result}</span></li>)}</ul></div>
       </section>
     ))}
   </div>
 
   <section class="start">
-    <h3 class="sub-title">How it starts</h3>
-    <ol class="steps">
-      {steps.map((s) => <li>{s}</li>)}
-    </ol>
+    <h3 class="sub-title">How a project starts</h3>
+    <ol class="steps">{steps.map((st) => <li>{st}</li>)}</ol>
   </section>
 
   <section class="contact" id="message">
@@ -69,8 +89,8 @@ const steps = [
       <form class="msg" data-key={FORM_KEY}>
         <fieldset class="topic">
           <legend>What's this about?</legend>
-          <label><input type="radio" name="topic" value="A project" checked /><span>A project</span></label>
           <label><input type="radio" name="topic" value="A full-time role" /><span>A full-time role</span></label>
+          <label><input type="radio" name="topic" value="A project" /><span>A project</span></label>
           <label><input type="radio" name="topic" value="Just saying hi" /><span>Just saying hi</span></label>
         </fieldset>
         <div class="row2">
@@ -84,12 +104,31 @@ const steps = [
       <aside class="direct">
         <p class="direct-label">Or email me directly</p>
         <p class="big"><CopyEmail /></p>
-        <p class="direct-note">Hiring full-time? Here's my <a href="/resume.pdf">resume</a> and <a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a>.</p>
       </aside>
     </div>
   </section>
 
   <script>
+    // The two doors at the top jump to the form with the right topic picked.
+    document.querySelectorAll<HTMLAnchorElement>('a[data-topic]').forEach((a) => a.addEventListener('click', () => {
+      const r = document.querySelector<HTMLInputElement>(`input[name="topic"][value="${a.dataset.topic}"]`);
+      if (r) r.checked = true;
+    }));
+    // Each card's photo steps through the projects listed under it, and the one showing is marked in the list.
+    // Cards are staggered so they don't change together. Hovering a project shows it and pauses that card.
+    document.querySelectorAll<HTMLElement>('.way').forEach((card, c) => {
+      const imgs = [...card.querySelectorAll<HTMLImageElement>('.w-img img')];
+      const items = [...card.querySelectorAll<HTMLLIElement>('.proof-list li')];
+      if (imgs.length < 2) return;
+      let i = 0, paused = false;
+      const show = (n: number) => { i = n; imgs.forEach((im, k) => im.classList.toggle('on', k === n)); items.forEach((li, k) => li.classList.toggle('on', k === n)); };
+      items.forEach((li, k) => {
+        li.addEventListener('mouseenter', () => { paused = true; show(k); });
+        li.addEventListener('mouseleave', () => { paused = false; });
+      });
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      setTimeout(() => setInterval(() => { if (!paused) show((i + 1) % imgs.length); }, 3200), c * 1000);
+    });
     const form = document.querySelector<HTMLFormElement>('form.msg');
     if (form) {
       const status = form.querySelector('.msg-status') as HTMLElement;
@@ -126,10 +165,23 @@ const steps = [
   .status { display: inline-flex; align-items: center; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 20px; }
   .dot { margin-left: 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
   .collab-lead { color: var(--gray); }
+  .doors { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: -16px 0 64px; }
+  .door { border: 1px solid var(--rule); border-radius: 10px; padding: 20px 24px; display: flex; flex-direction: column; gap: 8px; }
+  .door p { font-size: 15px; color: var(--gray); }
+  .door .door-title { font: var(--label); font-size: 18px; color: var(--ink); }
+  .door-links { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 4px; }
+  .door-links a { font-size: 15px; }
+  @media (max-width: 720px) { .doors { grid-template-columns: 1fr; } }
   .sub-title { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 20px; }
 
   .ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 96px; }
-  .way { scroll-margin-top: 72px; background: var(--panel); border-radius: 10px; padding: 24px; display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 12px; }
+  .way { scroll-margin-top: 72px; background: var(--panel); border-radius: 10px; padding: 12px 12px 24px; display: grid; grid-row: span 6; grid-template-rows: subgrid; row-gap: 12px; }
+  .way > :not(.w-img) { margin-left: 12px; margin-right: 12px; }
+  .w-img { position: relative; border-radius: 6px; overflow: hidden; background: #fff; margin-bottom: 8px; aspect-ratio: 3/2; }
+  .w-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s ease; }
+  .w-img img.on { opacity: 1; }
+  .proof-list li { padding-left: 12px; margin-left: -12px; border-left: 2px solid transparent; transition: border-color .3s; }
+  .proof-list li.on { border-left-color: var(--accent); }
   .way h3 { font: var(--h2); font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 6px; }
   .w-time { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--accent); }
   .w-when { color: var(--gray); font-size: 15px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
@@ -138,11 +190,12 @@ const steps = [
   .w-get b { color: var(--ink); font-weight: 500; }
   .proof { align-self: start; padding-top: 16px; border-top: 1px solid var(--rule); }
   .proof-label { display: block; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
-  .proof-links { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; }
+  .proof-list { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
+  .proof-list li { display: flex; flex-direction: column; gap: 1px; }
+  .proof-list span { color: var(--gray); font-size: 14px; line-height: 1.4; }
   @media (max-width: 860px) { .ways { grid-template-columns: 1fr; } }
 
-  .start { max-width: var(--measure); }
-  .steps { counter-reset: s; list-style: none; margin-bottom: 40px; }
+  .steps { counter-reset: s; list-style: none; margin-bottom: 0; }
   .steps li { counter-increment: s; display: grid; grid-template-columns: 32px 1fr; padding: 10px 0; color: var(--gray); }
   .steps li::before { content: counter(s); font: var(--meta); color: var(--gray); padding-top: 4px; }
   .start { margin-bottom: 96px; }
@@ -170,7 +223,6 @@ const steps = [
   .direct { padding: 24px; background: var(--panel); border-radius: 10px; }
   .direct-label { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 10px; }
   .direct .big { font: var(--label); font-size: 18px; margin-bottom: 12px; }
-  .direct-note { color: var(--gray); font-size: 15px; }
   @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
   @media (max-width: 520px) { .row2 { grid-template-columns: 1fr; } }
 

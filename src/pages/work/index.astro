@@ -15,8 +15,8 @@ const row = (w: any) => ({ status: STATUS[w.id], name: w.data.title, sub: w.data
 // Grouped by the kind of work, so each team finds theirs first. Shipped work sits next to prototypes.
 const GROUPS = [
   { title: 'Physical products', sub: 'Objects and spaces, built with electronics and fabrication.', ids: ['toilet-paper-elevator', 'room-tone', 'linee', 'lume'] },
-  { title: 'Play and games', sub: 'Games and performances that get people playing.', ids: ['bureau-of-sanctioned-sketching', 'disco-never-died', 'mirrored-canvas'] },
   { title: 'AI and software', sub: 'Apps and AI, from prototypes to shipped products.', ids: ['living-fm', 'glorify-groups', 'raiseme-portal'] },
+  { title: 'Play and games', sub: 'Games and performances that get people playing.', ids: ['bureau-of-sanctioned-sketching', 'disco-never-died', 'mirrored-canvas'] },
   { title: 'Strategy and facilitation', sub: 'Helping teams decide what to make.', ids: ['designit-futures', 'facilitation'] },
 ].map((g) => ({ ...g, rows: g.ids.map((id) => all.find((w) => w.id === id)).filter(Boolean).map(row) }));
 ---
