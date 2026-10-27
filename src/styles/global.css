@@ -618,6 +618,10 @@ img.zoom { cursor: zoom-in; }
 .zoom-scroll img { display: block; width: max(100%, 960px); max-width: none; margin: 0 auto; background: #fff; border-radius: 6px; }
 .zoom-x { position: fixed; top: 12px; right: 12px; width: 40px; height: 40px; border: 1px solid var(--rule); border-radius: 50%; background: var(--paper, #fff); color: var(--ink); font-size: 16px; cursor: pointer; }
 @media (max-width: 720px) { .zoom-hint { display: inline; } }
+.zoom-box.photo { cursor: zoom-out; }
+.zoom-box.photo .zoom-scroll { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+.zoom-box.photo .zoom-scroll img { width: auto; max-width: 100%; max-height: calc(100vh - 160px); margin: 0; }
+.zoom-cap { color: var(--gray); font-size: 15px; text-align: center; }
 
 /* Two photos of different shapes, side by side at the same height. Set grid-template-columns inline to each photo's width/height in fr. */
 article .pair-fit { max-width: var(--wide); display: grid; gap: 16px; }

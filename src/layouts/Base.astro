@@ -105,6 +105,12 @@ const { title, image, imageAlt, wide = false, noindex = false, prompt = 'Have so
         box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Enlarged image');
         box.innerHTML = '<button type="button" class="zoom-x" aria-label="Close">✕</button><div class="zoom-scroll"><img alt=""></div>';
         const big = box.querySelector('.zoom-scroll img'); big.src = img.currentSrc || img.src; big.alt = img.alt;
+        // Photos fit the screen, with their caption underneath.
+        if (img.classList.contains('photo')) {
+          box.classList.add('photo');
+          const cap = img.closest('figure')?.querySelector('figcaption')?.textContent;
+          if (cap) { const c = document.createElement('p'); c.className = 'zoom-cap'; c.textContent = cap; box.querySelector('.zoom-scroll').append(c); }
+        }
         const close = () => { box.remove(); document.removeEventListener('keydown', esc); document.documentElement.style.overflow = ''; };
         const esc = (k) => { if (k.key === 'Escape') close(); };
         box.addEventListener('click', (ev) => { if (ev.target === box || ev.target.closest('.zoom-x') || ev.target === box.querySelector('.zoom-scroll')) close(); });

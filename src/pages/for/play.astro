@@ -72,7 +72,7 @@ const years = [
           <div class="egg-body"><div class="egg-in">
             <span class="when">'14<span class="egg-yay">Congrats, you found an Easter egg :)</span></span>
             <span><strong>Three months on the road</strong><span class="note">Walked the Camino de Santiago with my best friend, spent time in Portugal and France, then Essaouira to Chefchaouen in Morocco. Met people from all walks of life along the way.</span>
-              <span class="film">{travel.map((t) => <figure><img src={t.src} alt={t.alt} loading="lazy" /><figcaption>{t.caption}</figcaption></figure>)}</span>
+              <span class="film">{travel.map((t) => <figure><img class="zoom photo" src={t.src} alt={t.alt} loading="lazy" /><figcaption>{t.caption}</figcaption></figure>)}</span>
             </span>
           </div></div>
         </li>
@@ -80,7 +80,7 @@ const years = [
         <li class:list={{ reveal: y.film }}><span class="when">{y.when}</span><span>{y.film ? (
           <button class="reveal-title" type="button" aria-expanded="false"><strong>{y.what}</strong></button>
         ) : <strong>{y.what}</strong>}{y.note && <span class="note" set:html={y.note} />}{y.film && (
-          <span class="reveal-body"><span class="reveal-in"><span class="film">{y.film.map((t: any) => <figure><img src={t.src} alt={t.alt} loading="lazy" /><figcaption>{t.caption}</figcaption></figure>)}</span></span></span>
+          <span class="reveal-body"><span class="reveal-in"><span class="film">{y.film.map((t: any) => <figure><img class="zoom photo" src={t.src} alt={t.alt} loading="lazy" /><figcaption>{t.caption}</figcaption></figure>)}</span></span></span>
         )}</span></li>
       ))}
     </ul>
