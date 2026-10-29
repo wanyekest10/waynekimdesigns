@@ -11,7 +11,7 @@ const STATUS: Record<string, string> = {
   'linee': 'Prototype', 'bureau-of-sanctioned-sketching': 'Playtested', 'lume': 'Prototype',
   'glorify-groups': 'Shipped', 'raiseme-portal': 'Shipped', 'designit-futures': 'Shipped', 'facilitation': 'Delivered', 'mirrored-canvas': 'Prototype',
 };
-const row = (w: any) => ({ status: STATUS[w.id], name: w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/${(w.data as any).listIn === 'experiments' ? 'play' : 'work'}/${w.id}/`, image: w.data.card ?? w.data.hero, preview: (w.data as any).cardVideo });
+const row = (w: any) => ({ status: STATUS[w.id], name: (w.data as any).cardTitle ?? w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/${(w.data as any).listIn === 'experiments' ? 'play' : 'work'}/${w.id}/`, image: w.data.card ?? w.data.hero, preview: (w.data as any).cardVideo });
 // Grouped by the kind of work, so each team finds theirs first. Shipped work sits next to prototypes.
 const GROUPS = [
   { title: 'Physical products', sub: 'Objects and spaces, built with electronics and fabrication.', ids: ['toilet-paper-elevator', 'room-tone', 'linee', 'lume'] },

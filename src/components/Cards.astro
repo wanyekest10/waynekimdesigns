@@ -10,7 +10,7 @@ const { items } = Astro.props;
         {(w.data as any).cardVideo && <video class="card-vid" src={(w.data as any).cardVideo} muted loop playsinline preload="none" aria-hidden="true"></video>}
       </div>
       <div class="card-text">
-        <span class="card-title">{w.data.title}</span>
+        <span class="card-title">{(w.data as any).cardTitle ?? w.data.title}</span>
         <span class="card-year">{w.data.year}</span>
       </div>
       <p class="card-line">{w.data.summary}</p>

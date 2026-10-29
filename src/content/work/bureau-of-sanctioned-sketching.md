@@ -45,7 +45,7 @@ facts:
 
 Each round, players pull three cards and everyone draws together for one minute.
 
-<figure class="frame"><video src="/work/bss-assets/cards-loop.mp4" poster="/work/bss-assets/cards-loop-poster.jpg" autoplay muted loop playsinline aria-label="Hands open the deck, pull a card, then draw and point at the cards on a shared sheet"></video></figure>
+<figure class="frame"><video src="/work/bss-assets/cards-loop.mp4" poster="/work/bss-assets/cards-loop-poster.jpg" autoplay muted loop playsinline aria-label="Hands draw on a shared sheet, point at a card, then pull a new card from the deck"></video></figure>
 
 <div class="flow" role="list" aria-label="How a round of BSS plays">
   <div class="step"><span class="n">01</span><b>Pull one card from each stack</b><small>Draw, Using, While.</small></div>
