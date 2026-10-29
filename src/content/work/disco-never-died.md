@@ -6,6 +6,7 @@ context: "CIID, 2024"
 order: 6.2
 year: "2024"
 featured: false
+listIn: experiments
 label: "Creative coding and VJing"
 summary: "A disco ball made of code and sound."
 card: "/work/disco-assets/card-still.webp"

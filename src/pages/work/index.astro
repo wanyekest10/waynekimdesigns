@@ -7,7 +7,7 @@ const all = await getCollection('work');
 const work = all.filter((w) => (w.data as any).listIn !== 'experiments').sort((a, b) => a.data.order - b.data.order);
 // How far each project got.
 const STATUS: Record<string, string> = {
-  'living-fm': 'Prototype', 'toilet-paper-elevator': 'Prototype', 'room-tone': 'Prototype', 'disco-never-died': 'Performed live',
+  'living-fm': 'Prototype', 'toilet-paper-elevator': 'Prototype', 'room-tone': 'Prototype',
   'linee': 'Prototype', 'bureau-of-sanctioned-sketching': 'Playtested', 'lume': 'Prototype',
   'glorify-groups': 'Shipped', 'raiseme-portal': 'Shipped', 'designit-futures': 'Shipped', 'facilitation': 'Delivered', 'mirrored-canvas': 'Prototype',
 };
@@ -16,7 +16,7 @@ const row = (w: any) => ({ status: STATUS[w.id], name: w.data.title, sub: w.data
 const GROUPS = [
   { title: 'Physical products', sub: 'Objects and spaces, built with electronics and fabrication.', ids: ['toilet-paper-elevator', 'room-tone', 'linee', 'lume'] },
   { title: 'AI and software', sub: 'Apps and AI, from prototypes to shipped products.', ids: ['living-fm', 'glorify-groups', 'raiseme-portal'] },
-  { title: 'Play and games', sub: 'Games and performances that get people playing.', ids: ['bureau-of-sanctioned-sketching', 'disco-never-died', 'mirrored-canvas'] },
+  { title: 'Play and games', sub: 'Games that get people playing.', ids: ['bureau-of-sanctioned-sketching', 'mirrored-canvas'] },
   { title: 'Strategy and facilitation', sub: 'Helping teams decide what to make.', ids: ['designit-futures', 'facilitation'] },
 ].map((g) => ({ ...g, rows: g.ids.map((id) => all.find((w) => w.id === id)).filter(Boolean).map(row) }));
 ---
