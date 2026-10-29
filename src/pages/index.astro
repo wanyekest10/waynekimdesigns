@@ -81,8 +81,11 @@ const years = [
     </ul>
   </section>
   <script>
-    // About: tap a dotted word on a phone to see its photos.
-    document.querySelectorAll('span.peek').forEach((s) => s.addEventListener('click', () => s.classList.toggle('open')));
+    // About: on touch screens, tap a dotted word to see its photos, tap anywhere to hide them. With a mouse it's hover only.
+    if (matchMedia('(hover: none)').matches) {
+      const peeks = [...document.querySelectorAll('span.peek')];
+      document.addEventListener('click', (e) => peeks.forEach((s) => s.classList.toggle('open', s.contains(e.target as Node) && !s.classList.contains('open'))));
+    }
     // Near the top of the screen, show the photos under the word so the nav doesn't cover them.
     document.querySelectorAll<HTMLElement>('.peek').forEach((el) => ['mouseenter', 'focus', 'click'].forEach((ev) =>
       el.addEventListener(ev, () => el.classList.toggle('below', el.getBoundingClientRect().top < 240))));
