@@ -15,7 +15,7 @@ tocLabels:
   "Three screens that update while nobody is looking": "The screens"
   "What changed after testing the screens with people": "Testing the screens"
   "Counting a roll that gets thinner as it turns": "The math"
-  "Five tries to hide the wire in a bathroom": "Hiding the wire"
+  "Five tries to house the wire in a bathroom": "Housing the wire"
   "Visitors got curious and started talking": "What happened"
 cardVideo: "/work/tpe-assets/card-loop.mp4"
 hero: "/work/tpe-assets/hero-wall.webp"
@@ -189,7 +189,7 @@ I designed the pod in Fusion and printed everything in gray. The LiPo sits trapp
   <figcaption>Battery, carrier, and Arduino stack inside the pod, shown from the side and opened.</figcaption>
 </figure>
 
-## Five tries to hide the wire in a bathroom
+## Five tries to house the wire in a bathroom
 
 Getting the wire from the holder to the screen took five tries. The first version ran exposed jumper wires down the wall, with a collar on the holder's arm to hold the Hall effect sensor. It worked, but it looked unfinished.
 
