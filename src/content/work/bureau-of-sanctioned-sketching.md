@@ -19,7 +19,7 @@ hero: "/work/bss-assets/deck.webp"
 heroAlt: "The Bureau of Sanctioned Sketching deck: a navy box with an octopus seal and three card stacks labeled Draw, Using, and While"
 card: "/work/bss-assets/card-still.webp"
 cardVideo: "/work/bss-assets/card-loop.mp4"
-cardAlt: "Hands opening the Bureau of Sanctioned Sketching deck at a table"
+cardAlt: "Two hands drawing on a shared sheet, with the BSS cards laid out behind"
 heroVideo: "/work/bss-assets/playtest.mp4"
 heroPoster: "/work/bss-assets/playtest-poster.jpg"
 jumps:
