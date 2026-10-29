@@ -19,10 +19,11 @@ const { rows } = Astro.props as { rows: Row[] };
 </ul>
 <script>
   document.querySelectorAll('.rows li.has-preview').forEach((li) => {
-    const v = li.querySelector('video.row-preview');
+    const v = li.querySelector<HTMLVideoElement>('video.row-preview');
     if (!v) return;
+    if (matchMedia('(hover: hover)').matches) v.preload = 'auto';   // load ahead so the loop starts on hover
     li.addEventListener('mouseenter', () => { v.play().catch(() => {}); });
-    li.addEventListener('mouseleave', () => { v.pause(); });
+    li.addEventListener('mouseleave', () => { v.pause(); v.currentTime = 0; });
   });
 </script>
 <style>
