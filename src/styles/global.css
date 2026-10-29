@@ -722,3 +722,13 @@ details.fold-section > summary::after { content: '+'; font: 400 18px/1 var(--san
 details.fold-section[open] > summary::after { content: '−'; }
 details.fold-section > summary:hover, details.fold-section > summary:hover::after { color: var(--ink); }
 details.fold-section[open] { padding-bottom: 12px; }
+
+/* Peek: a word in the About text that shows a photo or two on hover (tap on phones). */
+.peek { position: relative; }
+span.peek { color: var(--ink); text-decoration: underline dotted; text-underline-offset: 3px; cursor: default; }
+.peek-pics { position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translate(-50%, 6px); display: flex; gap: 8px; opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease; z-index: 5; }
+.peek-pics img { display: block; width: 220px; max-width: none; aspect-ratio: 3/2; object-fit: cover; border-radius: 6px; box-shadow: 0 8px 24px rgba(20, 20, 20, .16); }
+.peek:hover .peek-pics, .peek:focus-visible .peek-pics, .peek.open .peek-pics { opacity: 1; transform: translate(-50%, 0); }
+.peek.below .peek-pics { bottom: auto; top: calc(100% + 10px); }
+@media (max-width: 720px) { p:has(> .peek) { position: relative; } .peek { position: static; } .peek-pics { left: 0; transform: translateY(6px); } .peek:hover .peek-pics, .peek.open .peek-pics { transform: none; } .peek-pics img { width: 150px; } }
+@media (prefers-reduced-motion: reduce) { .peek-pics { transition: none; } }

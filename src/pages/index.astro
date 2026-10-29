@@ -55,9 +55,9 @@ const years = [
     <h2 class="section-title">About</h2>
     <div class="about">
       <p>I'm Wayne. I build prototypes to find out what people actually need. Some purposeful, some playful, sometimes both.</p>
-      <p>I spent seven years in design research at Designit and at startups backed by a16z, YC, and SoftBank. Then I spent a year at CIID learning to build. I wrote code, wired electronics, laser cut and 3D printed parts, and designed with AI, often all in one project.</p>
+      <p>I spent seven years in design research at <a class="peek" href="/work/designit-futures/">Designit<span class="peek-pics" aria-hidden="true"><img src="/about/designit-drivers-map.webp" alt="" loading="lazy" /></span></a> and at startups backed by a16z, YC, and SoftBank. Then I spent a year at <a class="peek" href="https://ciid.dk/">CIID<span class="peek-pics" aria-hidden="true"><img src="/about/ciid-studio-night.webp" alt="" loading="lazy" /></span></a> learning to build. I wrote code, wired electronics, laser cut and 3D printed parts, and designed with AI, often all in one project.</p>
       <p>I'm looking for design technologist, prototyping, and product design roles in LA, on teams making physical products, toys and play, museum exhibits, or AI products.</p>
-      <p>Outside of work, I surf and go to museums.</p>
+      <p>Outside of work, I <span class="peek" tabindex="0">surf<span class="peek-pics" aria-hidden="true"><img src="/about/surf-turn.webp" alt="" loading="lazy" /><img src="/about/surf-paddle.webp" alt="" loading="lazy" /></span></span> and go to museums.</p>
     </div>
     <p class="about-links"><CopyEmail label="Email" /><a href="/resume.pdf">Resume</a><a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a></p>
     <ul class="years">
@@ -81,6 +81,11 @@ const years = [
     </ul>
   </section>
   <script>
+    // About: tap a dotted word on a phone to see its photos.
+    document.querySelectorAll('span.peek').forEach((s) => s.addEventListener('click', () => s.classList.toggle('open')));
+    // Near the top of the screen, show the photos under the word so the nav doesn't cover them.
+    document.querySelectorAll<HTMLElement>('.peek').forEach((el) => ['mouseenter', 'focus', 'click'].forEach((ev) =>
+      el.addEventListener(ev, () => el.classList.toggle('below', el.getBoundingClientRect().top < 240))));
     // Brush and settle: letters you brush past tip and slide a little, then spring back.
     (() => {
       const h1 = document.querySelector<HTMLElement>('h1.brush');
