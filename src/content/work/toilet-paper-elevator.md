@@ -151,7 +151,7 @@ Landmarks people already know replaced the world's tallest buildings.
 
 ## Counting a roll that gets thinner as it turns
 
-I measured my own roll: 300 squares of 100 mm, wound from a 64 mm radius down to a 21 mm core. Each magnet is a quarter turn, so the code shrinks the paper per pulse as the roll gets thinner.
+I measured my own roll: 300 squares of 100 mm, wound from a 64 mm radius down to a 21 mm core. That's about 98 ft of paper per roll, a little more than two Hollywood Signs stacked. Each magnet is a quarter turn, so the code shrinks the paper per pulse as the roll gets thinner.
 
 Tearing jerks the roll and adds phantom pulses, so each pulse is scaled down to match real pulls. Once a roll has turned past its full length, the code assumes a new one went on.
 
