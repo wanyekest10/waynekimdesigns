@@ -21,6 +21,11 @@ year: "2019–20"
 featured: false
 label: "Research and service design"
 summary: "Why colleges stopped trusting their portal."
+tocLabels:
+  "The rebuilt portal helped keep 90%+ of revenue through COVID": "The impact"
+  "Colleges were losing trust in a weekly export": "The problem"
+  "Survey and contract data showed revenue at risk": "The evidence"
+  "Leadership committed to rebuilding the portal": "The decision"
 hero: "/work/raiseme-assets/hero-before-after.webp"
 cardFit: contain
 heroAlt: "Before: the old portal showing a red error banner and empty saved groups. After: an Available downloads list with weekly reports that generate themselves."

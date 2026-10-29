@@ -8,14 +8,21 @@ year: "2026"
 featured: true
 label: "Physical computing and fabrication"
 summary: "Toilet paper use, measured in landmarks."
+tocLabels:
+  "A daily habit nobody in the house ever sees": "The habit"
+  "Measuring the roll in feet climbed": "Why an elevator"
+  "Magnets in the roll count every square": "How it counts"
+  "Three screens that update while nobody is looking": "The screens"
+  "What changed after testing the screens with people": "Testing the screens"
+  "Counting a roll that gets thinner as it turns": "The math"
+  "Five tries to hide the wire in a bathroom": "Hiding the wire"
+  "Visitors got curious and started talking": "What happened"
 cardVideo: "/work/tpe-assets/card-loop.mp4"
 hero: "/work/tpe-assets/hero-wall.webp"
 card: "/work/tpe-assets/card-still.webp"
 heroVideo: "/work/tpe-assets/how-it-works.mp4"
 heroPoster: "/work/tpe-assets/how-it-works-poster.jpg"
 heroAlt: "A new roll goes on, the e-ink screen climbs from 4 ft to 44 ft, then arrives at the Hollywood Sign and moves on past the Statue of Liberty and the Eiffel Tower"
-tocLabels:
-  "3 screens, 1 state machine": "Code & pixels"
 jumps:
   - { label: "Skip to how it works", to: "how-it-works" }
   - { label: "Why an elevator", to: "why-an-elevator" }

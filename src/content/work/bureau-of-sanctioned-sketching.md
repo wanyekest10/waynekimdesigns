@@ -8,6 +8,13 @@ year: "2025"
 featured: false
 label: "Prototyping and play design"
 summary: "A card game that gets adults drawing again."
+tocLabels:
+  "Three cards, one minute, one shared sheet of paper": "How it plays"
+  "Official-looking cards that tell you to draw": "The cards"
+  "Most adults stop drawing between 9 and 13": "The problem"
+  "Six prototypes before the cards worked": "Six prototypes"
+  "Players forgot the cards and kept drawing": "Playtests"
+  "Getting people to start works, and coming back is untested": "What's next"
 hero: "/work/bss-assets/deck.webp"
 heroAlt: "The Bureau of Sanctioned Sketching deck: a navy box with an octopus seal and three card stacks labeled Draw, Using, and While"
 card: "/work/bss-assets/card.webp"

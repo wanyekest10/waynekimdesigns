@@ -8,6 +8,12 @@ year: "2026"
 featured: true
 label: "Physical computing and prototyping"
 summary: "A room that nudges me to take a break."
+tocLabels:
+  "Working alone, the hours disappeared": "The problem"
+  "Asking like a friend would": "The idea"
+  "A Python script, two smart plugs, and Spotify": "The build"
+  "The first version rewarded me, and it backfired": "First version"
+  "What I learned and what's next": "What I learned"
 cardVideo: "/work/room-tone-assets/card-loop.mp4"
 hero: "/work/room-tone-assets/hero.webp"
 heroAlt: "Working at a desk at dusk while a lamp glows on the wall and a disco ball scatters light across the room"
