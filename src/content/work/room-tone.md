@@ -1,13 +1,13 @@
 ---
 title: room_tone
 slug: room-tone
-headline: "A room that notices when I've been working too long and offers a way out, with light, motion, and music instead of an alarm."
+headline: "A room that notices when I've worked too long, and suggests a break with light, motion, and music."
 context: "Personal project, 2026"
 order: 3
 year: "2026"
 featured: true
 label: "Physical computing and prototyping"
-summary: "A room that offers a break, not an alarm."
+summary: "A room that nudges me to take a break."
 cardVideo: "/work/room-tone-assets/card-loop.mp4"
 hero: "/work/room-tone-assets/hero.webp"
 heroAlt: "Working at a desk at dusk while a lamp glows on the wall and a disco ball scatters light across the room"
@@ -20,7 +20,6 @@ jumps:
 short:
   - { lead: "The question.", text: "Working alone, hours disappeared, and every break tool I tried was an alarm underneath. Could the room ask, the way a person would, with no guilt either way?" }
   - { lead: "What I built.", text: "A Python state machine that notices 90 minutes of steady work, then brings in a light, a spinning disco ball, and music, one layer at a time." }
-  - { lead: "What I learned.", text: "I thought I wanted a reward. I didn't. I wanted permission." }
 skills: [Creative coding, Physical computing, Interaction design]
 contributions:
   - { skill: "Creative coding", text: "A Python state machine that notices 90 minutes of steady work" }
@@ -33,11 +32,18 @@ facts:
   - { label: "Tools", value: "Python · pynput · Spotify Web API · Shelly smart plugs · Disco ball motor" }
 ---
 
-## Time felt flat
+<figure class="seq">
+  <div><video src="/work/room-tone-assets/step-1-launch.mp4" poster="/work/room-tone-assets/step-1-launch-poster.jpg" autoplay muted loop playsinline></video><p><span class="n">01</span><strong>Launch.</strong> I start room_tone in the terminal and go back to work.</p></div>
+  <div><video src="/work/room-tone-assets/step-2-activation.mp4" poster="/work/room-tone-assets/step-2-activation-poster.jpg" autoplay muted loop playsinline></video><p><span class="n">02</span><strong>Activation.</strong> After 90 minutes, the lamp comes on, then the disco ball turns.</p></div>
+  <div><video src="/work/room-tone-assets/step-3-ask.mp4" poster="/work/room-tone-assets/step-3-ask-poster.jpg" autoplay muted loop playsinline></video><p><span class="n">03</span><strong>The ask.</strong> It asks if I'll take a moment. I get up, and music starts.</p></div>
+  <div><video src="/work/room-tone-assets/step-4-exit.mp4" poster="/work/room-tone-assets/step-4-exit-poster.jpg" autoplay muted loop playsinline></video><p><span class="n">04</span><strong>Exit.</strong> When I type again, the music, ball, and light wind down in turn.</p></div>
+</figure>
 
-At CIID, the day had a rhythm. Crits, shared lunches, someone leaning over to ask if you wanted coffee. When I came back to working alone in Los Angeles, that rhythm was gone. Hours disappeared. Time felt flat. Nothing in my room changed between 9am and 5pm except how stiff I was.
+## Working alone, the hours disappeared
 
-<figure class="wide"><video src="/work/room-tone-assets/lab-table.mp4" poster="/work/room-tone-assets/lab-table-poster.jpg" autoplay muted loop playsinline></video><figcaption>The CIID lab on a normal afternoon: people building, testing, and checking in on each other.</figcaption></figure>
+At CIID, the day had a rhythm: crits, shared lunches, someone leaning over to ask if you wanted coffee. Back working alone in Los Angeles, that rhythm was gone. Nothing in my room changed between 9am and 5pm except how stiff I was.
+
+<figure class="wide"><video src="/work/room-tone-assets/lab-table.mp4" poster="/work/room-tone-assets/lab-table-poster.jpg" autoplay muted loop playsinline></video><figcaption>At CIID, people built, tested, and checked in on each other all afternoon.</figcaption></figure>
 
 <figure class="days" role="img" aria-label="Two lines from 9am to 5pm. The first is flat. The second rises and falls like a wave.">
   <div class="day">
@@ -49,23 +55,23 @@ At CIID, the day had a rhythm. Crits, shared lunches, someone leaning over to as
     <svg viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M4 40 C 30 18, 60 6, 90 14 S 140 54, 190 50 S 250 10, 290 8 S 350 50, 396 26" vector-effect="non-scaling-stroke"/></svg>
   </div>
   <div class="times"><span>9am</span><span>5pm</span></div>
-  <figcaption>Two ways to spend a workday. One flat, one with shape.</figcaption>
+  <figcaption>Working alone, my days went flat. At CIID, they had shape.</figcaption>
 </figure>
 
-I tried the usual tools: a Pomodoro timer, phone alarms, even the Time Timer on my desk. Underneath, they all work the same way. A fixed deadline goes off whether or not I'm in the middle of a thought, so I either silence it or resent it. The Flowtime method goes the other way and leaves stopping up to me, which is exactly the part I'm bad at.
+I tried a Pomodoro timer, phone alarms, and the Time Timer on my desk. Each one goes off at a fixed time, even in the middle of a thought, so I either silenced it or resented it.
 
-I wanted something in between. The room notices, then asks.
+The Flowtime method leaves stopping up to me, which is the part I'm bad at. I wanted something in between: the room notices, then asks.
 
 <p class="hmw">What if the room could ask "coffee?" the way a person would, with no guilt either way?</p>
 
-## A friend, not an alarm
+## Asking like a friend would
 
 Before building it, I wrote down how it should feel, using Bill Verplank's questions for interaction design.
 
 <div class="principles4">
   <div><h4>Error</h4><p>Losing two hours without noticing until my back hurts.</p></div>
   <div><h4>Metaphor</h4><p>A friend who respects your space and still gives you a heads up.</p></div>
-  <div><h4>Model</h4><p>A dimmer slowly turning up, not an alarm going off.</p></div>
+  <div><h4>Model</h4><p>Like a dimmer slowly turning up.</p></div>
   <div><h4>Control</h4><p>No button. Typing starts it, and typing ends it.</p></div>
 </div>
 
@@ -83,16 +89,9 @@ Each layer arrives on its own, then leaves in reverse. At any point, I can keep 
   <div class="lrow" role="row"><span role="cell">The room settles<small>Then asks whether to notice again</small></span><code class="term" role="cell">· room settles&#10;✧ notice again? (y/n)</code><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i></div>
 </div>
 
-<figure class="seq">
-  <div><video src="/work/room-tone-assets/step-1-launch.mp4" poster="/work/room-tone-assets/step-1-launch-poster.jpg" autoplay muted loop playsinline></video><p><span class="n">01</span><strong>Launch.</strong> I start room_tone from the terminal and get back to work. It starts noticing.</p></div>
-  <div><video src="/work/room-tone-assets/step-2-activation.mp4" poster="/work/room-tone-assets/step-2-activation-poster.jpg" autoplay muted loop playsinline></video><p><span class="n">02</span><strong>Activation.</strong> After 90 minutes, the lamp comes on, then the disco ball starts to turn.</p></div>
-  <div><video src="/work/room-tone-assets/step-3-ask.mp4" poster="/work/room-tone-assets/step-3-ask-poster.jpg" autoplay muted loop playsinline></video><p><span class="n">03</span><strong>The ask.</strong> It asks if I'll take a moment. I get up, and the music starts.</p></div>
-  <div><video src="/work/room-tone-assets/step-4-exit.mp4" poster="/work/room-tone-assets/step-4-exit-poster.jpg" autoplay muted loop playsinline></video><p><span class="n">04</span><strong>Exit.</strong> When I start typing again, the music, the ball, and the light wind down in turn.</p></div>
-</figure>
+## A Python script, two smart plugs, and Spotify
 
-## The build
-
-A Python script on my laptop uses pynput to track keyboard and mouse activity and decide when I've been working without a break. Two Shelly smart plugs switch the lamp and the disco ball motor, and the Spotify Web API handles the music. Activity tracking stays on the laptop.
+A Python script on my laptop uses pynput to track keyboard and mouse activity and decide when I've worked without a break. Two Shelly smart plugs switch the lamp and the disco ball motor, and the Spotify Web API plays the music.
 
 <div class="sys" aria-label="room_tone system">
   <div class="col"><span class="k">Inputs</span><span class="part">Keyboard and mouse<small>pynput counts steady work, on the laptop.</small></span></div>
@@ -102,40 +101,40 @@ A Python script on my laptop uses pynput to track keyboard and mouse activity an
   <div class="col"><span class="k">Outputs</span><span class="part">Shelly plug: lamp<small>The first layer.</small></span><span class="part">Shelly plug: disco ball motor<small>The second.</small></span><span class="part">Spotify Web API<small>The music.</small></span></div>
 </div>
 
-The whole thing is a small state machine: noticing, activating, asking, playing, returning, settled. I gave each state a symbol in the terminal, so I could glance over and see exactly what the system thought was happening. Most of my tuning happened there: how long to wait before the ball, how many seconds of stillness count as a pause, how slowly each layer should fade.
+The script is a small state machine: noticing, activating, asking, playing, returning, settled. Each state has its own symbol in the terminal, so I can glance over and see what the system thinks is happening.
 
-### Why a disco ball
+Most of my tuning happened there. I adjusted how long to wait before the ball, how many seconds of stillness count as a pause, and how slowly each layer fades.
 
-It's personal. Disco balls were at the creative coding nights and CIID parties where work felt most like play. It also has three layers built in: light hits it, it turns, and music belongs with it. Those three layers became the stages of the system.
+I picked a disco ball because they were at the creative coding nights and CIID parties where work felt most like play. It also has three layers built in: light hits it, it turns, and music goes with it. Those became the stages of the system.
 
-## The first version rewarded me
+## The first version rewarded me, and it backfired
 
-It didn't start this way. My first idea was a reward. I'd write a checklist for the day, and when I finished it, the disco ball would turn on. A small party for getting things done.
+My first idea was a reward. I'd write a checklist for the day, and when I finished it, the disco ball would turn on.
 
-It backfired. The checklist added pressure instead of taking it away, and on days the list didn't get finished, the dark disco ball felt like a verdict. I had built a nicer-looking alarm.
+The checklist added pressure instead of taking it away. On days the list didn't get finished, the dark disco ball felt like a verdict. It had turned into another alarm.
 
-> I thought I wanted a reward. I didn't. I wanted permission.
+> I expected to want a reward. What I wanted was permission to stop.
 
-So I took out the tasks, the score, and the judgment. The second version doesn't care what I got done. It only notices how long I've been at it.
+So I took out the tasks, the score, and the judgment. The second version only notices how long I've been at it.
 
 <div class="compare">
   <div class="crow head"><span></span><span class="k">CHECKLIST VERSION</span><span></span><span class="k">ROOM_TONE</span></div>
-  <div class="crow"><span class="k">Trigger</span><span class="was">Finishing my tasks</span><span class="to">→</span><span class="is">90 minutes of steady work<small>Time at the desk, not output.</small></span></div>
+  <div class="crow"><span class="k">Trigger</span><span class="was">Finishing my tasks</span><span class="to">→</span><span class="is">90 minutes of steady work<small>Time at the desk.</small></span></div>
   <div class="crow"><span class="k">Signal</span><span class="was">A reward</span><span class="to">→</span><span class="is">An offer<small>Light first, then motion, then a question.</small></span></div>
   <div class="crow"><span class="k">A bad day</span><span class="was">An unfinished list</span><span class="to">→</span><span class="is">Nothing to fail<small>There's no score to miss.</small></span></div>
   <div class="crow focal"><span class="k">My response</span><span class="was">Check the box</span><span class="to">→</span><span class="is">Pause, or don't<small>Keep typing and the room lets it go.</small></span></div>
 </div>
 
-## Reflection
+## What I learned and what's next
 
-**Permission, not reward.** The checklist made the break something I had to earn. Taking the judgment out is what made it something I actually took.
+**Without the judgment, I took the breaks.** The checklist made a break something I had to earn. Once that was gone, I actually stopped.
 
-**Slow is the point.** Each layer gives me time to finish a thought before the next one arrives. An alarm interrupts. A dimmer lets you notice.
+**Slow layers leave time to finish a thought.** Each layer waits a while before the next one arrives, so I can wrap up what I'm doing.
 
-**The same channel in and out.** Typing is what starts it and typing is what ends it, so there's nothing to dismiss and nothing to feel guilty about ignoring.
+**Typing starts it and typing ends it.** There's nothing to dismiss, so there's nothing to feel guilty about ignoring.
 
-**What's next.** I started on a tabletop version, a single object with a dial to set the threshold, so it could live on any desk without smart plugs and a ceiling hook. It's on hold for now, but the state machine is ready for it.
+**What's next.** I started a tabletop version: one object with a dial to set the threshold, so it could live on any desk without smart plugs and a ceiling hook. It's on hold for now, and the state machine is ready for it.
 
-**Part of a bigger exploration.** room_tone is one of a few calm tech prototypes I'm building: everyday objects that sit at the edge of attention instead of asking for it. See also [Toilet Paper Elevator](/work/toilet-paper-elevator/), and [Linee](/work/linee/), where it started.
+room_tone is one of a few calm tech prototypes, along with [Toilet Paper Elevator](/work/toilet-paper-elevator/) and [Linee](/work/linee/), where it started.
 
-<figure class="embed"><iframe src="https://www.youtube-nocookie.com/embed/VhLl8r5Z-h4?rel=0&modestbranding=1&playsinline=1" title="room_tone, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
+<figure class="embed"><iframe src="https://www.youtube-nocookie.com/embed/VhLl8r5Z-h4?rel=0&modestbranding=1&playsinline=1" title="room_tone, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full room_tone video.</figcaption></figure>

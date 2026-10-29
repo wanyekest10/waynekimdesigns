@@ -16,7 +16,6 @@ jumps:
 short:
   - { lead: "The question.", text: "The brief asked for a fan that is both lightweight and serious. What if we took serious literally, and made a fan that holds you to your word?" }
   - { lead: "What we built.", text: "A fan that watches whether you meet a goal you set. Meet it, and you get a breeze. Miss it, and the fan stops and a red LED comes on." }
-  - { lead: "What I learned.", text: "Feedback can land as a change in comfort instead of a message. No lecture, just less breeze." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Course", value: "Prototyping as a Process" }

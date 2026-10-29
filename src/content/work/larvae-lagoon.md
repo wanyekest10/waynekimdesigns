@@ -17,7 +17,6 @@ jumps:
 short:
   - { lead: "The question.", text: "How might we make dragonfly habitats in the Astino Valley resilient to extreme weather, from flooding to drought?" }
   - { lead: "What we did.", text: "Field research, expert conversations, and biomimicry, borrowing from how bromeliads store water and how mangroves and lotus plants handle floods." }
-  - { lead: "What I learned.", text: "Designing for a non-human user means bringing your strengths as a designer, knowing how much you don't know, and leaning on the experts who do." }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
   - { label: "Role", value: "Field research · Led expert conversations" }

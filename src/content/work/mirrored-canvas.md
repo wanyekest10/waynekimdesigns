@@ -1,7 +1,7 @@
 ---
 title: Mirrored Canvas
 slug: mirrored-canvas
-headline: "An installation that turns silly faces into projected visuals, so people can perform an emotion together instead of having it read."
+headline: "An installation that turns silly faces into projected visuals people play with together."
 context: "CIID, 2024"
 order: 7
 year: "2024"
@@ -18,7 +18,6 @@ jumps:
 short:
   - { lead: "The question.", text: "How do you design an experience that gets people to make silly faces, in public, in front of other people?" }
   - { lead: "What we built.", text: "A translucent canvas that works as both mirror and stage. Face tracking and a microphone turn expressions and voice into live projected visuals." }
-  - { lead: "What I learned.", text: "Creative coding let us prototype play fast, and absurdity turned out to be contagious: ridiculous prototypes gave the whole room permission to play." }
 skills: [Creative coding]
 contributions:
   - { skill: "Creative coding", text: "Face tracking with FaceOSC and Processing" }
@@ -73,9 +72,9 @@ We bodystormed before we built. The pattern showed up fast: when a prototype fel
 
 ## Reflection
 
-**Play over precision.** We built for laughter, not accuracy. The installation only had to respond enough to keep people trying faces.
+**Play over precision.** Laughs mattered more than accuracy. The installation only had to respond enough to keep people trying faces.
 
-**Performed, not captured.** Most emotion tech tries to read and classify your face. Here the emotion was performed and shared with the room, not captured or classified.
+**People performed the emotion for the room.** Most emotion tech tries to read and classify your face. Here people made the faces on purpose and shared them with the room.
 
 **Where it started.** Calvin on picture day in [Calvin and Hobbes](https://www.gocomics.com/calvinandhobbes/1988/12/15), pulling face after face instead of smiling for the camera. That kind of play was what we wanted in the room.
 

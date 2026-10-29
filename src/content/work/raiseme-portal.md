@@ -44,9 +44,9 @@ facts:
   - { label: "Methods", value: "Interviews, usability tests, survey, journey mapping" }
 ---
 
-## The impact
+## The rebuilt portal helped keep 90%+ of revenue through COVID
 
-Research turned a quiet support problem into a leadership commitment, weeks before COVID hit higher ed budgets. The rebuilt portal shipped automated weekly downloads in place of a broken export, and it was part of how RaiseMe held on while colleges froze budgets and cut vendors.
+My research turned a quiet support problem into a leadership commitment, weeks before COVID hit higher ed budgets. The rebuilt portal replaced a broken export with automated weekly downloads.
 
 <div class="stats">
   <div class="focal"><span class="k">For the business</span><b>90%+</b><p>of projected annual revenue kept</p></div>
@@ -58,41 +58,43 @@ Research turned a quiet support problem into a leadership commitment, weeks befo
 <figure class="pair">
   <img src="/work/raiseme-assets/before-portal-error.webp" alt="Before: the portal showing a red error banner and empty saved groups"/>
   <img src="/work/raiseme-assets/after-scheduled-downloads.webp" alt="After: an Available downloads list with automatically generated weekly follower reports"/>
-  <figcaption>Before: errors on the most basic task. After: weekly exports that generate themselves and wait in a downloads list.</figcaption>
+  <figcaption>Before, the basic export failed with errors. After, weekly reports generate themselves and wait.</figcaption>
 </figure>
 
-The updated portal stayed in use after RaiseMe was acquired by CampusLogic in July 2020.
+The rebuilt portal was part of how RaiseMe held on while colleges froze budgets and cut vendors. It stayed in use after CampusLogic acquired RaiseMe in July 2020.
 
 > "Wayne drove real change in our product roadmap and client success trajectory by tying client needs directly to ROI."
 >
 > VP of Partner Success
 
-## Growth without reliability
+## Colleges were losing trust in a weekly export
 
-Colleges paid RaiseMe to reach students early. To use that data, someone at each college had to export it from the portal, clean it, and load it into their own CRM, every week, under enrollment deadlines. When the portal failed, their week stalled.
+Colleges paid RaiseMe to reach students early. To use that data, someone at each college exported it from the portal, cleaned it, and loaded it into their CRM every week, under enrollment deadlines. When the portal failed, their week stalled.
 
 > "The report has been showing as pending for about 20 minutes, which is much longer than usual. I can't find a way to cancel the request."
 >
 > Data operator, by email
 
-Each issue looked small. Together they were eroding trust, and the people renewing the contracts would eventually hear about it. Before research, I worked in Partner Success with these colleges, so I saw the gap between what partners struggled with and what was on the roadmap.
+Each issue looked small. Together they wore down trust, and the people renewing the contracts would eventually hear about it.
+
+Before moving into research, I worked in Partner Success with these colleges. I could see the gap between what partners struggled with and what was on the roadmap.
 
 ## Hack Week: the assumption broke
 
-I used RaiseMe's first Hack Week to dig into how colleges moved our data into their CRMs. With three engineers and three people from Sales and Partner Success, we ran five interviews, five surveys, and three usability tests with data operators in four days.
+I used RaiseMe's first Hack Week to study how colleges moved our data into their CRMs. With three engineers and three people from Sales and Partner Success, we ran five interviews, five surveys, and three usability tests with data operators in four days.
 
-We went in believing API integrations would solve it. The first two partners loved the idea, and the engineers wanted to start building. I asked them to wait a day. The next three changed the answer.
+We went in believing API integrations would solve it. The first two partners loved the idea and the engineers wanted to start building, so I asked them to wait a day. The next three interviews changed the answer.
 
 <div class="compare">
   <div class="crow head"><span></span><span class="k">WHAT WE ASSUMED</span><span></span><span class="k">WHAT INTERVIEWS SHOWED</span></div>
-  <div class="crow"><span class="k">The problem</span><span class="was">Partners need API integrations</span><span class="to">→</span><span class="is">Partners already use middleware<small>One more integration adds work, not less.</small></span></div>
-  <div class="crow"><span class="k">Where it breaks</span><span class="was">Getting data into RaiseMe</span><span class="to">→</span><span class="is">Getting clean data out<small>Every export was cleaned again by hand.</small></span></div>
-  <div class="crow focal"><span class="k">What to build</span><span class="was">More integrations</span><span class="to">→</span><span class="is">Predictable, CRM-ready exports<small>Which became Scheduled Templates.</small></span></div>
+  <div class="crow"><span class="k">The problem</span><span class="was">Partners need API integrations</span><span class="to">→</span><span class="is">Partners already use middleware<small>Another integration would mean more work for them.</small></span></div>
+  <div class="crow"><span class="k">Where it breaks</span><span class="was">Getting data into RaiseMe</span><span class="to">→</span><span class="is">Getting clean data out<small>Partners cleaned every export again by hand.</small></span></div>
+  <div class="crow focal"><span class="k">What to build</span><span class="was">More integrations</span><span class="to">→</span><span class="is">Predictable, CRM-ready exports<small>This idea became Scheduled Templates.</small></span></div>
 </div>
 
-Underneath it was trust: why plug in an API from a vendor whose downloads kept failing? We prototyped Scheduled Templates, standardized weekly exports that fit the workflows partners already had.
+Underneath it was trust: why plug in an API from a vendor whose downloads kept failing? So we prototyped Scheduled Templates, standard weekly exports that fit the workflows partners already had.
 
-<figure class="textw"><img src="/work/raiseme-assets/prototype-scheduled-templates.webp" alt="The Scheduled Templates prototype: a Download settings dialog that auto-generates a weekly CSV of high school followers every Monday"/><figcaption>The Scheduled Templates prototype: set it once, and a clean weekly export is waiting every Monday. Student details blurred.</figcaption></figure>
+<figure class="textw"><img src="/work/raiseme-assets/prototype-scheduled-templates.webp" alt="The Scheduled Templates prototype: a Download settings dialog that auto-generates a weekly CSV of high school followers every Monday"/><figcaption>Set it once, and a clean export is waiting every Monday. Student details blurred.</figcaption></figure>
 
 > "This would save me 15 minutes per week to 2 minutes, and I would see no more error bars."
 >
@@ -100,17 +102,15 @@ Underneath it was trust: why plug in an API from a vendor whose downloads kept f
 
 Across 330+ partners, that projected to 3,500+ hours a year. The project was runner-up for both Judges' Choice and People's Choice, but it didn't make the roadmap yet.
 
-## Building the case
+## Survey and contract data showed revenue at risk
 
-After Hack Week, feasibility wasn't the barrier. Prioritization was. Our only sentiment measure was NPS, answered by 3% of partners, so I built a research plan: interviews, a partner survey, and workshops with Sales and Partner Success.
+After Hack Week, the barrier was prioritization. Our only sentiment measure was NPS, answered by 3% of partners, so I planned interviews, a partner survey, and workshops with Sales and Partner Success.
 
 > "We had issues even getting follower information at the deadline. This caused award letters to be held up for the entire class."
 >
 > Data operations lead
 
-### Asking partners
-
-12 of 14 partners said portal reliability fell below their expectations, far more than any other part of the experience.
+12 of 14 partners said portal reliability fell below their expectations. No other part of the experience came close.
 
 <div class="bars">
   <div class="brow focal"><span class="bl">College Portal reliability</span><div class="track"><div class="fill" style="width:85.71%"></div></div><span class="bv">12 of 14</span></div>
@@ -118,12 +118,10 @@ After Hack Week, feasibility wasn't the barrier. Prioritization was. Our only se
   <div class="brow"><span class="bl">Building and editing programs</span><div class="track"><div class="fill" style="width:42.86%"></div></div><span class="bv">6 of 14</span></div>
   <div class="brow"><span class="bl">Accuracy of RaiseMe data</span><div class="track"><div class="fill" style="width:35.71%"></div></div><span class="bv">5 of 14</span></div>
   <div class="brow"><span class="bl">Ease of use</span><div class="track"><div class="fill" style="width:21.43%"></div></div><span class="bv">3 of 14</span></div>
-  <div class="note">Partners who said each area fell below expectations. Survey of college partners, 14 of 23 responded.</div>
+  <div class="note">Areas partners rated below expectations. Reliability led by far. 14 of 23 partners responded.</div>
 </div>
 
-### Revenue at risk
-
-I lined up the words partners used for the portal against what each one paid. The partners calling it slow and stressful were some of our largest accounts.
+Then I lined up the words partners used for the portal against what each one paid. Some of our largest accounts were the ones calling it slow and stressful.
 
 <table>
   <thead><tr><th>Partner</th><th>Described the portal as</th><th>Annual contract</th></tr></thead>
@@ -136,17 +134,15 @@ I lined up the words partners used for the portal against what each one paid. Th
   </tbody>
 </table>
 
-### Inside the company
-
-The workshops showed the portal was slowing deals and making renewals harder to defend.
+The workshops showed the portal was also slowing deals and making renewals harder to defend.
 
 > "Most of my team won't demo any product live. I do, but I'm always holding my breath during the Portal part."
 >
 > Sales leader
 
-## The decision
+## Leadership committed to rebuilding the portal
 
-With our Product Manager, I framed it as a business decision, not a UX improvement: would the company be comfortable choosing not to fix this?
+With our Product Manager, I framed it as a business decision: would the company be okay choosing not to fix this?
 
 <div class="cols">
   <div>
@@ -167,10 +163,12 @@ With our Product Manager, I framed it as a business decision, not a UX improveme
   </div>
 </div>
 
-We aligned on a phased roadmap, reliability first, then interface fixes, then Scheduled Templates. I brought the case to the CEO and senior leadership, and it secured a commitment to rebuild the College Partner Portal in early 2020. COVID forced trade-offs, so custom download fields were cut, but the automated weekly downloads and a first Partner Dashboard shipped.
+We agreed on a phased roadmap: reliability first, then interface fixes, then Scheduled Templates. I brought the case to the CEO and senior leadership, and they committed to rebuilding the College Partner Portal in early 2020.
 
-## Reflection
+COVID forced trade-offs, so custom download fields were cut. The automated weekly downloads and a first Partner Dashboard shipped.
 
-**In B2B, the user and the buyer are different people.** The leaders who renewed never touched the export, and the operators who did had no say in the contract. Research had to carry one group's experience to the other.
+## What I learned: users and buyers are different people
 
-**What I'd do sooner.** Find a senior sponsor in the first weeks, not the third month, and bring partner stories to the team earlier.
+The leaders who renewed never touched the export, and the operators who did had no say in the contract. Research had to carry one group's experience to the other.
+
+Next time, I'd find a senior sponsor in the first few weeks and bring partner stories to the team sooner.

@@ -1,7 +1,7 @@
 ---
 title: Living.fm
 slug: living-fm
-headline: "An AI radio host for your home that notices when you're scrolling instead of living, and learned when to stay quiet."
+headline: "An AI radio host for your home that notices when you're scrolling, and learned when to stay quiet."
 context: "CIID, 2025"
 role: Interaction designer
 timeline: 4 days, 2025
@@ -26,7 +26,6 @@ jumps:
 short:
   - { lead: "The question.", text: "Technology built to hold attention reinforces habits like doomscrolling. Could a little self-awareness, at the right moment, work as gentle friction?" }
   - { lead: "What I built.", text: "Liv, a wooden speaker with a camera that recognizes four activities and comments like a late-night radio host. I trained the vision model, wrote her personality, and built a live testing interface." }
-  - { lead: "What I learned.", text: "In an ambient system, the interpretation is the product. Liv only works when she knows when to stay quiet." }
 skills: [AI prototyping, Interaction design, Prototyping]
 contributions:
   - { skill: "AI prototyping", text: "Trained the vision model, then coded the machine's logic in Cursor: the state machine that decides what Liv sees and when she speaks" }
@@ -118,7 +117,7 @@ In Korean, 잔소리 (jansori) describes exactly this: nagging that overwhelms c
 
 ## A speculative exploration
 
-Living.fm is a provocation, not a product. Through it, we explored how AI, sound, and physical design might come together to make home life more mindful, one small interaction at a time.
+We built Living.fm to raise questions. It was never meant to ship. Through it, we explored how AI, sound, and physical design might come together to make home life more mindful, one small interaction at a time.
 
 The biggest lesson: in an ambient system, the interpretation is the product. Liv's voice, music, and lines only work if her read of the room is right, and if people can trust it. Most of the design work with AI happened outside the model, in deciding what she recognized, when she spoke, and when she stayed quiet.
 

@@ -1,7 +1,7 @@
 ---
 title: Linee
 slug: linee
-headline: "A wooden timekeeper for shared homes that keeps housemates in sync with a soft knock instead of an alarm."
+headline: "A wooden timekeeper for shared homes that gives each planned hour a soft knock."
 context: "CIID, 2025"
 order: 5
 year: "2025"
@@ -16,9 +16,8 @@ jumps:
   - { label: "Skip to how it works", to: "how-it-works" }
   - { label: "Skip to the build", to: "making-it-move" }
 short:
-  - { lead: "The question.", text: "Shared homes run on group chats, alarms, and reminders. Could a household stay in sync by asking for less attention, not more?" }
+  - { lead: "The question.", text: "Shared homes run on group chats, alarms, and reminders. Could a household stay in sync with something that asks for less attention?" }
   - { lead: "What we built.", text: "Linee, a 24-hour timeline of wooden blocks. Press a block to mark an event. A motorized needle crosses the day and gives each marked hour a soft knock as it passes." }
-  - { lead: "What I learned.", text: "Calm technology isn't silent: it moves information to the edge of attention, where you can glance at it instead of being interrupted." }
 skills: [Physical computing, Prototyping, Interaction design]
 contributions:
   - { skill: "Physical computing", text: "Wrote the code for the stepper motor and LEDs" }
@@ -118,4 +117,4 @@ At some point Massimo told us to stop sanding small pieces of wood and put it in
 
 <figure class="embed"><iframe src="https://player.vimeo.com/video/1068790351?dnt=1&title=0&byline=0&portrait=0" title="Linee, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
 
-**Where it started.** Linee, a team project at CIID, is where my calm tech exploration started: everyday objects that sit at the edge of attention instead of asking for it. See also [Toilet Paper Elevator](/work/toilet-paper-elevator/) and [room_tone](/work/room-tone/).
+**Where it started.** Linee, a team project at CIID, is where I started working on calm tech. See also [Toilet Paper Elevator](/work/toilet-paper-elevator/) and [room_tone](/work/room-tone/).

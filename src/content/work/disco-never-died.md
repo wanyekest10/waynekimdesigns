@@ -16,7 +16,6 @@ hideHero: true
 short:
   - { lead: "The question.", text: "Could the sound in a room light up a disco ball made of code?" }
   - { lead: "What I built.", text: "A disco ball and a grid of colorful shapes that grow and glow with the room's volume. Try it on this page: it starts flat, then opens up into 3D." }
-  - { lead: "What I learned.", text: "Making something 2D, then evolving it into 3D and back, is fun. Three simple squares can go a long way: they got me into VJing." }
 skills: [Creative coding, Interaction design, Prototyping]
 contributions:
   - { skill: "Creative coding", text: "Built the dance floor grid, then the disco ball from squares and sine and cosine, in Processing" }

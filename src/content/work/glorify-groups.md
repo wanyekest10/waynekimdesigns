@@ -46,7 +46,7 @@ facts:
 
 ## Should Groups exist at all?
 
-Glorify had 2.5M+ users praying and reading on their own. After the Series B, leadership needed a next growth bet, and community was the obvious one. Building it meant committing product pods, so the question wasn't how to design Groups. It was whether Groups should exist at all.
+Glorify had 2.5M+ users praying and reading on their own. After the Series B, leadership needed a next growth bet, and community was the obvious one. Building it meant committing product pods, so the first question was whether Groups should exist at all.
 
 ## How we found out
 
@@ -63,7 +63,7 @@ Earlier interviews with 40+ pastors and group leaders said small groups are the 
     <div class="q"><span class="q-k">On your own, built for faith</span><div class="q-chips"><span>YouVersion</span><span>Glorify, before Groups</span></div></div>
   </div>
   <p class="q-axis q-x"><span>Any conversation</span><span>Built for faith practice</span></p>
-  <figcaption>The real competition was the group chat, not another Bible app. Tools in the top left are the ones participants said their groups already used. Placement is my read of the interviews.</figcaption>
+  <figcaption>Groups were really competing with the group chat. Tools in the top left are the ones participants said their groups already used. Placement is my read of the interviews.</figcaption>
 </figure>
 
 ### Three doubts, one hypothesis
@@ -72,7 +72,7 @@ Leadership had three doubts: would people engage, would sharing faith in an app 
 
 <figure class="wide"><img src="/work/glorify-diagrams/flywheel.svg" alt="The Flywheel Framework, two wheels: value to users (group leads and members drive each other) turns value to the small group (better engagement, more meaningful time in person, supported discipleship). Leadership's three doubts sit on the parts they test."/><figcaption>Each of leadership's doubts, placed on the part of the flywheel it tests.</figcaption></figure>
 
-### Studying real behavior, not stated interest
+### Watching what people actually did
 
 Ask people if they'd use a community feature and most say yes. So instead, 82 people used a working prototype inside their real small groups for two weeks, with six check-ins each and follow-up interviews.
 
