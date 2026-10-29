@@ -53,7 +53,7 @@ That set the rules early. The display had to count for the whole household, stay
 
 The first version was a highway: each pull was distance driven from LA City Hall to the Santa Monica Pier. One household moves slowly, though, and a trip measured in miles barely changed from week to week.
 
-Height moves every day, and the world is full of tall things people already know. So the screen climbs from the ground floor past eighteen landmarks, from the Hollywood Sign to the Eiffel Tower to the Burj Khalifa.
+Height moves every day, and the world is full of tall things people already know. So the screen climbs from the ground floor past eighteen landmarks, from the <span class="peek" tabindex="0">Hollywood Sign<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-00.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Eiffel Tower<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-12.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Burj Khalifa<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-17.webp" alt="" loading="lazy" /></span></span>.
 
 <div id="how-it-works" style="scroll-margin-top:88px"></div>
 

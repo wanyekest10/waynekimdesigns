@@ -96,6 +96,16 @@ const { title, image, imageAlt, wide = false, noindex = false, prompt = 'Have so
       }
     </script>
     <script>
+      // Peek: words that show a photo or two on hover. On touch screens, tap the word to see them, tap anywhere to hide.
+      if (matchMedia('(hover: none)').matches) {
+        const peeks = [...document.querySelectorAll('span.peek')];
+        document.addEventListener('click', (e) => peeks.forEach((s) => s.classList.toggle('open', s.contains(e.target as Node) && !s.classList.contains('open'))));
+      }
+      // Near the top of the screen, show the photos under the word so the nav doesn't cover them.
+      document.querySelectorAll<HTMLElement>('.peek').forEach((el) => ['mouseenter', 'focus', 'click'].forEach((ev) =>
+        el.addEventListener(ev, () => el.classList.toggle('below', el.getBoundingClientRect().top < 240))));
+    </script>
+    <script>
       // Tap a diagram marked .zoom to see it big. On phones it opens wider than the screen, so you can pan.
       document.addEventListener('click', (e) => {
         const img = e.target.closest && e.target.closest('img.zoom');
