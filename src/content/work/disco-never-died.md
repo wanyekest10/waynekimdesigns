@@ -3,9 +3,9 @@ title: Disco Never Died
 slug: disco-never-died
 headline: "A disco ball made of code that pulses with the sound in the room, inspired by Soul Train and built in Processing."
 context: "CIID, 2024"
-order: 4
+order: 6.2
 year: "2024"
-featured: true
+featured: false
 label: "Creative coding and VJing"
 summary: "A disco ball made of code and sound."
 card: "/work/disco-assets/card-still.webp"

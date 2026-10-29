@@ -3,9 +3,9 @@ title: Bureau of Sanctioned Sketching
 slug: bureau-of-sanctioned-sketching
 headline: "A card game that gives adults official permission to draw again, found by prototyping my way through six things that didn't work."
 context: "CIID, 2025"
-order: 6.2
+order: 4
 year: "2025"
-featured: false
+featured: true
 label: "Prototyping and play design"
 summary: "A card game that gets adults drawing again."
 tocLabels:
@@ -17,8 +17,9 @@ tocLabels:
   "Getting people to start works, and coming back is untested": "What's next"
 hero: "/work/bss-assets/deck.webp"
 heroAlt: "The Bureau of Sanctioned Sketching deck: a navy box with an octopus seal and three card stacks labeled Draw, Using, and While"
-card: "/work/bss-assets/card.webp"
-cardAlt: "Two players at the table: one points to a prompt card reading only two fingers, no thumbs, the other draws with a purple marker"
+card: "/work/bss-assets/card-still.webp"
+cardVideo: "/work/bss-assets/card-loop.mp4"
+cardAlt: "Hands opening the Bureau of Sanctioned Sketching deck at a table"
 heroVideo: "/work/bss-assets/playtest.mp4"
 heroPoster: "/work/bss-assets/playtest-poster.jpg"
 jumps:

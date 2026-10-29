@@ -6,7 +6,7 @@ import Rows from '../../components/Rows.astro';
 import CopyEmail from '../../components/CopyEmail.astro';
 import { experiments } from '../../data/experiments';
 // Unlisted homepage for toy, game, and play roles. Same page, different six. Not in search, not linked from the site.
-const pick = ['bureau-of-sanctioned-sketching', 'living-fm', 'mirrored-canvas', 'toilet-paper-elevator', 'disco-never-died', 'glorify-groups'];
+const pick = ['disco-never-died', 'bureau-of-sanctioned-sketching', 'living-fm', 'mirrored-canvas', 'toilet-paper-elevator', 'glorify-groups'];
 const all = await getCollection('work');
 const work = pick.map((id) => all.find((w) => w.id === id)!);
 const playRows = ['Dear Theo, Ever Yours', 'A Serious Fan', 'Tamer Kebap Eating Club'].map((n) => experiments.find((e: any) => e.name === n));
