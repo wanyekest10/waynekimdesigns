@@ -191,17 +191,17 @@ I designed the pod in Fusion and printed everything in gray. The LiPo sits trapp
 
 ## Five tries to hide the wire in a bathroom
 
-Getting a wire from the holder to the screen with nothing exposed took five tries. Exposed jumpers worked but looked unfinished.
+Getting the wire from the holder to the screen took five tries. The first version ran exposed jumper wires down the wall, with a collar on the holder's arm to hold the Hall effect sensor. It worked, but it looked unfinished.
 
-A braided cord hid the wires, with a gray collar on the holder's arm to hold the sensor, but the cord drooped and the collar stuck out. A purple collar and raceway then pinned everything flat to the wall.
+A braided cord hid the wires, but it drooped, and the collar still stuck out. None of it felt calm, so I went back to the wall with paper and string to measure where a raceway for the wires should go.
 
-In the end, the raceway's own arm could carry the sensor right up to the sleeve, so I dropped the collar. That made it easier to install and calmer to look at.
+The first printed raceway, in purple, held everything flat, still with a collar around the arm. Then I realized the sensor didn't need a collar at all: the raceway could just stick out along the arm and carry the sensor to the sleeve.
 
 <figure class="grid5">
-  <div><img src="/work/tpe-assets/mock-paper.webp" alt="A paper rectangle taped to the wall with a string running down to the holder"/><p>1. Paper and string to find where the screen goes.</p></div>
-  <div><img src="/work/tpe-assets/iter-1-exposed.webp" alt="The first version: the pod on the wall with loose orange and yellow jumper wires running to the holder"/><p>2. Exposed jumpers worked but looked unfinished.</p></div>
-  <div><img src="/work/tpe-assets/iter-2-braided.webp" alt="The pod with a black braided cord looping down to a gray collar on the holder"/><p>3. A braided cord and collar, but the cord drooped.</p></div>
-  <div><img src="/work/tpe-assets/iter-3-purple-collar.webp" alt="A purple raceway down the wall into a purple collar around the holder's arm"/><p>4. A raceway and purple collar held everything flat.</p></div>
+  <div><img src="/work/tpe-assets/iter-1-exposed.webp" alt="The first version: the pod on the wall with loose orange and yellow jumper wires running to the holder"/><p>1. Exposed jumpers and a collar worked but looked unfinished.</p></div>
+  <div><img src="/work/tpe-assets/iter-2-braided.webp" alt="The pod with a black braided cord looping down to a gray collar on the holder"/><p>2. A braided cord hid the wires, but it drooped.</p></div>
+  <div><img src="/work/tpe-assets/mock-paper.webp" alt="A paper rectangle taped to the wall with a string running down to the holder"/><p>3. Paper and string to measure where a raceway goes.</p></div>
+  <div><img src="/work/tpe-assets/iter-3-purple-collar.webp" alt="A purple raceway down the wall into a purple collar around the holder's arm"/><p>4. A purple raceway and collar held everything flat.</p></div>
   <div><img src="/work/tpe-assets/iter-4-final.webp" alt="The final version: the gray pod and slim gray raceway, whose arm runs along the holder to the sleeve"/><p>5. The raceway alone carries the sensor to the sleeve.</p></div>
 </figure>
 
