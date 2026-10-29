@@ -10,7 +10,7 @@ const ways = [
     what: "I turn the doubt into one question we can test, then pick the method that fits: interviews, surveys, a service blueprint of how things work today, or a rough prototype to see how people react.",
     get: 'a clear go, no-go, or what to change, with evidence behind it.',
     proof: [
-      { name: 'Glorify Groups', href: '/work/glorify-groups/', image: '/work/glorify-assets/shipped-screens.webp', result: '6 weeks. Leadership put 3 of 4 pods on it. Now 1.8M+ users.' },
+      { name: 'Glorify Groups', href: '/work/glorify-groups/', image: '/work/glorify-assets/shipped-screens-flat.webp', result: '6 weeks. Leadership put 3 of 4 pods on it. Now 1.8M+ users.' },
       { name: 'RaiseMe Portal', href: '/work/raiseme-portal/', image: '/work/raiseme-assets/journey-map.webp', result: 'Helped keep 90%+ of projected revenue through the pandemic.' },
     ],
   },
@@ -183,13 +183,13 @@ const steps = [
   .proof-list li { padding-left: 12px; margin-left: -12px; border-left: 2px solid transparent; transition: border-color .3s; }
   .proof-list li.on { border-left-color: var(--accent); }
   .way h3 { font: var(--h2); font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 6px; }
-  .w-time { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--accent); }
+  .w-time { font: var(--meta); letter-spacing: -0.02em; color: var(--accent); }
   .w-when { color: var(--gray); font-size: 15px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
   .w-what { font-size: 15px; }
   .w-get { font-size: 15px; color: var(--gray); align-self: start; }
   .w-get b { color: var(--ink); font-weight: 500; }
   .proof { align-self: start; padding-top: 16px; border-top: 1px solid var(--rule); }
-  .proof-label { display: block; font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+  .proof-label { display: block; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 8px; }
   .proof-list { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
   .proof-list li { display: flex; flex-direction: column; gap: 1px; }
   .proof-list span { color: var(--gray); font-size: 14px; line-height: 1.4; }
@@ -202,7 +202,7 @@ const steps = [
   .contact-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 48px; align-items: start; }
   .msg { display: flex; flex-direction: column; gap: 16px; }
   .topic { border: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-  .topic legend { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 10px; }
+  .topic legend { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 10px; }
   .topic input { position: absolute; opacity: 0; pointer-events: none; }
   .topic span { display: inline-block; padding: 7px 14px; border: 1px solid var(--rule); border-radius: 999px; font-size: 15px; cursor: pointer; transition: border-color .15s, background .15s; }
   .topic label:hover span { border-color: var(--gray); }
@@ -210,7 +210,7 @@ const steps = [
   .topic input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
   .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .fld { display: flex; flex-direction: column; gap: 6px; }
-  .fld > span { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); }
+  .fld > span { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); }
   .fld input, .fld textarea { font: var(--body); color: var(--ink); background: var(--panel); border: 1px solid transparent; border-radius: 8px; padding: 12px 14px; resize: vertical; }
   .fld input:focus, .fld textarea:focus { outline: none; border-color: var(--accent); background: var(--paper); }
   .fld textarea::placeholder { color: #9A9A96; }
@@ -221,7 +221,7 @@ const steps = [
   .send-row button:disabled { opacity: .5; cursor: default; }
   .msg-status { color: var(--gray); font-size: 15px; }
   .direct { padding: 24px; background: var(--panel); border-radius: 10px; }
-  .direct-label { font: var(--meta); letter-spacing: -0.02em; text-transform: uppercase; color: var(--gray); margin-bottom: 10px; }
+  .direct-label { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-bottom: 10px; }
   .direct .big { font: var(--label); font-size: 18px; margin-bottom: 12px; }
   @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
   @media (max-width: 520px) { .row2 { grid-template-columns: 1fr; } }

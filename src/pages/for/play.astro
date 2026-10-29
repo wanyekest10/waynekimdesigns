@@ -37,7 +37,6 @@ const years = [
   <header class="intro">
     <h1 class="brush" aria-label="Interaction designer">Interaction designer</h1>
     <p class="method">I build prototypes to find out what people actually need.<br class="wide-br"> Some purposeful, some playful, sometimes both.</p>
-    <dl class="nowbefore"><dt>Now</dt><dd>Prototyping calm tech · SolidWorks at LACI</dd><dt>Before</dt><dd>CIID · Glorify · Designit</dd></dl>
     <p class="status"><span class="dot" aria-hidden="true"></span><span>Open to design technologist, prototyping, and product design roles</span></p>
   </header>
 
@@ -231,9 +230,9 @@ const years = [
   @media (max-width: 720px) { .intro h1 { font-size: 34px; } }
   .status { display: flex; align-items: flex-start; gap: 8px; font: var(--meta); letter-spacing: -0.02em; color: var(--gray); margin-top: 12px; }
   .nowbefore { margin: 24px 0 0; display: grid; grid-template-columns: 64px 1fr; gap: 4px 12px; max-width: 34em; }
-  .nowbefore dt { font: 400 11px/1.95 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); }
+  .nowbefore dt { font: 400 11px/1.95 var(--mono); letter-spacing: 0.06em; color: var(--gray); }
   .nowbefore dd { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--gray); }
-  .nowbefore + .status { margin-top: 24px; }
+  .method + .status { margin-top: 24px; }
   @media (max-width: 720px) { .nowbefore { grid-template-columns: 52px 1fr; gap: 4px 10px; } .nowbefore dd { font-size: 14px; } }
   .dot { flex: none; margin: calc(0.8em - 3.5px) 0 0 3px; width: 7px; height: 7px; border-radius: 50%; background: #1E9E5A; box-shadow: 0 0 0 3px rgba(30,158,90,.15); }
   .sub { color: var(--gray); max-width: 36em; }

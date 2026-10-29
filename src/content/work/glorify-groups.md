@@ -19,7 +19,7 @@ featured: true
 cardFit: contain
 label: "Research through prototyping"
 summary: "Small faith groups, now 1.8M+ users."
-hero: "/work/glorify-assets/shipped-screens.webp"
+hero: "/work/glorify-assets/shipped-screens-flat.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
 jumps:
   - { label: "Skip to the impact", to: "what-changed" }
