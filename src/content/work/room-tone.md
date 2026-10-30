@@ -139,8 +139,10 @@ So I took out the tasks, the score, and the judgment. The second version only no
 
 **Typing starts it and typing ends it.** There's nothing to dismiss, so there's nothing to feel guilty about ignoring.
 
+**Where it bends calm tech.** room_tone starts the way calm tech says it should: it watches quietly, and the first cue is a light at the edge of my attention. The disco ball and music are meant to pull me in, so it moves toward the center of attention one layer at a time, and only if I keep working.
+
 **What's next.** I started a tabletop version: one object with a dial to set the threshold, so it could live on any desk without smart plugs and a ceiling hook. It's on hold for now, and the state machine is ready for it.
 
-room_tone is one of a few calm tech prototypes, along with [Toilet Paper Elevator](/work/toilet-paper-elevator/) and [Linee](/work/linee/), where it started.
+room_tone is one of a few prototypes built on calm tech principles, along with [Toilet Paper Elevator](/work/toilet-paper-elevator/) and [Linee](/work/linee/), where it started.
 
 <figure class="embed"><iframe src="https://www.youtube-nocookie.com/embed/VhLl8r5Z-h4?rel=0&modestbranding=1&playsinline=1" title="room_tone, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full room_tone video.</figcaption></figure>
