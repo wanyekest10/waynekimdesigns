@@ -96,6 +96,14 @@ const { title, image, imageAlt, wide = false, noindex = false, prompt = 'Have so
       }
     </script>
     <script>
+      // Code fold: preview a few lines of code, with a button to see the rest.
+      document.querySelectorAll('.code-fold').forEach((f) => {
+        f.classList.add('folded');
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'code-fold-btn'; b.textContent = 'Show the full code ↓';
+        b.addEventListener('click', () => { const folded = f.classList.toggle('folded'); b.textContent = folded ? 'Show the full code ↓' : 'Hide code ↑'; });
+        f.after(b);
+      });
       // Peek: words that show a photo or two on hover. On touch screens, tap the word to see them, tap anywhere to hide.
       if (matchMedia('(hover: none)').matches) {
         const peeks = [...document.querySelectorAll('span.peek')];

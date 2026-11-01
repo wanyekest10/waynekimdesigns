@@ -109,6 +109,8 @@ The screen is a small state machine. It starts on G, climbs while nobody's looki
 </div>
 <p class="flow-note">↻ After an arrival, it goes back to climbing toward the next stop.</p>
 
+<div class="code-fold">
+
 ```cpp
 void endSession() {
   stats.lifetimeMm += sessionMm;
@@ -123,6 +125,8 @@ void endSession() {
   render();
 }
 ```
+
+</div>
 
 ### What changed after testing the screens with people
 
@@ -155,6 +159,8 @@ I measured my own roll: 300 squares of 100 mm, wound from a 64 mm radius down to
 
 Tearing jerks the roll and adds phantom pulses, so each pulse is scaled down to match real pulls. Once a roll has turned past its full length, the code assumes a new one went on.
 
+<div class="code-fold">
+
 ```cpp
 const float R_FULL_MM = 64.0;   // full roll, measured
 const float R_CORE_MM = 21.0;   // empty tube, measured
@@ -169,7 +175,10 @@ float mmForNextPulse() {
 }
 ```
 
-<figure class="grid3">
+</div>
+
+<figure class="grid3 two">
+  <div><img src="/work/tpe-assets/full-vs-empty.webp" alt="A full roll on the holder above an empty tube with an early cardboard insert holding a magnet"/><p>A full roll and an empty tube: the two sizes the code works between.</p></div>
   <div><img src="/work/tpe-assets/measure-tube.webp" alt="Calipers measuring the inside of a cardboard tube at 39 mm"/><p>Measuring the inside of the tube the sleeve fits into.</p></div>
   <div><video src="/work/tpe-assets/sensor-test.mp4" poster="/work/tpe-assets/sensor-test-poster.jpg" autoplay muted loop playsinline aria-label="A green LED blinking each time a magnet in the sleeve passes the sensor"></video><p>First test: an LED blinks each time a magnet passes the sensor.</p></div>
   <div><img src="/work/tpe-assets/parts-early.webp" alt="The e-paper module, breadboard, Arduino, and a tube with an orange printed insert holding magnets"/><p>The first parts on the bench: screen, Arduino, and magnet insert.</p></div>
