@@ -87,11 +87,10 @@ I wrote Liv's personality in Cursor and gave her a voice with ElevenLabs. The pr
 </div>
 <p class="flow-note">↻ Silence is the default. Liv only speaks when a trigger is confirmed.</p>
 
-<figure class="pair">
-  <img src="/work/living-assets/prompt.webp" alt="Liv's prompt: default state is silence, speak only when a trigger is confirmed"/>
-  <img src="/work/living-assets/responses.webp" alt="Sample triggers, confidence scores, and Liv's lines"/>
-  <figcaption>Liv's prompt, and the lines she says for each trigger.</figcaption>
-</figure>
+<div class="code-pair">
+  <div><div class="code-fold" data-note="Liv's prompt: she stays silent unless the camera is at least 80% sure, then speaks one or two sentences."><img src="/work/living-assets/prompt.webp" alt="Liv's prompt: default state is silence, speak only when a trigger is confirmed"/></div></div>
+  <div><div class="code-fold" data-note="Sample triggers with their confidence, and the line Liv says for each."><img src="/work/living-assets/responses.webp" alt="Sample triggers, confidence scores, and Liv's lines"/></div></div>
+</div>
 
 A few of her lines:
 

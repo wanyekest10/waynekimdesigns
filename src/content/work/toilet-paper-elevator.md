@@ -109,7 +109,7 @@ The screen is a small state machine. It starts on G, climbs while nobody's looki
 </div>
 <p class="flow-note">↻ After an arrival, it goes back to climbing toward the next stop.</p>
 
-<div class="code-fold">
+<div class="code-fold" data-note="The arrival check: how the screen decides to show a landmark, and only once.">
 
 ```cpp
 void endSession() {
@@ -159,7 +159,7 @@ I measured my own roll: 300 squares of 100 mm, wound from a 64 mm radius down to
 
 Tearing jerks the roll and adds phantom pulses, so each pulse is scaled down to match real pulls. Once a roll has turned past its full length, the code assumes a new one went on.
 
-<div class="code-fold">
+<div class="code-fold" data-note="The roll math: how much paper each magnet pulse adds as the roll gets thinner.">
 
 ```cpp
 const float R_FULL_MM = 64.0;   // full roll, measured

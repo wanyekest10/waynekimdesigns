@@ -739,6 +739,13 @@ span.peek { color: var(--ink); text-decoration: underline dotted; text-underline
 /* Two-up version of the 3-column photo grid, for four photos. */
 article .grid3.two { grid-template-columns: 1fr 1fr; }
 /* Code fold: show the first few lines, the rest opens with a button. Without JS the code shows in full. */
-.code-fold.folded pre { max-height: 7.2em; overflow: hidden; -webkit-mask-image: linear-gradient(#000 45%, transparent); mask-image: linear-gradient(#000 45%, transparent); }
-.code-fold-btn { display: inline-block; margin: -8px 0 24px; font: var(--meta); letter-spacing: -0.02em; color: var(--accent); background: none; border: 0; padding: 4px 0; cursor: pointer; }
+.code-fold { position: relative; }
+.code-fold.folded { max-height: 190px; overflow: hidden; -webkit-mask-image: linear-gradient(#000 40%, transparent); mask-image: linear-gradient(#000 40%, transparent); }
+.code-fold > img { display: block; width: 100%; max-width: none; border-radius: 8px; margin: 0; }
+.code-pair { max-width: var(--wide); display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; margin: 32px 0; }
+.code-pair > div { min-width: 0; }
+@media (max-width: 720px) { .code-pair { grid-template-columns: 1fr; } }
+.code-note { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin: 10px 0 28px; }
+.code-note p { margin: 0 !important; font: var(--small); font-size: 14px; color: var(--gray); }
+.code-fold-btn { display: inline-block; margin: 0; font: var(--meta); letter-spacing: -0.02em; color: var(--accent); background: none; border: 0; padding: 4px 0; cursor: pointer; }
 .code-fold-btn:hover { text-decoration: underline; }
