@@ -1,7 +1,7 @@
 ---
 title: Bureau of Sanctioned Sketching
 slug: bureau-of-sanctioned-sketching
-headline: "A card game that gives adults official permission to draw again, found by prototyping my way through six things that didn't work."
+headline: "A card game that gives adults official permission to draw again."
 context: "CIID, 2025"
 order: 5.5
 year: "2025"
