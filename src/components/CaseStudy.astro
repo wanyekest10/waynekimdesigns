@@ -9,12 +9,14 @@ const { Content, headings } = await render(w);
 const d = w.data as any;
 const skills = d.skills ?? [];
 const contrib = d.contributions ?? [];
-// Top of every case study: the question, my role, and (for research) what happened.
+// Top of every case study: the question and my role. "What happened" only shows when no Impact row carries the result.
 // "What I built / did" repeats the headline and the role rows, so it only shows when there is no role table.
 const doneLead = /^What (I|we) (built|did)\.$/;
-const beats = (d.short ?? []).filter((b: any) => !(contrib.length && doneLead.test(b.lead)));
+const hasImpact = contrib.some((r: any) => r.impact);
+const beats = (d.short ?? []).filter((b: any) => !(contrib.length && doneLead.test(b.lead)) && !(hasImpact && b.lead === 'What happened.'));
 const facts = (d.facts ?? []).filter((f: any) => !(skills.length && f.label === 'Methods'));
 // Phone dropdown: the facts minus Skills (the contribution headings already name them), and a one-line summary for the closed row.
+if (skills.length) facts.splice(Math.min(2, facts.length), 0, { label: 'Skills', value: skills.join(' · ') });
 const foldFacts = facts.filter((f: any) => f.label !== 'Skills');
 const foldLine = ['Role', 'Year'].map((l) => facts.find((f: any) => f.label === l)?.value).filter(Boolean).join(' · ');
 // Section list: numbered h2s, h3s as indented sub-items. "Hack Week: the assumption broke" shows as "Hack Week".
