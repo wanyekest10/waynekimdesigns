@@ -240,6 +240,6 @@ The first thing I cut was a per-session trip summary. It was interesting data, a
 
 I also used this sprint to learn Fusion, and most of what I know about tolerances came from this pod.
 
-It's one of a few calm tech prototypes I'm building, along with [room_tone](/work/room-tone/) and [Linee](/work/linee/), where it started.
+The bathroom is one of the few idle spaces left in a day, where we sit and wait or reach for our phone. I keep designing for pauses like that, at my desk with [room_tone](/work/room-tone/) and in a shared home with [Linee](/work/linee/), where it started.
 
 <figure class="embed"><iframe src="https://www.youtube-nocookie.com/embed/vQzPGvjoA7A?rel=0&modestbranding=1&playsinline=1" title="Toilet Paper Elevator, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
