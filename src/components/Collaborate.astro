@@ -68,12 +68,11 @@ const steps = [
   <div class="ways">
     {ways.map((w, i) => (
       <section class="way" id={`way-${i + 1}`}>
-        <div class="w-img" aria-hidden="true">{w.proof.map((p, j) => <img class:list={{ on: j === 0 }} src={p.image} alt="" loading="lazy" />)}</div>
         <h3>{w.title}</h3>
         <p class="w-when">{w.when}</p>
         <p class="w-what">{w.what}</p>
         <p class="w-get"><b>What changes</b> {w.get}</p>
-        <div class="proof"><span class="proof-label">Done before</span><ul class="proof-list">{w.proof.map((p, j) => <li class:list={{ on: j === 0 }}><a href={p.href}>{p.name}</a><span>{p.result}</span></li>)}</ul></div>
+        <div class="proof"><span class="proof-label">Done before</span><div class="w-img" aria-hidden="true">{w.proof.map((p, j) => <img class:list={{ on: j === 0 }} src={p.image} alt="" loading="lazy" />)}</div><ul class="proof-list">{w.proof.map((p, j) => <li class:list={{ on: j === 0 }}><a href={p.href}>{p.name}</a><span>{p.result}</span></li>)}</ul></div>
       </section>
     ))}
   </div>
@@ -175,9 +174,9 @@ const steps = [
   .sub-title { font: var(--h2); letter-spacing: -0.01em; margin-bottom: 20px; }
 
   .ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 96px; }
-  .way { scroll-margin-top: 72px; background: var(--panel); border-radius: 10px; padding: 12px 12px 24px; display: grid; grid-row: span 6; grid-template-rows: subgrid; row-gap: 12px; }
+  .way { scroll-margin-top: 72px; background: var(--panel); border-radius: 10px; padding: 24px 12px 24px; display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 12px; }
   .way > :not(.w-img) { margin-left: 12px; margin-right: 12px; }
-  .w-img { position: relative; border-radius: 6px; overflow: hidden; background: #fff; margin-bottom: 8px; aspect-ratio: 3/2; }
+  .w-img { position: relative; border-radius: 6px; overflow: hidden; background: #fff; margin-bottom: 14px; aspect-ratio: 3/2; }
   .w-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s ease; }
   .w-img img.on { opacity: 1; }
   .proof-list li { padding-left: 12px; margin-left: -12px; border-left: 2px solid transparent; transition: border-color .3s; }
