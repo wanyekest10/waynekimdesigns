@@ -43,7 +43,7 @@ facts:
 ---
 ## A daily habit nobody in the house ever sees
 
-Everyone in a home uses toilet paper every day, and nobody sees how much. I wanted to make that habit visible and a little playful, in the one room where people least want to feel observed.
+The bathroom is one of the few idle spaces left in a day. We sit and wait, or reach for our phone. Everyone in a home uses toilet paper there every day, and nobody sees how much. I wanted to make that habit visible and a little playful, in the one room where people least want to feel observed.
 
 That set the rules early. The display had to count for the whole household, stay anonymous, and never single anyone out or ask for attention. It also couldn't preach about sustainability, because that would turn a curious object into a lecture.
 
@@ -240,6 +240,6 @@ The first thing I cut was a per-session trip summary. It was interesting data, a
 
 I also used this sprint to learn Fusion, and most of what I know about tolerances came from this pod.
 
-The bathroom is one of the few idle spaces left in a day, where we sit and wait or reach for our phone. I keep designing for pauses like that, at my desk with [room_tone](/work/room-tone/) and in a shared home with [Linee](/work/linee/), where it started.
+I keep designing for small pauses like this one, at my desk with [room_tone](/work/room-tone/) and in a shared home with [Linee](/work/linee/), where it started.
 
 <figure class="embed"><iframe src="https://www.youtube-nocookie.com/embed/vQzPGvjoA7A?rel=0&modestbranding=1&playsinline=1" title="Toilet Paper Elevator, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
