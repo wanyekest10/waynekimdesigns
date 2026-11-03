@@ -43,10 +43,14 @@ const { title, image, imageAlt, wide = false, noindex = false, prompt = 'Have so
       )}
       <footer class="footer">
         <span>Say hello: <CopyEmail /></span>
-        <span class="links"><span>Based in Los Angeles</span> <a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a> <a href="/resume.pdf">Resume</a></span>
+        <span class="links"><span>Based in Los Angeles</span> <a href="https://www.linkedin.com/in/waynewkim/">LinkedIn</a> <a href="/resume.pdf">Resume</a> <a class="to-top" href="#">Top ↑</a></span>
       </footer>
     </div>
     <script>
+      document.querySelector('.to-top')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      });
       document.querySelectorAll('.copy-email').forEach((a) => {
         let t;
         a.addEventListener('click', async (e) => {

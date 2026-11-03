@@ -42,6 +42,8 @@ h1 { font: var(--display); letter-spacing: -0.04em; margin-bottom: 16px; }
 @media (max-width: 720px) { .closing { margin-top: 56px; padding: 28px 0; } .footer { padding-bottom: 32px; } }
 .footer { border-top: 1px solid var(--rule); margin-top: 120px; padding: 32px 0 48px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font: var(--small); color: var(--gray); }
 .footer .links { display: flex; gap: 20px; }
+.footer .to-top { color: var(--gray); }
+.footer .to-top:hover { color: var(--ink); }
 
 /* Case study article */
 .hero { margin: 56px 0 64px; border-radius: 6px; width: 100%; }
