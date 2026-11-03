@@ -45,7 +45,7 @@ facts:
 
 The bathroom is one of the few idle spaces left in a day. We sit and wait, or reach for our phone. Everyone in a home uses toilet paper there every day, and nobody sees how much. I wanted to make that habit visible and a little playful, in the one room where people least want to feel observed.
 
-That set the rules early. The display had to count for the whole household, stay anonymous, and never single anyone out or ask for attention. It also couldn't preach about sustainability, because that would turn a curious object into a lecture.
+Because it's such a private room, I gave myself a few rules from the start. The display had to count for the whole household, stay anonymous, and never single anyone out or ask for attention. It also couldn't preach about sustainability, because that would turn a curious object into a lecture.
 
 <div id="why-an-elevator" style="scroll-margin-top:88px"></div>
 
