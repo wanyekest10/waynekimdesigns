@@ -7,11 +7,13 @@ import { linkPeople } from '../data/people';
 const { w, collapseRole = true, noindex = false } = Astro.props;
 const { Content, headings } = await render(w);
 const d = w.data as any;
-const beats = d.short ?? [];
 const skills = d.skills ?? [];
 const contrib = d.contributions ?? [];
+// Top of every case study: the question, my role, and (for research) what happened.
+// "What I built / did" repeats the headline and the role rows, so it only shows when there is no role table.
+const doneLead = /^What (I|we) (built|did)\.$/;
+const beats = (d.short ?? []).filter((b: any) => !(contrib.length && doneLead.test(b.lead)));
 const facts = (d.facts ?? []).filter((f: any) => !(skills.length && f.label === 'Methods'));
-if (skills.length) facts.splice(Math.min(2, facts.length), 0, { label: 'Skills', value: skills.join(' · ') });
 // Phone dropdown: the facts minus Skills (the contribution headings already name them), and a one-line summary for the closed row.
 const foldFacts = facts.filter((f: any) => f.label !== 'Skills');
 const foldLine = ['Role', 'Year'].map((l) => facts.find((f: any) => f.label === l)?.value).filter(Boolean).join(' · ');
