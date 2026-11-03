@@ -31,9 +31,9 @@ short:
   - { lead: "What I built.", text: "A sleeve inside the roll counts every square. A quiet e-ink screen above the holder turns the total into a climb: 4 ft up, next stop, the Hollywood Sign." }
 skills: [Physical computing, Fabrication, Interaction design]
 contributions:
-  - { skill: "Physical computing", text: "A sleeve with a hall effect sensor that counts every square, on an Arduino" }
-  - { skill: "Fabrication", text: "Modeled the sleeve and screen mount in Fusion 360 and printed them on a Prusa" }
-  - { skill: "Interaction design", text: "Designed the state machine and screens that turn the count into an elevator climb past landmarks around the world" }
+  - { skill: "Physical computing", text: "Wired the Hall effect sensor, e-paper screen, and LiPo to an Arduino and wrote the counting code" }
+  - { skill: "Fabrication", text: "Modeled the pod, sleeve, and raceway in Fusion 360 and printed them on a Prusa" }
+  - { skill: "Interaction design", text: "Designed the screens and the states between them, then tested them with people" }
 facts:
   - { label: "Project", value: "Personal project" }
   - { label: "Role", value: "Designer and builder, solo" }
