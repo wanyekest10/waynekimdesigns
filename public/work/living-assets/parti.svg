@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-linecap="round" role="img" aria-label="An eye watching the room. Above a line at 80 percent, two short sound waves. Below it, nothing.">
+  <title>Living.fm: silence until she's sure</title>
+  <!-- the eye -->
+  <path d="M150 92 Q200 52 250 92 Q200 132 150 92 Z" stroke-width="2.5"/>
+  <circle cx="200" cy="92" r="10" fill="currentColor" stroke="none"/>
+  <!-- the threshold -->
+  <path d="M60 172 H340" stroke="var(--accent, #002BBA)" stroke-width="1.5" stroke-dasharray="10 4 2 4"/>
+  <text x="340" y="164" text-anchor="end" fill="var(--accent, #002BBA)" stroke="none" font-family="Geist Mono, ui-monospace, monospace" font-size="11">80%</text>
+  <!-- above: she speaks, a little -->
+  <path d="M272 112 q8 10 0 20 M284 104 q14 18 0 36" stroke-width="1"/>
+  <!-- below: silence -->
+  <path d="M60 252 H340" stroke-width="1"/>
+</svg>

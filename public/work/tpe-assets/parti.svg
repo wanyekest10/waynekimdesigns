@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-linecap="round" role="img" aria-label="A roll at the bottom feeds one line straight up, with a tick for each landmark passed">
+  <title>Toilet Paper Elevator: using paper is climbing</title>
+  <!-- the roll -->
+  <circle cx="200" cy="252" r="18" stroke-width="2.5"/>
+  <circle cx="200" cy="252" r="6" stroke-width="1"/>
+  <!-- the paper becomes the climb -->
+  <path d="M218 252 V44" stroke-width="2.5"/>
+  <!-- landmarks: ticks that spread apart as they get taller -->
+  <g stroke-width="1">
+    <path d="M210 226 H226"/><path d="M210 210 H226"/><path d="M210 190 H226"/>
+    <path d="M210 164 H226"/><path d="M210 130 H226"/><path d="M210 86 H226"/>
+  </g>
+  <!-- where the household is now -->
+  <path d="M232 176 l-8 -6 v12 z" fill="var(--accent, #002BBA)" stroke="none"/>
+  <!-- and up, past the last one -->
+  <path d="M218 40 V18" stroke-width="1" stroke-dasharray="6 3 1 3"/>
+  <!-- ground -->
+  <path d="M150 276 H270" stroke-width="1"/>
+</svg>

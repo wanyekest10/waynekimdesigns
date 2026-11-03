@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Twenty-four blocks in a row, three pushed out, and a needle crossing the day that knocks a pushed-out block">
+  <title>Linee: a day you can touch, crossed by one needle</title>
+  <!-- the day: 24 blocks, three pressed out -->
+  <g stroke-width="1.5">
+    <path d="M44 150 H356 M44 170 H356"/>
+    <path d="M44 150 V170 M57 150 V170 M70 150 V170 M83 150 V170 M96 150 V170 M109 150 V170 M122 150 V170 M135 150 V170 M148 150 V170 M161 150 V170 M174 150 V170 M187 150 V170 M200 150 V170 M213 150 V170 M226 150 V170 M239 150 V170 M252 150 V170 M265 150 V170 M278 150 V170 M291 150 V170 M304 150 V170 M317 150 V170 M330 150 V170 M343 150 V170 M356 150 V170"/>
+  </g>
+  <g stroke-width="2.5">
+    <path d="M96 150 V138 H109 V150"/>
+    <path d="M187 150 V138 H200 V150"/>
+    <path d="M291 150 V138 H304 V150"/>
+  </g>
+  <!-- the needle's path across 24 hours -->
+  <path d="M44 120 H356" stroke-width="1" stroke-dasharray="6 3 1 3"/>
+  <!-- the needle, reaching a marked hour -->
+  <path d="M183 96 V140" stroke-width="2.5"/>
+  <circle cx="186" cy="139" r="5" stroke="var(--accent, #002BBA)" stroke-width="1.5"/>
+</svg>
