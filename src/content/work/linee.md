@@ -21,7 +21,7 @@ short:
 skills: [Physical computing, Prototyping, Interaction design]
 contributions:
   - { skill: "Physical computing", text: "Wrote the code for the stepper motor and LEDs" }
-  - { skill: "Prototyping", text: "Helped prototype the blocks, from cardboard to wood" }
+  - { skill: "Prototyping", text: "Helped prototype the blocks" }
   - { skill: "Interaction design", text: "Proposed the magnetic tiles concept" }
   - { skill: "With the team", text: "Concept and the laser-cut build, with Alec Davis and Chokchey Cappai", shared: true }
 facts:
