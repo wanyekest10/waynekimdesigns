@@ -751,3 +751,8 @@ article .grid3.two { grid-template-columns: 1fr 1fr; }
 .code-note p { margin: 0 !important; font: var(--small); font-size: 14px; color: var(--gray); }
 .code-fold-btn { display: inline-block; margin: 0; font: var(--meta); letter-spacing: -0.02em; color: var(--accent); background: none; border: 0; padding: 4px 0; cursor: pointer; }
 .code-fold-btn:hover { text-decoration: underline; }
+
+/* Parti diagram beside a photo: both portrait, drawing on the panel color */
+article .pair.parti { max-width: var(--measure); }
+article .pair.parti > img { aspect-ratio: 3/4; }
+article .pair.parti > img:first-child { object-fit: contain; background: var(--panel); border-radius: 4px; padding: 8%; box-sizing: border-box; }

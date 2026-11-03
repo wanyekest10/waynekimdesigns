@@ -55,6 +55,12 @@ The first version was a highway: each pull was distance driven from LA City Hall
 
 Height moves every day, and the world is full of tall things people already know. So the screen climbs from the ground floor past eighteen landmarks, from the <span class="peek" tabindex="0">Hollywood Sign<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-00.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Eiffel Tower<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-12.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Burj Khalifa<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-17.webp" alt="" loading="lazy" /></span></span>.
 
+<figure class="pair keep parti">
+  <img src="/work/tpe-assets/parti-tall.svg" alt="Diagram: a roll at the bottom feeds one line straight up, with a tick for each landmark passed"/>
+  <img src="/work/tpe-assets/final-wall.webp" alt="The finished version: the gray pod showing 4 ft up above the holder and sleeve"/>
+  <figcaption>The idea in one line: using paper is climbing. On the wall, the screen sits right above the roll.</figcaption>
+</figure>
+
 <div id="how-it-works" style="scroll-margin-top:88px"></div>
 
 ## Magnets in the roll count every square
