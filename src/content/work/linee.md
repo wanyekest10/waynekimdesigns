@@ -21,7 +21,7 @@ short:
 skills: [Physical computing, Prototyping, Interaction design]
 contributions:
   - { skill: "Physical computing", text: "Wrote the code for the stepper motor and LEDs" }
-  - { skill: "Prototyping", text: "Led the block prototyping" }
+  - { skill: "Prototyping", text: "Helped prototype the blocks, from cardboard to wood" }
   - { skill: "Interaction design", text: "Proposed the magnetic tiles concept" }
   - { skill: "With the team", text: "Concept and the laser-cut build, with Alec Davis and Chokchey Cappai", shared: true }
 facts:
@@ -87,7 +87,7 @@ There are no sensors on the blocks. A pressed block sticks out, so the needle ph
 
 ## Iterating the block
 
-I led the block prototyping. We went through dozens of versions, starting in cardboard. The one that worked had a protruding notch: it made pressing obvious and undoing easy.
+We went through dozens of versions, starting in cardboard. The one that worked had a protruding notch: it made pressing obvious and undoing easy.
 
 <figure class="pair even">
   <video src="/work/linee-assets/cardboard-blocks.mp4" poster="/work/linee-assets/cardboard-blocks-poster.jpg" autoplay muted loop playsinline></video>
