@@ -1,0 +1,30 @@
+---
+// Archive for the games landing page (/for/games/): everything not in its selected four, work and play together. Unlisted.
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import Rows from '../../../components/Rows.astro';
+import { experiments } from '../../../data/experiments';
+const selected = ['bureau-of-sanctioned-sketching', 'toilet-paper-elevator', 'linee'];
+const all = await getCollection('work');
+const row = (w: any) => ({ name: w.data.cardTitle ?? w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/work/${w.id}/`, image: w.data.card ?? w.data.hero, preview: w.data.cardVideo });
+const work = all.filter((w) => (w.data as any).listIn !== 'experiments' && !selected.includes(w.id)).sort((a, b) => a.data.order - b.data.order).map(row);
+const play = experiments.filter((e: any) => e.name !== 'Mosaic of Memories');
+---
+<Base title="Archive, Wayne Kim" noindex>
+  <p class="back"><a href="/for/games/">← Selected projects</a></p>
+  <h1>Archive</h1>
+  <p class="lead">Everything else: research, physical prototypes, and side quests.</p>
+  <section class="block">
+    <h2 class="section-title">Work</h2>
+    <Rows rows={work} />
+  </section>
+  <section class="block">
+    <h2 class="section-title">Play</h2>
+    <Rows rows={play} />
+  </section>
+</Base>
+<style>
+  .back { margin-bottom: 24px; }
+  .lead { margin-bottom: 48px; }
+  .block + .block { margin-top: 64px; }
+</style>
