@@ -4,11 +4,9 @@ import { getCollection } from 'astro:content';
 import Cards from '../../components/Cards.astro';
 import CopyEmail from '../../components/CopyEmail.astro';
 // Unlisted homepage for game and toy design roles (made for Mattel Games, Nov 2026). Not in search, not linked from the site.
-const pick = ['bureau-of-sanctioned-sketching', 'toilet-paper-elevator', 'linee'];
+const pick = ['bureau-of-sanctioned-sketching', 'toilet-paper-elevator', 'linee', 'glorify-groups'];
 const all = await getCollection('work');
-// Mosaic of Memories is a Play write-up, not a work case study, so its card is built by hand here.
-const mosaic = { id: 'mosaic-of-memories', data: { listIn: 'experiments', title: 'Mosaic of Memories', year: '2024', card: '/experiments/mosaic-assets/card.webp', heroAlt: 'A table of 3D-printed objects and playdough memories left by visitors', summary: 'Strangers add their own small kindnesses.', label: 'Tabletop play and participatory design' } };
-const work = [...pick.map((id) => all.find((w) => w.id === id)!), mosaic];
+const work = pick.map((id) => all.find((w) => w.id === id)!);
 
 const travel = [
   { src: '/about/travel-camino-perdon.webp', alt: 'Five hikers in front of rusted metal pilgrim silhouettes on a hilltop', caption: 'Alto del Perdón' },
