@@ -1,5 +1,5 @@
 ---
-// Archive for the games landing page (/for/games/): everything not in its selected four, work and play together. Unlisted.
+// Archive for the games landing page (/for/mattel/): everything not in its selected four, work and play together. Unlisted.
 import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import Rows from '../../../components/Rows.astro';
@@ -11,7 +11,7 @@ const work = all.filter((w) => (w.data as any).listIn !== 'experiments' && !sele
 const play = experiments;
 ---
 <Base title="Archive, Wayne Kim" noindex>
-  <p class="back"><a href="/for/games/">← Selected projects</a></p>
+  <p class="back"><a href="/for/mattel/">← Selected projects</a></p>
   <h1>Archive</h1>
   <p class="lead">Everything else: research, physical prototypes, and side quests.</p>
   <section class="block">

@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import Cards from '../../components/Cards.astro';
 import CopyEmail from '../../components/CopyEmail.astro';
-// Unlisted homepage for game and toy design roles (made for Mattel Games, Nov 2026). Not in search, not linked from the site.
+// Unlisted homepage for the Mattel Games application (Nov 2026); /for/games/ redirects here. Not in search, not linked from the site.
 const pick = ['bureau-of-sanctioned-sketching', 'toilet-paper-elevator', 'linee', 'glorify-groups'];
 const all = await getCollection('work');
 const work = pick.map((id) => all.find((w) => w.id === id)!);
@@ -40,7 +40,7 @@ const years = [
   <section id="work" class="block">
     <h2 class="section-title">Selected projects</h2>
     <Cards items={work} />
-    <p class="more"><a href="/for/games/archive/">See the archive →</a></p>
+    <p class="more"><a href="/for/mattel/archive/">See the archive →</a></p>
   </section>
 
 
