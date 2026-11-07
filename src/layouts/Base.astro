@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
 import CopyEmail from '../components/CopyEmail.astro';
-interface Props { title: string; description?: string; wide?: boolean; noindex?: boolean; prompt?: string | false; cta?: string; image?: string; imageAlt?: string; home?: string }
-const { title, home = '/', image, imageAlt, wide = false, noindex = false, prompt = 'Have something you\'re working on?', cta = 'Send me a message →', description = 'Wayne Kim, interaction designer in Los Angeles. I build prototypes to find out what people actually need. Some purposeful, some playful, sometimes both.' } = Astro.props;
+interface Props { title: string; description?: string; wide?: boolean; noindex?: boolean; prompt?: string | false; cta?: string; image?: string; imageAlt?: string; home?: string; links?: { href: string; label: string }[] }
+const { title, home = '/', links, image, imageAlt, wide = false, noindex = false, prompt = 'Have something you\'re working on?', cta = 'Send me a message →', description = 'Wayne Kim, interaction designer in Los Angeles. I build prototypes to find out what people actually need. Some purposeful, some playful, sometimes both.' } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -30,23 +30,24 @@ const { title, home = '/', image, imageAlt, wide = false, noindex = false, promp
     <div class:list={["wrap", { wide }]}>
       <nav class="nav" aria-label="Main">
         <a class="home" href={home} aria-label="Wayne Kim, home"><span class="hn">Wayne Kim</span><span class="hh" aria-hidden="true">← Home</span></a>
-        <ul>
-          <li><a href="/work/">Work</a></li>
-          <li><a href="/play/">Play</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/collaborate/">Collaborate</a></li>
+        <ul class="nav-links">
+          {(links ?? [{ href: '/work/', label: 'Work' }, { href: '/play/', label: 'Play' }, { href: '/#about', label: 'About' }, { href: '/collaborate/', label: 'Collaborate' }]).map((l) => <li><a href={l.href}>{l.label}</a></li>)}
         </ul>
       </nav>
-      <script is:inline define:vars={{ home }}>
-        // Tailored landing pages (like /for/mattel/) pass their own home. Remember it for this visit,
-        // so case studies opened from there send "Wayne Kim, home" back to that page, not the main homepage.
+      <script is:inline define:vars={{ home, links: links ?? null }}>
+        // Tailored landing pages (like /for/mattel/) pass their own home and nav links. Remember them for this visit,
+        // so case studies opened from there keep the same home link and nav, not the main site's.
         try {
           if (home !== '/') sessionStorage.setItem('wk-home', home);
+          if (links) sessionStorage.setItem('wk-links', JSON.stringify(links));
           const saved = sessionStorage.getItem('wk-home');
           const link = document.querySelector('a.home');
           if (saved && link) link.setAttribute('href', saved);
-          const about = document.querySelector('nav a[href="/#about"]');
-          if (saved && about) about.setAttribute('href', saved + '#about');
+          const savedLinks = JSON.parse(sessionStorage.getItem('wk-links') || 'null');
+          const ul = document.querySelector('nav .nav-links');
+          if (savedLinks && ul && !links) {
+            ul.replaceChildren(...savedLinks.map((l) => { const li = document.createElement('li'); const a = document.createElement('a'); a.href = l.href; a.textContent = l.label; li.appendChild(a); return li; }));
+          }
         } catch (e) {}
       </script>
       <slot />

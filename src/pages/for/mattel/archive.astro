@@ -1,27 +1,35 @@
 ---
-// Archive for the games landing page (/for/mattel/): everything not in its selected four, work and play together. Unlisted.
+// Archive for the Mattel page (/for/mattel/): the four selected case studies first, then play and prototypes,
+// then research and strategy at the bottom. Unlisted.
 import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import Rows from '../../../components/Rows.astro';
 import { experiments } from '../../../data/experiments';
-const selected = ['bureau-of-sanctioned-sketching', 'toilet-paper-elevator', 'linee', 'glorify-groups'];
 const all = await getCollection('work');
-const row = (w: any) => ({ name: w.data.cardTitle ?? w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/work/${w.id}/`, image: w.data.card ?? w.data.hero, preview: w.data.cardVideo });
-const work = all.filter((w) => (w.data as any).listIn !== 'experiments' && !selected.includes(w.id)).sort((a, b) => a.data.order - b.data.order).map(row);
-const play = experiments;
+const workRow = (id: string) => {
+  const w: any = all.find((x) => x.id === id)!;
+  return { name: w.data.cardTitle ?? w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/${w.data.listIn === 'experiments' ? 'play' : 'work'}/${w.id}/`, image: w.data.card ?? w.data.hero, preview: w.data.cardVideo };
+};
+const playRow = (name: string) => experiments.find((e: any) => e.name === name)!;
+const GROUPS = [
+  { title: 'Selected for Mattel', rows: ['bureau-of-sanctioned-sketching', 'toilet-paper-elevator', 'linee', 'glorify-groups'].map(workRow) },
+  { title: 'More play and prototypes', rows: [
+    playRow('Mirrored Canvas'), playRow('Disco Never Died'), playRow('Mosaic of Memories'), playRow('Dear Theo, Ever Yours'), playRow('A Serious Fan'),
+    workRow('room-tone'), workRow('living-fm'), workRow('lume'), playRow('Tamer Kebap Eating Club'), playRow('Larvae Lagoon'),
+  ] },
+  { title: 'Research and strategy', rows: ['facilitation', 'designit-futures', 'raiseme-portal'].map(workRow) },
+];
 ---
-<Base title="Archive, Wayne Kim" home="/for/mattel/" noindex>
+<Base title="Archive, Wayne Kim" home="/for/mattel/" links={[{ href: '/for/mattel/archive/', label: 'Archive' }, { href: '/collaborate/', label: 'Collaborate' }]} noindex>
   <p class="back"><a href="/for/mattel/">← Selected projects</a></p>
   <h1>Archive</h1>
-  <p class="lead">Everything else: research, physical prototypes, and side quests.</p>
+  <p class="lead">All my projects, starting with the four I'd show a games team.</p>
+  {GROUPS.map((g) => (
   <section class="block">
-    <h2 class="section-title">Work</h2>
-    <Rows rows={work} />
+    <h2 class="section-title">{g.title}</h2>
+    <Rows rows={g.rows} />
   </section>
-  <section class="block">
-    <h2 class="section-title">Play</h2>
-    <Rows rows={play} />
-  </section>
+  ))}
 </Base>
 <style>
   .back { margin-bottom: 24px; }
