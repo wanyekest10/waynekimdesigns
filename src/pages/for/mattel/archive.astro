@@ -10,7 +10,7 @@ const row = (w: any) => ({ name: w.data.cardTitle ?? w.data.title, sub: w.data.l
 const work = all.filter((w) => (w.data as any).listIn !== 'experiments' && !selected.includes(w.id)).sort((a, b) => a.data.order - b.data.order).map(row);
 const play = experiments;
 ---
-<Base title="Archive, Wayne Kim" noindex>
+<Base title="Archive, Wayne Kim" home="/for/mattel/" noindex>
   <p class="back"><a href="/for/mattel/">← Selected projects</a></p>
   <h1>Archive</h1>
   <p class="lead">Everything else: research, physical prototypes, and side quests.</p>
