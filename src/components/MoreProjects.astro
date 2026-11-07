@@ -1,5 +1,6 @@
 ---
-// "More projects": the next two in line after this one.
+// "More projects": the next two in line after this one. All are rendered (the rest hidden),
+// so a tailored visit (see Base) can show its own picks instead.
 // The line runs through Work in homepage order, then Play in its order, and loops.
 import { getCollection } from 'astro:content';
 import { experiments } from '../data/experiments';
@@ -20,8 +21,8 @@ const ordered = at < 0 ? line : [...line.slice(at + 1), ...line.slice(0, at)];
 <section class="more-projects" aria-label="More projects">
   <h2 class="section-title">More projects</h2>
   <div class="mp-grid">
-    {ordered.slice(0, 2).map((p) => (
-      <a class="mp-card" href={p.href}>
+    {ordered.map((p, i) => (
+      <a class="mp-card" href={p.href} hidden={i >= 2}>
         <img src={p.image} alt={p.alt} loading="lazy" />
         <span class="mp-text"><span class="mp-title">{p.title}</span><span class="mp-kind">{p.kind}</span></span>
         <span class="mp-line">{p.line}</span>
@@ -34,6 +35,7 @@ const ordered = at < 0 ? line : [...line.slice(at + 1), ...line.slice(0, at)];
   .more-projects { margin-top: 96px; padding-top: 40px; border-top: 1px solid var(--rule); }
   .mp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 24px; }
   .mp-card { color: var(--ink); text-decoration: none; display: block; min-width: 0; }
+  .mp-card[hidden] { display: none; }
   .mp-card:hover { text-decoration: none; }
   .mp-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 6px; background: var(--panel); margin-bottom: 14px; display: block; transition: opacity .2s; }
   .mp-card:hover img { opacity: .9; }
