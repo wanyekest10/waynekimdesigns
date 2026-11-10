@@ -756,3 +756,31 @@ article .grid3.two { grid-template-columns: 1fr 1fr; }
 article .pair.parti { max-width: var(--measure); }
 article .pair.parti > img { aspect-ratio: 3/4; }
 article .pair.parti > img:first-child { object-fit: contain; background: var(--panel); border-radius: 4px; padding: 8%; box-sizing: border-box; }
+
+/* BSS: where it sits among drawing games (2x2) */
+article figure.market { max-width: var(--measure); }
+.market .mk { display: grid; grid-template-columns: 110px 1fr 1fr; gap: 0; font-size: var(--small); }
+.market .mk-h { font-family: var(--mono); font-size: var(--meta); color: var(--gray); padding: 0 12px 8px; }
+.market .mk-r { font-family: var(--mono); font-size: var(--meta); color: var(--gray); padding: 14px 12px 0 0; border-top: 1px solid var(--rule); }
+.market .mk-cell { min-height: 120px; padding: 14px 12px; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+.market .mk-cell p { margin: 0 0 8px; line-height: 1.4; color: var(--gray); }
+.market .mk-cell b { color: var(--ink); font-weight: 500; }
+.market .mk-cell.bss { background: var(--panel); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.market .mk-cell.bss b { color: var(--accent); }
+@media (max-width: 600px) { .market .mk { grid-template-columns: 76px 1fr 1fr; } .market .mk-cell { min-height: 90px; padding: 10px 8px; } }
+
+/* BSS: rules shrinking from five panels to one page */
+article figure.shrink { max-width: var(--wide); }
+.shrink-stage { position: relative; aspect-ratio: 16 / 6; background: var(--panel); border-radius: 6px; overflow: hidden; }
+.shrink-stage img { position: absolute; left: 50%; top: 50%; height: 72%; width: auto; max-width: 92%; transform: translate(-50%, -50%); opacity: 0; animation: shrinkFade 7.5s infinite; box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+.shrink-stage .s2 { animation-delay: 2.5s; } .shrink-stage .s3 { animation-delay: 5s; }
+@keyframes shrinkFade { 0% { opacity: 0; } 5% { opacity: 1; } 30% { opacity: 1; } 35% { opacity: 0; } 100% { opacity: 0; } }
+.shrink-steps { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+.shrink-steps span { color: var(--gray); animation: shrinkLabel 7.5s infinite; }
+.shrink-steps .t2 { animation-delay: 2.5s; } .shrink-steps .t3 { animation-delay: 5s; }
+@keyframes shrinkLabel { 0%, 34%, 100% { color: var(--gray); } 2%, 32% { color: var(--ink); } }
+@media (prefers-reduced-motion: reduce) {
+  .shrink-stage { aspect-ratio: auto; display: flex; gap: 16px; align-items: center; justify-content: center; padding: 24px; }
+  .shrink-stage img { position: static; transform: none; opacity: 1; animation: none; height: 120px; max-width: none; }
+  .shrink-steps span { animation: none; }
+}

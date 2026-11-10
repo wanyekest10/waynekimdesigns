@@ -10,12 +10,11 @@ label: "Prototyping and play design"
 summary: "Cards that get adults drawing again."
 tocLabels:
   "Three cards, one minute, one shared sheet of paper": "How it plays"
-  "Official-looking cards that tell you to draw": "The cards"
   "Most adults stop drawing between 9 and 13": "The problem"
   "Six prototypes before the cards worked": "Six prototypes"
   "Players forgot the cards and kept drawing": "Playtests"
-  "Each playtest cut the rules shorter": "Iteration"
-  "Getting people to start works, and coming back is untested": "What's next"
+  "From an official briefing to a printed deck": "Iteration"
+  "Next: does it get played twice?": "What's next"
 hero: "/work/bss-assets/deck.webp"
 heroAlt: "The Bureau of Sanctioned Sketching deck: a navy box with an octopus seal and three card stacks labeled Draw, Using, and While"
 card: "/work/bss-assets/card-still.webp"
@@ -28,12 +27,12 @@ jumps:
 short:
   - { lead: "The question.", text: "Most adults stop drawing somewhere between 9 and 13, when they decide they aren't allowed to be bad at it. Can permission be designed?" }
   - { lead: "What I built.", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software. The one that worked was a deck of cards." }
-skills: [Design research, Prototyping, Interaction design, Facilitation]
+skills: [Game design, Prototyping, Playtesting, Design research]
 contributions:
-  - { skill: "Design research", text: "Explored why adults stop drawing as they grow up" }
-  - { skill: "Prototyping", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software" }
-  - { skill: "Interaction design", text: "A deck of cards that uses constraints to give adults permission to draw" }
-  - { skill: "Facilitation", text: "Ran playtests and a workshop to test it with people" }
+  - { skill: "Game design", text: "Designed the three-stack mechanic and wrote the rules, cutting them from five panels to one page" }
+  - { skill: "Prototyping", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software, then the printed deck" }
+  - { skill: "Playtesting", text: "Ran 2 playtests with 8 players and changed the rules after each" }
+  - { skill: "Design research", text: "14 interviews and a 47-person survey on why adults stop drawing" }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design" }
   - { label: "Role", value: "Designer and builder, solo" }
@@ -71,21 +70,23 @@ The same deck works at three levels of closeness:
   <div><h4>Old friends</h4><p>The main event of the night.</p></div>
 </div>
 
+Most drawing games reward a drawing someone can guess. BSS has no guessing and no winner, so a bad drawing can't lose.
+
+<figure class="market" role="img" aria-label="A two by two map. Pictionary, Telestrations, and Drawful sit where one person draws something others guess. BSS sits alone where everyone draws together and there is no right answer.">
+  <div class="mk">
+    <span class="mk-c"></span><span class="mk-h">One person draws</span><span class="mk-h">Everyone draws together</span>
+    <span class="mk-r">Others guess it</span>
+    <div class="mk-cell"><p><b>Pictionary</b> rewards speed and a clear drawing</p><p><b>Telestrations</b> rewards funny mix-ups as drawings pass</p><p><b>Drawful</b> rewards bluffing about what it is</p></div>
+    <div class="mk-cell empty"></div>
+    <span class="mk-r">No right answer</span>
+    <div class="mk-cell empty"></div>
+    <div class="mk-cell bss"><p><b>BSS</b> rewards starting</p></div>
+  </div>
+</figure>
+
 <figure class="pair">
   <img src="/work/bss-assets/in-play.webp" alt="Cards for Draw, Using, and While on the table as someone draws with two fingers"/>
   <img src="/work/bss-assets/deck-and-drawing.webp" alt="A player drawing next to the deck and loose cards"/>
-</figure>
-
-## Official-looking cards that tell you to draw
-
-Playful drawing fades in the places that run on forms: school, then work. Real bureaucracy gets compliance through fear.
-
-The Bureau keeps the structure of official cards, stamps, and procedure, and drops the fear. People already follow official instructions without thinking, and here those instructions say to draw.
-
-<figure class="pair">
-  <img src="/work/bss-assets/box-dieline.webp" alt="The flattened BSS box: 'Official permission to draw freely', a quick start of pull files, create directive, draw, play, repeat, and a warning that it may result in joy and creative wonder"/>
-  <img src="/work/bss-assets/bureau-card.webp" alt="A hand holding a card titled Official BSS position"/>
-  <figcaption>The flattened box lays out a five-step quick start, written as official procedure.</figcaption>
 </figure>
 
 ## Most adults stop drawing between 9 and 13
@@ -163,7 +164,7 @@ So I went back through each prototype and asked what it had taught me. Each less
 
 ## Players forgot the cards and kept drawing
 
-Players often forgot they were using cards at all. They were drawing and talking.
+I ran two playtests with four players each, eight people in all. Players often forgot they were using cards at all. They were drawing and talking.
 
 > "I forgot about cards and only drawing until someone changed them."
 >
@@ -173,8 +174,9 @@ Players often forgot they were using cards at all. They were drawing and talking
 >
 > Playtester
 
-<figure class="frame">
+<figure class="pair">
   <img src="/work/bss-assets/playtest-cards.webp" alt="Players reaching across the table, pulling cards from the Draw, Using, and While stacks beside an hourglass while others draw"/>
+  <img src="/work/bss-assets/group-play.webp" alt="Several people drawing at once around a table covered in BSS cards"/>
 </figure>
 
 The While cards made drawing feel like improv. In improv, "yes, and" means you accept what your partner offers and add to it, and at the table each player built on the last player's mark.
@@ -189,27 +191,39 @@ The While cards made drawing feel like improv. In improv, "yes, and" means you a
 
 Some players got going and started writing their own prompts on scrap paper. Those became the blank wildcards, which I added after watching players take ownership of the game.
 
-<figure class="frame"><img src="/work/bss-assets/group-play.webp" alt="Several people drawing at once around a table covered in BSS cards"/></figure>
 
-## Each playtest cut the rules shorter
+## From an official briefing to a printed deck
 
-Every rule was one more thing to read before anyone drew. After each playtest I cut more: the roles went first, then most of the briefing. By the CIID exhibition, the rules fit on one page.
+The cards borrow the look of bureaucracy: forms, stamps, procedure. Playful drawing fades in the places that run on forms, school and then work. The Bureau keeps that structure and drops the fear, so people follow official instructions without thinking, and the instructions say to draw.
 
-<figure class="wide"><img src="/work/bss-assets/rules-shrinking.webp" alt="Three versions of the rules side by side, shrinking: a five-panel briefing, a three-panel guide, and a single page"/><figcaption>1. Five panels, with roles and five-minute rounds. 2. Three panels, roles gone. 3. One page for the exhibition, with one-minute rounds.</figcaption></figure>
+The first rules were a five-panel briefing with named roles and five-minute rounds. Every rule was one more thing to read before anyone drew, so after each playtest I cut more. By the CIID exhibition, they fit on one page.
+
+<figure class="shrink" role="img" aria-label="The rules shrinking: a five-panel briefing, then three panels, then a single page">
+  <div class="shrink-stage">
+    <img class="s1" src="/work/bss-assets/rules-v1.webp" alt=""/>
+    <img class="s2" src="/work/bss-assets/rules-v2.webp" alt=""/>
+    <img class="s3" src="/work/bss-assets/rules-v3.webp" alt=""/>
+  </div>
+  <figcaption class="shrink-steps"><span class="t1">5 panels, roles, 5-minute rounds</span><span class="t2">3 panels, roles gone</span><span class="t3">1 page, 1-minute rounds</span></figcaption>
+</figure>
 
 Then I printed it with a local shop in Bergamo: 39 cards (15 Draw, 13 Using, 11 While), 4 blank wildcards, and a tabbed divider for each stack, on matte card stock with rounded corners.
 
 <figure class="frame"><img src="/work/bss-assets/printed-deck.webp" alt="The printed deck: the navy box with the octopus seal on a shared drawing, with Draw, Using, and While cards reading a face, only dots and dashes, and having a conversation"/><figcaption>The printed deck.</figcaption></figure>
 
-<figure class="wide"><img src="/work/bss-assets/deck-extras.webp" alt="Tabbed divider cards for the intro, Draw, Using, and While, and a blank wildcard"/><figcaption>Tabbed dividers sort the deck back into piles, and blank wildcards let players add their own rules.</figcaption></figure>
+<figure class="pair natural">
+  <img src="/work/bss-assets/box-dieline.webp" alt="The flattened BSS box: 'Official permission to draw freely', a quick start of pull files, create directive, draw, play, repeat, and a warning that it may result in joy and creative wonder"/>
+  <img src="/work/bss-assets/deck-extras.webp" alt="Tabbed divider cards for the intro, Draw, Using, and While, and a blank wildcard"/>
+  <figcaption>The box writes the quick start as official procedure. Tabbed dividers sort the deck back into piles.</figcaption>
+</figure>
 
-## Getting people to start works, and coming back is untested
+## Next: does it get played twice?
 
-Once one person drew badly in front of others, the whole table followed.
+BSS gets people to start: once one person drew badly in front of others, the whole table followed. Whether they come back is untested. Next I'd test three things:
 
-Interviews told me what the block was. The prototypes showed me what would get past it, and the failed ones taught me the most.
-
-BSS gets people to start drawing. Whether they come back is the next question, and I haven't tested it yet.
+- **Replay.** Bring the same group back a week later. Do they ask to play again, and which cards do they skip?
+- **A mixed-age table.** Most players were 21 and up. Kids and parents at one table would show whether the rules work for families.
+- **Time to fun against cost.** Would a bundled timer and sketch pad get people drawing faster, enough to justify the extra cost in the box?
 
 <figure class="frame"><img src="/work/bss-assets/drawing-wall-3x2.webp" alt="A wall of playtest drawings pinned up in a grid"/><figcaption>Every drawing players made during playtests, pinned up together.</figcaption></figure>
 
