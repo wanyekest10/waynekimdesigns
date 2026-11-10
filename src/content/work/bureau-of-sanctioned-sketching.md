@@ -14,6 +14,7 @@ tocLabels:
   "Most adults stop drawing between 9 and 13": "The problem"
   "Six prototypes before the cards worked": "Six prototypes"
   "Players forgot the cards and kept drawing": "Playtests"
+  "Each playtest cut the rules shorter": "Iteration"
   "Getting people to start works, and coming back is untested": "What's next"
 hero: "/work/bss-assets/deck.webp"
 heroAlt: "The Bureau of Sanctioned Sketching deck: a navy box with an octopus seal and three card stacks labeled Draw, Using, and While"
@@ -189,6 +190,24 @@ The While cards made drawing feel like improv. In improv, "yes, and" means you a
 Some players got going and started writing their own prompts on scrap paper. Those became the blank wildcards, which I added after watching players take ownership of the game.
 
 <figure class="frame"><img src="/work/bss-assets/group-play.webp" alt="Several people drawing at once around a table covered in BSS cards"/></figure>
+
+## Each playtest cut the rules shorter
+
+The first version came with a five-panel briefing: named roles like Chief Compliance Officer, a form for sitting out, and five-minute rounds. Every rule was one more thing to read before anyone drew, so after each playtest I cut more.
+
+<figure class="wide"><img src="/work/bss-assets/rules-v1-five-panel.webp" alt="Version 1 rules: a five-panel briefing with mission setup, operational procedures, personnel role specifications, and an operational mindset"/><figcaption>1. Five panels: roles, a 30-second swap rule, five-minute rounds.</figcaption></figure>
+
+<figure class="pair natural">
+  <img src="/work/bss-assets/rules-v2-three-panel.webp" alt="Version 2 rules: three panels, an operations guide, permission protocols, and a bureau briefing"/>
+  <img src="/work/bss-assets/rules-v3-one-page.webp" alt="Version 3 rules: one page with the three card stacks and five lines of instructions"/>
+  <figcaption>2. Three panels, roles gone. 3. One page: five lines and one-minute rounds.</figcaption>
+</figure>
+
+The cards went through three versions too, then a print run at a local print shop in Bergamo: 14 Draw, 16 Using, and 7 While cards, plus 5 blank wildcards. They're printed full color on both sides, on 200 to 250 gsm matte card stock with rounded corners.
+
+<figure class="wide"><img src="/work/bss-assets/cards-v2-v3.webp" alt="The same three steps as version 2 cards (a cat, eyes closed, starting calm and getting more chaotic) and version 3 cards (circles, quick loose strokes, guide your neighbor's hand while they draw)"/><figcaption>Cards, version 2 and version 3.</figcaption></figure>
+
+<figure class="wide"><img src="/work/bss-assets/print-sheet.webp" alt="The print sheet sent to the shop: every card laid out in pairs, plus the rules sheets"/><figcaption>The print sheet sent to the shop.</figcaption></figure>
 
 ## Getting people to start works, and coming back is untested
 
