@@ -798,19 +798,19 @@ article .cmp .cmp-top { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
 
 /* Card swap: one card from each BSS stack, styled after the printed deck. */
 article figure.swap { max-width: var(--wide); margin: 28px 0 36px; background: var(--panel); border-radius: 6px; padding: clamp(20px, 4vw, 40px); display: flex; flex-direction: column; align-items: center; gap: 22px; }
-.swap-hand { display: grid; grid-template-columns: repeat(3, minmax(0, 180px)); gap: 18px; justify-content: center; width: 100%; }
-.swap-slot { position: relative; aspect-ratio: 5/7; border: 0; padding: 0; background: none; cursor: pointer; border-radius: 8px; }
+.swap-hand { display: grid; grid-template-columns: repeat(3, minmax(0, 200px)); gap: 20px; justify-content: center; width: 100%; }
+.swap-slot { position: relative; aspect-ratio: 8/9; border: 0; padding: 0; background: none; cursor: pointer; border-radius: 12px; }
 .swap-slot:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-.swap-card { position: absolute; inset: 0; border-radius: 8px; background: #F7F6F2; color: #1b1b1b; border: 1px solid #d6d4cc; padding: 14px; display: flex; flex-direction: column; justify-content: center; text-align: center; font-family: var(--mono); box-shadow: 0 6px 18px rgba(0,0,0,.1); transition: transform .5s cubic-bezier(.2,.8,.2,1), opacity .4s; }
-.swap-slot[data-stack="While"] .swap-card { background: #EDECE7; }
+.swap-card { position: absolute; inset: 0; border-radius: 12px; background: #E3E3E5; color: #1b1b1b; border: 1px solid #cfcfd3; padding: 16px; display: flex; flex-direction: column; justify-content: center; text-align: center; font-family: 'Courier New', Courier, monospace; box-shadow: 0 6px 18px rgba(0,0,0,.1); transition: transform .5s cubic-bezier(.2,.8,.2,1), opacity .4s; }
 .swap-card.under { transform: translate(6px, -6px) rotate(2deg); opacity: .5; }
 .swap-slot:hover .swap-card.top { transform: translateY(-5px); }
 .swap-card.out { transform: translateY(-28px) rotate(-7deg); opacity: 0; }
 .swap-card.in { transform: translateY(22px); opacity: 0; }
-.swap-st { position: absolute; top: 12px; right: 12px; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; text-align: right; line-height: 1.3; }
-.swap-card b { font-size: 16px; font-weight: 400; line-height: 1.35; text-wrap: balance; }
+.swap-st { position: absolute; top: 12px; right: 14px; font-size: 12px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; text-align: right; line-height: 1.25; }
+.swap-st i { font-style: normal; display: block; margin-top: 3px; font-size: 13px; }
+.swap-card b { font-size: 18px; font-weight: 400; line-height: 1.3; text-wrap: balance; margin-top: 18px; }
 .swap-foot { display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .swap-deal { font: inherit; font-size: 15px; background: var(--ink); color: var(--paper); border: 0; border-radius: 99px; padding: 9px 18px; cursor: pointer; }
 article .swap-read { margin: 0; font: var(--meta); font-size: 13px; color: var(--ink); text-align: center; text-wrap: balance; }
-@media (max-width: 600px) { .swap-hand { gap: 8px; grid-template-columns: repeat(3, minmax(0, 1fr)); } .swap-card { padding: 8px; } .swap-card b { font-size: 12px; } .swap-st { font-size: 7px; top: 7px; right: 7px; } }
+@media (max-width: 600px) { .swap-hand { gap: 8px; grid-template-columns: repeat(3, minmax(0, 1fr)); } .swap-card { padding: 8px; border-radius: 8px; } .swap-card b { font-size: 12px; margin-top: 14px; } .swap-st { font-size: 8px; top: 7px; right: 8px; } .swap-st i { font-size: 9px; margin-top: 1px; } }
 @media (prefers-reduced-motion: reduce) { .swap-card { transition: none; } }
