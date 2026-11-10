@@ -201,11 +201,7 @@ Then I printed it with a local shop in Bergamo: 39 cards (15 Draw, 13 Using, 11 
 
 <figure class="frame"><img src="/work/bss-assets/printed-deck.webp" alt="The printed deck: the navy box with the octopus seal on a shared drawing, with Draw, Using, and While cards reading a face, only dots and dashes, and having a conversation"/><figcaption>The printed deck.</figcaption></figure>
 
-<figure class="pair natural">
-  <img src="/work/bss-assets/deck-extras.webp" alt="Tabbed divider cards for the intro, Draw, Using, and While, and a blank wildcard"/>
-  <img src="/work/bss-assets/box-final.webp" alt="The final box dieline: the octopus seal on the front, a quick start on the back, and a barcode reading 39 cards, unlimited possibilities"/>
-  <figcaption>Tabbed dividers sort the deck back into piles. The box, flattened.</figcaption>
-</figure>
+<figure class="wide"><img src="/work/bss-assets/deck-extras.webp" alt="Tabbed divider cards for the intro, Draw, Using, and While, and a blank wildcard"/><figcaption>Tabbed dividers sort the deck back into piles, and blank wildcards let players add their own rules.</figcaption></figure>
 
 ## Getting people to start works, and coming back is untested
 
