@@ -207,7 +207,7 @@ The cards went through three versions too, then a print run at a local print sho
 
 <figure class="wide"><img src="/work/bss-assets/cards-v2-v3.webp" alt="The same three steps as version 2 cards (a cat, eyes closed, starting calm and getting more chaotic) and version 3 cards (circles, quick loose strokes, guide your neighbor's hand while they draw)"/><figcaption>Cards, version 2 and version 3.</figcaption></figure>
 
-<figure class="wide"><img src="/work/bss-assets/print-sheet.webp" alt="The print sheet sent to the shop: every card laid out in pairs, plus the rules sheets"/><figcaption>The print sheet sent to the shop.</figcaption></figure>
+<figure class="wide"><img src="/work/bss-assets/print-sheet.webp" alt="An early print test: version 2 cards laid out in pairs, plus the rules sheets"/><figcaption>An early print test of version 2, before the shop run.</figcaption></figure>
 
 ## Getting people to start works, and coming back is untested
 
