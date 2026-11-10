@@ -193,14 +193,14 @@ Some players got going and started writing their own prompts on scrap paper. Tho
 
 ## Each playtest cut the rules shorter
 
-The first version came with a five-panel briefing: named roles like Chief Compliance Officer, a form for sitting out, and five-minute rounds. Every rule was one more thing to read before anyone drew, so after each playtest I cut more.
+The first version came with a five-panel briefing: named roles like Chief Compliance Officer, a form for sitting out, and five-minute rounds. Every rule was one more thing to read before anyone drew, so after each playtest I cut more. By the CIID exhibition, it fit on one page.
 
 <figure class="wide"><img src="/work/bss-assets/rules-v1-five-panel.webp" alt="Version 1 rules: a five-panel briefing with mission setup, operational procedures, personnel role specifications, and an operational mindset"/><figcaption>1. Five panels: roles, a 30-second swap rule, five-minute rounds.</figcaption></figure>
 
 <figure class="pair natural">
   <img src="/work/bss-assets/rules-v2-three-panel.webp" alt="Version 2 rules: three panels, an operations guide, permission protocols, and a bureau briefing"/>
   <img src="/work/bss-assets/rules-v3-one-page.webp" alt="Version 3 rules: one page with the three card stacks and five lines of instructions"/>
-  <figcaption>2. Three panels, roles gone. 3. One page: five lines and one-minute rounds.</figcaption>
+  <figcaption>2. Three panels, roles gone. 3. The one page for the exhibition: five lines and one-minute rounds.</figcaption>
 </figure>
 
 The cards went through three versions too, then a print run at a local print shop in Bergamo: 14 Draw, 16 Using, and 7 While cards, plus 5 blank wildcards. They're printed full color on both sides, on 200 to 250 gsm matte card stock with rounded corners.
