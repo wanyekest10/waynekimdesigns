@@ -1,6 +1,6 @@
 ---
-// Archive for the Mattel page (/for/mattel/): the four selected case studies first, then play and prototypes,
-// then research and strategy at the bottom. Unlisted.
+// Archive for the Mattel page (/for/mattel/): the four selected case studies first, then play and games, physical prototypes,
+// and playtesting and facilitation. Larvae Lagoon and Tamer are left off for this audience. Unlisted.
 import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import Rows from '../../../components/Rows.astro';
@@ -13,17 +13,21 @@ const workRow = (id: string) => {
 const playRow = (name: string) => experiments.find((e: any) => e.name === name)!;
 const GROUPS = [
   { title: 'Selected for Mattel', rows: ['bureau-of-sanctioned-sketching', 'toilet-paper-elevator', 'linee', 'glorify-groups'].map(workRow) },
-  { title: 'More play and prototypes', rows: [
-    playRow('Mirrored Canvas'), playRow('Disco Never Died'), playRow('Dear Theo, Ever Yours'), playRow('A Serious Fan'),
-    workRow('room-tone'), workRow('living-fm'), workRow('lume'), playRow('Tamer Kebap Eating Club'), playRow('Larvae Lagoon'), playRow('Mosaic of Memories'),
+  { title: 'More play and games', rows: [
+    playRow('Mirrored Canvas'), playRow('Dear Theo, Ever Yours'), playRow('Disco Never Died'), playRow('Mosaic of Memories'),
   ] },
-  { title: 'Research and strategy', rows: ['facilitation', 'designit-futures', 'raiseme-portal'].map(workRow) },
+  { title: 'Physical prototypes', rows: [
+    workRow('room-tone'), playRow('A Serious Fan'), workRow('lume'), workRow('living-fm'),
+  ] },
+  { title: 'Playtesting and facilitation', rows: [
+    { ...workRow('facilitation'), line: 'Workshops for Glorify, the Busan Design Council, and Wipro.' }, workRow('raiseme-portal'), workRow('designit-futures'),
+  ] },
 ];
 ---
 <Base title="Archive, Wayne Kim" tailor={{ home: '/for/mattel/', links: [{ href: '/for/mattel/archive/', label: 'Archive' }, { href: '/resume-games.pdf', label: 'Resume' }], back: { href: '/for/mattel/', label: '← Selected projects' }, closing: { prompt: 'Hiring for Mattel Games? Let’s talk.', cta: 'Email me →', href: 'mailto:waynekimdesigns@gmail.com' }, resume: '/resume-games.pdf', picks: ['/work/bureau-of-sanctioned-sketching/', '/work/toilet-paper-elevator/', '/work/linee/', '/work/glorify-groups/'] }} noindex>
   <p class="back"><a href="/for/mattel/">← Selected projects</a></p>
   <h1>Archive</h1>
-  <p class="lead">All my projects, starting with the four I'd show a games team.</p>
+  <p class="lead">More projects, starting with the four I'd show a games team.</p>
   {GROUPS.map((g) => (
   <section class="block">
     <h2 class="section-title">{g.title}</h2>

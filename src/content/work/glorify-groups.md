@@ -18,7 +18,7 @@ year: "2023"
 featured: true
 cardFit: contain
 label: "Research through prototyping"
-summary: "Small faith groups, now 1.8M+ users."
+summary: "Small faith groups, 1.8M+ users by 2025."
 hero: "/work/glorify-assets/shipped-screens-flat.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
 jumps:
