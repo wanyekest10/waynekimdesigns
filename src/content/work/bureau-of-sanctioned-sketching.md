@@ -193,26 +193,18 @@ Some players got going and started writing their own prompts on scrap paper. Tho
 
 ## Each playtest cut the rules shorter
 
-The first version came with a five-panel briefing: named roles like Chief Compliance Officer, a form for sitting out, and five-minute rounds. Every rule was one more thing to read before anyone drew, so after each playtest I cut more. By the CIID exhibition, it fit on one page.
+Every rule was one more thing to read before anyone drew. After each playtest I cut more: the roles went first, then most of the briefing. By the CIID exhibition, the rules fit on one page.
 
-<figure class="wide"><img src="/work/bss-assets/rules-v1-five-panel.webp" alt="Version 1 rules: a five-panel briefing with mission setup, operational procedures, personnel role specifications, and an operational mindset"/><figcaption>1. Five panels: roles, a 30-second swap rule, five-minute rounds.</figcaption></figure>
+<figure class="wide"><img src="/work/bss-assets/rules-shrinking.webp" alt="Three versions of the rules side by side, shrinking: a five-panel briefing, a three-panel guide, and a single page"/><figcaption>1. Five panels, with roles and five-minute rounds. 2. Three panels, roles gone. 3. One page for the exhibition, with one-minute rounds.</figcaption></figure>
 
-<figure class="half"><img src="/work/bss-assets/rules-v2-three-panel.webp" alt="Version 2 rules: three panels, an operations guide, permission protocols, and a bureau briefing"/><figcaption>2. Three panels, roles gone.</figcaption></figure>
+Then I printed it with a local shop in Bergamo: 39 cards (15 Draw, 13 Using, 11 While), 4 blank wildcards, and a tabbed divider for each stack, on matte card stock with rounded corners.
 
-The cards went through three versions too, then a print run at a local print shop in Bergamo: 15 Draw, 13 Using, and 11 While cards, 4 blank wildcards, and a tabbed divider for each stack. They're printed full color on both sides, on 200 to 250 gsm matte card stock with rounded corners.
-
-<figure class="half"><img src="/work/bss-assets/cards-v2-v3.webp" alt="The same three steps as version 2 cards (a cat, eyes closed, starting calm and getting more chaotic) and version 3 cards (circles, quick loose strokes, guide your neighbor's hand while they draw)"/><figcaption>Cards, version 2 and version 3.</figcaption></figure>
-
-<figure class="wide"><img src="/work/bss-assets/printed-deck.webp" alt="The printed deck: the navy box with the octopus seal on a shared drawing, with Draw, Using, and While cards reading a face, only dots and dashes, and having a conversation"/><figcaption>The printed deck.</figcaption></figure>
-
-<figure class="wide"><img src="/work/bss-assets/deck-directive.webp" alt="The card back, then one card from each stack: the place you're in, your non-dominant hand, having a conversation"/><figcaption>One card from each stack makes a directive: draw the place you’re in, using your non-dominant hand, while having a conversation.</figcaption></figure>
-
-<figure class="wide"><img src="/work/bss-assets/deck-cards.webp" alt="The card back and every card: 15 Draw, 13 Using, and 11 While"/><figcaption>All 39 cards: 15 Draw, 13 Using, 11 While.</figcaption></figure>
+<figure class="frame"><img src="/work/bss-assets/printed-deck.webp" alt="The printed deck: the navy box with the octopus seal on a shared drawing, with Draw, Using, and While cards reading a face, only dots and dashes, and having a conversation"/><figcaption>The printed deck.</figcaption></figure>
 
 <figure class="pair natural">
   <img src="/work/bss-assets/deck-extras.webp" alt="Tabbed divider cards for the intro, Draw, Using, and While, and a blank wildcard"/>
   <img src="/work/bss-assets/box-final.webp" alt="The final box dieline: the octopus seal on the front, a quick start on the back, and a barcode reading 39 cards, unlimited possibilities"/>
-  <figcaption>Tabbed dividers so the deck sorts back into piles, one of the 4 blank wildcards, and the box, flattened.</figcaption>
+  <figcaption>Tabbed dividers sort the deck back into piles. The box, flattened.</figcaption>
 </figure>
 
 ## Getting people to start works, and coming back is untested
@@ -222,8 +214,6 @@ Once one person drew badly in front of others, the whole table followed.
 Interviews told me what the block was. The prototypes showed me what would get past it, and the failed ones taught me the most.
 
 BSS gets people to start drawing. Whether they come back is the next question, and I haven't tested it yet.
-
-<figure class="small"><img src="/work/bss-assets/rules-v3-one-page.webp" alt="The one-page rules from the CIID exhibition: the three card stacks and five lines of instructions"/><figcaption>The rules at the CIID exhibition: five lines and one-minute rounds.</figcaption></figure>
 
 <figure class="frame"><img src="/work/bss-assets/drawing-wall-3x2.webp" alt="A wall of playtest drawings pinned up in a grid"/><figcaption>Every drawing players made during playtests, pinned up together.</figcaption></figure>
 
