@@ -58,9 +58,12 @@ Each round, players pull three cards and everyone draws together for one minute.
 </div>
 <p class="flow-note">↻ Repeat until someone writes their own card.</p>
 
-- **Draw** sets the subject: "the place you're in."
-- **Using** sets a physical limit: "your non-dominant hand," "eyes closed."
-- **While** sets a rule for the group: "having a conversation," "guide your neighbor's hand."
+Draw sets the subject, Using sets a physical limit, and While sets a rule for the group. Tap a card to pull another from that stack.
+
+<figure class="swap" data-deck='{"Draw": ["straight lines", "dots", "zigzags", "spirals", "the place you&#39;re in", "circles", "a dog", "a tree", "a face", "a flower", "the sun", "how you&#39;re feeling", "a portrait of your group", "a shared memory", "a crowd of people"], "Using": ["eyes closed for the first 30 seconds", "your non-dominant hand", "only two fingers, no thumb", "both hands at the same time", "lines without lifting pen", "quick loose strokes", "tiny finger movements only", "whole arm movements", "calm meditative strokes", "quick energetic movements", "only dots and dashes", "empty spaces around things", "switch hands every 5 seconds"], "While": ["begin calmly, gradually get more chaotic", "pause and resume every 5 sec", "sway as if listening to music", "making sound effects", "looking someone in the eyes", "staring only at the ceiling", "guiding your neighbor&#39;s hand while they draw", "building on someone&#39;s drawing", "having a conversation", "taking turns every single mark", "discussing how to collaborate on the drawing"]}'>
+  <div class="swap-hand"><button class="swap-slot" type="button" data-stack="Draw" data-i="4" aria-label="Swap the Draw card"><span class="swap-card under" aria-hidden="true"></span><span class="swap-card top"><span class="swap-st">Step 1<br/>Draw</span><b>the place you're in</b></span></button><button class="swap-slot" type="button" data-stack="Using" data-i="0" aria-label="Swap the Using card"><span class="swap-card under" aria-hidden="true"></span><span class="swap-card top"><span class="swap-st">Step 2<br/>Using</span><b>eyes closed for the first 30 seconds</b></span></button><button class="swap-slot" type="button" data-stack="While" data-i="8" aria-label="Swap the While card"><span class="swap-card under" aria-hidden="true"></span><span class="swap-card top"><span class="swap-st">Step 3<br/>While</span><b>having a conversation</b></span></button></div>
+  <div class="swap-foot"><button class="swap-deal" type="button">Deal a new round</button><p class="swap-read" aria-live="polite">Draw the place you're in, using eyes closed for the first 30 seconds, while having a conversation.</p></div>
+</figure>
 
 Most drawing games reward a drawing someone can guess. BSS has no guessing and no winner, so a bad drawing can't lose.
 

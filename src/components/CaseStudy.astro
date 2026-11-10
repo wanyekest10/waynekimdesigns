@@ -132,6 +132,34 @@ document.querySelectorAll<HTMLElement>('.flip').forEach((root) => {
     if (inView) { for (let k = 0; k < 6; k++) preload(k); run(600); } else stop();
   }, { threshold: 0.3 }).observe(root);
 });
+// Image compare: the slider sets how much of the top (earlier) image shows.
+document.querySelectorAll<HTMLElement>('.cmp').forEach((box) => {
+  const r = box.querySelector('.cmp-in') as HTMLInputElement;
+  const set = () => box.style.setProperty('--pos', r.value + '%');
+  r.addEventListener('input', set); set();
+});
+// Card swap: tap a card to pull the next one from its stack, or deal a new round.
+document.querySelectorAll<HTMLElement>('figure.swap').forEach((fig) => {
+  const deck: Record<string, string[]> = JSON.parse(fig.dataset.deck || '{}');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const slots = [...fig.querySelectorAll<HTMLButtonElement>('.swap-slot')];
+  const read = fig.querySelector('.swap-read') as HTMLElement;
+  const cur = (b: HTMLButtonElement) => deck[b.dataset.stack!][Number(b.dataset.i)];
+  const sayRound = () => { const [d, u, w] = slots.map(cur); read.textContent = `Draw ${d}, using ${u}, while ${w}.`; };
+  const swap = (b: HTMLButtonElement, step = 1) => {
+    const list = deck[b.dataset.stack!]; const i = (Number(b.dataset.i) + step) % list.length; b.dataset.i = String(i);
+    const old = b.querySelector('.swap-card.top') as HTMLElement; const n = old.cloneNode(true) as HTMLElement;
+    n.querySelector('b')!.textContent = list[i];
+    if (reduce) { old.replaceWith(n); } else {
+      n.classList.add('in'); b.appendChild(n); old.classList.add('out');
+      requestAnimationFrame(() => requestAnimationFrame(() => n.classList.remove('in')));
+      setTimeout(() => old.remove(), 500);
+    }
+    sayRound();
+  };
+  slots.forEach((b) => b.addEventListener('click', () => swap(b)));
+  fig.querySelector('.swap-deal')?.addEventListener('click', () => slots.forEach((b, k) => setTimeout(() => swap(b, 1 + Math.floor(Math.random() * (deck[b.dataset.stack!].length - 1))), reduce ? 0 : k * 140)));
+});
 // Before: the two early screens trade places.
 document.querySelectorAll<HTMLElement>('.ba-before').forEach((box) => {
   const ims = [...box.querySelectorAll('img')]; let k = 0;

@@ -22,6 +22,13 @@ const { items } = Astro.props;
   // Hover loops load ahead and play while hovered, only where a mouse can hover (phones never load them).
   if (matchMedia('(hover: hover)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll<HTMLAnchorElement>('.card').forEach((card) => {
+      // A slight tilt toward the cursor; the loop still plays underneath.
+      const img = card.querySelector<HTMLElement>('.card-img')!;
+      card.addEventListener('mousemove', (e) => {
+        const r = img.getBoundingClientRect(); const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        img.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
+      });
+      card.addEventListener('mouseleave', () => { img.style.transform = ''; });
       const v = card.querySelector<HTMLVideoElement>('.card-vid');
       if (!v) return;
       v.preload = 'auto';   // load ahead on desktop, so the loop starts the moment you hover
@@ -34,7 +41,7 @@ const { items } = Astro.props;
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 20px; }
   .card { color: var(--ink); text-decoration: none; display: block; min-width: 0; }
   .card:hover { text-decoration: none; }
-  .card-img { position: relative; border-radius: 6px; overflow: hidden; margin-bottom: 12px; background: var(--panel); }
+  .card-img { transition: transform .2s ease-out; will-change: transform; position: relative; border-radius: 6px; overflow: hidden; margin-bottom: 12px; background: var(--panel); }
   .card img { display: block; width: 100%; aspect-ratio: 3/2; object-fit: cover; }
   .card img.contain { object-fit: contain; }
   .card:hover .card-title { color: var(--accent); }
