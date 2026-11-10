@@ -192,12 +192,10 @@ The first rules were a five-panel briefing with named roles and five-minute roun
 
 Then I printed it with a local shop in Bergamo: 39 cards (15 Draw, 13 Using, 11 While), 4 blank wildcards, and a tabbed divider for each stack, on matte card stock with rounded corners.
 
-<figure class="frame"><img src="/work/bss-assets/printed-deck.webp" alt="The printed deck: the navy box with the octopus seal on a shared drawing, with Draw, Using, and While cards reading a face, only dots and dashes, and having a conversation"/><figcaption>The printed deck.</figcaption></figure>
-
 <figure class="pair natural">
+  <img src="/work/bss-assets/printed-deck.webp" alt="The printed deck: the navy box with the octopus seal on a shared drawing, with Draw, Using, and While cards reading a face, only dots and dashes, and having a conversation"/>
   <img src="/work/bss-assets/box-dieline.webp" alt="The flattened BSS box: 'Official permission to draw freely', a quick start of pull files, create directive, draw, play, repeat, and a warning that it may result in joy and creative wonder"/>
-  <img src="/work/bss-assets/deck-extras.webp" alt="Tabbed divider cards for the intro, Draw, Using, and While, and a blank wildcard"/>
-  <figcaption>The box writes the quick start as official procedure. Tabbed dividers sort the deck back into piles.</figcaption>
+  <figcaption>The printed deck, and its box flattened, with the quick start written as official procedure.</figcaption>
 </figure>
 
 ## Next: does it get played twice?
