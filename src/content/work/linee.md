@@ -22,7 +22,7 @@ skills: [Physical computing, Prototyping, Interaction design]
 contributions:
   - { skill: "Physical computing", text: "Wrote the code for the stepper motor and LEDs" }
   - { skill: "Prototyping", text: "Helped prototype the blocks" }
-  - { skill: "Interaction design", text: "Proposed the magnetic tiles concept" }
+  - { skill: "Interaction design", text: "Concepted the magnetic tiles" }
   - { skill: "With the team", text: "Concept and the laser-cut build, with Alec Davis and Chokchey Cappai", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
@@ -99,7 +99,7 @@ We went through dozens of versions, starting in cardboard. The one that worked h
 
 ## A shared language
 
-Later in the project, I proposed magnetic tiles: housemates write a note or stick a symbol on the timeline, like taking out the trash, being on a call, or having friends over. The day stops being a schedule handed down and becomes something the house can negotiate.
+Later in the project, I concepted magnetic tiles: housemates write a note or stick a symbol on the timeline, like taking out the trash, being on a call, or having friends over. The day stops being a schedule handed down and becomes something the house can negotiate.
 
 <figure class="frame"><img src="/work/linee-assets/tile-writing.webp" alt="Writing CIID Open House on a white tile stuck to the 17:00 block, next to a red tile marked Demo"/></figure>
 
