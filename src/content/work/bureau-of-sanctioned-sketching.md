@@ -190,7 +190,7 @@ The first rules were a five-panel briefing with named roles and five-minute roun
   <figcaption class="shrink-steps"><span class="t1">5 panels, roles, 5-minute rounds</span><span class="t2">3 panels, roles gone</span><span class="t3">1 page, 1-minute rounds</span></figcaption>
 </figure>
 
-Then I printed it with a local shop in Bergamo: 39 cards (15 Draw, 13 Using, 11 While), 4 blank wildcards, and a tabbed divider for each stack, on matte card stock with rounded corners.
+Then I printed it with a local shop in Bergamo: a 49-card deck with 15 Draw, 13 Using, and 11 While cards, plus blank wildcards and a tabbed divider for each stack, on matte card stock with rounded corners.
 
 <figure class="pair natural">
   <img src="/work/bss-assets/printed-deck.webp" alt="The printed deck: the navy box with the octopus seal on a shared drawing, with Draw, Using, and While cards reading a face, only dots and dashes, and having a conversation"/>
