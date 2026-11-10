@@ -203,11 +203,11 @@ The first version came with a five-panel briefing: named roles like Chief Compli
   <figcaption>2. Three panels, roles gone. 3. The one page for the exhibition: five lines and one-minute rounds.</figcaption>
 </figure>
 
-The cards went through three versions too, then a print run at a local print shop in Bergamo: 14 Draw, 16 Using, and 7 While cards, plus 5 blank wildcards. They're printed full color on both sides, on 200 to 250 gsm matte card stock with rounded corners.
+The cards went through three versions too, then a print run at a local print shop in Bergamo: 15 Draw, 13 Using, and 11 While cards, 4 blank wildcards, and a tabbed divider for each stack. They're printed full color on both sides, on 200 to 250 gsm matte card stock with rounded corners.
 
 <figure class="wide"><img src="/work/bss-assets/cards-v2-v3.webp" alt="The same three steps as version 2 cards (a cat, eyes closed, starting calm and getting more chaotic) and version 3 cards (circles, quick loose strokes, guide your neighbor's hand while they draw)"/><figcaption>Cards, version 2 and version 3.</figcaption></figure>
 
-<figure class="wide"><img src="/work/bss-assets/print-sheet.webp" alt="An early print test: version 2 cards laid out in pairs, plus the rules sheets"/><figcaption>An early print test of version 2, before the shop run.</figcaption></figure>
+<figure class="wide"><img src="/work/bss-assets/production-files.webp" alt="The final production files: the box template, the card back with the octopus seal, every Draw, Using, and While card, blank wildcards, and tabbed divider cards for each stack"/><figcaption>The final files for the print shop: box, card back, every card, and a tabbed divider for each stack.</figcaption></figure>
 
 ## Getting people to start works, and coming back is untested
 
