@@ -197,11 +197,7 @@ The first version came with a five-panel briefing: named roles like Chief Compli
 
 <figure class="wide"><img src="/work/bss-assets/rules-v1-five-panel.webp" alt="Version 1 rules: a five-panel briefing with mission setup, operational procedures, personnel role specifications, and an operational mindset"/><figcaption>1. Five panels: roles, a 30-second swap rule, five-minute rounds.</figcaption></figure>
 
-<figure class="pair natural">
-  <img src="/work/bss-assets/rules-v2-three-panel.webp" alt="Version 2 rules: three panels, an operations guide, permission protocols, and a bureau briefing"/>
-  <img src="/work/bss-assets/rules-v3-one-page.webp" alt="Version 3 rules: one page with the three card stacks and five lines of instructions"/>
-  <figcaption>2. Three panels, roles gone. 3. The one page for the exhibition: five lines and one-minute rounds.</figcaption>
-</figure>
+<figure class="half"><img src="/work/bss-assets/rules-v2-three-panel.webp" alt="Version 2 rules: three panels, an operations guide, permission protocols, and a bureau briefing"/><figcaption>2. Three panels, roles gone.</figcaption></figure>
 
 The cards went through three versions too, then a print run at a local print shop in Bergamo: 15 Draw, 13 Using, and 11 While cards, 4 blank wildcards, and a tabbed divider for each stack. They're printed full color on both sides, on 200 to 250 gsm matte card stock with rounded corners.
 
@@ -226,6 +222,8 @@ Once one person drew badly in front of others, the whole table followed.
 Interviews told me what the block was. The prototypes showed me what would get past it, and the failed ones taught me the most.
 
 BSS gets people to start drawing. Whether they come back is the next question, and I haven't tested it yet.
+
+<figure class="small"><img src="/work/bss-assets/rules-v3-one-page.webp" alt="The one-page rules from the CIID exhibition: the three card stacks and five lines of instructions"/><figcaption>The rules at the CIID exhibition: five lines and one-minute rounds.</figcaption></figure>
 
 <figure class="frame"><img src="/work/bss-assets/drawing-wall-3x2.webp" alt="A wall of playtest drawings pinned up in a grid"/><figcaption>Every drawing players made during playtests, pinned up together.</figcaption></figure>
 
