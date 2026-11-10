@@ -205,9 +205,13 @@ The first version came with a five-panel briefing: named roles like Chief Compli
 
 The cards went through three versions too, then a print run at a local print shop in Bergamo: 15 Draw, 13 Using, and 11 While cards, 4 blank wildcards, and a tabbed divider for each stack. They're printed full color on both sides, on 200 to 250 gsm matte card stock with rounded corners.
 
-<figure class="wide"><img src="/work/bss-assets/cards-v2-v3.webp" alt="The same three steps as version 2 cards (a cat, eyes closed, starting calm and getting more chaotic) and version 3 cards (circles, quick loose strokes, guide your neighbor's hand while they draw)"/><figcaption>Cards, version 2 and version 3.</figcaption></figure>
+<figure class="half"><img src="/work/bss-assets/cards-v2-v3.webp" alt="The same three steps as version 2 cards (a cat, eyes closed, starting calm and getting more chaotic) and version 3 cards (circles, quick loose strokes, guide your neighbor's hand while they draw)"/><figcaption>Cards, version 2 and version 3.</figcaption></figure>
 
-<figure class="wide"><img src="/work/bss-assets/production-files.webp" alt="The final production files: the box template, the card back with the octopus seal, every Draw, Using, and While card, blank wildcards, and tabbed divider cards for each stack"/><figcaption>The final files for the print shop: box, card back, every card, and a tabbed divider for each stack.</figcaption></figure>
+<figure class="wide"><img src="/work/bss-assets/box-final.webp" alt="The final box dieline: the octopus seal on the front, a quick start on the back, and a barcode reading 39 cards, unlimited possibilities"/><figcaption>The final box, flattened.</figcaption></figure>
+
+<figure class="wide"><img src="/work/bss-assets/deck-cards.webp" alt="The card back with the octopus seal, then every card: 15 Draw, 13 Using, and 11 While"/><figcaption>The card back and all 39 cards: 15 Draw, 13 Using, 11 While.</figcaption></figure>
+
+<figure class="wide"><img src="/work/bss-assets/deck-extras.webp" alt="Four blank wildcards, front and back, and tabbed divider cards for the intro and each of the three stacks"/><figcaption>Four blank wildcards, and a tabbed divider for each stack so the deck sorts back into piles.</figcaption></figure>
 
 ## Getting people to start works, and coming back is untested
 
