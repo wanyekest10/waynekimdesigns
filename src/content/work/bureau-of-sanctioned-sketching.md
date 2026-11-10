@@ -62,14 +62,6 @@ Each round, players pull three cards and everyone draws together for one minute.
 - **Using** sets a physical limit: "your non-dominant hand," "eyes closed."
 - **While** sets a rule for the group: "having a conversation," "guide your neighbor's hand."
 
-The same deck works at three levels of closeness:
-
-<div class="cols3">
-  <div><h4>Strangers</h4><p>A low-stakes alternative to small talk.</p></div>
-  <div><h4>Colleagues</h4><p>Outside permission to be silly at work.</p></div>
-  <div><h4>Old friends</h4><p>The main event of the night.</p></div>
-</div>
-
 Most drawing games reward a drawing someone can guess. BSS has no guessing and no winner, so a bad drawing can't lose.
 
 <figure class="market" role="img" aria-label="A two by two map. Pictionary, Telestrations, and Drawful sit where one person draws something others guess. BSS sits alone where everyone draws together and there is no right answer.">
@@ -116,12 +108,7 @@ Then I asked people about it directly. The block was rarely about skill.
 >
 > Interview participant
 
-<div class="principles4">
-  <div><h4>Permission to begin</h4><p>Lower the barrier to starting.</p></div>
-  <div><h4>Playful constraints</h4><p>Swap endless choice for strict, silly rules.</p></div>
-  <div><h4>Flow, don't overthink</h4><p>Momentum over perfection.</p></div>
-  <div><h4>Contagiously fun</h4><p>Joy that spreads on its own.</p></div>
-</div>
+**Four design principles came out of this:** lower the barrier to starting, swap endless choice for silly rules, keep momentum over perfection, and let the fun spread on its own.
 
 <p class="hmw">How might we help adults rediscover the joy of drawing in everyday life, without pressure, and without needing to call it art?</p>
 
@@ -142,11 +129,7 @@ I didn't know what the answer would look like, so I built to find out. Each prot
 
 I folded the best parts into Happy Accidents Studio, hand-tracked drawing software with solo and co-op modes.
 
-<figure class="pair keep">
-  <img src="/work/bss-assets/hands-kaleidoscope.webp" alt="Happy Accidents Studio: a hand-tracked kaleidoscope drawing on screen, with a player waving at the camera"/>
-  <img src="/work/bss-assets/hands-sketch.webp" alt="A hand-tracking sketch in the p5.js editor, drawing lines from a webcam view of a hand"/>
-  <figcaption>Happy Accidents Studio combined the prototypes into hand-tracked drawing software.</figcaption>
-</figure>
+<figure class="textw"><img src="/work/bss-assets/hands-kaleidoscope.webp" alt="Happy Accidents Studio: a hand-tracked kaleidoscope drawing on screen, with a player waving at the camera"/><figcaption>Happy Accidents Studio combined the prototypes into hand-tracked drawing software.</figcaption></figure>
 
 In playtests, it didn't work. People paid attention to the technology, and some couldn't get past setting it up.
 
