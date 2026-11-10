@@ -207,11 +207,17 @@ The cards went through three versions too, then a print run at a local print sho
 
 <figure class="half"><img src="/work/bss-assets/cards-v2-v3.webp" alt="The same three steps as version 2 cards (a cat, eyes closed, starting calm and getting more chaotic) and version 3 cards (circles, quick loose strokes, guide your neighbor's hand while they draw)"/><figcaption>Cards, version 2 and version 3.</figcaption></figure>
 
-<figure class="wide"><img src="/work/bss-assets/box-final.webp" alt="The final box dieline: the octopus seal on the front, a quick start on the back, and a barcode reading 39 cards, unlimited possibilities"/><figcaption>The final box, flattened.</figcaption></figure>
+<figure class="wide"><img src="/work/bss-assets/printed-deck.webp" alt="The printed deck: the navy box with the octopus seal on a shared drawing, with Draw, Using, and While cards reading a face, only dots and dashes, and having a conversation"/><figcaption>The printed deck.</figcaption></figure>
 
-<figure class="wide"><img src="/work/bss-assets/deck-cards.webp" alt="The card back with the octopus seal, then every card: 15 Draw, 13 Using, and 11 While"/><figcaption>The card back and all 39 cards: 15 Draw, 13 Using, 11 While.</figcaption></figure>
+<figure class="wide"><img src="/work/bss-assets/deck-directive.webp" alt="The card back, then one card from each stack: the place you're in, your non-dominant hand, having a conversation"/><figcaption>One card from each stack makes a directive: draw the place you’re in, using your non-dominant hand, while having a conversation.</figcaption></figure>
 
-<figure class="wide"><img src="/work/bss-assets/deck-extras.webp" alt="Four blank wildcards, front and back, and tabbed divider cards for the intro and each of the three stacks"/><figcaption>Four blank wildcards, and a tabbed divider for each stack so the deck sorts back into piles.</figcaption></figure>
+<figure class="wide"><img src="/work/bss-assets/deck-cards.webp" alt="The card back and every card: 15 Draw, 13 Using, and 11 While"/><figcaption>All 39 cards: 15 Draw, 13 Using, 11 While.</figcaption></figure>
+
+<figure class="pair natural">
+  <img src="/work/bss-assets/deck-extras.webp" alt="Tabbed divider cards for the intro, Draw, Using, and While, and a blank wildcard"/>
+  <img src="/work/bss-assets/box-final.webp" alt="The final box dieline: the octopus seal on the front, a quick start on the back, and a barcode reading 39 cards, unlimited possibilities"/>
+  <figcaption>Tabbed dividers so the deck sorts back into piles, one of the 4 blank wildcards, and the box, flattened.</figcaption>
+</figure>
 
 ## Getting people to start works, and coming back is untested
 
