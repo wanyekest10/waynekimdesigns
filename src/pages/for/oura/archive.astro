@@ -23,10 +23,9 @@ const GROUPS = [
     workRow('glorify-groups'), { ...workRow('facilitation'), line: 'Workshops for Glorify, the Busan Design Council, and Wipro.' }, workRow('raiseme-portal'), workRow('designit-futures'),
   ] },
 ];---
-<Base title="Archive, Wayne Kim" tailor={{ home: '/for/oura/', links: [{ href: '/for/oura/', label: 'Work' }, { href: '/for/oura/archive/', label: 'Archive' }, { href: '/resume-oura.pdf', label: 'Resume' }], back: { href: '/for/oura/', label: '← Selected projects' }, closing: { prompt: 'Hiring for Oura? Let’s talk.', cta: 'Email me →', href: 'mailto:waynekimdesigns@gmail.com' }, resume: '/resume-oura.pdf', picks: ['/work/toilet-paper-elevator/', '/work/room-tone/', '/work/living-fm/', '/work/linee/'] }} noindex>
+<Base title="Archive, Wayne Kim" tailor={{ home: '/for/oura/', links: [{ href: '/for/oura/#work', label: 'Work' }, { href: '/for/oura/archive/', label: 'Archive' }, { href: '/resume-oura.pdf', label: 'Resume' }], back: { href: '/for/oura/', label: '← Selected projects' }, closing: { prompt: 'Hiring for Oura? Let’s talk.', cta: 'Email me →', href: 'mailto:waynekimdesigns@gmail.com' }, resume: '/resume-oura.pdf', picks: ['/work/toilet-paper-elevator/', '/work/room-tone/', '/work/living-fm/', '/work/linee/'] }} noindex>
   <p class="back"><a href="/for/oura/">← Selected projects</a></p>
   <h1>Archive</h1>
-  <p class="lead">More projects, starting with the four I'd show a hardware interaction team.</p>
   {GROUPS.map((g) => (
   <section class="block">
     <h2 class="section-title">{g.title}</h2>
@@ -36,6 +35,6 @@ const GROUPS = [
 </Base>
 <style>
   .back { margin-bottom: 24px; }
-  .lead { margin-bottom: 48px; }
+  h1 { margin-bottom: 48px; }
   .block + .block { margin-top: 64px; }
 </style>
