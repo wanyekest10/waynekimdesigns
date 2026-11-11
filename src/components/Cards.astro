@@ -1,6 +1,7 @@
 ---
 // Case study cards: image (a short loop plays over it on hover, if there is one), then title and year, the one-liner, and the skill label.
-const { items } = Astro.props;
+// `lines` lets a tailored page swap a card's one-liner by project id, e.g. to lead with a result.
+const { items, lines = {} } = Astro.props;
 ---
 <div class="cards">
   {items.map((w) => (
@@ -13,7 +14,7 @@ const { items } = Astro.props;
         <span class="card-title">{(w.data as any).cardTitle ?? w.data.title}</span>
         <span class="card-year">{w.data.year}</span>
       </div>
-      <p class="card-line">{w.data.summary}</p>
+      <p class="card-line">{lines[w.id] ?? w.data.summary}</p>
       <p class="card-label">{w.data.label}</p>
     </a>
   ))}
