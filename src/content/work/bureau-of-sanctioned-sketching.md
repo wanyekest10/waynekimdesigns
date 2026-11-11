@@ -7,7 +7,7 @@ order: 5.5
 year: "2025"
 featured: true
 label: "Prototyping and play design"
-summary: "Cards that get adults drawing again."
+summary: "A card game that got adults drawing together again."
 tocLabels:
   "Three cards, one minute, one shared sheet of paper": "How it plays"
   "Most adults stop drawing between 9 and 13": "The problem"
@@ -27,7 +27,7 @@ jumps:
 short:
   - { lead: "The question.", text: "Most adults stop drawing somewhere between 9 and 13, when they decide they aren't allowed to be bad at it. Can permission be designed?" }
   - { lead: "What I built.", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software. The one that worked was a deck of cards." }
-  - { lead: "What happened.", text: "In two playtests with eight players, people forgot they were using cards and just drew and talked. One called it \"little fights like bumper cars.\"" }
+  - { lead: "What happened.", text: "In two playtests with eight players, once one person drew badly in front of the others, the whole table followed. People forgot the cards and kept drawing." }
 skills: [Game design, Prototyping, Playtesting, Design research]
 contributions:
   - { skill: "Game design", text: "Designed the three-stack mechanic and wrote the rules, cutting them from five panels to one page" }
