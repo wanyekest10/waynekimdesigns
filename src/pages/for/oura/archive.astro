@@ -1,0 +1,41 @@
+---
+// Archive for the Oura page (/for/oura/): the four selected case studies first, then more physical and wearable work,
+// play, and research. Larvae Lagoon is left off for this audience. Unlisted.
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import Rows from '../../../components/Rows.astro';
+import { experiments } from '../../../data/experiments';
+const all = await getCollection('work');
+const workRow = (id: string) => {
+  const w: any = all.find((x) => x.id === id)!;
+  return { name: w.data.cardTitle ?? w.data.title, sub: w.data.label, line: w.data.summary, year: String(w.data.year), href: `/${w.data.listIn === 'experiments' ? 'play' : 'work'}/${w.id}/`, image: w.data.card ?? w.data.hero, preview: w.data.cardVideo };
+};
+const playRow = (name: string) => experiments.find((e: any) => e.name === name)!;
+const GROUPS = [
+  { title: 'Selected for Oura', rows: ['toilet-paper-elevator', 'room-tone', 'living-fm', 'linee'].map(workRow) },
+  { title: 'More physical and wearable prototypes', rows: [
+    workRow('lume'), playRow('A Serious Fan'), playRow('Mirrored Canvas'),
+  ] },
+  { title: 'Play', rows: [
+    workRow('bureau-of-sanctioned-sketching'), playRow('Disco Never Died'), playRow('Dear Theo, Ever Yours'), playRow('Mosaic of Memories'), playRow('Tamer Kebap Eating Club'),
+  ] },
+  { title: 'User research and facilitation', rows: [
+    workRow('glorify-groups'), { ...workRow('facilitation'), line: 'Workshops for Glorify, the Busan Design Council, and Wipro.' }, workRow('raiseme-portal'), workRow('designit-futures'),
+  ] },
+];---
+<Base title="Archive, Wayne Kim" tailor={{ home: '/for/oura/', links: [{ href: '/for/oura/', label: 'Work' }, { href: '/for/oura/archive/', label: 'Archive' }, { href: '/resume-oura.pdf', label: 'Resume' }], back: { href: '/for/oura/', label: '← Selected projects' }, closing: { prompt: 'Hiring for Oura? Let’s talk.', cta: 'Email me →', href: 'mailto:waynekimdesigns@gmail.com' }, resume: '/resume-oura.pdf', picks: ['/work/toilet-paper-elevator/', '/work/room-tone/', '/work/living-fm/', '/work/linee/'] }} noindex>
+  <p class="back"><a href="/for/oura/">← Selected projects</a></p>
+  <h1>Archive</h1>
+  <p class="lead">More projects, starting with the four I'd show a hardware interaction team.</p>
+  {GROUPS.map((g) => (
+  <section class="block">
+    <h2 class="section-title">{g.title}</h2>
+    <Rows rows={g.rows} />
+  </section>
+  ))}
+</Base>
+<style>
+  .back { margin-bottom: 24px; }
+  .lead { margin-bottom: 48px; }
+  .block + .block { margin-top: 64px; }
+</style>
