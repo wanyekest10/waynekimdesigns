@@ -27,6 +27,7 @@ jumps:
 short:
   - { lead: "The question.", text: "Most adults stop drawing somewhere between 9 and 13, when they decide they aren't allowed to be bad at it. Can permission be designed?" }
   - { lead: "What I built.", text: "Six prototypes in eight weeks, from a co-op rainstick game to hand-tracking software. The one that worked was a deck of cards." }
+  - { lead: "What happened.", text: "In two playtests with eight players, people forgot they were using cards and just drew and talked. One called it \"little fights like bumper cars.\"" }
 skills: [Game design, Prototyping, Playtesting, Design research]
 contributions:
   - { skill: "Game design", text: "Designed the three-stack mechanic and wrote the rules, cutting them from five panels to one page" }
