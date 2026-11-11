@@ -20,13 +20,13 @@ short:
   - { lead: "What we built.", text: "Linee, a 24-hour timeline of wooden blocks. Press a block to mark an event. A motorized needle crosses the day and gives each marked hour a soft knock as it passes." }
 skills: [Physical computing, Prototyping, Interaction design]
 contributions:
-  - { skill: "Physical computing", text: "Wrote the code for the stepper motor and LEDs" }
+  - { skill: "Physical computing", text: "Wrote the stepper motor code: time sync, finding the current hour, and motion tuning" }
   - { skill: "Prototyping", text: "Helped prototype the blocks" }
   - { skill: "Interaction design", text: "Concepted the magnetic tiles" }
   - { skill: "With the team", text: "Concept and the laser-cut build, with Alec Davis and Chokchey Cappai", shared: true }
 facts:
   - { label: "School", value: "Copenhagen Institute of Interaction Design (CIID)" }
-  - { label: "Role", value: "Stepper motor and LED code · Block prototyping · Magnetic tiles concept" }
+  - { label: "Role", value: "Stepper motor code · Block prototyping · Magnetic tiles concept" }
   - { label: "Duration", value: "2 weeks, 2025" }
   - { label: "Team", value: "Alec Davis · Chokchey Cappai" }
   - { label: "Faculty", value: "Massimo Banzi · Pierluigi Dalla Rosa · Jose Chavarria" }
@@ -66,14 +66,19 @@ Semi-transparent numerals keep the hours readable without making the wall shout.
 
 ## Making it move
 
-I wrote the code for the stepper motor and LEDs. A WiFi-connected Arduino moves the needle 2,200 steps across 24 hours: too slow to watch, but always somewhere new when you look up.
+I wrote the stepper motor code. A WiFi-connected Arduino moves the needle 2,200 steps across 24 hours: too slow to watch, but always somewhere new when you look up.
+
+- **It finds its place on its own.** On power-up, the Arduino gets the time over WiFi and drives the needle to the current hour, so Linee is right after any restart with no setup.
+- **Tuned for a wooden build.** I cut the motor's top speed and acceleration well below the first version's, because fast moves made the laser-cut track vibrate.
+- **Soft limits at both ends.** The needle reverses in code before it reaches the frame.
+- **A demo mode for the exhibition.** A button switches the needle to sweep back and forth, so visitors could see it move instead of waiting an hour.
 
 <div class="sys" aria-label="Linee system">
-  <div class="col"><span class="k">Inputs</span><span class="part">Time over WiFi<small>The Arduino keeps the clock.</small></span></div>
+  <div class="col"><span class="k">Inputs</span><span class="part">Time over WiFi<small>The Arduino keeps the clock.</small></span><span class="part">Demo button<small>Switches to a back-and-forth sweep.</small></span></div>
   <span class="to" aria-hidden="true">→</span>
   <div class="col"><span class="k">Brain</span><span class="part focal">Arduino<small>Converts the hour into steps.</small></span></div>
   <span class="to" aria-hidden="true">→</span>
-  <div class="col"><span class="k">Outputs</span><span class="part">Stepper motor and belt<small>Carry the needle.</small></span><span class="part">LED strip<small>Glows above the blocks.</small></span></div>
+  <div class="col"><span class="k">Outputs</span><span class="part">Stepper motor and belt<small>Carry the needle.</small></span></div>
 </div>
 
 There are no sensors on the blocks. A pressed block sticks out, so the needle physically knocks it as it passes.
@@ -83,7 +88,7 @@ There are no sensors on the blocks. A pressed block sticks out, so the needle ph
   <img src="/work/linee-assets/mechanism.webp" alt="A teammate holding up the assembled track, showing the Arduino, belt, and motor underneath"/>
 </figure>
 
-<figure class="frame"><video src="/work/linee-assets/coding.mp4" poster="/work/linee-assets/coding-poster.jpg" autoplay muted loop playsinline></video><figcaption>Debugging the LED lighting while Alec and Chey assemble.</figcaption></figure>
+<figure class="frame"><video src="/work/linee-assets/coding.mp4" poster="/work/linee-assets/coding-poster.jpg" autoplay muted loop playsinline></video><figcaption>Coding while Alec and Chey assemble.</figcaption></figure>
 
 ## Iterating the block
 
