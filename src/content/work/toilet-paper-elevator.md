@@ -201,6 +201,11 @@ I designed the pod in Fusion and printed everything in gray. The LiPo sits trapp
   <figcaption>The pod shell in Fusion, with a hex pocket that traps each nut.</figcaption>
 </figure>
 
+<figure class="textw">
+  <img src="/work/tpe-assets/standoff-test.webp" alt="The test print in Fusion, see-through: a block with six hex pockets in a row, sized 4.0 to 4.9 mm and numbered with engraved dots, plus a strip with two screw holes"/>
+  <figcaption>A 15-minute test print first: six hex pockets from 4.0 to 4.9 mm. The brass standoff press-fit snugly in the 4.9 mm pocket, so that size went into the shell.</figcaption>
+</figure>
+
 <figure class="pair square">
   <img src="/work/tpe-assets/pod-side-view.webp" alt="The pod from the side, held in a hand: the back plate, the LiPo battery, the printed carrier, and the Arduino stacked between the shell layers"/>
   <img src="/work/tpe-assets/pod-open.webp" alt="The pod opened up: the e-paper screen tilted back, the Arduino on a breadboard on its printed carrier, the shell behind, and the magnet sleeve beside it"/>
