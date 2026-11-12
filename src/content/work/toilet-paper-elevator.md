@@ -201,8 +201,9 @@ I designed the pod in Fusion and printed everything in gray. The LiPo sits trapp
   <figcaption>The pod shell in Fusion, with a hex pocket that traps each nut.</figcaption>
 </figure>
 
-<figure class="textw">
-  <img src="/work/tpe-assets/standoff-test.webp" alt="The test print in Fusion, see-through: a block with six hex pockets in a row, sized 4.0 to 4.9 mm and numbered with engraved dots, plus a strip with two screw holes"/>
+<figure class="pair">
+  <img src="/work/tpe-assets/standoff-test.webp" alt="The test print in Fusion, see-through: a block with six hex pockets sized 4.0 to 4.9 mm and numbered with engraved dots, plus a strip with two screw holes"/>
+  <img src="/work/tpe-assets/standoff-test-photo.webp" alt="The printed test pieces: the brass standoff pressed into the sixth hex pocket, and a screw through the strip"/>
   <figcaption>A 15-minute test print first: six hex pockets from 4.0 to 4.9 mm. The brass standoff press-fit snugly in the 4.9 mm pocket, so that size went into the shell.</figcaption>
 </figure>
 
