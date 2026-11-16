@@ -53,23 +53,12 @@ I needed a real place to work after deciding to build out a breakfast nook and n
 
 ## The model
 
-One master part holds the wood. Save Bodies splits it into parts and an assembly, and the hardware goes in with mates.
-
-<div class="flow" role="list" aria-label="SolidWorks workflow">
-  <div class="step"><span class="n">01</span><b>Master part</b><small>Top, aprons, and legs as bodies.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step"><span class="n">02</span><b>Assembly</b><small>Save Bodies into linked parts.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step"><span class="n">03</span><b>Hardware</b><small>The real brace, placed with mates.</small></div>
-  <span class="to" aria-hidden="true">→</span>
-  <div class="step focal"><span class="n">04</span><b>The wall</b><small>Holes and braces patterned at the studs.</small></div>
-</div>
+<figure class="wide"><a href="/work/cloffice-desk-assets/drawing-views.webp"><img src="/work/cloffice-desk-assets/drawing-views.webp" alt="Drawing sheet CD-001: top, front, and right views with dimensions, an isometric view, notes, and a title block"/></a><figcaption>Drawing from the SolidWorks model.</figcaption></figure>
 
 <figure class="frame"><img src="/work/cloffice-desk-assets/render-brace.webp" alt="Close-up of two corner braces where a leg meets the back apron and the underside of the top"/><figcaption>The Everbilt 1½ inch brace, modeled from its package specs with countersunk holes.</figcaption></figure>
 
 <figure class="wide"><img src="/work/cloffice-desk-assets/render-underside.webp" alt="View from directly below the desk: braces along the back and front aprons and at each leg, plus the cable hole"/><figcaption>From below. Braces patterned along the back apron, mirrored to the front, and mirrored across the legs.</figcaption></figure>
 
-<figure class="wide"><a href="/work/cloffice-desk-assets/drawing-views.webp"><img src="/work/cloffice-desk-assets/drawing-views.webp" alt="Drawing sheet CD-001: top, front, and right views with dimensions, an isometric view, notes, and a title block"/></a><figcaption>Drawing from the SolidWorks model.</figcaption></figure>
 
 
 <div id="the-build" style="scroll-margin-top:88px"></div>
