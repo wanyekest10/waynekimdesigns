@@ -37,12 +37,11 @@ facts:
 
 I needed a real place to work, and my den closet was 67 inches wide and empty. I was also learning SolidWorks at LACI, so the desk became my practice project.
 
-<figure class="frame"><img src="/work/cloffice-desk-assets/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/><figcaption>Before.</figcaption></figure>
-
-<figure class="pair natural">
+<figure class="trio row">
+  <img src="/work/cloffice-desk-assets/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/>
   <img src="/work/cloffice-desk-assets/closet-office-final.webp" alt="The finished closet office: birch desk with a laptop, monitor showing the SolidWorks model of the desk, and wire drawers underneath"/>
   <img src="/work/cloffice-desk-assets/model-on-desk.webp" alt="Close-up of the monitor on the finished desk, showing the SolidWorks assembly of the same desk"/>
-  <figcaption>A week later, with the desk's own model on screen.</figcaption>
+  <figcaption>Before, and a week later with the desk's own model on screen.</figcaption>
 </figure>
 
 <div class="cols3" style="grid-template-columns:1fr 1fr">

@@ -78,6 +78,8 @@ article figcaption { font: var(--small); color: var(--gray); }
 .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 32px 0; }
 .trio img { margin: 0 0 12px; aspect-ratio: 7/8; object-fit: contain; background: var(--panel); padding: 16px; }
 .trio.principles img { aspect-ratio: 874/773; object-fit: cover; padding: 0; }
+.trio.row { gap: 16px; }
+.trio.row img { aspect-ratio: 4/5; object-fit: cover; padding: 0; background: none; margin: 0; }
 .trio p { font: var(--small); color: var(--gray); }
 .trio figcaption, .pair figcaption { grid-column: 1 / -1; }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
