@@ -36,7 +36,11 @@ facts:
 
 I'm a product design fellow at LACI, learning SolidWorks ahead of the certification exam in December. At the same time, I needed a real place to work: my den closet was 67 inches wide and empty. So I made the desk my SolidWorks project. Classes give you practice parts. This gave me a real object with real constraints, and I had to live with the result.
 
-<figure class="wide"><img src="/preview/cloffice-desk/hero.webp" alt="The finished desk in the closet in use, with a monitor, desk chair, and wire drawers underneath"/><figcaption>The closet office, a week later.</figcaption></figure>
+<figure class="pair natural">
+  <img src="/preview/cloffice-desk/closet-office.webp" alt="The finished closet office: birch desk with a laptop, monitor showing the SolidWorks model of the desk, and wire drawers underneath"/>
+  <img src="/preview/cloffice-desk/model-on-desk.webp" alt="Close-up of the monitor on the finished desk, showing the SolidWorks assembly of the same desk"/>
+  <figcaption>The closet office a week later, with the desk's own model on screen.</figcaption>
+</figure>
 
 <figure class="pair natural">
   <img src="/preview/cloffice-desk/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/>
