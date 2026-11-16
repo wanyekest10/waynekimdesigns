@@ -1,8 +1,8 @@
 ---
 title: Cloffice Desk
 slug: cloffice-desk
-headline: "A built-in desk for a 67 inch closet, cut from one sheet of birch plywood, then modeled as a SolidWorks assembly."
-context: "Personal project, 2026"
+headline: "My first solo woodworking project: a built-in desk for a 67 inch closet, cut from one sheet of birch plywood, then modeled in SolidWorks alongside my training at LACI."
+context: "Personal project, alongside SolidWorks training at LACI, 2026"
 year: "2026"
 label: "Fabrication and CAD"
 summary: "One sheet of plywood, seven cuts, a closet turned into an office."
@@ -12,7 +12,7 @@ jumps:
   - { label: "Skip to the cut plan", to: "one-sheet-seven-cuts" }
   - { label: "Skip to SolidWorks", to: "rebuilding-it-in-solidworks" }
 short:
-  - { lead: "The question.", text: "Could I turn an empty closet into a solid, level desk on my first woodworking project, with no saw of my own and studs on only one wall?" }
+  - { lead: "The question.", text: "Could I turn an empty closet into a solid, level desk on my first solo woodworking project, with no saw of my own and studs on only one wall? And could a real object give my SolidWorks practice something to work on?" }
   - { lead: "What I built.", text: "A panel-leg desk cut from a single 4x8 sheet of birch plywood in seven store cuts. Then I rebuilt it in SolidWorks as a multibody part, split it into an assembly, and documented it with materials and drawings." }
 skills: [Fabrication, CAD, Planning]
 contributions:
@@ -20,7 +20,7 @@ contributions:
   - { skill: "CAD", text: "Modeled the desk in SolidWorks as a multibody part, mirrored about a mid plane, saved the bodies to an assembly, and assigned materials" }
   - { skill: "Planning", text: "Designed around the store's cut rules, the closet's studs, and a 31 inch working height" }
 facts:
-  - { label: "Project", value: "Personal project" }
+  - { label: "Project", value: "Personal project · Side project to SolidWorks training at LACI" }
   - { label: "Role", value: "Designer and builder, solo" }
   - { label: "Duration", value: "About a week of evenings, Nov 2026" }
   - { label: "Materials", value: "3/4\" birch plywood · 1x4 and 1x3 pine · Steel corner braces · Wipe-on poly" }
@@ -31,7 +31,9 @@ facts:
 
 ## An empty closet and a first build
 
-My den closet was 67 inches wide and full of nothing useful. I wanted a desk in it with room for a tinker bench, and I wanted to build it myself. It was my first real woodworking project, I didn't own a saw, and the side walls had no studs where a desk would need them.
+My den closet was 67 inches wide and full of nothing useful. I wanted a desk in it with room for a tinker bench, and I wanted to build it myself. It was my first solo woodworking project, I didn't own a saw, and the side walls had no studs where a desk would need them.
+
+I was also learning SolidWorks at LACI at the same time. Classes give you practice parts. This gave me a real object, with real constraints, to model alongside them.
 
 <figure class="pair natural">
   <img src="/preview/cloffice-desk/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/>
@@ -131,7 +133,7 @@ One leg came out about 1/16 inch taller than the other. Rather than sanding plyw
 
 ## Rebuilding it in SolidWorks
 
-After the build I modeled the desk in SolidWorks from my as-built dimensions, to practice the workflow I'm learning at LACI and to document the desk the way a fabricator would want it.
+I built this next to my SolidWorks training at LACI, and the two fed each other. The build taught me what the dimensions actually meant: ¾ inch plywood is really 23/32, store cuts drift by ⅛, and a leg can come out a hair tall. After the build, I modeled the desk from my as-built measurements, using the workflow from class on something I'd built with my own hands, and documented it the way a fabricator would want it.
 
 <div class="flow" role="list" aria-label="SolidWorks workflow">
   <div class="step"><span class="n">01</span><b>Multibody part</b><small>Top, aprons, and one leg as separate bodies, sketched from the underside plane.</small></div>
