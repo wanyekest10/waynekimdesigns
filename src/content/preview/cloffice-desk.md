@@ -139,16 +139,16 @@ The order mattered more than any single step. Glue won't stick to polyurethane, 
 
 <figure class="pair natural">
   <img src="/preview/cloffice-desk/glue-up.webp" alt="The 1x3 front apron glued and clamped along the front edge of the face-down plywood top"/>
-  <img src="/preview/cloffice-desk/level.webp" alt="The installed desk with a 4 foot level on the top, bubble centered"/>
-  <figcaption>Gluing the front apron, and the level check after install.</figcaption>
+  <img src="/preview/cloffice-desk/bubble-front.webp" alt="Close-up of the level's bubble centered on the desktop, with the plywood layers and pine apron below"/>
+  <figcaption>Gluing the front apron, and the level check after install: centered side to side and front to back.</figcaption>
 </figure>
 
 ## The model and the real thing
 
 <figure class="pair natural">
   <img src="/preview/cloffice-desk/render-hero.webp" alt="Render of the SolidWorks model of the desk"/>
-  <img src="/preview/cloffice-desk/hero.webp" alt="The finished desk in the closet with a monitor and chair"/>
-  <figcaption>The SolidWorks model and the desk in use.</figcaption>
+  <img src="/preview/cloffice-desk/installed.webp" alt="The installed desk in the closet with a 4 foot level on top"/>
+  <figcaption>The SolidWorks model and the installed desk.</figcaption>
 </figure>
 
 Modeling alongside the build taught me what the numbers really mean: ¾ inch plywood is 23/32, store cuts drift by ⅛, and a leg can come out a hair tall. Next is a monitor riser from the offcuts, CAD first this time: model it, check it against the monitor stand, then build it.
