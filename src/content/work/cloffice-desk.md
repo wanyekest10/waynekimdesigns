@@ -4,13 +4,15 @@ slug: cloffice-desk
 headline: "A built-in desk for my closet office, modeled in SolidWorks and built in a week."
 context: "Personal project, LACI Product Design Fellowship, 2026"
 year: "2026"
+order: 6
+featured: true
 label: "CAD and fabrication"
 summary: "A closet office, modeled in SolidWorks and built in a week."
-hero: "/preview/cloffice-desk/card.webp"
-card: "/preview/cloffice-desk/card.webp"
-cardVideo: "/preview/cloffice-desk/card-loop.mp4"
-heroVideo: "/preview/cloffice-desk/build-loop.mp4"
-heroPoster: "/preview/cloffice-desk/build-loop-poster.jpg"
+hero: "/work/cloffice-desk-assets/card.webp"
+card: "/work/cloffice-desk-assets/card.webp"
+cardVideo: "/work/cloffice-desk-assets/card-loop.mp4"
+heroVideo: "/work/cloffice-desk-assets/build-loop.mp4"
+heroPoster: "/work/cloffice-desk-assets/build-loop-poster.jpg"
 heroAlt: "The SolidWorks assembly of the desk pulling apart into its top, aprons, legs, and 16 corner braces, then coming back together"
 jumps:
   - { label: "Skip to SolidWorks", to: "the-model" }
@@ -31,17 +33,15 @@ facts:
   - { label: "Materials", value: "3/4\" birch plywood · 1x4 and 1x3 pine · 16 stainless corner braces" }
 ---
 
-<aside style="border:1px dashed #002BBA;border-radius:6px;padding:12px 16px;margin:0 0 32px;font-size:14px;color:#6E6E6B">Draft for review. Not linked anywhere.</aside>
-
 ## The closet
 
 I needed a real place to work, and my den closet was 67 inches wide and empty. I was also learning SolidWorks at LACI, so the desk became my practice project.
 
-<figure class="frame"><img src="/preview/cloffice-desk/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/><figcaption>Before.</figcaption></figure>
+<figure class="frame"><img src="/work/cloffice-desk-assets/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/><figcaption>Before.</figcaption></figure>
 
 <figure class="pair natural">
-  <img src="/preview/cloffice-desk/closet-office-final.webp" alt="The finished closet office: birch desk with a laptop, monitor showing the SolidWorks model of the desk, and wire drawers underneath"/>
-  <img src="/preview/cloffice-desk/model-on-desk.webp" alt="Close-up of the monitor on the finished desk, showing the SolidWorks assembly of the same desk"/>
+  <img src="/work/cloffice-desk-assets/closet-office-final.webp" alt="The finished closet office: birch desk with a laptop, monitor showing the SolidWorks model of the desk, and wire drawers underneath"/>
+  <img src="/work/cloffice-desk-assets/model-on-desk.webp" alt="Close-up of the monitor on the finished desk, showing the SolidWorks assembly of the same desk"/>
   <figcaption>A week later, with the desk's own model on screen.</figcaption>
 </figure>
 
@@ -66,13 +66,11 @@ One master part holds the wood. Save Bodies splits it into parts and an assembly
   <div class="step focal"><span class="n">04</span><b>The wall</b><small>Holes and braces patterned at the studs.</small></div>
 </div>
 
-<figure class="frame"><img src="/preview/cloffice-desk/render-brace.webp" alt="Close-up of two corner braces where a leg meets the back apron and the underside of the top"/><figcaption>The Everbilt 1½ inch brace, modeled from its package specs with countersunk holes.</figcaption></figure>
+<figure class="frame"><img src="/work/cloffice-desk-assets/render-brace.webp" alt="Close-up of two corner braces where a leg meets the back apron and the underside of the top"/><figcaption>The Everbilt 1½ inch brace, modeled from its package specs with countersunk holes.</figcaption></figure>
 
-<figure class="wide"><img src="/preview/cloffice-desk/render-underside.webp" alt="View from directly below the desk: braces along the back and front aprons and at each leg, plus the cable hole"/><figcaption>From below. Braces patterned along the back apron, mirrored to the front, and mirrored across the legs.</figcaption></figure>
+<figure class="wide"><img src="/work/cloffice-desk-assets/render-underside.webp" alt="View from directly below the desk: braces along the back and front aprons and at each leg, plus the cable hole"/><figcaption>From below. Braces patterned along the back apron, mirrored to the front, and mirrored across the legs.</figcaption></figure>
 
-<aside style="border:1px dashed #002BBA;border-radius:6px;padding:12px 16px;margin:0 0 32px;font-size:14px;color:#6E6E6B">Slot for Wayne's SolidWorks screenshots: feature tree, assembly with Mates open, brace part.</aside>
-
-<figure class="wide"><a href="/preview/cloffice-desk/drawing-views.webp"><img src="/preview/cloffice-desk/drawing-views.webp" alt="Drawing sheet CD-001: top, front, and right views with dimensions, an isometric view, notes, and a title block"/></a><figcaption>Drawing from the SolidWorks model.</figcaption></figure>
+<figure class="wide"><a href="/work/cloffice-desk-assets/drawing-views.webp"><img src="/work/cloffice-desk-assets/drawing-views.webp" alt="Drawing sheet CD-001: top, front, and right views with dimensions, an isometric view, notes, and a title block"/></a><figcaption>Drawing from the SolidWorks model.</figcaption></figure>
 
 
 <div id="the-build" style="scroll-margin-top:88px"></div>
@@ -120,24 +118,24 @@ The top and legs came from one sheet of birch plywood, and the aprons from two 8
 </figure>
 
 <figure class="pair natural">
-  <img src="/preview/cloffice-desk/panel-saw.webp" alt="A Home Depot associate ripping the birch plywood sheet on the vertical panel saw"/>
-  <img src="/preview/cloffice-desk/hatchback.webp" alt="The cut plywood pieces and pine boards loaded into the back of a hatchback"/>
+  <img src="/work/cloffice-desk-assets/panel-saw.webp" alt="A Home Depot associate ripping the birch plywood sheet on the vertical panel saw"/>
+  <img src="/work/cloffice-desk-assets/hatchback.webp" alt="The cut plywood pieces and pine boards loaded into the back of a hatchback"/>
   <figcaption>At the panel saw, then home in the hatchback.</figcaption>
 </figure>
 
 Glue the front apron, finish the wood, screw the back apron into the studs, stand the legs, drop in the top, brace it.
 
 <figure class="pair natural">
-  <img src="/preview/cloffice-desk/glue-up.webp" alt="The 1x3 front apron glued and clamped along the front edge of the face-down plywood top"/>
-  <img src="/preview/cloffice-desk/bubble-front.webp" alt="Close-up of the level's bubble centered on the desktop"/>
+  <img src="/work/cloffice-desk-assets/glue-up.webp" alt="The 1x3 front apron glued and clamped along the front edge of the face-down plywood top"/>
+  <img src="/work/cloffice-desk-assets/bubble-front.webp" alt="Close-up of the level's bubble centered on the desktop"/>
   <figcaption>Gluing the front apron, and level after install.</figcaption>
 </figure>
 
 ## The model and the real thing
 
 <figure class="pair natural">
-  <video src="/preview/cloffice-desk/card-loop.mp4" poster="/preview/cloffice-desk/card.webp" autoplay muted loop playsinline aria-label="The desk model pulling apart and going back together"></video>
-  <img src="/preview/cloffice-desk/installed.webp" alt="The installed desk in the closet with a 4 foot level on top"/>
+  <video src="/work/cloffice-desk-assets/card-loop.mp4" poster="/work/cloffice-desk-assets/card.webp" autoplay muted loop playsinline aria-label="The desk model pulling apart and going back together"></video>
+  <img src="/work/cloffice-desk-assets/installed.webp" alt="The installed desk in the closet with a 4 foot level on top"/>
   <figcaption>The SolidWorks model and the installed desk.</figcaption>
 </figure>
 
