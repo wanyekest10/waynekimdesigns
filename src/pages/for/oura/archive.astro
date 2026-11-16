@@ -1,5 +1,5 @@
 ---
-// Archive for the Oura page (/for/oura/): the four selected case studies first, then more physical and wearable work,
+// Archive for the Oura page (/for/oura/): the six selected case studies first, then more physical and wearable work,
 // play, and research. Larvae Lagoon is left off for this audience. Unlisted.
 import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
@@ -12,18 +12,18 @@ const workRow = (id: string) => {
 };
 const playRow = (name: string) => experiments.find((e: any) => e.name === name)!;
 const GROUPS = [
-  { title: 'Selected for Oura', rows: ['toilet-paper-elevator', 'room-tone', 'living-fm', 'linee'].map(workRow) },
+  { title: 'Selected for Oura', rows: ['toilet-paper-elevator', 'room-tone', 'living-fm', 'linee', 'cloffice-desk', 'glorify-groups'].map(workRow) },
   { title: 'More physical and wearable prototypes', rows: [
     workRow('lume'), playRow('A Serious Fan'), playRow('Mirrored Canvas'),
   ] },
   { title: 'Play', rows: [
-    workRow('bureau-of-sanctioned-sketching'), playRow('Disco Never Died'), playRow('Dear Theo, Ever Yours'), playRow('Mosaic of Memories'), playRow('Tamer Kebap Eating Club'),
+    playRow('Disco Never Died'), playRow('Dear Theo, Ever Yours'), playRow('Mosaic of Memories'), playRow('Tamer Kebap Eating Club'),
   ] },
   { title: 'User research and facilitation', rows: [
-    workRow('glorify-groups'), { ...workRow('facilitation'), line: 'Workshops for Glorify, the Busan Design Council, and Wipro.' }, workRow('raiseme-portal'), workRow('designit-futures'),
+    { ...workRow('facilitation'), line: 'Workshops for Glorify, the Busan Design Council, and Wipro.' }, workRow('raiseme-portal'), workRow('designit-futures'),
   ] },
 ];---
-<Base title="Archive, Wayne Kim" tailor={{ home: '/for/oura/', links: [{ href: '/for/oura/#work', label: 'Work' }, { href: '/for/oura/archive/', label: 'Archive' }, { href: '/resume-oura.pdf', label: 'Resume' }], back: { href: '/for/oura/', label: '← Selected projects' }, closing: { prompt: 'Hiring for Oura? Let’s talk.', cta: 'Email me →', href: 'mailto:waynekimdesigns@gmail.com' }, resume: '/resume-oura.pdf', picks: ['/work/toilet-paper-elevator/', '/work/room-tone/', '/work/living-fm/', '/work/linee/'] }} noindex>
+<Base title="Archive, Wayne Kim" tailor={{ home: '/for/oura/', links: [{ href: '/for/oura/#work', label: 'Work' }, { href: '/for/oura/archive/', label: 'Archive' }, { href: '/resume-oura.pdf', label: 'Resume' }], back: { href: '/for/oura/', label: '← Selected projects' }, closing: { prompt: 'Hiring for Oura? Let’s talk.', cta: 'Email me →', href: 'mailto:waynekimdesigns@gmail.com' }, resume: '/resume-oura.pdf', picks: ['/work/toilet-paper-elevator/', '/work/room-tone/', '/work/living-fm/', '/work/linee/', '/work/cloffice-desk/', '/work/glorify-groups/'] }} noindex>
   <p class="back"><a href="/for/oura/">← Selected projects</a></p>
   <h1>Archive</h1>
   <p class="lead">I work across physical computing, hardware, AI, play, and research.</p>

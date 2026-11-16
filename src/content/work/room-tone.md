@@ -3,7 +3,7 @@ title: room_tone
 slug: room-tone
 headline: "A room that notices when I've worked too long, and suggests a break with light, motion, and music."
 context: "Personal project, 2026"
-order: 3
+order: 2
 year: "2026"
 featured: true
 label: "Physical computing and prototyping"

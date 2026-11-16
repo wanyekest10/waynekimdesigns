@@ -4,7 +4,7 @@ slug: cloffice-desk
 headline: "A built-in desk for my cloffice, aka closet office, modeled in SolidWorks and built in a week."
 context: "Personal project, LACI Product Design Fellowship, 2026"
 year: "2026"
-order: 6
+order: 5
 featured: true
 label: "CAD and fabrication"
 summary: "A closet office, modeled in SolidWorks and built in a week."

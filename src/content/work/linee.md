@@ -3,7 +3,7 @@ title: Linee
 slug: linee
 headline: "A wooden timekeeper for shared homes that gives each planned hour a soft knock."
 context: "CIID, 2025"
-order: 5
+order: 4
 year: "2025"
 featured: true
 label: "Physical computing and fabrication"

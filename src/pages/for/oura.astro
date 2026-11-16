@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import Cards from '../../components/Cards.astro';
 import CopyEmail from '../../components/CopyEmail.astro';
 // Unlisted homepage for the Oura Hardware Interaction Designer application (Nov 2026). Not in search, not linked from the site.
-const pick = ['toilet-paper-elevator', 'room-tone', 'living-fm', 'linee'];
+const pick = ['toilet-paper-elevator', 'room-tone', 'living-fm', 'linee', 'cloffice-desk', 'glorify-groups'];
 const all = await getCollection('work');
 const work = pick.map((id) => all.find((w) => w.id === id)!);
 // Card one-liners say what each thing is or what changed, in plain words.
@@ -13,6 +13,8 @@ const lines = {
   'room-tone': 'The first version felt like an alarm. Now it asks.',
   'living-fm': 'A small AI speaker that knows when to stay quiet.',
   'linee': 'A soft knock for each planned hour, not an alarm.',
+  'cloffice-desk': 'A closet desk, modeled in SolidWorks and built in a week.',
+  'glorify-groups': '82 people tested it in their real groups. Then it shipped.',
 };
 
 const travel = [
@@ -37,7 +39,7 @@ const years = [
   { when: "'10–'14", what: 'B.A. Sociology, Colby College', note: 'Coursework in Philosophy and STS (Science, Technology, and Society).' },
 ];
 ---
-<Base title="Wayne Kim, Interaction designer, physical and digital" tailor={{ home: '/for/oura/', links: [{ href: '/for/oura/#work', label: 'Work' }, { href: '/for/oura/archive/', label: 'Archive' }, { href: '/resume-oura.pdf', label: 'Resume' }], back: { href: '/for/oura/', label: '← Selected projects' }, closing: { prompt: 'Hiring for Oura? Let’s talk.', cta: 'Email me →', href: 'mailto:waynekimdesigns@gmail.com' }, resume: '/resume-oura.pdf', picks: ['/work/toilet-paper-elevator/', '/work/room-tone/', '/work/living-fm/', '/work/linee/'] }} noindex>
+<Base title="Wayne Kim, Interaction designer, physical and digital" tailor={{ home: '/for/oura/', links: [{ href: '/for/oura/#work', label: 'Work' }, { href: '/for/oura/archive/', label: 'Archive' }, { href: '/resume-oura.pdf', label: 'Resume' }], back: { href: '/for/oura/', label: '← Selected projects' }, closing: { prompt: 'Hiring for Oura? Let’s talk.', cta: 'Email me →', href: 'mailto:waynekimdesigns@gmail.com' }, resume: '/resume-oura.pdf', picks: ['/work/toilet-paper-elevator/', '/work/room-tone/', '/work/living-fm/', '/work/linee/', '/work/cloffice-desk/', '/work/glorify-groups/'] }} noindex>
   <header class="intro">
     <h1 class="brush" aria-label="Interaction designer, physical and digital">Interaction designer, physical and digital</h1>
     <p class="method">I design how objects signal, with light, motion, and sound.<br class="wide-br"> Then I build them and test them with people.</p>

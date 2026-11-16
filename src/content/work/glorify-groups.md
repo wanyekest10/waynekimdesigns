@@ -13,9 +13,9 @@ team:
 methods: [Prototype diary study, Interviews]
 tags: [UX research, Strategy, Community]
 reading_time: About 2 minutes
-order: 6.1
+order: 6
 year: "2023"
-featured: false
+featured: true
 cardFit: contain
 label: "Research through prototyping"
 summary: "Small faith groups, 1.8M+ users by 2025."

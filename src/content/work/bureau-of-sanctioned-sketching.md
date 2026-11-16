@@ -5,7 +5,7 @@ headline: "A card game that gives adults official permission to draw again."
 context: "CIID, 2025"
 order: 5.5
 year: "2025"
-featured: true
+featured: false
 label: "Prototyping and play design"
 summary: "A card game that got adults drawing together again."
 tocLabels:
