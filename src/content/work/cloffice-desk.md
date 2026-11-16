@@ -122,7 +122,7 @@ The top and legs came from one sheet of birch plywood, and the aprons from two 8
   <figcaption>At the panel saw, then home in the hatchback.</figcaption>
 </figure>
 
-Glue the front apron, finish the wood, screw the back apron into the studs, stand the legs, drop in the top, brace it.
+Glue the front apron, sand a lot, brush on coats of polyurethane, screw the back apron into the studs, stand the legs, drop in the top, brace it.
 
 <figure class="pair natural">
   <img src="/work/cloffice-desk-assets/glue-up.webp" alt="The 1x3 front apron glued and clamped along the front edge of the face-down plywood top"/>
