@@ -1,7 +1,7 @@
 ---
 title: Cloffice Desk
 slug: cloffice-desk
-headline: "A built-in desk for my closet office, modeled in SolidWorks and built in a week."
+headline: "A built-in desk for my cloffice, aka closet office, modeled in SolidWorks and built in a week."
 context: "Personal project, LACI Product Design Fellowship, 2026"
 year: "2026"
 order: 6
@@ -10,7 +10,7 @@ label: "CAD and fabrication"
 summary: "A closet office, modeled in SolidWorks and built in a week."
 hero: "/work/cloffice-desk-assets/card.webp"
 card: "/work/cloffice-desk-assets/card.webp"
-cardVideo: "/work/cloffice-desk-assets/card-loop.mp4"
+cardVideo: "/work/cloffice-desk-assets/card-loop-2.mp4"
 heroVideo: "/work/cloffice-desk-assets/build-loop.mp4"
 heroPoster: "/work/cloffice-desk-assets/build-loop-poster.jpg"
 heroAlt: "The SolidWorks assembly of the desk pulling apart into its top, aprons, legs, and 16 corner braces, then coming back together"
@@ -35,7 +35,7 @@ facts:
 
 ## The closet
 
-I needed a real place to work, and my den closet was 67 inches wide and empty. I was also learning SolidWorks at LACI, so the desk became my practice project.
+I needed a real place to work after deciding to build out a breakfast nook and not wanting my work station to be in my bedroom. My den closet was 67 inches wide and empty. I'm also learning SolidWorks at LACI as a Product Design Fellow and halfway through the program, so the desk became my practice project.
 
 <figure class="trio row">
   <img src="/work/cloffice-desk-assets/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/>
@@ -133,7 +133,7 @@ Glue the front apron, finish the wood, screw the back apron into the studs, stan
 ## The model and the real thing
 
 <figure class="pair natural">
-  <video src="/work/cloffice-desk-assets/card-loop.mp4" poster="/work/cloffice-desk-assets/card.webp" autoplay muted loop playsinline aria-label="The desk model pulling apart and going back together"></video>
+  <video src="/work/cloffice-desk-assets/card-loop-2.mp4" poster="/work/cloffice-desk-assets/card.webp" autoplay muted loop playsinline aria-label="The desk model pulling apart and going back together"></video>
   <img src="/work/cloffice-desk-assets/installed.webp" alt="The installed desk in the closet with a 4 foot level on top"/>
   <figcaption>The SolidWorks model and the installed desk.</figcaption>
 </figure>
