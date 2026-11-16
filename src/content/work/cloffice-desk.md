@@ -18,7 +18,7 @@ jumps:
   - { label: "Skip to SolidWorks", to: "the-model" }
   - { label: "Skip to the build", to: "the-build" }
 short:
-  - { lead: "The question.", text: "Could my first SolidWorks model become real furniture?" }
+  - { lead: "The question.", text: "Could a SolidWorks model go straight from screen to a built-in desk in a week?" }
   - { lead: "What I built.", text: "A plywood desk built into the closet in a week, modeled in SolidWorks as an assembly with drawings." }
 skills: [CAD, Fabrication, Planning]
 contributions:
@@ -35,7 +35,7 @@ facts:
 
 ## The closet
 
-I needed a real place to work after deciding to build out a breakfast nook and not wanting my work station to be in my bedroom. My den closet was 67 inches wide and empty. I'm also learning SolidWorks at LACI as a Product Design Fellow and halfway through the program, so the desk became my practice project.
+I needed a real place to work after deciding to build out a breakfast nook and not wanting my work station to be in my bedroom. My den closet was 67 inches wide and empty. I'm a Product Design Fellow at LACI, halfway through the program, so I designed it in SolidWorks before cutting anything.
 
 <figure class="trio row">
   <img src="/work/cloffice-desk-assets/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/>
