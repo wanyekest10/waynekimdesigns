@@ -26,6 +26,7 @@ facts:
   - { label: "Role", value: "Designer and builder, solo" }
   - { label: "Duration", value: "1 week, Nov 2026" }
   - { label: "Tools", value: "SolidWorks · Drill/driver · 2\" hole saw · Clamps · 4 ft level" }
+  - { label: "SolidWorks", value: "Multibody parts · Save Bodies · Mates · Mirror · Linear pattern · Hole Wizard · Reference planes" }
   - { label: "Materials", value: "3/4\" birch plywood · 1x4 and 1x3 pine · 16 stainless corner braces" }
 ---
 
@@ -35,10 +36,12 @@ facts:
 
 I'm a product design fellow at LACI, learning SolidWorks ahead of the certification exam in December. At the same time, I needed a real place to work: my den closet was 67 inches wide and empty. So I made the desk my SolidWorks project. Classes give you practice parts. This gave me a real object with real constraints, and I had to live with the result.
 
+<figure class="wide"><img src="/preview/cloffice-desk/hero.webp" alt="The finished desk in the closet in use, with a monitor, desk chair, and wire drawers underneath"/><figcaption>The closet office, a week later.</figcaption></figure>
+
 <figure class="pair natural">
   <img src="/preview/cloffice-desk/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/>
   <img src="/preview/cloffice-desk/in-use.webp" alt="The finished desk in the closet with a monitor, chair, and wire drawers"/>
-  <figcaption>Before, and a week later.</figcaption>
+  <figcaption>Before and after.</figcaption>
 </figure>
 
 <div class="cols3">
