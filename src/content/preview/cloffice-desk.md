@@ -82,6 +82,8 @@ The desk hangs on the back wall, so the wall is in the model too. The back apron
 
 <figure class="wide"><img src="/preview/cloffice-desk/render-underside.webp" alt="View from directly below the desk: braces along the back and front aprons and at each leg, plus the cable hole"/><figcaption>From below: braces on both aprons and at each leg, and the 2 inch cable hole.</figcaption></figure>
 
+<figure class="wide"><a href="/preview/cloffice-desk/assembly-drawing.webp"><img src="/preview/cloffice-desk/assembly-drawing.webp" alt="Assembly drawing: exploded isometric view with numbered balloons, front and right views with overall dimensions, a parts list, and a title block"/></a><figcaption>Assembly drawing from the SolidWorks model: exploded view, parts list, and overall dimensions.</figcaption></figure>
+
 <aside style="border:1px dashed #002BBA;border-radius:6px;padding:12px 16px;margin:0 0 32px;font-size:14px;color:#6E6E6B">Wayne: add 2 or 3 real SolidWorks screenshots here (Win+Shift+S): the workbench feature tree showing Save Bodies and the patterns, the assembly with the Mates folder open, and the brace part with the Hole Wizard. They prove the tool; the renders show the design. A 2D drawing with a BOM would be the strongest addition.</aside>
 
 ## Choosing the structure
