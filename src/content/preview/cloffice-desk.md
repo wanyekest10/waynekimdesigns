@@ -79,10 +79,10 @@ One master part holds the wood. Save Bodies splits it into parts and an assembly
 
 ## The build
 
-The top and both legs came from one sheet of birch plywood, cut at the store.
+The top and legs came from one sheet of birch plywood, and the aprons from two 8 foot pine boards. Seven cuts, all at the store.
 
 <figure class="wide" aria-label="Cut plan for one 48 by 96 inch sheet: rip at 20 inches for the top, rip at 19 and a quarter inches for two legs">
-<svg viewBox="0 0 980 500" role="img" aria-hidden="true" style="width:100%;height:auto;font-family:Instrument Sans, sans-serif">
+<svg viewBox="0 0 980 660" role="img" aria-hidden="true" style="width:100%;height:auto;font-family:Instrument Sans, sans-serif">
   <rect x="10" y="10" width="960" height="480" fill="#F4F4F2" stroke="#141414" stroke-width="2"/>
   <rect x="10" y="10" width="665" height="200" fill="#fff" stroke="#002BBA" stroke-width="2.5"/>
   <text x="342" y="105" text-anchor="middle" font-size="22" fill="#002BBA" font-weight="500">Top</text>
@@ -103,8 +103,20 @@ The top and both legs came from one sheet of birch plywood, cut at the store.
     <circle cx="311" cy="230" r="13" fill="#141414"/><text x="311" y="235">4</text>
     <circle cx="612" cy="230" r="13" fill="#141414"/><text x="612" y="235">5</text>
   </g>
+  <rect x="10" y="530" width="960" height="35" fill="#F4F4F2" stroke="#141414" stroke-width="1.5"/>
+  <rect x="10" y="530" width="665" height="35" fill="#fff" stroke="#141414" stroke-width="1.5"/>
+  <text x="342" y="553" text-anchor="middle" font-size="16" fill="#141414" font-weight="500">Back apron, 1x4 · 66½</text>
+  <text x="822" y="553" text-anchor="middle" font-size="15" fill="#6E6E6B">offcut</text>
+  <rect x="10" y="595" width="960" height="25" fill="#F4F4F2" stroke="#141414" stroke-width="1.5"/>
+  <rect x="10" y="595" width="640" height="25" fill="#fff" stroke="#141414" stroke-width="1.5"/>
+  <text x="330" y="613" text-anchor="middle" font-size="16" fill="#141414" font-weight="500">Front apron, 1x3 · 64</text>
+  <text x="810" y="613" text-anchor="middle" font-size="15" fill="#6E6E6B">offcut</text>
+  <g font-size="14" fill="#fff" font-weight="500" text-anchor="middle">
+    <circle cx="675" cy="530" r="13" fill="#141414"/><text x="675" y="535">6</text>
+    <circle cx="650" cy="595" r="13" fill="#141414"/><text x="650" y="600">7</text>
+  </g>
 </svg>
-<figcaption>Five cuts from one 4x8 sheet.</figcaption>
+<figcaption>Cuts 1 to 5 on the 4x8 sheet, 6 and 7 on the pine boards.</figcaption>
 </figure>
 
 <figure class="pair natural">
