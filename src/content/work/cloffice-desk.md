@@ -7,7 +7,7 @@ year: "2026"
 order: 5
 featured: true
 label: "CAD and fabrication"
-summary: "A closet office, modeled in SolidWorks and built in a week."
+summary: "Modeled in SolidWorks, built in a week."
 hero: "/work/cloffice-desk-assets/card.webp"
 card: "/work/cloffice-desk-assets/card.webp"
 cardVideo: "/work/cloffice-desk-assets/card-loop-2.mp4"
