@@ -817,3 +817,7 @@ article figure.swap { max-width: var(--wide); margin: 28px 0 36px; background: v
 article .swap-read { margin: 0; font: var(--meta); font-size: 13px; color: var(--ink); text-align: center; text-wrap: balance; }
 @media (max-width: 600px) { .swap-hand { gap: 8px; grid-template-columns: repeat(3, minmax(0, 1fr)); } .swap-card { padding: 8px; border-radius: 8px; } .swap-card b { font-size: 12px; margin-top: 14px; } .swap-st { font-size: 8px; top: 7px; right: 8px; } .swap-st i { font-size: 9px; margin-top: 1px; } }
 @media (prefers-reduced-motion: reduce) { .swap-card { transition: none; } }
+/* Two portrait (3:4) media side by side, kept as two columns on phones too. */
+article .pair.portrait { grid-template-columns: 1fr 1fr; width: 100%; max-width: var(--wide); }
+article .pair.portrait > img, article .pair.portrait > video { aspect-ratio: 3/4; object-fit: cover; width: 100%; height: auto; }
+@media (max-width: 720px) { article .pair.portrait { grid-template-columns: 1fr 1fr; gap: 8px; } }

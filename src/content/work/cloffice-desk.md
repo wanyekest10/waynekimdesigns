@@ -55,9 +55,11 @@ I needed a real place to work after deciding to build out a breakfast nook and n
 
 <figure class="wide"><a href="/work/cloffice-desk-assets/drawing-views.webp"><img src="/work/cloffice-desk-assets/drawing-views.webp" alt="Drawing sheet CD-001: top, front, and right views with dimensions, an isometric view, notes, and a title block"/></a><figcaption>Drawing from the SolidWorks model.</figcaption></figure>
 
-<figure class="frame"><img src="/work/cloffice-desk-assets/render-brace.webp" alt="Close-up of two corner braces where a leg meets the back apron and the underside of the top"/><figcaption>The Everbilt 1½ inch brace, modeled from its package specs with countersunk holes.</figcaption></figure>
-
-<figure class="wide"><img src="/work/cloffice-desk-assets/render-underside.webp" alt="View from directly below the desk: braces along the back and front aprons and at each leg, plus the cable hole"/><figcaption>From below. Braces patterned along the back apron, mirrored to the front, and mirrored across the legs.</figcaption></figure>
+<figure class="pair portrait">
+  <img src="/work/cloffice-desk-assets/render-brace-tall.webp" alt="Close-up of two corner braces where a leg meets the back apron and the underside of the top"/>
+  <img src="/work/cloffice-desk-assets/render-underside-tall.webp" alt="View from directly below the desk: braces along the back and front aprons and at each leg, plus the cable hole"/>
+  <figcaption>The Everbilt 1½ inch brace, modeled with countersunk holes, then patterned along the back apron and mirrored to the front and across the legs.</figcaption>
+</figure>
 
 
 
@@ -121,9 +123,9 @@ Glue the front apron, sand a lot, brush on coats of polyurethane, screw the back
 
 ## The model and the real thing
 
-<figure class="pair natural">
-  <video src="/work/cloffice-desk-assets/card-loop-2.mp4" poster="/work/cloffice-desk-assets/card.webp" autoplay muted loop playsinline aria-label="The desk model pulling apart and going back together"></video>
-  <img src="/work/cloffice-desk-assets/installed.webp" alt="The installed desk in the closet with a 4 foot level on top"/>
+<figure class="pair portrait">
+  <video src="/work/cloffice-desk-assets/explode-tall.mp4" poster="/work/cloffice-desk-assets/explode-tall-poster.webp" autoplay muted loop playsinline aria-label="The desk model pulling apart and going back together"></video>
+  <img src="/work/cloffice-desk-assets/installed-tall.webp" alt="The installed desk in the closet with a 4 foot level on top"/>
   <figcaption>The SolidWorks model and the installed desk.</figcaption>
 </figure>
 
