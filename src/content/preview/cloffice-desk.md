@@ -74,7 +74,6 @@ One master part holds the wood. Save Bodies splits it into parts and an assembly
 
 <figure class="wide"><a href="/preview/cloffice-desk/drawing-views.webp"><img src="/preview/cloffice-desk/drawing-views.webp" alt="Drawing sheet CD-001: top, front, and right views with dimensions, an isometric view, notes, and a title block"/></a><figcaption>Drawing from the SolidWorks model.</figcaption></figure>
 
-<figure class="wide"><a href="/preview/cloffice-desk/assembly-drawing.webp"><img src="/preview/cloffice-desk/assembly-drawing.webp" alt="Assembly drawing: exploded isometric view with numbered balloons, front and right views with overall dimensions, a parts list, and a title block"/></a><figcaption>Exploded assembly with parts list.</figcaption></figure>
 
 <div id="the-build" style="scroll-margin-top:88px"></div>
 
