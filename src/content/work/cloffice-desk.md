@@ -138,6 +138,6 @@ Glue the front apron, sand a lot, brush on coats of polyurethane, screw the back
   <figcaption>The SolidWorks model and the installed desk.</figcaption>
 </figure>
 
-The desk used to live where my breakfast nook is now, and now that space is free again. I'm halfway through the LACI product design fellowship, and it was a good opportunity to model, design, and actually build.
+My old desk sat in the living room corner from <a href="/work/room-tone/">room_tone</a>. That corner is my breakfast nook now, and the space is free again. I'm halfway through the LACI product design fellowship, and it was a good opportunity to model, design, and actually build.
 
 Next, I'll keep building out this closet office as a workbench for 3D printing, soldering, and tinkering.
