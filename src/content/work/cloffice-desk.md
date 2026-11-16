@@ -35,7 +35,7 @@ facts:
 
 ## The closet
 
-I needed a real place to work after deciding to build out a breakfast nook and not wanting my work station to be in my bedroom. My den closet was 67 inches wide and empty. I'm a Product Design Fellow at LACI, halfway through the program, so I designed it in SolidWorks before cutting anything.
+I needed a real place to work after deciding to build out a breakfast nook and not wanting my work station to be in my bedroom. My den closet was 67 inches wide and empty. I'm a Product Design Fellow at LACI, halfway through the program, and wanted to apply what I've learned to my own space and constraints. So I designed it in SolidWorks before cutting anything.
 
 <figure class="trio row">
   <img src="/work/cloffice-desk-assets/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/>
