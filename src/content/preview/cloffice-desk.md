@@ -141,4 +141,6 @@ Glue the front apron, finish the wood, screw the back apron into the studs, stan
   <figcaption>The SolidWorks model and the installed desk.</figcaption>
 </figure>
 
-I'm halfway through the LACI product design fellowship, and I needed this done. The desk used to live in my breakfast nook, and now that space is free again. Next, I'll keep building out the apartment the same way: model it, then build it.
+The desk used to live where my breakfast nook is now, and now that space is free again. I'm halfway through the LACI product design fellowship, and it was a good opportunity to model, design, and actually build.
+
+Next, I'll keep building out this closet office as a workbench for 3D printing, soldering, and tinkering.
