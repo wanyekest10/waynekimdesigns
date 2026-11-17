@@ -103,6 +103,35 @@ if (d.tryIt) toc.unshift({ depth: 2, slug: 'try-it', text: 'Try it', num: '01', 
   </div>
 </Base>
 <script>
+// Lightbox: tap any case study image (or a link to an image) for a closer look in place.
+(() => {
+  const isImg = (u: string) => /\.(webp|png|jpe?g|svg|gif)(\?|$)/i.test(u);
+  const box = document.createElement('dialog');
+  box.className = 'lb';
+  box.innerHTML = '<button class="lb-x" type="button" aria-label="Close">×</button><img alt=""/><p class="lb-cap"></p>';
+  document.body.appendChild(box);
+  const big = box.querySelector('img') as HTMLImageElement;
+  const cap = box.querySelector('.lb-cap') as HTMLElement;
+  const open = (src: string, alt: string) => {
+    big.src = src; big.alt = alt; cap.textContent = alt; box.classList.remove('zoom');
+    box.showModal(); document.documentElement.classList.add('lb-open');
+  };
+  const close = () => { box.close(); };
+  box.addEventListener('close', () => document.documentElement.classList.remove('lb-open'));
+  box.addEventListener('click', (e) => {
+    if (e.target === big) { box.classList.toggle('zoom'); return; }
+    close();
+  });
+  document.querySelectorAll<HTMLImageElement>('article figure img').forEach((img) => {
+    if (img.closest('.peek, .cmp, .shrink, .swap')) return;
+    const a = img.closest('a') as HTMLAnchorElement | null;
+    if (a && !isImg(a.getAttribute('href') || '')) return;
+    img.classList.add('lb-able');
+    const capText = (img.closest('figure > div')?.querySelector('p')?.textContent || img.closest('figure')?.querySelector('figcaption')?.textContent || img.alt || '').trim();
+    (a || img).addEventListener('click', (e) => { e.preventDefault(); open(a ? a.href : (img.currentSrc || img.src), capText); });
+  });
+})();
+
 // Flipbook: one screen that rides the whole climb. Plays whenever it's on screen; dragging the slider pauses it for a moment.
 document.querySelectorAll<HTMLElement>('.flip').forEach((root) => {
   const frames = JSON.parse(root.dataset.frames || '[]');
