@@ -29,7 +29,7 @@ jumps:
 short:
   - { lead: "The question.", text: "How do you make an invisible, private, slightly taboo habit visible, without making anyone in the house feel watched?" }
   - { lead: "What I built.", text: "A sleeve inside the roll counts every square. A quiet e-ink screen above the holder turns the total into a climb: 4 ft up, next stop, the Hollywood Sign." }
-  - { lead: "What happened.", text: "Visitors started talking about how much paper a house uses in a year, and whether to get bidets." }
+  - { lead: "What happened.", text: "Visitors started talking about how much paper a house uses in a year." }
 skills: [Physical computing, Fabrication, Interaction design]
 contributions:
   - { skill: "Physical computing", text: "Wired the Hall effect sensor, e-paper screen, and LiPo to an Arduino and wrote the counting code" }
@@ -223,7 +223,7 @@ Getting the wire to the screen took three printed designs. Exposed jumpers looke
 
 ## Visitors got curious and started talking
 
-Visitors who used it got curious about it. It led to talk about how much a household goes through in a year, and whether we should all get bidets.
+Visitors who used it got curious about it. It led to talk about how much a household goes through in a year.
 
 The first thing I cut was a per-session trip summary. It was interesting data, and exactly the kind that makes someone feel watched.
 
