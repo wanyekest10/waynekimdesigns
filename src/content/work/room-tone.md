@@ -65,9 +65,7 @@ At CIID, the day had a rhythm: crits, shared lunches, someone leaning over to as
   <figcaption>Working alone, my days went flat. At CIID, they had shape.</figcaption>
 </figure>
 
-I tried a Pomodoro timer, phone alarms, and the Time Timer on my desk. Each one goes off at a fixed time, even in the middle of a thought, so I either silenced it or resented it.
-
-The Flowtime method leaves stopping up to me, which is the part I'm bad at. I wanted something in between: the room notices, then asks.
+I tried a Pomodoro timer, phone alarms, and the Time Timer on my desk. Each one went off mid-thought, so I silenced it or resented it. I wanted something in between: the room notices, then asks.
 
 <p class="hmw">What if the room could ask "coffee?" the way a person would, with no guilt either way?</p>
 
@@ -98,7 +96,7 @@ Each layer arrives on its own, then leaves in reverse. At any point, I can keep 
 
 ## A Python script, two smart plugs, and Spotify
 
-A Python script on my laptop uses pynput to track keyboard and mouse activity and decide when I've worked without a break. Two Shelly smart plugs switch the lamp and the disco ball motor, and the Spotify Web API plays the music.
+Everything runs from one Python script on my laptop.
 
 <div class="sys" aria-label="room_tone system">
   <div class="col"><span class="k">Inputs</span><span class="part">Keyboard and mouse<small>pynput counts steady work, on the laptop.</small></span></div>
@@ -108,21 +106,17 @@ A Python script on my laptop uses pynput to track keyboard and mouse activity an
   <div class="col"><span class="k">Outputs</span><span class="part">Shelly plug: lamp<small>The first layer.</small></span><span class="part">Shelly plug: disco ball motor<small>The second.</small></span><span class="part">Spotify Web API<small>The music.</small></span></div>
 </div>
 
-The script is a small state machine: noticing, activating, asking, playing, returning, settled. Each state has its own symbol in the terminal, so I can glance over and see what the system thinks is happening.
+Most of the tuning happened in the state machine: how long before the ball, how many seconds of stillness count as a pause, and how slowly each layer fades.
 
-Most of my tuning happened there. I adjusted how long to wait before the ball, how many seconds of stillness count as a pause, and how slowly each layer fades.
-
-I picked a disco ball because they were at the creative coding nights and CIID parties where work felt most like play. It also has three layers built in: light hits it, it turns, and music goes with it. Those became the stages of the system.
+I picked a disco ball because it has three layers built in: light hits it, it turns, and music goes with it. Those became the stages.
 
 ## The first version rewarded me, and it backfired
 
-My first idea was a reward. I'd write a checklist for the day, and when I finished it, the disco ball would turn on.
-
-The checklist added pressure instead of taking it away. On days the list didn't get finished, the dark disco ball felt like a verdict. It had turned into another alarm.
+My first version was a reward: finish the day's checklist, and the disco ball turns on. On days the list didn't get done, the dark ball felt like a verdict.
 
 > I expected to want a reward. What I wanted was permission to stop.
 
-So I took out the tasks, the score, and the judgment. The second version only notices how long I've been at it.
+So I took out the tasks, the score, and the judgment.
 
 <div class="compare">
   <div class="crow head"><span></span><span class="k">CHECKLIST VERSION</span><span></span><span class="k">ROOM_TONE</span></div>
@@ -134,15 +128,13 @@ So I took out the tasks, the score, and the judgment. The second version only no
 
 ## What I learned and what's next
 
-**Without the judgment, I took the breaks.** The checklist made a break something I had to earn. Once that was gone, I actually stopped.
+**Slow layers leave time to finish a thought.** Each layer waits before the next arrives, so I can wrap up what I'm doing.
 
-**Slow layers leave time to finish a thought.** Each layer waits a while before the next one arrives, so I can wrap up what I'm doing.
+**Typing starts it and typing ends it.** There's nothing to dismiss, so nothing to feel guilty about ignoring.
 
-**Typing starts it and typing ends it.** There's nothing to dismiss, so there's nothing to feel guilty about ignoring.
+**Where it bends calm tech.** It starts at the edge of my attention with a light, then moves toward the center one layer at a time, and only if I keep working.
 
-**Where it bends calm tech.** room_tone starts the way calm tech says it should: it watches quietly, and the first cue is a light at the edge of my attention. The disco ball and music are meant to pull me in, so it moves toward the center of attention one layer at a time, and only if I keep working.
-
-**What's next.** I started a tabletop version: one object with a dial to set the threshold, so it could live on any desk without smart plugs and a ceiling hook. It's on hold for now, and the state machine is ready for it.
+**What's next.** A tabletop version: one object with a dial to set the threshold, so it could live on any desk. It's on hold, and the state machine is ready for it.
 
 room_tone is one of a few prototypes built on calm tech principles, along with [Toilet Paper Elevator](/work/toilet-paper-elevator/) and [Linee](/work/linee/), where it started.
 
