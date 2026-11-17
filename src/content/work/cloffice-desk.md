@@ -18,7 +18,7 @@ jumps:
   - { label: "Skip to SolidWorks", to: "the-model" }
   - { label: "Skip to the build", to: "the-build" }
 short:
-  - { lead: "The question.", text: "Could a SolidWorks model go straight from screen to a built-in desk in a week?" }
+  - { lead: "The question.", text: "What if I used what I've learned in SolidWorks to model and build a desk?" }
   - { lead: "What I built.", text: "A plywood desk built into the closet in a week, modeled in SolidWorks as an assembly with drawings." }
 skills: [CAD, Fabrication, Planning]
 contributions:
