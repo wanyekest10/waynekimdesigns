@@ -71,7 +71,7 @@ I tried a Pomodoro timer, phone alarms, and the Time Timer on my desk. Each one 
 
 ## Asking like a friend would
 
-Before building it, I wrote down how it should feel, using Bill Verplank's questions from his <a href="https://ccrma.stanford.edu/courses/250a-fall-2014/lectures/IDSketchbok.pdf">Interaction Design Sketchbook</a>.
+Before building it, I wrote down how it should feel, using Bill Verplank's questions from his <a href="https://ccrma.stanford.edu/~verplank/S2S/InteractionDesignSketchbook.PDF#page=10">Interaction Design Sketchbook</a>.
 
 <div class="principles4">
   <div><h4>Error</h4><p>Losing two hours without noticing until my back hurts.</p></div>
