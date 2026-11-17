@@ -823,3 +823,7 @@ article .swap-read { margin: 0; font: var(--meta); font-size: 13px; color: var(-
 article .pair.portrait { grid-template-columns: 1fr 1fr; width: 100%; max-width: var(--wide); }
 article .pair.portrait > img, article .pair.portrait > video { aspect-ratio: 3/4; object-fit: cover; width: 100%; height: auto; }
 @media (max-width: 720px) { article .pair.portrait { grid-template-columns: 1fr 1fr; gap: 8px; } }
+/* A row of four build photos (TPE). Two across on phones. */
+article .grid3.four { grid-template-columns: repeat(4, 1fr); }
+article .grid3.four img, article .grid3.four video { aspect-ratio: 1/1; object-fit: cover; width: 100%; max-width: none; margin: 0 0 8px; }
+@media (max-width: 720px) { article .grid3.four { grid-template-columns: 1fr 1fr; } }

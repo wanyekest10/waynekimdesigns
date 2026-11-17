@@ -29,6 +29,7 @@ jumps:
 short:
   - { lead: "The question.", text: "How do you make an invisible, private, slightly taboo habit visible, without making anyone in the house feel watched?" }
   - { lead: "What I built.", text: "A sleeve inside the roll counts every square. A quiet e-ink screen above the holder turns the total into a climb: 4 ft up, next stop, the Hollywood Sign." }
+  - { lead: "What happened.", text: "Visitors started talking about how much paper a house uses in a year, and whether to get bidets." }
 skills: [Physical computing, Fabrication, Interaction design]
 contributions:
   - { skill: "Physical computing", text: "Wired the Hall effect sensor, e-paper screen, and LiPo to an Arduino and wrote the counting code" }
@@ -49,11 +50,7 @@ Because it's such a private room, I gave myself a few rules from the start. The 
 
 <div id="why-an-elevator" style="scroll-margin-top:88px"></div>
 
-## Measuring the roll in feet climbed
-
-The first version was a highway: each pull was distance driven from LA City Hall to the Santa Monica Pier. One household moves slowly, though, and a trip measured in miles barely changed from week to week.
-
-Height moves every day, and the world is full of tall things people already know. So the screen climbs from the ground floor past eighteen landmarks, from the <span class="peek" tabindex="0">Hollywood Sign<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-00.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Eiffel Tower<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-12.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Burj Khalifa<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-17.webp" alt="" loading="lazy" /></span></span>.
+A first version measured miles from City Hall to the Santa Monica Pier, but a household barely moved the needle. Height moves every day, so the screen climbs from the ground floor past eighteen landmarks, from the <span class="peek" tabindex="0">Hollywood Sign<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-00.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Eiffel Tower<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-12.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Burj Khalifa<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-17.webp" alt="" loading="lazy" /></span></span>.
 
 <figure class="pair keep parti">
   <img src="/work/tpe-assets/parti-tall.svg" alt="Diagram: a roll at the bottom feeds one line straight up, with a tick for each landmark passed"/>
@@ -162,7 +159,7 @@ Landmarks people already know replaced the world's tallest buildings.
   </div>
 </figure>
 
-## Counting a roll that gets thinner as it turns
+## The build
 
 I measured my own roll: 300 squares of 100 mm, wound from a 64 mm radius down to a 21 mm core. That's about 98 ft of paper per roll, a little more than two Hollywood Signs stacked. Each magnet is a quarter turn, so the code shrinks the paper per pulse as the roll gets thinner.
 
@@ -186,7 +183,7 @@ float mmForNextPulse() {
 
 </div>
 
-<figure class="grid3 two">
+<figure class="grid3 four">
   <div><img src="/work/tpe-assets/full-vs-empty.webp" alt="A full roll on the holder above an empty tube with an early cardboard insert holding a magnet"/><p>A full roll and an empty tube: the two sizes the code works between.</p></div>
   <div><img src="/work/tpe-assets/measure-tube.webp" alt="Calipers measuring the inside of a cardboard tube at 39 mm"/><p>Measuring the inside of the tube the sleeve fits into.</p></div>
   <div><video src="/work/tpe-assets/sensor-test.mp4" poster="/work/tpe-assets/sensor-test-poster.jpg" autoplay muted loop playsinline aria-label="A green LED blinking each time a magnet in the sleeve passes the sensor"></video><p>First test: an LED blinks each time a magnet passes the sensor.</p></div>
@@ -195,31 +192,21 @@ float mmForNextPulse() {
 
 I designed the pod in Fusion and printed everything in gray. The LiPo sits trapped in a closed shell, and the display's own screws and brass standoffs hold it together.
 
-<figure class="pair">
-  <img src="/work/tpe-assets/fusion-shell.webp" alt="The pod shell in Fusion 360, shown see-through with the screen opening, screw bosses, and cable openings"/>
-  <img src="/work/tpe-assets/fusion-standoff.webp" alt="Close-up of a printed boss with a hex pocket that traps a nut"/>
-  <figcaption>The pod shell in Fusion, with a hex pocket that traps each nut.</figcaption>
+<figure class="grid3">
+  <div><img src="/work/tpe-assets/fusion-shell.webp" alt="The pod shell in Fusion 360, shown see-through with the screen opening, screw bosses, and cable openings"/><p>The pod shell in Fusion.</p></div>
+  <div><img src="/work/tpe-assets/fusion-standoff.webp" alt="Close-up of a printed boss with a hex pocket that traps a nut"/><p>A hex pocket traps each nut.</p></div>
+  <div><img src="/work/tpe-assets/standoff-test-photo.webp" alt="The printed test pieces: the brass standoff pressed into the sixth hex pocket, and a screw through the strip"/><p>A 15-minute test print of six pocket sizes. The standoff fit the 4.9 mm one.</p></div>
 </figure>
 
-<figure class="pair">
-  <img src="/work/tpe-assets/standoff-test.webp" alt="The test print in Fusion, see-through: a block with six hex pockets sized 4.0 to 4.9 mm and numbered with engraved dots, plus a strip with two screw holes"/>
-  <img src="/work/tpe-assets/standoff-test-photo.webp" alt="The printed test pieces: the brass standoff pressed into the sixth hex pocket, and a screw through the strip"/>
-  <figcaption>A 15-minute test print first: six hex pockets from 4.0 to 4.9 mm. The brass standoff press-fit snugly in the 4.9 mm pocket, so that size went into the shell.</figcaption>
+<figure class="grid3">
+  <div><img src="/work/tpe-assets/pod-side-view.webp" alt="The pod from the side, held in a hand: the back plate, the LiPo battery, the printed carrier, and the Arduino stacked between the shell layers"/><p>Battery, carrier, and Arduino, stacked.</p></div>
+  <div><img src="/work/tpe-assets/pod-open.webp" alt="The pod opened up: the e-paper screen tilted back, the Arduino on a breadboard on its printed carrier, the shell behind, and the magnet sleeve beside it"/><p>The pod, opened.</p></div>
+  <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Everything wired on the counter before it went on the wall.</p></div>
 </figure>
 
-<figure class="pair square">
-  <img src="/work/tpe-assets/pod-side-view.webp" alt="The pod from the side, held in a hand: the back plate, the LiPo battery, the printed carrier, and the Arduino stacked between the shell layers"/>
-  <img src="/work/tpe-assets/pod-open.webp" alt="The pod opened up: the e-paper screen tilted back, the Arduino on a breadboard on its printed carrier, the shell behind, and the magnet sleeve beside it"/>
-  <figcaption>Battery, carrier, and Arduino stack inside the pod, shown from the side and opened.</figcaption>
-</figure>
+## Three designs to house the wire
 
-## Three designs to house the wire in a bathroom
-
-Getting the wire from the holder to the screen took three printed designs, with a cord and a paper mockup along the way. The first version ran exposed jumper wires down the wall, with a collar on the holder's arm to hold the Hall effect sensor. It worked, but it looked unfinished.
-
-A braided cord hid the wires, but it drooped, and the collar still stuck out. None of it felt calm. So I slowed down and started with the basics: paper and string on the wall to work out the dimensions for a raceway.
-
-The first printed raceway, in purple, held everything flat, but it still used a collar, and the collar meant you couldn't lift the arm to put on a new roll. So I designed the raceway to stick out along the arm instead. It holds the Hall effect sensor at the sleeve, and the roll still changes the normal way.
+Getting the wire to the screen took three printed designs. Exposed jumpers looked unfinished, a braided cord drooped, and a collar blocked changing the roll. Paper and string on the wall worked out the raceway that carries the sensor to the magnets.
 
 <figure class="grid5">
   <div><img src="/work/tpe-assets/iter-1-exposed.webp" alt="The first version: the pod on the wall with loose orange and yellow jumper wires running to the holder"/><p>1. Exposed jumpers and a collar worked but looked unfinished.</p></div>
@@ -229,16 +216,9 @@ The first printed raceway, in purple, held everything flat, but it still used a 
   <div><img src="/work/tpe-assets/iter-4-final.webp" alt="The final version: the gray pod and slim gray raceway, whose arm runs along the holder to the sleeve"/><p>5. The raceway alone carries the sensor to the sleeve.</p></div>
 </figure>
 
-<figure class="pair">
-  <img src="/work/tpe-assets/arm-tip.webp" alt="Close-up of the raceway's arm along the holder, the sensor wires inside, ending at the sleeve's face where the magnets sit"/>
-  <img src="/work/tpe-assets/fusion-tip.webp" alt="The tip of the raceway's arm in Fusion, see-through: the wire slots and the pocket for the A3144 Hall sensor"/>
-  <figcaption>The arm's tip holds three wires and the sensor right at the magnets.</figcaption>
-</figure>
-
-<figure class="grid3 tallnat">
-  <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Every part wired up on the counter before it went on the wall.</p></div>
-  <div><img src="/work/tpe-assets/final-wall.webp" alt="The finished version in daylight: the gray pod showing 4 ft up above the holder and sleeve"/><p>Installed, the pod reads 4 ft up above the sleeve.</p></div>
-  <div><img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/><p>The full install: pod, raceway, and a roll on the bar.</p></div>
+<figure class="medium">
+  <img src="/work/tpe-assets/wall-full-length.webp" alt="The full length on the wall: the pod at the top, the raceway down to the holder, and a roll of toilet paper on the bar"/>
+  <figcaption>The full install: pod, raceway, and a roll on the bar.</figcaption>
 </figure>
 
 ## Visitors got curious and started talking
