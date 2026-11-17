@@ -46,8 +46,6 @@ facts:
 
 The bathroom is one of the few idle spaces left in a day. We sit and wait, or reach for our phone. Everyone in a home uses toilet paper there every day, and nobody sees how much. I wanted to make that habit visible and a little playful, in the one room where people least want to feel observed.
 
-<figure class="unroll-viz"><svg viewBox="40 30 300 310" fill="none" stroke="currentColor" stroke-linecap="round" role="img" aria-labelledby="unroll-t" class="unroll-viz-svg"><title id="unroll-t">One roll of toilet paper unrolled is 98 feet, about as tall as a 10-story building</title><circle cx="132" cy="282" r="18" stroke-width="2.5"/><circle cx="132" cy="282" r="6" stroke-width="1"/><path d="M150 282 V64.8" stroke-width="2.5"/><g stroke-width="1"><path d="M142 276.0 H158"/><path d="M142 252.0 H158"/><path d="M142 228.0 H158"/><path d="M142 204.0 H158"/><path d="M142 180.0 H158"/><path d="M142 156.0 H158"/><path d="M142 132.0 H158"/><path d="M142 108.0 H158"/><path d="M142 84.0 H158"/></g><path d="M138 64.8 l-8 -6 v12 z" fill="var(--accent, #002BBA)" stroke="none"/><text x="124" y="69.8" text-anchor="end" class="u-num" stroke="none">98 ft</text><rect x="205" y="60.0" width="70" height="240.0" stroke-width="1"/><g stroke-width="1" opacity=".5"><path d="M205 276.0 H275"/><path d="M205 252.0 H275"/><path d="M205 228.0 H275"/><path d="M205 204.0 H275"/><path d="M205 180.0 H275"/><path d="M205 156.0 H275"/><path d="M205 132.0 H275"/><path d="M205 108.0 H275"/><path d="M205 84.0 H275"/></g><path d="M70 300 H310" stroke-width="1"/><text x="141" y="324" text-anchor="middle" class="u-cap" stroke="none">1 roll</text><text x="240.0" y="324" text-anchor="middle" class="u-cap" stroke="none">10 floors</text></svg><figcaption>One roll is 300 squares, about 98 ft unrolled: roughly a 10-story building, or two Hollywood Signs stacked.</figcaption></figure>
-
 Because it's such a private room, I gave myself a few rules from the start. The display had to count for the whole household, stay anonymous, and never single anyone out or ask for attention. It also couldn't preach about sustainability, because that would turn a curious object into a lecture.
 
 <div id="why-an-elevator" style="scroll-margin-top:88px"></div>
@@ -55,9 +53,9 @@ Because it's such a private room, I gave myself a few rules from the start. The 
 A first version measured miles from City Hall to the Santa Monica Pier, but a household barely moved the needle. Height moves every day, so the screen climbs from the ground floor past eighteen landmarks, from the <span class="peek" tabindex="0">Hollywood Sign<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-00.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Eiffel Tower<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-12.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Burj Khalifa<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-17.webp" alt="" loading="lazy" /></span></span>.
 
 <figure class="pair keep parti">
-  <img src="/work/tpe-assets/parti-tall.svg" alt="Diagram: a roll at the bottom feeds one line straight up, with a tick for each landmark passed"/>
+  <img src="/work/tpe-assets/roll-vs-floors.svg" alt="Diagram: one roll feeds a line straight up to 98 ft, beside a 10-floor building of the same height"/>
   <img src="/work/tpe-assets/final-wall.webp" alt="The finished version: the gray pod showing 4 ft up above the holder and sleeve"/>
-  <figcaption>The idea in one line: using paper is climbing. On the wall, the screen sits right above the roll.</figcaption>
+  <figcaption>One roll unrolls to about 98 ft, roughly 10 floors. On the wall, the screen sits right above the roll.</figcaption>
 </figure>
 
 <div id="how-it-works" style="scroll-margin-top:88px"></div>
