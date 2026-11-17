@@ -24,7 +24,7 @@ heroPoster: "/work/room-tone-assets/showcase-poster.jpg"
 jumps:
   - { label: "Skip to how it runs", to: "how-it-runs" }
 short:
-  - { lead: "The question.", text: "Working alone, hours disappeared, and every break tool I tried was an alarm underneath. Could the room ask, the way a person would, with no guilt either way?" }
+  - { lead: "The question.", text: "Working alone, the hours disappeared, and every break tool I tried was an alarm underneath. What if the room could ask \"coffee?\" the way a person would, with no guilt either way?" }
   - { lead: "What I built.", text: "A Python state machine that notices 90 minutes of steady work, then brings in a light, a spinning disco ball, and music, one layer at a time." }
   - { lead: "What happened.", text: "My first version rewarded me for finishing a checklist, and it felt like another alarm. Once I took out the judgment, I actually took the breaks." }
 skills: [Creative coding, Physical computing, Interaction design]
