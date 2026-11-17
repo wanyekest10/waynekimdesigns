@@ -128,7 +128,7 @@ Glue the front apron, sand a lot, brush on coats of polyurethane, screw the back
 <figure class="pair portrait">
   <video src="/work/cloffice-desk-assets/explode-tall.mp4" poster="/work/cloffice-desk-assets/explode-tall-poster.webp" autoplay muted loop playsinline aria-label="The desk model pulling apart and going back together"></video>
   <img src="/work/cloffice-desk-assets/closet-office-final.webp" alt="The finished closet office: birch desk with a laptop, monitor showing the SolidWorks model of the desk, and wire drawers underneath"/>
-  <figcaption>The SolidWorks model and the finished closet office.</figcaption>
+  <figcaption>The SolidWorks model and v1 of cloffice (closet office).</figcaption>
 </figure>
 
 My old desk sat in the living room corner from <a href="/work/room-tone/">room_tone</a>. That corner is my breakfast nook now, and the space is free again. I'm halfway through the LACI product design fellowship, and it was a good opportunity to model, design, and actually build.
