@@ -48,15 +48,15 @@ The bathroom is one of the few idle spaces left in a day. We sit and wait, or re
 
 Because it's such a private room, I gave myself a few rules from the start. The display had to count for the whole household, stay anonymous, and never single anyone out or ask for attention. It also couldn't preach about sustainability, because that would turn a curious object into a lecture.
 
-<div id="why-an-elevator" style="scroll-margin-top:88px"></div>
-
-A first version measured miles from City Hall to the Santa Monica Pier, but a household barely moved the needle. Height moves every day, so the screen climbs from the ground floor past eighteen landmarks, from the <span class="peek" tabindex="0">Hollywood Sign<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-00.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Eiffel Tower<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-12.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Burj Khalifa<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-17.webp" alt="" loading="lazy" /></span></span>.
-
 <figure class="pair keep parti">
   <img src="/work/tpe-assets/roll-vs-floors.svg" alt="Diagram: one roll feeds a line straight up to 98 ft, beside a 10-floor building of the same height"/>
   <img src="/work/tpe-assets/final-wall.webp" alt="The finished version: the gray pod showing 4 ft up above the holder and sleeve"/>
   <figcaption>One roll unrolls to about 98 ft, roughly 10 floors. On the wall, the screen sits right above the roll.</figcaption>
 </figure>
+
+<div id="why-an-elevator" style="scroll-margin-top:88px"></div>
+
+A first version measured miles from City Hall to the Santa Monica Pier, but a household barely moved the needle. Height moves every day, so the screen climbs from the ground floor past eighteen landmarks, from the <span class="peek" tabindex="0">Hollywood Sign<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-00.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Eiffel Tower<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-12.webp" alt="" loading="lazy" /></span></span> to the <span class="peek" tabindex="0">Burj Khalifa<span class="peek-pics" aria-hidden="true"><img src="/work/tpe-assets/screens/arrival-17.webp" alt="" loading="lazy" /></span></span>.
 
 <div id="how-it-works" style="scroll-margin-top:88px"></div>
 
