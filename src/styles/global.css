@@ -868,3 +868,11 @@ html.lb-open { overflow: hidden; }
 article .pair.fit > img { aspect-ratio: 3/2; object-fit: contain; background: var(--panel); border-radius: 6px; }
 /* room_tone animated layers diagram (iframe sizes itself) */
 article figure.rt-layers iframe { display: block; width: 100%; height: 420px; border: 0; margin: 0 0 10px; }
+/* room_tone: the stage table, tucked under the animated diagram */
+article details.rt-table { max-width: var(--wide); margin: -8px 0 36px; }
+article details.rt-table > summary { list-style: none; cursor: pointer; font: var(--meta); font-size: 13px; color: var(--gray); display: inline-flex; align-items: center; gap: 8px; padding: 6px 0; }
+article details.rt-table > summary::-webkit-details-marker { display: none; }
+article details.rt-table > summary::before { content: "+"; font-size: 15px; color: var(--ink); width: 12px; }
+article details.rt-table[open] > summary::before { content: "−"; }
+article details.rt-table > summary:hover { color: var(--ink); }
+article details.rt-table[open] > summary { margin-bottom: 8px; }
