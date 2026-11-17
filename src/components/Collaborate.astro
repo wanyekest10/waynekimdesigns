@@ -72,7 +72,7 @@ const steps = [
         <h3>{w.title}</h3>
         <p class="w-when">{w.when}</p>
         <p class="w-what">{w.what}</p>
-        <p class="w-get"><b>What changes</b> {w.get}</p>
+        <p class="w-get"><b>What you get</b> {w.get}</p>
         <div class="proof"><span class="proof-label">Done before</span><ul class="proof-list">{w.proof.map((p, j) => <li class:list={{ on: j === 0 }}><a href={p.href}>{p.name}</a><span>{p.result}</span></li>)}</ul></div>
       </section>
     ))}

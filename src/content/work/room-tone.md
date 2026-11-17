@@ -132,7 +132,7 @@ So I took out the tasks, the score, and the judgment.
 
 **Typing starts it and typing ends it.** There's nothing to dismiss, so nothing to feel guilty about ignoring.
 
-**Where it bends calm tech.** It starts at the edge of my attention with a light, then moves toward the center one layer at a time, and only if I keep working.
+**How it uses calm tech.** It starts at the edge of my attention with a light, then moves toward the center one layer at a time, and only if I keep working.
 
 **What's next.** A tabletop version: one object with a dial to set the threshold, so it could live on any desk. It's on hold, and the state machine is ready for it.
 

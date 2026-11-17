@@ -1,7 +1,7 @@
 ---
 title: Toilet Paper Elevator
 slug: toilet-paper-elevator
-headline: "A small e-ink screen above the toilet paper holder that turns a household's toilet paper into an elevator ride past the world's landmarks."
+headline: "An e-ink screen above the toilet paper that turns a household's use into an elevator ride past landmarks."
 context: "Personal project, 2026"
 order: 1
 year: "2026"
@@ -247,7 +247,7 @@ Visitors who used it got curious about it. It led to talk about how much a house
 
 The first thing I cut was a per-session trip summary. It was interesting data, and exactly the kind that makes someone feel watched.
 
-I also used this sprint to learn Fusion, and most of what I know about tolerances came from this pod.
+I modeled everything in Fusion 360, and this pod taught me most of what I know about tolerances.
 
 I keep designing for small pauses like this one, at my desk with [room_tone](/work/room-tone/) and in a shared home with [Linee](/work/linee/), where it started.
 

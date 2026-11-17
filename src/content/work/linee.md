@@ -35,15 +35,15 @@ facts:
 
 ## Timekeeping without alarms or notifications
 
-Linee (Italian for "lines") is a tactile clock and a deliberately low-fidelity day planner for shared homes. It shows when something is happening without alarms, screens, or notifications. Instead of precise scheduling, it builds awareness of the day's rhythm, so housemates stay in sync and the home stays calm.
+Linee (Italian for "lines") is a tactile clock and a simple day planner for shared homes. It shows when something is happening without alarms, screens, or notifications. Instead of precise scheduling, it builds awareness of the day's rhythm, so housemates stay in sync and the home stays calm.
 
 <figure class="frame"><video src="/work/linee-assets/adding-tiles.mp4" poster="/work/linee-assets/adding-tiles-poster.jpg" autoplay muted loop playsinline></video><figcaption>Marking the day on Linee.</figcaption></figure>
 
 ## From signals to ambient time
 
-Our brief was to design a product that fosters togetherness in shared spaces. Home is a sanctuary for people with busy schedules, but sharing it still takes quiet coordination. We first imagined Linee as a way for housemates to signal everyday rhythms: who's in the kitchen, who's using the shower, who's on their way home.
+Our brief was to design a product that fosters togetherness in shared spaces. Sharing a home takes coordination, even when everyone is busy. We first imagined Linee as a way for housemates to signal everyday rhythms: who's in the kitchen, who's using the shower, who's on their way home.
 
-Linee became something else: ambient timekeeping, a system that communicates when without asking for attention. Coordination is felt over the course of the day instead of enforced through alerts. It's calm technology in the plainest sense: information that lives at the edge of attention, there when you glance at it and quiet when you don't.
+Linee became something else: ambient timekeeping, a system that communicates when without asking for attention. Housemates feel the day's plan instead of getting alerts. It's calm technology in the plainest sense: information that lives at the edge of attention, there when you glance at it and quiet when you don't.
 
 <figure class="frame"><video src="/work/linee-assets/storyboard.mp4" poster="/work/linee-assets/storyboard-poster.jpg" autoplay muted loop playsinline></video><figcaption>Storyboarding how a household would set it up and use it.</figcaption></figure>
 
@@ -104,7 +104,7 @@ We went through dozens of versions, starting in cardboard. The one that worked h
 
 ## A shared language
 
-Later in the project, I concepted magnetic tiles: housemates write a note or stick a symbol on the timeline, like taking out the trash, being on a call, or having friends over. The day stops being a schedule handed down and becomes something the house can negotiate.
+Later in the project, I concepted magnetic tiles: housemates write a note or stick a symbol on the timeline, like taking out the trash, being on a call, or having friends over. The day becomes something the house plans together.
 
 <figure class="frame"><img src="/work/linee-assets/tile-writing.webp" alt="Writing CIID Open House on a white tile stuck to the 17:00 block, next to a red tile marked Demo"/></figure>
 

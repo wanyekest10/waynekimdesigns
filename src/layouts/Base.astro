@@ -5,7 +5,7 @@ interface Props { title: string; description?: string; wide?: boolean; noindex?:
 // A tailored landing page (like /for/mattel/) can swap the home link, nav, closing prompt, resume link,
 // back links, and "More projects" picks. Pages opened from it keep the same set for the visit (sessionStorage).
 interface Tailor { home: string; links: { href: string; label: string }[]; back?: { href: string; label: string }; closing?: { prompt: string; cta: string; href: string }; resume?: string; picks?: string[] }
-const { title, tailor, image, imageAlt, wide = false, noindex = false, prompt = 'Have something you\'re working on?', cta = 'Send me a message →', description = 'Wayne Kim, interaction designer in Los Angeles. I build prototypes to find out what people actually need. Some purposeful, some playful, sometimes both.' } = Astro.props;
+const { title, tailor, image, imageAlt, wide = false, noindex = false, prompt = 'Have something you\'re working on?', cta = 'Send me a message →', description = 'Wayne Kim, interaction designer in Los Angeles. I build prototypes to find out what people need. Some purposeful, some playful, sometimes both.' } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -22,7 +22,7 @@ const { title, tailor, image, imageAlt, wide = false, noindex = false, prompt = 
     <meta property="og:image" content={new URL(image ?? '/og-2026-10b.jpg', Astro.site)} />
     {!image && <meta property="og:image:width" content="1200" />}
     {!image && <meta property="og:image:height" content="630" />}
-    <meta property="og:image:alt" content={image ? (imageAlt ?? title) : 'Wayne Kim. Interaction designer based in LA. I build prototypes to find out what people actually need. Some purposeful, some playful, sometimes both.'} />
+    <meta property="og:image:alt" content={image ? (imageAlt ?? title) : 'Wayne Kim. Interaction designer based in LA. I build prototypes to find out what people need. Some purposeful, some playful, sometimes both.'} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon-32.png" type="image/png" />

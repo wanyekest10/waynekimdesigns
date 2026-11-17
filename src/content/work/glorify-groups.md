@@ -1,7 +1,7 @@
 ---
 title: Glorify Groups
 slug: glorify-groups
-headline: "Research that turned leadership's doubts into a testable hypothesis, and gave them the confidence to bet on community."
+headline: "Research that tested whether a community feature should exist, before leadership built it."
 context: "Glorify, 2023"
 role: Senior Design Researcher
 timeline: 6 weeks, March to May 2023
@@ -18,7 +18,7 @@ year: "2023"
 featured: true
 cardFit: contain
 label: "Research through prototyping"
-summary: "Small faith groups, 1.8M+ users by 2025."
+summary: "Research behind a 1.8M+ user feature."
 hero: "/work/glorify-assets/shipped-screens-flat.webp"
 heroAlt: "Glorify Groups as it launched: a group's feed, recording a video reply, and a sermon discussion"
 jumps:

@@ -24,7 +24,7 @@ heroAlt: "Someone scrolling on their phone while Liv, a small wooden speaker wit
 jumps:
   - { label: "Skip to the build", to: "building-liv" }
 short:
-  - { lead: "The question.", text: "Technology built to hold attention reinforces habits like doomscrolling. Could a little self-awareness, at the right moment, work as gentle friction?" }
+  - { lead: "The question.", text: "Apps built to hold attention feed doomscrolling. Could a voice in the room, speaking up at the right moment, help you put the phone down?" }
   - { lead: "What I built.", text: "Liv, a wooden speaker with a camera that recognizes four activities and comments like a late-night radio host. I trained the vision model, wrote her personality, and built a live testing interface." }
   - { lead: "What happened.", text: "In testing, interrupting doomscrolling felt like nagging. So Liv shifted to encouragement and learned when to stay quiet." }
 skills: [AI prototyping, Interaction design, Prototyping]
