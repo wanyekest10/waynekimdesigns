@@ -133,6 +133,6 @@ I glued the front apron, sanded a lot, brushed on coats of polyurethane, screwed
   <figcaption>The SolidWorks model and v1 of cloffice (closet office).</figcaption>
 </figure>
 
-My old desk sat in the living room corner from <a href="/work/room-tone/">room_tone</a>. That corner is my breakfast nook now, and the space is free again. I'm halfway through the LACI product design fellowship, and it was a good opportunity to model, design, and actually build.
+I'm halfway through the LACI product design fellowship, and it was a good opportunity to model, design, and actually build.
 
 Next, I'll keep building out this closet office as a workbench for 3D printing, soldering, and tinkering, along with wire management and storage. More to come in another update!
