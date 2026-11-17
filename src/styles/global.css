@@ -280,7 +280,9 @@ article figure.frame { max-width: var(--wide); }
 article figure + p { margin-top: 32px; }
 article figure.frame > img, article figure.frame > video { width: 100%; max-width: none; aspect-ratio: 3/2; object-fit: cover; margin: 0 0 10px; }
 article .pair > img, article .pair > video { aspect-ratio: 3/2; object-fit: cover; }
-article .grid3 video, article .seq video { aspect-ratio: 3/2; object-fit: cover; }
+article .grid3 video { aspect-ratio: 3/2; object-fit: cover; }
+/* room_tone steps: show the whole frame so the terminal text on the left is never cropped */
+article .seq video { width: 100%; aspect-ratio: 1080/598; object-fit: contain; }
 /* Vertical clips: a pair or grid of tall phone footage is the one exception, at 4:5 */
 article .grid3.tall video, article .pair.tall > video, article .pair.tall > img { aspect-ratio: 4/5; }
 @media (max-width: 999px) { article .grid3 { grid-template-columns: 1fr 1fr; } }
