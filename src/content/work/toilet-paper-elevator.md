@@ -46,10 +46,14 @@ facts:
 
 The bathroom is one of the few idle spaces left in a day. We sit and wait, or reach for our phone. Everyone in a home uses toilet paper there every day, and nobody sees how much. I wanted to make that habit visible and a little playful, in the one room where people least want to feel observed.
 
-<div class="stats three">
-  <div class="focal"><span class="k">One roll</span><b>98 ft</b><p>of paper, unrolled end to end</p></div>
-  <div><span class="k">Squares</span><b>300</b><p>squares on my own roll</p></div>
-  <div><span class="k">In landmarks</span><b>2</b><p>Hollywood Signs, stacked</p></div>
+<div class="unroll" role="group" aria-label="One roll of toilet paper is 300 squares, or 98 feet unrolled, about two Hollywood Signs stacked">
+  <div><b>1 roll</b><p>of toilet paper</p></div>
+  <span class="eq" aria-hidden="true">=</span>
+  <div><b>300</b><p>squares</p></div>
+  <span class="eq" aria-hidden="true">=</span>
+  <div><b>98 ft</b><p>unrolled end to end</p></div>
+  <span class="eq" aria-hidden="true">≈</span>
+  <div class="focal"><b>2 Hollywood Signs</b><p>stacked, 45 ft each</p></div>
 </div>
 
 Because it's such a private room, I gave myself a few rules from the start. The display had to count for the whole household, stay anonymous, and never single anyone out or ask for attention. It also couldn't preach about sustainability, because that would turn a curious object into a lecture.
