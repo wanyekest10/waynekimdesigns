@@ -29,14 +29,27 @@ svg{width:100%;height:auto;display:block}
 </style>
 </head><body><main>
   <div class="panel">
-    <svg viewBox="0 0 640 260" fill="none" stroke-linecap="round" role="img" aria-label="A lamp, a disco ball and a speaker. After 90 minutes the lamp glows, then the ball slowly turns and the room asks if I'll take a moment. If I pause, music plays; if I keep working, it all fades away.">
+    <svg viewBox="0 0 640 260" fill="none" stroke-linecap="round" role="img" aria-label="A laptop running a Python script controls a lamp and a disco ball through two Shelly smart plugs, and a speaker through Spotify. After 90 minutes the lamp glows, then the ball slowly turns and the room asks if I'll take a moment. If I pause, music plays; if I keep working, it all fades away.">
       <defs><radialGradient id="g"><stop offset="0" stop-color="var(--warm)" stop-opacity=".55"/><stop offset="1" stop-color="var(--warm)" stop-opacity="0"/></radialGradient></defs>
-      <g transform="translate(160 130)">
+      <g transform="translate(84 130)" aria-hidden="true">
+        <rect x="-28" y="-30" width="56" height="38" rx="3" stroke="var(--ink)" stroke-width="2" fill="var(--panel)"/>
+        <text x="-19" y="-14" font-size="10" fill="var(--ink)" font-family="Geist Mono, ui-monospace, monospace">&gt;_</text>
+        <path d="M-36 12 H36 L32 18 H-32 Z" stroke="var(--ink)" stroke-width="2" fill="var(--panel)" stroke-linejoin="round"/>
+      </g>
+      <g id="bus" aria-hidden="true">
+        <path d="M84 206 H530" stroke="var(--faint)" stroke-width="1.2" stroke-dasharray="2 4"/>
+        <path d="M84 156 V206 M230 172 V206 M380 196 V206 M530 196 V206" stroke="var(--faint)" stroke-width="1.2" stroke-dasharray="2 4"/>
+        <g id="buslabels" font-size="10.5" fill="var(--gray)" font-family="Geist Mono, ui-monospace, monospace" text-anchor="middle">
+          <text x="84" y="224">laptop · Python</text><text x="230" y="224">Shelly plug</text><text x="380" y="224">Shelly plug</text><text x="530" y="224">Spotify</text>
+        </g>
+        <circle id="pulse" cx="84" cy="206" r="3" fill="var(--accent)" opacity="0"/>
+      </g>
+      <g transform="translate(230 130)">
         <circle id="glow" r="80" fill="url(#g)" opacity="0"/>
         <path d="M-16 -10 L16 -10 L9 -28 L-9 -28 Z" stroke="var(--ink)" stroke-width="2" fill="var(--panel)"/>
         <path d="M0 -10 V36 M-14 36 H14" stroke="var(--ink)" stroke-width="2"/>
       </g>
-      <g transform="translate(320 120)">
+      <g transform="translate(380 120)">
         <path d="M0 -60 V-26" stroke="var(--ink)" stroke-width="1.5"/>
         <circle r="26" stroke="var(--ink)" stroke-width="2" fill="var(--panel)"/>
         <g opacity=".5" stroke="var(--ink)" stroke-width=".9">
@@ -45,7 +58,7 @@ svg{width:100%;height:auto;display:block}
         </g>
         <g id="flecks" fill="var(--accent)" opacity="0"></g>
       </g>
-      <g transform="translate(480 130)">
+      <g transform="translate(530 130)">
         <rect x="-14" y="-24" width="28" height="48" rx="4" stroke="var(--ink)" stroke-width="2" fill="var(--panel)"/>
         <circle cx="0" cy="4" r="8" stroke="var(--ink)" stroke-width="1.5"/>
         <g id="volg" transform="translate(-44 48)" opacity="0">
@@ -68,7 +81,7 @@ svg{width:100%;height:auto;display:block}
   </svg>
 
   <span id="line" hidden></span>
-<script>{const q=new URLSearchParams(location.search);if(q.get("tree")==="0")document.getElementById("tree").style.display="none";if(q.get("compact")==="1"){document.getElementById("termwrap").style.display="none";document.querySelector(".panel svg").setAttribute("viewBox",innerWidth<560?"86 50 468 166":"0 52 640 160")}}</script>
+<script>{const q=new URLSearchParams(location.search);if(q.get("tree")==="0")document.getElementById("tree").style.display="none";if(q.get("compact")==="1"){if(innerWidth<560){const g=document.getElementById("buslabels");g.setAttribute("font-size","17");g.querySelector("text").textContent="Python";}document.getElementById("termwrap").style.display="none";document.querySelector(".panel svg").setAttribute("viewBox",innerWidth<560?"0 50 640 190":"0 52 640 182")}}</script>
 </main>
 <script>
 const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
@@ -81,7 +94,7 @@ const B=[...COMMON,[16.5,0,0,0,'I keep working.',1,6],[21,0,0,0,'No guilt either
 const LOOP=28, FADE=2.2;
 const LOGA=[['<span class="p">~ %</span> room_tone','✦ room_tone: noticing','⏱ work threshold: 90 minutes'],['▸ 90 minutes: activating','● light on'],['◐ ball moving'],['… will you take a moment to pause?'],['✔ pause detected: music starting','♪ music on'],['♩ returning','· room settles','✧ notice again? (y/n)'],[]];
 const LOGB=[...LOGA.slice(0,4),['♩ returning'],['· room settles','✧ notice again? (y/n)'],[]];
-let lastKey='',held=false;let logged=-1,logLoop=-1;
+let lastKey='',held=false,lastOut='',pulses=[];let logged=-1,logLoop=-1;
 function log(lines){const T=$('termwrap');lines.forEach((h,i)=>setTimeout(()=>{T.querySelectorAll('div.in').forEach(d=>d.classList.add('old'));const d=document.createElement('div');d.innerHTML=h;T.insertBefore(d,$('cur'));requestAnimationFrame(()=>requestAnimationFrame(()=>d.classList.add('in')));const ls=T.querySelectorAll('div');for(let q=0;q<ls.length-5;q++)ls[q].remove()},i*900))}
 // node positions: trunk then A branch (up) then B branch (down)
 const N=[[30,48,'Working','b'],[130,48,'90 min','b'],[230,48,'Ball turns','b'],[330,48,'The ask','b'],[440,24,'Pause','t'],[590,24,'Type again','t'],[440,72,'Keep working','b'],[590,72,'Lets it go','b']];
@@ -121,6 +134,8 @@ function frame(now){
   if(si>logged){for(let j=logged+1;j<=si;j++)log((loop%2?LOGB:LOGA)[j]);logged=si}
   {const ix=cur[6];const row=ix<0?6:[0,1,2,2,3,4,5,6][ix];const br=t<16.5?-1:loop%2;const key=row+':'+br;
    if(key!==lastKey){lastKey=key;parent.postMessage({rtStage:row,branch:br},'*')}}
+  {const st=cur[1]+''+cur[2]+''+cur[3];if(st!==lastOut){const XS=[230,380,530];for(let k=0;k<3;k++)if(lastOut&&st[k]!==lastOut[k])pulses.push({x:XS[k],s:null});lastOut=st}
+   const P=$('pulse');const pl=pulses[0];if(pl){if(pl.s==null)pl.s=now;const a=(now-pl.s)/700;if(a>=1.3){pulses.shift()}else{const e=Math.min(a,1);const x=84+(pl.x-84)*(e*e*(3-2*e));P.setAttribute('cx',x.toFixed(1));P.setAttribute('opacity',(a<1?1:1-(a-1)/.3).toFixed(2))}}else P.setAttribute('opacity',0)}
   if(cur[4]!==shown){shown=cur[4];$('line').textContent=shown}
   requestAnimationFrame(frame);
 }
