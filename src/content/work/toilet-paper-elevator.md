@@ -198,7 +198,7 @@ I designed the pod in Fusion and printed everything in gray. The LiPo sits trapp
   <div><img src="/work/tpe-assets/standoff-test-photo.webp" alt="The printed test pieces: the brass standoff pressed into the sixth hex pocket, and a screw through the strip"/><p>A 15-minute test print of six pocket sizes. The standoff fit the 4.9 mm one.</p></div>
 </figure>
 
-<figure class="grid3">
+<figure class="grid3 portrait-imgs">
   <div><img src="/work/tpe-assets/pod-side-view.webp" alt="The pod from the side, held in a hand: the back plate, the LiPo battery, the printed carrier, and the Arduino stacked between the shell layers"/><p>Battery, carrier, and Arduino, stacked.</p></div>
   <div><img src="/work/tpe-assets/pod-open.webp" alt="The pod opened up: the e-paper screen tilted back, the Arduino on a breadboard on its printed carrier, the shell behind, and the magnet sleeve beside it"/><p>The pod, opened.</p></div>
   <div><img src="/work/tpe-assets/bts-counter.webp" alt="Everything on the counter, wired up: the pod reading 15 ft up, the gray raceway with the sensor wires running down it, and the magnet sleeve in hand"/><p>Everything wired on the counter before it went on the wall.</p></div>
