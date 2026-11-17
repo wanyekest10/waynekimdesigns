@@ -39,7 +39,7 @@ facts:
   - { label: "Project", value: "Personal project" }
   - { label: "Role", value: "Designer and builder, solo" }
   - { label: "Duration", value: "14-day sprint, 2026" }
-  - { label: "Stack", value: "Arduino MKR WiFi 1010 · Hall effect sensor · Waveshare 4.2\" e-paper · 3.7V LiPo" }
+  - { label: "Stack", value: "Arduino MKR · Hall effect sensor · Waveshare 4.2\" e-paper · 3.7V LiPo" }
   - { label: "Tools", value: "Arduino IDE · Fusion 360 · Prusa MK3S" }
 ---
 ## A daily habit nobody in the house ever sees
@@ -87,14 +87,14 @@ A sleeve inside the roll holds four magnets, and a Hall effect sensor pulses eac
   <figcaption>Drag to turn the model, pull it apart, and tap any part to name it.</figcaption>
 </figure>
 
-<div class="hub" aria-label="Wiring: the Arduino MKR WiFi 1010 connects to a LiPo battery, the e-paper screen, and the Hall effect sensor">
+<div class="hub" aria-label="Wiring: the Arduino MKR connects to a LiPo battery, the e-paper screen, and the Hall effect sensor">
   <div class="hub-part" style="grid-row:1"><b>3.7V LiPo</b><small>Power, so it runs without a cable</small></div>
   <div class="hub-link" style="grid-row:1"><span>Power</span></div>
   <div class="hub-part" style="grid-row:2"><b>Waveshare 4.2" e-paper</b><small>The screen</small></div>
   <div class="hub-link" style="grid-row:2"><span>SPI</span></div>
   <div class="hub-part focal" style="grid-row:3"><b>Hall effect sensor</b><small>Pulses each time a magnet passes</small></div>
   <div class="hub-link focal" style="grid-row:3"><span>Pulse</span></div>
-  <div class="hub-board"><b>Arduino MKR WiFi 1010</b><small>Counts squares, works out the height, and draws the screen</small></div>
+  <div class="hub-board"><b>Arduino MKR</b><small>Counts squares, works out the height, and draws the screen</small></div>
 </div>
 
 The slow e-paper refresh is on purpose. The number never flashes or animates while you're in the room, and it's just different the next time you look.
