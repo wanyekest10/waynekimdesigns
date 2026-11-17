@@ -39,7 +39,7 @@ I needed a real place to work after deciding to build out a breakfast nook and n
 
 <figure class="trio row">
   <img src="/work/cloffice-desk-assets/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/>
-  <img src="/work/cloffice-desk-assets/model-on-desk.webp" alt="Close-up of the monitor on the finished desk, showing the SolidWorks assembly of the same desk"/>
+  <img src="/work/cloffice-desk-assets/model-screen.webp" alt="Close-up of the monitor showing the SolidWorks assembly of the desk"/>
   <img src="/work/cloffice-desk-assets/installed-tall.webp" alt="The installed desk in the closet with a 4 foot level on top"/>
   <figcaption>Before, the desk's own model on screen, and a week later.</figcaption>
 </figure>
