@@ -104,7 +104,28 @@ if (d.tryIt) toc.unshift({ depth: 2, slug: 'try-it', text: 'Try it', num: '01', 
 </Base>
 <script>
 // room_tone layers iframe reports its height
-addEventListener('message', (e) => { const h = e.data && e.data.rtLayersH; if (h) document.querySelectorAll<HTMLIFrameElement>('.rt-layers iframe').forEach((f) => { f.style.height = h + 'px'; }); });
+// room_tone: the animated room reports its height and stage; the stage list follows it, and tapping a row jumps the room there.
+(() => {
+  const fig = document.querySelector<HTMLElement>('figure.rt-sync');
+  if (!fig) return;
+  const f = fig.querySelector('iframe')!, rows = [...fig.querySelectorAll<HTMLElement>('.r')];
+  const send = (m: object) => f.contentWindow?.postMessage(m, '*');
+  const nav = document.querySelector<HTMLElement>('.nav');
+  const setNav = () => { if (nav) document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px'); };
+  setNav(); addEventListener('resize', setNav);
+  addEventListener('message', (e) => {
+    if (e.source !== f.contentWindow) return;
+    const d = e.data || {};
+    if (d.rtLayersH) f.style.height = d.rtLayersH + 'px';
+    if (d.rtStage != null) rows.forEach((r) => r.classList.toggle('now', +r.dataset.row! === d.rtStage));
+  });
+  rows.forEach((r) => {
+    const go = () => send({ rtJump: +r.dataset.row! });
+    r.addEventListener('click', go);
+    r.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+  });
+  new IntersectionObserver(([en]) => send({ rtHold: !en.isIntersecting }), { threshold: 0.15 }).observe(fig);
+})();
 // Lightbox: tap any case study image (or a link to an image) for a closer look in place.
 (() => {
   const isImg = (u: string) => /\.(webp|png|jpe?g|svg|gif)(\?|$)/i.test(u);

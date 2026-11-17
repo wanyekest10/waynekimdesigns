@@ -68,6 +68,7 @@ svg{width:100%;height:auto;display:block}
   </svg>
 
   <span id="line" hidden></span>
+<script>{const q=new URLSearchParams(location.search);if(q.get("tree")==="0")document.getElementById("tree").style.display="none";if(q.get("compact")==="1"){document.getElementById("termwrap").style.display="none";document.querySelector(".panel svg").setAttribute("viewBox",innerWidth<560?"86 50 468 166":"0 52 640 160")}}</script>
 </main>
 <script>
 const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
@@ -80,22 +81,23 @@ const B=[...COMMON,[16.5,0,0,0,'I keep working.',1,6],[21,0,0,0,'No guilt either
 const LOOP=28, FADE=2.2;
 const LOGA=[['<span class="p">~ %</span> room_tone','✦ room_tone: noticing','⏱ work threshold: 90 minutes'],['▸ 90 minutes: activating','● light on'],['◐ ball moving'],['… will you take a moment to pause?'],['✔ pause detected: music starting','♪ music on'],['♩ returning','· room settles','✧ notice again? (y/n)'],[]];
 const LOGB=[...LOGA.slice(0,4),['♩ returning'],['· room settles','✧ notice again? (y/n)'],[]];
-let logged=-1,logLoop=-1;
+let lastKey='',held=false;let logged=-1,logLoop=-1;
 function log(lines){const T=$('termwrap');lines.forEach((h,i)=>setTimeout(()=>{T.querySelectorAll('div.in').forEach(d=>d.classList.add('old'));const d=document.createElement('div');d.innerHTML=h;T.insertBefore(d,$('cur'));requestAnimationFrame(()=>requestAnimationFrame(()=>d.classList.add('in')));const ls=T.querySelectorAll('div');for(let q=0;q<ls.length-5;q++)ls[q].remove()},i*900))}
 // node positions: trunk then A branch (up) then B branch (down)
 const N=[[30,48,'Working','b'],[130,48,'90 min','b'],[230,48,'Ball turns','b'],[330,48,'The ask','b'],[440,24,'Pause','t'],[590,24,'Type again','t'],[440,72,'Keep working','b'],[590,72,'Lets it go','b']];
 const TX=[[0,30],[4,130],[8.5,230],[12,330],[16.5,440],[21,590],[25.5,604]];
-const nodes=N.map(([x,y,l,pos],i)=>{const g=mk('g',{class:'hit',tabindex:0,role:'button','aria-label':'Jump to '+l},$('nodes'));
+const jumps=[];const nodes=N.map(([x,y,l,pos],i)=>{const g=mk('g',{class:'hit',tabindex:0,role:'button','aria-label':'Jump to '+l},$('nodes'));
   const c=mk('circle',{cx:x,cy:y,r:4,fill:'var(--bg)',stroke:'var(--gray)','stroke-width':1},g);
   const t=mk('text',{x,y:pos==='t'?y-11:y+19,'text-anchor':'middle',class:(i===5||i===7)?'end':''},g);t.textContent=l;
-  const go=()=>{const branch=i>=6?1:(i>=4?0:loop%2);const sc=(branch?B:A).find(s=>s[6]===i);loop=branch;t0=performance.now()-sc[0]*1000;};
-  g.addEventListener('click',go);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}});return{c,t}});
+  const go=()=>{const branch=i>=6?1:(i>=4?0:loop%2);const sc=(branch?B:A).find(s=>s[6]===i);loop=branch;logLoop=-1;t0=performance.now()-(sc[0]+.05)*1000;};
+  g.addEventListener('click',go);jumps[i]=go;g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}});return{c,t}});
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const lv={l:0,m:0,s:0};let volO=0;let shown=null,t0=performance.now(),last=t0,spin=0,loop=0,lastT=0;
 function xAt(t){for(let i=1;i<TX.length;i++)if(t<=TX[i][0]){const[a,xa]=TX[i-1],[b,xb]=TX[i];return xa+(xb-xa)*(t-a)/(b-a)}return 604}
 function frame(now){
+  if(held)t0+=now-last;
   const dt=Math.min((now-last)/1000,.1);last=now;
-  let t=(now-t0)/1000;if(t>=LOOP){t0=now;t=0;loop++}
+  let t=(now-t0)/1000;if(t>=LOOP){t0=now;t=0;loop=0;logLoop=-1}
   const S=loop%2?B:A;let cur=S[0];for(const s of S)if(t>=s[0])cur=s;
   // ease levels; on the way out, layers leave in reverse with a beat between
   const k=dt/FADE, outAt=S[4][1]===0?16.5:21;
@@ -117,11 +119,14 @@ function frame(now){
   const si=S.indexOf(cur);
   if(loop!==logLoop){logLoop=loop;logged=-1;$('termwrap').querySelectorAll('div').forEach(d=>d.remove())}
   if(si>logged){for(let j=logged+1;j<=si;j++)log((loop%2?LOGB:LOGA)[j]);logged=si}
+  {const ix=cur[6];const row=ix<0?6:[0,1,2,2,3,4,5,6][ix];const br=t<16.5?-1:loop%2;const key=row+':'+br;
+   if(key!==lastKey){lastKey=key;parent.postMessage({rtStage:row,branch:br},'*')}}
   if(cur[4]!==shown){shown=cur[4];$('line').textContent=shown}
   requestAnimationFrame(frame);
 }
 if(reduce){$('volg').setAttribute('opacity',1);$('vfill').setAttribute('width',53);$('vknob').setAttribute('cx',53);$('vpct').textContent='60%';$('glow').setAttribute('opacity',1);$('flecks').setAttribute('opacity',.6);$('line').textContent='After 90 minutes the room asks: will you take a moment? Pause, and music plays. Keep working, and it lets it go.';$('cliprect').setAttribute('width',640);$('termwrap').insertAdjacentHTML('afterbegin',['▸ 90 minutes: activating','● light on','◐ ball moving','… will you take a moment to pause?','✔ pause detected: music starting'].map(l=>'<div class="in">'+l+'</div>').join(''))}
 else requestAnimationFrame(frame);
+addEventListener('message',e=>{const d=e.data||{};if('rtHold' in d)held=!!d.rtHold;const r=d.rtJump;if(r==null)return;const n=[0,1,2,4,5,6,7][r];jumps[n]&&jumps[n]()});
 function report(){parent.postMessage({rtLayersH:document.querySelector('main').offsetHeight},'*')}addEventListener('load',report);addEventListener('resize',report);setTimeout(report,300);
 </script>
 </body></html>

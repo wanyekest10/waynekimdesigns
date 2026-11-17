@@ -84,21 +84,16 @@ Before building it, I wrote down how it should feel, using Bill Verplank's quest
 
 Each layer arrives on its own, then leaves in reverse. At any point, I can keep working and let it pass.
 
-<figure class="wide rt-layers"><iframe src="/work/room-tone-assets/layers.html" title="room_tone, animated: the room notices, asks, and either plays music or lets it go" loading="lazy" scrolling="no"></iframe><figcaption>The room notices, then asks. Pause, and the music fades in; keep working, and it lets it go. Tap a dot to jump.</figcaption></figure>
-
-<div class="code-fold rt-table" data-btn="Show every stage">
-
-<div class="layers" role="table" aria-label="Which layers are on at each stage">
-  <div class="lrow head" role="row"><span role="columnheader">Stage</span><span role="columnheader" class="th-term">Terminal</span><span role="columnheader">Light</span><span role="columnheader">Motion</span><span role="columnheader">Music</span></div>
-  <div class="lrow" role="row"><span role="cell">Noticing<small>Counting steady keyboard and mouse use</small></span><code class="term" role="cell">✦ room_tone: noticing&#10;⏱ work threshold: 90 minutes</code><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i></div>
-  <div class="lrow" role="row"><span role="cell">90 minutes<small>The lamp turns on</small></span><code class="term" role="cell">▸ 90 minutes: activating&#10;● light on</code><i class="on" role="cell" aria-label="on"></i><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i></div>
-  <div class="lrow" role="row"><span role="cell">The ball turns<small>"Will you take a moment to pause?"</small></span><code class="term" role="cell">◐ ball moving&#10;… will you take a moment to pause?</code><i class="on" role="cell" aria-label="on"></i><i class="on" role="cell" aria-label="on"></i><i role="cell" aria-label="off"></i></div>
-  <div class="lrow focal" role="row"><span role="cell">I pause<small>Five seconds without input, music fades in</small></span><code class="term" role="cell">✔ pause detected: music starting&#10;♪ music on</code><i class="on" role="cell" aria-label="on"></i><i class="on" role="cell" aria-label="on"></i><i class="on" role="cell" aria-label="on"></i></div>
-  <div class="lrow" role="row"><span role="cell">I come back<small>Typing again fades the music out</small></span><code class="term" role="cell">♩ returning</code><i class="on" role="cell" aria-label="on"></i><i class="on" role="cell" aria-label="on"></i><i role="cell" aria-label="off"></i></div>
-  <div class="lrow" role="row"><span role="cell">The room settles<small>Then asks whether to notice again</small></span><code class="term" role="cell">· room settles&#10;✧ notice again? (y/n)</code><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i></div>
+<figure class="wide rt-layers rt-sync">
+<iframe src="/work/room-tone-assets/layers.html?tree=0&amp;compact=1" title="room_tone, animated: a lamp, a disco ball and a speaker" loading="lazy" scrolling="no"></iframe>
+<div class="rt-stages">
+<div class="r" data-row="0" tabindex="0" role="button" aria-label="Jump to Noticing"><span class="name">Noticing</span><code class="term">✦ room_tone: noticing&#10;⏱ work threshold: 90 minutes</code></div><div class="r" data-row="1" tabindex="0" role="button" aria-label="Jump to 90 minutes, the lamp comes on"><span class="name">90 minutes, the lamp comes on</span><code class="term">▸ 90 minutes: activating&#10;● light on</code></div><div class="r" data-row="2" tabindex="0" role="button" aria-label="Jump to The ball turns, and it asks"><span class="name">The ball turns, and it asks</span><code class="term">◐ ball moving&#10;… will you take a moment to pause?</code></div>
+<div class="fork"><div><div class="k">If I pause</div><div class="r" data-row="3" tabindex="0" role="button" aria-label="Jump to Music fades in"><span class="name">Music fades in</span><code class="term">✔ pause detected: music starting&#10;♪ music on</code></div><div class="r" data-row="4" tabindex="0" role="button" aria-label="Jump to I type again, it fades out"><span class="name">I type again, it fades out</span><code class="term">♩ returning</code></div></div><div><div class="k">If I keep working</div><div class="r" data-row="5" tabindex="0" role="button" aria-label="Jump to The lamp and ball wind down"><span class="name">The lamp and ball wind down</span><code class="term">· no pause: letting it go</code></div></div></div>
+<p class="either">Either way, the room lets it go.</p>
+<div class="r" data-row="6" tabindex="0" role="button" aria-label="Jump to The room settles"><span class="name">The room settles</span><code class="term">· room settles&#10;✧ notice again? (y/n)</code></div>
 </div>
-
-</div>
+<figcaption>The room plays the pause ending on a loop. Tap any row to jump there, including the other ending.</figcaption>
+</figure>
 
 ## A Python script, two smart plugs, and Spotify
 

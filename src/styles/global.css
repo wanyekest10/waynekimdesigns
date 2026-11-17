@@ -867,8 +867,28 @@ html.lb-open { overflow: hidden; }
 /* Two wide images side by side, shown whole on a panel (tap to enlarge) */
 article .pair.fit > img { aspect-ratio: 3/2; object-fit: contain; background: var(--panel); border-radius: 6px; }
 /* room_tone animated layers diagram (iframe sizes itself) */
-article figure.rt-layers iframe { display: block; width: 100%; height: 420px; border: 0; margin: 0 0 10px; }
-/* room_tone: the stage table, previewed under the animated diagram */
-article .rt-table { max-width: 880px; }
-article .rt-table .layers { margin: 20px 0 0; }
-article .rt-table.folded { max-height: 230px; }
+/* room_tone: the room strip stays pinned under the nav while the stage list follows it. One blue thing at a time. */
+article figure.rt-sync { max-width: 880px; }
+article figure.rt-layers iframe { display: block; width: 100%; height: 240px; border: 0; margin: 0; position: sticky; top: var(--nav-h, 54px); z-index: 3; background: var(--paper); padding-bottom: 12px; box-sizing: content-box; }
+.rt-stages .r { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 4px 24px; padding: 12px; border-top: 1px solid var(--rule); position: relative; cursor: pointer; align-items: baseline; }
+.rt-stages > .r:first-child { border-top: 0; }
+.rt-stages .name { font-size: 15px; line-height: 1.5; color: var(--ink); transition: color .5s; }
+.rt-stages .term { font: 400 12.5px/1.75 var(--mono); letter-spacing: -0.01em; color: var(--gray); white-space: pre-wrap; background: none; padding: 0; transition: color .5s; }
+.rt-stages .r::before { content: ""; position: absolute; left: 0; top: 12px; bottom: 12px; width: 2px; border-radius: 1px; background: var(--accent); transform: scaleY(0); transform-origin: top; transition: transform .7s ease; }
+.rt-stages .r.now::before { transform: none; }
+.rt-stages .r.now .name { color: var(--accent); }
+.rt-stages .r.now .term { color: var(--ink); }
+.rt-stages .r:hover .name { text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 4px; }
+.rt-stages .r:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.rt-stages .fork { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; border-top: 1px solid var(--rule); padding-top: 4px; }
+.rt-stages .fork .r { grid-template-columns: 1fr; border-top: 0; }
+.rt-stages .k { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); padding: 14px 12px 0; }
+.rt-stages .either { font: var(--meta); letter-spacing: -0.02em; color: var(--gray); text-align: center; margin: 4px 0 0 !important; padding: 10px 0 14px; border-top: 1px solid var(--rule); max-width: none !important; }
+.rt-stages .either + .r { border-top: 1px solid var(--rule); }
+article figure.rt-sync figcaption { margin-top: 14px; }
+@media (max-width: 640px) {
+  .rt-stages .r { grid-template-columns: 1fr; gap: 2px; }
+  .rt-stages .fork { gap: 0 12px; }
+  .rt-stages .name { font-size: 14.5px; }
+  .rt-stages .term { font-size: 11.5px; }
+}
