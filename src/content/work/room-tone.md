@@ -86,8 +86,7 @@ Each layer arrives on its own, then leaves in reverse. At any point, I can keep 
 
 <figure class="wide rt-layers"><iframe src="/work/room-tone-assets/layers.html" title="room_tone, animated: the room notices, asks, and either plays music or lets it go" loading="lazy" scrolling="no"></iframe><figcaption>The room notices, then asks. Pause, and the music fades in; keep working, and it lets it go. Tap a dot to jump.</figcaption></figure>
 
-<details class="rt-table">
-<summary>Every stage, as a table</summary>
+<div class="code-fold rt-table" data-btn="Show every stage">
 
 <div class="layers" role="table" aria-label="Which layers are on at each stage">
   <div class="lrow head" role="row"><span role="columnheader">Stage</span><span role="columnheader" class="th-term">Terminal</span><span role="columnheader">Light</span><span role="columnheader">Motion</span><span role="columnheader">Music</span></div>
@@ -99,7 +98,7 @@ Each layer arrives on its own, then leaves in reverse. At any point, I can keep 
   <div class="lrow" role="row"><span role="cell">The room settles<small>Then asks whether to notice again</small></span><code class="term" role="cell">· room settles&#10;✧ notice again? (y/n)</code><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i></div>
 </div>
 
-</details>
+</div>
 
 ## A Python script, two smart plugs, and Spotify
 

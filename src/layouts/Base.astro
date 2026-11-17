@@ -137,8 +137,9 @@ const { title, tailor, image, imageAlt, wide = false, noindex = false, prompt = 
         const row = document.createElement('div'); row.className = 'code-note';
         if (f.dataset.note) { const n = document.createElement('p'); n.textContent = f.dataset.note; row.append(n); }
         const b = document.createElement('button');
-        b.type = 'button'; b.className = 'code-fold-btn'; b.textContent = 'Show the full code ↓';
-        b.addEventListener('click', () => { const folded = f.classList.toggle('folded'); b.textContent = folded ? 'Show the full code ↓' : 'Hide code ↑'; });
+        const more = (f.dataset.btn || 'Show the full code') + ' ↓', less = (f.dataset.btn ? 'Hide' : 'Hide code') + ' ↑';
+        b.type = 'button'; b.className = 'code-fold-btn'; b.textContent = more;
+        b.addEventListener('click', () => { const folded = f.classList.toggle('folded'); b.textContent = folded ? more : less; });
         row.append(b); f.after(row);
       });
       // Peek: words that show a photo or two on hover. On touch screens, tap the word to see them, tap anywhere to hide.
