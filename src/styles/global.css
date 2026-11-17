@@ -844,7 +844,7 @@ article .grid3.four img, article .grid3.four video { aspect-ratio: 1/1; object-f
   .unroll .eq { padding: 0; font-size: 16px; line-height: 1; margin: 0 0 6px; text-align: center; }
 }
 /* TPE: one roll unrolled beside a 10-story building */
-article figure.unroll-viz { max-width: 520px; margin: 28px 0 36px; }
-.unroll-viz-svg { width: 100%; height: auto; display: block; color: var(--ink); margin: 0 0 10px; }
-.unroll-viz-svg .u-cap { font: 500 15px var(--sans); fill: var(--ink); }
-.unroll-viz-svg .u-sub, .unroll-viz-svg .u-lbl { font: 400 13px var(--sans); fill: var(--gray); }
+article figure.unroll-viz { max-width: var(--measure); margin: 28px 0 36px; }
+.unroll-viz-svg { width: 100%; max-height: 420px; height: auto; display: block; color: var(--ink); margin: 0 0 10px; background: var(--panel); border-radius: 4px; padding: 24px 0; box-sizing: border-box; }
+.unroll-viz-svg .u-num { font: 500 16px var(--sans); fill: var(--accent); }
+.unroll-viz-svg .u-cap { font: 400 13px var(--sans); fill: var(--gray); }
