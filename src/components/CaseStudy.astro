@@ -103,6 +103,8 @@ if (d.tryIt) toc.unshift({ depth: 2, slug: 'try-it', text: 'Try it', num: '01', 
   </div>
 </Base>
 <script>
+// room_tone layers iframe reports its height
+addEventListener('message', (e) => { const h = e.data && e.data.rtLayersH; if (h) document.querySelectorAll<HTMLIFrameElement>('.rt-layers iframe').forEach((f) => { f.style.height = h + 'px'; }); });
 // Lightbox: tap any case study image (or a link to an image) for a closer look in place.
 (() => {
   const isImg = (u: string) => /\.(webp|png|jpe?g|svg|gif)(\?|$)/i.test(u);

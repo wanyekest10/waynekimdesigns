@@ -71,7 +71,7 @@ I tried a Pomodoro timer, phone alarms, and the Time Timer on my desk. Each one 
 
 ## Asking like a friend would
 
-Before building it, I wrote down how it should feel, using Bill Verplank's questions for interaction design.
+Before building it, I wrote down how it should feel, using Bill Verplank's questions from his <a href="https://ccrma.stanford.edu/courses/250a-fall-2014/lectures/IDSketchbok.pdf">Interaction Design Sketchbook</a>.
 
 <div class="principles4">
   <div><h4>Error</h4><p>Losing two hours without noticing until my back hurts.</p></div>
@@ -84,15 +84,7 @@ Before building it, I wrote down how it should feel, using Bill Verplank's quest
 
 Each layer arrives on its own, then leaves in reverse. At any point, I can keep working and let it pass.
 
-<div class="layers" role="table" aria-label="Which layers are on at each stage">
-  <div class="lrow head" role="row"><span role="columnheader">Stage</span><span role="columnheader" class="th-term">Terminal</span><span role="columnheader">Light</span><span role="columnheader">Motion</span><span role="columnheader">Music</span></div>
-  <div class="lrow" role="row"><span role="cell">Noticing<small>Counting steady keyboard and mouse use</small></span><code class="term" role="cell">✦ room_tone: noticing&#10;⏱ work threshold: 90 minutes</code><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i></div>
-  <div class="lrow" role="row"><span role="cell">90 minutes<small>The lamp turns on</small></span><code class="term" role="cell">▸ 90 minutes: activating&#10;● light on</code><i class="on" role="cell" aria-label="on"></i><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i></div>
-  <div class="lrow" role="row"><span role="cell">The ball turns<small>"Will you take a moment to pause?"</small></span><code class="term" role="cell">◐ ball moving&#10;… will you take a moment to pause?</code><i class="on" role="cell" aria-label="on"></i><i class="on" role="cell" aria-label="on"></i><i role="cell" aria-label="off"></i></div>
-  <div class="lrow focal" role="row"><span role="cell">I pause<small>Five seconds without input, music fades in</small></span><code class="term" role="cell">✔ pause detected: music starting&#10;♪ music on</code><i class="on" role="cell" aria-label="on"></i><i class="on" role="cell" aria-label="on"></i><i class="on" role="cell" aria-label="on"></i></div>
-  <div class="lrow" role="row"><span role="cell">I come back<small>Typing again fades the music out</small></span><code class="term" role="cell">♩ returning</code><i class="on" role="cell" aria-label="on"></i><i class="on" role="cell" aria-label="on"></i><i role="cell" aria-label="off"></i></div>
-  <div class="lrow" role="row"><span role="cell">The room settles<small>Then asks whether to notice again</small></span><code class="term" role="cell">· room settles&#10;✧ notice again? (y/n)</code><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i><i role="cell" aria-label="off"></i></div>
-</div>
+<figure class="wide rt-layers"><iframe src="/work/room-tone-assets/layers.html" title="room_tone, animated: the room notices, asks, and either plays music or lets it go" loading="lazy" scrolling="no"></iframe><figcaption>The room notices, then asks. Pause, and the music fades in; keep working, and it lets it go. Tap a dot to jump.</figcaption></figure>
 
 ## A Python script, two smart plugs, and Spotify
 
