@@ -46,6 +46,12 @@ facts:
 
 The bathroom is one of the few idle spaces left in a day. We sit and wait, or reach for our phone. Everyone in a home uses toilet paper there every day, and nobody sees how much. I wanted to make that habit visible and a little playful, in the one room where people least want to feel observed.
 
+<div class="stats three">
+  <div class="focal"><span class="k">One roll</span><b>98 ft</b><p>of paper, unrolled end to end</p></div>
+  <div><span class="k">Squares</span><b>300</b><p>squares on my own roll</p></div>
+  <div><span class="k">In landmarks</span><b>2</b><p>Hollywood Signs, stacked</p></div>
+</div>
+
 Because it's such a private room, I gave myself a few rules from the start. The display had to count for the whole household, stay anonymous, and never single anyone out or ask for attention. It also couldn't preach about sustainability, because that would turn a curious object into a lecture.
 
 <div id="why-an-elevator" style="scroll-margin-top:88px"></div>
@@ -161,7 +167,7 @@ Landmarks people already know replaced the world's tallest buildings.
 
 ## The build
 
-I measured my own roll: 300 squares of 100 mm, wound from a 64 mm radius down to a 21 mm core. That's about 98 ft of paper per roll, a little more than two Hollywood Signs stacked. Each magnet is a quarter turn, so the code shrinks the paper per pulse as the roll gets thinner.
+I measured my own roll: 300 squares of 100 mm, wound from a 64 mm radius down to a 21 mm core. Each magnet is a quarter turn, so the code shrinks the paper per pulse as the roll gets thinner.
 
 Tearing jerks the roll and adds phantom pulses, so each pulse is scaled down to match real pulls. Once a roll has turned past its full length, the code assumes a new one went on.
 
