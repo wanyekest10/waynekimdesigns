@@ -55,7 +55,7 @@ I needed a real place to work after deciding to build out a breakfast nook and n
 
 <figure class="pair keep fit">
   <img src="/work/cloffice-desk-assets/solidworks-assembly.webp" alt="The Cloffice Desk assembly in SolidWorks, with the feature tree listing the legs, aprons, tabletop, braces, mates, and patterns"/>
-  <img src="/work/cloffice-desk-assets/drawing-views.webp" alt="Drawing sheet CD-001: top, front, and right views with dimensions, an isometric view, notes, and a title block"/>
+  <img src="/work/cloffice-desk-assets/drawing-exploded.webp" alt="Drawing sheet CD-001: top, front, and right views with dimensions, an exploded isometric with numbered balloons, a bill of materials, notes, and a title block"/>
   <figcaption>The assembly in SolidWorks, and the drawing made from it. Tap either one for a closer look.</figcaption>
 </figure>
 
