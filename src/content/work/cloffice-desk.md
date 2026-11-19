@@ -53,7 +53,7 @@ I needed a real place to work after deciding to build out a breakfast nook and n
 
 ## The model
 
-<figure class="pair keep fit">
+<figure class="wide stack">
   <img src="/work/cloffice-desk-assets/solidworks-assembly-zoom.webp" alt="The Cloffice Desk assembly in SolidWorks, with the feature tree listing the legs, aprons, tabletop, braces, mates, and patterns"/>
   <img src="/work/cloffice-desk-assets/drawing-exploded.webp" alt="Drawing sheet CD-001: top, front, and right views with dimensions, an exploded isometric with numbered balloons, a bill of materials, notes, and a title block"/>
   <figcaption>The assembly in SolidWorks, and the drawing made from it. Tap either one for a closer look.</figcaption>
