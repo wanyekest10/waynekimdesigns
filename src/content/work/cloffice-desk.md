@@ -59,14 +59,6 @@ I needed a real place to work after deciding to build out a breakfast nook and n
   <figcaption>The assembly in SolidWorks, and the drawing made from it. Tap either one for a closer look.</figcaption>
 </figure>
 
-<figure class="pair portrait">
-  <img src="/work/cloffice-desk-assets/render-brace-tall.webp" alt="Close-up of two corner braces where a leg meets the back apron and the underside of the top"/>
-  <img src="/work/cloffice-desk-assets/render-underside-tall.webp" alt="View from directly below the desk: braces along the back and front aprons and at each leg, plus the cable hole"/>
-  <figcaption>The Everbilt 1½ inch brace, modeled with countersunk holes, then patterned along the back apron and mirrored to the front and across the legs.</figcaption>
-</figure>
-
-
-
 <div id="the-build" style="scroll-margin-top:88px"></div>
 
 ## The build
