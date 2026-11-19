@@ -898,3 +898,7 @@ article figure.rt-sync figcaption { margin-top: 14px; }
   .rt-stages .r .term { grid-column: 1 / -1; grid-row: 2; font-size: 11.5px; }
   .rt-stages .name { font-size: 14.5px; }
 }
+
+/* Two images stacked full width, e.g. a model and its drawing */
+article figure.stack img { display: block; width: 100%; height: auto; border-radius: 6px; }
+article figure.stack img + img { margin-top: 16px; }
