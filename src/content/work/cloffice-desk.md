@@ -35,7 +35,7 @@ facts:
 
 ## The closet
 
-I needed a real place to work after deciding to build out a breakfast nook and not wanting my work station to be in my bedroom. My den closet was empty. I'm a Product Design Fellow at the <a href="https://laincubator.org" target="_blank" rel="noopener">Los Angeles Cleantech Incubator (LACI)</a>, halfway through the program, and wanted to apply what I've learned to my own space and constraints. So I designed it in SolidWorks before cutting anything.
+I needed a real place to work after deciding to build out a breakfast nook and not wanting my work station to be in my bedroom. My den closet was empty. I'm a <a href="https://www.3ds.com/3dexperiencelab/startup-programs/incubator-collaboration/los-angeles-cleantech-incubator-laci" target="_blank" rel="noopener">Product Design Fellow</a> at the <a href="https://laincubator.org" target="_blank" rel="noopener">Los Angeles Cleantech Incubator (LACI)</a>, halfway through the program, and wanted to apply what I've learned to my own space and constraints. So I designed it in SolidWorks before cutting anything.
 
 <figure class="trio row">
   <img src="/work/cloffice-desk-assets/before.webp" alt="The empty closet before the build, with a hanging rod and a 3D printer on the floor"/>
