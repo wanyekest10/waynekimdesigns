@@ -13,7 +13,7 @@ card: "/work/cloffice-desk-assets/card.webp"
 cardVideo: "/work/cloffice-desk-assets/card-loop-2.mp4"
 heroVideo: "/work/cloffice-desk-assets/build-loop-2.mp4"
 heroPoster: "/work/cloffice-desk-assets/build-loop-poster.jpg"
-heroAlt: "The SolidWorks assembly of the desk pulling apart into its top, aprons, legs, and 16 corner braces, then coming back together"
+heroAlt: "The SolidWorks assembly of the desk pulling apart into its top, aprons, legs, and 14 corner braces, then coming back together"
 jumps:
   - { label: "Skip to SolidWorks", to: "the-model" }
   - { label: "Skip to the build", to: "the-build" }
@@ -30,7 +30,7 @@ facts:
   - { label: "Role", value: "Designer and builder, solo" }
   - { label: "Duration", value: "1 week, Nov 2026" }
   - { label: "SolidWorks", value: "Multibody parts · Save Bodies · Mates · Mirror · Linear pattern · Hole Wizard · Drawings" }
-  - { label: "Materials", value: "3/4\" birch plywood · 1x4 and 1x3 pine · 16 stainless corner braces" }
+  - { label: "Materials", value: "3/4\" birch plywood · 1x4 and 1x3 pine · 14 stainless corner braces" }
 ---
 
 ## The closet
