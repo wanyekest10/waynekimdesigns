@@ -14,6 +14,7 @@ cardVideo: "/work/cloffice-desk-assets/card-loop-2.mp4"
 heroVideo: "/work/cloffice-desk-assets/build-loop-2.mp4"
 heroPoster: "/work/cloffice-desk-assets/build-loop-poster.jpg"
 heroAlt: "The SolidWorks assembly of the desk pulling apart into its top, aprons, legs, and 14 corner braces, then coming back together"
+ogAlt: "The Cloffice Desk modeled in SolidWorks: a birch plywood top and legs with a pine front apron"
 jumps:
   - { label: "Skip to SolidWorks", to: "the-model" }
   - { label: "Skip to the build", to: "the-build" }
