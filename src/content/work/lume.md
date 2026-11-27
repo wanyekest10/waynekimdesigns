@@ -50,15 +50,16 @@ facts:
   <figcaption>A car slips into the blind spot and the red cue appears on that side. A glance down shows the fuel range.</figcaption>
 </figure>
 
-## Subtle over prominent
+## Live demo
 
-Our first idea was to turn the helmet's visor into a display: speed, navigation, alerts, all in front of your eyes. We also read research on subtle cueing in augmented reality, which tests softer cues as an alternative to explicit ones. Then we interviewed three motorcyclists. None of them wanted more to look at. Their attention belongs on the road, and anything that competes with it is a hazard of its own.
+<figure class="pair">
+  <img src="/work/lume-assets/testing.webp" alt="A tester in a headset and hoodie steering with the wooden handlebar at a workshop table"/>
+  <img src="/work/lume-assets/demo-pair.webp" alt="Two people at the demo, one riding in the headset"/>
+</figure>
 
-So we went the other way: subtle cues that sit at the edge of vision and only ask for attention when it matters.
+<figure class="frame"><img src="/work/lume-assets/demo-room.webp" alt="The demo in a large hall, with the rider's view projected on a big screen"/></figure>
 
-<figure class="wide"><img src="/work/lume-assets/subtle-cueing.webp" alt="A research paper titled Subtle Cueing: An alternative to using explicit cues to facilitate visual search, with a head-mounted display study and results charts"/><figcaption>Research on subtle cueing in augmented reality.</figcaption></figure>
-
-<figure class="frame"><img src="/work/lume-assets/bike-rig.webp" alt="An early rig: a rider in a helmet on a stationary bicycle in front of a projected road"/><figcaption>Testing the ride on a bike rig.</figcaption></figure>
+<figure class="embed"><iframe src="https://player.vimeo.com/video/1068857422?dnt=1&title=0&byline=0&portrait=0" title="Lume, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
 
 ## Making it rideable
 
@@ -78,13 +79,12 @@ We built the ride in Unity and ran it on a Meta Quest 3. To make it feel like ri
   <div><video src="/work/lume-assets/handlebar-build.mp4" poster="/work/lume-assets/handlebar-build-poster.jpg" autoplay muted loop playsinline></video><p>Testing the handlebar with the headset.</p></div>
 </figure>
 
-## Live demo
+## Subtle over prominent
 
-<figure class="pair">
-  <img src="/work/lume-assets/testing.webp" alt="A tester in a headset and hoodie steering with the wooden handlebar at a workshop table"/>
-  <img src="/work/lume-assets/demo-pair.webp" alt="Two people at the demo, one riding in the headset"/>
-</figure>
+Our first idea was to turn the helmet's visor into a display: speed, navigation, alerts, all in front of your eyes. We also read research on subtle cueing in augmented reality, which tests softer cues as an alternative to explicit ones. Then we interviewed three motorcyclists. None of them wanted more to look at. Their attention belongs on the road, and anything that competes with it is a hazard of its own.
 
-<figure class="frame"><img src="/work/lume-assets/demo-room.webp" alt="The demo in a large hall, with the rider's view projected on a big screen"/></figure>
+So we went the other way: subtle cues that sit at the edge of vision and only ask for attention when it matters.
 
-<figure class="embed"><iframe src="https://player.vimeo.com/video/1068857422?dnt=1&title=0&byline=0&portrait=0" title="Lume, full video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><figcaption>The full video.</figcaption></figure>
+<figure class="wide"><img src="/work/lume-assets/subtle-cueing.webp" alt="A research paper titled Subtle Cueing: An alternative to using explicit cues to facilitate visual search, with a head-mounted display study and results charts"/><figcaption>Research on subtle cueing in augmented reality.</figcaption></figure>
+
+<figure class="frame"><img src="/work/lume-assets/bike-rig.webp" alt="An early rig: a rider in a helmet on a stationary bicycle in front of a projected road"/><figcaption>Testing the ride on a bike rig.</figcaption></figure>
