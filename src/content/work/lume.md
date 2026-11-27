@@ -13,7 +13,7 @@ heroAlt: "A tester in a VR headset gripping a wooden handlebar wired to an Ardui
 heroVideo: "/work/lume-assets/rider-view.mp4"
 heroPoster: "/work/lume-assets/rider-view-poster.jpg"
 jumps:
-  - { label: "Skip to how it works", to: "how-it-works" }
+  - { label: "Skip to the build", to: "making-it-rideable" }
 short:
   - { lead: "The question.", text: "Riders can't see their blind spots, and turning your head at speed is its own risk. What if the helmet could tell you, without pulling your eyes off the road?" }
   - { lead: "What we built.", text: "Lume, a VR simulation of an AR helmet. A red light flags a vehicle in your blind spot, and speed and fuel sit at the edge of view. A physical handlebar steers the ride. Riders we talked to didn't want a dashboard in their visor." }
@@ -30,16 +30,6 @@ facts:
   - { label: "Faculty", value: "David Rose · Ricardo Acosta" }
   - { label: "Tools", value: "Unity · Arduino · Meta Quest 3" }
 ---
-
-## Subtle over prominent
-
-Our first idea was to turn the helmet's visor into a display: speed, navigation, alerts, all in front of your eyes. We also read research on subtle cueing in augmented reality, which tests softer cues as an alternative to explicit ones. Then we interviewed three motorcyclists. None of them wanted more to look at. Their attention belongs on the road, and anything that competes with it is a hazard of its own.
-
-So we went the other way: subtle cues that sit at the edge of vision and only ask for attention when it matters.
-
-<figure class="wide"><img src="/work/lume-assets/subtle-cueing.webp" alt="A research paper titled Subtle Cueing: An alternative to using explicit cues to facilitate visual search, with a head-mounted display study and results charts"/><figcaption>Research on subtle cueing in augmented reality.</figcaption></figure>
-
-<figure class="frame"><img src="/work/lume-assets/bike-rig.webp" alt="An early rig: a rider in a helmet on a stationary bicycle in front of a projected road"/><figcaption>Testing the ride on a bike rig.</figcaption></figure>
 
 ## How it works
 
@@ -59,6 +49,16 @@ So we went the other way: subtle cues that sit at the edge of vision and only as
   <video src="/work/lume-assets/alert-fuel.mp4" poster="/work/lume-assets/alert-fuel-poster.jpg" autoplay muted loop playsinline></video>
   <figcaption>A car slips into the blind spot and the red cue appears on that side. A glance down shows the fuel range.</figcaption>
 </figure>
+
+## Subtle over prominent
+
+Our first idea was to turn the helmet's visor into a display: speed, navigation, alerts, all in front of your eyes. We also read research on subtle cueing in augmented reality, which tests softer cues as an alternative to explicit ones. Then we interviewed three motorcyclists. None of them wanted more to look at. Their attention belongs on the road, and anything that competes with it is a hazard of its own.
+
+So we went the other way: subtle cues that sit at the edge of vision and only ask for attention when it matters.
+
+<figure class="wide"><img src="/work/lume-assets/subtle-cueing.webp" alt="A research paper titled Subtle Cueing: An alternative to using explicit cues to facilitate visual search, with a head-mounted display study and results charts"/><figcaption>Research on subtle cueing in augmented reality.</figcaption></figure>
+
+<figure class="frame"><img src="/work/lume-assets/bike-rig.webp" alt="An early rig: a rider in a helmet on a stationary bicycle in front of a projected road"/><figcaption>Testing the ride on a bike rig.</figcaption></figure>
 
 ## Making it rideable
 
